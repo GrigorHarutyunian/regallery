@@ -1,0 +1,37 @@
+section#download {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  background-color: #ff374b;
+}
+
+section#download .container {
+  margin: auto;
+}
+
+section#download .section-text {
+  max-width: 500px;
+}
+
+section#download .section-image {
+  max-width: 40vw;
+  height: calc(100% - 0px);
+}
+
+.download-btn__img {
+  display: inline-block;
+  height: 56px;
+  width: 170px;
+  margin: 0px 8px;
+  margin-top: 24px;
+  transition: 0.2s all ease-in-out;
+}
+
+.download-btn__img:hover {
+  opacity: 0.9;
+}
+@media screen and (max-width: 700px) {
+  section#download {
+    height: auto;
+  }
+}
