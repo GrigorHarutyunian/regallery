@@ -1,0 +1,36 @@
+.section-image-features img {
+  width: 80%;
+}
+
+.section-text {
+  min-width: 300px;
+}
+
+.section-text__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #2b044d;
+  max-width: 400px;
+}
+
+.section-text__title-small {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: #23182c;
+}
+
+.section-text__desc {
+  color: #707b8e;
+  font-size: 1rem;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  max-width: 300px;
+}
+.feature-box {
+  margin-bottom: 32px;
+}
