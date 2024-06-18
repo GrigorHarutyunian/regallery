@@ -8,7 +8,6 @@ interface Link {
   href: string;
 }
 
-// Define an array of links with the specified type
 const links: Link[] = [
   { title: "Home", href: "#home" },
   { title: "Features", href: "#features" },
