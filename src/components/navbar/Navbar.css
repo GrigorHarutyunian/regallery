@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .nav {
   width: calc(100% - 50px);
   position: absolute;
