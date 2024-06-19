@@ -11,11 +11,11 @@
 }
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
-  background-color: #ee6d6d;
+  background-color: #6e92ae;
   position: fixed;
-  -webkit-box-shadow: 0 8px 6px -6px #ee6d6d;
-  -moz-box-shadow: 0 8px 6px -6px #ee6d6d;
-  box-shadow: 0 8px 6px -6px #ee6d6d;
+  -webkit-box-shadow: 0 8px 6px -6px #6e92ae;
+  -moz-box-shadow: 0 8px 6px -6px #6e92ae;
+  box-shadow: 0 8px 6px -6px #6e92ae;
 }
 
 .nav-content {
@@ -101,7 +101,7 @@
   .nav-open {
     height: 100vh;
     position: fixed;
-    background-color: #ea4d4e;
+    background-color: #64859e;
     animation: nav-open 0.2s ease-in-out;
   }
   .nav-open .nav-content {
