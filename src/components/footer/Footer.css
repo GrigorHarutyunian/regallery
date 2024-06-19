@@ -60,7 +60,7 @@ footer .row .col-30 {
 .footer-input__icon {
   color: #fff;
   font-size: 1.5rem;
-  background: #ea4d4e;
+  background: #64859e;
   display: flex;
   padding: 10px 14px;
 }
@@ -87,4 +87,10 @@ footer .row .col-30 {
   .footer-text__title {
     margin-bottom: 12px;
   }
+}
+
+.row__social-website {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
 }

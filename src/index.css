@@ -13,7 +13,7 @@ main {
   z-index: 100;
 }
 main > *:nth-child(odd) {
-  background-color: #ea4d4e;
+  background-color: #64859e;
 }
 
 section {
