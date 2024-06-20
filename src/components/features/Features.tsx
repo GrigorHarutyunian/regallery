@@ -11,18 +11,15 @@ const Features: React.FC = () => {
         <Row>
           <div className="section-text">
             <div className="section-text__title">Features</div>
-
-            {featuresData.map((item: any, index: number) => (
-              <div className="row" key={index}>
-                {item.map((val: any) => (
-                  <FeaturesBox
-                    key={val.id}
-                    title={val.title}
-                    description={val.description}
-                  />
-                ))}
-              </div>
-            ))}
+            <div className="features">
+              {featuresData.map((val: any) => (
+                <FeaturesBox
+                  key={val.id}
+                  title={val.title}
+                  description={val.description}
+                />
+              ))}
+            </div>
           </div>
         </Row>
       </Container>

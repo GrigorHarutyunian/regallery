@@ -28,7 +28,7 @@
 .download-btn {
   background-color: #0e4a70;
   text-decoration: none;
-  color: #fff;
+  color: #fcfcfc;
   cursor: pointer;
   display: inline-block;
   font-size: 1.1rem;
@@ -53,4 +53,10 @@
 
 .section-image-features img {
   width: 80%;
+}
+
+@media screen and (max-width: 348px) {
+  .section-text__title-big {
+    font-size: 3rem;
+  }
 }

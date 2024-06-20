@@ -21,7 +21,7 @@ footer .row .col-30 {
 }
 
 .footer-text__title {
-  color: #000;
+  color: #0e4a70;
   font-size: 18px;
   margin-bottom: 48px;
   font-weight: 700;
@@ -68,7 +68,7 @@ footer .row .col-30 {
 .footer-list li a {
   display: block;
   text-decoration: none;
-  color: #868c98;
+  color: #64859e;
   font-weight: 300;
   font-size: 1.1rem;
 }

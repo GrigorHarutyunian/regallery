@@ -7,6 +7,7 @@ body {
   margin: 0px;
   font-size: 16px;
   font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
 }
 
 main {
@@ -32,12 +33,12 @@ footer {
 .row {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   padding: 30px 0;
 }
 
 .col-50 {
-  width: 50%;
+  width: 75%;
   padding: 0px 14px;
 }
 .col-30 {
@@ -57,8 +58,4 @@ footer {
   .section-image__small {
     display: none;
   }
-}
-
-.section-text {
-  min-width: 300px;
 }
