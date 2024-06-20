@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
-const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
+const useScrollPosition = (): boolean => {
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const stickyTrigger = window.innerHeight / 2.75;
   useEffect(() => {
     const updatePosition = () => {
-      setScrollPosition(window.scrollY);
+      if (window.scrollY > stickyTrigger && !isSticky) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
     };
     window.addEventListener("scroll", updatePosition);
     updatePosition();
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
 
-  return scrollPosition;
+  return isSticky;
 };
 
 export default useScrollPosition;

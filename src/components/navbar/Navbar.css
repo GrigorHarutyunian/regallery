@@ -6,13 +6,14 @@
   left: 0px;
   display: flex;
   height: 70px;
-  overflow: hidden;
+
   z-index: 1000;
 }
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
   background-color: #6e92ae;
-  position: fixed;
+  position: sticky;
+  top: 0;
   -webkit-box-shadow: 0 8px 6px -6px #6e92ae;
   -moz-box-shadow: 0 8px 6px -6px #6e92ae;
   box-shadow: 0 8px 6px -6px #6e92ae;
@@ -61,7 +62,7 @@
   margin-top: -2px;
   height: 2px;
   width: 0%;
-  background: #fcfcfc;
+  background: #cedbe4;
   transition: 0.2s all ease-in;
 }
 .nav-link:hover .nav-link__background {
@@ -80,7 +81,7 @@
 .nav-menu__icon div {
   height: 2px;
   width: 100%;
-  background-color: #fcfcfc;
+  background-color: #cedbe4;
   transform-origin: left;
   transition: 0.1s all ease-in;
   margin: 0px auto;
@@ -98,11 +99,15 @@
 }
 
 @media screen and (max-width: 700px) {
+  .nav {
+    overflow: hidden;
+  }
   .nav-open {
     height: 100vh;
-    position: fixed;
+    position: sticky;
     background-color: #64859e;
     animation: nav-open 0.2s ease-in-out;
+    overflow: hidden;
   }
   .nav-open .nav-content {
     height: 70px;

@@ -3,7 +3,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing">
       <div className="pricing-upper">
-        <div className="section-text__title-centered text-white">
+        <div className="section-text__title-centered ">
           A Plan for Every Cats's Needs
         </div>
       </div>
