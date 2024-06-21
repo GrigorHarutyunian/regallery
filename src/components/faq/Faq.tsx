@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import MyAccordion from "./MyAccordion";
 import faqData from "./faq-data.json";
 import AccordionDTO from "../../types/AccordionDTO";
-import "./Faq.css";
 
 const Faq: React.FC = () => {
   const [expandedPanel, setExpandedPanel] = useState<string | false>(false);
@@ -13,11 +12,11 @@ const Faq: React.FC = () => {
   };
 
   return (
-    <section id="features">
+    <section id="faq">
       <Container>
         <div className="faq__container">
           <div className="faq__title">Frequently Asked Questions</div>
-          <div>
+          <div className="accordions">
             {faqData.map((val: AccordionDTO) => (
               <MyAccordion
                 key={val.panelId}

@@ -14,10 +14,11 @@ main {
   z-index: 100;
 }
 main > *:nth-child(odd) {
-  background-color: #64859e;
+  background-color: #64859e !important;
 }
 
 section {
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   height: auto;
