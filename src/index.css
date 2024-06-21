@@ -20,12 +20,12 @@ main > *:nth-child(odd) {
 section {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
+  height: auto;
   padding: 100px 24px;
 }
 
 footer {
-  height: 70vh;
+  height: 10vh;
   padding: 0px 24px;
   display: flex;
 }
@@ -38,8 +38,7 @@ footer {
 }
 
 .col-50 {
-  width: 75%;
-  padding: 0px 14px;
+  width: 100%;
 }
 .col-30 {
   width: 30%;

@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="nav-content">
-        <div className="nav-logo">Felisity</div>
+        <div className="nav-logo">ReGallery</div>
 
         <nav className="nav-links__container">
           {links &&

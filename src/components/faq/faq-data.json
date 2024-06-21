@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Can I add galleries using Gutenberg",
+    "description": "Our plugin smoothly works with the Gutenberg editor, making gallery addition and management a breeze for a user-friendly experience. Additionally, Option changes can be saved both from the live demo feature and working in the Gutenberg editor, ensuring a consistent experience. The integration are also available for most popular builders such as Divi and Elementor.",
+    "panelId": "panel1",
+    "summeryID": "panel1bh-header"
+  },
+  {
+    "title": "How can I change the title of an image in my gallery?",
+    "description": "To change the title of an image, simply edit the image and modify the title from the media uploader screen. You can change also image description with the same way.",
+    "panelId": "panel2",
+    "summeryID": "panel2bh-header"
+  },
+  {
+    "title": "Can images within a gallery be reordered?",
+    "description": "Our plugin supports drag-and-drop functionality, enabling you to easily reorder and restructure images within your galleries.",
+    "panelId": "panel3",
+    "summeryID": "panel3bh-header"
+  },
+  {
+    "title": "Can I use this plugin for a professional photography website?",
+    "description": "ReGallery plugin is perfect for everyone, providing the elegance and adaptability required for top-notch galleries.",
+    "panelId": "panel4",
+    "summeryID": "panel4bh-header"
+  },
+  {
+    "title": "Is the plugin optimized for mobile devices?",
+    "description": "Yes, the plugin is fully responsive, ensuring your galleries look amazing on all devices.",
+    "panelId": "panel5",
+    "summeryID": "panel5bh-header"
+  }
+]
