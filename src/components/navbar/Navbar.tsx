@@ -12,7 +12,7 @@ const links: Link[] = [
   { title: "Features", href: "#features" },
   { title: "Services", href: "#services" },
   // { title: "Pricing", href: "#pricing" },
-  { title: "Download", href: "#download" },
+  // { title: "Download", href: "#download" },
   { title: "Contact", href: "#contact" },
 ];
 
