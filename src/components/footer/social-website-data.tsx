@@ -1,26 +1,22 @@
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
 export const socialWebsiteData = [
   {
-    tagName: YouTubeIcon,
+    className: "fi fi-brands-youtube",
     color: "#FF0000",
-    url: "https://www.youtube.com/",
+    url: "https://www.youtube.com/@ReGalleryteam",
   },
   {
-    tagName: TwitterIcon,
+    className: "fi fi-brands-twitter-alt",
     color: "#1da1f2",
-    url: "https://x.com/",
+    url: "https://x.com/GalleryRe35980",
   },
   {
-    tagName: LinkedInIcon,
+    className: "fi fi-brands-linkedin",
     color: "#225982",
-    url: "https://www.linkedin.com/feed/",
+    url: "https://www.linkedin.com/company/regallery/",
   },
   {
-    tagName: FacebookIcon,
+    className: "fi fi-brands-facebook",
     color: "#0865ff",
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/people/ReGallery/61560316990425/",
   },
 ];

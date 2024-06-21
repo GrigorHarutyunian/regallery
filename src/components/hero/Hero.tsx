@@ -10,14 +10,18 @@ const Hero: React.FC = () => {
           <div className="home-text">
             <div className="section-text__subtitle">Explore the whiskers</div>
             <div className="section-text__title-big">
-              Get your companion with Felisity
+              ReGallery - The Intuitive Photo Gallery Plugin
             </div>
             <div className="section-text__body">
-              Dorem ipsum dolor sitamet, consectetur adipiscing elit, sed do
-              eiusm tempor incididunt ulabore et dolore magna aliqua.
+              The responsive gallery plugin is your ideal solution for easily
+              building stunning, mobile-friendly galleries in just minutes.
             </div>
-            <a href="#download" className="download-btn">
-              Download App
+            <a
+              target="_blanc"
+              href="https://wordpress.org/plugins/regallery/"
+              className="download-btn"
+            >
+              Download
             </a>
           </div>
 

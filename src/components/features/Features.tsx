@@ -17,6 +17,7 @@ const Features: React.FC = () => {
                   key={val.id}
                   title={val.title}
                   description={val.description}
+                  className={val.className}
                 />
               ))}
             </div>
