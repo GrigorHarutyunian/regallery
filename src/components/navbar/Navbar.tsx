@@ -6,14 +6,21 @@ import iconc from "../../assets/icons/logo-no-bg.png";
 interface Link {
   title: string;
   href: string;
+  target?: string;
 }
 
 const links: Link[] = [
-  { title: "Home", href: "#home" },
+  // { title: "Home", href: "#home" },
   { title: "Features", href: "#features" },
   // { title: "Review", href: "#review" },
-  { title: "Support", href: "#support" },
+
   { title: "Views", href: "#views" },
+  {
+    title: "Download",
+    href: "https://wordpress.org/plugins/regallery/",
+    target: "_blank",
+  },
+  { title: "Support", href: "#support" },
   // { title: "Pricing", href: "#pricing" },
   // { title: "Contact", href: "#contact" },
 ];
@@ -29,10 +36,15 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className={"nav-content"}>
-        <div className={"nav-logo"}>
-          <img src={iconc} alt="Logo" className={"nav-logo__icon"} />
-          <span>eGallery</span>
-        </div>
+        <a
+          href="#home"
+          style={{ textDecoration: "none", display: "inline-flex" }}
+        >
+          <div className={"nav-logo"}>
+            <img src={iconc} alt="Logo" className={"nav-logo__icon"} />
+            <span>eGallery</span>
+          </div>
+        </a>
 
         <nav className={"nav-links__container"}>
           {links &&
@@ -41,6 +53,7 @@ const Navbar: React.FC = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={"nav-link"}
                 href={link.href}
+                target={link.target}
                 key={i}
               >
                 <div className={"nav-link__text"}>{link.title}</div>

@@ -11,18 +11,6 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({ title, text, id }) => {
           <div className="section-text">
             <div className="section-text__title text-white">{title}</div>
             <div className="section-text__body text-white">{text}</div>
-            {/* <a href="#download" className="download-btn__img">
-              <img
-                src="https://uhmnb.csb.app/images/app_btn1.webp"
-                alt="app store"
-              />
-            </a>
-            <a href="#download" className="download-btn__img">
-              <img
-                src="https://uhmnb.csb.app/images/app_btn2.webp"
-                alt="google play store"
-              />
-            </a> */}
           </div>
           <div className="section-image">
             <img
