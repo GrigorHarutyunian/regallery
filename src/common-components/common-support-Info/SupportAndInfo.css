@@ -1,19 +1,19 @@
-section#download {
+section.supportandInfo {
   position: relative;
   height: 60vh;
   display: flex;
   background-color: #64859e;
 }
 
-section#download .container {
+section.supportandInfo .container {
   margin: auto;
 }
 
-section#download .section-text {
+section.supportandInfo .section-text {
   max-width: 500px;
 }
 
-section#download .section-image {
+section.supportandInfo .section-image {
   max-width: 40vw;
   height: calc(100% - 0px);
 }
@@ -31,7 +31,7 @@ section#download .section-image {
   opacity: 0.9;
 }
 @media screen and (max-width: 700px) {
-  section#download {
+  section.supportandInfo {
     height: auto;
   }
 }

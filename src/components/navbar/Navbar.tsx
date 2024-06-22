@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
+import iconc from "../../assets/icons/logo-no-bg.png";
 
 interface Link {
   title: string;
@@ -10,10 +11,11 @@ interface Link {
 const links: Link[] = [
   { title: "Home", href: "#home" },
   { title: "Features", href: "#features" },
-  { title: "Services", href: "#services" },
+  // { title: "Review", href: "#review" },
+  { title: "Support", href: "#support" },
+  { title: "Views", href: "#views" },
   // { title: "Pricing", href: "#pricing" },
-  // { title: "Download", href: "#download" },
-  { title: "Contact", href: "#contact" },
+  // { title: "Contact", href: "#contact" },
 ];
 
 const Navbar: React.FC = () => {
@@ -26,25 +28,31 @@ const Navbar: React.FC = () => {
         menuOpen ? " nav-open" : ""
       }`}
     >
-      <div className="nav-content">
-        <div className="nav-logo">ReGallery</div>
+      <div className={"nav-content"}>
+        <div className={"nav-logo"}>
+          <img src={iconc} alt="Logo" className={"nav-logo__icon"} />
+          <span>eGallery</span>
+        </div>
 
-        <nav className="nav-links__container">
+        <nav className={"nav-links__container"}>
           {links &&
             links.map((link, i) => (
               <a
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="nav-link"
+                className={"nav-link"}
                 href={link.href}
                 key={i}
               >
-                <div className="nav-link__text">{link.title}</div>
-                <div className="nav-link__background" />
+                <div className={"nav-link__text"}>{link.title}</div>
+                <div className={"nav-link__background"} />
               </a>
             ))}
         </nav>
 
-        <div className="nav-menu__icon" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className={"nav-menu__icon"}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <div />
           <div />
         </div>

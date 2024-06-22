@@ -8,7 +8,7 @@ interface FeaturesBoxProps {
   className: string;
 }
 
-const FeaturesBox: React.FC<FeaturesBoxProps> = ({
+const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   title,
   description,
   className,
@@ -23,4 +23,4 @@ const FeaturesBox: React.FC<FeaturesBoxProps> = ({
   );
 };
 
-export default FeaturesBox;
+export default CommonBoxForGrid;

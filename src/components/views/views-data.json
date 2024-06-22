@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Thumbnails ",
+    "description": "Organize images into a grid of thumbnails, enabling users to quickly browse through your gallery and select specific images for detailed viewing.",
+    "className": "fi fi-rr-apps"
+  },
+  {
+    "id": 2,
+    "title": "Mosaic",
+    "description": "Create an artful, collage-like presentation by combining various sizes and shapes",
+    "className": "fi fi-rr-objects-column"
+  },
+  {
+    "id": 3,
+    "title": "Masonry ",
+    "description": "Arrange items in an alternating layout to achieve a flowing, natural appearance that optimizes space and improves the overall look.",
+    "className": "fi fi-rs-rectangles-mixed"
+  },
+  {
+    "id": 4,
+    "title": "Slideshow",
+    "description": "Display images or videos in a sequential, animated format. This layout focuses the viewer’s attention by presenting one item at a time, providing a clean and organized presentation of content.",
+    "className": "fi fi-rr-layers"
+  }
+]

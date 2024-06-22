@@ -19,6 +19,7 @@ const MyAccordion: React.FC<
 }) => {
   return (
     <Accordion
+      elevation={0}
       expanded={expandedPanel === panelId}
       onChange={() => handleChange(panelId)}
     >
