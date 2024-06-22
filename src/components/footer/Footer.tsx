@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
 
         <div className="row__social-website">
           <div className="footer-text__title icons__title">
-            Follow us on social media
+            Copyright © 2024 ReGallery.All rights reserved .
           </div>
           <div className="footer__social-website-icons">
             {socialWebsiteData.map((websiteData) => {
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 >
                   <i
                     className={websiteData.className}
-                    style={{ color: `${websiteData.color}`, fontSize: "24px" }}
+                    style={{ fontSize: "20px", color: "#0e4a70" }}
                   ></i>
                 </a>
               );

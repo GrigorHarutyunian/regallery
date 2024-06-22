@@ -39,3 +39,7 @@ section.supportandInfo .section-image {
 .text-white {
   color: #fcfcfc;
 }
+
+.text-white a {
+  color: #0e4a70;
+}

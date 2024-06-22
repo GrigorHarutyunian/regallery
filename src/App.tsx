@@ -17,10 +17,10 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Features />
-        <Review />
-        <Faq />
         <Info />
         <Views />
+        <Review />
+        <Faq />
         <Support />
       </main>
       <Footer />
