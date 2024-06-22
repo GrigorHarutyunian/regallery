@@ -2,11 +2,13 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Features from "./components/features/Features";
-import Services from "./components/services/Services";
+import Review from "./components/reviews/Review";
 // import Pricing from "./components/pricing/Pricing";
-import Download from "./components/download/Download";
+import Support from "./components/support/Support";
 import Footer from "./components/footer/Footer";
 import Faq from "./components/faq/Faq";
+import Views from "./components/views/Views";
+import Info from "./components/info/Info";
 
 const App: React.FC = () => {
   return (
@@ -15,9 +17,11 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Features />
-        <Services />
+        <Review />
         <Faq />
-        <Download />
+        <Info />
+        <Views />
+        <Support />
       </main>
       <Footer />
     </>

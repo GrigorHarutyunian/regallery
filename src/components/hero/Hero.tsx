@@ -8,7 +8,6 @@ const Hero: React.FC = () => {
       <Container>
         <Row>
           <div className="home-text">
-            <div className="section-text__subtitle">Explore the whiskers</div>
             <div className="section-text__title-big">
               ReGallery - The Intuitive Photo Gallery Plugin
             </div>
