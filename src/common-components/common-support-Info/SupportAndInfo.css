@@ -18,18 +18,6 @@ section.supportandInfo .section-image {
   height: calc(100% - 0px);
 }
 
-.download-btn__img {
-  display: inline-block;
-  height: 56px;
-  width: 170px;
-  margin: 0px 8px;
-  margin-top: 24px;
-  transition: 0.2s all ease-in-out;
-}
-
-.download-btn__img:hover {
-  opacity: 0.9;
-}
 @media screen and (max-width: 700px) {
   section.supportandInfo {
     height: auto;

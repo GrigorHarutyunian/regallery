@@ -49,9 +49,6 @@ footer {
   section {
     height: auto;
   }
-}
-
-@media screen and (max-width: 700px) {
   .section-image,
   .section-image-features,
   .section-image__small {
