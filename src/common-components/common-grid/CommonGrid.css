@@ -1,5 +1,7 @@
 .section-text {
   min-width: 0px;
+  width: 100%;
+  max-width: 1105px;
 }
 
 .section-text__title {
@@ -14,7 +16,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
-  margin-top: 10px;
   margin-bottom: 8px;
   color: #0e4a70;
 }

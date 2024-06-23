@@ -6,12 +6,11 @@
   left: 0px;
   display: flex;
   height: 70px;
-
   z-index: 1000;
 }
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
-  background-color: #6e92ae;
+  background-color: #0e4a70;
   position: sticky;
   top: 0;
   -webkit-box-shadow: 0 8px 6px -6px #6e92ae;
@@ -22,7 +21,7 @@
 .nav-content {
   height: 100%;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1105px;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
