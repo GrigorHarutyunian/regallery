@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
 
-.section-text__subtitle {
-  color: #fcfcfc;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
 .section-text__title-big {
   font-size: 4rem;
   font-weight: 700;
@@ -43,16 +36,11 @@
   background-color: #64859e;
 }
 
-.section-image img,
-.section-image__small img {
+.section-image img {
   height: 100%;
   width: 100%;
   object-fit: contain;
   object-position: center;
-}
-
-.section-image-features img {
-  width: 80%;
 }
 
 @media screen and (max-width: 348px) {

@@ -21,8 +21,6 @@ const links: Link[] = [
     target: "_blank",
   },
   { title: "Support", href: "#support" },
-  // { title: "Pricing", href: "#pricing" },
-  // { title: "Contact", href: "#contact" },
 ];
 
 const Navbar: React.FC = () => {

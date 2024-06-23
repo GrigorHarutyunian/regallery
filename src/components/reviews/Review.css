@@ -48,12 +48,6 @@
   background-color: #0e4a70;
 }
 
-@media screen and (max-width: 700px) {
-  .review-cards {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 .review-card__author {
   position: absolute;
   right: 0;
@@ -83,4 +77,11 @@
 .review-card__author {
   color: #0e4a70;
   font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .review-cards {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
