@@ -29,7 +29,8 @@
   line-height: 26px;
   margin-bottom: 15px;
   font-weight: 400;
-  max-width: 330px;
+  max-width: 339px;
+  text-align: start;
 }
 .feature-box {
   margin-bottom: 32px;
