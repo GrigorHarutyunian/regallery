@@ -1,6 +1,6 @@
 import React from "react";
 import SupportAndInfo from "../../common-components/common-support-Info/SupportAndInfo";
-import supportData from "./support-data.json";
+import supportData from "./support-data";
 const Support: React.FC = () => {
   const parts = supportData.text.split("Support Forum");
   return (
@@ -19,6 +19,7 @@ const Support: React.FC = () => {
         </>
       }
       id={"support"}
+      img={supportData.img}
     />
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
-import iconc from "../../assets/icons/logo-no-bg.png";
+import iconc from "../../assets/icons/logo.png";
 
 interface Link {
   title: string;
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
         >
           <div className={"nav-logo"}>
             <img src={iconc} alt="Logo" className={"nav-logo__icon"} />
-            <span>eGallery</span>
+            <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
         </a>
 

@@ -36,6 +36,13 @@
   background-color: #64859e;
 }
 
+.hero-conteiner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1105px;
+}
+
 .section-image img {
   height: 100%;
   width: 100%;

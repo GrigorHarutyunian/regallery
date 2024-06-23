@@ -3,7 +3,12 @@ import { Row, Container } from "react-bootstrap";
 import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
 
-const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({ title, text, id }) => {
+const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
+  title,
+  text,
+  id,
+  img,
+}) => {
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -13,10 +18,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({ title, text, id }) => {
             <div className="section-text__body text-white">{text}</div>
           </div>
           <div className="section-image">
-            <img
-              src="https://uhmnb.csb.app/images/download.svg"
-              alt="download"
-            />
+            <img src={img} alt="download" />
           </div>
         </Row>
       </Container>
