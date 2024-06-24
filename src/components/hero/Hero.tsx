@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
+import img from "../../assets/imgs/main1.png";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 
 const Hero: React.FC = () => {
@@ -22,10 +23,7 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="section-image">
-              <img
-                src="https://uhmnb.csb.app/images/hero-right.png"
-                alt="App Preview"
-              />
+              <img src={img} alt="App Preview" />
             </div>
           </div>
         </Row>

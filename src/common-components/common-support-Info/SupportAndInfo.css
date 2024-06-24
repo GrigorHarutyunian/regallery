@@ -15,14 +15,9 @@ section.supportandInfo .section-text {
   max-width: 500px;
 }
 
-section.supportandInfo .section-image {
-  max-width: 40vw;
-  height: calc(100% - 0px);
-}
-
 .support__row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   max-width: 1105px;
 }
