@@ -2,25 +2,40 @@ import { useState } from "react";
 import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.png";
+import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import SubMenu from "./SubMenu";
 
 interface Link {
   title: string;
   href: string;
   target?: string;
+  type?: string;
+  subMenuItems?: Array<string>;
 }
 
 const links: Link[] = [
-  // { title: "Home", href: "#home" },
+  {
+    title: "Gallery views ",
+    href: "#views",
+    type: "menu",
+    subMenuItems: [
+      "Thumbnails",
+      "Mosaic",
+      "Masonry",
+      "Slideshow",
+      "Carousel",
+      "List view",
+    ],
+  },
   { title: "Features", href: "#features" },
-  // { title: "Review", href: "#review" },
-
-  { title: "Views", href: "#views" },
+  { title: "FAQ", href: "#faq" },
+  { title: "Contact us", href: "#support" },
   {
     title: "Download",
     href: "https://wordpress.org/plugins/regallery/",
     target: "_blank",
+    type: "button",
   },
-  { title: "Support", href: "#support" },
 ];
 
 const Navbar: React.FC = () => {
@@ -45,19 +60,37 @@ const Navbar: React.FC = () => {
         </a>
 
         <nav className={"nav-links__container"}>
-          {links &&
-            links.map((link, i) => (
-              <a
-                onClick={() => setMenuOpen(!menuOpen)}
-                className={"nav-link"}
-                href={link.href}
-                target={link.target}
-                key={i}
-              >
-                <div className={"nav-link__text"}>{link.title}</div>
-                <div className={"nav-link__background"} />
-              </a>
-            ))}
+          {links.map((link, i) => (
+            <>
+              {link.type === "menu" ? (
+                <SubMenu
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  title={link.title}
+                  items={link.subMenuItems}
+                  href={link.href}
+                />
+              ) : (
+                <a
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className={"nav-link"}
+                  href={link.href}
+                  target={link.target}
+                  key={i}
+                >
+                  {link.type === "button" ? (
+                    <DownloadBtn
+                      className={"download-btn download-btn__navbar "}
+                    />
+                  ) : (
+                    <>
+                      <div className={"nav-link__text"}>{link.title}</div>
+                      <div className={"nav-link__background"} />
+                    </>
+                  )}
+                </a>
+              )}
+            </>
+          ))}
         </nav>
 
         <div

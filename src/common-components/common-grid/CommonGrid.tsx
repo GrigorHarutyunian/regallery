@@ -3,6 +3,7 @@ import FeaturesAndViewsDTO from "../../types/FeaturesAndViewsDTO";
 ("../../src/types/FeaturesAndViewsDTO");
 import CommonBoxForGrid from "./CommonBoxForGrid";
 import "./CommonGrid.css";
+import "../../components/reviews/Review.css";
 const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
   sectionId,
   data,
@@ -14,7 +15,7 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
       <Container>
         <Row>
           <div className="section-text">
-            <div className="section-text__title">{title}</div>
+            <div className="section-text__title-centered dark">{title}</div>
             <div className={gridClassname}>
               {data.map((val: any) => (
                 <CommonBoxForGrid

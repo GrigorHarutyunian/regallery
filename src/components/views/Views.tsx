@@ -1,12 +1,12 @@
 import viewsData from "./views-data.json";
 import CommonGrid from "../../common-components/common-grid/CommonGrid";
-const Views: React.FC = () => {
+const Views: React.FC<any> = () => {
   return (
     <CommonGrid
       sectionId="views"
-      title="Available Gallery views"
+      title="Gallery views"
       data={viewsData}
-      gridClassname="grid__6 grid__4"
+      gridClassname="grid__6"
     />
   );
 };

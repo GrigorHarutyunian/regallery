@@ -15,16 +15,19 @@ footer > .container {
 }
 
 .row__social-website {
+  width: 100%;
+  max-width: 1105px;
   display: flex;
   justify-content: space-between;
   /* flex-direction: column; */
   align-items: center;
+  margin: 0px auto;
 }
 
 .footer__social-website-icons {
   display: flex;
   justify-content: space-around;
-  gap: 12px;
+  gap: 15px;
 }
 
 @media screen and (max-width: 700px) {
@@ -35,5 +38,8 @@ footer > .container {
   .row__social-website {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .icons__title {
+    margin-top: 5px;
   }
 }

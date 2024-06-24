@@ -14,10 +14,12 @@ const Services: React.FC = () => {
             {reviewData.map((val: ReviewDTO) => {
               return (
                 <ReviewCards
+                  key={val.id}
                   title={val.title}
                   text={val.text}
                   author={val.author}
                   img={val.img}
+                  id={val.id}
                 />
               );
             })}

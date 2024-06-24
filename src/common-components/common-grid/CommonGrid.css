@@ -52,6 +52,9 @@
   }
 }
 
+.dark {
+  color: #0e4a70 !important;
+}
 @media screen and (max-width: 450px) {
   .grid__6 {
     grid-template-columns: 1fr;
