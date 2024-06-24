@@ -23,6 +23,13 @@
     "panelId": "panel4",
     "summeryID": "panel4bh-header"
   },
+
+  {
+    "title": "Can ReGallery display video files as well as photos?",
+    "description": "Yes, ReGallery supports both photos and video files. You can easily upload and display videos alongside your photo galleries, allowing for a dynamic and engaging multimedia experience on your website.",
+    "panelId": "panel5",
+    "summeryID": "panel5bh-header"
+  },
   {
     "title": "Is ReGallery optimized for mobile devices?",
     "description": "Yes, the plugin is fully responsive, ensuring your galleries look amazing on all devices.",

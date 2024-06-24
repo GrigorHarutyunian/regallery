@@ -41,10 +41,6 @@
   margin: 0px 8px;
 }
 
-.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-  border-radius: 0px !important;
-}
-
 .menu {
   width: 100%;
 }
@@ -133,10 +129,6 @@
   align-items: center;
 }
 
-.css-6hp17o-MuiList-root-MuiMenu-list {
-  background: #0e4a70;
-}
-
 @media screen and (min-width: 700px) and (max-width: 940px) {
   .download-btn__navbar {
     font-size: 12px !important;
@@ -150,6 +142,11 @@
   .nav-logo {
     font-size: 15px;
   }
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background: #0e4a70 !important;
+  border-radius: 0px !important;
 }
 
 @media screen and (max-width: 700px) {
