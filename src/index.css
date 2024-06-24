@@ -22,12 +22,11 @@ section {
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: 100px 24px;
+  padding: 100px 25px;
 }
 
 footer {
-  padding: 0px 24px;
-  display: flex;
+  padding: 25px;
 }
 
 .row {

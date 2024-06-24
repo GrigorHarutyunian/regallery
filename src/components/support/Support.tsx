@@ -2,7 +2,7 @@ import React from "react";
 import SupportAndInfo from "../../common-components/common-support-Info/SupportAndInfo";
 import supportData from "./support-data";
 const Support: React.FC = () => {
-  const parts = supportData.text.split("Support Forum");
+  const parts = supportData.text.split("Support Forum.");
   return (
     <SupportAndInfo
       title={supportData.title}
@@ -13,8 +13,9 @@ const Support: React.FC = () => {
             href="https://wordpress.org/support/plugin/regallery/"
             target="_blank"
           >
-            Support Forum
+            Support Forum.
           </a>
+          <br></br>
           {parts[1]}
         </>
       }

@@ -22,5 +22,17 @@
     "title": "Slideshow",
     "description": "Display images or videos in a sequential, animated format. This layout focuses the viewer’s attention by presenting one item at a time, providing a clean and organized presentation of content.",
     "className": "fi fi-rr-layers"
+  },
+  {
+    "id": 5,
+    "title": "Carousel",
+    "description": "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. It’s great for highlighting products, portfolios, or collections. Coming soon.",
+    "className": "fi fi-rs-rectangle-vertical-history"
+  },
+  {
+    "id": 6,
+    "title": "List view ",
+    "description": "Each image in this view takes up the whole width, giving you plenty of space for detailed descriptions. It's perfect for galleries where you need to add more info, like product showcases or portfolios. Coming soon",
+    "className": "fi fi-rr-table-list"
   }
 ]

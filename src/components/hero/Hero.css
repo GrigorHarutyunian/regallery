@@ -3,7 +3,7 @@
 .section-text__title-big {
   font-size: 4rem;
   font-weight: 700;
-  color: #fcfcfc;
+  color: #0e4a70;
   line-height: 1.3;
   margin-bottom: 24px;
   max-width: 600px;
@@ -11,29 +11,11 @@
 
 .section-text__body {
   color: #fcfcfc;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 30px;
   margin-bottom: 15px;
   font-weight: 400;
   max-width: 450px;
-}
-
-.download-btn {
-  background-color: #0e4a70;
-  text-decoration: none;
-  color: #fcfcfc;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 16px 40px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  margin: 0;
-}
-.download-btn:hover {
-  background-color: #64859e;
 }
 
 .hero-conteiner {
@@ -50,6 +32,9 @@
   object-position: center;
 }
 
+.section-text__title-big span {
+  color: #0e4a70;
+}
 @media screen and (max-width: 348px) {
   .section-text__title-big {
     font-size: 3rem;

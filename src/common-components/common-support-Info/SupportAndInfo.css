@@ -6,7 +6,9 @@ section.supportandInfo {
 }
 
 section.supportandInfo .container {
-  margin: auto;
+  margin: auto 0px;
+  display: flex;
+  justify-content: center;
 }
 
 section.supportandInfo .section-text {
@@ -16,6 +18,13 @@ section.supportandInfo .section-text {
 section.supportandInfo .section-image {
   max-width: 40vw;
   height: calc(100% - 0px);
+}
+
+.support__row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1105px;
 }
 
 @media screen and (max-width: 700px) {

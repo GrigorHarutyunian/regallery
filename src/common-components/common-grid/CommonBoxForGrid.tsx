@@ -6,6 +6,7 @@ interface FeaturesBoxProps {
   title: string;
   description: string;
   className: string;
+  currentView?: number;
 }
 
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({

@@ -8,12 +8,14 @@ const reviewData = [
     text: "I’ve used this plugin for my travel blog, and to my surprise, I managed to use it very quickly…",
     author: "Stephanie",
     img: stephanie,
+    id: 1,
   },
   {
     title: "Fast reply",
     text: "I’m very impressed with the quick response",
     author: "Sergio Sanchez",
     img: sanchez,
+    id: 2,
   },
 
   {
@@ -21,6 +23,7 @@ const reviewData = [
     text: "I recently discovered the ReGallery Photo Gallery Plugin, and even though it’s new to the market, it surprised me with its many useful features—all available for FREE!",
     author: "Lilbrown",
     img: lil,
+    id: 3,
   },
 ];
 
