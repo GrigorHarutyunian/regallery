@@ -6,7 +6,6 @@ interface FeaturesBoxProps {
   title: string;
   description: string;
   className: string;
-  currentView?: number;
 }
 
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
@@ -16,7 +15,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
 }) => {
   return (
     <div className="feature-box col-50">
-      <i className={className} style={{ color: "#0e4a70", fontSize: "41px" }} />
+      <i className={className} style={{ color: "#FCB51B", fontSize: "41px" }} />
 
       <div className="section-text__title-small">{title}</div>
       <div className="section-text__desc">{description}</div>

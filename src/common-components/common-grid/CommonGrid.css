@@ -31,14 +31,17 @@
 }
 .feature-box {
   margin-bottom: 32px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px 0px lightgrey;
 }
 
 .grid__6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 23px;
-  padding: 30px 0;
+  justify-content: space-between;
+  gap: 35px;
+  justify-items: center;
 }
 
 .grid__4 > .col-50:nth-child(4) {

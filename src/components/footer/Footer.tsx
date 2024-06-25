@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                 <i
                   className={websiteData.className}
                   style={{
-                    fontSize: "17px",
+                    fontSize: "25px",
                     color: "#0e4a70",
                     display: "contents",
                   }}

@@ -1,6 +1,14 @@
 import ReviewDTO from "../../types/ReviewDTO";
 import "./Review.css";
-const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, img }) => {
+import Rating from "@mui/material/Rating";
+
+const ReviewCards: React.FC<ReviewDTO> = ({
+  title,
+  text,
+  author,
+  img,
+  seeMore,
+}) => {
   return (
     <div className="review-card">
       <div className="review-card__icon">
@@ -8,9 +16,23 @@ const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, img }) => {
       </div>
       <div className="review-card__text-container">
         <div className="section-text__title-small review__title">{title}</div>
-        <div className="section-text__desc review__text">{text}</div>
+        <div className="section-text__desc review__text">
+          {text}{" "}
+          <a href={seeMore} target="__blank">
+            see more
+          </a>
+        </div>
       </div>
-      <div className="review-card__author">Author : {author}</div>
+      <div className="review-card__author">
+        <Rating
+          size="large"
+          className="stars"
+          name="read-only"
+          value={5}
+          readOnly
+        />
+        <div className="review-card__author__name">Author:{author}</div>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
-import img from "../../assets/imgs/main1.png";
+import img from "../../assets/imgs/main.png";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 
 const Hero: React.FC = () => {
@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
           <div className="hero-conteiner">
             <div className="home-text">
               <div className="section-text__title text-white">
-                <span className="section-text__title-big">Regallery</span> - The
-                Intuitive Photo Gallery Plugin
+                <span className="section-text__title-big">Regallery</span>{" "}
+                <br></br> The Intuitive Photo Gallery Plugin
               </div>
               <div className="section-text__body">
                 The responsive gallery plugin is your ideal solution for easily

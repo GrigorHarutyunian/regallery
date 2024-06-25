@@ -20,6 +20,7 @@ section.supportandInfo .section-text {
   justify-content: space-between;
   width: 100%;
   max-width: 1105px;
+  align-items: center;
 }
 
 @media screen and (max-width: 700px) {

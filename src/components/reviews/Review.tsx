@@ -19,6 +19,7 @@ const Services: React.FC = () => {
                   text={val.text}
                   author={val.author}
                   img={val.img}
+                  seeMore={val.seeMore}
                   id={val.id}
                 />
               );

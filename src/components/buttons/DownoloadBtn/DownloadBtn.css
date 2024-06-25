@@ -1,5 +1,5 @@
 .download-btn {
-  background-color: #0e4a70;
+  background-color: #5c8001;
   text-decoration: none;
   color: #fcfcfc;
   cursor: pointer;
@@ -13,11 +13,11 @@
   margin: 0;
 }
 .download-btn:hover {
-  background-color: #216287;
+  background-color: #fcb51b;
 }
 
 .download-btn__navbar {
-  background: #216287;
+  background: #5c8001;
 }
 
 /* .download-btn__navbar:hover {
