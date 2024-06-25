@@ -111,19 +111,8 @@
   vertical-align: middle;
 }
 
-.MuiMenuItem-root.MuiMenuItem-gutters.nav-link__text.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-  position: absolute;
-  /* padding: 0px 25px; */
-  top: 0px;
-  left: 0px;
-  display: flex;
-  height: 70px;
-  z-index: 1000;
-  background: #0e4a70;
-}
-
 .menuItem__div {
-  height: 70px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,6 +131,24 @@
   .nav-logo {
     font-size: 15px;
   }
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: #0e4a70;
+  width: 250px;
+  opacity: 0;
+  transform-origin: top center;
+  transform: scaleY(0.8);
+  transition: opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none; /* Prevents interaction before fully visible */
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto; /* Enable interaction when fully visible */
 }
 
 .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {

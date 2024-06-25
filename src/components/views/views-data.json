@@ -31,7 +31,7 @@
   },
   {
     "id": 6,
-    "title": "List view ",
+    "title": "List",
     "description": "Each image in this view takes up the whole width, giving you plenty of space for detailed descriptions. It's perfect for galleries where you need to add more info, like product showcases or portfolios. Coming soon",
     "className": "fi fi-rr-table-list"
   }

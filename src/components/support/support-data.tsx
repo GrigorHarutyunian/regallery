@@ -1,4 +1,4 @@
-import supportImg from "../../assets/imgs/support1.png";
+import supportImg from "../../assets/imgs/support.png";
 
 const supportData = {
   title: "Contact us",

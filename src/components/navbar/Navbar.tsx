@@ -24,7 +24,7 @@ const links: Link[] = [
       "Masonry",
       "Slideshow",
       "Carousel",
-      "List view",
+      "List",
     ],
   },
   { title: "Features", href: "#features" },

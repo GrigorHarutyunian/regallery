@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
+  background-color: #eff3f6;
 }
 
 main {
@@ -37,7 +38,8 @@ footer {
 }
 
 .col-50 {
-  width: 100%;
+  width: 79%;
+  padding: 25px;
 }
 .col-30 {
   width: 30%;

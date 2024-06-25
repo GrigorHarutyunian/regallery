@@ -55,13 +55,24 @@
   background-color: #0e4a70;
 }
 
-.review-card__author {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 30px;
+.review-card__author__name {
   font-style: italic;
 }
+
+.review-card__author {
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0e4a70;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
 .review-text__desc {
   color: #707b8e;
   font-size: 1rem;
@@ -80,10 +91,6 @@
   margin-top: 48px;
   max-width: 300px;
   text-align: center;
-}
-.review-card__author {
-  color: #0e4a70;
-  font-size: 15px;
 }
 
 @media screen and (max-width: 700px) {

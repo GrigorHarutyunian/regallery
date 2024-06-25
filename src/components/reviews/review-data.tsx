@@ -8,6 +8,8 @@ const reviewData = [
     text: "I’ve used this plugin for my travel blog, and to my surprise, I managed to use it very quickly…",
     author: "Stephanie",
     img: stephanie,
+    seeMore:
+      "https://wordpress.org/support/topic/quick-and-easy-photo-gallery-plugin/",
     id: 1,
   },
   {
@@ -15,6 +17,7 @@ const reviewData = [
     text: "I’m very impressed with the quick response",
     author: "Sergio Sanchez",
     img: sanchez,
+    seeMore: "https://wordpress.org/support/topic/fast-reply-4/",
     id: 2,
   },
 
@@ -23,6 +26,7 @@ const reviewData = [
     text: "I recently discovered the ReGallery Photo Gallery Plugin, and even though it’s new to the market, it surprised me with its many useful features—all available for FREE!",
     author: "Lilbrown",
     img: lil,
+    seeMore: "https://wordpress.org/support/topic/love-the-new-mosaic-view/",
     id: 3,
   },
 ];
