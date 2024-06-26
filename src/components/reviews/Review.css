@@ -63,14 +63,15 @@
   flex-direction: column;
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 5px;
+  /* transform: translateX(-50%); */
   color: #0e4a70;
   font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  bottom: 0;
 }
 
 .review-text__desc {
@@ -78,6 +79,7 @@
   font-size: 1rem;
   line-height: 26px;
   margin-bottom: 15px;
+
   font-weight: 400;
   max-width: 330px;
 }
@@ -88,9 +90,18 @@
   text-align: center;
 }
 .review__text {
-  margin-top: 48px;
+  margin-top: 22px;
   max-width: 300px;
   text-align: center;
+}
+
+.autorr {
+  height: 266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 @media screen and (max-width: 700px) {

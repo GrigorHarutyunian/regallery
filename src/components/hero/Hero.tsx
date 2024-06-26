@@ -12,14 +12,18 @@ const Hero: React.FC = () => {
           <div className="hero-conteiner">
             <div className="home-text">
               <div className="section-text__title text-white">
-                <span className="section-text__title-big">Regallery</span>{" "}
-                <br></br> The Intuitive Photo Gallery Plugin
+                The Intuitive <br></br> Photo Gallery Plugin
               </div>
               <div className="section-text__body">
                 The responsive gallery plugin is your ideal solution for easily
                 building stunning, mobile-friendly galleries in just minutes.
               </div>
-              <DownloadBtn className={"download-btn"} />
+              <a
+                href=" https://wordpress.org/plugins/regallery/"
+                target="__blank"
+              >
+                <DownloadBtn className={"download-btn"} />
+              </a>
             </div>
 
             <div className="section-image">

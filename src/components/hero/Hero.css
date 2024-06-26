@@ -12,8 +12,9 @@
 .section-text__body {
   color: #fcfcfc;
   font-size: 1.2rem;
-  line-height: 30px;
-  margin-bottom: 15px;
+  line-height: 36px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-weight: 400;
   max-width: 450px;
 }
