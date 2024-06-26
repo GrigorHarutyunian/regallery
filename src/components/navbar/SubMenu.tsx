@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./Navbar.css";
+import(
+  "https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css"
+);
 
 const SubMenu = ({ title, items, href, onClick }: any) => {
   const [open, setOpen] = useState<boolean>(false);
@@ -14,10 +17,16 @@ const SubMenu = ({ title, items, href, onClick }: any) => {
   return (
     <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
       <a id="fade-button" className={"nav-link"}>
-        <div className={"nav-link__text"}>{title}</div>
+        <div className={"nav-link__text"}>
+          {title}
+          <i
+            className={`fi fi-rs-angle-small-down${
+              open ? " arrow-rotate" : ""
+            }`}
+          ></i>
+        </div>
         <div className={"nav-link__background"} />
       </a>
-
       {
         <div
           onClick={() => {
@@ -29,7 +38,13 @@ const SubMenu = ({ title, items, href, onClick }: any) => {
           {items.map((val: any, i: any) => (
             <div key={i} className="menuItem__div">
               <a href={href} className="nav-link menu">
-                <div className="nav-link__text">{val}</div>
+                <div className="nav-link__text submenu">
+                  <i
+                    style={{ marginRight: "5px", fontSize: "1rem" }}
+                    className={val.className}
+                  ></i>{" "}
+                  {val.title}
+                </div>
                 <div className="nav-link__background" />
               </a>
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
-import img from "../../assets/imgs/main.png";
+import img from "../../assets/imgs/choose1.png";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 
 const Hero: React.FC = () => {
