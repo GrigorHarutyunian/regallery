@@ -4,13 +4,14 @@ import "./Navbar.css";
 import iconc from "../../assets/icons/logo.png";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
+import viewData from "../../components/views/views-data.json";
 
 interface Link {
   title: string;
   href: string;
   target?: string;
   type?: string;
-  subMenuItems?: Array<string>;
+  subMenuItems?: Array<any>;
 }
 
 const links: Link[] = [
@@ -18,14 +19,7 @@ const links: Link[] = [
     title: "Gallery views ",
     href: "#views",
     type: "menu",
-    subMenuItems: [
-      "Thumbnails",
-      "Mosaic",
-      "Masonry",
-      "Slideshow",
-      "Carousel",
-      "List",
-    ],
+    subMenuItems: viewData,
   },
   { title: "Features", href: "#features" },
   { title: "FAQ", href: "#faq" },
@@ -58,7 +52,6 @@ const Navbar: React.FC = () => {
             <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
         </a>
-
         <nav className={"nav-links__container"}>
           {links.map((link, i) => (
             <>
@@ -92,7 +85,6 @@ const Navbar: React.FC = () => {
             </>
           ))}
         </nav>
-
         <div
           className={"nav-menu__icon"}
           onClick={() => setMenuOpen(!menuOpen)}

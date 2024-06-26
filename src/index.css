@@ -65,6 +65,15 @@ footer {
   .section-text__title-small {
     font-size: 16px;
   }
+
+  .fi-rs-angle-small-down {
+    height: 11px;
+    width: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: right;
+  }
 }
 
 @media screen and (max-width: 700px) {

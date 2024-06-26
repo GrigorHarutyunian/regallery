@@ -54,8 +54,31 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.submenu {
+  font-size: 1.1rem;
+  display: block;
+}
+
+.fi-rs-angle-small-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  display: inline-block;
+  height: 16px;
+  width: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition */
+  transform-origin: right;
+}
+.arrow-rotate {
+  transform: rotate(180deg);
+  transform-origin: right; /* Rotate the arrow 180 degrees to point it upwards */
+}
 .nav-link__background {
   margin-top: -2px;
   height: 2px;
