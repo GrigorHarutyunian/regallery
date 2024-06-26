@@ -13,7 +13,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   return (
     <section id={id} className="supportandInfo">
       <Container>
-        <div className="support__row">
+        <div className="support__row info">
           <div className="section-text">
             <div className="section-text__title text-white">{title}</div>
             <div className="section-text__body text-white">{text}</div>
