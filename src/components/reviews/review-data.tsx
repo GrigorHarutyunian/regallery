@@ -14,7 +14,7 @@ const reviewData = [
   },
   {
     title: "Fast reply",
-    text: "I’m very impressed with the quick response",
+    text: "I’m very impressed with the quick response.",
     author: "Sergio Sanchez",
     img: sanchez,
     seeMore: "https://wordpress.org/support/topic/fast-reply-4/",

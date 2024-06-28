@@ -4,7 +4,7 @@ import(
   "https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css"
 );
 
-const SubMenu = ({ title, items, href, onClick }: any) => {
+const SubMenu = ({ title, items, onClick }: any) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => {
@@ -37,10 +37,14 @@ const SubMenu = ({ title, items, href, onClick }: any) => {
         >
           {items.map((val: any, i: any) => (
             <div key={i} className="menuItem__div">
-              <a href={href} className="nav-link menu">
+              <a href={"#" + val.title} className="nav-link menu">
                 <div className="nav-link__text submenu">
                   <i
-                    style={{ marginRight: "5px", fontSize: "1rem" }}
+                    style={{
+                      marginRight: "5px",
+                      fontSize: "1rem",
+                      height: "15px",
+                    }}
                     className={val.className}
                   ></i>{" "}
                   {val.title}
