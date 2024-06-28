@@ -8,6 +8,7 @@
   height: 70px;
   z-index: 1000;
   background: #0e4a70;
+  animation: slideDown 0.6s ease-in-out forwards;
 }
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
@@ -16,6 +17,8 @@
   -webkit-box-shadow: 0 8px 6px -6px #0e4a70;
   -moz-box-shadow: 0 8px 6px -6px #0e4a70;
   box-shadow: 0 8px 6px -6px #0e4a70;
+  animation: nav-enter-anim 0.6s ease-in-out forwards;
+  transition: top 0.15s ease-in; /* Smooth transition for position */
 }
 
 .nav-content {
@@ -135,25 +138,10 @@
 }
 
 .menuItem__div {
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 700px) and (max-width: 940px) {
-  .download-btn__navbar {
-    font-size: 12px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .nav-link__text {
-    font-size: 12px;
-  }
-  .nav-logo {
-    font-size: 15px;
-  }
 }
 
 .dropdown-menu {
@@ -185,6 +173,21 @@
 }
 .css-pwxzbm {
   border-radius: 0px !important;
+}
+
+@media screen and (min-width: 700px) and (max-width: 940px) {
+  .download-btn__navbar {
+    font-size: 12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-link__text {
+    font-size: 12px;
+  }
+  .nav-logo {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -267,5 +270,23 @@
   }
   to {
     height: 100vh;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: -70px; /* Start position */
+  }
+  to {
+    top: 0; /* End position */
+  }
+}
+
+@keyframes nav-enter-anim {
+  from {
+    top: -70px; /* Start slightly above */
+  }
+  to {
+    top: 0; /* End at top */
   }
 }

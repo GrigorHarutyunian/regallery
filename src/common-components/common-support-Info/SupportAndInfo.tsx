@@ -17,7 +17,12 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           <div className="section-text">
             <div className="section-text__title text-white">{title}</div>
             <div className="section-text__body text-white">{text}</div>
-            <DownloadBtn className="download-btn" />
+            <a
+              href=" https://wordpress.org/plugins/regallery/"
+              target="__blank"
+            >
+              <DownloadBtn className="download-btn" />
+            </a>
           </div>
           <div className="section-image">
             <img src={img} alt="download" />

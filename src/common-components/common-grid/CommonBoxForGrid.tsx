@@ -13,12 +13,22 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   description,
   className,
 }) => {
+  console.log(title);
   return (
-    <div className="feature-box col-50">
-      <i className={className} style={{ color: "#FCB51B", fontSize: "41px" }} />
+    <div id={title} className="feature-box col-50">
+      <i className={className} style={{ color: "#FDC120", fontSize: "41px" }} />
 
       <div className="section-text__title-small">{title}</div>
-      <div className="section-text__desc">{description}</div>
+      <div className="section-text__desc">
+        {description.includes("Coming soon") ? (
+          <>
+            {description.replace("Coming soon", "")}
+            <span style={{ fontStyle: "italic" }}>Coming soon</span>
+          </>
+        ) : (
+          description
+        )}
+      </div>
     </div>
   );
 };

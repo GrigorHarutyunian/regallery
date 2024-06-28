@@ -55,9 +55,11 @@ footer {
   }
   .section-text__title {
     font-size: 30px;
+    max-width: 500px;
   }
   .section-text__body {
     font-size: 15px;
+    max-width: 480px;
   }
   .review-card {
     padding: 21px 8px 54px;
