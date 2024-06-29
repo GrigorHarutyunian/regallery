@@ -13,7 +13,7 @@
   margin: 0;
 }
 .download-btn:hover {
-  background-color: #c68b14;
+  opacity: 0.8;
 }
 
 .download-btn__navbar {

@@ -6,10 +6,10 @@
 
 .section-text__title {
   font-size: 50px;
+  max-width: 500px;
   font-weight: 700;
   line-height: 1.2;
   color: #0e4a70;
-  max-width: 400px;
 }
 
 .section-text__title-small {

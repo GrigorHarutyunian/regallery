@@ -64,7 +64,9 @@
 
 .submenu {
   font-size: 1.1rem;
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .fi-rs-angle-small-down {
