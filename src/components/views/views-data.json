@@ -13,7 +13,7 @@
   },
   {
     "id": 3,
-    "title": "Masonry ",
+    "title": "Masonry",
     "description": "Arrange items in an alternating layout to achieve a flowing, natural appearance that optimizes space and improves the overall look.",
     "className": "fi fi-rs-rectangles-mixed"
   },
@@ -26,7 +26,7 @@
   {
     "id": 5,
     "title": "Carousel",
-    "description": "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. It’s great for highlighting products, portfolios, or collections. Coming soon.",
+    "description": "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. It’s great for highlighting products, portfolios, or collections Coming soon.",
     "className": "fi fi-rs-rectangle-vertical-history"
   },
   {

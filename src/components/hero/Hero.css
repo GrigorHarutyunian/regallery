@@ -14,9 +14,9 @@
   font-size: 1.2rem;
   line-height: 36px;
   margin-top: 50px;
+  max-width: 480px;
   margin-bottom: 50px;
   font-weight: 400;
-  max-width: 450px;
 }
 
 .hero-conteiner {
