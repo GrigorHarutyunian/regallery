@@ -15,7 +15,7 @@ const SubMenu = ({ title, items, onClick }: any) => {
   };
 
   return (
-    <div onMouseEnter={handleOpen}>
+    <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
       <a id="fade-button" className={"nav-link"}>
         <div className={"nav-link__text"}>
           {title}
