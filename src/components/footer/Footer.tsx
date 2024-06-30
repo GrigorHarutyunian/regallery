@@ -1,7 +1,4 @@
 import "./Footer.css";
-import(
-  "https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css"
-);
 import { socialWebsiteData } from "./social-website-data";
 const Footer: React.FC = () => {
   return (

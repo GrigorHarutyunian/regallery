@@ -2,6 +2,8 @@ import "./Review.css";
 import reviewData from "./review-data";
 import ReviewDTO from "../../types/ReviewDTO";
 import ReviewCards from "./ReviewCard";
+import { motion } from "framer-motion";
+import animation from "../../assets/animations/framer-motion-setings";
 const Services: React.FC = () => {
   return (
     <section id="review">
@@ -10,7 +12,7 @@ const Services: React.FC = () => {
           <div className="section-text__title-centered">
             What օur clients are saying
           </div>
-          <div className="review-cards">
+          <motion.div {...animation} className="review-cards">
             {reviewData.map((val: ReviewDTO) => {
               return (
                 <ReviewCards
@@ -24,7 +26,7 @@ const Services: React.FC = () => {
                 />
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

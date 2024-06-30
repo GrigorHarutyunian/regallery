@@ -1,6 +1,4 @@
-import(
-  "https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css"
-);
+import { motion } from "framer-motion";
 
 interface FeaturesBoxProps {
   title: string;
@@ -8,14 +6,21 @@ interface FeaturesBoxProps {
   className: string;
 }
 
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   title,
   description,
   className,
 }) => {
-  console.log(title);
   return (
-    <div id={title} className="feature-box col-50">
+    <motion.div variants={item} id={title} className="feature-box col-50">
       <i className={className} style={{ color: "#FDC120", fontSize: "41px" }} />
 
       <div className="section-text__title-small">{title}</div>
@@ -29,7 +34,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
           description
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
