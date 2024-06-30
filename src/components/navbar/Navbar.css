@@ -1,6 +1,6 @@
 .nav {
   width: calc(100% - 50px);
-  position: absolute;
+  position: fixed;
   padding: 0px 25px;
   top: 0px;
   left: 0px;
@@ -9,8 +9,10 @@
   z-index: 1000;
   background: #0e4a70;
   animation: slideDown 0.6s ease-in-out forwards;
+  box-shadow: 0 8px 6px -6px #0e4a70;
+  -moz-box-shadow: 0 8px 6px -6px #0e4a70;
 }
-.nav-stickey {
+/* .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
   position: sticky;
   top: 0;
@@ -18,8 +20,8 @@
   -moz-box-shadow: 0 8px 6px -6px #0e4a70;
   box-shadow: 0 8px 6px -6px #0e4a70;
   animation: nav-enter-anim 0.6s ease-in-out forwards;
-  transition: top 0.15s ease-in; /* Smooth transition for position */
-}
+  transition: top 0.15s ease-in; /* Smooth transition for position 
+} */
 
 .nav-content {
   height: 100%;

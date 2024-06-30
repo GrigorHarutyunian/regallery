@@ -3,6 +3,10 @@ import { Container } from "react-bootstrap";
 import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
+import { motion } from "framer-motion";
+import animation from "../../assets/animations/framer-motion-setings";
+import textVariants from "../../assets/animations/framer-motion-textVariants";
+import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
@@ -13,8 +17,8 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   return (
     <section id={id} className="supportandInfo">
       <Container>
-        <div className="support__row info">
-          <div className="section-text">
+        <motion.div {...animation} className="support__row info">
+          <motion.div variants={textVariants} className="section-text">
             <div className="section-text__title text-white">{title}</div>
             <div className="section-text__body text-white">{text}</div>
             <a
@@ -23,11 +27,11 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             >
               <DownloadBtn className="download-btn" />
             </a>
-          </div>
-          <div className="section-image">
+          </motion.div>
+          <motion.div variants={imageVariants} className="section-image">
             <img src={img} alt="download" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Container>
     </section>
   );
