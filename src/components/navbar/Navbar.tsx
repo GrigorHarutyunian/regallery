@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useScrollPosition from "../../custom-hooks/useScrollPosition";
+// import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.png";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
@@ -37,14 +37,10 @@ const links: Link[] = [
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const isSticky: boolean = useScrollPosition();
+  // const isSticky: boolean = useScrollPosition();
 
   return (
-    <div
-      className={`nav${isSticky ? " nav-stickey" : ""}${
-        menuOpen ? " nav-open" : ""
-      }`}
-    >
+    <div className={`nav${menuOpen ? " nav-open" : ""}`}>
       <div className={"nav-content"}>
         <a
           href="#home"

@@ -47,26 +47,34 @@ footer {
   padding: 0px 14px;
 }
 
-@media screen and (min-width: 450px) and (max-width: 965px) {
+@media screen and (min-width: 0px) and (max-width: 965px) {
   .section-text__desc {
-    font-size: 12px;
+    font-size: 14px;
   }
   .section-text__title-big {
     font-size: 3rem;
   }
   .section-text__title {
-    font-size: 30px;
+    font-size: 40px;
     max-width: 500px;
   }
   .section-text__body {
-    font-size: 15px;
+    font-size: 20px;
     max-width: 480px;
   }
   .review-card {
     padding: 21px 8px 54px;
   }
   .section-text__title-small {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  .review__text {
+    max-width: 233px;
+  }
+
+  .review__title {
+    max-width: 233px;
   }
 
   .fi-rs-angle-small-down {
@@ -80,12 +88,34 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  .fi-rs-angle-small-down {
+    height: 16px;
+    width: 10px;
+  }
+
+  .section-text {
+    text-align: center;
+  }
+  .home-text {
+    text-align: center;
+  }
+
   section {
     height: auto;
   }
   .section-image,
   .section-image-features,
   .section-image__small {
-    display: none;
+    margin-bottom: 25px;
+  }
+
+  .section-image img {
+    display: inline;
+  }
+  .hero-conteiner {
+    flex-direction: column-reverse;
+  }
+  .support__row {
+    flex-direction: column-reverse;
   }
 }
