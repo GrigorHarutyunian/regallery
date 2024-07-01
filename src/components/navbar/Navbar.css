@@ -8,19 +8,16 @@
   height: 70px;
   z-index: 1000;
   background: #0e4a70;
-  animation: slideDown 0.6s ease-in-out forwards;
-  box-shadow: 0 8px 6px -6px #0e4a70;
+  -webkit-box-shadow: 0 8px 6px -6px #0e4a70;
   -moz-box-shadow: 0 8px 6px -6px #0e4a70;
+  box-shadow: 0 8px 6px -6px #0e4a70;
 }
 /* .nav-stickey {
-  animation: nav-enter-anim 0.15s ease-in;
-  position: sticky;
+  position: fixed;
   top: 0;
   -webkit-box-shadow: 0 8px 6px -6px #0e4a70;
   -moz-box-shadow: 0 8px 6px -6px #0e4a70;
   box-shadow: 0 8px 6px -6px #0e4a70;
-  animation: nav-enter-anim 0.6s ease-in-out forwards;
-  transition: top 0.15s ease-in; /* Smooth transition for position 
 } */
 
 .nav-content {
@@ -79,12 +76,12 @@
   width: 10px;
   margin-left: 5px;
   display: inline-block;
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
   transform-origin: right;
 }
 .arrow-rotate {
   transform: rotate(180deg);
-  transform-origin: right; /* Rotate the arrow 180 degrees to point it upwards */
+  transform-origin: right;
 }
 .nav-link__background {
   margin-top: -2px;
@@ -179,18 +176,22 @@
   border-radius: 0px !important;
 }
 
-@media screen and (min-width: 700px) and (max-width: 940px) {
+@media screen and (min-width: 700px) and (max-width: 955px) {
   .download-btn__navbar {
     font-size: 12px !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 16px 19px !important;
   }
   .nav-link__text {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .nav-logo {
-    font-size: 15px;
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    margin: 0;
   }
 }
 
@@ -208,7 +209,7 @@
   .nav-open {
     height: 100vh;
     position: sticky;
-    background-color: #64859e;
+    background-color: #0e4a70;
     animation: nav-open 0.2s ease-in-out;
     overflow: hidden;
   }

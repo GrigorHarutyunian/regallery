@@ -1,5 +1,5 @@
 const textVariants = {
-  hidden: { x: "-10px", opacity: 0 },
+  hidden: { x: -10, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
