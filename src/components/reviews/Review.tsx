@@ -3,16 +3,16 @@ import reviewData from "./review-data";
 import ReviewDTO from "../../types/ReviewDTO";
 import ReviewCards from "./ReviewCard";
 import { motion } from "framer-motion";
-import animation from "../../assets/animations/framer-motion-setings";
+// import animation from "../../assets/animations/framer-motion-setings";
 const Services: React.FC = () => {
   return (
     <section id="review">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text">
           <div className="section-text__title-centered">
-            What օur clients are saying
+            What our clients are saying
           </div>
-          <motion.div {...animation} className="review-cards">
+          <motion.div className="review-cards">
             {reviewData.map((val: ReviewDTO) => {
               return (
                 <ReviewCards

@@ -201,6 +201,10 @@
     width: 100%;
     position: absolute;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .nav {
@@ -220,12 +224,12 @@
   .nav-links__container {
     position: absolute;
     top: 70px;
-    left: 0px;
+    left: 7px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   .nav-link {
     height: 60px;

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer>
       <div className="row__social-website">
         <div className="footer-text__title icons__title">
-          Copyright © 2024 ReGallery. All rights reserved.
+          Copyright ©©©© 2024 ReGallery. All rights reserved.
         </div>
         <div className="footer__social-website-icons">
           {socialWebsiteData.map((websiteData) => {

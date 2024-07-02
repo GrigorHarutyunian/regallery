@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,9 +8,9 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 16px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Sora";
   box-sizing: border-box;
-  background-color: #eff3f6;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -16,7 +18,7 @@ main {
   z-index: 100;
 }
 main > *:nth-child(odd) {
-  background-color: #64859e !important;
+  background-color: #eff3f6 !important;
 }
 
 section {

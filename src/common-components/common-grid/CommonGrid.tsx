@@ -5,7 +5,7 @@ import CommonBoxForGrid from "./CommonBoxForGrid";
 import "./CommonGrid.css";
 import "../../components/reviews/Review.css";
 import { motion } from "framer-motion";
-import animation from "../../assets/animations/framer-motion-setings";
+// import animation from "../../assets/animations/framer-motion-setings";
 
 const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
   sectionId,
@@ -19,7 +19,7 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
         <Row>
           <div className="section-text">
             <div className="section-text__title-centered dark">{title}</div>
-            <motion.div {...animation} className={gridClassname}>
+            <motion.div className={gridClassname}>
               {data.map((val: any) => (
                 <CommonBoxForGrid
                   key={val.id}

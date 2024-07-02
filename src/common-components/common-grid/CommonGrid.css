@@ -33,6 +33,7 @@
   margin-bottom: 32px;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
+  background-color: #ffffff;
 }
 
 .grid__6 {
@@ -55,9 +56,6 @@
   }
 }
 
-.dark {
-  color: #0e4a70 !important;
-}
 @media screen and (max-width: 450px) {
   .grid__6 {
     grid-template-columns: 1fr;
