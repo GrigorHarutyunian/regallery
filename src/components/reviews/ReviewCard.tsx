@@ -3,13 +3,13 @@ import "./Review.css";
 import Rating from "@mui/material/Rating";
 import { motion } from "framer-motion";
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
+// const item = {
+//   hidden: { y: 20, opacity: 0 },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//   },
+// };
 
 const ReviewCards: React.FC<ReviewDTO> = ({
   title,
@@ -19,7 +19,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
   seeMore,
 }) => {
   return (
-    <motion.div variants={item} className="review-card">
+    <motion.div className="review-card">
       <div className="review-card__icon">
         <a
           style={{ color: "#0e4a70", textDecoration: "none" }}

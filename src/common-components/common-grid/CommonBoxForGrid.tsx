@@ -6,13 +6,13 @@ interface FeaturesBoxProps {
   className: string;
 }
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
+// const item = {
+//   hidden: { y: 20, opacity: 0 },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//   },
+// };
 
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   title,
@@ -20,7 +20,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   className,
 }) => {
   return (
-    <motion.div variants={item} id={title} className="feature-box col-50">
+    <motion.div id={title} className="feature-box col-50">
       <i className={className} style={{ color: "#FDC120", fontSize: "41px" }} />
 
       <div className="section-text__title-small">{title}</div>
