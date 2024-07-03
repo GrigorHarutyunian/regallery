@@ -37,5 +37,6 @@ footer > .container {
   }
   .icons__title {
     margin-top: 5px;
+    text-align: center;
   }
 }
