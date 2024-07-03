@@ -10,6 +10,12 @@ const Support: React.FC = () => {
         <>
           {parts[0]}
           <a
+            style={{
+              color: "#0e4a70",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
             href="https://wordpress.org/support/plugin/regallery/"
             target="_blank"
           >
