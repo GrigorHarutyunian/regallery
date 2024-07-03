@@ -40,7 +40,6 @@
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  margin: 0px 8px;
 }
 
 .menu {
@@ -198,13 +197,11 @@
 @media screen and (max-width: 700px) {
   .dropdown-menu {
     position: absolute;
-    width: 100%;
+    width: 222px;
     position: absolute;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
   }
 
   .nav {
@@ -224,7 +221,6 @@
   .nav-links__container {
     position: absolute;
     top: 70px;
-    left: 7px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -234,10 +230,7 @@
   .nav-link {
     height: 60px;
   }
-  .nav-link > * {
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   .nav-menu__icon {
     display: flex;
     flex-direction: column;

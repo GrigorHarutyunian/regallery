@@ -1,6 +1,6 @@
-import lil from "../../assets/imgs/lil.png";
-import sanchez from "../../assets/imgs/sanchez.png";
-import stephanie from "../../assets/imgs/stephanie.png";
+import lil from "../../assets/imgs/lilbrown.webp";
+import sanchez from "../../assets/imgs/sergiosanchez.webp";
+import stephanie from "../../assets/imgs/stephanie.webp";
 
 const reviewData = [
   {
