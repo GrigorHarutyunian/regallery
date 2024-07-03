@@ -6,7 +6,7 @@
 
 .section-text__title {
   font-size: 50px;
-  max-width: 500px;
+  max-width: 530px;
   font-weight: 700;
   line-height: 1.2;
   color: #0e4a70;
@@ -45,8 +45,9 @@
   justify-items: center;
 }
 
-.grid__4 > .col-50:nth-child(4) {
-  grid-column: 2;
+._features > .col-50 > .section-text__title-small {
+  height: 44px;
+  margin-bottom: 27px;
 }
 
 @media screen and (max-width: 400px) {

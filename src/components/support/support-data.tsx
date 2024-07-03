@@ -1,4 +1,4 @@
-import supportImg from "../../assets/imgs/support.png";
+import supportImg from "../../assets/imgs/support-Cp_WebfY.webp";
 
 const supportData = {
   title: "Contact us",

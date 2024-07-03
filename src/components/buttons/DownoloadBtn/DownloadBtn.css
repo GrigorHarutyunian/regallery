@@ -5,9 +5,9 @@
   cursor: pointer;
   display: inline-block;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   padding: 16px 40px;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s linear;
   margin: 0;
