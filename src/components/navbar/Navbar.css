@@ -153,13 +153,23 @@
   transform: scaleY(0.8);
   transition: opacity 0.3s ease,
     transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  pointer-events: none; /* Prevents interaction before fully visible */
+  pointer-events: none;
+  margin-top: 5px;
 }
 
 .dropdown-menu.open {
   opacity: 1;
   transform: scaleY(1);
   pointer-events: auto; /* Enable interaction when fully visible */
+
+  border-radius: 3px;
+}
+
+.empty__space {
+  width: 100%;
+  height: 13px;
+  background: #ece2e200;
+  margin-top: -5px;
 }
 
 .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {

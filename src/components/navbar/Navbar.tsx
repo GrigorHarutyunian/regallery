@@ -59,6 +59,7 @@ const Navbar: React.FC = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 title={link.title}
                 items={link.subMenuItems}
+                href={link.href}
               />
             ) : (
               <a
