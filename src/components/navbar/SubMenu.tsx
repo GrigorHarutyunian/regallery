@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-const SubMenu = ({ title, items, onClick }: any) => {
+const SubMenu = ({ title, items, onClick, href }: any) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => {
@@ -13,7 +13,7 @@ const SubMenu = ({ title, items, onClick }: any) => {
 
   return (
     <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
-      <a id="fade-button" className={"nav-link"}>
+      <a href={"#views"} id="fade-button" className={"nav-link"}>
         <div className={"nav-link__text"}>
           {title}
           <i
@@ -32,9 +32,10 @@ const SubMenu = ({ title, items, onClick }: any) => {
           }}
           className={`dropdown-menu ${open ? "open" : ""}`}
         >
+          <div className="empty__space"></div>
           {items.map((val: any, i: any) => (
             <div key={i} className="menuItem__div">
-              <a href={"#" + val.title} className="nav-link menu">
+              <a href={href} className="nav-link menu">
                 <div className="nav-link__text submenu">
                   <i
                     style={{
