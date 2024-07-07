@@ -61,7 +61,6 @@
   .grid__6 {
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 6px 0px 0px 39px;
   }
   .section-text__title {
     text-align: center;

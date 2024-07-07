@@ -123,11 +123,12 @@
 }
 
 .nav-logo {
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 500;
   color: #fcfcfc;
   display: flex;
   align-items: center;
+  margin-left: 12px;
+  font-size: 1.8rem;
 }
 
 .nav-logo__icon {

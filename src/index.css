@@ -120,7 +120,4 @@ footer {
   .support__row {
     flex-direction: column-reverse;
   }
-  .section-text__desc {
-    text-align: center;
-  }
 }
