@@ -11,43 +11,23 @@ import { motion } from "framer-motion";
 //   },
 // };
 
-const ReviewCards: React.FC<ReviewDTO> = ({
-  title,
-  text,
-  author,
-  img,
-  seeMore,
-}) => {
+const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, img }) => {
   return (
     <motion.div className="review-card">
       <div className="review-card__icon">
-        <a
-          style={{ color: "#0e4a70", textDecoration: "none" }}
-          href={seeMore}
-          target="__blank"
-        >
+        <a style={{ color: "#0e4a70", textDecoration: "none" }}>
           <img src={img} />
         </a>
       </div>
       <div className="autorr">
         <div className="review-card__text-container">
           <div className="section-text__title-small review__title">
-            <a
-              style={{ color: "#0e4a70", textDecoration: "none" }}
-              href={seeMore}
-              target="__blank"
-            >
-              {title}
-            </a>
+            <a style={{ color: "#0e4a70", textDecoration: "none" }}>{title}</a>
           </div>
           <div className="section-text__desc review__text">{text} </div>
         </div>
 
-        <a
-          style={{ color: "#0e4a70", textDecoration: "none" }}
-          href={seeMore}
-          target="__blank"
-        >
+        <a style={{ color: "#0e4a70", textDecoration: "none" }}>
           <div className="review-card__author">
             <Rating
               size="medium"
