@@ -29,7 +29,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </a>
           </motion.div>
           <motion.div className="section-image">
-            <img src={img} alt="download" />
+            <img src={img} alt={title} />
           </motion.div>
         </motion.div>
       </Container>

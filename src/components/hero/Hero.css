@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
-
 .section-text__title-big {
   font-size: 4rem;
   font-weight: 700;
@@ -27,16 +25,24 @@
   max-width: 1105px;
 }
 
-.section-image img {
+.hero-conteiner img {
   max-width: 100%;
-  height: auto;
   display: block;
-  max-height: 399px;
+  height: 400px;
+  width: 520px;
 }
 
 .section-text__title-big span {
   color: #0e4a70;
 }
+
+@media screen and (max-width: 700px) {
+  .hero-conteiner img {
+    height: 200px;
+    width: 260px;
+  }
+}
+
 @media screen and (max-width: 348px) {
   .section-text__title-big {
     font-size: 3rem;

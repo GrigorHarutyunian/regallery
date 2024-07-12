@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
-import iconc from "../../assets/icons/logo.png";
+import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import viewData from "../../components/views/views-data.json";
@@ -47,7 +47,9 @@ const Navbar: React.FC = () => {
           style={{ textDecoration: "none", display: "inline-flex" }}
         >
           <div className={"nav-logo"}>
-            <img src={iconc} alt="Logo" className={"nav-logo__icon"} />
+            <svg baseProfile="full" width="35" height="35">
+              <image style={{ width: "100%", height: "100%" }} href={iconc} />
+            </svg>
             <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
         </a>
