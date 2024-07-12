@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
-import img from "../../assets/imgs/choose-DRuc9VZK.webp";
+import img from "../../assets/imgs/choose.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 // import animation from "../../assets/animations/framer-motion-setings";

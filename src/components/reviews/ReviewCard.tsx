@@ -16,7 +16,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, img }) => {
     <motion.div className="review-card">
       <div className="review-card__icon">
         <a style={{ color: "#0e4a70", textDecoration: "none" }}>
-          <img src={img} />
+          <img src={img} alt={`${author} image`} />
         </a>
       </div>
       <div className="autorr">
