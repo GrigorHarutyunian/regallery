@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Container } from "react-bootstrap";
 import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
@@ -14,6 +16,18 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   id,
   img,
 }) => {
+  const { version } = useContext(WindowWidthContext);
+
+  let width = id === "info" ? 595 : 405;
+  let height = id === "info" ? 400 : 405;
+  if (version === "mobile") {
+    width = width / 2;
+    height = height / 2;
+  } else if (version === "mid") {
+    width = width / 1.5;
+    height = height / 1.5;
+  }
+
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -29,7 +43,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </a>
           </motion.div>
           <motion.div className="section-image">
-            <img src={img} alt={title} />
+            <img height={height} width={width} src={img} alt={title} />
           </motion.div>
         </motion.div>
       </Container>

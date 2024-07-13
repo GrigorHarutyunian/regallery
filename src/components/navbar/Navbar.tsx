@@ -47,9 +47,8 @@ const Navbar: React.FC = () => {
           style={{ textDecoration: "none", display: "inline-flex" }}
         >
           <div className={"nav-logo"}>
-            <svg baseProfile="full" width="35" height="35">
-              <image style={{ width: "100%", height: "100%" }} href={iconc} />
-            </svg>
+            <img height={50} width={50} src={iconc} />
+
             <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
         </a>
