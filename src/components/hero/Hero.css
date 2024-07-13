@@ -25,22 +25,8 @@
   max-width: 1105px;
 }
 
-.hero-conteiner img {
-  max-width: 100%;
-  display: block;
-  height: 400px;
-  width: 520px;
-}
-
 .section-text__title-big span {
   color: #0e4a70;
-}
-
-@media screen and (max-width: 700px) {
-  .hero-conteiner img {
-    height: 200px;
-    width: 260px;
-  }
 }
 
 @media screen and (max-width: 348px) {

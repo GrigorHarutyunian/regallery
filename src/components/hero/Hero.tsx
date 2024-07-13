@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
 import img from "../../assets/imgs/choose.webp";
@@ -9,6 +11,17 @@ import { motion } from "framer-motion";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const Hero: React.FC = () => {
+  const { version } = useContext(WindowWidthContext);
+  let width = 520;
+  let height = 400;
+  if (version === "mobile") {
+    width = width / 2;
+    height = height / 2;
+  } else if (version === "mid") {
+    width = width / 1.5;
+    height = height / 1.5;
+  }
+
   return (
     <section>
       <Container>
@@ -31,7 +44,12 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.div className="section-image">
-              <img src={img} alt="App Preview" />
+              <img
+                height={height}
+                width={width}
+                src={img}
+                alt="Photo Gallery Plugin"
+              />
             </motion.div>
           </motion.div>
         </Row>

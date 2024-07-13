@@ -1,3 +1,4 @@
+import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
@@ -11,7 +12,7 @@ import Info from "./components/info/Info";
 
 const App: React.FC = () => {
   return (
-    <>
+    <WindowWidthProvider>
       <Navbar />
       <main>
         <Hero />
@@ -23,7 +24,7 @@ const App: React.FC = () => {
         <Support />
       </main>
       <Footer />
-    </>
+    </WindowWidthProvider>
   );
 };
 
