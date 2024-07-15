@@ -1,6 +1,7 @@
 export default interface SupportAndInfoDTO {
   title: string;
   text: string | any;
-  img?: string;
+  img?: any;
   id: string;
+  sizes: string;
 }

@@ -1,9 +1,10 @@
 import React from "react";
-import { useContext } from "react";
-import WindowWidthContext from "../../contexts/WindowWidthContext";
+
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
-import img from "../../assets/imgs/choose.webp";
+import imgBig from "../../assets/imgs/choose.webp";
+import imgMiddle from "../../assets/imgs/preview-middle.webp";
+import imgSmall from "../../assets/imgs/preview-small.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 // import animation from "../../assets/animations/framer-motion-setings";
@@ -11,17 +12,6 @@ import { motion } from "framer-motion";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const Hero: React.FC = () => {
-  const { version } = useContext(WindowWidthContext);
-  let width = 520;
-  let height = 400;
-  if (version === "mobile") {
-    width = width / 2;
-    height = height / 2;
-  } else if (version === "mid") {
-    width = width / 1.5;
-    height = height / 1.5;
-  }
-
   return (
     <section>
       <Container>
@@ -45,9 +35,9 @@ const Hero: React.FC = () => {
 
             <motion.div className="section-image">
               <img
-                height={height}
-                width={width}
-                src={img}
+                src={imgBig}
+                srcSet={`${imgSmall} 520w, ${imgMiddle} 693w, ${imgBig} 1040w`}
+                sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1000px) 346.667px, 520px"
                 alt="Photo Gallery Plugin"
               />
             </motion.div>

@@ -1,9 +1,17 @@
 import supportImg from "../../assets/imgs/support.webp";
+import supportMiddle from "../../assets/imgs/support-middle.webp";
+import supportSmall from "../../assets/imgs/support-small.webp";
 
 const supportData = {
   title: "Contact us",
   text: "In case you have any questions, suggestions, or if you've found a bug, please visit our Support Forum.We are ready to help you 24/7.",
-  img: supportImg,
+  img: {
+    imgBig: { img: supportImg, size: 832 },
+    imgMiddle: { img: supportMiddle, size: 554 },
+    imgSmall: { img: supportSmall, size: 416 },
+  },
+  sizes:
+    "(max-width: 700px) 208px, (min-width: 701px) and (max-width: 1000px) 277.333px, 416px",
 };
 
 export default supportData;

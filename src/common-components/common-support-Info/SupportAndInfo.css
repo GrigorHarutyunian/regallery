@@ -23,11 +23,6 @@ section.supportandInfo .section-text {
   align-items: center;
 }
 
-section image {
-  max-width: 340px !important;
-  height: auto !important;
-}
-
 @media screen and (max-width: 950px) {
   section.supportandInfo {
     height: auto;
