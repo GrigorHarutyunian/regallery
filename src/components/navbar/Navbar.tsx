@@ -4,7 +4,7 @@ import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
-import viewData from "../../components/views/views-data.json";
+import { viewsData } from "../views/views-data";
 
 interface Link {
   id: number;
@@ -21,7 +21,7 @@ const links: Link[] = [
     title: "Gallery views",
     href: "#views",
     type: "menu",
-    subMenuItems: viewData,
+    subMenuItems: viewsData,
   },
   { id: 2, title: "Features", href: "#features" },
   { id: 3, title: "FAQ", href: "#faq" },

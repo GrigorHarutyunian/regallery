@@ -16,19 +16,14 @@ const Footer: React.FC = () => {
                 href={websiteData.url}
                 target="blank"
               >
-                <i
-                  className={websiteData.className}
-                  style={{
-                    fontSize: "25px",
-                    color: "#0e4a70",
-                    display: "contents",
-                  }}
-                ></i>
+                <svg width="25" height="25">
+                  <path d={websiteData.path} fill="#0e4a70" />
+                </svg>
               </a>
             );
           })}
         </div>
-      </div>
+      </div>{" "}
     </footer>
   );
 };

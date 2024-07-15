@@ -37,14 +37,15 @@ const SubMenu = ({ title, items, onClick, href }: any) => {
             <div key={i} className="menuItem__div">
               <a href={href} className="nav-link menu">
                 <div className="nav-link__text submenu">
-                  <i
-                    style={{
-                      marginRight: "5px",
-                      fontSize: "1rem",
-                      height: "18px",
-                    }}
-                    className={val.className}
-                  ></i>{" "}
+                  <svg
+                    height={16}
+                    width={16}
+                    style={{ marginRight: "10px" }}
+                    id="Outline"
+                    viewBox="0 0 24 24"
+                  >
+                    {val.path}
+                  </svg>
                   {val.title}
                 </div>
                 <div className="nav-link__background" />
