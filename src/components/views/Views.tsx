@@ -1,4 +1,4 @@
-import viewsData from "./views-data.json";
+import { viewsData } from "./views-data";
 import CommonGrid from "../../common-components/common-grid/CommonGrid";
 const Views: React.FC<any> = () => {
   return (

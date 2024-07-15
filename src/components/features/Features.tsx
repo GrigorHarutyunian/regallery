@@ -1,5 +1,5 @@
 import CommonGrid from "../../common-components/common-grid/CommonGrid";
-import featuresData from "./features-data.json";
+import { featuresData } from "./features-data";
 
 const Features: React.FC = () => {
   return (

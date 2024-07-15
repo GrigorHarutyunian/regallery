@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 interface FeaturesBoxProps {
   title: string;
   description: string;
-  className: string;
+  path: string;
 }
 
 // const item = {
@@ -17,11 +17,19 @@ interface FeaturesBoxProps {
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   title,
   description,
-  className,
+  path,
 }) => {
   return (
     <motion.div id={title} className="feature-box col-50">
-      <i className={className} style={{ color: "#FDC120", fontSize: "41px" }} />
+      <svg
+        style={{ marginBottom: "5px" }}
+        height={41}
+        width={41}
+        id="Outline"
+        viewBox="0 0 24 24"
+      >
+        {path}
+      </svg>
 
       <div className="section-text__title-small">{title}</div>
       <div className="section-text__desc">
