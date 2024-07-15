@@ -111,10 +111,10 @@ footer {
     margin-bottom: 25px;
   }
 
-  .section-image img {
+  /* .section-image img {
     display: inline;
     max-width: 100%;
-  }
+  } */
 
   .hero-conteiner {
     flex-direction: column-reverse;
