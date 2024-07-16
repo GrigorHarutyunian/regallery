@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 src={imgBig}
                 srcSet={`${imgSmall} 520w, ${imgMiddle} 693w, ${imgBig} 1040w`}
                 sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1000px) 346.667px, 520px"
-                alt="Photo Gallery Plugin"
+                alt="Regallery - the intuitive WordPress photo gallery plugin with easy drag-and-drop interface and customizable gallery options."
               />
             </motion.div>
           </motion.div>

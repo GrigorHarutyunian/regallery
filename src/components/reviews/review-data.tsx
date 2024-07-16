@@ -11,6 +11,7 @@ const reviewData = [
     seeMore:
       "https://wordpress.org/support/topic/quick-and-easy-photo-gallery-plugin/",
     id: 1,
+    alt: `Users reviews about ReGallery - Hear from bloggers about their experiences with our WordPress Regallery plugin.`,
   },
   {
     title: "Fast reply",
@@ -19,6 +20,7 @@ const reviewData = [
     img: sanchez,
     seeMore: "https://wordpress.org/support/topic/fast-reply-4/",
     id: 2,
+    alt: `Users reviews about ReGallery - Hear from artists about their experiences with our WordPress Regallery plugin.`,
   },
 
   {
@@ -28,6 +30,7 @@ const reviewData = [
     img: lil,
     seeMore: "https://wordpress.org/support/topic/love-the-new-mosaic-view/",
     id: 3,
+    alt: `Users reviews about ReGallery - Hear from photographers about their experiences with our WordPress Regallery plugin.`,
   },
 ];
 

@@ -4,4 +4,5 @@ export default interface SupportAndInfoDTO {
   img?: any;
   id: string;
   sizes: string;
+  alt: string;
 }

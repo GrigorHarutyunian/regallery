@@ -14,6 +14,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   id,
   img,
   sizes,
+  alt,
 }) => {
   const { imgBig, imgMiddle, imgSmall } = img;
 
@@ -35,7 +36,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             <img
               srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
               sizes={sizes}
-              alt={title}
+              alt={alt}
             />
           </motion.div>
         </motion.div>

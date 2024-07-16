@@ -11,12 +11,18 @@ import { motion } from "framer-motion";
 //   },
 // };
 
-const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, img }) => {
+const ReviewCards: React.FC<ReviewDTO> = ({
+  title,
+  text,
+  author,
+  img,
+  alt,
+}) => {
   return (
     <motion.div className="review-card">
       <div className="review-card__icon">
         <a style={{ color: "#0e4a70", textDecoration: "none" }}>
-          <img height={100} width={100} src={img} alt={author} />
+          <img height={100} width={100} src={img} alt={alt} />
         </a>
       </div>
       <div className="autorr">
