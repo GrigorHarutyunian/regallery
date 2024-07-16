@@ -68,19 +68,17 @@
 }
 
 .fi-rs-angle-small-down {
-  transform: rotate(0deg);
   transition: transform 0.3s ease;
-  display: inline-block;
-  height: 16px;
-  width: 10px;
-  margin-left: 5px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  transform-origin: right;
+  margin-left: 4px;
+  margin-top: 2px;
+  transform: rotate(0);
 }
 .arrow-rotate {
   transform: rotate(180deg);
-  transform-origin: right;
+  transform-origin: inherit;
+  margin-left: 0px;
+  margin-left: 4px;
+  margin-top: 2px;
 }
 .nav-link__background {
   margin-top: -2px;
