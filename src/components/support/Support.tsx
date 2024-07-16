@@ -29,6 +29,7 @@ const Support: React.FC = () => {
       id={"support"}
       img={supportData.img}
       sizes={supportData.sizes}
+      alt={supportData.alt}
     />
   );
 };

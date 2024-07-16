@@ -5,4 +5,5 @@ export default interface ReviewDTO {
   img: string;
   seeMore: string;
   id: number;
+  alt: string;
 }

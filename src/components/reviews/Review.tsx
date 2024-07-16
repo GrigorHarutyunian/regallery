@@ -23,6 +23,7 @@ const Services: React.FC = () => {
                   img={val.img}
                   seeMore={val.seeMore}
                   id={val.id}
+                  alt={val.alt}
                 />
               );
             })}

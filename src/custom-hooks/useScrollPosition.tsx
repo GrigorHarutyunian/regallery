@@ -4,7 +4,7 @@ const useScrollPosition = (): boolean => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const [prevScrollY, setPrevScrollY] = useState<number>(window.scrollY);
   const [thresholdPassed, setThresholdPassed] = useState<boolean>(false);
-  console.log(isSticky);
+
   // Threshold to activate sticky navbar (adjust as needed)
   const stickyThreshold = 50;
 

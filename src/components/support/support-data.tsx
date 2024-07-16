@@ -12,6 +12,7 @@ const supportData = {
   },
   sizes:
     "(max-width: 700px) 208px, (min-width: 701px) and (max-width: 1000px) 277.333px, 416px",
+  alt: `Contact ReGallery - Reach out for support, inquiries, or collaborations with our WordPress photo gallery experts.`,
 };
 
 export default supportData;

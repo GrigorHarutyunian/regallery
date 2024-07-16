@@ -15,6 +15,7 @@ const Info: React.FC = () => {
       id={"info"}
       img={infoData.img}
       sizes={infoData.sizes}
+      alt={infoData.alt}
     />
   );
 };
