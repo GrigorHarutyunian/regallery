@@ -78,23 +78,16 @@ footer {
   .review__title {
     max-width: 233px;
   }
+}
 
+@media screen and (min-width: 700px) and (max-width: 765px) {
   .fi-rs-angle-small-down {
-    height: 11px;
-    width: 5px;
-    margin-left: 5px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-    transform-origin: right;
+    height: 13px;
+    width: 13px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .fi-rs-angle-small-down {
-    height: 16px;
-    width: 10px;
-  }
-
   .section-text {
     text-align: center;
   }
