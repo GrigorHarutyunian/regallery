@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
                 target="blank"
               >
                 <svg width="25" height="25">
+                  <title>{websiteData.title}</title>
                   <path d={websiteData.path} fill="#0e4a70" />
                 </svg>
               </a>
