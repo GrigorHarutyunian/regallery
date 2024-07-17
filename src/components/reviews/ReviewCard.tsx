@@ -21,31 +21,25 @@ const ReviewCards: React.FC<ReviewDTO> = ({
   return (
     <motion.div className="review-card">
       <div className="review-card__icon">
-        <a style={{ color: "#0e4a70", textDecoration: "none" }}>
-          <img height={100} width={100} src={img} alt={alt} />
-        </a>
+        <img height={100} width={100} src={img} alt={alt} />
       </div>
       <div className="autorr">
         <div className="review-card__text-container">
-          <div className="section-text__title-small review__title">
-            <a style={{ color: "#0e4a70", textDecoration: "none" }}>{title}</a>
-          </div>
+          <div className="section-text__title-small review__title">{title}</div>
           <div className="section-text__desc review__text">{text} </div>
         </div>
 
-        <a style={{ color: "#0e4a70", textDecoration: "none" }}>
-          <div className="review-card__author">
-            <Rating
-              size="medium"
-              className="stars"
-              name="read-only"
-              value={5}
-              readOnly
-              style={{ color: "#FDC120" }}
-            />
-            <div className="review-card__author__name">Author : {author}</div>
-          </div>
-        </a>
+        <div className="review-card__author">
+          <Rating
+            size="medium"
+            className="stars"
+            name="read-only"
+            value={5}
+            readOnly
+            style={{ color: "#FDC120" }}
+          />
+          <div className="review-card__author__name">Author : {author}</div>
+        </div>
       </div>
     </motion.div>
   );

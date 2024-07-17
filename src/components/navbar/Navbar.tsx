@@ -4,7 +4,7 @@ import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
-import { viewsData } from "../views/views-data";
+import { viewsDataSubMenu } from "../views/views-data-subMenu";
 
 interface Link {
   id: number;
@@ -21,7 +21,7 @@ const links: Link[] = [
     title: "Gallery views",
     href: "#views",
     type: "menu",
-    subMenuItems: viewsData,
+    subMenuItems: viewsDataSubMenu,
   },
   { id: 2, title: "Features", href: "#features" },
   { id: 3, title: "FAQ", href: "#faq" },
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           style={{ textDecoration: "none", display: "inline-flex" }}
         >
           <div className={"nav-logo"}>
-            <img height={50} width={50} src={iconc} />
+            <img height={50} width={50} src={iconc} alt="ReGallery" />
 
             <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
