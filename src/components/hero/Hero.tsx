@@ -18,13 +18,14 @@ const Hero: React.FC = () => {
         <Row>
           <motion.div className="hero-conteiner">
             <motion.div className="home-text">
-              <div className="section-text__title ">
+              <h1 className="section-text__title ">
                 The Intuitive <br></br> Photo Gallery Plugin
-              </div>
-              <div className="section-text__body">
-                The responsive gallery plugin is your ideal solution for easily
-                building stunning, mobile-friendly galleries in just minutes.
-              </div>
+              </h1>
+              <p className="section-text__body">
+                The WordPress photo gallery plugin is your ideal solution for
+                easily building stunning, mobile-friendly galleries in just
+                minutes.
+              </p>
               <a
                 href=" https://wordpress.org/plugins/regallery/"
                 target="__blank"

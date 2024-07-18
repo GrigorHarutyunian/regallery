@@ -3,7 +3,7 @@ export const featuresData = [
     id: 1,
     title: "Interactive Live Demo",
     description:
-      "Experience instant updates with our LIVE demo feature as you tweak settings and configurations, ensuring your gallery achieves optimal visual impact.",
+      "Try out our LIVE demo to see instant updates as you adjust settings, making sure your gallery looks its best.",
     path: (
       <>
         <path
@@ -34,7 +34,7 @@ export const featuresData = [
     id: 3,
     title: "Creating has never been so easy",
     description:
-      "Discover how creating stunning websites has never been so easy with our intuitive tools and user-friendly interface. Create and configure your entire gallery from one place with our all-in-one solution, designed for seamless and efficient gallery management.",
+      "Discover how creating stunning websites has never been so easy with our intuitive tools and user-friendly interface. Manage your entire gallery easily with our all-in-one solution designed for smooth and efficient gallery management.",
     path: (
       <path
         fill={"#FDC120"}
@@ -58,7 +58,7 @@ export const featuresData = [
     id: 5,
     title: "Powered by React.js",
     description:
-      "Enjoy rapid, responsive updates and a smooth user experience with our cutting-edge REACT frontend framework. Achieve seamless performance and enhanced user engagement effortlessly.",
+      "Enjoy rapid, responsive updates and a smooth user experience with our cutting-edge REACT frontend framework.",
     path: (
       <path
         d="m13.5,12c0,.828-.672,1.5-1.5,1.5s-1.5-.672-1.5-1.5.672-1.5,1.5-1.5,1.5.672,1.5,1.5Zm6.383,4.591c.365,2.817-.251,4.947-1.755,5.894-.541.341-1.169.514-1.854.514-.357,0-.729-.047-1.112-.142-1.014-.249-2.09-.82-3.165-1.65-1.53,1.183-3.003,1.794-4.282,1.794-.675,0-1.297-.17-1.844-.516-1.558-.982-2.126-3.172-1.767-5.922C1.497,15.45,0,13.812,0,12,0,10.117,1.57,8.492,4.117,7.408c-.366-2.817.251-4.947,1.754-5.894.822-.52,1.848-.647,2.965-.372,1.017.25,2.097.824,3.176,1.659,2.331-1.798,4.536-2.283,6.116-1.287,1.559.982,2.126,3.172,1.767,5.924,2.608,1.112,4.104,2.75,4.104,4.562,0,1.883-1.57,3.508-4.117,4.591Zm-5.66-.703c.391-.555.767-1.138,1.117-1.74.42-.723.781-1.441,1.098-2.147-.326-.722-.689-1.444-1.098-2.149-.365-.629-.743-1.199-1.126-1.742-.724-.071-1.467-.11-2.215-.11-.771,0-1.512.041-2.224.112-.39.555-.767,1.138-1.117,1.74-.419.722-.781,1.44-1.098,2.145.328.726.69,1.449,1.098,2.151.365.629.744,1.199,1.126,1.742.724.07,1.467.11,2.214.11.771,0,1.512-.041,2.224-.112Zm-.704-11.727c1.266,1.272,2.488,2.856,3.551,4.687.115.197.216.4.325.599.915-3.088.751-5.558-.333-6.241-.756-.477-2.072-.107-3.543.954Zm-7.47,2.582c1.735-.474,3.754-.743,5.951-.743.18,0,.358.01.538.014-1.558-1.679-3.076-2.658-4.178-2.929-.586-.144-1.064-.104-1.421.122-.739.465-1.052,1.783-.889,3.537Zm-1.544,7.817c.25-.941.593-1.922,1.025-2.926.001-.004.003-.007.005-.011.393-.913.853-1.842,1.395-2.775.059-.102.128-.193.189-.294-3.108.752-5.119,2.151-5.119,3.446,0,.877.943,1.82,2.506,2.56Zm5.974,5.277c-1.265-1.272-2.487-2.855-3.549-4.685-.115-.197-.216-.4-.325-.6-.915,3.088-.751,5.558.333,6.242.758.478,2.07.106,3.541-.957Zm7.471-2.58c-1.735.474-3.754.743-5.951.743-.18,0-.358-.01-.537-.014,1.558,1.679,3.076,2.659,4.178,2.93.587.143,1.064.102,1.421-.122.738-.465,1.052-1.783.888-3.537Zm4.049-5.257c0-.876-.943-1.819-2.505-2.56-.478,1.8-1.285,3.748-2.424,5.712-.059.101-.128.193-.188.293,3.108-.752,5.118-2.151,5.118-3.446Z"
@@ -70,7 +70,7 @@ export const featuresData = [
     id: 6,
     title: "Ultra-Lightweight Design",
     description:
-      "Our platform is engineered for lightning-fast performance, significantly reducing load times and boosting the overall user experience. Enjoy a seamless, efficient, and engaging website that keeps your visitors satisfied.",
+      "We engineered our plugin for lightning-fast performance, significantly reducing load times and boosting the overall user experience. Enjoy a seamless, efficient, and engaging website that keeps your visitors satisfied.",
     path: (
       <path
         d="m22.811.083c-2.731.299-11.044,1.209-17.545,7.729-1.539,1.543-2.362,3.68-2.257,5.861.077,1.602.625,3.093,1.573,4.331L.069,22.518l1.414,1.414,4.506-4.507c1.349,1.054,2.981,1.571,4.633,1.57,2.14,0,4.31-.867,5.927-2.556,4.121-4.302,6.668-10.271,7.366-17.263l.123-1.228-1.227.134Zm-7.707,16.974c-2.095,2.187-5.396,2.566-7.687.94l2.996-2.996h6.427c-.54.725-1.12,1.412-1.737,2.057Zm-2.69-4.057l3-3h4.275c-.446,1.05-.952,2.051-1.516,3h-5.759Zm8.034-5h-5.862l-8.571,8.572c-.605-.874-.955-1.9-1.008-2.996-.078-1.62.533-3.207,1.675-4.353,5.221-5.236,11.791-6.562,15.097-7.004-.276,2.036-.723,3.969-1.331,5.78Z"

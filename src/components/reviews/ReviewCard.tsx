@@ -25,8 +25,8 @@ const ReviewCards: React.FC<ReviewDTO> = ({
       </div>
       <div className="autorr">
         <div className="review-card__text-container">
-          <div className="section-text__title-small review__title">{title}</div>
-          <div className="section-text__desc review__text">{text} </div>
+          <p className="section-text__title-small review__title">{title}</p>
+          <p className="section-text__desc review__text">{text} </p>
         </div>
 
         <div className="review-card__author">
@@ -38,7 +38,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
             readOnly
             style={{ color: "#FDC120" }}
           />
-          <div className="review-card__author__name">Author : {author}</div>
+          <p className="review-card__author__name">Author : {author}</p>
         </div>
       </div>
     </motion.div>

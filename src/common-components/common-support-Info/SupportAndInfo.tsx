@@ -23,8 +23,8 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
       <Container>
         <motion.div className="support__row info">
           <motion.div className="section-text">
-            <div className="section-text__title">{title}</div>
-            <div className="section-text__body">{text}</div>
+            <h2 className="section-text__title">{title}</h2>
+            <p className="section-text__body">{text}</p>
             <a
               href=" https://wordpress.org/plugins/regallery/"
               target="__blank"

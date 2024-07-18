@@ -1,19 +1,19 @@
 [
   {
     "title": "What Can You Do with the ReGallery Plugin?",
-    "description": "The ReGallery plugin helps you create attractive photo galleries on your website. It lets you display your photos beautifully and neatly, whether you're a photographer showing off your work, a business featuring products, or someone sharing personal memories.",
+    "description": "The ReGallery plugin helps you create attractive photo galleries on your website. You can display your photos in a neat and appealing manner. This applies to photographers, businesses showcasing products, and individuals sharing personal memories.",
     "panelId": "panel1",
     "summeryID": "panel1bh-header"
   },
   {
     "title": "Do I need technical skills to use ReGallery?",
-    "description": "No, you don't need any coding skills to use ReGallery. It's designed to be user-friendly, allowing anyone to create and manage stunning photo galleries on their website easily.",
+    "description": "The design allows anyone to easily create and manage stunning photo galleries on their website, making it user-friendly.",
     "panelId": "panel2",
     "summeryID": "panel2bh-header"
   },
   {
     "title": "How can I create a new photo gallery using ReGallery?",
-    "description": "To create a new photo gallery with ReGallery, just go to your WordPress dashboard, click on ReGallery, then `Add New Gallery.` Upload your photos, arrange them how you like, customize settings, and add the gallery on your site using the ReGallery widget for any popular builder such as Gutenberg, Elementor, Divi builder or just add a shortcode.",
+    "description": "To make a new photo gallery with ReGallery, go to your WordPress dashboard. Click on ReGallery and select `Add New Gallery.` Easily upload your photos, organize them, customize settings, and display the gallery on your website with the ReGallery widget.Compatible with popular builders like Gutenberg, Elementor, and Divi. Just add a shortcode to your site.",
     "panelId": "panel3",
     "summeryID": "panel3bh-header"
   },
@@ -26,7 +26,7 @@
 
   {
     "title": "Can ReGallery display video files as well as photos?",
-    "description": "Yes, ReGallery supports both photos and video files. You can easily upload and display videos alongside your photo galleries, allowing for a dynamic and engaging multimedia experience on your website.",
+    "description": "Yes, ReGallery supports both photos and video files. You can upload and show videos with your photos on your website for a more interactive multimedia experience.",
     "panelId": "panel5",
     "summeryID": "panel5bh-header"
   },

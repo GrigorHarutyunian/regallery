@@ -15,7 +15,7 @@ const Faq: React.FC = () => {
     <section id="faq">
       <Container>
         <div className="faq__container">
-          <div className="faq__title">FAQ</div>
+          <h2 className="faq__title">FAQ</h2>
           <div className="accordions">
             {faqData.map((val: AccordionDTO) => (
               <MyAccordion
