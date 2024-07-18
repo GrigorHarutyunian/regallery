@@ -18,11 +18,11 @@ export const faqData = [
     description: (
       <span>
         To make a new photo gallery with ReGallery, go to your WordPress
-        dashboard.Click on ReGallery and select `Add New Gallery.` <br></br>{" "}
+        dashboard. Click on ReGallery and select `Add New Gallery.` <br></br>{" "}
         Easily upload your photos, organize them, customize settings, and
-        display the gallery on your website with the ReGallery widget.<br></br>
-        Compatible with popular builders like Gutenberg, Elementor, and
-        Divi.Just add a shortcode to your site.
+        display the gallery on your website with the ReGallery widget. <br></br>
+        Compatible with popular builders like Gutenberg, Elementor, and Divi.
+        Just add a shortcode to your site.
       </span>
     ),
     panelId: "panel3",
