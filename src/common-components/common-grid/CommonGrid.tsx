@@ -18,7 +18,7 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
       <Container>
         <Row>
           <div className="section-text">
-            <div className="section-text__title-centered dark">{title}</div>
+            <h2 className="section-text__title-centered dark">{title}</h2>
             <motion.div className={gridClassname}>
               {data.map((val: any) => (
                 <CommonBoxForGrid

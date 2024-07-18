@@ -47,6 +47,20 @@ footer {
   padding: 0px 14px;
 }
 
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
 @media screen and (min-width: 0px) and (max-width: 965px) {
   .section-text__desc {
     font-size: 14px;

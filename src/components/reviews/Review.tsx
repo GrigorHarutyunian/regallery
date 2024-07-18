@@ -9,9 +9,9 @@ const Services: React.FC = () => {
     <section id="review">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text">
-          <div className="section-text__title-centered">
+          <h3 className="section-text__title-centered">
             What our clients are saying
-          </div>
+          </h3>
           <motion.div className="review-cards">
             {reviewData.map((val: ReviewDTO) => {
               return (

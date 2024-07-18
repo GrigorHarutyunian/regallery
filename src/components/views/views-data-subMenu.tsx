@@ -3,7 +3,7 @@ export const viewsDataSubMenu = [
     id: 1,
     title: "Thumbnails",
     description:
-      "Organize images into a grid of thumbnails, enabling users to quickly browse through your gallery and select specific images for detailed viewing.",
+      "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
     path: (
       <>
         <path
@@ -29,7 +29,7 @@ export const viewsDataSubMenu = [
     id: 2,
     title: "Mosaic",
     description:
-      "Create an artful, collage-like presentation by combining various sizes and shapes.",
+      "Create a collage-like presentation by mixing different sizes and shapes.",
     path: (
       <path
         fill={"#fcfcfc"}
@@ -41,7 +41,7 @@ export const viewsDataSubMenu = [
     id: 3,
     title: "Masonry",
     description:
-      "Arrange items in an alternating layout to achieve a flowing, natural appearance that optimizes space and improves the overall look.",
+      "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
     path: (
       <path
         fill={"#fcfcfc"}
@@ -53,7 +53,7 @@ export const viewsDataSubMenu = [
     id: 4,
     title: "Slideshow",
     description:
-      "Display images or videos in a sequential, animated format. This layout focuses the viewer’s attention by presenting one item at a time, providing a clean and organized presentation of content.",
+      "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content. The layout is clean and organized.",
     path: (
       <>
         <path
@@ -73,25 +73,26 @@ export const viewsDataSubMenu = [
   },
   {
     id: 5,
+    title: "Cube",
+    description:
+      "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
+    path: (
+      <path
+        fill={"#fcfcfc"}
+        d="M20.527,4.217,14.5.737a5.015,5.015,0,0,0-5,0L3.473,4.217a5.014,5.014,0,0,0-2.5,4.33v6.96a5.016,5.016,0,0,0,2.5,4.331L9.5,23.317a5.012,5.012,0,0,0,5,0l6.027-3.479a5.016,5.016,0,0,0,2.5-4.331V8.547A5.014,5.014,0,0,0,20.527,4.217ZM10.5,2.47a3,3,0,0,1,3,0l6.027,3.479a2.945,2.945,0,0,1,.429.33L13.763,9.854a3.53,3.53,0,0,1-3.526,0L4.044,6.279a2.945,2.945,0,0,1,.429-.33ZM4.473,18.105a3.008,3.008,0,0,1-1.5-2.6V8.547a2.893,2.893,0,0,1,.071-.535l6.193,3.575A5.491,5.491,0,0,0,11,12.222v9.569a2.892,2.892,0,0,1-.5-.206Zm16.554-2.6a3.008,3.008,0,0,1-1.5,2.6L13.5,21.585a2.892,2.892,0,0,1-.5.206V12.222a5.491,5.491,0,0,0,1.763-.635l6.193-3.575a2.893,2.893,0,0,1,.071.535Z"
+      />
+    ),
+  },
+
+  {
+    id: 6,
     title: "Carousel",
     description:
-      "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. It’s great for highlighting products, portfolios, or collections Coming soon.",
+      "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections. Coming soon",
     path: (
       <path
         fill={"#fcfcfc"}
         d="m21,0h-8c-1.654,0-3,1.346-3,3v21h14V3c0-1.654-1.346-3-3-3Zm1,22h-10V3c0-.551.449-1,1-1h8c.551,0,1,.449,1,1v19ZM5,3h2v18h-2V3ZM0,6h2v12H0V6Z"
-      />
-    ),
-  },
-  {
-    id: 6,
-    title: "List",
-    description:
-      "Each image in this view takes up the whole width, giving you plenty of space for detailed descriptions. It's perfect for galleries where you need to add more info, like product showcases or portfolios. Coming soon.",
-    path: (
-      <path
-        fill={"#fcfcfc"}
-        d="m19,2H5C2.243,2,0,4.243,0,7v10c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5ZM2,10h4v4H2v-4Zm6,0h14v4h-14v-4Zm14-3v1h-14v-4h11c1.654,0,3,1.346,3,3ZM5,4h1v4H2v-1c0-1.654,1.346-3,3-3Zm-3,13v-1h4v4h-1c-1.654,0-3-1.346-3-3Zm17,3h-11v-4h14v1c0,1.654-1.346,3-3,3Z"
       />
     ),
   },

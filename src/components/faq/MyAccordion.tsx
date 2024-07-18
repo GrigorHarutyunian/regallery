@@ -24,10 +24,10 @@ const MyAccordion: React.FC<
       onChange={() => handleChange(panelId)}
     >
       <AccordionSummary expandIcon={<ExpandMoreIcon />} id={summeryID}>
-        <div className="accordion__title">{title}</div>
+        <h3 className="accordion__title">{title}</h3>
       </AccordionSummary>
       <AccordionDetails>
-        <div className="accordion__description">{description}</div>
+        <p className="accordion__description">{description}</p>
       </AccordionDetails>
     </Accordion>
   );

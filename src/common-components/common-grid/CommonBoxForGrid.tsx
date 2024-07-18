@@ -31,8 +31,8 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
         {path}
       </svg>
 
-      <div className="section-text__title-small">{title}</div>
-      <div className="section-text__desc">
+      <h3 className="section-text__title-small">{title}</h3>
+      <p className="section-text__desc">
         {description.includes("Coming soon") ? (
           <>
             {description.replace("Coming soon", "")}
@@ -41,7 +41,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
         ) : (
           description
         )}
-      </div>
+      </p>
     </motion.div>
   );
 };
