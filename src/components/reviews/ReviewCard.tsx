@@ -23,7 +23,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
       <div className="review-card__icon">
         <img height={100} width={100} src={img} alt={alt} />
       </div>
-      <div className="autorr">
+      <div className="author">
         <div className="review-card__text-container">
           <h3 className="section-text__title-small review__title">{title}</h3>
           <p className="section-text__desc review__text">{text} </p>
