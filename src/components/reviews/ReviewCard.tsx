@@ -25,7 +25,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
       </div>
       <div className="autorr">
         <div className="review-card__text-container">
-          <p className="section-text__title-small review__title">{title}</p>
+          <h3 className="section-text__title-small review__title">{title}</h3>
           <p className="section-text__desc review__text">{text} </p>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import MyAccordion from "./MyAccordion";
-import faqData from "./faq-data.json";
+import { faqData } from "./faq-data";
 import AccordionDTO from "../../types/AccordionDTO";
 
 const Faq: React.FC = () => {
