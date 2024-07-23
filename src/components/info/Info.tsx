@@ -1,8 +1,15 @@
 import React from "react";
+import { useContext } from "react";
+import WindowWidthContext from "../../contexts/WindowWidthContext";
 import SupportAndInfo from "../../common-components/common-support-Info/SupportAndInfo";
 import infoData from "./info-data";
 const Info: React.FC = () => {
   let text = infoData.text.split("LIVE DEMO");
+  const windowWitdth = useContext(WindowWidthContext);
+  const version = windowWitdth.version;
+  const width = version === "mobile" ? 297.5 : version === "mid" ? 397 : 595;
+  const ration = 595 / 402;
+  const height = width / ration;
   return (
     <SupportAndInfo
       title={infoData.title}
@@ -16,6 +23,8 @@ const Info: React.FC = () => {
       img={infoData.img}
       sizes={infoData.sizes}
       alt={infoData.alt}
+      width={width}
+      height={height}
     />
   );
 };

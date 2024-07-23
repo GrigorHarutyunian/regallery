@@ -15,8 +15,8 @@ export const WindowWidthProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [version, setVersion] = useState<WindowWidthVersion>(() => {
     const width = window.innerWidth;
-    if (width < 700) return "mobile";
-    if (width < 1100) return "mid";
+    if (width < 701) return "mobile";
+    if (width < 1001) return "mid";
     return "other";
   });
 
@@ -25,8 +25,8 @@ export const WindowWidthProvider: React.FC<{ children: ReactNode }> = ({
       const width = window.innerWidth;
       setVersion((prevVersion) => {
         if (width < 700 && prevVersion !== "mobile") return "mobile";
-        if (width >= 700 && width < 1100 && prevVersion !== "mid") return "mid";
-        if (width >= 1100 && prevVersion !== "other") return "other";
+        if (width >= 701 && width < 1001 && prevVersion !== "mid") return "mid";
+        if (width >= 1001 && prevVersion !== "other") return "other";
         return prevVersion;
       });
     };

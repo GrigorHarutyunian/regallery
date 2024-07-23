@@ -5,4 +5,6 @@ export default interface SupportAndInfoDTO {
   id: string;
   sizes: string;
   alt: string;
+  width: number;
+  height: number;
 }
