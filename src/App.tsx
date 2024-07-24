@@ -9,7 +9,6 @@ import Footer from "./components/footer/Footer";
 import Faq from "./components/faq/Faq";
 import Views from "./components/views/Views";
 import Info from "./components/info/Info";
-
 const App: React.FC = () => {
   return (
     <WindowWidthProvider>

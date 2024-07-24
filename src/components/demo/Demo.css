@@ -1,0 +1,16 @@
+/* section {
+  background: red;
+} */
+
+.demo_columns_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo_buttons_rows {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
