@@ -37,5 +37,9 @@
 }
 
 .btn_demo {
+  background-color: #dde7ed;
+}
+
+.btn_demo_selected {
   background-color: #a7c95700;
 }

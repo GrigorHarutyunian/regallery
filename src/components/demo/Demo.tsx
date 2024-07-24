@@ -25,8 +25,8 @@ const Demo: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className={`download-btn ${
-                    selectedButton === index ? "" : "btn_demo"
+                  className={`download-btn btn_demo ${
+                    selectedButton === index ? "" : "btn_demo_selected"
                   }`}
                   onClick={() => handleClick(index)}
                 >
