@@ -7,11 +7,11 @@ const supportData = {
   text: "In case you have any questions, suggestions, or if you've found a bug, please visit our Support Forum.We are ready to help you 24/7.",
   img: {
     imgBig: { img: supportImg, size: 832 },
-    imgMiddle: { img: supportMiddle, size: 554 },
+    imgMiddle: { img: supportMiddle, size: 555 },
     imgSmall: { img: supportSmall, size: 416 },
   },
   sizes:
-    "(max-width: 700px) 208px, (min-width: 701px) and (max-width: 1000px) 277.333px, 416px",
+    "(max-width: 700px) 208px, (min-width: 701px) and (max-width: 1000px) 277px, 416px",
   alt: `Contact ReGallery - Reach out for support, inquiries, or collaborations with our WordPress photo gallery experts.`,
 };
 
