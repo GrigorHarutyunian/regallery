@@ -8,6 +8,8 @@ import imgMiddle from "../../assets/imgs/preview-middle.webp";
 import imgSmall from "../../assets/imgs/preview-small.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
+import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
@@ -36,7 +38,20 @@ const Hero: React.FC = () => {
                 href=" https://wordpress.org/plugins/regallery/"
                 target="__blank"
               >
-                <DownloadBtn className={"download-btn"} />
+                <div>
+                  <DownloadBtn className={"download-btn"} />
+                  <div className="download-btn watch_video">
+                    <PlayCircleFilledIcon
+                      style={{
+                        verticalAlign: "middle",
+                        width: "25px",
+                        height: "19px",
+                        marginBottom: "2px",
+                      }}
+                    />
+                    Watch Video
+                  </div>
+                </div>
               </a>
             </motion.div>
 

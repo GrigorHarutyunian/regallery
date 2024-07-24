@@ -29,6 +29,12 @@
   color: #0e4a70;
 }
 
+.watch_video {
+  margin-left: 20px;
+  background-color: #a7c95700;
+  border: 1px solid #a7c957;
+}
+
 @media screen and (max-width: 348px) {
   .section-text__title-big {
     font-size: 3rem;
