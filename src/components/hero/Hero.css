@@ -29,6 +29,46 @@
   color: #0e4a70;
 }
 
+.watch_video {
+  margin-left: 20px;
+  background-color: #a7c95700;
+  border: 1px solid #0e4a70;
+  padding: 14px 40px;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 863px) and (min-width: 700px) {
+  .buttons-container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .watch_video {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 15px 36px;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .buttons-container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .watch_video {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 15px 37px;
+  }
+}
+
 @media screen and (max-width: 348px) {
   .section-text__title-big {
     font-size: 3rem;

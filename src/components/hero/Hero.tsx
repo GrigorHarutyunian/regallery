@@ -1,23 +1,32 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
-import { Row, Container } from "react-bootstrap";
-import "./Hero.css";
+import VideoModal from "../modals/VideoModal/VideoModal";
+
 import imgBig from "../../assets/imgs/choose.webp";
 import imgMiddle from "../../assets/imgs/preview-middle.webp";
 import imgSmall from "../../assets/imgs/preview-small.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
+import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+import { Row, Container } from "react-bootstrap";
+import "./Hero.css";
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
+  const [open, setOpen] = useState(false);
+
   const version = windowWitdth.version;
   const width = version === "mobile" ? 260 : version === "mid" ? 347 : 520;
   const ration = 13 / 10;
+  const height = width / ration;
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const height = Math.round(width / ration);
+
   return (
     <section>
       <Container>
@@ -32,12 +41,26 @@ const Hero: React.FC = () => {
                 easily building stunning, mobile-friendly galleries in just
                 minutes.
               </p>
-              <a
-                href=" https://wordpress.org/plugins/regallery/"
-                target="__blank"
-              >
-                <DownloadBtn className={"download-btn"} />
-              </a>
+
+              <div className="buttons-container">
+                <a
+                  href=" https://wordpress.org/plugins/regallery/"
+                  target="__blank"
+                >
+                  <DownloadBtn className={"download-btn"} />
+                </a>
+                <div onClick={handleOpen} className="download-btn watch_video">
+                  <PlayCircleFilledIcon
+                    style={{
+                      verticalAlign: "middle",
+                      width: "25px",
+                      height: "19px",
+                      marginBottom: "2px",
+                    }}
+                  />
+                  Watch Video
+                </div>
+              </div>
             </motion.div>
 
             <motion.div className="section-image">
@@ -54,6 +77,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </Row>
       </Container>
+      <VideoModal open={open} handleClose={handleClose} />
     </section>
   );
 };
