@@ -46,7 +46,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ open, handleClose }) => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/Xm2L8uerSFk?autoplay=1&rel=0&si=LcerED6tqGyAWCeI"
+              src="https://www.youtube.com/embed/HFIzNT1W0hE?autoplay=1&rel=0&si=LcerED6tqGyAWCeI"
               title="Photo Gallery Regallery"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
