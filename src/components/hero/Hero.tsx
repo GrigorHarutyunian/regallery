@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
   const version = windowWitdth.version;
   const width = version === "mobile" ? 260 : version === "mid" ? 347 : 520;
   const ration = 13 / 10;
-  const height = width / ration;
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const height = Math.round(width / ration);
