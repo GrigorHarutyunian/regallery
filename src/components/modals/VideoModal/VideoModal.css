@@ -81,7 +81,14 @@ iframe {
   }
 }
 
-@media screen and (max-width: 467px) {
+@media screen and (max-width: 467px) and (min-width: 370px) {
+  .video-container {
+    width: 350px;
+    height: 196px;
+  }
+}
+
+@media screen and (max-width: 370px) {
   .video-container {
     width: 300px;
     height: 168px;
