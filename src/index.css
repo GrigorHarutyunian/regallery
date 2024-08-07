@@ -141,7 +141,7 @@ p {
   align-items: flex-end;
 }
 
-@media screen and (max-width: 1100px) and (min-width: 700px) {
+@media screen and (max-width: 900px) and (min-width: 700px) {
   .buttons-container {
     display: flex;
     justify-content: start;
