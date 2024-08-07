@@ -10,7 +10,7 @@ const infoData = {
     imgSmall: { img: imgSmall, size: 595 },
   },
   sizes:
-    "(max-width: 700px) 298px, (min-width: 701px) and (max-width: 1000px) 397px, 595px",
+    "(max-width: 700px) 298px, (min-width: 701px) and (max-width: 1100px) 397px, 595px",
   alt: `Discover why ReGallery is the best WordPress photo gallery plugin. Featuring responsive design, intuitive interface, and extensive customization options.`,
 };
 export default infoData;
