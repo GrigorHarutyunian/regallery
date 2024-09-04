@@ -32,16 +32,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
       </svg>
 
       <h3 className="section-text__title-small">{title}</h3>
-      <p className="section-text__desc">
-        {description.includes("Coming soon") ? (
-          <>
-            {description.replace("Coming soon", "")}
-            <span style={{ fontStyle: "italic" }}>Coming soon</span>
-          </>
-        ) : (
-          description
-        )}
-      </p>
+      <p className="section-text__desc">{description}</p>
     </motion.div>
   );
 };
