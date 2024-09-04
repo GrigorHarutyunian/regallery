@@ -88,7 +88,7 @@ export const viewsDataSubMenu = [
     id: 6,
     title: "Carousel",
     description:
-      "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections. Coming soon",
+      "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
     path: (
       <path
         fill={"#fcfcfc"}
