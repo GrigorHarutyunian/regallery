@@ -3,7 +3,6 @@
   justify-content: center;
 }
 .pricing-card {
-  width: calc(30vw - 12px);
   margin: 0px 6px;
   max-width: 300px;
   padding: 52px 24px;
@@ -145,17 +144,4 @@
 .pricing-card:hover .pricing-card__btn {
   background-color: #0e4a70;
   color: #a7c957;
-}
-
-@media screen and (max-width: 700px) {
-  .pricing-lower {
-    height: auto;
-  }
-  .pricing-cards {
-    flex-direction: column;
-  }
-  .pricing-card {
-    width: calc(100% - 12px);
-    margin: 12px auto;
-  }
 }
