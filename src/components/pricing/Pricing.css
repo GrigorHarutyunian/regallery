@@ -1,19 +1,3 @@
-section#pricing {
-  height: auto;
-  padding: 0px;
-}
-
-.pricing-upper {
-  height: calc(50vh - 80px);
-  padding: 40px 24px;
-  background-color: #64859e;
-}
-.pricing-lower {
-  height: 70vh;
-  margin-top: -20vh;
-  padding: 0px 24px;
-}
-
 .pricing-cards {
   display: flex;
   justify-content: center;
@@ -29,6 +13,16 @@ section#pricing {
   position: relative;
   z-index: 20;
   transition: 0.2s all ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 12px 15px;
+  transition: 0.1s all ease-in;
+  padding: 40px 30px 50px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px 0px lightgrey;
 }
 .pricing-card:hover {
   box-shadow: 0 10px 30px 0 rgba(133, 66, 189, 0.1);
@@ -50,12 +44,11 @@ section#pricing {
   } */
 .pricing-card__header {
   border-bottom: 2px solid #f4f4f4;
-  margin-bottom: 46px;
 }
 .pricing-card__title {
-  color: #6a56a6;
-  font-size: 3rem;
-  font-weight: 400;
+  color: #0e4a70;
+  font-size: 50px;
+  font-weight: 600;
   margin-bottom: 26px;
 }
 .pricing-card__title > span {
@@ -63,20 +56,72 @@ section#pricing {
   font-size: 40%;
 }
 .pricing-card__subtitle {
-  color: #57667e;
+  color: #39465c;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 19px;
+  display: block;
+  min-height: 1.5em;
+  opacity: 0.6;
+}
+
+.pricing__text {
+  text-align: center;
+}
+.canceled-price {
+  min-height: 1.5rem;
+  color: #0e4a70;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 19px;
-  display: inline-block;
+  min-height: 1.5rem;
+  position: relative;
+  margin-right: 10px;
 }
+
+.remov_line {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 4px;
+  background-color: red;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  content: "";
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  height: 4px;
+  background-color: red;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  rotate: -8deg;
+}
+
+.parent_saved_money {
+  min-height: 3.5rem;
+}
+
+.saved_money_div {
+  color: #57667e;
+  display: block;
+  background-color: #dbff4075;
+  padding: 9px 28px;
+  width: 100px;
+  margin: auto;
+  border-radius: 2px;
+}
+
 .pricing-card__features {
   list-style-type: none;
   margin: 12px 0px;
   padding: 0px;
+  text-align: start;
 }
 .pricing-card__features > li {
   margin: 8px 0px;
-  color: #717081;
+  color: #39465c;
   font-weight: 300;
   font-size: 1.1rem;
 }
@@ -86,17 +131,20 @@ section#pricing {
   margin-top: 24px;
   position: relative;
   cursor: pointer;
-  background-color: #2c134d;
+  background-color: #a7c957;
   border-radius: 6px;
   text-decoration: none;
   text-transform: uppercase;
   padding: 16px 28px;
-  border: 0px;
-  color: #fff;
+  display: inline-block;
+  color: #0e4a70;
+  font-weight: 400;
   transition: 0.2s all ease-in-out;
+  cursor: pointer;
 }
 .pricing-card:hover .pricing-card__btn {
-  background-color: #ff374b;
+  background-color: #0e4a70;
+  color: #a7c957;
 }
 
 @media screen and (max-width: 700px) {

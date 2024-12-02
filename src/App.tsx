@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import Faq from "./components/faq/Faq";
 import Views from "./components/views/Views";
 import Info from "./components/info/Info";
+import Pricing from "./components/pricing/Pricing";
 const App: React.FC = () => {
   return (
     <WindowWidthProvider>
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Hero />
         <Views />
         <Info />
+        <Pricing />
         <Features />
         <Review />
         <Faq />
