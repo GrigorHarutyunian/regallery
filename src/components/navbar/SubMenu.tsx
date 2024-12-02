@@ -11,8 +11,12 @@ const SubMenu = ({ title, items, onClick, href }: any) => {
     setOpen(false);
   };
 
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
   return (
-    <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
+    <div onMouseEnter={handleOpen} onMouseLeave={handleClose} onClick={handleToggle}>
       <a href={"#views"} id="fade-button" className={"nav-link"}>
         <div className={"nav-link__text"}>
           {title}
