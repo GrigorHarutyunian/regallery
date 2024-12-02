@@ -4,6 +4,6 @@ export default interface ReviewDTO {
   author: string;
   img: string;
   seeMore: string;
-  id: number;
+  id?: number;
   alt: string;
 }
