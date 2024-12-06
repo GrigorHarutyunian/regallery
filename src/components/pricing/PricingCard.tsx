@@ -6,11 +6,13 @@ const PricingCard: React.FC<PricingDTO> = ({
   canceledprice,
   duration,
   savedmoney,
+  title,
+  href,
 }) => {
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
-        <span className="pricing-card__subtitle">{duration}</span>
+        <span className="pricing-card__subtitle">{title}</span>
         {
           <span className="canceled-price">
             {canceledprice && <div className="remov_line"></div>}
@@ -18,6 +20,7 @@ const PricingCard: React.FC<PricingDTO> = ({
           </span>
         }
         <div className="pricing-card__title">{price}</div>
+        <div className="pricing-card__duration">{duration}</div>
 
         <div className="parent_saved_money">
           {savedmoney && (
@@ -29,12 +32,22 @@ const PricingCard: React.FC<PricingDTO> = ({
 
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
-
-      <div className="pricing-card__btn">GET STARTED</div>
+      <a target={price === "Free" ? "_blank" : "_self"} href={href}>
+        <div className="pricing-card__btn">GET STARTED</div>
+      </a>
 
       <ul className="pricing-card__features">
-        {advantages.map((val) => {
-          return <li>{val}</li>;
+        {advantages.map((val, id) => {
+          return (
+            <li
+              className={`pricing-card__features__list  ${
+                id === 2 && `bold__list`
+              } `}
+              key={id}
+            >
+              {val}
+            </li>
+          );
         })}
       </ul>
     </div>
