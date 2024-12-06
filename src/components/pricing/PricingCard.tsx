@@ -33,19 +33,27 @@ const PricingCard: React.FC<PricingDTO> = ({
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
       <a target={price === "Free" ? "_blank" : "_self"} href={href}>
-        <div className="pricing-card__btn">GET STARTED</div>
+        <div className="pricing-card__btn">Get Started</div>
       </a>
 
       <ul className="pricing-card__features">
         {advantages.map((val, id) => {
+          const boldText = val.includes("1 Site")
+            ? "1 Site"
+            : val.includes("3 Site")
+            ? "3 Site"
+            : null;
           return (
-            <li
-              className={`pricing-card__features__list  ${
-                id === 2 && `bold__list`
-              } `}
-              key={id}
-            >
-              {val}
+            <li className={"pricing-card__features__list"} key={id}>
+              {boldText ? (
+                <>
+                  {val.split(boldText)[0]}{" "}
+                  <span className="bold__list">{boldText}</span>
+                  {val.split(boldText)[1]}{" "}
+                </>
+              ) : (
+                val
+              )}
             </li>
           );
         })}
