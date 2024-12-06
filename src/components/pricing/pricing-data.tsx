@@ -34,7 +34,6 @@ const pricingData = [
       "Unlimited Users",
       "Use on 3 Site",
       "Pro Templates",
-      "6 Months Pro Support",
       "1 Year Pro Support",
       "1 Year Customizations",
     ],
