@@ -87,7 +87,9 @@
   background: #cedbe4;
   transition: 0.2s all ease-in;
 }
-.nav-link:hover .nav-link__background {
+.nav-link:hover .nav-link__background,
+.nav-link:active .nav-link__background,
+.nav-link:focus .nav-link__background {
   width: 100%;
 }
 

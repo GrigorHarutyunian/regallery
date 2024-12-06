@@ -30,13 +30,20 @@ footer > .container {
   footer {
     height: auto;
   }
-
   .row__social-website {
     display: flex;
     flex-direction: column-reverse;
   }
-  .icons__title {
-    margin-top: 5px;
+  .footer-copyright {
+    margin-top: 15px;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-copyright span {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
   }
 }
