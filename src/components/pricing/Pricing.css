@@ -10,7 +10,7 @@
   text-align: center;
   margin: 12px 15px;
   transition: 0.1s all ease-in;
-  padding: 16px 30px 7px;
+  padding: 30px 30px 7px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
@@ -115,7 +115,7 @@
   margin: 8px 0px;
   color: #39465c;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 17px;
 }
 .bold__list {
   font-weight: bold;
@@ -133,7 +133,7 @@
   font-size: 1.1rem;
   font-weight: 400;
   padding: 16px 40px;
-  border-radius: 12px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s linear;
 }
@@ -196,7 +196,7 @@
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 856px) {
+@media screen and (min-width: 700px) and (max-width: 856px) {
   .section-text__desc.pricing__text {
     height: 85px;
     font-size: 11px;
@@ -233,7 +233,7 @@
     max-width: 200px;
   }
   .pricing-card {
-    padding: 16px 36px 7px;
+    padding: 30px 15px 7px;
   }
   .parent_saved_money {
     min-height: 35px;
