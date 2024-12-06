@@ -1,14 +1,16 @@
 const pricingData = [
   {
     price: "Free",
-    text: "An entry tool for those just starting out",
+    text: "Easy Start for Beginners to Explore Galleries",
     advantages: ["Unlimited Galleries", "Unlimited Users"],
     id: 1,
+    title: "Starter",
+    href: "https://wordpress.org/plugins/regallery/ with ",
   },
   {
     price: "$10",
     canceledprice: "$25",
-    text: "Everything you need to build a perfect gallery",
+    text: "Everything to Build a Gallery with inspiring ideas for professionals",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
@@ -19,16 +21,18 @@ const pricingData = [
     id: 2,
     duration: "6 Months",
     savedmoney: "$15",
+    title: "Basic",
+    href: "https://regallery.team/checkout/?plan=basic",
   },
 
   {
     price: "$15",
     canceledprice: "$35",
-    text: "Great for power users who want to do more",
+    text: "Ideal for Advanced Users Needing Custom Galleries",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "Use on 1 Site",
+      "Use on 3 Site",
       "Pro Templates",
       "6 Months Pro Support",
       "1 Year Pro Support",
@@ -37,6 +41,8 @@ const pricingData = [
     id: 3,
     duration: "1 Year",
     savedmoney: "$20",
+    title: "Plus",
+    href: "https://regallery.team/checkout/?plan=plus",
   },
 ];
 

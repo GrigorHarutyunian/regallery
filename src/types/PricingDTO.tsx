@@ -6,4 +6,6 @@ export default interface PricingDTO {
   advantages: string[];
   duration?: string;
   savedmoney?: string;
+  title: string;
+  href: string;
 }

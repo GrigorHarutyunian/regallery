@@ -7,7 +7,7 @@ const Pricing: React.FC = () => {
     <section id="pricing">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text">
-          <h2 className="section-text__title-centered ">Pricing Plan</h2>
+          <h2 className="section-text__title-centered ">Pre-built templates</h2>
 
           <div className="pricing-cards">
             {pricingData.map((val: PricingDTO) => {
@@ -20,6 +20,8 @@ const Pricing: React.FC = () => {
                   canceledprice={val?.canceledprice}
                   duration={val.duration}
                   savedmoney={val.savedmoney}
+                  title={val.title}
+                  href={val.href}
                 />
               );
             })}

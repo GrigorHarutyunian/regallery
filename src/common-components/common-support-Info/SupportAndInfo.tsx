@@ -29,10 +29,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             <h2 className="section-text__title">{title}</h2>
             <p className="section-text__body">{text}</p>
             <div className="buttons-container">
-              <a
-                href=" https://wordpress.org/plugins/regallery/"
-                target="__blank"
-              >
+              <a href="#pricing">
                 <DownloadBtn className="download-btn" />
               </a>
               {id === "info" && (

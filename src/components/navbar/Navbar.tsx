@@ -25,12 +25,13 @@ const links: Link[] = [
   },
   { id: 2, title: "Features", href: "#features" },
   { id: 3, title: "FAQ", href: "#faq" },
+  { id: 5, title: "Pricing", href: "#pricing" },
   { id: 4, title: "Contact us", href: "#support" },
+
   {
-    id: 5,
-    title: "Download",
-    href: "https://wordpress.org/plugins/regallery/",
-    target: "_blank",
+    id: 6,
+    title: "Get Started",
+    href: "#pricing",
     type: "button",
   },
 ];
