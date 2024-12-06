@@ -32,7 +32,7 @@ const pricingData = [
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "Use on 3 Site",
+      "Use on 3 Sites",
       "Pro Templates",
       "1 Year Pro Support",
       "1 Year Customizations",
