@@ -10,7 +10,7 @@
   text-align: center;
   margin: 12px 15px;
   transition: 0.1s all ease-in;
-  padding: 40px 30px 50px;
+  padding: 16px 30px 7px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
@@ -49,7 +49,6 @@
   color: #39465c;
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 19px;
   display: block;
   min-height: 1.5em;
   opacity: 0.6;
@@ -93,7 +92,7 @@
 }
 
 .parent_saved_money {
-  min-height: 3.5rem;
+  min-height: 3rem;
 }
 
 .saved_money_div {
@@ -146,10 +145,15 @@
   margin-bottom: 16px;
   margin-top: 16px;
 }
-/* 
+
+@media screen and (min-width: 1120px) {
+  .pricing-card__subtitle {
+    margin-bottom: 19px;
+  }
+}
+
 @media screen and (min-width: 966px) and (max-width: 1120px) {
   .pricing__text {
-    max-width: 200px;
     height: 80px;
   }
 }
@@ -160,15 +164,23 @@
     height: 80px;
     font-size: 14px;
   }
+  .pricing-card__duration {
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  .pricing-card__features__list {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 800px) {
   .pricing__text {
     height: 100px;
   }
-} */
+}
 
-@media screen and (min-width: 0px) and (max-width: 1000px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
   .pricing-cards {
     flex-direction: column;
     justify-content: center;

@@ -12,7 +12,7 @@ import Views from "./components/views/Views";
 import Pricing from "./components/pricing/Pricing";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 const App: React.FC = () => {
-  useEffect(()=>{
+  useEffect(() => {
     if (location.hash) {
       window.location.replace(location.hash);
     }
