@@ -27,9 +27,9 @@ const App: React.FC = () => {
         <Hero />
         <Views />
         <Info />
-        <Pricing />
-        <Features />
         <Review />
+        <Features />
+        <Pricing />
         <Faq />
         <Support />
       </main>

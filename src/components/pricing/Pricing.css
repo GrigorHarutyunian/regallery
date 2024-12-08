@@ -10,7 +10,7 @@
   text-align: center;
   margin: 12px 15px;
   transition: 0.1s all ease-in;
-  padding: 30px 30px 7px;
+  padding: 35px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
@@ -107,7 +107,7 @@
 
 .pricing-card__features {
   list-style-type: none;
-  margin: 12px 0px;
+  margin: 12px;
   padding: 0px;
   text-align: start;
 }
@@ -127,18 +127,19 @@
   text-decoration: none;
   background-color: #a7c957;
   text-decoration: none;
-  color: #0e4a70;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  padding: 16px 40px;
+  padding: 16px 0px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s linear;
+  width: 100%;
 }
 .pricing-card:hover .pricing-card__btn {
-  opacity: 0.8;
+  background-color: #8fb348;
 }
 
 .pricing-card__duration {
@@ -233,7 +234,7 @@
     max-width: 200px;
   }
   .pricing-card {
-    padding: 30px 15px 7px;
+    padding: 25px;
   }
   .parent_saved_money {
     min-height: 35px;
@@ -260,5 +261,10 @@
   }
   .pricing-card__features__list {
     font-size: 15px;
+  }
+  .pricing-card__btn {
+    padding: 16px;
+    width: auto;
+    font-size: 1.1rem;
   }
 }

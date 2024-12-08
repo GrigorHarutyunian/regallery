@@ -1,7 +1,7 @@
 .download-btn {
   background-color: #a7c957;
   text-decoration: none;
-  color: #0e4a70;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 1.1rem;
@@ -13,7 +13,7 @@
   margin: 0;
 }
 .download-btn:hover {
-  opacity: 0.8;
+  background-color: #8fb348;
 }
 
 .download-btn__navbar {
@@ -21,6 +21,11 @@
   margin-left: 12px;
 }
 
+@media screen and (min-width: 954px) and (max-width: 968px) {
+  .download-btn {
+    padding: 16px 32px;
+  }
+}
 /* .download-btn__navbar:hover {
     background: #216287;
   }
