@@ -131,12 +131,14 @@ p {
 
 .watch_video {
   margin-left: 20px;
-  background-color: #a7c95700;
+  background-color: #eff3f6;
   border: 1px solid #0e4a70;
   padding: 15px 40px;
   color: #0e4a70;
 }
-
+.watch_video:hover {
+  background-color: #d6dce2;
+}
 .buttons-container {
   display: flex;
   align-items: flex-end;
