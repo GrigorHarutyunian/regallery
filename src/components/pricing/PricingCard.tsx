@@ -40,8 +40,8 @@ const PricingCard: React.FC<PricingDTO> = ({
         {advantages.map((val, id) => {
           const boldText = val.includes("1 Site")
             ? "1 Site"
-            : val.includes("3 Site")
-            ? "3 Site"
+            : val.includes("3 Sites")
+            ? "3 Sites"
             : null;
           return (
             <li className={"pricing-card__features__list"} key={id}>

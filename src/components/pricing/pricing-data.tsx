@@ -10,7 +10,7 @@ const pricingData = [
   {
     price: "$10",
     canceledprice: "$25",
-    text: "Everything to Build a Gallery with inspiring ideas for professionals",
+    text: "Everything to Build a Gallery with Inspiring Ideas for Professionals",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
