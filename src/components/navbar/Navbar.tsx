@@ -24,7 +24,7 @@ const links: Link[] = [
     subMenuItems: viewsDataSubMenu,
   },
   { id: 2, title: "Features", href: "#features" },
-  { id: 3, title: "Pricing", href: "#pricing" },
+  // { id: 3, title: "Pricing", href: "#pricing" },
   { id: 4, title: "FAQ", href: "#faq" },
   { id: 5, title: "Contact us", href: "#support" },
 

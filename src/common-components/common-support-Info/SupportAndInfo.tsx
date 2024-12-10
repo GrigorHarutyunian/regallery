@@ -38,7 +38,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                   href="https://wordpress.org/plugins/regallery/?preview=1"
                   target="__blank"
                 >
-                  Preview Admin
+                  PREViEW ADMIN
                 </a>
               )}
             </div>

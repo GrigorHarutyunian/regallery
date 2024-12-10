@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
                       marginBottom: "2px",
                     }}
                   />
-                  Watch Intro
+                  WATCH INTRO
                 </div>
               </div>
             </motion.div>

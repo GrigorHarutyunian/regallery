@@ -138,7 +138,7 @@
   transition: all 0.2s linear;
   width: 100%;
 }
-.pricing-card:hover .pricing-card__btn {
+.pricing-card__btn:hover {
   background-color: #8fb348;
 }
 
@@ -264,7 +264,7 @@
   }
   .pricing-card__btn {
     padding: 16px;
-    width: auto;
+    width: 80%;
     font-size: 1.1rem;
   }
 }
