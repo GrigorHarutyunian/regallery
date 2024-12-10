@@ -86,12 +86,7 @@
   font-weight: 400;
   max-width: 330px;
 }
-.review__text .see_more_btn {
-  background: #ffffff;
-}
-.review__text:hover .see_more_btn {
-  background: #eff3f6;
-}
+
 .review__title {
   height: 26px;
   max-width: 300px;
@@ -108,7 +103,7 @@
   background: red;
 }
 .author {
-  height: 236px;
+  height: 325px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -127,6 +122,11 @@
   margin-bottom: 3px;
 }
 
+.read_more_str {
+  border-bottom: 2px solid #0e4a70;
+  color: #0e4a70;
+}
+
 @media screen and (min-width: 1007px) and (max-width: 1167px) {
   .review-card__author {
     font-size: 10px;
@@ -143,6 +143,13 @@
   }
   .review-card__author {
     font-size: 10px;
+    margin-bottom: -15px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+  .review-card__author {
+    margin-bottom: -20px;
   }
 }
 
@@ -150,5 +157,11 @@
   .review-cards {
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .review-card__author {
+    margin-bottom: 0;
   }
 }

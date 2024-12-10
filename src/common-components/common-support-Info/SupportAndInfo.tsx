@@ -29,7 +29,10 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             <h2 className="section-text__title">{title}</h2>
             <p className="section-text__body">{text}</p>
             <div className="buttons-container">
-              <a href="#pricing">
+              <a
+                target="_blank"
+                href="https://wordpress.org/plugins/regallery/"
+              >
                 <DownloadBtn className="download-btn" />
               </a>
               {id === "info" && (
@@ -38,7 +41,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                   href="https://wordpress.org/plugins/regallery/?preview=1"
                   target="__blank"
                 >
-                  PREViEW ADMIN
+                  PREVIEW ADMIN
                 </a>
               )}
             </div>

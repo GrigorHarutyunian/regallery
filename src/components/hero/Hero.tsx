@@ -43,7 +43,10 @@ const Hero: React.FC = () => {
               </p>
 
               <div className="buttons-container">
-                <a href="#pricing">
+                <a
+                  target="_blank"
+                  href="https://wordpress.org/plugins/regallery/"
+                >
                   <DownloadBtn className={"download-btn"} />
                 </a>
                 <div onClick={handleOpen} className="download-btn watch_video">

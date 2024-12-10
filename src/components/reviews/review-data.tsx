@@ -1,7 +1,7 @@
 const reviewData = [
   {
     title: "Impressive gallery",
-    text: `I’ve been searching for a gallery plugin which has several gallery types combined with a lightbox.
+    text: `I have been searching for a gallery plugin which has several gallery types combined with a lightbox.
 This one does almost everything for you. You have many options for adjust the content. The user interface is very intuitive which is a big plus:)
 And it is for free!!. The developers are doing a great job with this one.`,
     author: "jvien",
@@ -23,7 +23,7 @@ I’m looking forward to seeing how this plugin will improve.`,
   },
 
   {
-    title: "Best gallery plugiN!",
+    title: "Best gallery plugin!",
     text: `I have tried many different gallery plugins for my photography wordpress site and this is the best I found. Also, the people that develop it are very helpful and they replied to my questions very fast.
 Thank you for a great plugin!`,
     author: "manoshq",
