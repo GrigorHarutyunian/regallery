@@ -44,17 +44,16 @@
   margin: 12px auto;
   margin-bottom: 24px;
   border-radius: 50%;
-  background-color: #64859e;
+  background-color: #eff3f6;
   transition: 0.1s all ease-in;
-}
-
-.review-card:hover .review-card__icon,
-.review-card.active .review-card__icon {
-  background-color: #0e4a70;
 }
 
 .review-card__author__name {
   font-style: italic;
+}
+
+.startWithMarginTop {
+  margin-bottom: -37px;
 }
 
 .review-card__author {
@@ -74,6 +73,10 @@
   align-items: end;
 }
 
+.review-card__text-container > a {
+  text-decoration: none;
+}
+
 .review-text__desc {
   color: #39465c;
   font-size: 1rem;
@@ -83,25 +86,35 @@
   font-weight: 400;
   max-width: 330px;
 }
-
+.review__text .see_more_btn {
+  background: #ffffff;
+}
+.review__text:hover .see_more_btn {
+  background: #eff3f6;
+}
 .review__title {
-  height: 68px;
+  height: 26px;
   max-width: 300px;
   text-align: center;
+  margin-bottom: 41px;
 }
 .review__text {
   margin-top: 22px;
   max-width: 300px;
   text-align: left;
+  cursor: pointer;
 }
-
+.toggle {
+  background: red;
+}
 .author {
-  height: 266px;
+  height: 236px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: max-height 0.3s ease;
 }
 
 .css-jkscjg {
@@ -116,7 +129,6 @@
 
 @media screen and (min-width: 1007px) and (max-width: 1167px) {
   .review-card__author {
-    margin-bottom: -37px;
     font-size: 10px;
   }
 }
@@ -130,7 +142,6 @@
     font-size: 1rem !important;
   }
   .review-card__author {
-    margin-bottom: -37px;
     font-size: 10px;
   }
 }

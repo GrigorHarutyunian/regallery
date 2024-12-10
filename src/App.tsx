@@ -9,7 +9,6 @@ import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
 import Views from "./components/views/Views";
-import Pricing from "./components/pricing/Pricing";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 const App: React.FC = () => {
   useEffect(() => {
@@ -28,6 +27,7 @@ const App: React.FC = () => {
         <Features />
         <Pricing />
         <Review />
+        {/* <Pricing /> */}
         <Faq />
         <Support />
       </main>
