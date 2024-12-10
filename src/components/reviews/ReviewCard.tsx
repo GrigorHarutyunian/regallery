@@ -1,12 +1,22 @@
 import ReviewDTO from "../../types/ReviewDTO";
 import "./Review.css";
 import Rating from "@mui/material/Rating";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-// import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import IconButton from "@mui/material/IconButton";
 import { motion } from "framer-motion";
 
-const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, seeMore }) => {
+const ReviewCards: React.FC<ReviewDTO> = ({
+  title,
+  text,
+  author,
+  seeMore,
+  id,
+}) => {
+  let cutText = "Thank you for a great plugin!";
+  if (id === 1) {
+    cutText = "The user interface is very intuitive which is a big plus";
+  } else if (id === 2) {
+    cutText =
+      "On top of that, the development team is very friendly and very quick to help and answer emails.";
+  }
   return (
     <motion.div className="review-card">
       <div className="review-card__icon">
@@ -35,16 +45,8 @@ const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, seeMore }) => {
           </a>
           <a href={seeMore} target="_blank">
             <p className="section-text__desc review__text">
-              {text.slice(0, 94)}...
-              <IconButton
-                className="see_more_btn"
-                aria-label="toggle expand"
-                size="small"
-              >
-                <KeyboardArrowDownIcon
-                  sx={{ color: "#39465c", fontSize: "middle" }}
-                />
-              </IconButton>
+              {text.split(cutText)[0]}
+              <span className="read_more_str">Read more...</span>
             </p>
           </a>
         </div>
