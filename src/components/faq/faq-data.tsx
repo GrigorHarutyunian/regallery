@@ -54,7 +54,8 @@ export const faqData = [
     title: "What are Pro Pre-built Templates?",
     description:
       "Pro Pre-built Templates are designed to help you quickly and easily create beautiful, professional-looking galleries without starting from scratch. These templates save you time by offering ready-made layouts that can be customized to suit your style and needs.",
-    panelId: "panel10",
+    panelId: "panel7",
+    summeryID: "panel7bh-header",
   },
   {
     title: "What is unique about our plans?",
@@ -67,14 +68,14 @@ export const faqData = [
     title: "Can I switch between plans later?",
     description:
       "Sure, you can! Please send us an inquiry at regalleryteam@gmail.com, and we’ll get back to you as soon as possible.",
-    panelId: "panel7",
-    summeryID: "panel7bh-header",
+    panelId: "panel9",
+    summeryID: "panel9bh-header",
   },
   {
     title: "What happens with my galleries when my plan expires?",
     description:
       "When your plan expires, you will still have access to the galleries where you have applied pro templates. However, we regularly add new templates, and if you do not renew your plan, you will not be able to access pro templates.",
-    panelId: "panel9",
-    summeryID: "panel9bh-header",
+    panelId: "panel10",
+    summeryID: "panel10bh-header",
   },
 ];
