@@ -26,7 +26,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
           data-name="Isolation Mode"
           viewBox="0 0 24 24"
           width="41"
-          height={`auto`}
+          height={"100%"}
         >
           <path
             fill="#0e4a70"
