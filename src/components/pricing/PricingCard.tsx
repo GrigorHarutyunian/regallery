@@ -33,7 +33,7 @@ const PricingCard: React.FC<PricingDTO> = ({
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
       <a target={price === "Free" ? "_blank" : "_self"} href={href}>
-        <div className="pricing-card__btn">GET STARTED</div>
+        <div className="pricing-card__btn">FREE DOWNLOAD</div>
       </a>
 
       <ul className="pricing-card__features">
