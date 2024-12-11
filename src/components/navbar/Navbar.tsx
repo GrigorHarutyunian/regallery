@@ -33,6 +33,7 @@ const links: Link[] = [
     title: "Get Started",
     href: "https://wordpress.org/plugins/regallery/",
     type: "button",
+    target: "_blank",
   },
 ];
 

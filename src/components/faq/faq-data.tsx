@@ -1,33 +1,5 @@
 export const faqData = [
   {
-    title: "What are Pro Pre-built Templates?",
-    description:
-      "Pro Templates are designed to help you quickly and easily create beautiful, professional-looking galleries without starting from scratch. These templates save you time by offering ready-made layouts that can be customized to suit your style and needs.",
-    panelId: "panel10",
-    summeryID: "panel10bh-header",
-  },
-  {
-    title: "What is unique about our plans?",
-    description:
-      "We offer more than just pro features-we provide ideas and inspiration. For only $10 (originally $25) with the 6-month plan, or $15 (originally $35) with the 1-year plan, you can create unique galleries. This offer saves you both time and money.",
-    panelId: "panel8",
-    summeryID: "panel8bh-header",
-  },
-  {
-    title: "Can I switch between plans later?",
-    description:
-      "Sure, you can! Please send us an inquiry at regalleryteam@gmail.com, and we’ll get back to you as soon as possible.",
-    panelId: "panel7",
-    summeryID: "panel7bh-header",
-  },
-  {
-    title: "What happens with my galleries when my plan expires?",
-    description:
-      "When your plan expires, you will still have access to the galleries where you have applied pro templates. However, we regularly add new templates, and if you do not renew your plan, you will not be able to access pro templates.",
-    panelId: "panel9",
-    summeryID: "panel9bh-header",
-  },
-  {
     title: "What Can You Do with the ReGallery Plugin?",
     description:
       "The ReGallery plugin helps you create attractive photo galleries on your website. You can display your photos in a neat and appealing manner. This applies to photographers, businesses showcasing products, and individuals sharing personal memories.",
@@ -79,10 +51,30 @@ export const faqData = [
     summeryID: "panel6bh-header",
   },
   {
+    title: "What are Pro Pre-built Templates?",
+    description:
+      "Pro Pre-built Templates are designed to help you quickly and easily create beautiful, professional-looking galleries without starting from scratch. These templates save you time by offering ready-made layouts that can be customized to suit your style and needs.",
+    panelId: "panel10",
+  },
+  {
+    title: "What is unique about our plans?",
+    description:
+      "We offer more than just pro features-we provide ideas and inspiration. For only $10 (originally $25) with the 6-month plan, or $15 (originally $35) with the 1-year plan, you can create unique galleries. This offer saves you both time and money.",
+    panelId: "panel8",
+    summeryID: "panel8bh-header",
+  },
+  {
     title: "Can I switch between plans later?",
     description:
       "Sure, you can! Please send us an inquiry at regalleryteam@gmail.com, and we’ll get back to you as soon as possible.",
     panelId: "panel7",
     summeryID: "panel7bh-header",
+  },
+  {
+    title: "What happens with my galleries when my plan expires?",
+    description:
+      "When your plan expires, you will still have access to the galleries where you have applied pro templates. However, we regularly add new templates, and if you do not renew your plan, you will not be able to access pro templates.",
+    panelId: "panel9",
+    summeryID: "panel9bh-header",
   },
 ];
