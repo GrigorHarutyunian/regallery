@@ -8,7 +8,6 @@ import Info from "./components/info/Info";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
-import Info from "./components/info/Info";
 import Demo from "./components/demo/Demo";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 
