@@ -25,11 +25,10 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Views />
-        <Demo />
         <Info />
         <Features />
         <Review />
-       
+         <Demo />
         <Faq />
         <Support />
       </main>
