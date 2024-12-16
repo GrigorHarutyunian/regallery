@@ -24,14 +24,16 @@ const links: Link[] = [
     subMenuItems: viewsDataSubMenu,
   },
   { id: 2, title: "Features", href: "#features" },
-  { id: 3, title: "FAQ", href: "#faq" },
-  { id: 4, title: "Contact us", href: "#support" },
+  // { id: 3, title: "Pricing", href: "#pricing" },
+  { id: 4, title: "FAQ", href: "#faq" },
+  { id: 5, title: "Contact us", href: "#support" },
+
   {
-    id: 5,
-    title: "Download",
+    id: 6,
+    title: "Get Started",
     href: "https://wordpress.org/plugins/regallery/",
-    target: "_blank",
     type: "button",
+    target: "_blank",
   },
 ];
 

@@ -22,7 +22,7 @@ section.supportandInfo .section-text {
   align-items: center;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1200px) {
   section.supportandInfo {
     height: auto;
   }

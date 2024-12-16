@@ -9,9 +9,9 @@ const Support: React.FC = () => {
 
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const width = version === "mobile" ? 208 : version === "mid" ? 277.3333 : 416;
-  const ration = 416 / 411;
-  const height = width / ration;
+  const width = version === "mobile" ? 208 : version === "mid" ? 277 : 416;
+  const ration = 555 / 548;
+  const height = Math.round(width / ration);
   return (
     <SupportAndInfo
       title={supportData.title}

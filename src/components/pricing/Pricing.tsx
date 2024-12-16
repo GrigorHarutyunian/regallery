@@ -1,63 +1,30 @@
 import "./Pricing.css";
+import pricingData from "./pricing-data";
+import PricingCard from "./PricingCard";
+import PricingDTO from "../../types/PricingDTO";
 const Pricing: React.FC = () => {
   return (
     <section id="pricing">
-      <div className="pricing-upper">
-        <div className="section-text__title-centered ">
-          A Plan for Every Cats's Needs
-        </div>
-      </div>
-      <div className="pricing-lower">
-        <div className="pricing-cards">
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <span className="pricing-card__subtitle">Spynx</span>
-              <div className="pricing-card__title">
-                $30<span> / month</span>
-              </div>
-            </div>
-            <ul className="pricing-card__features">
-              <li>5 Matches Per Day</li>
-              <li>10 Messages Per Day</li>
-              <li>Unlimited App Usage</li>
-            </ul>
-            <a href="#pricing" className="pricing-card__btn">
-              Get started
-            </a>
-          </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="section-text">
+          <h2 className="section-text__title-centered ">Pre-built templates</h2>
 
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <span className="pricing-card__subtitle">Persian</span>
-              <div className="pricing-card__title">
-                $56<span> / month</span>
-              </div>
-            </div>
-            <ul className="pricing-card__features">
-              <li>Unlimited Matches</li>
-              <li>Unlimited Messages</li>
-              <li>Unlimited App Usage</li>
-            </ul>
-            <a href="#pricing" className="pricing-card__btn">
-              Get started
-            </a>
-          </div>
-
-          <div className="pricing-card">
-            <div className="pricing-card__header">
-              <span className="pricing-card__subtitle">Maine</span>
-              <div className="pricing-card__title">
-                $20<span> / month</span>
-              </div>
-            </div>
-            <ul className="pricing-card__features">
-              <li>Priority Listings</li>
-              <li>Unlimited Matches</li>
-              <li>Unlimited App Usage</li>
-            </ul>
-            <a href="#pricing" className="pricing-card__btn">
-              Get started
-            </a>
+          <div className="pricing-cards">
+            {pricingData.map((val: PricingDTO) => {
+              return (
+                <PricingCard
+                  key={val.id}
+                  text={val.text}
+                  price={val.price}
+                  advantages={val.advantages}
+                  canceledprice={val?.canceledprice}
+                  duration={val.duration}
+                  savedmoney={val.savedmoney}
+                  title={val.title}
+                  href={val.href}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,16 +1,24 @@
-import { WindowWidthProvider } from "./contexts/WindowWidthContext";
+import { useEffect } from "react";
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
+import Faq from "./components/faq/Faq";
 import Features from "./components/features/Features";
+import Footer from "./components/footer/Footer";
+import Hero from "./components/hero/Hero";
+import Info from "./components/info/Info";
+import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
-import Footer from "./components/footer/Footer";
-import Faq from "./components/faq/Faq";
-import Views from "./components/views/Views";
 import Info from "./components/info/Info";
 import Demo from "./components/demo/Demo";
+import { WindowWidthProvider } from "./contexts/WindowWidthContext";
+
 const App: React.FC = () => {
+  useEffect(() => {
+    if (location.hash) {
+      window.location.replace(location.hash);
+    }
+  }, []);
+
   return (
     <WindowWidthProvider>
       <Navbar />
@@ -21,6 +29,7 @@ const App: React.FC = () => {
         <Info />
         <Features />
         <Review />
+        {/* <Pricing /> */}
         <Faq />
         <Support />
       </main>

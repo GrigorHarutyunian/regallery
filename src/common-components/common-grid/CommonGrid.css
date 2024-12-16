@@ -45,6 +45,10 @@
   justify-items: center;
 }
 
+div#none {
+  visibility: hidden;
+}
+
 ._features > .col-50 > .section-text__title-small {
   height: 44px;
   margin-bottom: 27px;
@@ -69,11 +73,17 @@
   .grid__4 > .col-50:nth-child(4) {
     grid-column: 1;
   }
+  div#none {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 450px) and (max-width: 720px) {
   .grid__6 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+  div#none {
+    display: none;
   }
 }

@@ -7,9 +7,10 @@ const Info: React.FC = () => {
   let text = infoData.text.split("LIVE DEMO");
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const width = version === "mobile" ? 297.5 : version === "mid" ? 397 : 595;
+  const width = version === "mobile" ? 298 : version === "mid" ? 397 : 595;
   const ration = 595 / 402;
-  const height = width / ration;
+  const height = Math.trunc(width / ration);
+  width / ration;
   return (
     <SupportAndInfo
       title={infoData.title}
