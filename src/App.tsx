@@ -26,7 +26,7 @@ const App: React.FC = () => {
         <Info />
         <Features />
         <Review />
-        {/* <Pricing /> */}
+       
         <Faq />
         <Support />
       </main>
