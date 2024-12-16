@@ -15,12 +15,10 @@ body {
 main {
   z-index: 100;
 }
-main > :nth-child(1),
-main > :nth-child(4),
-main > :nth-child(6),
-main > :nth-child(8) {
+main > *:nth-child(odd) {
   background-color: #eff3f6 !important;
 }
+
 section {
   height: calc(100vh - 100px);
   display: flex;
