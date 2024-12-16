@@ -8,7 +8,6 @@ import Info from "./components/info/Info";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
-import Demo from "./components/demo/Demo";
 import Views from "./components/views/Views";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 
@@ -28,7 +27,6 @@ const App: React.FC = () => {
         <Info />
         <Features />
         <Review />
-         <Demo />
         <Faq />
         <Support />
       </main>
