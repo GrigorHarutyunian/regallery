@@ -39,9 +39,8 @@ const links: Link[] = [
   {
     id: 7,
     title: "Get Started",
-    href: "https://wordpress.org/plugins/regallery/",
+    href: "#pricing",
     type: "button",
-    target: "_blank",
   },
 ];
 
