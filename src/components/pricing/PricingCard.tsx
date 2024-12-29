@@ -9,6 +9,11 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
+  const handleCopyClick = (event: any) => {
+    event.preventDefault();
+    const email = "regalleryteam@gmail.com";
+    navigator.clipboard.writeText(email);
+  };
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
@@ -32,9 +37,37 @@ const PricingCard: React.FC<PricingDTO> = ({
 
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
-      <a target={price === "Free" ? "_blank" : "_self"} href={href}>
-        <div className="pricing-card__btn">FREE DOWNLOAD</div>
-      </a>
+
+      {title === "Starter" ? (
+        <a target={"_blank"} href={href}>
+          <div className="pricing-card__btn">GET STARTED</div>
+          <div className="pricing-card__btn_copy"></div>
+        </a>
+      ) : (
+        <a
+          style={{ position: "relative" }}
+          href={`mailto: regalleryteam@gmail.com?subject=I’m%20interested%20in%20upgrading%20to%20the%20${title}%20plan&body=I’m%20interested%20in%20upgrading%20my%20plan.%20Please%20reach%20out%20to%20me%20with%20the%20next%20steps.%20Thank%20you.`}
+          target="_top"
+        >
+          <div className="pricing-card__btn">EMAIL US TO GET STARTED</div>
+          <div className="pricing-card__btn_copy" onClick={handleCopyClick}>
+            <span>Or contact us at regalleryteam@gmail.com</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Layer_1"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              width="12"
+              height="12"
+            >
+              <path
+                fill={"#39465c"}
+                d="m19,0h-6c-2.757,0-5,2.243-5,5v6c0,2.757,2.243,5,5,5h6c2.757,0,5-2.243,5-5v-6c0-2.757-2.243-5-5-5Zm3,11c0,1.654-1.346,3-3,3h-6c-1.654,0-3-1.346-3-3v-6c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v6Zm-6,8c0,2.757-2.243,5-5,5h-6c-2.757,0-5-2.243-5-5v-6c0-2.757,2.243-5,5-5,.553,0,1,.448,1,1s-.447,1-1,1c-1.654,0-3,1.346-3,3v6c0,1.654,1.346,3,3,3h6c1.654,0,3-1.346,3-3,0-.552.447-1,1-1s1,.448,1,1Z"
+              />
+            </svg>
+          </div>
+        </a>
+      )}
 
       <ul className="pricing-card__features">
         {advantages.map((val, id) => {

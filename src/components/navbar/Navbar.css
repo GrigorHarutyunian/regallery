@@ -188,7 +188,7 @@
   border-radius: 0px !important;
 }
 
-@media screen and (min-width: 800px) and (max-width: 955px) {
+@media screen and (min-width: 800px) and (max-width: 1060px) {
   .nav-link__text {
     font-size: 0.8rem;
     padding: 0px 4px;
@@ -199,7 +199,7 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1060px) {
   .download-btn__navbar {
     font-size: 12px !important;
     white-space: nowrap;
@@ -213,6 +213,26 @@
   }
   .nav-logo {
     font-size: 1.2rem;
+  }
+  .nav-link {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .download-btn__navbar {
+    font-size: 9px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 16px 19px !important;
+  }
+  .nav-link__text {
+    font-size: 0.7rem;
+    padding: 0px 4px;
+  }
+  .nav-logo {
+    font-size: 1rem;
   }
   .nav-link {
     margin: 0;
