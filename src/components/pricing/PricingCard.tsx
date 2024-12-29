@@ -9,6 +9,11 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
+  const handleCopyClick = (event: any) => {
+    event.preventDefault();
+    const email = "regalleryteam@gmail.com";
+    navigator.clipboard.writeText(email);
+  };
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
@@ -45,7 +50,7 @@ const PricingCard: React.FC<PricingDTO> = ({
           target="_top"
         >
           <div className="pricing-card__btn">EMAIL US TO GET STARTED</div>
-          <div className="pricing-card__btn_copy">
+          <div className="pricing-card__btn_copy" onClick={handleCopyClick}>
             <span>Or contact us at regalleryteam@gmail.com</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

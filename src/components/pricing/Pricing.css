@@ -175,6 +175,9 @@ a {
   .pricing-card__btn {
     font-size: 0.8rem;
   }
+  .pricing-card__btn_copy {
+    font-size: 8px;
+  }
 }
 
 @media screen and (min-width: 856px) and (max-width: 965px) {
@@ -211,6 +214,9 @@ a {
   }
   .pricing-card__subtitle {
     font-size: 20px;
+  }
+  .pricing-card__btn_copy {
+    font-size: 7px;
   }
 }
 
@@ -259,11 +265,17 @@ a {
   .pricing-card__btn {
     font-size: 0.6rem;
   }
+  .pricing-card__btn_copy {
+    font-size: 7px;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 800px) {
   .pricing__text {
     height: 100px;
+  }
+  .pricing-card__btn_copy {
+    font-size: 5px;
   }
 }
 
@@ -292,10 +304,16 @@ a {
     width: 80%;
     font-size: 0.7rem;
   }
+  .pricing-card__btn_copy {
+    font-size: 8px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 349px) {
   .pricing-card__btn {
     font-size: 0.55rem;
+  }
+  .pricing-card__btn_copy {
+    font-size: 6px;
   }
 }
