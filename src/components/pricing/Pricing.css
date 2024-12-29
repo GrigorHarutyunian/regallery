@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .pricing-cards {
   display: flex;
   margin: 0px auto;
@@ -130,7 +133,7 @@
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   padding: 16px 0px;
   border-radius: 6px;
@@ -147,7 +150,18 @@
   margin-bottom: 16px;
   margin-top: 16px;
 }
+.pricing-card__btn_copy {
+  height: 20px;
+  font-size: 10px;
+  color: #39465c;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
 
+.pricing-card__btn_copy span {
+  margin-right: 3px;
+}
 @media screen and (min-width: 1120px) {
   .pricing-card__subtitle {
     margin-bottom: 19px;
@@ -157,6 +171,9 @@
 @media screen and (min-width: 966px) and (max-width: 1120px) {
   .pricing__text {
     height: 80px;
+  }
+  .pricing-card__btn {
+    font-size: 0.8rem;
   }
 }
 
@@ -190,7 +207,7 @@
   }
   .pricing-card__btn {
     margin-top: 14px;
-    font-size: 14px;
+    font-size: 0.7rem;
   }
   .pricing-card__subtitle {
     font-size: 20px;
@@ -240,7 +257,7 @@
     min-height: 35px;
   }
   .pricing-card__btn {
-    font-size: 12px;
+    font-size: 0.6rem;
   }
 }
 
@@ -266,5 +283,19 @@
     padding: 16px;
     width: 80%;
     font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 475px) {
+  .pricing-card__btn {
+    padding: 16px;
+    width: 80%;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 349px) {
+  .pricing-card__btn {
+    font-size: 0.55rem;
   }
 }

@@ -24,7 +24,7 @@ const links: Link[] = [
     subMenuItems: viewsDataSubMenu,
   },
   { id: 2, title: "Features", href: "#features" },
-  // { id: 3, title: "Pricing", href: "#pricing" },
+
   {
     id: 3,
     title: "Demo",
@@ -32,11 +32,12 @@ const links: Link[] = [
     href: "https://regallery.team/core/demo/",
     target: "_blank",
   },
-  { id: 4, title: "FAQ", href: "#faq" },
-  { id: 5, title: "Contact us", href: "#support" },
+  { id: 4, title: "Pricing", href: "#pricing" },
+  { id: 5, title: "FAQ", href: "#faq" },
+  { id: 6, title: "Contact us", href: "#support" },
 
   {
-    id: 6,
+    id: 7,
     title: "Get Started",
     href: "https://wordpress.org/plugins/regallery/",
     type: "button",
