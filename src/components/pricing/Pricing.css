@@ -155,19 +155,15 @@ a {
   font-size: 11px;
   font-weight: 300;
   color: #39465c;
-}
-
-.pricing-card__btn_copy span {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1px;
+  justify-content: center;
+  margin-top: 10px;
+  height: 26px;
 }
 
 .pricing-card__btn_copy svg {
   cursor: pointer;
-  align-self: center;
-  margin-top: auto;
+  vertical-align: bottom;
 }
 @media screen and (min-width: 1120px) {
   .pricing-card__subtitle {
@@ -220,7 +216,7 @@ a {
     font-size: 20px;
   }
   .pricing-card__btn_copy {
-    font-size: 9px;
+    font-size: 10px;
   }
   .pricing-card__btn_copy svg {
     width: 10px;
@@ -273,7 +269,7 @@ a {
     font-size: 0.6rem;
   }
   .pricing-card__btn_copy {
-    font-size: 9px;
+    font-size: 10px;
   }
   .pricing-card__btn_copy svg {
     width: 10px;
