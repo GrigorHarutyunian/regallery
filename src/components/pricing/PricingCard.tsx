@@ -12,11 +12,11 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
-  const [tooltipText, setTooltipText] = useState<string>("Copy the email");
+  const [tooltipText, setTooltipText] = useState<string>("Copy");
 
   const handleCopy = () => {
     setTooltipText("Copied!");
-    setTimeout(() => setTooltipText("Copy the email"), 2000);
+    setTimeout(() => setTooltipText("Copy"), 2000);
   };
 
   return (
@@ -61,7 +61,7 @@ const PricingCard: React.FC<PricingDTO> = ({
           </a>
           <div className="pricing-card__btn_copy">
             <span>
-              Or contact us at regalleryteam@gmail.com{" "}
+              Or copy regalleryteam@gmail.com{" "}
               <CopyToClipboard
                 text={"regalleryteam@gmail.com"}
                 onCopy={handleCopy}
@@ -76,7 +76,7 @@ const PricingCard: React.FC<PricingDTO> = ({
                     height="12"
                   >
                     <path
-                      fill={"#39465c"}
+                      fill={"#8fb348"}
                       d="m19,0h-6c-2.757,0-5,2.243-5,5v6c0,2.757,2.243,5,5,5h6c2.757,0,5-2.243,5-5v-6c0-2.757-2.243-5-5-5Zm3,11c0,1.654-1.346,3-3,3h-6c-1.654,0-3-1.346-3-3v-6c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v6Zm-6,8c0,2.757-2.243,5-5,5h-6c-2.757,0-5-2.243-5-5v-6c0-2.757,2.243-5,5-5,.553,0,1,.448,1,1s-.447,1-1,1c-1.654,0-3,1.346-3,3v6c0,1.654,1.346,3,3,3h6c1.654,0,3-1.346,3-3,0-.552.447-1,1-1s1,.448,1,1Z"
                     />
                   </svg>
