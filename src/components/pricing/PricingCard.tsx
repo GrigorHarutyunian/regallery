@@ -15,7 +15,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   const [tooltipText, setTooltipText] = useState<string>("Copy");
 
   const handleCopy = () => {
-    setTooltipText("Copied!");
+    setTooltipText("Copied");
     setTimeout(() => setTooltipText("Copy"), 2000);
   };
 
@@ -46,7 +46,7 @@ const PricingCard: React.FC<PricingDTO> = ({
       {title === "Starter" ? (
         <>
           <a target={"_blank"} href={href}>
-            <div className="pricing-card__btn">GET STARTED</div>
+            <div className="pricing-card__btn">DOWNLOAD NOW</div>
           </a>
           <div className="pricing-card__btn_copy"></div>
         </>
@@ -57,7 +57,9 @@ const PricingCard: React.FC<PricingDTO> = ({
             href={`mailto: regalleryteam@gmail.com?subject=I’m%20interested%20in%20upgrading%20to%20the%20${title}%20plan&body=I’m%20interested%20in%20upgrading%20my%20plan.%20Please%20reach%20out%20to%20me%20with%20the%20next%20steps.%20Thank%20you.`}
             target="_top"
           >
-            <div className="pricing-card__btn">EMAIL US TO GET STARTED</div>
+            <div className="pricing-card__btn">
+              EMAIL US FOR {title.toUpperCase()} PLAN
+            </div>
           </a>
           <div className="pricing-card__btn_copy">
             <span>
