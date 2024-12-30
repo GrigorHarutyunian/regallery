@@ -115,7 +115,7 @@ a {
   text-align: start;
 }
 .pricing-card__features__list {
-  margin: 8px 0px;
+  margin: 10px 0px;
   color: #39465c;
   font-weight: 300;
   font-size: 17px;
@@ -151,20 +151,23 @@ a {
   margin-top: 16px;
 }
 .pricing-card__btn_copy {
-  height: 32px;
-  font-size: 10px;
+  height: 26px;
+  font-size: 11px;
+  font-weight: 300;
   color: #39465c;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
 }
 
 .pricing-card__btn_copy span {
-  margin-right: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
 }
+
 .pricing-card__btn_copy svg {
   cursor: pointer;
+  align-self: center;
+  margin-top: auto;
 }
 @media screen and (min-width: 1120px) {
   .pricing-card__subtitle {
@@ -217,7 +220,7 @@ a {
     font-size: 20px;
   }
   .pricing-card__btn_copy {
-    font-size: 8px;
+    font-size: 9px;
   }
   .pricing-card__btn_copy svg {
     width: 10px;
@@ -270,7 +273,7 @@ a {
     font-size: 0.6rem;
   }
   .pricing-card__btn_copy {
-    font-size: 8px;
+    font-size: 9px;
   }
   .pricing-card__btn_copy svg {
     width: 10px;
