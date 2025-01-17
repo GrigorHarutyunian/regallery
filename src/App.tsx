@@ -22,6 +22,7 @@ const App: React.FC = () => {
   return (
     <WindowWidthProvider>
       <Navbar />
+
       <main>
         <Hero />
         <Views />
