@@ -10,6 +10,7 @@ import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
 import Views from "./components/views/Views";
 import Pricing from "./components/pricing/Pricing";
+import Banner from "./components/banner/Banner";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 
 const App: React.FC = () => {
@@ -22,8 +23,10 @@ const App: React.FC = () => {
   return (
     <WindowWidthProvider>
       <Navbar />
-
-      <main>
+      <Banner />
+      <main
+        className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
+      >
         <Hero />
         <Views />
         <Info />
