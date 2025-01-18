@@ -14,7 +14,14 @@ body {
 
 main {
   z-index: 100;
+  margin-top: 20px;
+  transition: all 0.8s ease;
 }
+.closed-banner {
+  margin-top: 0px;
+  transition: all 0.8s ease;
+}
+
 main > *:nth-child(odd) {
   background-color: #eff3f6 !important;
 }
@@ -61,6 +68,13 @@ h3 {
 p {
   margin: 0;
 }
+
+@media screen and (min-width: 900px) and (max-width: 1115px) {
+  main {
+    margin-top: 40px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 965px) {
   .section-text__desc {
     font-size: 14px;
@@ -155,11 +169,17 @@ p {
     margin-left: 0;
     margin-top: 20px;
   }
+  main {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .buttons-container {
     justify-content: center;
+  }
+  main {
+    margin-top: 80px;
   }
 }
 
@@ -173,5 +193,8 @@ p {
   .watch_video {
     margin-left: 0;
     margin-top: 20px;
+  }
+  main {
+    margin-top: 120px;
   }
 }
