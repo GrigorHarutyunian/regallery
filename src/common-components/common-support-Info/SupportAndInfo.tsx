@@ -13,9 +13,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
   text,
   id,
-  img,
-  sizes,
-  alt,
+
   width,
   height,
   lottiesData,
@@ -46,7 +44,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           </motion.div>
           <motion.div className="section-image">
             {/* <img
-              width={width}
+              width={width}s
               height={height}
               srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
               sizes={sizes}
