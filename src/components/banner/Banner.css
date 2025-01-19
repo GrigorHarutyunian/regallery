@@ -10,14 +10,17 @@
   z-index: 999;
 }
 
+.nav-banner:hover .nav-banner-content-left {
+  animation-play-state: paused;
+}
+
 .nav-banner.closed {
   transform: translateY(-50px);
 }
 .nav-banner-content {
   padding: 12px 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-size: 18px;
 }
 
@@ -43,8 +46,8 @@
 }
 .nav-banner-content-left {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  animation: marquee 13s linear infinite;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1060px) {
@@ -55,11 +58,6 @@
   .nav-banner-content {
     padding: 8px 0px;
     font-size: 18px;
-    justify-content: flex-start;
-  }
-  .nav-banner-content-left {
-    margin-right: 50px;
-    padding: 0px 14px;
   }
 }
 
@@ -68,10 +66,7 @@
     width: 14px;
     height: 14px;
   }
-  .nav-banner-content-left {
-    margin-right: 50px;
-    padding: 0px 14px;
-  }
+
   .nav-banner.closed {
     transform: translateY(-75px);
   }
@@ -82,11 +77,19 @@
     width: 14px;
     height: 14px;
   }
-  .nav-banner-content-left {
-    margin-right: 50px;
-    padding: 0px 14px;
-  }
+
   .nav-banner.closed {
     transform: translateY(-135px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    margin-left: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    margin-left: 0;
+    transform: translateX(-100%);
   }
 }

@@ -17,6 +17,7 @@
     "@mui/material": "^5.15.20",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.2.12",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-copy-to-clipboard": "^5.1.0",

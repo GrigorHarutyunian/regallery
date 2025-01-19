@@ -1,6 +1,7 @@
 import supportImg from "../../assets/imgs/support.webp";
 import supportMiddle from "../../assets/imgs/support-middle.webp";
 import supportSmall from "../../assets/imgs/support-small.webp";
+import ContactUs from "../../assets/lotties/ContactUs.json";
 
 const supportData = {
   title: "Contact us",
@@ -13,6 +14,7 @@ const supportData = {
   sizes:
     "(max-width: 700px) 208px, (min-width: 701px) and (max-width: 1100px) 277px, 416px",
   alt: `Contact ReGallery - Reach out for support, inquiries, or collaborations with our WordPress photo gallery experts.`,
+  lottiesData: ContactUs,
 };
 
 export default supportData;
