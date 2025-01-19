@@ -7,4 +7,5 @@ export default interface SupportAndInfoDTO {
   alt: string;
   width: number;
   height: number;
+  lottiesData: any;
 }

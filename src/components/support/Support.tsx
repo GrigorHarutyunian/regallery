@@ -12,6 +12,7 @@ const Support: React.FC = () => {
   const width = version === "mobile" ? 208 : version === "mid" ? 277 : 416;
   const ration = 555 / 548;
   const height = Math.round(width / ration);
+
   return (
     <SupportAndInfo
       title={supportData.title}
@@ -40,6 +41,7 @@ const Support: React.FC = () => {
       img={supportData.img}
       sizes={supportData.sizes}
       alt={supportData.alt}
+      lottiesData={supportData.lottiesData}
     />
   );
 };

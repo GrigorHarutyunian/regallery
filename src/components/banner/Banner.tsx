@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 const text =
   "Get unlimited access to the pre-built templates for less than$2/month.";
 import "./Banner.css";
-const Banner: React.FC = () => {
-  const [bannerOpen, setBannerOpen] = useState<boolean>(
-    localStorage.getItem("bannerOpen") !== "false"
-  );
 
-  const closeBanner = () => {
-    setBannerOpen(false);
-    localStorage.setItem("bannerOpen", "false");
-    const main = document.querySelector("main");
-    main?.classList.add("closed-banner");
-  };
+const Banner: React.FC = () => {
+  // const [bannerOpen, setBannerOpen] = useState<boolean>(
+  //   localStorage.getItem("bannerOpen") !== "false"
+  // );
+
+  // const closeBanner = () => {
+  //   setBannerOpen(false);
+  //   localStorage.setItem("bannerOpen", "false");
+  //   const main = document.querySelector("main");
+  //   main?.classList.add("closed-banner");
+  // };
   return (
-    <div className={`nav-banner ${bannerOpen ? "" : "closed"}`}>
+    <div className={`nav-banner ${true ? "" : "closed"}`}>
       <div className="nav-banner-content">
-        <div className="nav-banner-content-left">
+        <motion.div className="nav-banner-content-left">
           <div className="banner-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,28 +38,12 @@ const Banner: React.FC = () => {
             </svg>
           </div>
           <p>
-            {text.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                style={{ display: "inline-block" }}
-                animate={{
-                  y: [0, -5, 0], // Moves up and down
-                }}
-                transition={{
-                  ease: "easeInOut",
-                  duration: 0.2,
-                  delay: index * 0.05, // Stagger effect
-                  repeat: Infinity, // Loop animation
-                  repeatDelay: 3.5,
-                }}
-              >
-                {char === " " ? "\u00A0" : char} {/* Keeps spaces visible */}
-              </motion.span>
-            ))}
+            {text}
+
             <a href="#pricing">Become a member</a>
           </p>
-        </div>
-        <div id="banner" onClick={closeBanner} className="close-banner">
+        </motion.div>
+        {/* <div id="banner" onClick={closeBanner} className="close-banner">
           <svg
             className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
             focusable="false"
@@ -70,7 +55,7 @@ const Banner: React.FC = () => {
           >
             <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
           </svg>
-        </div>
+        </div> */}
       </div>
     </div>
   );
