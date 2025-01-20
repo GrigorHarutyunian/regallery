@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 const text =
-  "Get unlimited access to the pre-built templates for less than$2/month.";
+  "Get unlimited access to the pre-built templates for less than $2/month.";
 import "./Banner.css";
 
 const Banner: React.FC = () => {
@@ -40,7 +40,7 @@ const Banner: React.FC = () => {
           <p>
             {text}
 
-            <a href="#pricing">Become a member</a>
+            <a href="#pricing"> Start now</a>
           </p>
         </motion.div>
         {/* <div id="banner" onClick={closeBanner} className="close-banner">

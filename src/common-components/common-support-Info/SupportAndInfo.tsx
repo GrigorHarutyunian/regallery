@@ -5,6 +5,7 @@ import "./SupportAndInfo.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
+import { useInView } from "react-intersection-observer";
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
@@ -19,7 +20,10 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   lottiesData,
 }) => {
   // const { imgBig, imgMiddle, imgSmall } = img;
-
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Load animation once when visible
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  });
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -42,7 +46,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               )}
             </div>
           </motion.div>
-          <motion.div className="section-image">
+          <motion.div ref={ref} className="section-image">
             {/* <img
               width={width}s
               height={height}
@@ -50,12 +54,14 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               sizes={sizes}
               alt={alt}
             /> */}
-            <Lottie
-              width={width}
-              height={height}
-              animationData={lottiesData}
-              loop={true}
-            />
+            {inView && (
+              <Lottie
+                width={width}
+                height={height}
+                animationData={lottiesData}
+                loop={true}
+              />
+            )}
           </motion.div>
         </motion.div>
       </Container>
