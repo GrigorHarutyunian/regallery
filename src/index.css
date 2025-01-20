@@ -15,10 +15,14 @@ body {
 main {
   z-index: 100;
   margin-top: 47px;
-  transition: all 0.8s ease;
 }
+main.closed-banner {
+  transition: all 1s ease;
+  transition-delay: 0.8s;
+  margin-top: 0px;
+}
+
 .closed-banner {
-  margin-top: 94px;
   transition: all 0.8s ease;
 }
 
@@ -36,6 +40,7 @@ section {
 
 footer {
   padding: 25px;
+  background-color: #eff3f6;
 }
 
 .row {
@@ -69,9 +74,21 @@ p {
   margin: 0;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1115px) {
+@media screen and (max-width: 754px) {
   main {
-    margin-top: 40px;
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 335px) and (max-width: 466px) {
+  main {
+    margin-top: 93px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  main {
+    margin-top: 116px;
   }
 }
 
@@ -83,12 +100,13 @@ p {
     font-size: 3rem;
   }
   .section-text__title {
-    font-size: 40px;
+    font-size: 35px;
     max-width: 500px;
   }
   .section-text__body {
     font-size: 20px;
     max-width: 480px;
+    margin: 30px 0;
   }
   .review-card {
     padding: 21px 8px 54px;
@@ -169,17 +187,11 @@ p {
     margin-left: 0;
     margin-top: 20px;
   }
-  main {
-    margin-top: 60px;
-  }
 }
 
 @media screen and (max-width: 700px) {
   .buttons-container {
     justify-content: center;
-  }
-  main {
-    margin-top: 80px;
   }
 }
 
@@ -193,8 +205,5 @@ p {
   .watch_video {
     margin-left: 0;
     margin-top: 20px;
-  }
-  main {
-    margin-top: 120px;
   }
 }

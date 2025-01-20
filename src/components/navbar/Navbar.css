@@ -20,7 +20,9 @@
   -moz-box-shadow: 0 8px 6px -6px #0e4a70;
   box-shadow: 0 8px 6px -6px #0e4a70;
 } */
-
+.nav.closed-banner {
+  top: 0;
+}
 .nav-content {
   height: 100%;
   width: 100%;
@@ -187,6 +189,24 @@
 }
 .css-pwxzbm {
   border-radius: 0px !important;
+}
+
+@media screen and (max-width: 754px) {
+  .nav {
+    top: 70px;
+  }
+}
+
+@media screen and (min-width: 335px) and (max-width: 466px) {
+  .nav {
+    top: 93px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .nav {
+    top: 116px;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1060px) {

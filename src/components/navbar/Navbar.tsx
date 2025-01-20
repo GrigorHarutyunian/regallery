@@ -49,7 +49,11 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className={`nav${menuOpen ? " nav-open" : ""}`}>
+    <div
+      className={`nav${menuOpen ? " nav-open" : ""}${
+        localStorage.getItem("bannerOpen") ? " closed-banner" : ""
+      }`}
+    >
       <div className={"nav-content"}>
         <a
           href="#home"
