@@ -8,11 +8,9 @@ import imgMiddle from "../../assets/imgs/preview-middle.webp";
 import imgSmall from "../../assets/imgs/preview-small.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
-
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
 import "./Hero.css";
-
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
@@ -22,14 +20,12 @@ const Hero: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   const version = windowWitdth.version;
+  const width = version === "mobile" ? 260 : version === "mid" ? 347 : 520;
+  const ration = 13 / 10;
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const width = version === "mobile" ? 500 : version === "mid" ? 380 : 500;
-  const ration = 595 / 402;
-  const height = Math.trunc(width / ration);
-  width / ration;
+  const height = Math.round(width / ration);
 
   return (
     <section>
@@ -64,7 +60,7 @@ const Hero: React.FC = () => {
               </div>
             </motion.div>
 
-            <div style={{ maxWidth: width }} className="section-image">
+            <motion.div className="section-image">
               <img
                 loading="lazy"
                 height={height}
@@ -74,14 +70,7 @@ const Hero: React.FC = () => {
                 sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1100px) 346px, (min-width: 1101px) 520px"
                 alt="Regallery - the intuitive WordPress photo gallery plugin with easy drag-and-drop interface and customizable gallery options."
               />
-              {/* {inView && (
-                <Lottie
-                  animationData={HeroLottie}
-                  loop={false}
-                  style={{ width: "100%", height: "auto" }}
-                />
-              )} */}
-            </div>
+            </motion.div>
           </motion.div>
         </Row>
       </Container>
