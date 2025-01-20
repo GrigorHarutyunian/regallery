@@ -26,7 +26,6 @@ const Info: React.FC = () => {
       alt={infoData.alt}
       width={width}
       height={height}
-      lottiesData={infoData.lottiesData}
     />
   );
 };
