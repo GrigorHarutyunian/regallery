@@ -14,11 +14,11 @@ body {
 
 main {
   z-index: 100;
-  margin-top: 20px;
+  margin-top: 47px;
   transition: all 0.8s ease;
 }
 .closed-banner {
-  margin-top: 0px;
+  margin-top: 94px;
   transition: all 0.8s ease;
 }
 

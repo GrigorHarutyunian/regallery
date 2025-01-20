@@ -82,7 +82,13 @@ const Hero: React.FC = () => {
                 sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1100px) 346px, (min-width: 1101px) 520px"
                 alt="Regallery - the intuitive WordPress photo gallery plugin with easy drag-and-drop interface and customizable gallery options."
               /> */}
-              {inView && <Lottie animationData={HeroLottie} loop={true} />}
+              {inView && (
+                <Lottie
+                  animationData={HeroLottie}
+                  loop={false}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              )}
             </div>
           </motion.div>
         </Row>
