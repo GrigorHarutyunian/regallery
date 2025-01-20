@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   left: 0;
-  background-color: #4cc009;
+  background-color: #eff3f6;
   color: #39465c;
   transition: all 0.8s ease;
   transform: translateY(0);
@@ -12,7 +12,7 @@
 }
 
 .nav-banner.closed {
-  transform: translateY(-50px);
+  transform: translateY(-47px);
 }
 .nav-banner-content {
   display: flex;
