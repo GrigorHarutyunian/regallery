@@ -158,7 +158,8 @@
     flex-direction: column;
     justify-content: center;
   }
-  .section-text__title-centered {
+  .section-text__title-centered,
+  .faq__title {
     font-size: 30px;
     margin-bottom: 20px;
   }

@@ -46,8 +46,16 @@ footer {
 .row {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
   padding: 30px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .row {
+    padding: 0;
+  }
+  section:not([id]) {
+    padding-top: 105px;
+  }
 }
 
 .col-50 {
