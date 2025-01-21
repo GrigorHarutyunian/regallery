@@ -122,6 +122,9 @@ p {
   .review__title {
     max-width: 233px;
   }
+  section[id] {
+    padding: 25px 15px;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 765px) {
