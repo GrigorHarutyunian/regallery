@@ -3,6 +3,7 @@ import { useContext } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import SupportAndInfo from "../../common-components/common-support-Info/SupportAndInfo";
 import infoData from "./info-data";
+
 const Info: React.FC = () => {
   let text = infoData.text.split("LIVE DEMO");
   const windowWitdth = useContext(WindowWidthContext);
@@ -21,11 +22,9 @@ const Info: React.FC = () => {
         </>
       }
       id={"info"}
-      img={infoData.img}
-      sizes={infoData.sizes}
-      alt={infoData.alt}
       width={width}
       height={height}
+      lottiesData={infoData.lottiesData}
     />
   );
 };
