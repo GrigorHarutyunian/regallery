@@ -6,9 +6,11 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
-import Lottie from "lottie-react";
+
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 import "./Hero.css";
-import HeroLottie from "../../assets/lotties/HeroLottie.json";
+
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
@@ -57,7 +59,13 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.div style={{ maxWidth: width }} className="section-image">
-              <Lottie animationData={HeroLottie} loop={true} />
+              <DotLottieReact
+                src="https://lottie.host/11b2df1a-995e-468f-bf73-9e4e00393cc6/Nik5jU6tps.lottie"
+                loop
+                autoplay
+                width={1900}
+                height={1520}
+              />
             </motion.div>
           </motion.div>
         </Row>
