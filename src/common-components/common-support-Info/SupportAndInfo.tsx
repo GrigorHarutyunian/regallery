@@ -4,7 +4,7 @@ import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 // import animation from "../../assets/animations/framer-motion-setings";
 // import textVariants from "../../assets/animations/framer-motion-textVariants";
 // import imageVariants from "../../assets/animations/framer-motion-imageVariants";
@@ -39,7 +39,13 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </div>
           </motion.div>
           <motion.div className="section-image">
-            <Lottie animationData={lottiesData} loop={true} />
+            <DotLottieReact
+              width={1200}
+              height={1200}
+              src={lottiesData}
+              loop
+              autoplay
+            />
           </motion.div>
         </motion.div>
       </Container>
