@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
 import "./Hero.css";
 
 // import animation from "../../assets/animations/framer-motion-setings";
@@ -59,13 +57,14 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.div style={{ maxWidth: width }} className="section-image">
-              <DotLottieReact
+              <dotlottie-player
                 src="https://lottie.host/11b2df1a-995e-468f-bf73-9e4e00393cc6/Nik5jU6tps.lottie"
+                background="transparent"
+                speed="1"
+                style={{ maxWidth: "500px", maxHeight: "500px" }}
                 loop
                 autoplay
-                width={1900}
-                height={1520}
-              />
+              ></dotlottie-player>
             </motion.div>
           </motion.div>
         </Row>
