@@ -4,6 +4,7 @@ interface FeaturesBoxProps {
   title: string;
   description: string;
   path: string;
+  globalTitle: string;
 }
 
 // const item = {
@@ -18,6 +19,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   title,
   description,
   path,
+  globalTitle,
 }) => {
   return (
     <motion.div id={title} className="feature-box col-50">
@@ -33,7 +35,15 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
 
       <h3 className="section-text__title-small">{title}</h3>
       <p className="section-text__desc">{description}</p>
-      <div className="download-btn link-btn">Demo</div>
+      <a href="">
+        <div
+          className={`go-corner ${
+            globalTitle === "Gallery views" ? "showed" : "hidden"
+          }`}
+        >
+          <span>DEMO</span>
+        </div>
+      </a>
     </motion.div>
   );
 };
