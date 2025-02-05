@@ -33,6 +33,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
 
       <h3 className="section-text__title-small">{title}</h3>
       <p className="section-text__desc">{description}</p>
+      <div className="download-btn link-btn">Demo</div>
     </motion.div>
   );
 };
