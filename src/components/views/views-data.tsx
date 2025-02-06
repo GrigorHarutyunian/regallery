@@ -2,6 +2,7 @@ export const viewsData = [
   {
     id: 1,
     title: "Thumbnails",
+    demoLink: "https://regallery.team/core/thumbnails/",
     description:
       "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
     path: (
@@ -28,6 +29,7 @@ export const viewsData = [
   {
     id: 2,
     title: "Mosaic",
+    demoLink: "https://regallery.team/core/mosaic/",
     description:
       "Create a collage-like presentation by mixing different sizes and shapes.",
     path: (
@@ -40,6 +42,7 @@ export const viewsData = [
   {
     id: 3,
     title: "Masonry",
+    demoLink: "https://regallery.team/core/masonry/",
     description:
       "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
     path: (
@@ -52,6 +55,7 @@ export const viewsData = [
   {
     id: 4,
     title: "Slideshow",
+    demoLink: "https://regallery.team/core/slideshow/",
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content. The layout is clean and organized.",
     path: (
@@ -74,6 +78,7 @@ export const viewsData = [
   {
     id: 5,
     title: "Cube",
+    demoLink: "https://regallery.team/core/cube/",
     description:
       "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
     path: (
@@ -87,6 +92,7 @@ export const viewsData = [
   {
     id: 6,
     title: "Carousel",
+    demoLink: "https://regallery.team/core/carousel/",
     description:
       "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
     path: (
@@ -96,22 +102,23 @@ export const viewsData = [
       />
     ),
   },
-    {
-        id: 0,
-        title: "none",
-        description: "",
-        path: "",
-    },
-    {
-        id: 7,
-        title: "Cards",
-        description:
-            "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
-        path: (
-            <path
-                fill={"#FDC120"}
-                d="M20.466,1.967L14.78,.221c-2.614-.797-5.406,.664-6.225,3.24l-.188,.539h-3.368C2.243,4,0,6.243,0,9v10c0,2.757,2.243,5,5,5h6c1.596,0,3.004-.766,3.92-1.934,.231,.032,.461,.052,.688,.052,2.167,0,4.144-1.414,4.775-3.564l3.413-10.397c.767-2.613-.727-5.39-3.331-6.189ZM11,22H5c-1.654,0-3-1.346-3-3V9c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v10c0,1.654-1.346,3-3,3ZM21.887,7.562l-3.412,10.397c-.358,1.214-1.413,2.022-2.603,2.132,.079-.353,.128-.716,.128-1.092V9c0-2.757-2.243-5-5-5h-.507c.534-1.501,2.163-2.341,3.7-1.867l5.686,1.746c1.562,.479,2.459,2.146,2.008,3.684Z"
-            />
-        ),
-    },
+  {
+    id: 0,
+    title: "none",
+    description: "",
+    path: "",
+  },
+  {
+    id: 7,
+    title: "Cards",
+    demoLink: "https://regallery.team/core/cards/",
+    description:
+      "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
+    path: (
+      <path
+        fill={"#FDC120"}
+        d="M20.466,1.967L14.78,.221c-2.614-.797-5.406,.664-6.225,3.24l-.188,.539h-3.368C2.243,4,0,6.243,0,9v10c0,2.757,2.243,5,5,5h6c1.596,0,3.004-.766,3.92-1.934,.231,.032,.461,.052,.688,.052,2.167,0,4.144-1.414,4.775-3.564l3.413-10.397c.767-2.613-.727-5.39-3.331-6.189ZM11,22H5c-1.654,0-3-1.346-3-3V9c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v10c0,1.654-1.346,3-3,3ZM21.887,7.562l-3.412,10.397c-.358,1.214-1.413,2.022-2.603,2.132,.079-.353,.128-.716,.128-1.092V9c0-2.757-2.243-5-5-5h-.507c.534-1.501,2.163-2.341,3.7-1.867l5.686,1.746c1.562,.479,2.459,2.146,2.008,3.684Z"
+      />
+    ),
+  },
 ];
