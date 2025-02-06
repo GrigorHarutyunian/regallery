@@ -3,4 +3,5 @@ export default interface FeaturesAndViewsDTO {
   title: string;
   gridClassname: string;
   sectionId: string;
+  demoLink?: string;
 }
