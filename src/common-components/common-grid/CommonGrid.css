@@ -45,6 +45,98 @@
   justify-items: center;
 }
 
+.feature-box {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.grid__6 .feature-box:hover {
+  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
+}
+.go-corner.hidden {
+  display: none;
+}
+
+.go-corner.showed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 11px;
+}
+.go-corner.showed::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: -227px;
+  border-radius: 0 4px 0 32px;
+  background-color: #0e4a70;
+  height: 199px;
+  width: 90px;
+  padding-right: 36px;
+  border-radius: 0;
+  transform: skew(45deg);
+  margin-right: -22px;
+  align-items: start;
+  transition: 0.3s ease-out;
+}
+
+.go-corner.showed .span {
+  font-size: 17px;
+  color: #fdc120;
+  letter-spacing: 6px;
+}
+
+.feature-box .span span {
+  opacity: 0;
+}
+.feature-box:hover .span span {
+  opacity: 0;
+  animation: fadeInLetter 0.3s forwards;
+}
+
+.feature-box:hover .span span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.feature-box:hover .span span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.feature-box:hover .span span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.feature-box:hover .span span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.go-corner svg {
+  fill: #fdc120;
+  opacity: 0;
+  margin-top: 5px;
+}
+.feature-box:hover .go-corner svg {
+  animation: fadeInLetter 0.3s forwards;
+  animation-delay: 1s;
+}
+@keyframes fadeInLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feature-box:hover .go-corner.showed::before {
+  margin-right: 135px;
+  box-shadow: 4px -11px 30px 0 #fdc120;
+}
+
 div#none {
   visibility: hidden;
 }
@@ -96,5 +188,35 @@ div#none {
   }
   .grid__6 {
     gap: 25px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1020px) {
+  .go-corner.showed::before {
+    height: 180px;
+    width: 70px;
+  }
+  .go-corner.showed {
+    padding: 6px;
+  }
+  .go-corner.showed .span {
+    font-size: 15px;
+
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 620px) {
+  .go-corner.showed::before {
+    height: 180px;
+    width: 70px;
+  }
+  .go-corner.showed {
+    padding: 6px;
+  }
+  .go-corner.showed .span {
+    font-size: 15px;
+
+    letter-spacing: 5px;
   }
 }

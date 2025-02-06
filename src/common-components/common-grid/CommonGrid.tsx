@@ -22,10 +22,12 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
             <motion.div className={gridClassname}>
               {data.map((val: any) => (
                 <CommonBoxForGrid
+                  demoLink={val.demoLink}
                   key={val.id}
                   title={val.title}
                   description={val.description}
                   path={val.path}
+                  globalTitle={title}
                 />
               ))}
             </motion.div>
