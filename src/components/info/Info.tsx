@@ -24,6 +24,9 @@ const Info: React.FC = () => {
       id={"info"}
       width={width}
       height={height}
+      img={infoData.img}
+      sizes={infoData.sizes}
+      alt={infoData.alt}
       lottiesData={infoData.lottiesData}
     />
   );

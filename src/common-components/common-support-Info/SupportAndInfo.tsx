@@ -12,9 +12,13 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
   text,
   id,
-
-  lottiesData,
+  img,
+  sizes,
+  alt,
+  width,
+  height,
 }) => {
+  const { imgBig, imgMiddle, imgSmall } = img;
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -38,14 +42,21 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </div>
           </motion.div>
           <motion.div className="section-image">
-            <dotlottie-player
+            <img
+              width={width}
+              height={height}
+              srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
+              sizes={sizes}
+              alt={alt}
+            />
+            {/* <dotlottie-player
               src={lottiesData}
               background="transparent"
               speed="1"
               style={{ maxWidth: "1020px", maxHeight: "600px" }}
               loop
               autoplay
-            ></dotlottie-player>
+            ></dotlottie-player> */}
           </motion.div>
         </motion.div>
       </Container>
