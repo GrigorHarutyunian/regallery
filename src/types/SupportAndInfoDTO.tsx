@@ -4,5 +4,8 @@ export default interface SupportAndInfoDTO {
   id: string;
   width: number;
   height: number;
+  sizes: string;
+  alt: string;
+  img?: any;
   lottiesData: string;
 }

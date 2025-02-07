@@ -38,6 +38,9 @@ const Support: React.FC = () => {
       width={width}
       height={height}
       id={"support"}
+      img={supportData.img}
+      sizes={supportData.sizes}
+      alt={supportData.alt}
       lottiesData={supportData.lottiesData}
     />
   );
