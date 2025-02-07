@@ -15,8 +15,6 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   globalTitle,
   demoLink,
 }) => {
-  const text = "Demo".split("");
-
   return (
     <motion.div id={title} className="feature-box col-50">
       <svg
@@ -38,9 +36,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
           }`}
         >
           <div className="span">
-            {text.map((letter, index) => (
-              <span key={index}>{letter}</span>
-            ))}
+            <span>Demo</span>
           </div>
 
           <svg
