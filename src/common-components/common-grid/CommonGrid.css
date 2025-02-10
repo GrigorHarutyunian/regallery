@@ -24,7 +24,7 @@
   color: #39465c;
   font-size: 1rem;
   line-height: 26px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   font-weight: 400;
   max-width: 339px;
   text-align: start;
@@ -49,43 +49,47 @@
   display: none;
 }
 .absalute_btn.showed {
-  display: block;
-  position: absolute;
-  right: 20px;
-  bottom: 5px;
   border-radius: 41px;
-  padding: 15px;
-  display: flex;
+  padding: 10px;
   transition: all 0.5s ease;
-  background: #a7c9578f;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  justify-content: space-around;
   height: 12px;
   width: 12px;
+  border: 2px solid #0e4a70;
+  justify-content: center;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  overflow: hidden;
 }
 
 .grid__6 .feature-box:hover .absalute_btn {
-  width: 100px;
+  width: 70px;
+  padding: 10px 20px;
+  background-color: #0e4a70;
 }
 .grid__6 .feature-box:hover {
-  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
-  transform: translateY(-15px);
+  box-shadow: 0 10px 30px #858585;
+  transform: translateY(-10px);
 }
 
 .absalute_btn span {
+  transform: translate(-208px);
   font-size: 0px;
   opacity: 0;
-  transition: all 0.5s ease;
-  transform: translate(-208px);
-  color: #ffffff;
 }
 
+.absalute_btn.showed svg g path {
+  fill: #0e4a70;
+}
 .grid__6 .feature-box:hover .absalute_btn span {
+  transform: translate(-9px);
+  color: #ffffff;
   opacity: 1;
   font-size: 16px;
-  transform: translate(-9px);
+  margin-right: 5px;
+  transition: all 0.5s ease;
 }
 
 div#none {
@@ -210,7 +214,7 @@ path.tree {
     fill: white;
   }
   50% {
-    fill: #fbc638;
+    fill: #0e4a70;
   }
   100% {
     fill: white;
