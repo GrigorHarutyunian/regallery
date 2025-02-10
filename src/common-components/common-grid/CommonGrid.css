@@ -20,6 +20,10 @@
   color: #0e4a70;
 }
 
+._features .section-text__desc{
+  margin-bottom: 15px;
+}
+
 .section-text__desc {
   color: #39465c;
   font-size: 1rem;
