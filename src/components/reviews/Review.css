@@ -23,7 +23,7 @@
   flex-direction: column;
   text-align: center;
   margin: 12px 15px;
-  transition: 0.1s all ease-in;
+  transition: all 0.5s ease;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
@@ -31,6 +31,10 @@
   padding: 25px;
 }
 
+.review-card:hover {
+  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
+  transform: translateY(-5px);
+}
 .review-card__icon img {
   border-radius: 50%;
   object-fit: cover;

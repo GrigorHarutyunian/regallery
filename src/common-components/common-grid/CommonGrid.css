@@ -24,7 +24,7 @@
   color: #39465c;
   font-size: 1rem;
   line-height: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   font-weight: 400;
   max-width: 339px;
   text-align: start;
@@ -34,12 +34,9 @@
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0px lightgrey;
   background-color: #ffffff;
+  transition: all 0.5s ease;
   position: relative;
-  padding: 20px;
-  transition: all 0.3s ease;
-  overflow: hidden;
 }
-
 .grid__6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,78 +46,48 @@
   justify-items: center;
 }
 
-.grid__6 .feature-box:hover {
-  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
-}
-.go-corner.hidden {
-  display: none;
-}
-
-.go-corner.showed {
-  position: absolute;
-  top: 0;
-  right: 0;
+.absolute_btn {
+  border-radius: 41px;
+  padding: 10px;
+  transition: all 0.5s ease;
   display: flex;
-  flex-direction: column;
-  padding: 11px;
   align-items: center;
-}
-.go-corner.showed::before {
-  content: "";
-  display: flex;
+  height: 12px;
+  width: 12px;
+  border: 2px solid #0e4a70;
   justify-content: center;
   position: absolute;
+  bottom: 25px;
+  right: 25px;
   overflow: hidden;
-  top: 0;
-  right: -227px;
-  border-radius: 0 4px 0 32px;
+}
+
+.grid__6 .feature-box:hover .absolute_btn {
+  width: 70px;
+  padding: 10px 20px;
   background-color: #0e4a70;
-  height: 199px;
-  width: 90px;
-  padding-right: 36px;
-  border-radius: 0;
-  transform: skew(45deg);
-  margin-right: -22px;
-  align-items: start;
-  transition: 0.3s ease-out;
+}
+.grid__6 .feature-box:hover {
+  box-shadow: 0 10px 30px #858585;
+  transform: translateY(-5px);
 }
 
-.go-corner.showed .span {
-  font-size: 17px;
-  color: #fdc120;
-  letter-spacing: 3px;
-}
-
-.feature-box .span span {
+.absolute_btn span {
+  transform: translate(-208px);
+  font-size: 0px;
   opacity: 0;
 }
-.feature-box:hover .span span {
-  opacity: 0;
-  animation: fadeInLetter 0.3s forwards;
-  animation-delay: 0.2s;
-}
 
-.go-corner svg {
-  fill: #fdc120;
-  opacity: 0;
-  margin-top: 5px;
+.absolute_btn svg g path {
+  fill: #0e4a70;
 }
-.feature-box:hover .go-corner svg {
-  animation: fadeInLetter 0.3s forwards;
-  animation-delay: 0.2s;
-}
-@keyframes fadeInLetter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.feature-box:hover .go-corner.showed::before {
-  margin-right: 135px;
-  box-shadow: 4px -11px 30px 0 #fdc120;
+.grid__6 .feature-box:hover .absolute_btn span {
+  transform: translate(-9px);
+  color: #ffffff;
+  opacity: 1;
+  font-size: 16px;
+  margin-right: 5px;
+  transition: all 0.5s ease;
 }
 
 div#none {
@@ -177,32 +144,47 @@ div#none {
   }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1020px) {
-  .go-corner.showed::before {
-    height: 180px;
-    width: 70px;
-  }
-  .go-corner.showed {
-    padding: 6px;
-  }
-  .go-corner.showed .span {
-    font-size: 15px;
-
-    letter-spacing: 5px;
-  }
+.absolute_btn svg {
+  margin-right: -12px;
+}
+.absolute_btn:hover {
+  background-color: #a7c957;
+}
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
 }
 
-@media screen and (min-width: 420px) and (max-width: 620px) {
-  .go-corner.showed::before {
-    height: 180px;
-    width: 70px;
-  }
-  .go-corner.showed {
-    padding: 6px;
-  }
-  .go-corner.showed .span {
-    font-size: 15px;
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+path.tree {
+  transition: 0.5s;
+  transform: translateX(-90%);
+}
+.feature-box:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
 
-    letter-spacing: 5px;
+.feature-box:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.feature-box:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #0e4a70;
+  }
+  100% {
+    fill: white;
   }
 }
