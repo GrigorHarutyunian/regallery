@@ -126,20 +126,17 @@ a {
   font-weight: bold;
 }
 .pricing-card__btn {
-  display: block;
   margin-top: 24px;
   position: relative;
   text-decoration: none;
   background-color: #a7c957;
-  text-decoration: none;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 16px 0px;
   border-radius: 6px;
-  cursor: pointer;
   transition: all 0.2s linear;
   width: 100%;
 }
