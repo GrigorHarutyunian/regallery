@@ -153,7 +153,7 @@
   }
 }
 
-@media screen and (min-width: 856px) and (max-width: 965px) {
+@media screen and (min-width: 861px) and (max-width: 965px) {
   .pricing__text {
     max-width: 200px;
     height: 80px;
@@ -196,7 +196,7 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 856px) {
+/* @media screen and (min-width: 700px) and (max-width: 856px) {
   .section-text__desc.pricing__text {
     height: 85px;
     font-size: 11px;
@@ -247,7 +247,7 @@
   .pricing-card__btn_copy svg {
     width: 10px;
   }
-}
+} */
 
 @media screen and (max-width: 860px) {
   .pricing-cards {
@@ -284,7 +284,7 @@
   .pricing-card__btn {
     padding: 16px;
     width: 80%;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 

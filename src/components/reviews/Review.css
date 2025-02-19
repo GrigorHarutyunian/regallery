@@ -163,20 +163,10 @@
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 965px) {
+@media screen and (min-width: 861px) and (max-width: 965px) {
   .review-card__author {
     margin-bottom: -11px;
   }
-  .review-card__icon {
-    width: 55px;
-    height: 55px;
-  }
-  .review-card__icon svg {
-    width: 21px;
-  }
-}
-
-@media screen and (min-width: 701px) and (max-width: 800px) {
   .review-card__icon {
     width: 55px;
     height: 55px;
@@ -200,11 +190,5 @@
   }
   .review-card {
     max-width: 318px;
-  }
-}
-
-@media screen and (min-width: 701px) and (max-width: 850px) {
-  .review-card__author {
-    margin-bottom: -14px;
   }
 }
