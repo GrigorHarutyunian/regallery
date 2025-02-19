@@ -69,22 +69,19 @@
   }
 }
 
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 738px) {
   .nav-banner.closed {
     transform: translateY(-70px);
   }
-  .nav-banner-content {
-    padding: 22px 0px 25px;
-  }
 }
 
-@media screen and (min-width: 317px) and (max-width: 449px) {
+@media screen and (min-width: 317px) and (max-width: 450px) {
   .nav-banner.closed {
     transform: translateY(-93px);
   }
 }
 
-@media screen and (max-width: 334px) {
+@media screen and (max-width: 316px) {
   .nav-banner.closed {
     transform: translateY(-116px);
   }

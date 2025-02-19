@@ -191,19 +191,19 @@
   border-radius: 0px !important;
 }
 
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 738px) {
   .nav {
     top: 70px;
   }
 }
 
-@media screen and (min-width: 318px) and (max-width: 449px) {
+@media screen and (min-width: 317px) and (max-width: 450px) {
   .nav {
     top: 93px;
   }
 }
 
-@media screen and (max-width: 317px) {
+@media screen and (max-width: 316px) {
   .nav {
     top: 116px;
   }
