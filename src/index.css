@@ -82,19 +82,19 @@ p {
   margin: 0;
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 737px) {
   main {
     margin-top: 70px;
   }
 }
 
-@media screen and (min-width: 335px) and (max-width: 466px) {
+@media screen and (min-width: 318px) and (max-width: 449px) {
   main {
     margin-top: 93px;
   }
 }
 
-@media screen and (max-width: 334px) {
+@media screen and (max-width: 317px) {
   main {
     margin-top: 116px;
   }

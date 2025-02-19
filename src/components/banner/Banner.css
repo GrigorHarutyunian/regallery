@@ -69,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 737px) {
   .nav-banner.closed {
     transform: translateY(-70px);
   }
@@ -78,7 +78,7 @@
   }
 }
 
-@media screen and (min-width: 335px) and (max-width: 466px) {
+@media screen and (min-width: 317px) and (max-width: 449px) {
   .nav-banner.closed {
     transform: translateY(-93px);
   }

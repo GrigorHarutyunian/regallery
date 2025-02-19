@@ -12,9 +12,6 @@ import imgSmall from "../../assets/imgs/preview-small.webp";
 
 import "./Hero.css";
 
-// import animation from "../../assets/animations/framer-motion-setings";
-// import textVariants from "../../assets/animations/framer-motion-textVariants";
-// import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);

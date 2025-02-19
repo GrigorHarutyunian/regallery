@@ -5,7 +5,6 @@ import CommonBoxForGrid from "./CommonBoxForGrid";
 import "./CommonGrid.css";
 import "../../components/reviews/Review.css";
 import { motion } from "framer-motion";
-// import animation from "../../assets/animations/framer-motion-setings";
 
 const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
   sectionId,
