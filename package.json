@@ -10,16 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dotlottie/player-component": "^2.7.12",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@flaticon/flaticon-uicons": "^3.3.1",
-    "@lottiefiles/dotlottie-react": "^0.12.1",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.2.12",
-    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-copy-to-clipboard": "^5.1.0",

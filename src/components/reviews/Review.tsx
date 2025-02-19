@@ -4,7 +4,7 @@ import ReviewDTO from "../../types/ReviewDTO";
 import ReviewCards from "./ReviewCard";
 import { motion } from "framer-motion";
 import { Row, Container } from "react-bootstrap";
-// import animation from "../../assets/animations/framer-motion-setings";
+
 const Services: React.FC = () => {
   return (
     <section id="review">

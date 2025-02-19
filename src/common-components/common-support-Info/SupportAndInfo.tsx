@@ -4,9 +4,6 @@ import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
-// import animation from "../../assets/animations/framer-motion-setings";
-// import textVariants from "../../assets/animations/framer-motion-textVariants";
-// import imageVariants from "../../assets/animations/framer-motion-imageVariants";
 
 const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
@@ -49,14 +46,6 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               sizes={sizes}
               alt={alt}
             />
-            {/* <dotlottie-player
-              src={lottiesData}
-              background="transparent"
-              speed="1"
-              style={{ maxWidth: "1020px", maxHeight: "600px" }}
-              loop
-              autoplay
-            ></dotlottie-player> */}
           </motion.div>
         </motion.div>
       </Container>

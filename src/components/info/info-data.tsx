@@ -12,7 +12,5 @@ const infoData = {
   sizes:
     "(max-width: 700px) 298px, (min-width: 701px) and (max-width: 1100px) 397px, 595px",
   alt: `Discover why ReGallery is the best WordPress photo gallery plugin. Featuring responsive design, intuitive interface, and extensive customization options.`,
-  lottiesData:
-    "https://lottie.host/8b46cc20-7161-4c2a-88dc-44d265f324a0/CQ8EoYUo6c.lottie",
 };
 export default infoData;

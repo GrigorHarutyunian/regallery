@@ -27,7 +27,6 @@ const Info: React.FC = () => {
       img={infoData.img}
       sizes={infoData.sizes}
       alt={infoData.alt}
-      lottiesData={infoData.lottiesData}
     />
   );
 };

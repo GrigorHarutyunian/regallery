@@ -41,7 +41,6 @@ const Support: React.FC = () => {
       img={supportData.img}
       sizes={supportData.sizes}
       alt={supportData.alt}
-      lottiesData={supportData.lottiesData}
     />
   );
 };
