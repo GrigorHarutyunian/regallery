@@ -164,9 +164,6 @@
 }
 
 @media screen and (min-width: 800px) and (max-width: 965px) {
-  .author {
-    height: 340px;
-  }
   .review-card__author {
     margin-bottom: -11px;
   }
@@ -180,9 +177,6 @@
 }
 
 @media screen and (min-width: 701px) and (max-width: 800px) {
-  .author {
-    height: 405px;
-  }
   .review-card__icon {
     width: 55px;
     height: 55px;
@@ -192,12 +186,7 @@
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 850px) {
-  .review-card__author {
-    margin-bottom: -14px;
-  }
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 860px) {
   .section-text__title-centered,
   .faq__title {
     font-size: 30px;
@@ -213,5 +202,9 @@
     max-width: 318px;
   }
 }
-@media screen and (max-width: 450px) {
+
+@media screen and (min-width: 701px) and (max-width: 850px) {
+  .review-card__author {
+    margin-bottom: -14px;
+  }
 }

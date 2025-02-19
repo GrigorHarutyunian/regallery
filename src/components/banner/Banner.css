@@ -73,6 +73,9 @@
   .nav-banner.closed {
     transform: translateY(-70px);
   }
+  .nav-banner-content {
+    padding: 22px 0px 25px;
+  }
 }
 
 @media screen and (min-width: 335px) and (max-width: 466px) {
