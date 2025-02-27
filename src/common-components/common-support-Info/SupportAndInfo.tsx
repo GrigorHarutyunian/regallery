@@ -39,13 +39,17 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </div>
           </motion.div>
           <motion.div className="section-image">
-            <img
-              width={width}
-              height={height}
-              srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
-              sizes={sizes}
-              alt={alt}
-            />
+            {id === "info" ? (
+              <img width={width} height={height} src={img} alt={alt} />
+            ) : (
+              <img
+                width={width}
+                height={height}
+                srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
+                sizes={sizes}
+                alt={alt}
+              />
+            )}
           </motion.div>
         </motion.div>
       </Container>
