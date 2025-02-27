@@ -27,6 +27,7 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
                   description={val.description}
                   path={val.path}
                   globalTitle={title}
+                  img={val.img}
                 />
               ))}
             </motion.div>

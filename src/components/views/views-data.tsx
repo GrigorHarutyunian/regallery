@@ -1,8 +1,16 @@
+import thumbnailsImg from "../../assets/imgs/views/Thumbnails_card_img.png";
+import mosaicImg from "../../assets/imgs/views/mosaic_card_img.png";
+import masonaryImg from "../../assets/imgs/views/Masonary_card_img.png";
+import slideShowImg from "../../assets/imgs/views/slideShow_card_img.png";
+import cubeImg from "../../assets/imgs/views/Cube_card_img.png";
+import carouselImg from "../../assets/imgs/views/Carousel_card_img.png";
+import cardsImg from "../../assets/imgs/views/Cards_card_img.png";
 export const viewsData = [
   {
     id: 1,
     title: "Thumbnails",
     demoLink: "https://regallery.team/core/thumbnails/",
+    img: thumbnailsImg,
     description:
       "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
     path: (
@@ -30,6 +38,7 @@ export const viewsData = [
     id: 2,
     title: "Mosaic",
     demoLink: "https://regallery.team/core/mosaic/",
+    img: mosaicImg,
     description:
       "Create a collage-like presentation by mixing different sizes and shapes.",
     path: (
@@ -43,6 +52,7 @@ export const viewsData = [
     id: 3,
     title: "Masonry",
     demoLink: "https://regallery.team/core/masonry/",
+    img: masonaryImg,
     description:
       "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
     path: (
@@ -56,6 +66,7 @@ export const viewsData = [
     id: 4,
     title: "Slideshow",
     demoLink: "https://regallery.team/core/slideshow/",
+    img: slideShowImg,
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content. The layout is clean and organized.",
     path: (
@@ -79,6 +90,7 @@ export const viewsData = [
     id: 5,
     title: "Cube",
     demoLink: "https://regallery.team/core/cube/",
+    img: cubeImg,
     description:
       "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
     path: (
@@ -93,6 +105,7 @@ export const viewsData = [
     id: 6,
     title: "Carousel",
     demoLink: "https://regallery.team/core/carousel/",
+    img: carouselImg,
     description:
       "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
     path: (
@@ -112,6 +125,7 @@ export const viewsData = [
     id: 7,
     title: "Cards",
     demoLink: "https://regallery.team/core/cards/",
+    img: cardsImg,
     description:
       "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
     path: (

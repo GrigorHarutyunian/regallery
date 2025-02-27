@@ -6,6 +6,7 @@ interface FeaturesBoxProps {
   path: string;
   globalTitle: string;
   demoLink?: string;
+  img?: string;
 }
 
 const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
@@ -13,6 +14,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   description,
   path,
   globalTitle,
+  img,
   demoLink,
 }) => {
   return (
@@ -28,6 +30,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
       </svg>
 
       <h3 className="section-text__title-small">{title}</h3>
+
       <p className="section-text__desc">{description}</p>
       {globalTitle === "Gallery views" && (
         <a target="_blank" href={demoLink || "#"}>
@@ -67,6 +70,11 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
             </svg>
           </div>
         </a>
+      )}
+      {globalTitle === "Gallery views" && (
+        <div className="back">
+          <img src={img} alt="as" />
+        </div>
       )}
     </motion.div>
   );
