@@ -33,11 +33,10 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
 
       <p className="section-text__desc">{description}</p>
       {globalTitle === "Gallery views" && (
-        <a target="_blank" href={demoLink || "#"}>
-          <div className={`absolute_btn`}>
-            <span>Demo</span>
+        <div className={`absolute_btn`}>
+          <span>Demo</span>
 
-            <svg
+          {/* <svg
               width="20"
               height="20"
               viewBox="0 0 66 43"
@@ -67,9 +66,8 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
                   fill="#FFFFFF"
                 ></path>
               </g>
-            </svg>
-          </div>
-        </a>
+            </svg> */}
+        </div>
       )}
       {globalTitle === "Gallery views" && (
         <div className="back">
