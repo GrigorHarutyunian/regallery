@@ -15,7 +15,6 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   path,
   globalTitle,
   img,
-  demoLink,
 }) => {
   return (
     <motion.div id={title} className="feature-box col-50">
