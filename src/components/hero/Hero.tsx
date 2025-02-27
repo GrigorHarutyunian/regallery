@@ -6,12 +6,11 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
-import imgBig from "../../assets/imgs/choose.webp";
-import imgMiddle from "../../assets/imgs/preview-middle.webp";
-import imgSmall from "../../assets/imgs/preview-small.webp";
-
+// import imgBig from "../../assets/imgs/choose.webp";
+// import imgMiddle from "../../assets/imgs/preview-middle.webp";
+// import imgSmall from "../../assets/imgs/preview-small.webp";
+import chose from "../../assets/gifts/choose.gif";
 import "./Hero.css";
-
 
 const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
@@ -62,9 +61,9 @@ const Hero: React.FC = () => {
                 loading="lazy"
                 height={height}
                 width={width}
-                src={imgBig}
-                srcSet={`${imgSmall} 520w, ${imgMiddle} 693w, ${imgBig} 1040w`}
-                sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1100px) 346px, (min-width: 1101px) 520px"
+                src={chose}
+                // srcSet={`${imgSmall} 520w, ${imgMiddle} 693w, ${imgBig} 1040w`}
+                // sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1100px) 346px, (min-width: 1101px) 520px"
                 alt="Regallery - the intuitive WordPress photo gallery plugin with easy drag-and-drop interface and customizable gallery options."
               />
             </motion.div>

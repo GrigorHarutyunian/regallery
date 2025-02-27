@@ -26,7 +26,7 @@ main.closed-banner {
   transition: all 0.8s ease;
 }
 
-main > *:nth-child(odd) {
+main > *:nth-child(even) {
   background-color: #eff3f6 !important;
 }
 

@@ -8,8 +8,9 @@ const Info: React.FC = () => {
   let text = infoData.text.split("LIVE DEMO");
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const width = version === "mobile" ? 298 : version === "mid" ? 397 : 595;
-  const ration = 595 / 402;
+  const width = version === "mobile" ? 260 : version === "mid" ? 347 : 520;
+  // const ration = 595 / 402;
+  const ration = 13 / 10;
   const height = Math.trunc(width / ration);
   width / ration;
   return (
