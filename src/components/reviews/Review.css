@@ -6,9 +6,11 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 40px;
-  color: #0e4a70;
+  color: #ffffffff;
 }
-
+#pricing .section-text__title-centered {
+  color: #000000;
+}
 .grid__3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -26,7 +28,7 @@
   transition: all 0.5s ease;
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 5px 10px 20px 0px lightgrey;
+
   width: 79%;
   padding: 25px;
 }
@@ -51,7 +53,7 @@
   margin: 12px auto;
   margin-bottom: 24px;
   border-radius: 50%;
-  background-color: #eff3f6;
+  background-color: #eeeeee;
   transition: 0.1s all ease-in;
 }
 
@@ -69,7 +71,7 @@
   bottom: 20px;
   right: 5px;
   /* transform: translateX(-50%); */
-  color: #0e4a70;
+  color: #000000aa;
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -139,8 +141,8 @@
 }
 
 .read_more_str {
-  border-bottom: 2px solid #0e4a70;
-  color: #0e4a70;
+  border-bottom: 2px solid #000000;
+  color: #000000;
 }
 
 @media screen and (min-width: 1007px) and (max-width: 1167px) {

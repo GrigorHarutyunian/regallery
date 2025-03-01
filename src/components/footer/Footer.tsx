@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
               >
                 <svg width="25" height="25">
                   <title>{websiteData.title}</title>
-                  <path d={websiteData.path[0]} fill="#0e4a70" />
+                  <path d={websiteData.path[0]} fill="#ffffffff" />
                   {!websiteData.path[1] || (
-                    <path d={websiteData.path[1]} fill="#0e4a70" />
+                    <path d={websiteData.path[1]} fill="#ffffffff" />
                   )}
                   {!websiteData.circle || (
                     <circle

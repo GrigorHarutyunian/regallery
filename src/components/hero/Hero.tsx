@@ -49,6 +49,7 @@ const Hero: React.FC = () => {
                       width: "25px",
                       height: "19px",
                       marginBottom: "2px",
+                      color: "#000000",
                     }}
                   />
                   WATCH INTRO

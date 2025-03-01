@@ -10,12 +10,11 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   text,
   id,
   img,
-  sizes,
+
   alt,
   width,
   height,
 }) => {
-  const { imgBig, imgMiddle, imgSmall } = img;
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -39,17 +38,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </div>
           </motion.div>
           <motion.div className="section-image">
-            {id === "info" ? (
-              <img width={width} height={height} src={img} alt={alt} />
-            ) : (
-              <img
-                width={width}
-                height={height}
-                srcSet={`${imgSmall.img} ${imgSmall.size}w, ${imgMiddle.img} ${imgMiddle.size}w, ${imgBig.img} ${imgBig.size}w`}
-                sizes={sizes}
-                alt={alt}
-              />
-            )}
+            <img width={width} height={height} src={img} alt={alt} />
           </motion.div>
         </motion.div>
       </Container>
