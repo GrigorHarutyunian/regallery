@@ -3,19 +3,17 @@
 } */
 
 .demo_columns_content {
-  flex-direction: column;
-
-  align-items: center;
+  min-width: 0px;
+  width: 100%;
+  max-width: 1105px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding: 30px 0;
+  flex-direction: column;
 }
 
 .demo_buttons_rows {
   display: flex;
-  gap: 12px;
+  gap: 70px;
   padding: 20px;
 }
 
@@ -27,15 +25,10 @@
   align-items: center;
   border: 1px solid rgb(8, 2, 2);
 }
-#demo {
-  background: rgb(239, 243, 246);
-  background: linear-gradient(
-    180deg,
-    rgba(239, 243, 246, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
 
+.demo_button {
+  cursor: pointer;
+}
 .btn_demo {
   background-color: #dde7ed;
 }
