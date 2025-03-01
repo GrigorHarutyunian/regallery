@@ -27,7 +27,7 @@ main.closed-banner {
 }
 
 main > *:nth-child(even) {
-  background-color: #eff3f6 !important;
+  background-color: #000000 !important;
 }
 
 section {
@@ -39,8 +39,8 @@ section {
 }
 
 footer {
-  padding: 25px;
-  background-color: #eff3f6;
+  padding: 150px 25px 25px;
+  background-color: #101010;
 }
 
 .row {
@@ -164,10 +164,10 @@ p {
 
 .watch_video {
   margin-left: 20px;
-  background-color: #eff3f6;
-  border: 1px solid #0e4a70;
+  background-color: #eeeeee;
+  border: 1px solid #000000;
   padding: 15px 22px;
-  color: #0e4a70;
+  color: #000000;
 }
 .watch_video:hover {
   background-color: #d6dce2;

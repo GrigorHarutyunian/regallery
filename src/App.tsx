@@ -11,6 +11,8 @@ import Support from "./components/support/Support";
 import Views from "./components/views/Views";
 import Pricing from "./components/pricing/Pricing";
 import Banner from "./components/banner/Banner";
+import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
+import Demo from "./components/demo/Demo";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 
 const App: React.FC = () => {
@@ -31,9 +33,13 @@ const App: React.FC = () => {
         <Views />
         <Info />
         <Features />
+        <AboutMobileResponsiveness />
+        <Demo />
         <Review />
+
         <Pricing />
         <Faq />
+
         <Support />
       </main>
       <Footer />

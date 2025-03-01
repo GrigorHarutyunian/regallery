@@ -9,7 +9,7 @@
   max-width: 530px;
   font-weight: 700;
   line-height: 1.2;
-  color: #0e4a70;
+  color: #000000;
 }
 
 .section-text__title-small {
@@ -17,7 +17,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 8px;
-  color: #0e4a70;
+  color: #000000;
 }
 
 ._features .section-text__desc {
@@ -25,7 +25,7 @@
 }
 
 .section-text__desc {
-  color: #39465c;
+  color: #000000aa;
   font-size: 1rem;
   line-height: 26px;
   margin-bottom: 45px;
@@ -36,7 +36,7 @@
 .feature-box {
   margin-bottom: 32px;
   border-radius: 15px;
-  box-shadow: 5px 10px 20px 0px lightgrey;
+
   background-color: #ffffff;
   transition: all 0.5s ease;
   position: relative;
