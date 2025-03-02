@@ -15,7 +15,7 @@ const Demo: React.FC = () => {
       console.log("bbb");
       setIsHeightReduced(false);
       setSelectedIdView(idView);
-    }, 2000);
+    }, 500);
   };
 
   return (
@@ -53,20 +53,21 @@ const Demo: React.FC = () => {
               })}
             </div>
             <div className="demo_live_conteiner ">
-              {dataDemo.map((val) => (
-                <div
-                  key={val.idView} // Ensure each div has a unique key
-                  id={`reacg-root${val.idView}`}
-                  className={`reacg-gallery reacg-preview ${
-                    selectedIdView === val.idView ? "active" : "hidden"
-                  }`} // Add "active" class to the selected div
-                  data-options-section="0"
-                  data-plugin-version="1.10.0"
-                  data-gallery-timestamp=""
-                  data-options-timestamp=""
-                  data-gallery-id={`${val.idView}`}
-                ></div>
-              ))}
+              {!isHeightReduced &&
+                dataDemo.map((val) => (
+                  <div
+                    key={val.idView} // Ensure each div has a unique key
+                    id={`reacg-root${val.idView}`}
+                    className={`reacg-gallery reacg-preview ${
+                      selectedIdView === val.idView ? "active" : "hidden"
+                    }`} // Add "active" class to the selected div
+                    data-options-section="0"
+                    data-plugin-version="1.10.0"
+                    data-gallery-timestamp=""
+                    data-options-timestamp=""
+                    data-gallery-id={`${val.idView}`}
+                  ></div>
+                ))}
             </div>
           </div>
         </Row>
