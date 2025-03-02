@@ -5,7 +5,7 @@
 .demo_columns_content {
   min-width: 0px;
   width: 100%;
-  max-width: 1105px;
+  max-width: 1320px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,16 +18,46 @@
 }
 
 .demo_live_conteiner {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  max-width: 1105px;
-  align-items: center;
-  border: 1px solid rgb(8, 2, 2);
+  margin-top: 90px;
 }
 
 .demo_button {
   cursor: pointer;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #000000aa;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.demo_button svg path {
+  transition: all 0.3s ease;
+}
+.demo_button:hover path {
+  fill: #ffffffff;
+}
+.demo_selectedButton path {
+  fill: #ffffffff;
+}
+
+.demo_button:hover span {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.demo_button span {
+  color: #ffffff91;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+.demo_selectedButton span {
+  transform: translate(0px);
+  opacity: 1;
+  color: #ffffffff;
 }
 .btn_demo {
   background-color: #dde7ed;

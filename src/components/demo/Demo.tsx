@@ -1,18 +1,13 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./Demo.css";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { dataDemo } from "./demo-data";
 
 const Demo: React.FC = () => {
-  // const [selectedButton, setSelectedButton] = useState<number>(0);
+  const [selectedIdView, setSelectedIdView] = useState<number>(420);
 
-  // const handleClick = (index: number) => {
-  //   if (index !== selectedButton) {
-  //     setSelectedButton(index);
-  //   }
-  // };
-  // console.log(1);
+  console.log(1);
   return (
     <section id="demo">
       <Container>
@@ -22,29 +17,37 @@ const Demo: React.FC = () => {
             <div className="demo_buttons_rows">
               {dataDemo.map((val, index) => {
                 return (
-                  <div className="demo_button" key={index}>
+                  <button
+                    onClick={() => setSelectedIdView(val.idView)}
+                    className={`demo_button${
+                      selectedIdView === val.idView
+                        ? " demo_selectedButton"
+                        : ""
+                    }`}
+                    key={index}
+                  >
                     <svg
-                      style={{ marginBottom: "5px" }}
-                      height={41}
-                      width={41}
+                      height={70}
+                      width={70}
                       id="Outline"
                       viewBox="0 0 24 24"
                     >
                       {val.path}
                     </svg>
-                  </div>
+                    <span>{val.title}</span>
+                  </button>
                 );
               })}
             </div>
             <div className="demo_live_conteiner ">
               <div
-                id="reacg-root474"
+                id={`reacg-root${selectedIdView}`}
                 className="reacg-gallery reacg-preview"
                 data-options-section="0"
                 data-plugin-version="1.10.0"
                 data-gallery-timestamp=""
                 data-options-timestamp=""
-                data-gallery-id="474"
+                data-gallery-id={`${selectedIdView}`}
               ></div>
             </div>
           </div>
