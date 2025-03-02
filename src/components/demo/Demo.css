@@ -63,10 +63,10 @@
   background-color: #dde7ed;
 }
 .reacg-gallery.hidden {
-  visibility: hidden;
+  display: none;
 }
 .reacg-gallery.active {
-  visibility: visible;
+  display: block;
 }
 
 .btn_demo_selected {
