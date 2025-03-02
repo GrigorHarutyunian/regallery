@@ -62,6 +62,12 @@
 .btn_demo {
   background-color: #dde7ed;
 }
+.reacg-gallery.hidden {
+  display: none;
+}
+.reacg-gallery.active {
+  display: block;
+}
 
 .btn_demo_selected {
   background-color: #a7c95700;

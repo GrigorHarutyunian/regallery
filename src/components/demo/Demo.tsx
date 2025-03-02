@@ -7,7 +7,7 @@ import { dataDemo } from "./demo-data";
 const Demo: React.FC = () => {
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
 
-  console.log(1);
+  console.log(selectedIdView, "selId");
   return (
     <section id="demo">
       <Container>
@@ -40,15 +40,20 @@ const Demo: React.FC = () => {
               })}
             </div>
             <div className="demo_live_conteiner ">
-              <div
-                id={`reacg-root${selectedIdView}`}
-                className="reacg-gallery reacg-preview"
-                data-options-section="0"
-                data-plugin-version="1.10.0"
-                data-gallery-timestamp=""
-                data-options-timestamp=""
-                data-gallery-id={`${selectedIdView}`}
-              ></div>
+              {dataDemo.map((val) => (
+                <div
+                  key={val.idView} // Ensure each div has a unique key
+                  id={`reacg-root${val.idView}`}
+                  className={`reacg-gallery reacg-preview ${
+                    selectedIdView === val.idView ? "active" : "hidden"
+                  }`} // Add "active" class to the selected div
+                  data-options-section="0"
+                  data-plugin-version="1.10.0"
+                  data-gallery-timestamp=""
+                  data-options-timestamp=""
+                  data-gallery-id={`${val.idView}`}
+                ></div>
+              ))}
             </div>
           </div>
         </Row>
