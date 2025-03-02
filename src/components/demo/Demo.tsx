@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Demo.css";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
@@ -6,10 +6,25 @@ import { dataDemo } from "./demo-data";
 
 const Demo: React.FC = () => {
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
+  const [isHeightReduced, setIsHeightReduced] = useState(false);
+  const hasMounted = useRef(false);
 
-  console.log(selectedIdView, "selId");
+  useEffect(() => {
+    console.log("aaa");
+    if (hasMounted.current) {
+      setIsHeightReduced(true);
+      setTimeout(() => {
+        console.log("bbb");
+        setIsHeightReduced(false);
+      }, 4000);
+    }
+  }, [selectedIdView]);
+
   return (
-    <section id="demo">
+    <section
+      id="demo"
+      className={isHeightReduced ? "reduced-height" : "not-reduced-height"}
+    >
       <Container>
         <Row>
           <div className="demo_columns_content">
@@ -18,7 +33,10 @@ const Demo: React.FC = () => {
               {dataDemo.map((val, index) => {
                 return (
                   <button
-                    onClick={() => setSelectedIdView(val.idView)}
+                    onClick={() => {
+                      setSelectedIdView(val.idView),
+                        (hasMounted.current = true);
+                    }}
                     className={`demo_button${
                       selectedIdView === val.idView
                         ? " demo_selectedButton"

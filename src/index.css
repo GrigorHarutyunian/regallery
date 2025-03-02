@@ -36,7 +36,6 @@ section {
   flex-direction: column;
   height: auto;
   padding: 75px 25px;
-  transition: all 0.7s ease;
 }
 
 footer {
