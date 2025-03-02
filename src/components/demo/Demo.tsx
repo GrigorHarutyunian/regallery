@@ -38,13 +38,13 @@ const Demo: React.FC = () => {
             </div>
             <div className="demo_live_conteiner ">
               <div
-                id="reacg-root420"
+                id="reacg-root474"
                 className="reacg-gallery reacg-preview"
                 data-options-section="0"
                 data-plugin-version="1.10.0"
                 data-gallery-timestamp=""
                 data-options-timestamp=""
-                data-gallery-id="420"
+                data-gallery-id="474"
               ></div>
             </div>
           </div>
