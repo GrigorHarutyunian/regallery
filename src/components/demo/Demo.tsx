@@ -9,7 +9,6 @@ const Demo: React.FC = () => {
   const [isHeightReduced, setIsHeightReduced] = useState(false);
 
   const handleButtonClick = (idView: number) => {
-    setSelectedIdView(idView);
     setIsHeightReduced(true);
 
     setTimeout(() => {
