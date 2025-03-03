@@ -6,16 +6,15 @@ import { dataDemo } from "./demo-data";
 
 const Demo: React.FC = () => {
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
-  const [isHeightReduced, setIsHeightReduced] = useState(false);
-
+  const [isHeightReduced, setIsHeightReduced] = useState<boolean>(false);
+  const [selectedIdForCLick, setSelectedIdForCLick] = useState<number>(420);
   const handleButtonClick = (idView: number) => {
     setIsHeightReduced(true);
-
+    setSelectedIdForCLick(idView);
     setTimeout(() => {
-      console.log("bbb");
       setIsHeightReduced(false);
       setSelectedIdView(idView);
-    }, 500);
+    }, 1000);
   };
 
   return (
@@ -27,13 +26,13 @@ const Demo: React.FC = () => {
         <Row>
           <div className="demo_columns_content">
             <h1 className="section-text__title-centered ">Demo</h1>
-            <div className="demo_buttons_rows">
+            <div className="demo_buttons_rows ">
               {dataDemo.map((val, index) => {
                 return (
                   <button
                     onClick={() => handleButtonClick(val.idView)}
                     className={`demo_button${
-                      selectedIdView === val.idView
+                      selectedIdForCLick === val.idView
                         ? " demo_selectedButton"
                         : ""
                     }`}
@@ -52,22 +51,25 @@ const Demo: React.FC = () => {
                 );
               })}
             </div>
-            <div className="demo_live_conteiner ">
-              {!isHeightReduced &&
-                dataDemo.map((val) => (
-                  <div
-                    key={val.idView} // Ensure each div has a unique key
-                    id={`reacg-root${val.idView}`}
-                    className={`reacg-gallery reacg-preview ${
-                      selectedIdView === val.idView ? "active" : "hidden"
-                    }`} // Add "active" class to the selected div
-                    data-options-section="0"
-                    data-plugin-version="1.10.0"
-                    data-gallery-timestamp=""
-                    data-options-timestamp=""
-                    data-gallery-id={`${val.idView}`}
-                  ></div>
-                ))}
+            <div
+              className={`demo_live_conteiner${
+                selectedIdView === 708 ? " container_for_cards" : " "
+              } `}
+            >
+              {dataDemo.map((val) => (
+                <div
+                  key={val.idView} // Ensure each div has a unique key
+                  id={`reacg-root${val.idView}`}
+                  className={`reacg-gallery reacg-preview ${
+                    selectedIdView === val.idView ? "active" : "hidden"
+                  }`} // Add "active" class to the selected div
+                  data-options-section="0"
+                  data-plugin-version="1.10.0"
+                  data-gallery-timestamp=""
+                  data-options-timestamp=""
+                  data-gallery-id={`${val.idView}`}
+                ></div>
+              ))}
             </div>
           </div>
         </Row>

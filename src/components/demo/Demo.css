@@ -1,11 +1,14 @@
+#demo {
+  overflow: hidden;
+}
 .not-reduced-height {
-  max-height: 2100px; /* Set a large max-height */
+  max-height: 160vh; /* Set a large max-height */
   transition: max-height 1s ease-in-out;
 }
 
 .reduced-height {
   max-height: 300px; /* Reduced height */
-  transition: max-height 1s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .demo_columns_content {
@@ -26,8 +29,12 @@
 .demo_live_conteiner {
   width: 100%;
   margin-top: 90px;
+  height: 100%;
 }
-
+.container_for_cards div {
+  width: 500px;
+  height: 500px;
+}
 .demo_button {
   cursor: pointer;
   align-items: center;
