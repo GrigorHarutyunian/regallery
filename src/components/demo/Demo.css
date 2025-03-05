@@ -2,13 +2,16 @@
   overflow: hidden;
 }
 .not-reduced-height {
-  max-height: 160vh; /* Set a large max-height */
+  max-height: 10000px;
+  height: auto;
+  overflow: hidden;
   transition: max-height 1s ease-in-out;
 }
 
 .reduced-height {
-  max-height: 300px; /* Reduced height */
-  transition: max-height 0.3s ease-in-out;
+  max-height: 300px;
+
+  transition: max-height 0.3s ease-in-out; /* Transition on max-height */
 }
 
 .demo_columns_content {
@@ -22,7 +25,8 @@
 
 .demo_buttons_rows {
   display: flex;
-  gap: 70px;
+  width: 100%;
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -84,4 +88,53 @@
 
 .btn_demo_selected {
   background-color: #a7c95700;
+}
+
+@media screen and (max-width: 1060px) {
+  .demo_button svg {
+    height: 50px;
+    width: 50px;
+  }
+  .demo_button span {
+    font-size: 18px;
+  }
+  .reduced-height {
+    max-height: 272px;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 965px) {
+  .reduced-height {
+    max-height: 327px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 860px) {
+  .reduced-height {
+    max-height: 280px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 767px) {
+  .reduced-height {
+    max-height: 406px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .demo_buttons_rows {
+    justify-content: center;
+    gap: 30px;
+    flex-flow: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .demo_buttons_rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  .reduced-height {
+    max-height: 650px;
+  }
 }
