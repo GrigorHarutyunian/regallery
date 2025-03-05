@@ -115,9 +115,15 @@
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 767px) {
+@media screen and (min-width: 701px) and (max-width: 767px) {
   .reduced-height {
-    max-height: 406px;
+    max-height: 405px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 701px) {
+  .reduced-height {
+    max-height: 375px;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 800px) {
@@ -135,6 +141,6 @@
     row-gap: 30px;
   }
   .reduced-height {
-    max-height: 650px;
+    max-height: 623px;
   }
 }
