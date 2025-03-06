@@ -16,9 +16,6 @@ section.supportandInfo .section-text {
   max-width: 500px;
 }
 
-section#support {
-  height: 30vh;
-}
 section#support .container {
   height: 30vh;
 }
