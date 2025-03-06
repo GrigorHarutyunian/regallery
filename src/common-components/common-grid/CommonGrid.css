@@ -28,7 +28,7 @@
   color: #000000aa;
   font-size: 1rem;
   line-height: 26px;
-  margin-bottom: 45px;
+  margin-bottom: 10px;
   font-weight: 400;
   max-width: 339px;
   text-align: start;
@@ -49,54 +49,31 @@
   gap: 35px;
   justify-items: center;
 }
-.grid__6:not(._features) {
-  perspective: 1700px; /* Increase perspective for better depth */
-}
-
-.grid__6:not(._features) .feature-box {
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  position: relative; /* Ensure proper stacking */
-}
-
-.grid__6:not(._features) .feature-box:hover {
-  transform: rotateY(180deg);
-}
-
-.back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: inherit;
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: inherit;
-}
 
 .back img {
   width: 100%;
   height: 100%;
-  border-radius: 13px;
+  margin-bottom: 40px;
+
   object-fit: contain;
 }
 
 .absolute_btn {
   border-radius: 41px;
-  text-align: center;
+  padding: 10px;
+  transition: all 0.5sease;
+  display: flex;
+  align-items: center;
+  height: 12px;
+  width: 12px;
+  border: 2px solid #000000;
+  justify-content: center;
   position: absolute;
   bottom: 25px;
   right: 25px;
   overflow: hidden;
 }
 
-.grid__6 .feature-box .absolute_btn {
-  width: 70px;
-  padding: 10px 20px;
-  background-color: #0e4a70;
-}
 .grid__6._features .feature-box:hover {
   box-shadow: 0 10px 30px #858585;
   transform: translateY(-5px);
@@ -124,49 +101,6 @@ div#none {
     margin-bottom: 30px;
   }
 }
-
-.absolute_btn svg {
-  margin-right: -12px;
-}
-
-/* path.one {
-  transition: 0.4s;
-  transform: translateX(-60%);
-}
-
-path.two {
-  transition: 0.5s;
-  transform: translateX(-30%);
-}
-path.tree {
-  transition: 0.5s;
-  transform: translateX(-90%);
-}
-.feature-box path.three {
-  animation: color_anim 1s infinite 0.2s;
-}
-
-.feature-box path.one {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.6s;
-}
-
-.feature-box path.two {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.4s;
-} */
-
-/* @keyframes color_anim {
-  0% {
-    fill: white;
-  }
-  50% {
-    fill: #0e4a70;
-  }
-  100% {
-    fill: white;
-  }
-} */
 
 @media screen and (max-width: 860px) {
   .grid__6 {
