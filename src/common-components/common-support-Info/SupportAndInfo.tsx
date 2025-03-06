@@ -9,11 +9,11 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
   text,
   id,
-  img,
-
-  alt,
+  video,
   width,
   height,
+  img,
+  alt,
 }) => {
   return (
     <section id={id} className="supportandInfo">
@@ -38,7 +38,19 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             </div>
           </motion.div>
           <motion.div className="section-image">
-            <img width={width} height={height} src={img} alt={alt} />
+            {id === "info" ? (
+              <video
+                width={width}
+                height={height}
+                src={video}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            ) : (
+              <img width={width} height={height} src={img} alt={alt} />
+            )}
           </motion.div>
         </motion.div>
       </Container>

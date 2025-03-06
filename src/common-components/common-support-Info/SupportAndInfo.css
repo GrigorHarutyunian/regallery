@@ -1,6 +1,6 @@
 section.supportandInfo {
   position: relative;
-  height: 60vh;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,6 +16,12 @@ section.supportandInfo .section-text {
   max-width: 500px;
 }
 
+section#support {
+  height: 30vh;
+}
+section#support .container {
+  height: 30vh;
+}
 .support__row {
   display: flex;
   justify-content: space-between;

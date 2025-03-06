@@ -9,7 +9,7 @@ import { Row, Container } from "react-bootstrap";
 // import imgBig from "../../assets/imgs/choose.webp";
 // import imgMiddle from "../../assets/imgs/preview-middle.webp";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
-import chose from "../../assets/gifts/choose.gif";
+import heroMp4 from "../../assets/mp4s/first_section.mp4";
 import "./Hero.css";
 
 const Hero: React.FC = () => {
@@ -18,8 +18,8 @@ const Hero: React.FC = () => {
 
   const version = windowWitdth.version;
 
-  const width = version === "mobile" ? 260 : version === "mid" ? 347 : 520;
-  const ration = 13 / 10;
+  const width = version === "mobile" ? 260 : version === "mid" ? 347 : 698;
+  const ration = 940 / 540;
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const height = Math.round(width / ration);
@@ -58,15 +58,17 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.div style={{ maxWidth: width }} className="section-image">
-              <img
-                loading="lazy"
+              <video
                 height={height}
                 width={width}
-                src={chose}
-                // srcSet={`${imgSmall} 520w, ${imgMiddle} 693w, ${imgBig} 1040w`}
-                // sizes="(max-width: 700px) 260px, (min-width: 701px) and (max-width: 1100px) 346px, (min-width: 1101px) 520px"
-                alt="Regallery - the intuitive WordPress photo gallery plugin with easy drag-and-drop interface and customizable gallery options."
-              />
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={heroMp4} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </motion.div>
           </motion.div>
         </Row>

@@ -26,7 +26,15 @@ main.closed-banner {
   transition: all 0.8s ease;
 }
 
-main > *:nth-child(even) {
+main > section#views,
+section#features,
+section#review,
+section#pricing,
+section#support {
+  background-color: #eee !important;
+}
+
+main > section#demo {
   background-color: #000000 !important;
 }
 
@@ -164,13 +172,13 @@ p {
 
 .watch_video {
   margin-left: 20px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border: 1px solid #000000;
   padding: 15px 22px;
   color: #000000;
 }
 .watch_video:hover {
-  background-color: #d6dce2;
+  background-color: #ddd;
 }
 .buttons-container {
   display: flex;

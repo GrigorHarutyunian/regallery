@@ -36,9 +36,8 @@ const App: React.FC = () => {
         <AboutMobileResponsiveness />
         <Demo />
         <Review />
-
-        <Pricing />
         <Faq />
+        <Pricing />
 
         <Support />
       </main>
