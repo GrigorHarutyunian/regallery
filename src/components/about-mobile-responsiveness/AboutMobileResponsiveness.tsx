@@ -6,8 +6,8 @@ import aboutMobileResponsivenessData from "./aboutMobileResponsiveness-data";
 const AboutMobileResponsiveness: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const width = version === "mobile" ? 208 : version === "mid" ? 277 : 416;
-  const ration = 1040 / 800;
+  const width = version === "mobile" ? 208 : version === "mid" ? 277 : 698;
+  const ration = 940 / 540;
   const height = Math.round(width / ration);
 
   return (
