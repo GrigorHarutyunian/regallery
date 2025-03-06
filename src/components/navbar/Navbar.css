@@ -273,7 +273,7 @@
   .nav-open {
     height: 100vh;
     position: sticky;
-    background-color: #0e4a70;
+    background-color: #000000;
     animation: nav-open 0.2s ease-in-out;
     overflow: hidden;
   }

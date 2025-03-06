@@ -35,10 +35,7 @@
   margin-top: 90px;
   height: 100%;
 }
-.container_for_cards div {
-  width: 500px;
-  height: 500px;
-}
+
 .demo_button {
   cursor: pointer;
   align-items: center;

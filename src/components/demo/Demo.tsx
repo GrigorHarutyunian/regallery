@@ -10,12 +10,20 @@ const Demo: React.FC = () => {
   const [selectedIdForCLick, setSelectedIdForCLick] = useState<number>(420);
   const sectionRef = useRef<HTMLOptionElement | null>(null);
   const scriptsAddedRef = useRef<boolean>(false);
+
   const handleButtonClick = (idView: number) => {
+    if (idView === selectedIdView) return;
     setIsHeightReduced(true);
     setSelectedIdForCLick(idView);
     setTimeout(() => {
       setIsHeightReduced(false);
       setSelectedIdView(idView);
+
+      const button = document.getElementById("reacg-loadApp");
+      if (button) {
+        button.setAttribute("data-id", "reacg-root" + idView);
+        button.click();
+      }
     }, 1000);
   };
 
@@ -105,11 +113,7 @@ const Demo: React.FC = () => {
                 );
               })}
             </div>
-            <div
-              className={`demo_live_conteiner${
-                selectedIdView === 708 ? " container_for_cards" : " "
-              } `}
-            >
+            <div className={`demo_live_conteiner`}>
               {dataDemo.map((val) => (
                 <div
                   key={val.idView} // Ensure each div has a unique key

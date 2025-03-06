@@ -24,7 +24,6 @@ section.supportandInfo .container {
   background-color: #000000;
   box-sizing: border-box;
   border-radius: 15px;
-  height: 30vh;
 }
 
 .contact_us_row h2,
@@ -32,7 +31,8 @@ section.supportandInfo .container {
   color: #fff;
 }
 .contact_us_row .contact_us {
-  max-width: 640px;
+  max-width: 800px;
+  text-align: center;
 }
 
 @media screen and (min-width: 518px) {
