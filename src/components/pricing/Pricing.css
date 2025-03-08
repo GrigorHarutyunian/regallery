@@ -5,6 +5,7 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  gap: 35px;
 }
 .pricing-card {
   position: relative;
@@ -78,7 +79,7 @@
 .saved_money_div {
   color: #000000;
   display: block;
-  background-color: #08cd5d;
+  background-color: #eeeeee;
   padding: 9px 28px;
   max-width: 100px;
   margin: auto;
