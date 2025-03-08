@@ -1,3 +1,20 @@
+import Slanted from "../../assets/imgs/views/subViews/thumbnail/Slanted.png";
+import HiveLens from "../../assets/imgs/views/subViews/thumbnail/Hive-Lens.png";
+import PrismPattern from "../../assets/imgs/views/subViews/thumbnail/Prism-Pattern.png";
+import MediaCatalog from "../../assets/imgs/views/subViews/thumbnail/Media-Catalog.png";
+import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/monochromethumbnail.png";
+import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/lattemosaicthumbnail.png";
+import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/displaycollectionhumbnail.png";
+import MemoryWall from "../../assets/imgs/views/subViews/masonry/Memory-Wall.png";
+import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite-Scroll.png";
+import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay-Slideshow.png";
+import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus-Frame-1.png";
+import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital-Shop.png";
+import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial-Gallery.png";
+import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Template-Blinds-Slider.png";
+import Horizontalscrollthumbnail from "../../assets/imgs/views/subViews/carousel/horizontalscrollthumbnail.png";
+import Carouselshowcasethumbnail from "../../assets/imgs/views/subViews/carousel/carouselshowcasethumbnail.png";
+import SpotlightAd from "../../assets/imgs/views/subViews/cards/Spotlight-Ad.png";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -24,6 +41,28 @@ export const viewsDataSubMenu = [
         />
       </>
     ),
+    subItems: [
+      {
+        title: "Thumbnails",
+        description: "Grid of images in small thumbnail view.",
+        imgUrl: Slanted,
+      },
+      {
+        title: "Hive Lens",
+        description: "A different view with a circular layout.",
+        imgUrl: HiveLens,
+      },
+      {
+        title: "Prism Pattern",
+        description: "Showcase images in a prism pattern.",
+        imgUrl: PrismPattern,
+      },
+      {
+        title: "Media Catalog",
+        description: "Catalog of media files.",
+        imgUrl: MediaCatalog,
+      },
+    ],
   },
   {
     id: 2,
@@ -36,6 +75,26 @@ export const viewsDataSubMenu = [
         d="m9,0h-4C2.243,0,0,2.243,0,5v2c0,1.103.897,2,2,2h7c1.103,0,2-.897,2-2V2c0-1.103-.897-2-2-2ZM2,7v-2c0-1.654,1.346-3,3-3h4l.002,5H2Zm20,8h-7c-1.103,0-2,.897-2,2v5c0,1.103.897,2,2,2h4c2.757,0,5-2.243,5-5v-2c0-1.103-.897-2-2-2Zm0,4c0,1.654-1.346,3-3,3h-4v-5h7v2ZM19,0h-4c-1.103,0-2,.897-2,2v9c0,1.103.897,2,2,2h7c1.103,0,2-.897,2-2v-6c0-2.757-2.243-5-5-5Zm-4,11V2h4c1.654,0,3,1.346,3,3l.002,6h-7.002Zm-6,0H2c-1.103,0-2,.897-2,2v6c0,2.757,2.243,5,5,5h4c1.103,0,2-.897,2-2v-9c0-1.103-.897-2-2-2Zm-4,11c-1.654,0-3-1.346-3-3v-6h7l.002,9h-4.002Z"
       />
     ),
+    subItems: [
+      {
+        title: "Mosaic",
+        description:
+          "A timeless collection of black-and-white imagery with striking contrasts. Monochrome Collection",
+        imgUrl: Monochromethumbnail,
+      },
+      {
+        title: "Display Collection",
+        description:
+          "A visually dynamic arrangement designed to enhance any showcase.",
+        imgUrl: Lattemosaicthumbnail,
+      },
+      {
+        title: "Latte Mosaic",
+        description:
+          "A warm and earthy-toned composition inspired by artisanal patterns.",
+        imgUrl: Displaycollectionhumbnail,
+      },
+    ],
   },
   {
     id: 3,
@@ -48,6 +107,20 @@ export const viewsDataSubMenu = [
         d="m0,4v7h13V1H3C1.346,1,0,2.346,0,4Zm11,5H2v-5c0-.552.449-1,1-1h8v6Zm10-6h-6v17h6c1.654,0,3-1.346,3-3V6c0-1.654-1.346-3-3-3Zm1,14c0,.552-.449,1-1,1h-4V5h4c.551,0,1,.448,1,1v11Zm-20,3c0,1.654,1.346,3,3,3h8v-10H2v7Zm2-5h7v6h-6c-.551,0-1-.448-1-1v-5Z"
       />
     ),
+    subItems: [
+      {
+        title: "Masonry",
+        description:
+          "A fluid and dynamic masonry grid that adapts seamlessly to any content.",
+        imgUrl: MemoryWall,
+      },
+      {
+        title: "Infinite Scroll",
+        description:
+          "An endless scrolling layout designed for immersive browsing experiences.",
+        imgUrl: InfiniteScroll,
+      },
+    ],
   },
   {
     id: 4,
@@ -70,6 +143,20 @@ export const viewsDataSubMenu = [
         />
       </>
     ),
+    subItems: [
+      {
+        title: "Slideshow",
+        description:
+          "A modern slideshow that overlays images with smooth transitions and subtle captions.",
+        imgUrl: OverlaySlideshow,
+      },
+      {
+        title: "Focus Frame",
+        description:
+          "A slideshow that emphasizes each image by framing it prominently, drawing attention to details.",
+        imgUrl: FocusFrame1,
+      },
+    ],
   },
   {
     id: 5,
@@ -82,6 +169,20 @@ export const viewsDataSubMenu = [
         d="M20.527,4.217,14.5.737a5.015,5.015,0,0,0-5,0L3.473,4.217a5.014,5.014,0,0,0-2.5,4.33v6.96a5.016,5.016,0,0,0,2.5,4.331L9.5,23.317a5.012,5.012,0,0,0,5,0l6.027-3.479a5.016,5.016,0,0,0,2.5-4.331V8.547A5.014,5.014,0,0,0,20.527,4.217ZM10.5,2.47a3,3,0,0,1,3,0l6.027,3.479a2.945,2.945,0,0,1,.429.33L13.763,9.854a3.53,3.53,0,0,1-3.526,0L4.044,6.279a2.945,2.945,0,0,1,.429-.33ZM4.473,18.105a3.008,3.008,0,0,1-1.5-2.6V8.547a2.893,2.893,0,0,1,.071-.535l6.193,3.575A5.491,5.491,0,0,0,11,12.222v9.569a2.892,2.892,0,0,1-.5-.206Zm16.554-2.6a3.008,3.008,0,0,1-1.5,2.6L13.5,21.585a2.892,2.892,0,0,1-.5.206V12.222a5.491,5.491,0,0,0,1.763-.635l6.193-3.575a2.893,2.893,0,0,1,.071.535Z"
       />
     ),
+    subItems: [
+      {
+        title: "Cube",
+        description:
+          "A sleek, modern interface designed for online retail environments, offering an intuitive shopping experience.",
+        imgUrl: DigitalShop,
+      },
+      {
+        title: "Testimonial Gallery",
+        description:
+          "A dedicated space to showcase customer feedback and stories, enhancing credibility and trust.",
+        imgUrl: TestimonialGallery,
+      },
+    ],
   },
 
   {
@@ -95,6 +196,26 @@ export const viewsDataSubMenu = [
         d="m21,0h-8c-1.654,0-3,1.346-3,3v21h14V3c0-1.654-1.346-3-3-3Zm1,22h-10V3c0-.551.449-1,1-1h8c.551,0,1,.449,1,1v19ZM5,3h2v18h-2V3ZM0,6h2v12H0V6Z"
       />
     ),
+    subItems: [
+      {
+        title: "Carousel",
+        description:
+          "A sleek slider that unveils content through horizontal blinds effect.",
+        imgUrl: TemplateBlindesSlider,
+      },
+      {
+        title: "Carousel Showcase",
+        description:
+          "A classic rotating carousel ideal for displaying featured content.",
+        imgUrl: Carouselshowcasethumbnail,
+      },
+      {
+        title: "Horizontal Scroll",
+        description:
+          "A smooth horizontal scrolling interface for seamless content navigation.",
+        imgUrl: Horizontalscrollthumbnail,
+      },
+    ],
   },
 
   {
@@ -108,5 +229,13 @@ export const viewsDataSubMenu = [
         d="M20.466,1.967L14.78,.221c-2.614-.797-5.406,.664-6.225,3.24l-.188,.539h-3.368C2.243,4,0,6.243,0,9v10c0,2.757,2.243,5,5,5h6c1.596,0,3.004-.766,3.92-1.934,.231,.032,.461,.052,.688,.052,2.167,0,4.144-1.414,4.775-3.564l3.413-10.397c.767-2.613-.727-5.39-3.331-6.189ZM11,22H5c-1.654,0-3-1.346-3-3V9c0-1.654,1.346-3,3-3h6c1.654,0,3,1.346,3,3v10c0,1.654-1.346,3-3,3ZM21.887,7.562l-3.412,10.397c-.358,1.214-1.413,2.022-2.603,2.132,.079-.353,.128-.716,.128-1.092V9c0-2.757-2.243-5-5-5h-.507c.534-1.501,2.163-2.341,3.7-1.867l5.686,1.746c1.562,.479,2.459,2.146,2.008,3.684Z"
       />
     ),
+    subItems: [
+      {
+        title: "Cards",
+        description:
+          "A prominent card-style layout designed to highlight key advertisements.",
+        imgUrl: SpotlightAd,
+      },
+    ],
   },
 ];

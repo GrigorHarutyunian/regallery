@@ -1,27 +1,78 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./Navbar.css";
+import Slanted from "../../assets/imgs/views/subViews/thumbnail/Slanted.png";
+interface subItem {
+  title: string;
+  description: string;
+  imgUrl: string;
+}
+const SubMenu = ({ title, items, onClick, version }: any) => {
+  const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
+  const [hoveredElement, setHoveredElement] = useState<subItem>({
+    title: "Title",
+    description: "Lorem Ipsum",
+    imgUrl: Slanted,
+  });
 
-const SubMenu = ({ title, items, onClick, href }: any) => {
-  const [open, setOpen] = useState<boolean>(false);
-
+  console.log(hoveredElement, "asdasd");
   const handleOpen = () => {
-    setOpen(true);
+    setOpenSubMenu(true);
   };
   const handleClose = () => {
-    setOpen(false);
+    setOpenSubMenu(false);
   };
 
   const handleToggle = () => {
-    setOpen(!open);
+    setOpenSubMenu(!open);
+  };
+  const handleHoverElement = (item: subItem) => {
+    setHoveredElement(item);
+  };
+
+  useEffect(() => {
+    const navElement = document.querySelector(".nav-open");
+    if (openSubMenu) {
+      navElement?.classList.add("show-scroll");
+    }
+  }, [openSubMenu]);
+
+  const hoverAnimation = {
+    hidden: {
+      clipPath: "inset(0 100% 0 0)",
+      opacity: 0,
+    },
+    visible: {
+      clipPath: "inset(0 0 0 0)",
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.1, 0, 0.3, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.2, // Exit transition should be slightly faster for a smooth effect
+        ease: [0.1, 0, 0.3, 1],
+      },
+    },
   };
 
   return (
-    <div onMouseEnter={handleOpen} onMouseLeave={handleClose} onClick={handleToggle}>
+    <div
+      onMouseEnter={handleOpen}
+      onMouseLeave={handleClose}
+      onClick={handleToggle}
+      className="subMenu-nav-link"
+    >
       <a href={"#views"} id="fade-button" className={"nav-link"}>
         <div className={"nav-link__text"}>
           {title}
           <svg
-            className={`fi-rs-angle-small-down${open ? " arrow-rotate" : ""}`}
+            className={`fi-rs-angle-small-down${
+              openSubMenu ? " arrow-rotate" : ""
+            }`}
             xmlns="http://www.w3.org/2000/svg"
             id="Outline"
             viewBox="0 0 24 24"
@@ -39,16 +90,33 @@ const SubMenu = ({ title, items, onClick, href }: any) => {
       {
         <div
           onClick={() => {
-            handleClose();
+            // handleClose();
             onClick();
           }}
-          className={`dropdown-menu ${open ? "open" : ""}`}
+          className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
         >
           <div className="empty__space"></div>
-          {items.map((val: any, i: any) => (
-            <div key={i} className="menuItem__div">
-              <a href={href} className="nav-link menu">
-                <div className="nav-link__text submenu">
+
+          {version !== "mobile" && (
+            <div className="submenu_demo">
+              <motion.div
+                key={hoveredElement.title}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={hoverAnimation}
+                className="submenu_demo_content"
+              >
+                <img src={hoveredElement.imgUrl} alt="aas" />
+                <h3>{hoveredElement.title}</h3>
+                <p>{hoveredElement.description}</p>
+              </motion.div>
+            </div>
+          )}
+          <div className="submenu_lists">
+            {items.map((val: any, i: any) => (
+              <ul key={i}>
+                <li key={val.id} className="sub-menu__categori-name">
                   <svg
                     height={16}
                     width={16}
@@ -58,12 +126,38 @@ const SubMenu = ({ title, items, onClick, href }: any) => {
                   >
                     {val.path}
                   </svg>
-                  {val.title}
-                </div>
-                <div className="nav-link__background" />
-              </a>
-            </div>
-          ))}
+                  <a href="">{val.title}</a>
+                </li>
+
+                {val.subItems.map((sutiItem: subItem, index: number) => {
+                  return (
+                    <li key={index} className="sub-menu__item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Bold"
+                        viewBox="0 0 24 24"
+                        height={16}
+                        width={16}
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+                        />
+                      </svg>
+                      <a
+                        {...(version !== "mobile" && {
+                          onMouseEnter: () => handleHoverElement(sutiItem),
+                        })}
+                        href=""
+                      >
+                        {sutiItem.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            ))}
+          </div>
         </div>
       }
     </div>
