@@ -15,7 +15,6 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
     imgUrl: Slanted,
   });
 
-  console.log(hoveredElement, "asdasd");
   const handleOpen = () => {
     setOpenSubMenu(true);
   };

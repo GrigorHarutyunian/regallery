@@ -18,11 +18,11 @@ const Hero: React.FC = () => {
 
   const version = windowWitdth.version;
 
-  const width = version === "mobile" ? 260 : version === "mid" ? 347 : 698;
-  const ration = 940 / 540;
+  // const width = version === "mobile" ? 260 : version === "mid" ? 347 : 698;
+  // const ration = 940 / 540;
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const height = Math.round(width / ration);
+  // const height = Math.round(width / ration);
   return (
     <section>
       <Container>
@@ -37,7 +37,21 @@ const Hero: React.FC = () => {
                 easily building stunning, mobile-friendly galleries in just
                 minutes.
               </p>
-
+              {version === "mobile" && (
+                <motion.div className="section-image">
+                  <video
+                    height={`100%`}
+                    width={`100%`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={heroMp4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </motion.div>
+              )}
               <div className="buttons-container">
                 <a href="#pricing">
                   <DownloadBtn className={"download-btn"} />
@@ -57,19 +71,21 @@ const Hero: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div style={{ maxWidth: width }} className="section-image">
-              <video
-                height={height}
-                width={width}
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={heroMp4} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </motion.div>
+            {version !== "mobile" && (
+              <motion.div style={{ maxWidth: `50%` }} className="section-image">
+                <video
+                  height={`100%`}
+                  width={`100%`}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={heroMp4} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </motion.div>
+            )}
           </motion.div>
         </Row>
       </Container>
