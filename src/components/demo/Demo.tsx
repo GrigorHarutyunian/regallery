@@ -10,7 +10,10 @@ const Demo: React.FC = () => {
   const [selectedIdForCLick, setSelectedIdForCLick] = useState<number>(420);
   const sectionRef = useRef<HTMLOptionElement | null>(null);
   const scriptsAddedRef = useRef<boolean>(false);
-
+  const selectedViewDesrciption = dataDemo.find(
+    (val) => val.idView === selectedIdForCLick
+  )?.description;
+  console.log(dataDemo, "data");
   const handleButtonClick = (idView: number) => {
     if (idView === selectedIdView) return;
     setIsHeightReduced(true);
@@ -87,7 +90,7 @@ const Demo: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h1 className="section-text__title-centered ">Demo</h1>
+            <h1 className="section-text__title-centered ">Gallery views</h1>
             <div className="demo_buttons_rows ">
               {dataDemo.map((val, index) => {
                 return (
@@ -112,6 +115,9 @@ const Demo: React.FC = () => {
                   </button>
                 );
               })}
+            </div>
+            <div className="demo_description">
+              <p>{selectedViewDesrciption}</p>
             </div>
             <div className={`demo_live_conteiner`}>
               {dataDemo.map((val) => (

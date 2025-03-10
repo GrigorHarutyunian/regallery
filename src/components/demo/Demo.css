@@ -5,11 +5,11 @@
   max-height: 10000px;
   height: auto;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
+  transition: max-height 3s ease-in-out;
 }
 
 .reduced-height {
-  max-height: 300px;
+  max-height: 330px;
 
   transition: max-height 0.3s ease-in-out; /* Transition on max-height */
 }
@@ -32,7 +32,6 @@
 
 .demo_live_conteiner {
   width: 100%;
-  margin-top: 90px;
   height: 100%;
 }
 
@@ -87,6 +86,15 @@
   background-color: #a7c95700;
 }
 
+.demo_description {
+  color: #ffffffff;
+  text-align: center;
+
+  margin: 40px 0px 40px;
+}
+.demo_description p {
+  height: 40px;
+}
 @media screen and (max-width: 1060px) {
   .demo_button svg {
     height: 50px;
@@ -96,48 +104,79 @@
     font-size: 18px;
   }
   .reduced-height {
-    max-height: 272px;
+    max-height: 308px;
   }
 }
 
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .reduced-height {
-    max-height: 327px;
+    max-height: 358px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 860px) {
+@media screen and (min-width: 800px) and (max-width: 860px) {
   .reduced-height {
-    max-height: 280px;
+    max-height: 314px;
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 767px) {
+@media screen and (min-width: 701px) and (max-width: 799px) {
   .reduced-height {
-    max-height: 405px;
+    max-height: 321px;
+  }
+  .demo_description p {
+    height: 60px;
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 701px) {
+@media screen and (min-width: 531px) and (max-width: 701px) {
   .reduced-height {
-    max-height: 375px;
+    max-height: 310px;
+  }
+  .demo_description p {
+    height: 80px;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .demo_buttons_rows {
-    justify-content: center;
-    gap: 30px;
     flex-flow: wrap;
   }
+  .demo_button span {
+    font-size: 16px;
+  }
+  .demo_button svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .demo_buttons_rows {
+    flex-flow: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+  .demo_button span {
+    font-size: 14px;
+  }
+  .demo_button {
+    gap: 10px;
+  }
 }
 
-@media screen and (max-width: 500px) {
-  .demo_buttons_rows {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 30px;
-  }
+@media screen and (min-width: 485px) and (max-width: 530px) {
   .reduced-height {
-    max-height: 623px;
+    max-height: 298px;
+  }
+  .demo_description p {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .reduced-height {
+    max-height: 426px;
+  }
+  .demo_description p {
+    height: 120px;
   }
 }
