@@ -107,8 +107,7 @@
   text-align: left;
   cursor: pointer;
 }
-
-.review__text:hover .read_more_str {
+.read_more_str:hover {
   color: #2540cc;
   border-color: #2540cc;
 }
