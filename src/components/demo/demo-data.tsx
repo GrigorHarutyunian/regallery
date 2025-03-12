@@ -50,13 +50,13 @@ export const dataDemo = [
         d="m0,4v7h13V1H3C1.346,1,0,2.346,0,4Zm11,5H2v-5c0-.552.449-1,1-1h8v6Zm10-6h-6v17h6c1.654,0,3-1.346,3-3V6c0-1.654-1.346-3-3-3Zm1,14c0,.552-.449,1-1,1h-4V5h4c.551,0,1,.448,1,1v11Zm-20,3c0,1.654,1.346,3,3,3h8v-10H2v7Zm2-5h7v6h-6c-.551,0-1-.448-1-1v-5Z"
       />
     ),
-    idView: 512,
+    idView: 717,
   },
   {
     id: 4,
     title: "Slideshow",
     description:
-      "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content. The layout is clean and organized.",
+      "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content.",
     path: (
       <>
         <path
