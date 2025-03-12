@@ -5,7 +5,11 @@ import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
-
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   title,
   text,
@@ -25,15 +29,17 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             <p className="section-text__body">{text}</p>
             {version === "mobile" && id === "info" && (
               <motion.div className="section-image">
-                <video
-                  height={`100%`}
-                  width={`100%`}
-                  src={video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                <LazyLoadComponent>
+                  <video
+                    height={`100%`}
+                    width={`100%`}
+                    src={video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                </LazyLoadComponent>
               </motion.div>
             )}
             <div className="buttons-container">
@@ -53,18 +59,30 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           </motion.div>
           <motion.div style={{ maxWidth: "50%" }} className="section-image">
             {id !== "info" ? (
-              <img height={`100%`} width={`100%`} src={img} alt={alt} />
+              <LazyLoadImage
+                height={`100%`}
+                width={`100%`}
+                src={img}
+                alt={alt}
+                effect="blur"
+                wrapperProps={{
+                  // If you need to, you can tweak the effect transition using the wrapper style.
+                  style: { transitionDelay: "1s" },
+                }}
+              />
             ) : (
               version !== "mobile" && (
-                <video
-                  height={`100%`}
-                  width={`100%`}
-                  src={video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                <LazyLoadComponent>
+                  <video
+                    height={`100%`}
+                    width={`100%`}
+                    src={video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                </LazyLoadComponent>
               )
             )}
           </motion.div>

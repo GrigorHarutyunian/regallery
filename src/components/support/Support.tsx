@@ -18,7 +18,10 @@ const Support: React.FC = () => {
             </>
           </p>
           <div className="buttons-container contact_us_buttons_container">
-            <a href="#pricing">
+            <a
+              href="https://wordpress.org/support/plugin/regallery/"
+              target="_blank"
+            >
               <DownloadBtn className="download-btn" version={"support"} />
             </a>
           </div>

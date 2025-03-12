@@ -21,12 +21,6 @@ const Demo: React.FC = () => {
     setTimeout(() => {
       setIsHeightReduced(false);
       setSelectedIdView(idView);
-
-      const button = document.getElementById("reacg-loadApp");
-      if (button) {
-        button.setAttribute("data-id", "reacg-root" + idView);
-        button.click();
-      }
     }, 1000);
   };
 

@@ -6,6 +6,7 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 // import imgBig from "../../assets/imgs/choose.webp";
 // import imgMiddle from "../../assets/imgs/preview-middle.webp";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
@@ -15,14 +16,15 @@ import "./Hero.css";
 const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
-
   const version = windowWitdth.version;
 
   // const width = version === "mobile" ? 260 : version === "mid" ? 347 : 698;
   // const ration = 940 / 540;
+  // const height = Math.round(width / ration);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  // const height = Math.round(width / ration);
+
   return (
     <section>
       <Container>
@@ -39,17 +41,17 @@ const Hero: React.FC = () => {
               </p>
               {version === "mobile" && (
                 <motion.div className="section-image">
-                  <video
-                    height={`100%`}
-                    width={`100%`}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={heroMp4} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <LazyLoadComponent>
+                    <video
+                      height={`100%`}
+                      width={`100%`}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      src={heroMp4}
+                    />
+                  </LazyLoadComponent>
                 </motion.div>
               )}
               <div className="buttons-container">
@@ -73,17 +75,16 @@ const Hero: React.FC = () => {
 
             {version !== "mobile" && (
               <motion.div style={{ maxWidth: `50%` }} className="section-image">
-                <video
-                  height={`100%`}
-                  width={`100%`}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src={heroMp4} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <LazyLoadComponent>
+                  <video
+                    height={`100%`}
+                    width={`100%`}
+                    autoPlay
+                    loop
+                    muted
+                    src={heroMp4}
+                  />
+                </LazyLoadComponent>
               </motion.div>
             )}
           </motion.div>
