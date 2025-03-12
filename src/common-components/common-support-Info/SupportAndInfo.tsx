@@ -64,11 +64,6 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                 width={`100%`}
                 src={img}
                 alt={alt}
-                effect="blur"
-                wrapperProps={{
-                  // If you need to, you can tweak the effect transition using the wrapper style.
-                  style: { transitionDelay: "1s" },
-                }}
               />
             ) : (
               version !== "mobile" && (

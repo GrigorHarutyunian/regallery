@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Navbar.css";
-import Slanted from "../../assets/imgs/views/subViews/thumbnail/Slanted.png";
+import Slanted from "../../assets/imgs/views/subViews/thumbnail/Dynamic_Slant.webp";
 interface subItem {
   title: string;
   description: string;
   imgUrl: string;
+  path: string;
 }
 const SubMenu = ({ title, items, onClick, version }: any) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
@@ -13,6 +14,7 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
     title: "Title",
     description: "Lorem Ipsum",
     imgUrl: Slanted,
+    path: "https://regallery.team/core/reacg/dynamic-slant/",
   });
 
   const handleOpen = () => {
@@ -106,9 +108,12 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
                 variants={hoverAnimation}
                 className="submenu_demo_content"
               >
-                <img src={hoveredElement.imgUrl} alt="aas" />
+                <a href={hoveredElement.path}>
+                  <img src={hoveredElement.imgUrl} alt="aas" />
+                </a>
+
                 <h3>{hoveredElement.title}</h3>
-                <p>{hoveredElement.description}</p>
+                {/* <p>{hoveredElement.description}</p> */}
               </motion.div>
             </div>
           )}
@@ -125,12 +130,18 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
                   >
                     {val.path}
                   </svg>
-                  <a href="">{val.title}</a>
+                  <a>{val.title}</a>
                 </li>
 
                 {val.subItems.map((sutiItem: subItem, index: number) => {
                   return (
-                    <li key={index} className="sub-menu__item">
+                    <li
+                      key={index}
+                      {...(version !== "mobile" && {
+                        onMouseEnter: () => handleHoverElement(sutiItem),
+                      })}
+                      className="sub-menu__item"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         id="Bold"
@@ -143,14 +154,7 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
                           d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
                         />
                       </svg>
-                      <a
-                        {...(version !== "mobile" && {
-                          onMouseEnter: () => handleHoverElement(sutiItem),
-                        })}
-                        href=""
-                      >
-                        {sutiItem.title}
-                      </a>
+                      <a href={sutiItem.path}>{sutiItem.title}</a>
                     </li>
                   );
                 })}

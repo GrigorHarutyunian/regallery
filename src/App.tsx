@@ -8,7 +8,7 @@ import Info from "./components/info/Info";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
-import Views from "./components/views/Views";
+// import Views from "./components/views/Views";
 import Pricing from "./components/pricing/Pricing";
 import Banner from "./components/banner/Banner";
 import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
@@ -30,7 +30,7 @@ const App: React.FC = () => {
         className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
       >
         <Hero />
-        <Views />
+        {/* <Views /> */}
         <Info />
         <Features />
         <AboutMobileResponsiveness />

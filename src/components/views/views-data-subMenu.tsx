@@ -1,20 +1,30 @@
-import Slanted from "../../assets/imgs/views/subViews/thumbnail/Slanted.png";
-import HiveLens from "../../assets/imgs/views/subViews/thumbnail/Hive-Lens.png";
-import PrismPattern from "../../assets/imgs/views/subViews/thumbnail/Prism-Pattern.png";
-import MediaCatalog from "../../assets/imgs/views/subViews/thumbnail/Media-Catalog.png";
-import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/monochromethumbnail.png";
-import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/lattemosaicthumbnail.png";
-import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/displaycollectionhumbnail.png";
-import MemoryWall from "../../assets/imgs/views/subViews/masonry/Memory-Wall.png";
-import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite-Scroll.png";
-import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay-Slideshow.png";
-import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus-Frame-1.png";
-import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital-Shop.png";
-import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial-Gallery.png";
-import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Template-Blinds-Slider.png";
-import Horizontalscrollthumbnail from "../../assets/imgs/views/subViews/carousel/horizontalscrollthumbnail.png";
-import Carouselshowcasethumbnail from "../../assets/imgs/views/subViews/carousel/carouselshowcasethumbnail.png";
-import SpotlightAd from "../../assets/imgs/views/subViews/cards/Spotlight-Ad.png";
+import HiveLens from "../../assets/imgs/views/subViews/thumbnail/Hive_Lens.webp";
+import PrismPattern from "../../assets/imgs/views/subViews/thumbnail/Prism_Pattern.webp";
+import MediaCatalog from "../../assets/imgs/views/subViews/thumbnail/Media_Catalog.webp";
+import Slanted from "../../assets/imgs/views/subViews/thumbnail/Dynamic_Slant.webp";
+import Polygrid from "../../assets/imgs/views/subViews/thumbnail/Polygrid.webp";
+import Harmonicchaosthumbnail from "../../assets/imgs/views/subViews/thumbnail/Harmonic_Chaos.webp";
+import FlickerFrame from "../../assets/imgs/views/subViews/thumbnail/Flicker_Frame.webp";
+import Collagethumbnail from "../../assets/imgs/views/subViews/thumbnail/Collage.webp";
+import Circlegridthumbnail from "../../assets/imgs/views/subViews/thumbnail/Circle_Grid.webp";
+import Photoalbumthumbnail from "../../assets/imgs/views/subViews/thumbnail/Photo_Album.webp";
+
+import Modernpatternthumbnial from "../../assets/imgs/views/subViews/thumbnail/Modern_Pattern.webp";
+import Polaroidgallerythumbnail from "../../assets/imgs/views/subViews/thumbnail/Polaroid_Gallery.webp";
+import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/Monochrome_Collection.webp";
+import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/Latte_Mosaic.webp";
+
+import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/Display_Collection.webp";
+import MemoryWall from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp";
+import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite_Scroll.webp";
+import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay_Slideshow.webp";
+import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.webp";
+import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
+import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
+import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Blinds_Slider.webp";
+import Horizontalscrollthumbnail from "../../assets/imgs/views/subViews/carousel/Horizontal_Scroll.webp";
+import Carouselshowcasethumbnail from "../../assets/imgs/views/subViews/carousel/Carousel_Showcase.webp";
+import SpotlightAd from "../../assets/imgs/views/subViews/cards/Spotlight_Ad.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -43,24 +53,76 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Thumbnails",
+        title: "Dynamic Slant",
         description: "Grid of images in small thumbnail view.",
         imgUrl: Slanted,
+        path: "https://regallery.team/core/reacg/dynamic-slant/",
       },
       {
         title: "Hive Lens",
         description: "A different view with a circular layout.",
         imgUrl: HiveLens,
+        path: "https://regallery.team/core/reacg/hive-lens/",
       },
       {
         title: "Prism Pattern",
         description: "Showcase images in a prism pattern.",
         imgUrl: PrismPattern,
+        path: "https://regallery.team/core/reacg/prism-pattern/",
       },
       {
         title: "Media Catalog",
         description: "Catalog of media files.",
         imgUrl: MediaCatalog,
+        path: "https://regallery.team/core/reacg/media-catalog/",
+      },
+      {
+        title: "Flicker Frame",
+        description: "Catalog of media files.",
+        imgUrl: FlickerFrame,
+        path: "https://regallery.team/core/reacg/flicker-frame/",
+      },
+      {
+        title: "PolyGrid",
+        description: "Showcase images in a prism pattern.",
+        imgUrl: Polygrid,
+        path: "https://regallery.team/core/reacg/polygrid/",
+      },
+      {
+        title: "Harmonic Chaos",
+        description: "Catalog of media files.",
+        imgUrl: Harmonicchaosthumbnail,
+        path: "https://regallery.team/core/reacg/harmonic-chaos/",
+      },
+      {
+        title: "Collage",
+        description: "Catalog of media files.",
+        imgUrl: Collagethumbnail,
+        path: "https://regallery.team/core/reacg/collage/",
+      },
+      {
+        title: "Photo Album",
+        description: "Catalog of media files.",
+        imgUrl: Photoalbumthumbnail,
+        path: "https://regallery.team/core/reacg/photo-album/",
+      },
+      {
+        title: "Circle Grid",
+        description: "Showcase images in a prism pattern.",
+        imgUrl: Circlegridthumbnail,
+        path: "https://regallery.team/core/reacg/circle-grid/",
+      },
+      {
+        title: "Modern Pattern",
+        description: "Catalog of media files.",
+        imgUrl: Modernpatternthumbnial,
+        path: "https://regallery.team/core/reacg/modern-pattern/",
+      },
+      {
+        title: "Polaroid Gallery",
+        description: "Catalog of media files.",
+        imgUrl: Polaroidgallerythumbnail,
+        path: "https://regallery.team/core/reacg/polaroid-gallery/",
       },
     ],
   },
@@ -77,22 +139,25 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Mosaic",
+        title: "Monochrome Collection",
         description:
           "A timeless collection of black-and-white imagery with striking contrasts. Monochrome Collection",
         imgUrl: Monochromethumbnail,
+        path: "https://regallery.team/core/reacg/monochrome-collection/",
       },
       {
         title: "Display Collection",
         description:
           "A visually dynamic arrangement designed to enhance any showcase.",
         imgUrl: Lattemosaicthumbnail,
+        path: "https://regallery.team/core/reacg/display-collection/",
       },
       {
         title: "Latte Mosaic",
         description:
           "A warm and earthy-toned composition inspired by artisanal patterns.",
         imgUrl: Displaycollectionhumbnail,
+        path: "https://regallery.team/core/reacg/latte-mosaic/",
       },
     ],
   },
@@ -109,16 +174,18 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Masonry",
+        title: "Infinite Scroll",
         description:
           "A fluid and dynamic masonry grid that adapts seamlessly to any content.",
         imgUrl: MemoryWall,
+        path: "https://regallery.team/core/reacg/infinite-scroll/",
       },
       {
-        title: "Infinite Scroll",
+        title: "Tide Frame",
         description:
           "An endless scrolling layout designed for immersive browsing experiences.",
         imgUrl: InfiniteScroll,
+        path: "https://regallery.team/core/reacg/tide-frame/",
       },
     ],
   },
@@ -145,16 +212,18 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Slideshow",
+        title: "Overlay Slideshow",
         description:
           "A modern slideshow that overlays images with smooth transitions and subtle captions.",
         imgUrl: OverlaySlideshow,
+        path: "https://regallery.team/core/reacg/overlay-slideshow/",
       },
       {
         title: "Focus Frame",
         description:
           "A slideshow that emphasizes each image by framing it prominently, drawing attention to details.",
         imgUrl: FocusFrame1,
+        path: "https://regallery.team/core/reacg/focus-frame/",
       },
     ],
   },
@@ -171,16 +240,18 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Cube",
+        title: "Digital Shop",
         description:
           "A sleek, modern interface designed for online retail environments, offering an intuitive shopping experience.",
         imgUrl: DigitalShop,
+        path: "https://regallery.team/core/reacg/digital-shop/",
       },
       {
         title: "Testimonial Gallery",
         description:
           "A dedicated space to showcase customer feedback and stories, enhancing credibility and trust.",
         imgUrl: TestimonialGallery,
+        path: "https://regallery.team/core/reacg/testimonial-gallery/",
       },
     ],
   },
@@ -198,22 +269,25 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Carousel",
+        title: "Blinds Slider",
         description:
           "A sleek slider that unveils content through horizontal blinds effect.",
         imgUrl: TemplateBlindesSlider,
+        path: "https://regallery.team/core/reacg/blinds-slider/",
       },
       {
         title: "Carousel Showcase",
         description:
           "A classic rotating carousel ideal for displaying featured content.",
         imgUrl: Carouselshowcasethumbnail,
+        path: "https://regallery.team/core/reacg/carousel-showcase/",
       },
       {
         title: "Horizontal Scroll",
         description:
           "A smooth horizontal scrolling interface for seamless content navigation.",
         imgUrl: Horizontalscrollthumbnail,
+        path: "https://regallery.team/core/reacg/horizontal-scroll/",
       },
     ],
   },
@@ -231,10 +305,11 @@ export const viewsDataSubMenu = [
     ),
     subItems: [
       {
-        title: "Cards",
+        title: "Spotlight Ad",
         description:
           "A prominent card-style layout designed to highlight key advertisements.",
         imgUrl: SpotlightAd,
+        path: "https://regallery.team/core/reacg/spotlight-ad/",
       },
     ],
   },
