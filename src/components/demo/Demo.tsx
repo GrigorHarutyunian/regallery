@@ -11,7 +11,7 @@ const Demo: React.FC = () => {
   const sectionRef = useRef<HTMLOptionElement | null>(null);
   const scriptsAddedRef = useRef<boolean>(false);
   const selectedViewDesrciption = dataDemo.find(
-    (val) => val.idView === selectedIdForCLick
+    (val) => val.idView === selectedIdView
   )?.description;
   console.log(dataDemo, "data");
   const handleButtonClick = (idView: number) => {
