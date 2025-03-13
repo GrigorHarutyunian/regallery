@@ -9,7 +9,7 @@
 }
 
 .reduced-height {
-  max-height: 330px;
+  max-height: 363px;
 
   transition: max-height 0.3s ease-in-out; /* Transition on max-height */
 }
@@ -89,11 +89,13 @@
 .demo_description {
   color: #ffffffff;
   text-align: center;
-
-  margin: 40px 0px 40px;
+  max-width: 900px;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  margin: 40px 15px;
 }
 .demo_description p {
-  height: 40px;
+  height: 74px;
 }
 @media screen and (max-width: 1060px) {
   .demo_button svg {
@@ -104,19 +106,28 @@
     font-size: 18px;
   }
   .reduced-height {
-    max-height: 308px;
+    max-height: 342px;
   }
 }
 
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .reduced-height {
-    max-height: 358px;
+    max-height: 392px;
+  }
+  .demo_description {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 }
 
 @media screen and (min-width: 800px) and (max-width: 860px) {
   .reduced-height {
-    max-height: 314px;
+    max-height: 347px;
+  }
+  .demo_description {
+    max-width: 700px;
+    font-size: 1rem;
   }
 }
 
@@ -124,19 +135,31 @@
   .reduced-height {
     max-height: 321px;
   }
+  .demo_description {
+    max-width: 700px;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
   .demo_description p {
     height: 60px;
   }
 }
 
-@media screen and (min-width: 531px) and (max-width: 701px) {
+@media screen and (min-width: 551px) and (max-width: 701px) {
   .reduced-height {
-    max-height: 310px;
+    max-height: 250px;
+  }
+  .demo_description {
+    max-width: 700px;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    margin: 30px 15px;
   }
   .demo_description p {
-    height: 80px;
+    height: 40px;
   }
 }
+
 @media screen and (max-width: 800px) {
   .demo_buttons_rows {
     flex-flow: wrap;
@@ -149,7 +172,7 @@
     width: 40px;
   }
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
   .demo_buttons_rows {
     flex-flow: wrap;
     justify-content: center;
@@ -163,20 +186,31 @@
   }
 }
 
-@media screen and (min-width: 485px) and (max-width: 530px) {
+@media screen and (min-width: 505px) and (max-width: 550px) {
   .reduced-height {
-    max-height: 298px;
+    max-height: 228px;
+  }
+  .demo_description {
+    max-width: 900px;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    margin: 25px 0px;
   }
   .demo_description p {
-    height: 80px;
+    height: 40px;
   }
 }
 
-@media screen and (max-width: 484px) {
+@media screen and (max-width: 504px) {
   .reduced-height {
-    max-height: 426px;
+    max-height: 313px;
   }
   .demo_description p {
-    height: 120px;
+    height: 57px;
+  }
+  .demo_description {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    margin: 15px 0px;
   }
 }

@@ -180,6 +180,32 @@
   padding: 20px;
   width: 100%;
 }
+.submenu_lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-auto-rows: minmax(50px, auto); /* Rows adjust based on content */
+  gap: 10px; /* Space between items */
+  padding: 20px;
+  width: 100%;
+  align-items: start;
+}
+
+.submenu_lists ul {
+  padding: 10px;
+}
+
+/* Allow the first UL (if it has more items) to span multiple rows */
+.submenu_lists ul:nth-child(1) {
+  grid-row: span 3; /* This makes it taller */
+}
+
+/* Style list items */
+.submenu_lists li {
+  padding: 5px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
 .submenu_demo {
   flex: 0 0 27%;
   flex-direction: column;
@@ -195,9 +221,6 @@
   color: white;
   align-items: center;
   gap: 30px;
-}
-.submenu_demo img {
-  width: 300px;
 }
 
 .submenu_demo h3 {

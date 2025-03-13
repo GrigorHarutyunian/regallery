@@ -30,11 +30,12 @@ const App: React.FC = () => {
         className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
       >
         <Hero />
+        <Demo />
         {/* <Views /> */}
         <Info />
         <Features />
         <AboutMobileResponsiveness />
-        <Demo />
+
         <Review />
         <Faq />
         <Pricing />
