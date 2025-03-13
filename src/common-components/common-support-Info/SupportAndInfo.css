@@ -12,10 +12,6 @@ section.supportandInfo .container {
   justify-content: center;
 }
 
-section.supportandInfo .section-text {
-  max-width: 500px;
-}
-
 section#support .container {
   height: 30vh;
 }

@@ -57,7 +57,10 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               )}
             </div>
           </motion.div>
-          <motion.div style={{ maxWidth: "50%" }} className="section-image">
+          <motion.div
+            style={{ maxWidth: version === "mobile" ? "unset" : "50%" }}
+            className="section-image"
+          >
             {id !== "info" ? (
               <LazyLoadImage
                 height={`100%`}
