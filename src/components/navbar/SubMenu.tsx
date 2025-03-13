@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./Navbar.css";
-import Slanted from "../../assets/imgs/views/subViews/thumbnail/Dynamic_Slant.webp";
+import ThumbnailsGeneralImg from "../../assets/imgs/views/menu_general_imgs/thumbnails.webp";
 interface subItem {
   title: string;
   description: string;
@@ -11,10 +13,11 @@ interface subItem {
 const SubMenu = ({ title, items, onClick, version }: any) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const [hoveredElement, setHoveredElement] = useState<subItem>({
-    title: "Title",
-    description: "Lorem Ipsum",
-    imgUrl: Slanted,
-    path: "https://regallery.team/core/reacg/dynamic-slant/",
+    title: "Thumbnails",
+    description: `The Thumbnails template in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
+Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-optimized and responsive WordPress photo gallery offers a fast and user-friendly browsing experience, improving site performance and ensuring smooth navigation across all devices.`,
+    imgUrl: ThumbnailsGeneralImg,
+    path: "#thumbnails",
   });
 
   const handleOpen = () => {
@@ -100,21 +103,28 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
 
           {version !== "mobile" && (
             <div className="submenu_demo">
-              <motion.div
-                key={hoveredElement.title}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={hoverAnimation}
-                className="submenu_demo_content"
-              >
-                <a href={hoveredElement.path}>
-                  <img src={hoveredElement.imgUrl} alt="aas" />
-                </a>
+              <LazyLoadComponent>
+                <motion.div
+                  key={hoveredElement.title}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={hoverAnimation}
+                  className="submenu_demo_content"
+                >
+                  <a href={hoveredElement.path}>
+                    <img
+                      width={300}
+                      height={221}
+                      src={hoveredElement.imgUrl}
+                      alt="aas"
+                    />
+                  </a>
 
-                <h3>{hoveredElement.title}</h3>
-                {/* <p>{hoveredElement.description}</p> */}
-              </motion.div>
+                  <h3>{hoveredElement.title}</h3>
+                  <p>{hoveredElement.description}</p>
+                </motion.div>
+              </LazyLoadComponent>
             </div>
           )}
           <div className="submenu_lists">
@@ -128,9 +138,22 @@ const SubMenu = ({ title, items, onClick, version }: any) => {
                     id="Outline"
                     viewBox="0 0 24 24"
                   >
-                    {val.path}
+                    {val.svgPath}
                   </svg>
-                  <a>{val.title}</a>
+                  <a
+                    {...(version !== "mobile" && {
+                      onMouseEnter: () =>
+                        handleHoverElement({
+                          title: val.title,
+                          description: val.description,
+                          imgUrl: val.imgUrl,
+                          path: val.path,
+                        }),
+                    })}
+                    href={val.path}
+                  >
+                    {val.title}
+                  </a>
                 </li>
 
                 {val.subItems.map((sutiItem: subItem, index: number) => {
