@@ -35,7 +35,7 @@ export const viewsDataSubMenu = [
     id: 1,
     title: "Thumbnails",
     imgUrl: ThumbnailsGeneralImg,
-    path: "#thumbnail",
+    idView: 420,
     description: `The Thumbnails template in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
 Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-optimized and responsive WordPress photo gallery offers a fast and user-friendly browsing experience, improving site performance and ensuring smooth navigation across all devices.`,
     svgPath: (
@@ -149,7 +149,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 2,
     title: "Mosaic",
     imgUrl: MosiacGeneralImg,
-    path: "#mosaic",
+    idView: 300,
     description:
       "The Mosaic View in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives, this responsive and SEO-friendly WordPress gallery layout enhances user experience, encourages exploration, and adapts flawlessly to all screen sizes for a stunning presentation.",
     svgPath: (
@@ -186,7 +186,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 3,
     title: "Masonry",
     imgUrl: MasnrycGeneralImg,
-    path: "#masonry",
+    idView: 717,
     description:
       "The Masonry View template in ReGallery presents your images in a stylish, grid-based layout with varying column heights, creating a visually dynamic and organized display. Perfect for photographers, bloggers, and eCommerce websites, this SEO-friendly and responsive WordPress photo gallery improves user experience, encourages longer browsing sessions, and adapts seamlessly across all devices.",
     svgPath: (
@@ -216,7 +216,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 4,
     title: "Slideshow",
     imgUrl: SlideShowGeneralImg,
-    path: "#slideshow",
+    idView: 624,
     description:
       "The Slideshow template in ReGallery provides a seamless, full-screen image viewing experience with smooth transitions, perfect for displaying high-quality images in an engaging and dynamic way. Ideal for photographers, artists, and businesses to show products. This SEO-friendly and responsive WordPress photo gallery ensures fast loading times and a smooth browsing experience across all devices, keeping visitors engaged and improving site performance.",
     svgPath: (
@@ -256,7 +256,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 5,
     title: "Cube",
     imgUrl: CubelGeneralImg,
-    path: "#cube",
+    idView: 696,
     description:
       "The Cube template in ReGallery offers a dynamic 3D cube effect that adds an interactive, engaging dimension to your image gallery. Perfect for creative professionals, eCommerce businesses, and photographers. This SEO-friendly and mobile-responsive WordPress photo gallery provides a unique way to show your visuals, while ensuring fast loading times and a smooth browsing experience on all devices.",
     svgPath: (
@@ -287,7 +287,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 6,
     title: "Carousel",
     imgUrl: CarouselGeneralImg,
-    path: "#carousel",
+    idView: 664,
     description:
       "The Carousel template in ReGallery offers a sleek, rotating image slider, allowing you to display multiple images in a compact and elegant way. Ideal for e-commerce websites, portfolios, and businesses looking to show products, services, or visuals in an interactive format. This SEO-friendly and responsive WordPress photo gallery ensures a seamless user experience on both mobile and desktop devices, enhancing engagement and improving site performance.",
     svgPath: (
@@ -325,7 +325,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     id: 7,
     title: "Cards",
     imgUrl: CardslGeneralImg,
-    path: "#cards",
+    idView: 708,
     description:
       "The Cards template in ReGallery presents images in a clean, organized grid layout with each image framed as a card, perfect for online stores, portfolios, and galleries. This SEO-optimized WordPress photo gallery offers a visually appealing and easy-to-navigate display, making it ideal for showing products, artwork, or services. With full mobile responsiveness, your gallery will look great on any device, ensuring a smooth user experience and improved site performance.",
     svgPath: (

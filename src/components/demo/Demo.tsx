@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { useDemoContext } from "../../contexts/DemoContext";
 import "./Demo.css";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { dataDemo } from "./demo-data";
 import { motion } from "framer-motion";
 const Demo: React.FC = () => {
+  const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
   const [isHeightReduced, setIsHeightReduced] = useState<boolean>(false);
   const [selectedIdForCLick, setSelectedIdForCLick] = useState<number>(420);
@@ -17,7 +19,6 @@ const Demo: React.FC = () => {
     (val) => val.idView === selectedIdView
   )?.demoPath;
 
-  console.log(selectedViewDesrciption, "desc");
   const handleButtonClick = (idView: number) => {
     if (idView === selectedIdView) return;
     setIsHeightReduced(true);
@@ -27,6 +28,16 @@ const Demo: React.FC = () => {
       setSelectedIdView(idView);
     }, 1000);
   };
+
+  useEffect(() => {
+    if (!selecteIdFromMenu) return;
+    setIsHeightReduced(true);
+    setSelectedIdForCLick(selecteIdFromMenu);
+    setTimeout(() => {
+      setIsHeightReduced(false);
+      setSelectedIdView(selecteIdFromMenu);
+    }, 1000);
+  }, [selecteIdFromMenu]);
 
   useEffect(() => {
     const addScriptsToBody = () => {
@@ -58,9 +69,6 @@ const Demo: React.FC = () => {
           if (entry.isIntersecting) {
             if (!scriptsAddedRef.current) {
               addScriptsToBody();
-              console.log("adding");
-            } else {
-              console.log("already have");
             }
           }
         });

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useDemoContext } from "../../contexts/DemoContext";
 import { motion } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -11,6 +12,7 @@ interface subItem {
   path: string;
 }
 const SubMenu = ({ title, items, onClick, version }: any) => {
+  const { setSelecteIdFromMenu } = useDemoContext();
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const [hoveredElement, setHoveredElement] = useState<subItem>({
     title: "Thumbnails",
@@ -57,7 +59,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     exit: {
       opacity: 0,
       transition: {
-        duration: 0.2, // Exit transition should be slightly faster for a smooth effect
+        duration: 0.2,
         ease: [0.1, 0, 0.3, 1],
       },
     },
@@ -141,6 +143,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                     {val.svgPath}
                   </svg>
                   <a
+                    onClick={() => setSelecteIdFromMenu(val.idView)}
                     {...(version !== "mobile" && {
                       onMouseEnter: () =>
                         handleHoverElement({
@@ -150,7 +153,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                           path: val.path,
                         }),
                     })}
-                    href={val.path}
+                    href="#demo"
                   >
                     {val.title}
                   </a>
