@@ -3,7 +3,7 @@ import "./Demo.css";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { dataDemo } from "./demo-data";
-
+import { motion } from "framer-motion";
 const Demo: React.FC = () => {
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
   const [isHeightReduced, setIsHeightReduced] = useState<boolean>(false);
@@ -16,6 +16,8 @@ const Demo: React.FC = () => {
   const selectedValueDenoPath = dataDemo.find(
     (val) => val.idView === selectedIdView
   )?.demoPath;
+
+  console.log(selectedViewDesrciption, "desc");
   const handleButtonClick = (idView: number) => {
     if (idView === selectedIdView) return;
     setIsHeightReduced(true);
@@ -113,8 +115,14 @@ const Demo: React.FC = () => {
               })}
             </div>
             <div className="demo_description">
-              <p>
-                {selectedViewDesrciption}
+              <motion.p>
+                <span
+                  className={`transition-opacity ${
+                    !isHeightReduced ? "visible" : ""
+                  }`}
+                >
+                  {selectedViewDesrciption}
+                </span>
                 <a href={selectedValueDenoPath} target="_blanck">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +131,12 @@ const Demo: React.FC = () => {
                     viewBox="0 0 24 24"
                     width="40"
                   >
-                    <g fill="#292d32">
+                    <g
+                      className={`transition-opacity ${
+                        !isHeightReduced ? "visible" : ""
+                      }`}
+                      fill="#292d32"
+                    >
                       <path
                         fill="#2540cc"
                         d="m12 22.75c-5.93 0-10.75-4.82-10.75-10.75s4.82-10.75 10.75-10.75 10.75 4.82 10.75 10.75-4.82 10.75-10.75 10.75zm0-20c-5.1 0-9.25 4.15-9.25 9.25s4.15 9.25 9.25 9.25 9.25-4.15 9.25-9.25-4.15-9.25-9.25-9.25z"
@@ -133,9 +146,10 @@ const Demo: React.FC = () => {
                         d="m10.7397 16.2802c-.19 0-.38-.07-.53-.22-.29001-.29-.29001-.77 0-1.06l3-3-3-3.00004c-.29001-.29-.29001-.77 0-1.06.29-.29.77-.29 1.06 0l3.53 3.53004c.29.29.29.77 0 1.06l-3.53 3.53c-.15.15-.34.22-.53.22z"
                       />
                     </g>
+                    )
                   </svg>
                 </a>
-              </p>
+              </motion.p>
             </div>
             <div className={`demo_live_conteiner`}>
               {dataDemo.map((val) => (
