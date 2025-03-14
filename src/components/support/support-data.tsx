@@ -5,7 +5,7 @@ import supportSmall from "../../assets/imgs/support-small.webp";
 const supportData: any = {
   title: "Contact us",
   text: `We are ready to help you 24/7.
-  In case you have any questions,suggestions,or if you've found a bug,please visit our`,
+  In case you have any questions, suggestions, or if you've found a bug, please visit our`,
   img: {
     imgBig: { img: supportImg, size: 832 },
     imgMiddle: { img: supportMiddle, size: 555 },
