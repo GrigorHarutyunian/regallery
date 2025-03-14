@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-// import useScrollPosition from "../../custom-hooks/useScrollPosition";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
@@ -49,6 +48,7 @@ const links: Link[] = [
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
+
   const version = windowWitdth.version;
 
   useEffect(() => {

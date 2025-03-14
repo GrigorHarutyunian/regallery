@@ -13,8 +13,8 @@ import Pricing from "./components/pricing/Pricing";
 import Banner from "./components/banner/Banner";
 import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
 import Demo from "./components/demo/Demo";
+import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
-import Views from "./components/views/Views";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -24,27 +24,28 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <WindowWidthProvider>
-      <Navbar />
-      <Banner />
-      <main
-        className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
-      >
-        <Hero />
-        <Demo />
-        <Views />
-        <Info />
-        <Features />
-        <AboutMobileResponsiveness />
+    <DemoProvider>
+      <WindowWidthProvider>
+        <Navbar />
+        <Banner />
+        <main
+          className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
+        >
+          <Hero />
+          <Demo />
+          <Info />
+          <Features />
+          <AboutMobileResponsiveness />
 
-        <Review />
-        <Faq />
-        <Pricing />
+          <Review />
+          <Faq />
+          <Pricing />
 
-        <Support />
-      </main>
-      <Footer />
-    </WindowWidthProvider>
+          <Support />
+        </main>
+        <Footer />
+      </WindowWidthProvider>
+    </DemoProvider>
   );
 };
 
