@@ -15,6 +15,7 @@ section.supportandInfo .container {
 section#support .container {
   height: 30vh;
 }
+
 .support__row {
   display: flex;
   justify-content: space-between;

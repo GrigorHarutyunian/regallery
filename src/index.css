@@ -56,6 +56,9 @@ footer {
   justify-content: space-around;
   padding: 30px 0;
 }
+.section-image {
+  display: inherit;
+}
 
 @media screen and (max-width: 700px) {
   .row {
@@ -121,7 +124,7 @@ p {
   }
   .section-text__body {
     font-size: 20px;
-    max-width: 480px;
+    max-width: 580px;
     margin: 30px 0;
   }
 
@@ -162,11 +165,6 @@ p {
   .section-image__small {
     margin-bottom: 25px;
   }
-
-  /* .section-image img {
-    display: inline;
-    max-width: 100%;
-  } */
 
   .hero-conteiner {
     flex-direction: column-reverse;

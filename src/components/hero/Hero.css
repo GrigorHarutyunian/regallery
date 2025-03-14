@@ -12,7 +12,7 @@
   font-size: 1.2rem;
   line-height: 36px;
   margin-top: 50px;
-  max-width: 481px;
+  max-width: 580px;
   margin-bottom: 50px;
   font-weight: 400;
 }
@@ -25,6 +25,9 @@
   max-width: 1320px;
 }
 
+.section-image {
+  display: inherit;
+}
 .section-text__title-big span {
   color: #0e4a70;
 }
