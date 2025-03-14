@@ -4,6 +4,7 @@ export const dataDemo = [
     title: "Thumbnails",
     description:
       "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
+    demoPath: "https://regallery.team/core/reacg/dynamic-slant/",
     path: (
       <>
         <path
@@ -31,6 +32,7 @@ export const dataDemo = [
     title: "Mosaic",
     description:
       "Create a collage-like presentation by mixing different sizes and shapes.",
+    demoPath: "https://regallery.team/core/reacg/monochrome-collection/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -44,6 +46,7 @@ export const dataDemo = [
     title: "Masonry",
     description:
       "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
+    demoPath: "https://regallery.team/core/reacg/infinite-scroll/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -57,6 +60,7 @@ export const dataDemo = [
     title: "Slideshow",
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content.",
+    demoPath: "https://regallery.team/core/reacg/overlay-slideshow/",
     path: (
       <>
         <path
@@ -80,6 +84,7 @@ export const dataDemo = [
     title: "Cube",
     description:
       "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
+    demoPath: "https://regallery.team/core/reacg/digital-shop/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -94,6 +99,7 @@ export const dataDemo = [
     title: "Carousel",
     description:
       "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
+    demoPath: "https://regallery.team/core/reacg/blinds-slider/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -108,6 +114,7 @@ export const dataDemo = [
     title: "Cards",
     description:
       "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
+    demoPath: "https://regallery.team/core/reacg/spotlight-ad/",
     path: (
       <path
         fill={"#ffffff91"}

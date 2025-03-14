@@ -14,6 +14,7 @@ import Banner from "./components/banner/Banner";
 import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
 import Demo from "./components/demo/Demo";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
+import Views from "./components/views/Views";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const App: React.FC = () => {
       >
         <Hero />
         <Demo />
-        {/* <Views /> */}
+        <Views />
         <Info />
         <Features />
         <AboutMobileResponsiveness />

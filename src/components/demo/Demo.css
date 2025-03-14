@@ -62,7 +62,7 @@
 }
 .demo_button span {
   color: #ffffff91;
-  font-size: 20px;
+  font-size: 1.4rem;
   opacity: 0;
   transform: translateY(5px);
   transition: all 0.3s ease;
@@ -97,6 +97,13 @@
 .demo_description p {
   height: 74px;
 }
+
+.demo_description p svg {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 @media screen and (max-width: 1060px) {
   .demo_button svg {
     height: 50px;
@@ -119,6 +126,11 @@
     font-size: 1rem;
     line-height: 2rem;
   }
+  .demo_description p svg {
+    height: 32px;
+    width: 32px;
+    vertical-align: bottom;
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 860px) {
@@ -129,34 +141,52 @@
     max-width: 700px;
     font-size: 1rem;
   }
+  .demo_description p svg {
+    height: 37px;
+    width: 37px;
+    vertical-align: bottom;
+  }
 }
 
 @media screen and (min-width: 701px) and (max-width: 799px) {
   .reduced-height {
-    max-height: 321px;
+    max-height: 280px;
   }
   .demo_description {
-    max-width: 700px;
+    max-width: 615px;
     font-size: 0.9rem;
     line-height: 1.8rem;
+    margin: 20px 15px;
   }
+
+  .demo_description p svg {
+    height: 29px;
+    width: 29px;
+    vertical-align: bottom;
+  }
+
   .demo_description p {
     height: 60px;
   }
 }
 
-@media screen and (min-width: 551px) and (max-width: 701px) {
+@media screen and (min-width: 551px) and (max-width: 700px) {
   .reduced-height {
-    max-height: 250px;
+    max-height: 265px;
   }
   .demo_description {
     max-width: 700px;
-    font-size: 0.7rem;
-    line-height: 1.3rem;
-    margin: 30px 15px;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin: 25px 15px;
   }
   .demo_description p {
-    height: 40px;
+    height: 64px;
+  }
+  .demo_description p svg {
+    height: 27px;
+    width: 27px;
+    vertical-align: middle;
   }
 }
 
@@ -188,7 +218,7 @@
 
 @media screen and (min-width: 505px) and (max-width: 550px) {
   .reduced-height {
-    max-height: 228px;
+    max-height: 258px;
   }
   .demo_description {
     max-width: 900px;
@@ -197,20 +227,31 @@
     margin: 25px 0px;
   }
   .demo_description p {
-    height: 40px;
+    height: 70px;
+  }
+  .demo_description p svg {
+    height: 27px;
+    width: 27px;
+    vertical-align: middle;
   }
 }
 
 @media screen and (max-width: 504px) {
   .reduced-height {
-    max-height: 313px;
+    max-height: 326px;
   }
   .demo_description p {
-    height: 57px;
+    height: 70px;
   }
   .demo_description {
     font-size: 0.7rem;
     line-height: 0.9rem;
     margin: 15px 0px;
+  }
+  .demo_description p svg {
+    margin-left: 5px;
+    height: 23px;
+    width: 23px;
+    vertical-align: middle;
   }
 }
