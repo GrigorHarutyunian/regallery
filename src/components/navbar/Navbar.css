@@ -154,7 +154,7 @@
   position: absolute;
   background: #000000;
   opacity: 0;
-
+  min-height: 785px;
   pointer-events: none;
   border-radius: 3px;
   display: flex;
@@ -199,13 +199,6 @@
   grid-row: span 3; /* This makes it taller */
 }
 
-/* Style list items */
-.submenu_lists li {
-  padding: 5px;
-  list-style: none;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
 .submenu_demo {
   flex: 0 0 27%;
   flex-direction: column;
@@ -229,6 +222,9 @@
 
 .submenu_demo p {
   color: #ffffffb4;
+  width: 300px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .submenu_lists ul {
@@ -245,6 +241,8 @@
 }
 
 .sub-menu__item a {
+  font-weight: 600;
+  font-size: 17px;
   padding-left: 13px;
   display: block;
   width: 100%;
@@ -287,6 +285,7 @@
   color: #ffffff;
   font-size: 20px;
   margin-bottom: 13px;
+  font-weight: 600;
 }
 
 .sub-menu__item {
@@ -330,6 +329,7 @@
     overflow: hidden;
     transition: max-height 1.3s ease;
     opacity: 1;
+    min-height: 0;
   }
 
   .dropdown-menu.open {
@@ -340,6 +340,17 @@
   .submenu_lists {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+  }
+  .dropdown-menu li {
+    font-weight: 300;
+    font-size: 17.6px;
+  }
+  .sub-menu__item a {
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .submenu_lists ul:nth-child(1) {
+    grid-row: auto;
   }
 }
 
