@@ -1,6 +1,7 @@
-.section-text {
+.section-text_cards {
   min-width: 0px;
   max-width: 1320px;
+  width: 100%;
 }
 
 .section-text__title {

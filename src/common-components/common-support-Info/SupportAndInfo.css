@@ -12,9 +12,9 @@ section.supportandInfo .container {
   justify-content: center;
 }
 
-section#support .container {
+/* section#support .container {
   height: 30vh;
-}
+} */
 
 .support__row {
   display: flex;

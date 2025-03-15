@@ -2,10 +2,11 @@
   text-decoration: none;
 }
 .pricing-cards {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
   gap: 35px;
+  justify-items: center;
 }
 .pricing-card {
   position: relative;
@@ -13,11 +14,12 @@
   flex-direction: column;
   text-align: center;
   margin: 12px 10px;
-  padding: 35px;
+  padding: 25px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0 lightgrey;
   transition: all 0.5s ease;
+  width: 79%;
 }
 .pricing-card:hover {
   box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
@@ -259,9 +261,7 @@
 
 @media screen and (max-width: 860px) {
   .pricing-cards {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
   }
   .pricing-card {
     max-width: 318px;

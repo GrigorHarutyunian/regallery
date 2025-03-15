@@ -10,7 +10,7 @@ const Services: React.FC = () => {
     <section id="review">
       <Container>
         <Row>
-          <div className="section-text">
+          <div className="section-text_cards">
             <h2 className="section-text__title-centered">
               What our clients are saying
             </h2>
