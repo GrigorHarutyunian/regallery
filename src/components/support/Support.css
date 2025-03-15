@@ -10,10 +10,7 @@ section.supportandInfo .container {
 }
 
 .contact_us_row {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 25%);
+  transform: translate(0%, 74px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
