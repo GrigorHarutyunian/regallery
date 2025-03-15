@@ -30,7 +30,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
   };
 
   const handleToggle = () => {
-    setOpenSubMenu(!open);
+    setOpenSubMenu(!openSubMenu);
   };
   const handleHoverElement = (item: subItem) => {
     setHoveredElement(item);
@@ -106,26 +106,28 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
           {version !== "mobile" && (
             <div className="submenu_demo">
               <LazyLoadComponent>
-                <motion.div
-                  key={hoveredElement.title}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={hoverAnimation}
-                  className="submenu_demo_content"
-                >
-                  <a href={hoveredElement.path} target="_blanck">
-                    <img
-                      width={300}
-                      height={221}
-                      src={hoveredElement.imgUrl}
-                      alt="aas"
-                    />
-                  </a>
+                {openSubMenu && (
+                  <motion.div
+                    key={hoveredElement.title}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    variants={hoverAnimation}
+                    className="submenu_demo_content"
+                  >
+                    <a href={hoveredElement.path} target="_blank">
+                      <img
+                        width={300}
+                        height={221}
+                        src={hoveredElement.imgUrl}
+                        alt="aas"
+                      />
+                    </a>
 
-                  <h3>{hoveredElement.title}</h3>
-                  <p>{hoveredElement.description}</p>
-                </motion.div>
+                    <h3>{hoveredElement.title}</h3>
+                    <p>{hoveredElement.description}</p>
+                  </motion.div>
+                )}
               </LazyLoadComponent>
             </div>
           )}
