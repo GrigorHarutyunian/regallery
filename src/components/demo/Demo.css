@@ -77,6 +77,7 @@
 }
 .reacg-gallery.hidden {
   display: none;
+  width: 100%;
 }
 .reacg-gallery.active {
   display: block;

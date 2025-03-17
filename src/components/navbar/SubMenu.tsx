@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useDemoContext } from "../../contexts/DemoContext";
 import { motion } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -21,6 +21,57 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: ThumbnailsGeneralImg,
     path: "#thumbnails",
   });
+  const [isDemoScrolling, setIsDemoScrolling] = useState(false);
+  const listRef = useRef<HTMLDivElement | null>(null);
+  const demoRef = useRef<HTMLDivElement | null>(null);
+
+  const handleListScroll = () => {
+    if (listRef.current) {
+      const isAtBottom =
+        listRef.current.scrollHeight ===
+        listRef.current.scrollTop + listRef.current.clientHeight;
+
+      if (isAtBottom && !isDemoScrolling) {
+        setIsDemoScrolling(true);
+      }
+    }
+  };
+
+  const handleDemoScroll = (event: WheelEvent) => {
+    if (demoRef.current && isDemoScrolling) {
+      demoRef.current.scrollTop += event.deltaY;
+      event.preventDefault();
+    }
+  };
+
+  const handleBackToListScroll = () => {
+    if (demoRef.current && isDemoScrolling) {
+      if (demoRef.current.scrollTop === 0) {
+        setIsDemoScrolling(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.addEventListener("wheel", handleListScroll);
+    }
+
+    if (isDemoScrolling) {
+      document.addEventListener("wheel", handleDemoScroll, { passive: false });
+      document.addEventListener("wheel", handleBackToListScroll, {
+        passive: false,
+      });
+    }
+
+    return () => {
+      if (listRef.current) {
+        listRef.current.removeEventListener("wheel", handleListScroll);
+      }
+      document.removeEventListener("wheel", handleDemoScroll);
+      document.removeEventListener("wheel", handleBackToListScroll);
+    };
+  }, [isDemoScrolling]);
 
   const handleOpen = () => {
     setOpenSubMenu(true);
@@ -99,37 +150,39 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
             // handleClose();
             onClick();
           }}
-          className={`dropdown-menu open`}
+          className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
         >
           <div className="dropdown-menu_child">
             {version !== "mobile" && (
-              <div className="submenu_demo">
+              <div className="submenu_demo" ref={demoRef}>
                 <LazyLoadComponent>
-                  <motion.div
-                    key={hoveredElement.title}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    variants={hoverAnimation}
-                    className="submenu_demo_content"
-                  >
-                    <a href={hoveredElement.path} target="_blank">
-                      <img
-                        width={300}
-                        height={221}
-                        src={hoveredElement.imgUrl}
-                        alt="aas"
-                      />
-                    </a>
+                  {openSubMenu && (
+                    <motion.div
+                      key={hoveredElement.title}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={hoverAnimation}
+                      className="submenu_demo_content"
+                    >
+                      <a href={hoveredElement.path} target="_blank">
+                        <img
+                          width={300}
+                          height={221}
+                          src={hoveredElement.imgUrl}
+                          alt="aas"
+                        />
+                      </a>
 
-                    <h3>{hoveredElement.title}</h3>
-                    <p>{hoveredElement.description}</p>
-                  </motion.div>
+                      <h3>{hoveredElement.title}</h3>
+                      <p>{hoveredElement.description}</p>
+                    </motion.div>
+                  )}
                 </LazyLoadComponent>
               </div>
             )}
 
-            <div className="submenu_lists">
+            <div className="submenu_lists" ref={listRef}>
               {items.map((val: any, i: any) => (
                 <ul key={i}>
                   <li key={val.id} className="sub-menu__categori-name">

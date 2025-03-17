@@ -156,7 +156,7 @@
   opacity: 0;
   pointer-events: none;
   border-radius: 3px;
-  visibility: hidden;
+
   right: 50%;
   margin-top: 5px;
   width: 100%;
@@ -167,19 +167,18 @@
 }
 
 .dropdown-menu.open {
-  visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
 .dropdown-menu.open::before {
   content: "1212";
   display: block;
-  height: 35px;
+  height: 5px;
   left: 0;
   position: absolute;
   right: 0;
-  top: -35px;
-  background: red;
+  top: -5px;
+  background: #ff000000;
 }
 .dropdown-menu_child {
   display: flex;
@@ -191,8 +190,6 @@
   align-items: flex-start;
   display: flex;
   min-height: 300px;
-  overflow-x: initial;
-  overflow-y: auto;
   max-height: calc(100vh - 120px - 0.01px - 10px);
   clip-path: inset(0 round 8px);
   -webkit-clip-path: inset(0 round 8px);
@@ -208,6 +205,7 @@
   padding: 20px;
   width: 100%;
 }
+
 .submenu_lists {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
@@ -217,6 +215,10 @@
   width: 100%;
   align-items: start;
   position: relative;
+  overflow-x: initial;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px - 0.01px - 10px);
+  scrollbar-width: none;
 }
 
 .submenu_lists ul {
@@ -229,13 +231,15 @@
 }
 
 .submenu_demo {
-  flex: 0 0 27%;
+  flex: 0 0 350px;
   align-self: stretch;
   padding: 20px;
   background-color: #1d1d1d;
   position: relative;
-  overflow: hidden;
   max-height: calc(100vh - 120px - 0.01px - 10px);
+  overflow-x: initial;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .submenu_demo_content {
@@ -246,11 +250,12 @@
   right: 0;
   left: 0;
   position: absolute;
-  max-height: calc(100vh - 120px - 0.01px - 10px);
+  padding-bottom: 20px;
 }
 
 .submenu_demo h3 {
   font-size: 20px;
+  margin-top: 25px;
 }
 
 .submenu_demo p {
@@ -258,6 +263,7 @@
   width: 300px;
   font-size: 18px;
   line-height: 27px;
+  margin-top: 10px;
 }
 
 .submenu_lists ul {
@@ -348,8 +354,8 @@
   .submenu_demo_content {
     height: 48vh;
   }
-  .dropdown-menu_child {
-    flex-direction: column;
+  .submenu_demo {
+    display: none;
   }
 }
 
@@ -364,6 +370,9 @@
     min-height: 0;
   }
 
+  .dropdown-menu_child {
+    overflow: hidden;
+  }
   .dropdown-menu.open {
     max-height: 10000px;
     transition: max-height 1.3s ease;
@@ -372,6 +381,7 @@
   .submenu_lists {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    max-height: none;
   }
   .dropdown-menu li {
     font-weight: 300;
@@ -464,7 +474,6 @@
     display: flex;
     flex-direction: column;
   } */
-
   .nav-open {
     height: 100vh;
     position: sticky;
