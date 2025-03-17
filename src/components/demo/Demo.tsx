@@ -175,7 +175,7 @@ const Demo: React.FC = () => {
                 >
                   {selectedViewDesrciption}
                 </span>
-                <a href={selectedValueDemoPath} target="_blanck">
+                <a href={selectedValueDemoPath} target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
