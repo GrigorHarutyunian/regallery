@@ -99,7 +99,8 @@ const Navbar: React.FC = () => {
               <a
                 key={link.id}
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevents double execution
+                  e.stopPropagation();
+                  console.log("Nav link clicked:", link.title);
                   setMenuOpen(!menuOpen);
                 }}
                 className={"nav-link"}
@@ -124,6 +125,7 @@ const Navbar: React.FC = () => {
           className={"nav-menu__icon"}
           onClick={(e) => {
             e.stopPropagation(); // Prevents triggering other click events
+            console.log("Menu icon clicked");
             setMenuOpen(!menuOpen);
           }}
         >
