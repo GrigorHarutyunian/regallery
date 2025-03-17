@@ -1,10 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
-import WindowWidthContext from "../../contexts/WindowWidthContext";
 
 interface Link {
   id: number;
@@ -47,12 +46,9 @@ const links: Link[] = [
 ("Get unlimited access to the pre-built templates for less than$2/month.");
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const windowWitdth = useContext(WindowWidthContext);
 
-  const version = windowWitdth.version;
-
+  console.log(menuOpen);
   useEffect(() => {
-    if (version !== "mobile") return;
     if (!menuOpen) {
       document.body.style.overflowY = "auto";
     } else {
@@ -86,23 +82,15 @@ const Navbar: React.FC = () => {
             link.type === "menu" ? (
               <SubMenu
                 key={link.id}
-                onClick={(e: any) => {
-                  e.stopPropagation();
-                  setMenuOpen(!menuOpen);
-                }}
+                onClick={() => setMenuOpen(!menuOpen)}
                 title={link.title}
                 items={link.subMenuItems}
                 href={link.href}
-                version={version}
               />
             ) : (
               <a
                 key={link.id}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  console.log("Nav link clicked:", link.title);
-                  setMenuOpen(!menuOpen);
-                }}
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={"nav-link"}
                 href={link.href}
                 target={link.target}
@@ -123,11 +111,7 @@ const Navbar: React.FC = () => {
         </nav>
         <div
           className={"nav-menu__icon"}
-          onClick={(e) => {
-            e.stopPropagation(); // Prevents triggering other click events
-            console.log("Menu icon clicked");
-            setMenuOpen(!menuOpen);
-          }}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <div />
           <div />
