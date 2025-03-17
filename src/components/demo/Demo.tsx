@@ -15,7 +15,7 @@ const Demo: React.FC = () => {
   const selectedViewDesrciption = dataDemo.find(
     (val) => val.idView === selectedIdView
   )?.description;
-  const selectedValueDenoPath = dataDemo.find(
+  const selectedValueDemoPath = dataDemo.find(
     (val) => val.idView === selectedIdView
   )?.demoPath;
 
@@ -88,7 +88,6 @@ const Demo: React.FC = () => {
   // }, []);
 
   useEffect(() => {
-    console.log("as11111");
     const handleInitialScroll = () => {
       if (!scriptsAddedRef.current) {
         // Add your scripts on the first scroll
@@ -176,7 +175,7 @@ const Demo: React.FC = () => {
                 >
                   {selectedViewDesrciption}
                 </span>
-                <a href={selectedValueDenoPath} target="_blanck">
+                <a href={selectedValueDemoPath} target="_blanck">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

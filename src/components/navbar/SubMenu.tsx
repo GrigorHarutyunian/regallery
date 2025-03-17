@@ -99,14 +99,12 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
             // handleClose();
             onClick();
           }}
-          className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
+          className={`dropdown-menu open`}
         >
-          <div className="empty__space"></div>
-
-          {version !== "mobile" && (
-            <div className="submenu_demo">
-              <LazyLoadComponent>
-                {openSubMenu && (
+          <div className="dropdown-menu_child">
+            {version !== "mobile" && (
+              <div className="submenu_demo">
+                <LazyLoadComponent>
                   <motion.div
                     key={hoveredElement.title}
                     initial="hidden"
@@ -127,69 +125,70 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                     <h3>{hoveredElement.title}</h3>
                     <p>{hoveredElement.description}</p>
                   </motion.div>
-                )}
-              </LazyLoadComponent>
-            </div>
-          )}
-          <div className="submenu_lists">
-            {items.map((val: any, i: any) => (
-              <ul key={i}>
-                <li key={val.id} className="sub-menu__categori-name">
-                  <svg
-                    height={16}
-                    width={16}
-                    style={{ marginRight: "10px" }}
-                    id="Outline"
-                    viewBox="0 0 24 24"
-                  >
-                    {val.svgPath}
-                  </svg>
-                  <a
-                    onClick={() => setSelecteIdFromMenu(val.idView)}
-                    {...(version !== "mobile" && {
-                      onMouseEnter: () =>
-                        handleHoverElement({
-                          title: val.title,
-                          description: val.description,
-                          imgUrl: val.imgUrl,
-                          path: val.path,
-                        }),
-                    })}
-                    href="#demo"
-                  >
-                    {val.title}
-                  </a>
-                </li>
+                </LazyLoadComponent>
+              </div>
+            )}
 
-                {val.subItems.map((sutiItem: subItem, index: number) => {
-                  return (
-                    <li
-                      key={index}
-                      {...(version !== "mobile" && {
-                        onMouseEnter: () => handleHoverElement(sutiItem),
-                      })}
-                      className="sub-menu__item"
+            <div className="submenu_lists">
+              {items.map((val: any, i: any) => (
+                <ul key={i}>
+                  <li key={val.id} className="sub-menu__categori-name">
+                    <svg
+                      height={16}
+                      width={16}
+                      style={{ marginRight: "10px" }}
+                      id="Outline"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        id="Bold"
-                        viewBox="0 0 24 24"
-                        height={16}
-                        width={16}
+                      {val.svgPath}
+                    </svg>
+                    <a
+                      onClick={() => setSelecteIdFromMenu(val.idView)}
+                      {...(version !== "mobile" && {
+                        onMouseEnter: () =>
+                          handleHoverElement({
+                            title: val.title,
+                            description: val.description,
+                            imgUrl: val.imgUrl,
+                            path: val.path,
+                          }),
+                      })}
+                      href="#demo"
+                    >
+                      {val.title}
+                    </a>
+                  </li>
+
+                  {val.subItems.map((sutiItem: subItem, index: number) => {
+                    return (
+                      <li
+                        key={index}
+                        {...(version !== "mobile" && {
+                          onMouseEnter: () => handleHoverElement(sutiItem),
+                        })}
+                        className="sub-menu__item"
                       >
-                        <path
-                          fill="#ffffff"
-                          d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
-                        />
-                      </svg>
-                      <a href={sutiItem.path} target="_blanck">
-                        {sutiItem.title}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            ))}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="Bold"
+                          viewBox="0 0 24 24"
+                          height={16}
+                          width={16}
+                        >
+                          <path
+                            fill="#ffffff"
+                            d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+                          />
+                        </svg>
+                        <a href={sutiItem.path} target="_blanck">
+                          {sutiItem.title}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ))}
+            </div>
           </div>
         </div>
       }
