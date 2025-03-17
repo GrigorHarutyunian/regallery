@@ -488,8 +488,6 @@
     background: transparent;
   }
 
-  /* When content overflows, scrollbar thumb turns red */
-
   .nav-open.show-scroll::-webkit-scrollbar-thumb {
     background: #67676700;
     border-radius: 35px;

@@ -147,7 +147,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
       {
         <div
           onClick={() => {
-            handleClose();
+            // handleClose();
             onClick();
           }}
           className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
