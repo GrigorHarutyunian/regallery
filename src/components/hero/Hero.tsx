@@ -31,10 +31,30 @@ const Hero: React.FC = () => {
         <Row>
           <motion.div className="hero-conteiner">
             <motion.div className="home-text">
-              <h1 className="section-text__title ">
+              <h1
+                style={{
+                  fontSize: "50px",
+                  maxWidth: "530px",
+                  fontWeight: "700",
+                  lineHeight: "1.2",
+                  color: "#000000",
+                }}
+                // className="section-text__title "
+              >
                 The Intuitive <br></br> Photo Gallery Plugin
               </h1>
-              <p className="section-text__body">
+              <p
+                style={{
+                  color: "#000000aa",
+                  fontSize: "1.2rem",
+                  lineHeight: "36px",
+                  marginTop: "50px",
+                  maxWidth: "580px",
+                  marginBottom: "50px",
+                  fontWeight: "400",
+                }}
+                // className="section-text__body"
+              >
                 The WordPress photo gallery plugin is your ideal solution for
                 easily building stunning, mobile-friendly galleries in just
                 minutes.
