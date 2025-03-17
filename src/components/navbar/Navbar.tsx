@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
@@ -50,19 +50,19 @@ const Navbar: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
 
   const version = windowWitdth.version;
+  console.log(menuOpen, "opeeen!!!");
+  // useEffect(() => {
+  //   if (version !== "mobile") return;
+  //   if (!menuOpen) {
+  //     document.body.style.overflowY = "auto";
+  //   } else {
+  //     document.body.style.overflowY = "hidden";
+  //   }
 
-  useEffect(() => {
-    if (version !== "mobile") return;
-    if (!menuOpen) {
-      document.body.style.overflowY = "auto";
-    } else {
-      document.body.style.overflowY = "hidden";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [menuOpen]);
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [menuOpen]);
 
   return (
     <div
