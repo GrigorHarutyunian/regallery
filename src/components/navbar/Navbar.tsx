@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
   const version = useMemo(() => windowWitdth.version, [windowWitdth.version]);
-  console.log(menuOpen);
+
   useEffect(() => {
     if (version !== "mobile") return;
     if (!menuOpen) {
