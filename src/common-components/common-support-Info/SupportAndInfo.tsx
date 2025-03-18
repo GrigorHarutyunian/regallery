@@ -50,7 +50,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                 <a
                   className="download-btn watch_video"
                   href="https://wordpress.org/plugins/regallery/?preview=1"
-                  target="__blank"
+                  target="_blank"
                 >
                   PREVIEW ADMIN
                 </a>

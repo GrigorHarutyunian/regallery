@@ -11,7 +11,7 @@ interface subItem {
   imgUrl: string;
   path: string;
 }
-const SubMenu = ({ title, items, onClick, version }: any) => {
+const SubMenu = ({ title, items, version, onClick }: any) => {
   const { setSelecteIdFromMenu } = useDemoContext();
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const [hoveredElement, setHoveredElement] = useState<subItem>({
@@ -54,7 +54,9 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
 
   useEffect(() => {
     if (listRef.current) {
-      listRef.current.addEventListener("wheel", handleListScroll);
+      listRef.current.addEventListener("wheel", handleListScroll, {
+        passive: true,
+      });
     }
 
     if (isDemoScrolling) {
@@ -120,10 +122,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     <div
       onMouseEnter={handleOpen}
       onMouseLeave={handleClose}
-      onClick={handleToggle}
       className="subMenu-nav-link"
     >
-      <a href={"#views"} id="fade-button" className={"nav-link"}>
+      <a
+        href={"#views"}
+        id="fade-button"
+        onClick={handleToggle}
+        className={"nav-link"}
+      >
         <div className={"nav-link__text"}>
           {title}
           <svg
@@ -145,13 +151,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
         <div className={"nav-link__background"} />
       </a>
       {
-        <div
-          onClick={() => {
-            // handleClose();
-            onClick();
-          }}
-          className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
-        >
+        <div className={`dropdown-menu ${openSubMenu ? "open" : ""}`}>
           <div className="dropdown-menu_child">
             {version !== "mobile" && (
               <div className="submenu_demo" ref={demoRef}>
@@ -196,16 +196,27 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                       {val.svgPath}
                     </svg>
                     <a
-                      onClick={() => setSelecteIdFromMenu(val.idView)}
-                      {...(version !== "mobile" && {
-                        onMouseEnter: () =>
-                          handleHoverElement({
-                            title: val.title,
-                            description: val.description,
-                            imgUrl: val.imgUrl,
-                            path: val.path,
-                          }),
-                      })}
+                      {...(version === "mobile"
+                        ? {
+                            onClick: () => {
+                              onClick();
+                              handleToggle();
+                              setSelecteIdFromMenu(val.idView);
+                            },
+                          }
+                        : {
+                            onMouseEnter: () =>
+                              handleHoverElement({
+                                title: val.title,
+                                description: val.description,
+                                imgUrl: val.imgUrl,
+                                path: val.path,
+                              }),
+                            onClick: () => {
+                              handleToggle();
+                              setSelecteIdFromMenu(val.idView);
+                            },
+                          })}
                       href="#demo"
                     >
                       {val.title}

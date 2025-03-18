@@ -175,7 +175,12 @@ const Demo: React.FC = () => {
                 >
                   {selectedViewDesrciption}
                 </span>
-                <a href={selectedValueDemoPath} target="_blank">
+                <a
+                  href={selectedValueDemoPath}
+                  target="_blank"
+                  title="View more"
+                  aria-label="View more"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -198,7 +203,6 @@ const Demo: React.FC = () => {
                         d="m10.7397 16.2802c-.19 0-.38-.07-.53-.22-.29001-.29-.29001-.77 0-1.06l3-3-3-3.00004c-.29001-.29-.29001-.77 0-1.06.29-.29.77-.29 1.06 0l3.53 3.53004c.29.29.29.77 0 1.06l-3.53 3.53c-.15.15-.34.22-.53.22z"
                       />
                     </g>
-                    )
                   </svg>
                 </a>
               </motion.p>

@@ -93,10 +93,10 @@ const Navbar: React.FC = () => {
             ) : (
               <a
                 key={link.id}
-                onClick={() => setMenuOpen(!menuOpen)}
                 className={"nav-link"}
                 href={link.href}
                 target={link.target}
+                onClick={() => setMenuOpen(!menuOpen)}
               >
                 {link.type === "button" ? (
                   <DownloadBtn
