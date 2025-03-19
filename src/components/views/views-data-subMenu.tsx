@@ -36,8 +36,8 @@ export const viewsDataSubMenu = [
     title: "Thumbnails",
     imgUrl: ThumbnailsGeneralImg,
     idView: 420,
-    description: `The Thumbnails template in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
-Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-optimized and responsive WordPress photo gallery offers a fast and user-friendly browsing experience, improving site performance and ensuring smooth navigation across all devices.`,
+    description: `The Thumbnails view in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
+Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     svgPath: (
       <>
         <path
@@ -151,7 +151,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: MosiacGeneralImg,
     idView: 300,
     description:
-      "The Mosaic View in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives, this responsive and SEO-friendly WordPress gallery layout enhances user experience, encourages exploration, and adapts flawlessly to all screen sizes for a stunning presentation.",
+      "The Mosaic View in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -188,7 +188,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: MasnrycGeneralImg,
     idView: 717,
     description:
-      "The Masonry View template in ReGallery presents your images in a stylish, grid-based layout with varying column heights, creating a visually dynamic and organized display. Perfect for photographers, bloggers, and eCommerce websites, this SEO-friendly and responsive WordPress photo gallery improves user experience, encourages longer browsing sessions, and adapts seamlessly across all devices.",
+      "The Masonry view in ReGallery presents your images in a stylish, grid-based layout with varying column heights, creating a visually dynamic and organized display. Perfect for photographers, bloggers, and eCommerce websites.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -218,7 +218,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: SlideShowGeneralImg,
     idView: 624,
     description:
-      "The Slideshow template in ReGallery provides a seamless, full-screen image viewing experience with smooth transitions, perfect for displaying high-quality images in an engaging and dynamic way. Ideal for photographers, artists, and businesses to show products. This SEO-friendly and responsive WordPress photo gallery ensures fast loading times and a smooth browsing experience across all devices, keeping visitors engaged and improving site performance.",
+      "The Slideshow view  provides a seamless, full-screen image viewing experience , perfect for displaying high-quality images. Ideal for photographers, artists, and businesses to show products.",
     svgPath: (
       <>
         <path
@@ -239,14 +239,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
       {
         title: "Overlay Slideshow",
         description:
-          "The Overlay Slideshow template in ReGallery offers an elegant way to display your images with a stylish overlay effect, allowing for a more immersive experience. Perfect for photographers, designers, and businesses looking to show their photos in a unique and interactive manner.",
+          "The Overlay Slideshow template in ReGallery offers an elegant way to display your images with a stylish overlay effect, allowing for a more immersive experience. Perfect for photographers, designers, and businesses.",
         imgUrl: OverlaySlideshow,
         path: "https://regallery.team/core/reacg/overlay-slideshow/",
       },
       {
         title: "Focus Frame",
         description:
-          "The Focus Frame template in ReGallery highlights each image with a clean, cinematic framing effect, providing a distraction-free, immersive viewing experience. Ideal for photographers, artists, and businesses looking to present their visuals in a striking and professional manner.",
+          "The Focus Frame template highlights each image with a clean, cinematic framing effect, providing a distraction-free, immersive viewing experience. Ideal for photographers, artists, and businesses.",
         imgUrl: FocusFrame1,
         path: "https://regallery.team/core/reacg/focus-frame/",
       },
@@ -258,7 +258,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: CubelGeneralImg,
     idView: 696,
     description:
-      "The Cube template in ReGallery offers a dynamic 3D cube effect that adds an interactive, engaging dimension to your image gallery. Perfect for creative professionals, eCommerce businesses, and photographers. This SEO-friendly and mobile-responsive WordPress photo gallery provides a unique way to show your visuals, while ensuring fast loading times and a smooth browsing experience on all devices.",
+      "The Cube view in ReGallery offers a dynamic 3D cube effect that adds an interactive, engaging dimension to your image gallery. Perfect for creative professionals, eCommerce businesses, and photographers.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -276,7 +276,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
       {
         title: "Testimonial Gallery",
         description:
-          "​​The Testimonial Gallery template in ReGallery allows you to display customer reviews and testimonials in a visually appealing and organized grid layout. Perfect for businesses, service providers, freelancers, and agencies.",
+          "​​The Testimonial Gallery template allows you to display customer reviews and testimonials in a visually appealing and organized grid layout. Perfect for businesses, service providers, freelancers, and agencies.",
         imgUrl: TestimonialGallery,
         path: "https://regallery.team/core/reacg/testimonial-gallery/",
       },
@@ -289,7 +289,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: CarouselGeneralImg,
     idView: 664,
     description:
-      "The Carousel template in ReGallery offers a sleek, rotating image slider, allowing you to display multiple images in a compact and elegant way. Ideal for e-commerce websites, portfolios, and businesses looking to show products, services, or visuals in an interactive format. This SEO-friendly and responsive WordPress photo gallery ensures a seamless user experience on both mobile and desktop devices, enhancing engagement and improving site performance.",
+      "The Carousel view offers a sleek, rotating image slider, allowing you to display multiple images in a compact and elegant way. Ideal for e-commerce websites, portfolios, and businesses looking to show products, services, or visuals in an interactive format.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -327,7 +327,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
     imgUrl: CardslGeneralImg,
     idView: 708,
     description:
-      "The Cards template in ReGallery presents images in a clean, organized grid layout with each image framed as a card, perfect for online stores, portfolios, and galleries. This SEO-optimized WordPress photo gallery offers a visually appealing and easy-to-navigate display, making it ideal for showing products, artwork, or services. With full mobile responsiveness, your gallery will look great on any device, ensuring a smooth user experience and improved site performance.",
+      "The Cards view in ReGallery presents images in a clean, organized grid layout with each image framed as a card, perfect for online stores, portfolios, and galleries.",
     svgPath: (
       <path
         fill={"#ffffffff"}

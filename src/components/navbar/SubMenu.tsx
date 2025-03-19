@@ -17,7 +17,7 @@ const SubMenu = ({ title, items, version, onClick }: any) => {
   const [hoveredElement, setHoveredElement] = useState<subItem>({
     title: "Thumbnails",
     description: `The Thumbnails template in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
-Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-optimized and responsive WordPress photo gallery offers a fast and user-friendly browsing experience, improving site performance and ensuring smooth navigation across all devices.`,
+Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: ThumbnailsGeneralImg,
     path: "#thumbnails",
   });
