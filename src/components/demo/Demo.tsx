@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 const Demo: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
-  const [isHeightReduced, setIsHeightReduced] = useState<boolean>(false);
-  const [selectedIdForCLick, setSelectedIdForCLick] = useState<number>(420);
+
   const sectionRef = useRef<HTMLOptionElement | null>(null);
   const scriptsAddedRef = useRef<boolean>(false);
   const selectedViewDesrciption = dataDemo.find(
@@ -21,22 +20,14 @@ const Demo: React.FC = () => {
 
   const handleButtonClick = (idView: number) => {
     if (idView === selectedIdView) return;
-    setIsHeightReduced(true);
-    setSelectedIdForCLick(idView);
-    setTimeout(() => {
-      setIsHeightReduced(false);
-      setSelectedIdView(idView);
-    }, 1000);
+
+    setSelectedIdView(idView);
   };
 
   useEffect(() => {
     if (!selecteIdFromMenu) return;
-    setIsHeightReduced(true);
-    setSelectedIdForCLick(selecteIdFromMenu);
-    setTimeout(() => {
-      setIsHeightReduced(false);
-      setSelectedIdView(selecteIdFromMenu);
-    }, 1000);
+
+    setSelectedIdView(selecteIdFromMenu);
   }, [selecteIdFromMenu]);
 
   // useEffect(() => {
@@ -132,11 +123,7 @@ const Demo: React.FC = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      id="demo"
-      className={isHeightReduced ? "reduced-height" : "not-reduced-height"}
-    >
+    <section ref={sectionRef} id="demo">
       <Container>
         <Row>
           <div className="demo_columns_content">
@@ -147,7 +134,7 @@ const Demo: React.FC = () => {
                   <button
                     onClick={() => handleButtonClick(val.idView)}
                     className={`demo_button${
-                      selectedIdForCLick === val.idView
+                      selectedIdView === val.idView
                         ? " demo_selectedButton"
                         : ""
                     }`}
@@ -168,13 +155,7 @@ const Demo: React.FC = () => {
             </div>
             <div className="demo_description">
               <motion.p>
-                <span
-                  className={`transition-opacity ${
-                    !isHeightReduced ? "visible" : ""
-                  }`}
-                >
-                  {selectedViewDesrciption}
-                </span>
+                <span>{selectedViewDesrciption}</span>
                 <a
                   href={selectedValueDemoPath}
                   target="_blank"
@@ -188,12 +169,7 @@ const Demo: React.FC = () => {
                     viewBox="0 0 24 24"
                     width="40"
                   >
-                    <g
-                      className={`transition-opacity ${
-                        !isHeightReduced ? "visible" : ""
-                      }`}
-                      fill="#292d32"
-                    >
+                    <g fill="#292d32">
                       <path
                         fill="#2540cc"
                         d="m12 22.75c-5.93 0-10.75-4.82-10.75-10.75s4.82-10.75 10.75-10.75 10.75 4.82 10.75 10.75-4.82 10.75-10.75 10.75zm0-20c-5.1 0-9.25 4.15-9.25 9.25s4.15 9.25 9.25 9.25 9.25-4.15 9.25-9.25-4.15-9.25-9.25-9.25z"
