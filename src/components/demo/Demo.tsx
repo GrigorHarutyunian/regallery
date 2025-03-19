@@ -79,11 +79,10 @@ const Demo: React.FC = () => {
   // }, []);
 
   useEffect(() => {
-    const handleInitialScroll = () => {
+    const handleInitialInteraction = () => {
       if (!scriptsAddedRef.current) {
-        // Add your scripts on the first scroll
+        // Add your scripts on the first interaction
         const addScriptsToBody = () => {
-          console.log("asdasdasd");
           const script1 = document.createElement("script");
           script1.id = "reacg_thumbnails-js-extra";
           script1.innerHTML = `
@@ -109,16 +108,34 @@ const Demo: React.FC = () => {
         addScriptsToBody();
       }
 
-      // Remove the scroll event listener after the first scroll
-      window.removeEventListener("scroll", handleInitialScroll);
+      // Remove all event listeners after the first interaction
+      eventTypes.forEach((event) => {
+        window.removeEventListener(event, handleInitialInteraction);
+      });
     };
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleInitialScroll);
+    const eventTypes = [
+      "scroll",
+      "mousemove",
+      "click",
+      "keydown",
+      "wheel",
+      "touchmove",
+      "touchend",
+    ];
 
-    // Cleanup function to remove the listener when the component unmounts
+    // Attach event listeners
+    eventTypes.forEach((event) => {
+      window.addEventListener(event, handleInitialInteraction, {
+        passive: true,
+      });
+    });
+
+    // Cleanup function to remove the listeners when the component unmounts
     return () => {
-      window.removeEventListener("scroll", handleInitialScroll);
+      eventTypes.forEach((event) => {
+        window.removeEventListener(event, handleInitialInteraction);
+      });
     };
   }, []);
 
