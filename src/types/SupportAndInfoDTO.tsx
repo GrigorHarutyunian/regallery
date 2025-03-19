@@ -6,5 +6,6 @@ export default interface SupportAndInfoDTO {
   height: number;
   sizes: string;
   alt: string;
+  video?: any;
   img?: any;
 }

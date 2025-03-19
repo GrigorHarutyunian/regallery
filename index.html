@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="Improve your WordPress site with ReGallery. Create responsive photo galleries easily. Perfect for photographers looking for the best WordPress gallery plugin."
     />
     <meta property="og:title" content="WordPress Photo Gallery Plugin" />
-    <meta property="og:description" content="Improve your WordPress site with ReGallery. Create responsive photo galleries easily. Perfect for photographers looking for the best WordPress gallery plugin." />
-    <meta property="og:image" content="https://regallery.team/assets/open_graph_logo.png" />
-    <meta property="og:url" content="https://regallery.team">
+    <meta
+      property="og:description"
+      content="Improve your WordPress site with ReGallery. Create responsive photo galleries easily. Perfect for photographers looking for the best WordPress gallery plugin."
+    />
+    <meta
+      property="og:image"
+      content="https://regallery.team/assets/open_graph_logo.png"
+    />
+    <meta property="og:url" content="https://regallery.team" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="WordPress Photo Gallery Plugin" />
     <link rel="canonical" href="https://regallery.team" />
@@ -22,11 +29,51 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;display=swap"
+    /></noscript>
+    <style>
+      .section-text__title {
+        font-size: 50px;
+        max-width: 530px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #000000;
+        font-family: "Lexend", sans-serif;
+      }
+      .section-text__body {
+        color: #000000aa;
+        font-size: 1.2rem;
+        line-height: 36px;
+        margin-top: 50px;
+        max-width: 580px;
+        margin-bottom: 50px;
+        font-weight: 400;
+        font-family: "Lexend", sans-serif;
+      }
+
+      @media screen and (min-width: 0px) and (max-width: 965px) {
+        .section-text__title {
+          font-size: 35px;
+          max-width: 500px;
+          font-family: "Lexend", sans-serif;
+        }
+        .section-text__body {
+          font-size: 20px;
+          max-width: 580px;
+          margin: 30px 0;
+          font-family: "Lexend", sans-serif;
+        }
+      }
+    </style>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -55,6 +102,7 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <script type="module" src="/src/main.tsx"></script>
+
+    <script defer type="module" src="/src/main.tsx"></script>
   </body>
 </html>

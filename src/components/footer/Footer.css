@@ -5,14 +5,14 @@ footer > .container {
 }
 
 .footer-text__title {
-  color: #0e4a70;
+  color: #ffffffff;
   font-size: 17px;
   font-weight: 400;
 }
 
 .row__social-website {
   width: 100%;
-  max-width: 1105px;
+  max-width: 1320px;
   display: flex;
   justify-content: space-between;
   /* flex-direction: column; */

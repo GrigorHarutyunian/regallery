@@ -1,11 +1,10 @@
-import { useState } from "react";
-// import useScrollPosition from "../../custom-hooks/useScrollPosition";
+import { useState, useEffect, useContext, useMemo } from "react";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
-
+import WindowWidthContext from "../../contexts/WindowWidthContext";
 interface Link {
   id: number;
   title: string;
@@ -47,6 +46,21 @@ const links: Link[] = [
 ("Get unlimited access to the pre-built templates for less than$2/month.");
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const windowWitdth = useContext(WindowWidthContext);
+  const version = useMemo(() => windowWitdth.version, [windowWitdth.version]);
+
+  useEffect(() => {
+    if (version !== "mobile") return;
+    if (!menuOpen) {
+      document.body.style.overflowY = "auto";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <div
@@ -74,14 +88,15 @@ const Navbar: React.FC = () => {
                 title={link.title}
                 items={link.subMenuItems}
                 href={link.href}
+                version={version}
               />
             ) : (
               <a
                 key={link.id}
-                onClick={() => setMenuOpen(!menuOpen)}
                 className={"nav-link"}
                 href={link.href}
                 target={link.target}
+                onClick={() => setMenuOpen(!menuOpen)}
               >
                 {link.type === "button" ? (
                   <DownloadBtn

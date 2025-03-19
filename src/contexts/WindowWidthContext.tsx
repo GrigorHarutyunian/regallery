@@ -24,7 +24,7 @@ export const WindowWidthProvider: React.FC<{ children: ReactNode }> = ({
     const handleResize = () => {
       const width = window.innerWidth;
       setVersion((prevVersion) => {
-        if (width < 700 && prevVersion !== "mobile") return "mobile";
+        if (width <= 700 && prevVersion !== "mobile") return "mobile";
         if (width >= 701 && width < 1100 && prevVersion !== "mid") return "mid";
         if (width >= 1100 && prevVersion !== "other") return "other";
         return prevVersion;

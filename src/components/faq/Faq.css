@@ -13,7 +13,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 40px;
-  color: #0e4a70;
+  color: #000000;
 }
 
 .accordion__title {
@@ -22,11 +22,11 @@
   line-height: 1.2;
   margin-top: 10px;
   margin-bottom: 8px;
-  color: #0e4a70;
+  color: #000000;
 }
 
 .accordion__description {
-  color: #39465c;
+  color: #000000aa;
   font-size: 1rem;
   line-height: 26px;
   margin-bottom: 15px;
@@ -34,12 +34,12 @@
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-  color: #0e4a70;
+  color: #000000;
 }
 
 .accordions {
   width: 100%;
-  max-width: 1105px;
+  max-width: 1320px;
 }
 
 @media screen and (max-width: 700px) {

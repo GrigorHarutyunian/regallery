@@ -1,45 +1,247 @@
-/* section {
-  background: red;
-} */
+#demo {
+  overflow: hidden;
+}
+.not-reduced-height {
+  height: auto;
+  overflow: hidden;
+}
 
 .demo_columns_content {
-  flex-direction: column;
-
-  align-items: center;
+  min-width: 0px;
+  width: 100%;
+  max-width: 1320px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding: 30px 0;
+  flex-direction: column;
 }
 
 .demo_buttons_rows {
   display: flex;
-  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .demo_live_conteiner {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  max-width: 1105px;
-  align-items: center;
-  border: 1px solid rgb(8, 2, 2);
-}
-#demo {
-  background: rgb(239, 243, 246);
-  background: linear-gradient(
-    180deg,
-    rgba(239, 243, 246, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
+.demo_button {
+  cursor: pointer;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #000000aa;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.demo_button svg path {
+  transition: all 0.3s ease;
+}
+.demo_button:hover path {
+  fill: #ffffffff;
+}
+.demo_selectedButton path {
+  fill: #ffffffff;
+}
+
+.demo_button:hover span {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.demo_button span {
+  color: #ffffff91;
+  font-size: 1.4rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+.demo_selectedButton span {
+  transform: translate(0px);
+  opacity: 1;
+  color: #ffffffff;
+}
 .btn_demo {
   background-color: #dde7ed;
+}
+.reacg-gallery.hidden {
+  visibility: hidden;
+  position: absolute;
+  right: -2000px;
+  width: 100%;
 }
 
 .btn_demo_selected {
   background-color: #a7c95700;
+}
+
+.demo_description {
+  color: #ffffffff;
+  text-align: center;
+  max-width: 900px;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  margin: 40px 15px;
+}
+.demo_description p {
+  height: 74px;
+}
+
+.demo_description p svg {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 1060px) {
+  .demo_button svg {
+    height: 50px;
+    width: 50px;
+  }
+  .demo_button span {
+    font-size: 18px;
+  }
+  /* .reduced-height {
+    max-height: 342px;
+  } */
+}
+
+@media screen and (min-width: 861px) and (max-width: 965px) {
+  /* .reduced-height {
+    max-height: 424px;
+  } */
+  .demo_description {
+    max-width: 900px;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+  .demo_description p svg {
+    height: 32px;
+    width: 32px;
+    vertical-align: bottom;
+  }
+  .demo_description p {
+    height: 106px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 860px) {
+  /* .reduced-height {
+    max-height: 380px;
+  } */
+  .demo_description {
+    max-width: 615px;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  .demo_description p svg {
+    height: 37px;
+    width: 37px;
+    vertical-align: bottom;
+  }
+  .demo_description p {
+    height: 106px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 700px) {
+  /* .reduced-height {
+    max-height: 350px;
+  } */
+  .demo_description {
+    max-width: 615px;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  .demo_description p svg {
+    height: 37px;
+    width: 37px;
+    vertical-align: bottom;
+  }
+  .demo_description p {
+    height: 106px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .demo_description {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    margin: 10px 15px;
+  }
+  .demo_button span {
+    font-size: 16px;
+  }
+  .demo_buttons_rows {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    flex-flow: wrap;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .demo_button svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 549px) and (max-width: 639px) {
+  /* .reduced-height {
+    max-height: 263px;
+  } */
+
+  .demo_description p svg {
+    height: 34px;
+    width: 34px;
+    vertical-align: middle;
+  }
+  .demo_description p {
+    height: 93px;
+  }
+}
+
+@media screen and (min-width: 495px) and (max-width: 548px) {
+  /* .reduced-height {
+    max-height: 364px;
+  } */
+
+  .demo_description p svg {
+    height: 34px;
+    width: 34px;
+    vertical-align: middle;
+  }
+  .demo_description p {
+    height: 93px;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  /* .reduced-height {
+    max-height: 355px;
+  } */
+  .demo_description {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    margin: 10px 0px;
+    font-weight: 300;
+  }
+
+  .demo_description p svg {
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+  }
+  .demo_description p {
+    height: 85px;
+  }
+  .demo_description p svg {
+    margin-left: 2px;
+  }
 }

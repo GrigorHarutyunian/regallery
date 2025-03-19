@@ -26,8 +26,16 @@ main.closed-banner {
   transition: all 0.8s ease;
 }
 
-main > *:nth-child(even) {
-  background-color: #eff3f6 !important;
+main > section#views,
+section#features,
+section#review,
+section#pricing,
+section#support {
+  background-color: #eee !important;
+}
+
+main > section#demo {
+  background-color: #000000 !important;
 }
 
 section {
@@ -39,14 +47,17 @@ section {
 }
 
 footer {
-  padding: 25px;
-  background-color: #eff3f6;
+  padding: 150px 25px 25px;
+  background-color: #1d1d1d;
 }
 
 .row {
   display: flex;
   justify-content: space-around;
   padding: 30px 0;
+}
+.section-image {
+  display: inherit;
 }
 
 @media screen and (max-width: 700px) {
@@ -107,21 +118,21 @@ p {
   .section-text__title-big {
     font-size: 3rem;
   }
-  .section-text__title {
+  /* .section-text__title {
     font-size: 35px;
     max-width: 500px;
   }
   .section-text__body {
     font-size: 20px;
-    max-width: 480px;
+    max-width: 580px;
     margin: 30px 0;
-  }
+  } */
 
   .section-text__title-small {
     font-size: 20px;
   }
   section[id] {
-    padding: 25px 15px;
+    padding: 25px 25px;
   }
 }
 
@@ -135,9 +146,15 @@ p {
 @media screen and (max-width: 700px) {
   .section-text {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .home-text {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   section {
@@ -149,11 +166,6 @@ p {
     margin-bottom: 25px;
   }
 
-  /* .section-image img {
-    display: inline;
-    max-width: 100%;
-  } */
-
   .hero-conteiner {
     flex-direction: column-reverse;
   }
@@ -164,13 +176,13 @@ p {
 
 .watch_video {
   margin-left: 20px;
-  background-color: #eff3f6;
-  border: 1px solid #0e4a70;
+  background-color: #ffffff;
+  border: 1px solid #000000;
   padding: 15px 22px;
-  color: #0e4a70;
+  color: #000000;
 }
 .watch_video:hover {
-  background-color: #d6dce2;
+  background-color: #ddd;
 }
 .buttons-container {
   display: flex;
@@ -206,5 +218,12 @@ p {
   .watch_video {
     margin-left: 0;
     margin-top: 20px;
+  }
+
+  section#support .download-btn {
+    font-size: 0.6rem;
+  }
+  .contact_us_row {
+    padding: 50px;
   }
 }

@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   left: 0;
-  background-color: #eff3f6;
+  background-color: #ffffff;
   color: #39465c;
   transition: all 0.8s ease;
   transform: translateY(0);
@@ -32,8 +32,12 @@
 }
 
 .nav-banner-content a {
-  color: #0e4a70;
+  color: #000000;
   text-decoration: underline;
+  transition: all 0.3s;
+}
+.nav-banner-content a:hover {
+  color: #2540cc;
 }
 /* nav-baner-content-left {
       display: flex;
@@ -50,6 +54,11 @@
   padding: 0px 40px;
   align-items: center;
 }
+
+.nav-banner-content-left p {
+  color: #000000aa;
+}
+
 @media screen and (max-width: 900px) {
   .nav-banner-content {
     justify-content: flex-start;

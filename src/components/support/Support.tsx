@@ -1,47 +1,33 @@
 import React from "react";
-import { useContext } from "react";
-import WindowWidthContext from "../../contexts/WindowWidthContext";
-import SupportAndInfo from "../../common-components/common-support-Info/SupportAndInfo";
+import { Container } from "react-bootstrap";
 import supportData from "./support-data";
-
+import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import "./Support.css";
 const Support: React.FC = () => {
-  const parts = supportData.text.split("Support Forum.");
-
-  const windowWitdth = useContext(WindowWidthContext);
-  const version = windowWitdth.version;
-  const width = version === "mobile" ? 208 : version === "mid" ? 277 : 416;
-  const ration = 555 / 548;
-  const height = Math.round(width / ration);
-
+  let text = supportData.text.split("24/7.");
   return (
-    <SupportAndInfo
-      title={supportData.title}
-      text={
-        <>
-          {parts[0]}
-          <a
-            style={{
-              color: "#0e4a70",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-            }}
-            href="https://wordpress.org/support/plugin/regallery/"
-            target="_blank"
-          >
-            Support Forum.
-          </a>
-          <br></br>
-          {parts[1]}
-        </>
-      }
-      width={width}
-      height={height}
-      id={"support"}
-      img={supportData.img}
-      sizes={supportData.sizes}
-      alt={supportData.alt}
-    />
+    <section id={"support"} className="supportandInfo">
+      <Container>
+        <div className="contact_us_row">
+          <h2 className="section-text__title">{supportData.title}</h2>
+          <p className="section-text__body contact_us">
+            <>
+              {text[0]} 24/7.
+              <br />
+              {text[1]}
+            </>
+          </p>
+          <div className="buttons-container contact_us_buttons_container">
+            <a
+              href="https://wordpress.org/support/plugin/regallery/"
+              target="_blank"
+            >
+              <DownloadBtn className="download-btn" version={"support"} />
+            </a>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 };
 

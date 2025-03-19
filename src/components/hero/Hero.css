@@ -7,24 +7,28 @@
   max-width: 600px;
 }
 
-.section-text__body {
-  color: #39465c;
+/* .section-text__body {
+  color: #000000aa;
   font-size: 1.2rem;
   line-height: 36px;
   margin-top: 50px;
-  max-width: 481px;
+  max-width: 580px;
   margin-bottom: 50px;
   font-weight: 400;
-}
+} */
 
 .hero-conteiner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1105px;
+  max-width: 1320px;
+  gap: 10px;
 }
 
+.section-image {
+  display: inherit;
+}
 .section-text__title-big span {
   color: #0e4a70;
 }

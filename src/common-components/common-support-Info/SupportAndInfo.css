@@ -1,7 +1,9 @@
 section.supportandInfo {
   position: relative;
-  height: 60vh;
+
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 section.supportandInfo .container {
@@ -10,16 +12,17 @@ section.supportandInfo .container {
   justify-content: center;
 }
 
-section.supportandInfo .section-text {
-  max-width: 500px;
-}
+/* section#support .container {
+  height: 30vh;
+} */
 
 .support__row {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1105px;
+  max-width: 1320px;
   align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 1200px) {

@@ -2,21 +2,24 @@
   text-decoration: none;
 }
 .pricing-cards {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 35px;
+  justify-items: center;
 }
 .pricing-card {
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 12px 15px;
-  padding: 35px;
+  margin: 12px 10px;
+  padding: 25px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0 lightgrey;
   transition: all 0.5s ease;
+  width: 79%;
 }
 .pricing-card:hover {
   box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
@@ -26,7 +29,7 @@
   border-bottom: 2px solid #f4f4f4;
 }
 .pricing-card__title {
-  color: #0e4a70;
+  color: #000000;
   font-size: 50px;
   font-weight: 600;
 }
@@ -35,7 +38,7 @@
   font-size: 40%;
 }
 .pricing-card__subtitle {
-  color: #39465c;
+  color: #000000aa;
   font-size: 24px;
   font-weight: 300;
   display: block;
@@ -46,13 +49,13 @@
 .pricing__text {
   text-align: center;
   max-width: 300px;
-  color: #39465c75;
+  color: #000000aa;
   margin-bottom: 0;
   height: 67px;
 }
 .canceled-price {
   min-height: 24px;
-  color: #0e4a70;
+  color: #000000;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 19px;
@@ -76,9 +79,9 @@
 }
 
 .saved_money_div {
-  color: #57667e;
+  color: #000000;
   display: block;
-  background-color: #dbff4075;
+  background-color: #eeeeee;
   padding: 9px 28px;
   max-width: 100px;
   margin: auto;
@@ -93,7 +96,7 @@
 }
 .pricing-card__features__list {
   margin: 10px 0px;
-  color: #39465c;
+  color: #000000;
   font-weight: 300;
   font-size: 17px;
 }
@@ -104,7 +107,7 @@
   margin-top: 24px;
   position: relative;
   text-decoration: none;
-  background-color: #a7c957;
+  background-color: #2540cc;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
@@ -115,8 +118,15 @@
   transition: all 0.2s linear;
   width: 100%;
 }
+.pricing-card__btn_starter {
+  background-color: #000000;
+}
+
+.pricing-card__btn_starter:hover {
+  background-color: #323232;
+}
 .pricing-card__btn:hover {
-  background-color: #8fb348;
+  filter: brightness(1.1);
 }
 
 .pricing-card__duration {
@@ -128,7 +138,7 @@
   height: 26px;
   font-size: 11px;
   font-weight: 300;
-  color: #39465c;
+  color: #000000aa;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -251,9 +261,7 @@
 
 @media screen and (max-width: 860px) {
   .pricing-cards {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
   }
   .pricing-card {
     max-width: 318px;

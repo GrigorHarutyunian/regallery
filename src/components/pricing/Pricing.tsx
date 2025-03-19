@@ -6,7 +6,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing">
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="section-text">
+        <div className="section-text_cards">
           <h2 className="section-text__title-centered ">Pre-built templates</h2>
 
           <div className="pricing-cards">
