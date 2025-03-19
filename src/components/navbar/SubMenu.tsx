@@ -156,26 +156,28 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
             {version !== "mobile" && (
               <div className="submenu_demo" ref={demoRef}>
                 <LazyLoadComponent>
-                  <motion.div
-                    key={hoveredElement.title}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    variants={hoverAnimation}
-                    className="submenu_demo_content"
-                  >
-                    <a href={hoveredElement.path} target="_blank">
-                      <img
-                        width={300}
-                        height={221}
-                        src={hoveredElement.imgUrl}
-                        alt="aas"
-                      />
-                    </a>
+                  {openSubMenu && (
+                    <motion.div
+                      key={hoveredElement.title}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={hoverAnimation}
+                      className="submenu_demo_content"
+                    >
+                      <a href={hoveredElement.path} target="_blank">
+                        <img
+                          width={300}
+                          height={221}
+                          src={hoveredElement.imgUrl}
+                          alt="aas"
+                        />
+                      </a>
 
-                    <h3>{hoveredElement.title}</h3>
-                    <p>{hoveredElement.description}</p>
-                  </motion.div>
+                      <h3>{hoveredElement.title}</h3>
+                      <p>{hoveredElement.description}</p>
+                    </motion.div>
+                  )}
                 </LazyLoadComponent>
               </div>
             )}
@@ -186,7 +188,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                   <li key={val.id} className="sub-menu__categori-name">
                     <svg
                       height={16}
-                      width={16}
+                      width={20}
                       style={{ marginRight: "10px" }}
                       id="Outline"
                       viewBox="0 0 24 24"
@@ -235,7 +237,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs. This SEO-op
                           id="Bold"
                           viewBox="0 0 24 24"
                           height={16}
-                          width={16}
+                          width={20}
                         >
                           <path
                             fill="#ffffff"
