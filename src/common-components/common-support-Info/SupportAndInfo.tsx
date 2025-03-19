@@ -27,21 +27,40 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           <motion.div className="section-text">
             <h2 className="section-text__title">{title}</h2>
             <p className="section-text__body">{text}</p>
-            {version === "mobile" && id === "info" && (
-              <motion.div className="section-image">
-                <LazyLoadComponent>
-                  <video
-                    height={`100%`}
-                    width={`100%`}
-                    src={video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
-                </LazyLoadComponent>
+            {version === "mobile" && (
+              <motion.div
+                className="section-image"
+                style={
+                  id === "aboutMobileResponsiveness"
+                    ? { maxWidth: "unset" }
+                    : undefined
+                }
+              >
+                {id === "info" ? (
+                  <LazyLoadComponent>
+                    <video
+                      height="100%"
+                      width="100%"
+                      src={video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  </LazyLoadComponent>
+                ) : (
+                  id === "aboutMobileResponsiveness" && (
+                    <LazyLoadImage
+                      height="100%"
+                      width="100%"
+                      src={img}
+                      alt={alt}
+                    />
+                  )
+                )}
               </motion.div>
             )}
+
             <div className="buttons-container">
               <a href="#pricing">
                 <DownloadBtn className="download-btn" />
@@ -61,19 +80,14 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             style={{ maxWidth: version === "mobile" ? "unset" : "50%" }}
             className="section-image"
           >
-            {id !== "info" ? (
-              <LazyLoadImage
-                height={`100%`}
-                width={`100%`}
-                src={img}
-                alt={alt}
-              />
-            ) : (
-              version !== "mobile" && (
+            {version !== "mobile" &&
+              (id !== "info" ? (
+                <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
+              ) : (
                 <LazyLoadComponent>
                   <video
-                    height={`100%`}
-                    width={`100%`}
+                    height="100%"
+                    width="100%"
                     src={video}
                     autoPlay
                     loop
@@ -81,8 +95,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                     playsInline
                   />
                 </LazyLoadComponent>
-              )
-            )}
+              ))}
           </motion.div>
         </motion.div>
       </Container>
