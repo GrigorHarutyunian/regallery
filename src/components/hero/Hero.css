@@ -7,7 +7,7 @@
   max-width: 600px;
 }
 
-.section-text__body {
+/* .section-text__body {
   color: #000000aa;
   font-size: 1.2rem;
   line-height: 36px;
@@ -15,7 +15,7 @@
   max-width: 580px;
   margin-bottom: 50px;
   font-weight: 400;
-}
+} */
 
 .hero-conteiner {
   display: flex;
@@ -23,6 +23,7 @@
   align-items: center;
   width: 100%;
   max-width: 1320px;
+  gap: 10px;
 }
 
 .section-image {

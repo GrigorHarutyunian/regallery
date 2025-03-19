@@ -118,7 +118,7 @@ p {
   .section-text__title-big {
     font-size: 3rem;
   }
-  .section-text__title {
+  /* .section-text__title {
     font-size: 35px;
     max-width: 500px;
   }
@@ -126,7 +126,7 @@ p {
     font-size: 20px;
     max-width: 580px;
     margin: 30px 0;
-  }
+  } */
 
   .section-text__title-small {
     font-size: 20px;
