@@ -96,7 +96,9 @@ const Navbar: React.FC = () => {
                 className={"nav-link"}
                 href={link.href}
                 target={link.target}
-                onClick={() => setMenuOpen(!menuOpen)}
+                {...(version === "mobile" && {
+                  onClick: () => setMenuOpen(!menuOpen),
+                })}
               >
                 {link.type === "button" ? (
                   <DownloadBtn
