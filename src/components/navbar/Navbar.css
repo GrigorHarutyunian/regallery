@@ -62,7 +62,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.nav-link:hover .nav-link__background {
+  width: 100%;
+}
 .submenu {
   font-size: 1.1rem;
   display: flex;

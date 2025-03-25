@@ -1,3 +1,7 @@
+#reacg-root420 .MuiGrid-container {
+  display: none;
+}
+
 #demo {
   overflow: hidden;
 }

@@ -151,7 +151,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: MosiacGeneralImg,
     idView: 300,
     description:
-      "The Mosaic View in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives.",
+      "The Mosaic view in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives.",
     svgPath: (
       <path
         fill={"#ffffffff"}
