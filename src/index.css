@@ -23,7 +23,7 @@ main.closed-banner {
 }
 
 .closed-banner {
-  transition: all 0.8s ease;
+  transition: top 0.8s ease;
 }
 
 main > section#views,
