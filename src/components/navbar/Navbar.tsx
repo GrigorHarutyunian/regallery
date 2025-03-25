@@ -48,17 +48,19 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
   const version = useMemo(() => windowWitdth.version, [windowWitdth.version]);
-
   useEffect(() => {
     if (version !== "mobile") return;
-    if (!menuOpen) {
-      document.body.style.overflowY = "auto";
-    } else {
+
+    const prevOverflow = document.body.style.overflowY;
+
+    if (menuOpen) {
       document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = prevOverflow;
     };
   }, [menuOpen, version]);
 

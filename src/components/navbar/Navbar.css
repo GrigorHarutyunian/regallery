@@ -497,7 +497,9 @@
     width: 15px;
     background-color: #272727;
   }
-
+  .nav-open {
+    -webkit-overflow-scrolling: touch;
+  }
   .nav-open::-webkit-scrollbar-thumb {
     background: transparent;
   }
