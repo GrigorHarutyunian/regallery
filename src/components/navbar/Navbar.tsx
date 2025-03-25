@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [menuOpen]);
+  }, [menuOpen, version]);
 
   return (
     <div
