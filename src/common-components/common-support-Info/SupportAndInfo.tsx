@@ -76,12 +76,9 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               )}
             </div>
           </motion.div>
-          <motion.div
-            style={{ maxWidth: version === "mobile" ? "unset" : "50%" }}
-            className="section-image"
-          >
-            {version !== "mobile" &&
-              (id !== "info" ? (
+          {version !== "mobile" && (
+            <motion.div style={{ maxWidth: "50%" }} className="section-image">
+              {id !== "info" ? (
                 <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
               ) : (
                 <LazyLoadComponent>
@@ -95,8 +92,9 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                     playsInline
                   />
                 </LazyLoadComponent>
-              ))}
-          </motion.div>
+              )}
+            </motion.div>
+          )}
         </motion.div>
       </Container>
     </section>
