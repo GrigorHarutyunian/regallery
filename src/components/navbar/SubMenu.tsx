@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { useDemoContext } from "../../contexts/DemoContext";
 import { motion } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -118,6 +118,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     },
   };
 
+  const splitItems = (items: any[]) => [
+    [items[0]],
+    [items[1], items[3], items[5]],
+    [items[2], items[4], items[6], items[items.length - 1]],
+  ];
+
+  const itemGroups = useMemo(() => splitItems(items), [items]);
+
   return (
     <div
       onMouseEnter={handleOpen}
@@ -183,74 +191,76 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
             )}
 
             <div className="submenu_lists" ref={listRef}>
-              {items.map((val: any, i: any) => (
-                <ul key={i}>
-                  <li key={val.id} className="sub-menu__categori-name">
-                    <svg
-                      height={16}
-                      width={20}
-                      style={{ marginRight: "10px" }}
-                      id="Outline"
-                      viewBox="0 0 24 24"
-                    >
-                      {val.svgPath}
-                    </svg>
-                    <a
-                      {...(version === "mobile"
-                        ? {
-                            onClick: () => {
-                              onClick();
-                              handleToggle();
-                              setSelecteIdFromMenu(val.idView);
-                            },
-                          }
-                        : {
-                            onMouseEnter: () =>
-                              handleHoverElement({
-                                title: val.title,
-                                description: val.description,
-                                imgUrl: val.imgUrl,
-                                path: val.path,
-                              }),
-                            onClick: () => {
-                              handleToggle();
-                              setSelecteIdFromMenu(val.idView);
-                            },
-                          })}
-                      href="#demo"
-                    >
-                      {val.title}
-                    </a>
-                  </li>
-
-                  {val.subItems.map((sutiItem: subItem, index: number) => {
-                    return (
-                      <li
-                        key={index}
-                        {...(version !== "mobile" && {
-                          onMouseEnter: () => handleHoverElement(sutiItem),
-                        })}
-                        className="sub-menu__item"
-                      >
+              {itemGroups.map((group, groupIdx) => (
+                <div key={groupIdx} className="submenu_column">
+                  {group.map((val: any, i: number) => (
+                    <ul key={val.id || i}>
+                      <li className="sub-menu__categori-name">
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          id="Bold"
-                          viewBox="0 0 24 24"
                           height={16}
                           width={20}
+                          style={{ marginRight: "10px" }}
+                          id="Outline"
+                          viewBox="0 0 24 24"
                         >
-                          <path
-                            fill="#ffffff"
-                            d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
-                          />
+                          {val.svgPath}
                         </svg>
-                        <a href={sutiItem.path} target="_blank">
-                          {sutiItem.title}
+                        <a
+                          {...(version === "mobile"
+                            ? {
+                                onClick: () => {
+                                  onClick();
+                                  handleToggle();
+                                  setSelecteIdFromMenu(val.idView);
+                                },
+                              }
+                            : {
+                                onMouseEnter: () =>
+                                  handleHoverElement({
+                                    title: val.title,
+                                    description: val.description,
+                                    imgUrl: val.imgUrl,
+                                    path: val.path,
+                                  }),
+                                onClick: () => {
+                                  handleToggle();
+                                  setSelecteIdFromMenu(val.idView);
+                                },
+                              })}
+                          href="#demo"
+                        >
+                          {val.title}
                         </a>
                       </li>
-                    );
-                  })}
-                </ul>
+
+                      {val.subItems.map((sutiItem: subItem, index: number) => (
+                        <li
+                          key={index}
+                          {...(version !== "mobile" && {
+                            onMouseEnter: () => handleHoverElement(sutiItem),
+                          })}
+                          className="sub-menu__item"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            id="Bold"
+                            viewBox="0 0 24 24"
+                            height={16}
+                            width={20}
+                          >
+                            <path
+                              fill="#ffffff"
+                              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+                            />
+                          </svg>
+                          <a href={sutiItem.path} target="_blank">
+                            {sutiItem.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
