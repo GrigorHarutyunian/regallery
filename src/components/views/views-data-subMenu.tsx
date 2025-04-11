@@ -362,14 +362,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
-        title: "About Us template",
+        title: "About Us",
         description:
           "The About Us template is perfect for introducing your team, sharing your brand journey, or highlighting your mission, this layout helps you connect with your audience visually and meaningfully.",
         imgUrl: AboutUsTemplate,
         path: "https://regallery.team/core/reacg/about-us/",
       },
       {
-        title: "Travel Blog template",
+        title: "Travel Blog",
         description:
           "The Travel Blog template is ideal for sharing your adventures, travel tips, and stunning destinations. This layout helps you captivate your audience with immersive visuals and engaging stories that bring your journeys to life.",
         imgUrl: TravelBlogTemplate,

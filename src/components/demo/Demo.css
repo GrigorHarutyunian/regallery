@@ -182,8 +182,9 @@
     font-size: 16px;
   }
   .demo_buttons_rows {
-    display: flex;
+    display: grid;
     width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-evenly;
     padding: 20px;
     flex-flow: wrap;
@@ -247,5 +248,11 @@
   }
   .demo_description p svg {
     margin-left: 2px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .demo_buttons_rows {
+    display: flex;
   }
 }
