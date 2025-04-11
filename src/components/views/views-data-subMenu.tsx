@@ -30,6 +30,9 @@ import SlideShowGeneralImg from "../../assets/imgs/views/menu_general_imgs/slide
 import CubelGeneralImg from "../../assets/imgs/views/menu_general_imgs/cube.webp";
 import CarouselGeneralImg from "../../assets/imgs/views/menu_general_imgs/carousel.webp";
 import CardslGeneralImg from "../../assets/imgs/views/menu_general_imgs/cards.webp";
+import BlogGeneralImg from "../../assets/imgs/views/menu_general_imgs/blog.webp";
+import AboutUsTemplate from "../../assets/imgs/views/subViews/blog/AboutUs.webp";
+import TravelBlogTemplate from "../../assets/imgs/views/subViews/blog/TravelBlog.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -341,6 +344,36 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Spotlight Ad template in ReGallery is designed to highlight key content or products with a bold, focused display. Perfect for businesses, eCommerce stores, and advertisers.",
         imgUrl: SpotlightAd,
         path: "https://regallery.team/core/reacg/spotlight-ad/",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Blog",
+    imgUrl: BlogGeneralImg,
+    idView: 858,
+    description:
+      "The Blog View in ReGallery lets you showcase images or videos with detailed descriptions and clickable buttons. Perfect for bloggers, eCommerce shop owners, content creators who want to tell a story, highlight products, or guide visitors to take the next step.",
+    svgPath: (
+      <path
+        fill={"#ffffffff"}
+        d="M19,2H5C2.24,2,0,4.24,0,7v10c0,2.76,2.24,5,5,5h14c2.76,0,5-2.24,5-5V7c0-2.76-2.24-5-5-5ZM5,4h14c1.65,0,3,1.35,3,3H2c0-1.65,1.35-3,3-3Zm14,16H5c-1.65,0-3-1.35-3-3V9H22v8c0,1.65-1.35,3-3,3ZM10,12c0,.55-.45,1-1,1h-1v4c0,.55-.45,1-1,1s-1-.45-1-1v-4h-1c-.55,0-1-.45-1-1s.45-1,1-1h4c.55,0,1,.45,1,1Zm10,0c0,.55-.45,1-1,1h-6c-.55,0-1-.45-1-1s.45-1,1-1h6c.55,0,1,.45,1,1Zm0,4c0,.55-.45,1-1,1h-6c-.55,0-1-.45-1-1s.45-1,1-1h6c.55,0,1,.45,1,1Z"
+      />
+    ),
+    subItems: [
+      {
+        title: "About Us template",
+        description:
+          "The About Us template is perfect for introducing your team, sharing your brand journey, or highlighting your mission, this layout helps you connect with your audience visually and meaningfully.",
+        imgUrl: AboutUsTemplate,
+        path: "https://regallery.team/core/reacg/about-us/",
+      },
+      {
+        title: "Travel Blog template",
+        description:
+          "The Travel Blog template is ideal for sharing your adventures, travel tips, and stunning destinations. This layout helps you captivate your audience with immersive visuals and engaging stories that bring your journeys to life.",
+        imgUrl: TravelBlogTemplate,
+        path: "https://regallery.team/core/reacg/travel-blog/",
       },
     ],
   },

@@ -184,7 +184,7 @@
   .demo_buttons_rows {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 20px;
     flex-flow: wrap;
     align-items: center;
