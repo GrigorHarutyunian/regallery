@@ -64,6 +64,55 @@ const Navbar: React.FC = () => {
     };
   }, [menuOpen, version]);
 
+  const handleMenuClick = (e: React.MouseEvent, ref: any) => {
+    if (ref === "https://regallery.team/core/demo/") return;
+
+    e.preventDefault();
+    const currentPath = window.location.href;
+
+    if (currentPath.endsWith(ref)) {
+      return;
+    }
+
+    const container = document.querySelector(
+      ".demo_live_conteiner"
+    ) as HTMLElement;
+
+    const scrollToTarget = () => {
+      const targetElement = document.querySelector(`${ref}`);
+      const yOffset = version === "mobile" ? -1220 : 0; // Adjust based on your fixed header height or spacing
+      const y =
+        targetElement!.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+      // targetElement?.scrollIntoView({
+      //   block: "start",
+      //   inline: "nearest",
+      //   behavior: "smooth",
+      // });
+      if (typeof ref === "string" && ref.startsWith("#")) {
+        setTimeout(() => {
+          if (typeof ref === "string" && ref.startsWith("#")) {
+            history.replaceState(null, "", ref);
+          }
+        }, 1);
+      }
+    };
+
+    if (container.offsetHeight > 0) {
+      scrollToTarget();
+    } else {
+      const intervalId = setInterval(() => {
+        if (container.offsetHeight > 0) {
+          scrollToTarget();
+          clearInterval(intervalId);
+        }
+      }, 1000);
+    }
+  };
+
   return (
     <div
       className={`nav${menuOpen ? " nav-open" : ""}${
@@ -96,11 +145,18 @@ const Navbar: React.FC = () => {
               <a
                 key={link.id}
                 className={"nav-link"}
-                href={link.href}
                 target={link.target}
-                {...(version === "mobile" && {
-                  onClick: () => setMenuOpen(!menuOpen),
-                })}
+                href={
+                  link.href === "https://regallery.team/core/demo/"
+                    ? "https://regallery.team/core/demo/"
+                    : "#"
+                }
+                onClick={(e) => {
+                  handleMenuClick(e, link.href);
+                  if (version === "mobile") {
+                    setMenuOpen(!menuOpen);
+                  }
+                }}
               >
                 {link.type === "button" ? (
                   <DownloadBtn
