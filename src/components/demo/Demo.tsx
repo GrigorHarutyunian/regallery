@@ -5,12 +5,13 @@ import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { dataDemo } from "./demo-data";
 import { motion } from "framer-motion";
+
 const Demo: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(420);
 
   const sectionRef = useRef<HTMLOptionElement | null>(null);
-  const scriptsAddedRef = useRef<boolean>(false);
+
   const selectedViewDesrciption = dataDemo.find(
     (val) => val.idView === selectedIdView
   )?.description;
@@ -77,67 +78,6 @@ const Demo: React.FC = () => {
   //     }
   //   };
   // }, []);
-
-  useEffect(() => {
-    const handleInitialInteraction = () => {
-      if (!scriptsAddedRef.current) {
-        // Add your scripts on the first interaction
-        const addScriptsToBody = () => {
-          const script1 = document.createElement("script");
-          script1.id = "reacg_thumbnails-js-extra";
-          script1.innerHTML = `
-            var reacg_global = {
-              rest_root: "https://regallery.team/core/wp-json/reacg/v1/",
-              rest_nonce: "1c55173374",
-              plugin_url: "https://regallery.team/core/wp-content/plugins/regallery",
-              text: { load_more: "Load more", no_data: "There is not data." }
-            };
-          `;
-          document.body.appendChild(script1);
-
-          const script2 = document.createElement("script");
-          script2.id = "reacg_thumbnails-js";
-          script2.src =
-            "https://regallery.team/core/wp-content/plugins/regallery/assets/js/wp-gallery.js?ver=1.10.0";
-          script2.async = true;
-          document.body.appendChild(script2);
-
-          scriptsAddedRef.current = true;
-        };
-
-        addScriptsToBody();
-      }
-
-      // Remove all event listeners after the first interaction
-      eventTypes.forEach((event) => {
-        window.removeEventListener(event, handleInitialInteraction);
-      });
-    };
-
-    const eventTypes = [
-      "scroll",
-      "mousemove",
-      "click",
-      "keydown",
-      "wheel",
-      "touchmove",
-      "touchend",
-    ];
-
-    // Attach event listeners
-    eventTypes.forEach((event) => {
-      window.addEventListener(event, handleInitialInteraction, {
-        passive: true,
-      });
-    });
-
-    // Cleanup function to remove the listeners when the component unmounts
-    return () => {
-      eventTypes.forEach((event) => {
-        window.removeEventListener(event, handleInitialInteraction);
-      });
-    };
-  }, []);
 
   return (
     <section ref={sectionRef} id="demo">

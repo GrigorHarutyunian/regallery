@@ -59,6 +59,7 @@ footer {
 .section-image {
   display: inherit;
   aspect-ratio: 660 / 380;
+  width: 100%;
 }
 
 @media screen and (max-width: 700px) {

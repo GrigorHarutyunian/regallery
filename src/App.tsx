@@ -15,12 +15,63 @@ import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/
 import Demo from "./components/demo/Demo";
 import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
+import addScriptsToBody from "./common-components/addScriptsToBody";
 
 const App: React.FC = () => {
+  const scrollToTarget = () => {
+    const targetElement = document.querySelector(`${location.hash}`);
+    console.log(targetElement);
+    targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
   useEffect(() => {
-    if (location.hash) {
-      window.location.replace(location.hash);
+    const container = document.querySelector(
+      ".demo_live_conteiner"
+    ) as HTMLElement;
+    const id1 = document.getElementById("reacg_thumbnails-js");
+    const id2 = document.getElementById("reacg_thumbnails-js-extra");
+    const eventTypes = [
+      "scroll",
+      "mousemove",
+      "click",
+      "keydown",
+      "wheel",
+      "touchmove",
+      "touchend",
+    ];
+
+    const handleInitialInteraction = () => {
+      eventTypes.forEach((event) => {
+        window.removeEventListener(event, handleInitialInteraction);
+      });
+      addScriptsToBody();
+    };
+
+    eventTypes.forEach((event) => {
+      window.addEventListener(event, handleInitialInteraction, {
+        passive: true,
+      });
+    });
+
+    if (location.hash && !id1 && !id2) {
+      addScriptsToBody();
+      if (container.offsetHeight > 0) {
+        console.log(1);
+        scrollToTarget();
+      } else {
+        const intervalId = setInterval(() => {
+          if (container.offsetHeight > 0) {
+            scrollToTarget();
+            clearInterval(intervalId);
+          }
+        }, 1000);
+      }
     }
+    return () => {
+      eventTypes.forEach((event) => {
+        window.removeEventListener(event, handleInitialInteraction);
+      });
+    };
   }, []);
 
   return (
