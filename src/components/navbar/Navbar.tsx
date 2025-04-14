@@ -82,18 +82,7 @@ const Navbar: React.FC = () => {
     const scrollToTarget = () => {
       const targetElement = document.querySelector(`${ref}`);
 
-      const elementTop =
-        targetElement!.getBoundingClientRect().top + window.pageYOffset;
-      const offset =
-        version === "mobile"
-          ? -(window.innerHeight - window.innerWidth) * 2
-          : 0;
-      console.log(offset);
-      window.scrollTo({
-        top: elementTop + offset,
-        behavior: "smooth",
-      });
-
+      targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
       if (typeof ref === "string" && ref.startsWith("#")) {
         setTimeout(() => {
           if (typeof ref === "string" && ref.startsWith("#")) {
@@ -103,11 +92,11 @@ const Navbar: React.FC = () => {
       }
     };
 
-    if (container.offsetHeight > 900) {
+    if (container.offsetHeight > 0) {
       scrollToTarget();
     } else {
       const intervalId = setInterval(() => {
-        if (container.offsetHeight > 900) {
+        if (container.offsetHeight > 0) {
           scrollToTarget();
           clearInterval(intervalId);
         }

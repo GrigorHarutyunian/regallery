@@ -475,7 +475,6 @@
   } */
   .nav-open {
     min-height: calc(100vh - 70px);
-    position: sticky;
     background-color: #000000;
     overflow-y: scroll;
     overflow-x: hidden;
