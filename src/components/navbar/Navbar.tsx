@@ -80,18 +80,9 @@ const Navbar: React.FC = () => {
 
     const scrollToTarget = () => {
       const targetElement = document.querySelector(`${ref}`);
-      const yOffset = version === "mobile" ? -1220 : 0; // Adjust based on your fixed header height or spacing
-      const y =
-        targetElement!.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
 
-      window.scrollTo({ top: y, behavior: "smooth" });
-      // targetElement?.scrollIntoView({
-      //   block: "start",
-      //   inline: "nearest",
-      //   behavior: "smooth",
-      // });
+      targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
+
       if (typeof ref === "string" && ref.startsWith("#")) {
         setTimeout(() => {
           if (typeof ref === "string" && ref.startsWith("#")) {
