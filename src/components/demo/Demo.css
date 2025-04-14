@@ -22,7 +22,7 @@
 .demo_buttons_rows {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
 }
 
@@ -34,6 +34,7 @@
 }
 
 .demo_button {
+  max-width: 70px;
   cursor: pointer;
   align-items: center;
   background: none;
@@ -106,6 +107,9 @@
   .demo_button svg {
     height: 50px;
     width: 50px;
+  }
+  .demo_button {
+    max-width: 50px;
   }
   .demo_button span {
     font-size: 18px;
@@ -185,15 +189,18 @@
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-evenly;
+    justify-items: center;
     padding: 20px;
     flex-flow: wrap;
-    align-items: center;
+
     row-gap: 20px;
   }
   .demo_button svg {
     height: 40px;
     width: 40px;
+  }
+  .demo_button {
+    max-width: 40px;
   }
 }
 
@@ -248,11 +255,5 @@
   }
   .demo_description p svg {
     margin-left: 2px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .demo_buttons_rows {
-    display: flex;
   }
 }
