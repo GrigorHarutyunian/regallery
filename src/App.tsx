@@ -37,8 +37,6 @@ const App: React.FC = () => {
     const container = document.querySelector(
       ".demo_live_conteiner"
     ) as HTMLElement;
-    const id1 = document.getElementById("reacg_thumbnails-js");
-    const id2 = document.getElementById("reacg_thumbnails-js-extra");
     const eventTypes = [
       "scroll",
       "mousemove",
@@ -48,41 +46,55 @@ const App: React.FC = () => {
       "touchmove",
       "touchend",
     ];
+    let scriptsLoaded = false;
+
+    const addScriptsOnce = () => {
+      // Check again in case scripts got added externally
+      const alreadyLoaded =
+        document.getElementById("reacg_thumbnails-js") ||
+        document.getElementById("reacg_thumbnails-js-extra");
+      if (!scriptsLoaded && !alreadyLoaded) {
+        scriptsLoaded = true;
+        addScriptsToBody();
+      }
+    };
 
     const handleInitialInteraction = () => {
       eventTypes.forEach((event) => {
         window.removeEventListener(event, handleInitialInteraction);
       });
-      addScriptsToBody();
+      addScriptsOnce();
     };
 
+    // Attach user interaction events
     eventTypes.forEach((event) => {
       window.addEventListener(event, handleInitialInteraction, {
         passive: true,
       });
     });
 
-    if (location.hash && !id1 && !id2) {
-      addScriptsToBody();
-      if (container.offsetHeight > 0) {
-        console.log(1);
+    // Run immediately if hash is present
+    if (location.hash && !scriptsLoaded) {
+      addScriptsOnce();
+
+      if (container?.offsetHeight > 0) {
         scrollToTarget();
       } else {
         const intervalId = setInterval(() => {
-          if (container.offsetHeight > 0) {
+          if (container?.offsetHeight > 0) {
             scrollToTarget();
             clearInterval(intervalId);
           }
         }, 1000);
       }
     }
+
     return () => {
       eventTypes.forEach((event) => {
         window.removeEventListener(event, handleInitialInteraction);
       });
     };
   }, []);
-
   return (
     <DemoProvider>
       <WindowWidthProvider>
