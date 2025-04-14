@@ -47,6 +47,7 @@ const links: Link[] = [
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
+  console.log(windowWitdth, "winwidh");
   const version = useMemo(() => windowWitdth.version, [windowWitdth.version]);
   useEffect(() => {
     if (version !== "mobile") return;
@@ -81,7 +82,17 @@ const Navbar: React.FC = () => {
     const scrollToTarget = () => {
       const targetElement = document.querySelector(`${ref}`);
 
-      targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
+      const elementTop =
+        targetElement!.getBoundingClientRect().top + window.pageYOffset;
+      const offset =
+        version === "mobile"
+          ? -(window.innerHeight - window.innerWidth) * 2
+          : 0;
+      console.log(offset);
+      window.scrollTo({
+        top: elementTop + offset,
+        behavior: "smooth",
+      });
 
       if (typeof ref === "string" && ref.startsWith("#")) {
         setTimeout(() => {
