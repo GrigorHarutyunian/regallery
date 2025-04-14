@@ -81,8 +81,17 @@ const Navbar: React.FC = () => {
 
     const scrollToTarget = () => {
       const targetElement = document.querySelector(`${ref}`);
+      const offset = -70; // Negative to leave 70px space from top
 
-      targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
+      const top =
+        targetElement!.getBoundingClientRect().top +
+        window.pageYOffset +
+        offset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
       if (typeof ref === "string" && ref.startsWith("#")) {
         setTimeout(() => {
           if (typeof ref === "string" && ref.startsWith("#")) {

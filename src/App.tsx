@@ -20,8 +20,15 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 const App: React.FC = () => {
   const scrollToTarget = () => {
     const targetElement = document.querySelector(`${location.hash}`);
-    console.log(targetElement);
-    targetElement?.scrollIntoView({ block: "start", behavior: "smooth" });
+    const offset = -70; // Negative to leave 70px space from top
+
+    const top =
+      targetElement!.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
