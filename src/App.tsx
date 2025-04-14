@@ -19,6 +19,8 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 
 const App: React.FC = () => {
   const scrollToTarget = () => {
+    const hash = location.hash;
+    if (!hash) return;
     const targetElement = document.querySelector(`${location.hash}`);
     const offset = -70; // Negative to leave 70px space from top
 
@@ -62,12 +64,12 @@ const App: React.FC = () => {
 
     if (location.hash && !id1 && !id2) {
       addScriptsToBody();
-      if (container.offsetHeight > 900) {
+      if (container.offsetHeight > 0) {
         console.log(1);
         scrollToTarget();
       } else {
         const intervalId = setInterval(() => {
-          if (container.offsetHeight > 900) {
+          if (container.offsetHeight > 0) {
             scrollToTarget();
             clearInterval(intervalId);
           }

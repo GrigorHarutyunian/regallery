@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
     const scrollToTarget = () => {
       const targetElement = document.querySelector(`${ref}`);
       const offset = -70; // Negative to leave 70px space from top
-
+      console.log("second");
       const top =
         targetElement!.getBoundingClientRect().top +
         window.pageYOffset +
