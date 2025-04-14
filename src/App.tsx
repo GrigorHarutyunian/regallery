@@ -55,12 +55,12 @@ const App: React.FC = () => {
 
     if (location.hash && !id1 && !id2) {
       addScriptsToBody();
-      if (container.offsetHeight > 0) {
+      if (container.offsetHeight > 900) {
         console.log(1);
         scrollToTarget();
       } else {
         const intervalId = setInterval(() => {
-          if (container.offsetHeight > 0) {
+          if (container.offsetHeight > 900) {
             scrollToTarget();
             clearInterval(intervalId);
           }

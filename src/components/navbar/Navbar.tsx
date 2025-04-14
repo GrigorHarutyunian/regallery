@@ -103,11 +103,11 @@ const Navbar: React.FC = () => {
       }
     };
 
-    if (container.offsetHeight > 0) {
+    if (container.offsetHeight > 900) {
       scrollToTarget();
     } else {
       const intervalId = setInterval(() => {
-        if (container.offsetHeight > 0) {
+        if (container.offsetHeight > 900) {
           scrollToTarget();
           clearInterval(intervalId);
         }
