@@ -82,6 +82,7 @@ const Hero: React.FC = () => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                     src={heroMp4}
                   />
                 </LazyLoadComponent>
