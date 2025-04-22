@@ -16,26 +16,12 @@ import Demo from "./components/demo/Demo";
 import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
+import scrollToTarget from "./common-components/scrollToTarget";
 
 const App: React.FC = () => {
-  const scrollToTarget = () => {
-    const hash = location.hash;
-    if (!hash) return;
-    const targetElement = document.querySelector(`${location.hash}`);
-    const offset = -70; // Negative to leave 70px space from top
-
-    const top =
-      targetElement!.getBoundingClientRect().top + window.pageYOffset + offset;
-
-    window.scrollTo({
-      top,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     const container = document.querySelector(
-      ".demo_live_conteiner"
+      ".demo_live_container"
     ) as HTMLElement;
     const eventTypes = [
       "scroll",
@@ -78,14 +64,14 @@ const App: React.FC = () => {
       addScriptsOnce();
 
       if (container?.offsetHeight > 0) {
-        scrollToTarget();
+        scrollToTarget(location.hash);
       } else {
         const intervalId = setInterval(() => {
           if (container?.offsetHeight > 0) {
-            scrollToTarget();
+            scrollToTarget(location.hash);
             clearInterval(intervalId);
           }
-        }, 1000);
+        }, 500);
       }
     }
 

@@ -2,7 +2,7 @@
   display: none;
 }
 
-#demo {
+#gallery_views {
   overflow: hidden;
 }
 .not-reduced-height {
@@ -26,7 +26,7 @@
   padding: 20px;
 }
 
-.demo_live_conteiner {
+.demo_live_container {
   width: 100%;
   position: relative;
   display: flex;

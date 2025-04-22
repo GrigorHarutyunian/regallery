@@ -31,10 +31,8 @@ const Demo: React.FC = () => {
     setSelectedIdView(selecteIdFromMenu);
   }, [selecteIdFromMenu]);
 
-
-
   return (
-    <section ref={sectionRef} id="demo">
+    <section ref={sectionRef} id="gallery_views">
       <Container>
         <Row>
           <div className="demo_columns_content">
@@ -94,7 +92,7 @@ const Demo: React.FC = () => {
                 </a>
               </motion.p>
             </div>
-            <div className={`demo_live_conteiner`}>
+            <div className={`demo_live_container`}>
               {dataDemo.map((val) => (
                 <div
                   key={val.idView} // Ensure each div has a unique key

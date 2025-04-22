@@ -5,6 +5,7 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
+import scrollToTarget from "../../common-components/scrollToTarget";
 interface Link {
   id: number;
   title: string;
@@ -12,6 +13,7 @@ interface Link {
   target?: string;
   type?: string;
   subMenuItems?: Array<any>;
+  external?: boolean;
 }
 
 const links: Link[] = [
@@ -27,9 +29,9 @@ const links: Link[] = [
   {
     id: 3,
     title: "Demo",
-
     href: "https://regallery.team/core/demo/",
     target: "_blank",
+    external: true,
   },
   { id: 4, title: "Pricing", href: "#pricing" },
   { id: 5, title: "FAQ", href: "#faq" },
@@ -66,8 +68,6 @@ const Navbar: React.FC = () => {
   }, [menuOpen, version]);
 
   const handleMenuClick = (e: React.MouseEvent, ref: any) => {
-    if (ref === "https://regallery.team/core/demo/") return;
-
     e.preventDefault();
     const currentPath = window.location.href;
 
@@ -76,22 +76,11 @@ const Navbar: React.FC = () => {
     }
 
     const container = document.querySelector(
-      ".demo_live_conteiner"
+      ".demo_live_container"
     ) as HTMLElement;
 
-    const scrollToTarget = () => {
-      const targetElement = document.querySelector(`${ref}`);
-      const offset = -70; // Negative to leave 70px space from top
-
-      const top =
-        targetElement!.getBoundingClientRect().top +
-        window.pageYOffset +
-        offset;
-
-      window.scrollTo({
-        top,
-        behavior: "smooth",
-      });
+    if (container.offsetHeight > 0) {
+      scrollToTarget(ref);
       if (typeof ref === "string" && ref.startsWith("#")) {
         setTimeout(() => {
           if (typeof ref === "string" && ref.startsWith("#")) {
@@ -99,17 +88,20 @@ const Navbar: React.FC = () => {
           }
         }, 1);
       }
-    };
-
-    if (container.offsetHeight > 0) {
-      scrollToTarget();
     } else {
       const intervalId = setInterval(() => {
         if (container.offsetHeight > 0) {
-          scrollToTarget();
+          scrollToTarget(ref);
+          if (typeof ref === "string" && ref.startsWith("#")) {
+            setTimeout(() => {
+              if (typeof ref === "string" && ref.startsWith("#")) {
+                history.replaceState(null, "", ref);
+              }
+            }, 1);
+          }
           clearInterval(intervalId);
         }
-      }, 1000);
+      }, 500);
     }
   };
 
@@ -146,13 +138,9 @@ const Navbar: React.FC = () => {
                 key={link.id}
                 className={"nav-link"}
                 target={link.target}
-                href={
-                  link.href === "https://regallery.team/core/demo/"
-                    ? "https://regallery.team/core/demo/"
-                    : "#"
-                }
+                href={link.href}
                 onClick={(e) => {
-                  handleMenuClick(e, link.href);
+                  !link.external && handleMenuClick(e, link.href);
                   if (version === "mobile") {
                     setMenuOpen(!menuOpen);
                   }
