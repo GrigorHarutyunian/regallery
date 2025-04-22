@@ -125,7 +125,9 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
   ];
 
   const itemGroups = useMemo(() => splitItems(items), [items]);
-
+  const bannerHeight = (document.querySelector(".nav-banner") as HTMLElement)
+    ?.offsetHeight;
+  console.log(bannerHeight);
   return (
     <div
       onMouseEnter={handleOpen}
@@ -159,10 +161,32 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         <div className={`nav-link__background ${openSubMenu ? "open" : ""}`} />
       </a>
       {
-        <div className={`dropdown-menu ${openSubMenu ? "open" : ""}`}>
-          <div className="dropdown-menu_child">
+        <div
+          className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
+          style={{
+            maxHeight: localStorage.getItem("bannerOpen")
+              ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
+              : `calc(100vh - 120px - 0.01px - 10px)`,
+          }}
+        >
+          <div
+            className="dropdown-menu_child"
+            style={{
+              maxHeight: localStorage.getItem("bannerOpen")
+                ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
+                : `calc(100vh - 120px - 0.01px - 10px)`,
+            }}
+          >
             {version !== "mobile" && (
-              <div className="submenu_demo" ref={demoRef}>
+              <div
+                className="submenu_demo"
+                ref={demoRef}
+                style={{
+                  maxHeight: localStorage.getItem("bannerOpen")
+                    ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
+                    : `calc(100vh - 120px - 0.01px - 10px)`,
+                }}
+              >
                 <LazyLoadComponent>
                   {openSubMenu && (
                     <motion.div
@@ -190,7 +214,15 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
               </div>
             )}
 
-            <div className="submenu_lists" ref={listRef}>
+            <div
+              className="submenu_lists"
+              ref={listRef}
+              style={{
+                maxHeight: localStorage.getItem("bannerOpen")
+                  ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
+                  : `calc(100vh - 120px - 0.01px - 10px)`,
+              }}
+            >
               {itemGroups.map((group, groupIdx) => (
                 <div key={groupIdx} className="submenu_column">
                   {group.map((val: any, i: number) => (
