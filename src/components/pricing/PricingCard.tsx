@@ -6,9 +6,9 @@ const PricingCard: React.FC<PricingDTO> = ({
   price,
   text,
   advantages,
-  canceledprice,
+  // canceledprice,
   duration,
-  savedmoney,
+
   title,
   href,
 }) => {
@@ -23,22 +23,22 @@ const PricingCard: React.FC<PricingDTO> = ({
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {
+        {/* {
           <span className="canceled-price">
             {canceledprice && <div className="remov_line"></div>}
             {canceledprice}
           </span>
-        }
+        } */}
         <div className="pricing-card__title">{price}</div>
         <div className="pricing-card__duration">{duration}</div>
 
-        <div className="parent_saved_money">
+        {/* <div className="parent_saved_money">
           {savedmoney && (
             <div className="saved_money_div">
               <span className="saved_money">Save {savedmoney}</span>
             </div>
           )}
-        </div>
+        </div> */}
 
         <p className="section-text__desc pricing__text">{text}</p>
       </div>

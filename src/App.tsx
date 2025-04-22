@@ -20,12 +20,11 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 const App: React.FC = () => {
   const scrollToTarget = () => {
     const hash = location.hash;
-    if (!hash) return;
-    const targetElement = document.querySelector(`${location.hash}`);
+    const targetElement = document.querySelector(hash);
+    if (!hash || !targetElement) return;
     const offset = -70; // Negative to leave 70px space from top
-
     const top =
-      targetElement!.getBoundingClientRect().top + window.pageYOffset + offset;
+      targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
 
     window.scrollTo({
       top,
