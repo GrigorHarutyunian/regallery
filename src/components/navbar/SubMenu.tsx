@@ -259,7 +259,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
                                   setSelecteIdFromMenu(val.idView);
                                 },
                               })}
-                          href="#demo"
+                          href="#gallery_views"
                         >
                           {val.title}
                         </a>
