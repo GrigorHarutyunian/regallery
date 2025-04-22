@@ -10,6 +10,7 @@ import Circlegridthumbnail from "../../assets/imgs/views/subViews/thumbnail/Circ
 import Photoalbumthumbnail from "../../assets/imgs/views/subViews/thumbnail/Photo_Album.webp";
 import Modernpatternthumbnial from "../../assets/imgs/views/subViews/thumbnail/Modern_Pattern.webp";
 import Polaroidgallerythumbnail from "../../assets/imgs/views/subViews/thumbnail/Polaroid_Gallery.webp";
+import SimplePrisme from "../../assets/imgs/views/subViews/thumbnail/Simple_Prism.webp";
 import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/Monochrome_Collection.webp";
 import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/Latte_Mosaic.webp";
 import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/Display_Collection.webp";
@@ -145,6 +146,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Polaroid Gallery template in ReGallery offers a nostalgic and creative way to showcase your images in a unique, polaroid-style layout. Perfect for photographers, artists, bloggers, and event organizers.",
         imgUrl: Polaroidgallerythumbnail,
         path: "https://regallery.team/core/reacg/polaroid-gallery/",
+      },
+      {
+        title: "Simple Prism",
+        description:
+          "The Simple Prism template in ReGallery offers a clean and minimalist layout, ideal for showcasing your images with subtle elegance. Designed for photographers, bloggers, and creatives who prefer a straightforward presentation.",
+        imgUrl: SimplePrisme,
+        path: "https://regallery.team/core/reacg/simple-prism/",
       },
     ],
   },

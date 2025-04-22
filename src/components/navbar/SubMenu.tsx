@@ -127,7 +127,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
   const itemGroups = useMemo(() => splitItems(items), [items]);
   const bannerHeight = (document.querySelector(".nav-banner") as HTMLElement)
     ?.offsetHeight;
-  console.log(bannerHeight);
+
   return (
     <div
       onMouseEnter={handleOpen}
