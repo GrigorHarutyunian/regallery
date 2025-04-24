@@ -80,21 +80,21 @@ const Navbar: React.FC = () => {
 
   const handleMenuClick = (e: React.MouseEvent, ref: any) => {
     e.preventDefault();
-    const currentPath = window.location.href;
+    // const currentPath = window.location.href;
 
-    if (currentPath.endsWith(ref)) {
-      return;
-    }
+    // if (currentPath.endsWith(ref)) {
+    //   return;
+    // }
 
     const container = document.querySelector(
       ".demo_live_container"
     ) as HTMLElement;
 
-    if (container.offsetHeight > 500) {
+    if (container.offsetHeight > 320) {
       scrollAndReplace(ref);
     } else {
       const intervalId = setInterval(() => {
-        if (container.offsetHeight > 500) {
+        if (container.offsetHeight > 320) {
           clearInterval(intervalId);
           scrollAndReplace(ref);
         }
