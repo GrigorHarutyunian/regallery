@@ -10,7 +10,7 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 // import imgBig from "../../assets/imgs/choose.webp";
 // import imgMiddle from "../../assets/imgs/preview-middle.webp";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
-import heroMp4 from "../../assets/mp4s/first_section_660.mp4";
+import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
 
 const Hero: React.FC = () => {

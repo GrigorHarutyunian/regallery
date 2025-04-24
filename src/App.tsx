@@ -63,15 +63,15 @@ const App: React.FC = () => {
     if (location.hash && !scriptsLoaded) {
       addScriptsOnce();
 
-      if (container?.offsetHeight > 0) {
+      if (container?.offsetHeight > 500) {
         scrollToTarget(location.hash);
       } else {
         const intervalId = setInterval(() => {
-          if (container?.offsetHeight > 0) {
-            scrollToTarget(location.hash);
+          if (container?.offsetHeight > 500) {
             clearInterval(intervalId);
+            scrollToTarget(location.hash);
           }
-        }, 500);
+        }, 100);
       }
     }
 
