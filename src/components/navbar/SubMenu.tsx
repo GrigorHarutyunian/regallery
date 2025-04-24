@@ -164,13 +164,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         <div
           className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
           style={{
-            maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
+            maxHeight: `calc(100vh - ${bannerHeight}px - 80px)`,
           }}
         >
           <div
             className="dropdown-menu_child"
             style={{
-              maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
+              maxHeight: `calc(100vh -  ${bannerHeight}px - 80px)`,
             }}
           >
             {version !== "mobile" && (
@@ -178,7 +178,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
                 className="submenu_demo"
                 ref={demoRef}
                 style={{
-                  maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
+                  maxHeight: `calc(100vh - ${bannerHeight}px - 80px)`,
                 }}
               >
                 <LazyLoadComponent>
@@ -212,7 +212,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
               className="submenu_lists"
               ref={listRef}
               style={{
-                maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
+                maxHeight: `calc(100vh -  ${bannerHeight}px - 80px)`,
               }}
             >
               {itemGroups.map((group, groupIdx) => (

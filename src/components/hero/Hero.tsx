@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     <section>
       <Container>
         <Row>
-          <motion.div className="hero-conteiner">
+          <motion.div className="hero-container">
             <motion.div className="home-text">
               <h1 className="section-text__title ">
                 The Intuitive <br></br> Photo Gallery Plugin
