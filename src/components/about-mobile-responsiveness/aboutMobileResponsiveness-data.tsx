@@ -1,4 +1,4 @@
-import mobileOptimisationSectionImg from "../../assets/imgs/third_section.webp";
+import mobileOptimisationSectionImg from "../../assets/imgs/views/third_section.webp";
 const aboutMobileResponsivenessData = {
   title: "Responsive Gallery",
   text: " ReGallery is fully optimized for mobile devices, tablets, and 4K screens. This WordPress photo gallery plugin delivers a seamless, high-quality viewing experience across all devices, enhancing SEO performance, user engagement, and website speed.",

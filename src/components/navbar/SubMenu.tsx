@@ -164,17 +164,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         <div
           className={`dropdown-menu ${openSubMenu ? "open" : ""}`}
           style={{
-            maxHeight: localStorage.getItem("bannerOpen")
-              ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
-              : `calc(100vh - 120px - 0.01px - 10px)`,
+            maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
           }}
         >
           <div
             className="dropdown-menu_child"
             style={{
-              maxHeight: localStorage.getItem("bannerOpen")
-                ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
-                : `calc(100vh - 120px - 0.01px - 10px)`,
+              maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
             }}
           >
             {version !== "mobile" && (
@@ -182,9 +178,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
                 className="submenu_demo"
                 ref={demoRef}
                 style={{
-                  maxHeight: localStorage.getItem("bannerOpen")
-                    ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
-                    : `calc(100vh - 120px - 0.01px - 10px)`,
+                  maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
                 }}
               >
                 <LazyLoadComponent>
@@ -218,9 +212,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
               className="submenu_lists"
               ref={listRef}
               style={{
-                maxHeight: localStorage.getItem("bannerOpen")
-                  ? `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`
-                  : `calc(100vh - 120px - 0.01px - 10px)`,
+                maxHeight: `calc(100vh - 120px - 0.01px - 10px  +  ${bannerHeight}px )`,
               }}
             >
               {itemGroups.map((group, groupIdx) => (

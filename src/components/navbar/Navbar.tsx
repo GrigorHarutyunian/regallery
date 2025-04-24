@@ -67,6 +67,17 @@ const Navbar: React.FC = () => {
     };
   }, [menuOpen, version]);
 
+  const scrollAndReplace = (ref: string) => {
+    scrollToTarget(ref);
+    if (typeof ref === "string" && ref.startsWith("#")) {
+      setTimeout(() => {
+        if (typeof ref === "string" && ref.startsWith("#")) {
+          history.replaceState(null, "", ref);
+        }
+      }, 1);
+    }
+  };
+
   const handleMenuClick = (e: React.MouseEvent, ref: any) => {
     e.preventDefault();
     const currentPath = window.location.href;
@@ -79,27 +90,13 @@ const Navbar: React.FC = () => {
       ".demo_live_container"
     ) as HTMLElement;
 
-    if (container.offsetHeight > 0) {
-      scrollToTarget(ref);
-      if (typeof ref === "string" && ref.startsWith("#")) {
-        setTimeout(() => {
-          if (typeof ref === "string" && ref.startsWith("#")) {
-            history.replaceState(null, "", ref);
-          }
-        }, 1);
-      }
+    if (container.offsetHeight > 500) {
+      scrollAndReplace(ref);
     } else {
       const intervalId = setInterval(() => {
-        if (container.offsetHeight > 0) {
+        if (container.offsetHeight > 500) {
           clearInterval(intervalId);
-          scrollToTarget(ref);
-          if (typeof ref === "string" && ref.startsWith("#")) {
-            setTimeout(() => {
-              if (typeof ref === "string" && ref.startsWith("#")) {
-                history.replaceState(null, "", ref);
-              }
-            }, 1);
-          }
+          scrollAndReplace(ref);
         }
       }, 100);
     }

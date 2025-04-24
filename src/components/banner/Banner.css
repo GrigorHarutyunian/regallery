@@ -12,7 +12,7 @@
 }
 
 .nav-banner.closed {
-  transform: translateY(-47px);
+  display: none;
 }
 .nav-banner-content {
   display: flex;

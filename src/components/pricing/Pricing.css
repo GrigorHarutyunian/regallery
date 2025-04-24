@@ -51,8 +51,10 @@
   color: #000000aa;
   margin-bottom: 0;
   height: 67px;
+  max-width: 300px;
+  margin: auto;
 }
-/* .canceled-price {
+.canceled-price {
   min-height: 24px;
   color: #000000;
   font-size: 24px;
@@ -60,7 +62,7 @@
   margin-bottom: 19px;
   position: relative;
   margin-right: 10px;
-} */
+}
 
 .remov_line {
   content: "";
@@ -73,9 +75,9 @@
   width: 70px;
 }
 
-/* .parent_saved_money {
+.parent_saved_money {
   min-height: 48px;
-} */
+}
 
 .saved_money_div {
   color: #000000;
