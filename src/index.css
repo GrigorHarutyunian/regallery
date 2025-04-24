@@ -169,7 +169,7 @@ p {
     width: 100%;
   }
 
-  .hero-conteiner {
+  .hero-container {
     flex-direction: column-reverse;
   }
   .support__row {
