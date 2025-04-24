@@ -91,6 +91,7 @@ const Navbar: React.FC = () => {
     } else {
       const intervalId = setInterval(() => {
         if (container.offsetHeight > 0) {
+          clearInterval(intervalId);
           scrollToTarget(ref);
           if (typeof ref === "string" && ref.startsWith("#")) {
             setTimeout(() => {
@@ -99,9 +100,8 @@ const Navbar: React.FC = () => {
               }
             }, 1);
           }
-          clearInterval(intervalId);
         }
-      }, 500);
+      }, 100);
     }
   };
 

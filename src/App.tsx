@@ -68,10 +68,10 @@ const App: React.FC = () => {
       } else {
         const intervalId = setInterval(() => {
           if (container?.offsetHeight > 0) {
-            scrollToTarget(location.hash);
             clearInterval(intervalId);
+            scrollToTarget(location.hash);
           }
-        }, 500);
+        }, 100);
       }
     }
 
