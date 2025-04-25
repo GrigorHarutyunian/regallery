@@ -42,7 +42,7 @@ const Banner: React.FC = () => {
           <p>
             {text}
 
-            <a href="#pricing">Get for less than $1.3/month</a>
+            <a href="#pricing">Get for less than $2.5/month</a>
           </p>
         </motion.div>
         <div id="banner" onClick={closeBanner} className="close-banner">
