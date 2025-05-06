@@ -50,7 +50,7 @@
 }
 .nav-banner-content-left {
   display: flex;
-  max-width: 660px;
+  max-width: 790px;
   padding: 0px 40px;
   align-items: center;
 }
@@ -75,24 +75,6 @@
   .close-banner > svg {
     width: 14px;
     height: 14px;
-  }
-}
-
-@media screen and (max-width: 737px) {
-  .nav-banner.closed {
-    transform: translateY(-70px);
-  }
-}
-
-@media screen and (min-width: 318px) and (max-width: 449px) {
-  .nav-banner.closed {
-    transform: translateY(-93px);
-  }
-}
-
-@media screen and (max-width: 317px) {
-  .nav-banner.closed {
-    transform: translateY(-116px);
   }
 }
 

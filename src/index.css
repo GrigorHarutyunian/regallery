@@ -95,19 +95,19 @@ p {
   margin: 0;
 }
 
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 865px) {
   main {
     margin-top: 70px;
   }
 }
 
-@media screen and (min-width: 318px) and (max-width: 449px) {
+@media screen and (min-width: 365px) and (max-width: 490px) {
   main {
     margin-top: 93px;
   }
 }
 
-@media screen and (max-width: 317px) {
+@media screen and (max-width: 364px) {
   main {
     margin-top: 116px;
   }
