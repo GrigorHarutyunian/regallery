@@ -3,7 +3,7 @@ export default interface PricingDTO {
   id?: number;
   price: string;
   canceledprice?: string;
-  advantages: string[];
+  advantages: any[];
   duration?: string;
   savedmoney?: string;
   title: string;
