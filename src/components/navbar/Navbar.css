@@ -400,13 +400,13 @@
   }
 }
 
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 865px) {
   .nav {
     top: 70px;
   }
 }
 
-@media screen and (max-width: 317px) {
+@media screen and (max-width: 364px) {
   .nav {
     top: 116px;
   }
@@ -532,7 +532,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 318px) and (max-width: 449px) {
+@media screen and (min-width: 365px) and (max-width: 490px) {
   .nav {
     top: 93px;
   }
