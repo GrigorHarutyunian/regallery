@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const text = "Unlimited access to the pre-built templates. ";
 import "./Banner.css";
 
 const Banner: React.FC = () => {
@@ -40,8 +39,7 @@ const Banner: React.FC = () => {
             </svg>
           </div>
           <p>
-            {text}
-
+            Unlimited access to the <b>Pre-built templates</b> and <b>AI tools</b>.
             <a href="#pricing">Get for less than $2.5/month</a>
           </p>
         </motion.div>
