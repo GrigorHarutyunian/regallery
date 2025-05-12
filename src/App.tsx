@@ -13,6 +13,7 @@ import Pricing from "./components/pricing/Pricing";
 import Banner from "./components/banner/Banner";
 import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
 import Demo from "./components/demo/Demo";
+import InteractiveAIIcon from "./components/interactive-aI-icon/InteractiveAIIcon";
 import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
@@ -94,12 +95,11 @@ const App: React.FC = () => {
           <Info />
           <Features />
           <AboutMobileResponsiveness />
-
           <Review />
           <Faq />
           <Pricing />
-
           <Support />
+          <InteractiveAIIcon />
         </main>
         <Footer />
       </WindowWidthProvider>
