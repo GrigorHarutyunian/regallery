@@ -1,0 +1,49 @@
+.interactive-ai-icon {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+.interactive-ai-icon__button {
+  border-radius: 50%;
+  background-color: #2540cc;
+  width: 48px;
+  height: 48px;
+  border: solid #2540cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ai-popover__content {
+  padding: 30px;
+  width: 300px;
+  transform: translateX(-12px);
+}
+.interactive-ai-icon__popover-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: block;
+  font-weight: 700;
+}
+
+.interactive-ai-icon__popover-description {
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffffba;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.interactive-ai-icon__popover-link {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 400px) {
+  .ai-popover__content {
+    padding: 30px;
+    max-width: 300px;
+    transform: translateX(0);
+    width: auto;
+  }
+}
