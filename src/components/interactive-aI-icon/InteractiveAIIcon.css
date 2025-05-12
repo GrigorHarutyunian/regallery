@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 25px;
   right: 25px;
+  z-index: 1301;
 }
 .interactive-ai-icon__button {
   border-radius: 50%;
@@ -45,7 +46,7 @@
   font-size: 15px;
 }
 .interactive-ai-icon__popover-link {
-  font-weight: 600;
+  font-weight: 400;
   color: #000000;
 }
 

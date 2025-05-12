@@ -99,9 +99,9 @@ const App: React.FC = () => {
           <Faq />
           <Pricing />
           <Support />
-          <InteractiveAIIcon />
         </main>
         <Footer />
+        <InteractiveAIIcon />
       </WindowWidthProvider>
     </DemoProvider>
   );
