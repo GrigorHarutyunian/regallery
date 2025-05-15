@@ -8,7 +8,7 @@ And it is for free!!. The developers are doing a great job with this one.`,
 
     seeMore: "https://wordpress.org/support/topic/impressive-gallery-2/",
     id: 1,
-    alt: `Users reviews about ReGallery - Hear from bloggers about their experiences with our WordPress Regallery plugin.`,
+    alt: `Users reviews about Re Gallery - Hear from bloggers about their experiences with our WordPress Re gallery plugin.`,
   },
   {
     title: "Very helpful gallery",
@@ -19,7 +19,7 @@ I’m looking forward to seeing how this plugin will improve.`,
 
     seeMore: "https://wordpress.org/support/topic/very-helpful-gallery/",
     id: 2,
-    alt: `Users reviews about ReGallery - Hear from artists about their experiences with our WordPress Regallery plugin.`,
+    alt: `Users reviews about Re Gallery - Hear from artists about their experiences with our WordPress Re gallery plugin.`,
   },
 
   {
@@ -29,7 +29,7 @@ Thank you for a great plugin!`,
     author: "manoshq",
     seeMore: "https://wordpress.org/support/topic/best-gallery-plugin-63/",
     id: 3,
-    alt: `Users reviews about ReGallery - Hear from photographers about their experiences with our WordPress Regallery plugin.`,
+    alt: `Users reviews about Re Gallery - Hear from photographers about their experiences with our WordPress Re gallery plugin.`,
   },
 ];
 

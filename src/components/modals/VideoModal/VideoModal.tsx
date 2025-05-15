@@ -47,7 +47,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ open, handleClose }) => {
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/RldoAkceHTQ?si=HCCyqe5X3tgs211B&autoplay=1&rel=0"
-              title="Photo Gallery Regallery"
+              title="Photo Gallery Re gallery"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
