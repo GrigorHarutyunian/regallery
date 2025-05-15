@@ -156,6 +156,9 @@
   vertical-align: bottom;
 }
 
+.woo-icon {
+  width: 57px;
+}
 @media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
     font-size: 15px;
@@ -178,6 +181,12 @@
   }
   .pricing-card__features__list {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 975px) {
+  .woo-icon {
+    width: 46px;
   }
 }
 
@@ -321,5 +330,8 @@
   }
   .pricing-card__features__list {
     font-size: 12px;
+  }
+  .woo-icon {
+    width: 46px;
   }
 }
