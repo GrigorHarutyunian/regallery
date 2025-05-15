@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import interactiveAiIconData from "./interactive-ai-icon-data";
 import "./InteractiveAIIcon.css";
 import { Popover } from "@mui/material";
 const InteractiveAIIcon: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [popoverKey, setPopoverKey] = useState(0);
+  const aiIconRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
@@ -12,6 +14,20 @@ const InteractiveAIIcon: React.FC = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    const hasOpened = localStorage.getItem("aiPopoverOpened");
+    if (!hasOpened) {
+      const timer = setTimeout(() => {
+        if (aiIconRef.current) {
+          setAnchorEl(anchorEl ? null : aiIconRef.current);
+          localStorage.setItem("aiPopoverOpened", "true");
+        }
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,11 +41,13 @@ const InteractiveAIIcon: React.FC = () => {
 
   const open = Boolean(anchorEl);
   const id = open ? "ai-popover" : undefined;
-
   return (
-    <div className="interactive-ai-icon">
+    <div ref={aiIconRef} className="interactive-ai-icon">
       <button
-        className={`interactive-ai-icon__button ${!open ? "pulse" : ""}`}
+        aria-label={open ? "Close AI menu" : "Open AI menu"}
+        className={`interactive-ai-icon__button ${
+          !open ? "interactive-ai-icon__button--pulse" : ""
+        }`}
         onClick={handleClick}
       >
         {open ? (
@@ -87,25 +105,43 @@ const InteractiveAIIcon: React.FC = () => {
         PaperProps={{
           sx: {
             backgroundColor: "#ffffff",
-            borderRadius: "12px",
+            borderRadius: "24px",
             boxShadow: "rgba(153, 153, 153, 0.2) 0px 0px 20px 10px",
           },
         }}
       >
-        <div className="ai-popover__content">
-          <p className="interactive-ai-icon__popover-title">
-            💡 Smart Content Assistant
-          </p>
-          <p className="interactive-ai-icon__popover-description">
-            Click below to preview how AI can help you generate image
-            descriptions and alt text in seconds.
-          </p>
-          <p>
-            <span style={{ marginRight: 8 }}>👉</span>
-            <a className="interactive-ai-icon__popover-link" href="#">
-              Preview admin
-            </a>
-          </p>
+        <div className="interactive-ai-popover__content">
+          <ul>
+            {interactiveAiIconData.map((group, index) => (
+              <li key={index} className="interactive-ai-popover__menu-group">
+                {group.map((item, i) => (
+                  <ul key={i}>
+                    <li className="interactive-ai-popover__menu-item">
+                      <a
+                        className="interactive-ai-popover__menu-item-link"
+                        href={item.path}
+                        target={item.external ? "_blank" : "_self"}
+                        rel="noopener noreferrer"
+                      >
+                        <div>
+                          <svg
+                            height={22}
+                            width={25}
+                            style={{ marginRight: "10px" }}
+                            id="Outline"
+                            viewBox="0 0 24 24"
+                          >
+                            {item.svgPath}
+                          </svg>
+                          <span>{item.title}</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                ))}
+              </li>
+            ))}
+          </ul>
         </div>
       </Popover>
     </div>
