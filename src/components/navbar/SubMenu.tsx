@@ -16,7 +16,7 @@ const SubMenu = ({ title, items, version, onClick }: any) => {
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const [hoveredElement, setHoveredElement] = useState<subItem>({
     title: "Thumbnails",
-    description: `The Thumbnails template in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
+    description: `The Thumbnails template in Re Gallery allows you to show your images in a clean, organized grid of clickable preview images.
 Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: ThumbnailsGeneralImg,
     path: "#thumbnails",

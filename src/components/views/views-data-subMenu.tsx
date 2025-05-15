@@ -40,7 +40,7 @@ export const viewsDataSubMenu = [
     title: "Thumbnails",
     imgUrl: ThumbnailsGeneralImg,
     idView: 420,
-    description: `The Thumbnails view in ReGallery allows you to show your images in a clean, organized grid of clickable preview images.
+    description: `The Thumbnails view in Re Gallery allows you to show your images in a clean, organized grid of clickable preview images.
 Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     svgPath: (
       <>
@@ -66,91 +66,91 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Dynamic Slant",
         description:
-          "The Dynamic Slant template in ReGallery brings a modern, stylish twist to your WordPress photo gallery with its unique angled layout. Ideal for photographers, creative agencies, designers, and bloggers.",
+          "The Dynamic Slant template in Re Gallery brings a modern, stylish twist to your WordPress photo gallery with its unique angled layout. Ideal for photographers, creative agencies, designers, and bloggers.",
         imgUrl: Slanted,
         path: "https://regallery.team/core/reacg/dynamic-slant/",
       },
       {
         title: "Hive Lens",
         description:
-          "The Hive Lens template for ReGallery offers a unique hexagonal grid layout, perfect for photographers, designers, artists, and e-commerce stores to showcase images creatively. ",
+          "The Hive Lens template for Re Gallery offers a unique hexagonal grid layout, perfect for photographers, designers, artists, and e-commerce stores to showcase images creatively. ",
         imgUrl: HiveLens,
         path: "https://regallery.team/core/reacg/hive-lens/",
       },
       {
         title: "Prism Pattern",
         description:
-          "The Prism Pattern template in ReGallery creates a dynamic and stylish layout, perfect for photographers, bloggers, designers, and creative portfolios. ",
+          "The Prism Pattern template in Re Gallery creates a dynamic and stylish layout, perfect for photographers, bloggers, designers, and creative portfolios. ",
         imgUrl: PrismPattern,
         path: "https://regallery.team/core/reacg/prism-pattern/",
       },
       {
         title: "Media Catalog",
         description:
-          "The Media Catalog template in ReGallery is perfect for photographers, digital agencies, eCommerce stores, and content creators who need a structured and organized gallery.",
+          "The Media Catalog template in Re Gallery is perfect for photographers, digital agencies, eCommerce stores, and content creators who need a structured and organized gallery.",
         imgUrl: MediaCatalog,
         path: "https://regallery.team/core/reacg/media-catalog/",
       },
       {
         title: "Flicker Frame",
         description:
-          "The Flicker Frame template in ReGallery adds a dynamic and engaging effect to your WordPress photo gallery, perfect for photographers, bloggers, designers, and artists looking to create an eye-catching display.",
+          "The Flicker Frame template in Re Gallery adds a dynamic and engaging effect to your WordPress photo gallery, perfect for photographers, bloggers, designers, and artists looking to create an eye-catching display.",
         imgUrl: FlickerFrame,
         path: "https://regallery.team/core/reacg/flicker-frame/",
       },
       {
         title: "PolyGrid",
         description:
-          "The PolyGrid template in ReGallery offers a dynamic and structured WordPress photo gallery layout, perfect for photographers, artists, designers, and eCommerce stores. ",
+          "The PolyGrid template in Re Gallery offers a dynamic and structured WordPress photo gallery layout, perfect for photographers, artists, designers, and eCommerce stores. ",
         imgUrl: Polygrid,
         path: "https://regallery.team/core/reacg/polygrid/",
       },
       {
         title: "Harmonic Chaos",
         description:
-          "The Harmonic Chaos template in ReGallery is ideal for creative portfolios, fashion lookbooks, and abstract photography. ",
+          "The Harmonic Chaos template in Re Gallery is ideal for creative portfolios, fashion lookbooks, and abstract photography. ",
         imgUrl: Harmonicchaosthumbnail,
         path: "https://regallery.team/core/reacg/harmonic-chaos/",
       },
       {
         title: "Collage",
         description:
-          "The Collage template in ReGallery offers a stylish and dynamic way to display your WordPress photo gallery. Perfect for photographers, bloggers, designers, and lifestyle websites.",
+          "The Collage template in Re Gallery offers a stylish and dynamic way to display your WordPress photo gallery. Perfect for photographers, bloggers, designers, and lifestyle websites.",
         imgUrl: Collagethumbnail,
         path: "https://regallery.team/core/reacg/collage/",
       },
       {
         title: "Photo Album",
         description:
-          "The Photo Album template in ReGallery is perfect for organizing and showcasing images in a structured, album-style layout. Ideal for photographers, event planners, travel bloggers, and businesses.",
+          "The Photo Album template in Re Gallery is perfect for organizing and showcasing images in a structured, album-style layout. Ideal for photographers, event planners, travel bloggers, and businesses.",
         imgUrl: Photoalbumthumbnail,
         path: "https://regallery.team/core/reacg/photo-album/",
       },
       {
         title: "Circle Grid",
         description:
-          "The Circle Grid template in ReGallery adds a unique, circular design to your WordPress photo gallery, perfect for photographers, artists, bloggers, and creatives. ",
+          "The Circle Grid template in Re Gallery adds a unique, circular design to your WordPress photo gallery, perfect for photographers, artists, bloggers, and creatives. ",
         imgUrl: Circlegridthumbnail,
         path: "https://regallery.team/core/reacg/circle-grid/",
       },
       {
         title: "Modern Pattern",
         description:
-          "The Modern Pattern template in ReGallery is perfect for photographers, designers, eCommerce sites, and digital agencies. ",
+          "The Modern Pattern template in Re Gallery is perfect for photographers, designers, eCommerce sites, and digital agencies. ",
         imgUrl: Modernpatternthumbnial,
         path: "https://regallery.team/core/reacg/modern-pattern/",
       },
       {
         title: "Polaroid Gallery",
         description:
-          "The Polaroid Gallery template in ReGallery offers a nostalgic and creative way to showcase your images in a unique, polaroid-style layout. Perfect for photographers, artists, bloggers, and event organizers.",
+          "The Polaroid Gallery template in Re Gallery offers a nostalgic and creative way to showcase your images in a unique, polaroid-style layout. Perfect for photographers, artists, bloggers, and event organizers.",
         imgUrl: Polaroidgallerythumbnail,
         path: "https://regallery.team/core/reacg/polaroid-gallery/",
       },
       {
         title: "Simple Prism",
         description:
-          "The Simple Prism template in ReGallery offers a clean and minimalist layout, ideal for showcasing your images with subtle elegance. Designed for photographers, bloggers, and creatives who prefer a straightforward presentation.",
+          "The Simple Prism template in Re Gallery offers a clean and minimalist layout, ideal for showcasing your images with subtle elegance. Designed for photographers, bloggers, and creatives who prefer a straightforward presentation.",
         imgUrl: SimplePrisme,
         path: "https://regallery.team/core/reacg/simple-prism/",
       },
@@ -162,7 +162,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: MosiacGeneralImg,
     idView: 300,
     description:
-      "The Mosaic view in ReGallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives.",
+      "The Mosaic view in Re Gallery arranges your images in an artistic, non-uniform grid, creating a visually engaging and modern display. Ideal for photographers, designers, and creatives.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -173,21 +173,21 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Monochrome Collection",
         description:
-          "The Monochrome Collection template in ReGallery provides a minimalist and elegant way to display images in a clean, black-and-white style. Ideal for photographers, artists, designers, and portfolio websites.",
+          "The Monochrome Collection template in Re Gallery provides a minimalist and elegant way to display images in a clean, black-and-white style. Ideal for photographers, artists, designers, and portfolio websites.",
         imgUrl: Monochromethumbnail,
         path: "https://regallery.team/core/reacg/monochrome-collection/",
       },
       {
         title: "Display Collection",
         description:
-          "The Display Collection template in ReGallery is perfect for photographers, online stores, portfolios, and galleries.",
+          "The Display Collection template in Re Gallery is perfect for photographers, online stores, portfolios, and galleries.",
         imgUrl: Lattemosaicthumbnail,
         path: "https://regallery.team/core/reacg/display-collection/",
       },
       {
         title: "Latte Mosaic",
         description:
-          "The Latte Mosaic template in ReGallery presents a warm and visually appealing way to display your images in a mosaic-style grid. Ideal for photographers, interior designers, bloggers, and creatives.",
+          "The Latte Mosaic template in Re Gallery presents a warm and visually appealing way to display your images in a mosaic-style grid. Ideal for photographers, interior designers, bloggers, and creatives.",
         imgUrl: Displaycollectionhumbnail,
         path: "https://regallery.team/core/reacg/latte-mosaic/",
       },
@@ -199,7 +199,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: MasnrycGeneralImg,
     idView: 717,
     description:
-      "The Masonry view in ReGallery presents your images in a stylish, grid-based layout with varying column heights, creating a visually dynamic and organized display. Perfect for photographers, bloggers, and eCommerce websites.",
+      "The Masonry view in Re Gallery presents your images in a stylish, grid-based layout with varying column heights, creating a visually dynamic and organized display. Perfect for photographers, bloggers, and eCommerce websites.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -210,14 +210,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Infinite Scroll",
         description:
-          "The Infinite Scroll template in ReGallery allows for a continuous, smooth browsing experience by automatically loading more content as users scroll. Ideal for blogs, image galleries, and content-heavy websites",
+          "The Infinite Scroll template in Re Gallery allows for a continuous, smooth browsing experience by automatically loading more content as users scroll. Ideal for blogs, image galleries, and content-heavy websites",
         imgUrl: MemoryWall,
         path: "https://regallery.team/core/reacg/infinite-scroll/",
       },
       {
         title: "Tide Frame",
         description:
-          "The Tide Frame template in ReGallery offers a clean and elegant way to display your images within dynamic, fluid frames. Perfect for photographers, artists, and creatives",
+          "The Tide Frame template in Re Gallery offers a clean and elegant way to display your images within dynamic, fluid frames. Perfect for photographers, artists, and creatives",
         imgUrl: InfiniteScroll,
         path: "https://regallery.team/core/reacg/tide-frame/",
       },
@@ -250,7 +250,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Overlay Slideshow",
         description:
-          "The Overlay Slideshow template in ReGallery offers an elegant way to display your images with a stylish overlay effect, allowing for a more immersive experience. Perfect for photographers, designers, and businesses.",
+          "The Overlay Slideshow template in Re Gallery offers an elegant way to display your images with a stylish overlay effect, allowing for a more immersive experience. Perfect for photographers, designers, and businesses.",
         imgUrl: OverlaySlideshow,
         path: "https://regallery.team/core/reacg/overlay-slideshow/",
       },
@@ -269,7 +269,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: CubelGeneralImg,
     idView: 696,
     description:
-      "The Cube view in ReGallery offers a dynamic 3D cube effect that adds an interactive, engaging dimension to your image gallery. Perfect for creative professionals, eCommerce businesses, and photographers.",
+      "The Cube view in Re Gallery offers a dynamic 3D cube effect that adds an interactive, engaging dimension to your image gallery. Perfect for creative professionals, eCommerce businesses, and photographers.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -280,7 +280,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Digital Shop",
         description:
-          "The Digital Shop template in ReGallery is designed for showcasing products in a clean, organized layout, making it perfect for eCommerce websites, digital product sellers, and online stores. ",
+          "The Digital Shop template in Re Gallery is designed for showcasing products in a clean, organized layout, making it perfect for eCommerce websites, digital product sellers, and online stores. ",
         imgUrl: DigitalShop,
         path: "https://regallery.team/core/reacg/digital-shop/",
       },
@@ -311,21 +311,21 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Blinds Slider",
         description:
-          "The Blinds Slider template in ReGallery offers a unique and stylish way to showcase your images with a sliding effect. Ideal for photographers, portfolio owners, and creative professionals.",
+          "The Blinds Slider template in Re Gallery offers a unique and stylish way to showcase your images with a sliding effect. Ideal for photographers, portfolio owners, and creative professionals.",
         imgUrl: TemplateBlindesSlider,
         path: "https://regallery.team/core/reacg/blinds-slider/",
       },
       {
         title: "Carousel Showcase",
         description:
-          "The Carousel Showcase template in ReGallery allows you to display images in a dynamic, sliding carousel format. Perfect for portfolios, product displays, and creative agencies.",
+          "The Carousel Showcase template in Re Gallery allows you to display images in a dynamic, sliding carousel format. Perfect for portfolios, product displays, and creative agencies.",
         imgUrl: Carouselshowcasethumbnail,
         path: "https://regallery.team/core/reacg/carousel-showcase/",
       },
       {
         title: "Horizontal Scroll",
         description:
-          "The Horizontal Scroll template in ReGallery lets you display images in a smooth, horizontally scrolling layout. Ideal for photographers, designers, and businesses looking to present their content in an interactive way.",
+          "The Horizontal Scroll template in Re Gallery lets you display images in a smooth, horizontally scrolling layout. Ideal for photographers, designers, and businesses looking to present their content in an interactive way.",
         imgUrl: Horizontalscrollthumbnail,
         path: "https://regallery.team/core/reacg/horizontal-scroll/",
       },
@@ -338,7 +338,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: CardslGeneralImg,
     idView: 708,
     description:
-      "The Cards view in ReGallery presents images in a clean, organized grid layout with each image framed as a card, perfect for online stores, portfolios, and galleries.",
+      "The Cards view in Re Gallery presents images in a clean, organized grid layout with each image framed as a card, perfect for online stores, portfolios, and galleries.",
     svgPath: (
       <path
         fill={"#ffffffff"}
@@ -349,7 +349,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Spotlight Ad",
         description:
-          "The Spotlight Ad template in ReGallery is designed to highlight key content or products with a bold, focused display. Perfect for businesses, eCommerce stores, and advertisers.",
+          "The Spotlight Ad template in Re Gallery is designed to highlight key content or products with a bold, focused display. Perfect for businesses, eCommerce stores, and advertisers.",
         imgUrl: SpotlightAd,
         path: "https://regallery.team/core/reacg/spotlight-ad/",
       },
@@ -361,7 +361,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: BlogGeneralImg,
     idView: 858,
     description:
-      "The Blog View in ReGallery lets you showcase images or videos with detailed descriptions and clickable buttons. Perfect for bloggers, eCommerce shop owners, content creators who want to tell a story, highlight products, or guide visitors to take the next step.",
+      "The Blog View in Re Gallery lets you showcase images or videos with detailed descriptions and clickable buttons. Perfect for bloggers, eCommerce shop owners, content creators who want to tell a story, highlight products, or guide visitors to take the next step.",
     svgPath: (
       <path
         fill={"#ffffffff"}

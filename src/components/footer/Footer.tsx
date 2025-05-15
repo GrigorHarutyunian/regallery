@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer>
       <div className="row__social-website">
         <div className="footer-text__title footer-copyright">
-          <span>Copyright © 2025 ReGallery.</span>{" "}
+          <span>Copyright © 2025 Re Gallery.</span>{" "}
           <span>All rights reserved.</span>
         </div>
         <div className="footer__social-website-icons">

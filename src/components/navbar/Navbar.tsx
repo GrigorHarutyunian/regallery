@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
           style={{ textDecoration: "none", display: "inline-flex" }}
         >
           <div className={"nav-logo"}>
-            <img height={50} width={50} src={iconc} alt="ReGallery" />
+            <img height={50} width={50} src={iconc} alt="Re Gallery" />
 
             <div style={{ marginTop: "13px", marginLeft: "4px" }}>eGallery</div>
           </div>
