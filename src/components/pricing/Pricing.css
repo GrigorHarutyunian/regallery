@@ -158,6 +158,8 @@
 
 .woo-icon {
   width: 57px;
+  padding-left: 5px;
+  margin-bottom: -2px;
 }
 @media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
