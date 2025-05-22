@@ -20,8 +20,8 @@
   transform: scale(1);
 }
 
-.interactive-ai-icon__button--pulse {
-  animation: pulse 1s infinite;
+.interactive-ai-icon__button--pulsive {
+  animation: pulsive 1s infinite;
 }
 .interactive-ai-icon__button:hover {
   animation: none;
@@ -74,7 +74,7 @@
   }
 }
 
-@keyframes pulse {
+@keyframes pulsive {
   0% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(254, 197, 76, 0.7);

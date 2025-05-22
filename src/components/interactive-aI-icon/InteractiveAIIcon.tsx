@@ -46,7 +46,7 @@ const InteractiveAIIcon: React.FC = () => {
       <button
         aria-label={open ? "Close AI menu" : "Open AI menu"}
         className={`interactive-ai-icon__button ${
-          !open ? "interactive-ai-icon__button--pulse" : ""
+          !open ? "interactive-ai-icon__button--pulsive" : ""
         }`}
         onClick={handleClick}
       >
