@@ -57,6 +57,27 @@ export const dataDemo = [
   },
   {
     id: 4,
+    title: "Justified",
+    description:
+      "Display images in clean, evenly-aligned rows, automatically adjusted to fit the width for a sleek and balanced layout.",
+    demoPath: "https://regallery.team/core/reacg/smart-rows/",
+    path: (
+      <g
+        xmlns="http://www.w3.org/2000/svg"
+        id="_01_align_center"
+        data-name="01 align center"
+        fill={"#ffffff91"}
+      >
+        <path d="M13,2V9H2V3A1,1,0,0,1,3,2H13m2-2H3A3,3,0,0,0,0,3v8H15V0Z" />
+        <path d="M21,2a1,1,0,0,1,1,1V9H19V2h2m0-2H17V11h7V3a3,3,0,0,0-3-3Z" />
+        <path d="M5,15v7H3a1,1,0,0,1-1-1V15H5m2-2H0v8a3,3,0,0,0,3,3H7V13Z" />
+        <path d="M22,15v6a1,1,0,0,1-1,1H11V15H22m2-2H9V24H21a3,3,0,0,0,3-3V13Z" />
+      </g>
+    ),
+    idView: 889,
+  },
+  {
+    id: 5,
     title: "Slideshow",
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content.",
@@ -80,7 +101,7 @@ export const dataDemo = [
     idView: 624,
   },
   {
-    id: 5,
+    id: 6,
     title: "Cube",
     description:
       "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
@@ -95,7 +116,7 @@ export const dataDemo = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Carousel",
     description:
       "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
@@ -110,7 +131,7 @@ export const dataDemo = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Cards",
     description:
       "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
@@ -124,7 +145,7 @@ export const dataDemo = [
     idView: 708,
   },
   {
-    id: 8,
+    id: 9,
     title: "Blog",
     description:
       "Easily pair images or videos with text and clickable buttons to guide your visitors through your brand story, team intro, product highlights, or customer journey.",

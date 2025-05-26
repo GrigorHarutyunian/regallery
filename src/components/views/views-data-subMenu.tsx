@@ -34,6 +34,7 @@ import CardslGeneralImg from "../../assets/imgs/views/menu_general_imgs/cards.we
 import BlogGeneralImg from "../../assets/imgs/views/menu_general_imgs/blog.webp";
 import AboutUsTemplate from "../../assets/imgs/views/subViews/blog/AboutUs.webp";
 import TravelBlogTemplate from "../../assets/imgs/views/subViews/blog/TravelBlog.webp";
+import SmartRows from "../../assets/imgs/views/subViews/justified/Smart_Rows.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -382,6 +383,36 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Travel Blog template is ideal for sharing your adventures, travel tips, and stunning destinations. This layout helps you captivate your audience with immersive visuals and engaging stories that bring your journeys to life.",
         imgUrl: TravelBlogTemplate,
         path: "https://regallery.team/core/reacg/travel-blog/",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Justified",
+    imgUrl: SmartRows,
+    idView: 889,
+    description:
+      "The Justified in Re Gallery lets you showcase images or videos with detailed descriptions and clickable buttons. Perfect for bloggers, eCommerce shop owners, content creators who want to tell a story, highlight products, or guide visitors to take the next step.",
+    svgPath: (
+      <g
+        fill={"#ffffff91"}
+        xmlns="http://www.w3.org/2000/svg"
+        id="_01_align_center"
+        data-name="01 align center"
+      >
+        <path d="M13,2V9H2V3A1,1,0,0,1,3,2H13m2-2H3A3,3,0,0,0,0,3v8H15V0Z" />
+        <path d="M21,2a1,1,0,0,1,1,1V9H19V2h2m0-2H17V11h7V3a3,3,0,0,0-3-3Z" />
+        <path d="M5,15v7H3a1,1,0,0,1-1-1V15H5m2-2H0v8a3,3,0,0,0,3,3H7V13Z" />
+        <path d="M22,15v6a1,1,0,0,1-1,1H11V15H22m2-2H9V24H21a3,3,0,0,0,3-3V13Z" />
+      </g>
+    ),
+    subItems: [
+      {
+        title: "Smart Rows",
+        description:
+          "The Smart Rows template in ReGallery arranges your images in evenly aligned horizontal rows, intelligently adjusting their dimensions for a balanced and seamless gallery display. Ideal for photographers, bloggers.",
+        imgUrl: SmartRows,
+        path: "https://regallery.team/core/reacg/smart-rows/",
       },
     ],
   },
