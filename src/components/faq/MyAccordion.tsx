@@ -23,9 +23,11 @@ const MyAccordion: React.FC<
       expanded={expandedPanel === panelId}
       onChange={() => handleChange(panelId)}
       sx={{
+        "&.Mui-expanded": {
+          margin: 0,
+        },
         "&.Mui-expanded::before": {
           opacity: 1,
-          margin: 0,
         },
       }}
     >
