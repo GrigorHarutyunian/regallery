@@ -7,7 +7,7 @@ const pricingData = [
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "8 Gallery Views",
+      "9 Gallery Views",
       "Live Demo",
       "Gutenberg Block Support",
       "Elementor Widget Integration",
@@ -25,7 +25,7 @@ const pricingData = [
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "8 Gallery Views",
+      "9 Gallery Views",
       "Live Demo",
       "Gutenberg Block Support",
       "Elementor Widget Integration",
@@ -53,7 +53,7 @@ const pricingData = [
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "8 Gallery Views",
+      "9 Gallery Views",
       "Live Demo",
       "Gutenberg Block Support",
       "Elementor Widget Integration",

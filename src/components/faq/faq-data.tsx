@@ -25,7 +25,7 @@ export const faqData = [
     title:
       "Is Re Gallery WordPress gallery plugin optimized for mobile devices?",
     description:
-      "Yes, Re Gallery is fully mobile-optimized. All responsive photo galleries automatically adjust to fit any screen size, ensuring a smooth user experience on smartphones, tablets, and desktops. Gallery views like mosaic, justified, masonry, thumbnails, cards, carousel, cube, and slideshow are designed to be fully responsive, making Re Gallery perfect for creating mobile-friendly WordPress sites.",
+      "Yes, Re Gallery is fully mobile-optimized. All responsive photo galleries automatically adjust to fit any screen size, ensuring a smooth user experience on smartphones, tablets, and desktops. Gallery views like mosaic, justified, masonry, thumbnails, cards, carousel, cube, blog and slideshow are designed to be fully responsive, making Re Gallery perfect for creating mobile-friendly WordPress sites.",
     panelId: "panel4",
     summeryID: "panel4bh-header",
   },
@@ -57,7 +57,7 @@ export const faqData = [
     title:
       "How does Re Gallery photo gallery plugin integrate with WooCommerce for photo galleries?",
     description:
-      "Re Gallery integrates smoothly with WooCommerce, allowing you to create beautiful, responsive photo galleries for your products. It includes features like lightbox viewing, hover effects, AI-generated image captions, and customizable gallery layouts such as masonry, mosaic, justified, thumbnails, carousel, cards, slideshow, and cube. These tools help make your product galleries more engaging, mobile-optimized, and SEO-friendly, delivering a better shopping experience for your customers.",
+      "Re Gallery integrates smoothly with WooCommerce, allowing you to create beautiful, responsive photo galleries for your products. It includes features like lightbox viewing, hover effects, AI-generated image captions, and customizable gallery layouts such as masonry, mosaic, justified, thumbnails, carousel, cards, slideshow, blog and cube. These tools help make your product galleries more engaging, mobile-optimized, and SEO-friendly, delivering a better shopping experience for your customers.",
     panelId: "panel8",
     summeryID: "panel8bh-header",
   },
@@ -65,7 +65,7 @@ export const faqData = [
     title:
       "Which gallery views like masonry, carousel, justified are available in WordPress photo gallery plugin?",
     description:
-      "Re Gallery supports multiple gallery views including mosaic, thumbnails, masonry, justified, carousel, slideshow, cube and cards layouts. All views are fully responsive and mobile-optimized. Besides these layouts, Re Gallery offers features like Live Demo, AI-generated image captions, WooCommerce photo gallery integration, pre-designed gallery templates, and customizable gallery styles to help you create professional and engaging photo galleries in WordPress.",
+      "Re Gallery supports multiple gallery views including mosaic, thumbnails, masonry, justified, carousel, slideshow, cube, blog and cards layouts. All views are fully responsive and mobile-optimized. Besides these layouts, Re Gallery offers features like Live Demo, AI-generated image captions, WooCommerce photo gallery integration, pre-designed gallery templates, and customizable gallery styles to help you create professional and engaging photo galleries in WordPress.",
     panelId: "panel9",
     summeryID: "panel9bh-header",
   },

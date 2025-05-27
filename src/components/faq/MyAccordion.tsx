@@ -25,6 +25,7 @@ const MyAccordion: React.FC<
       sx={{
         "&.Mui-expanded::before": {
           opacity: 1,
+          margin: 0,
         },
       }}
     >
