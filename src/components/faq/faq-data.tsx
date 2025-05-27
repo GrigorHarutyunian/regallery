@@ -63,7 +63,7 @@ export const faqData = [
   },
   {
     title:
-      "Which gallery views like masonry, carousel, justified, and others are available in Re Gallery WordPress photo gallery plugin?",
+      "Which gallery views like masonry, carousel, justified are available in WordPress photo gallery plugin?",
     description:
       "Re Gallery supports multiple gallery views including mosaic, thumbnails, masonry, justified, carousel, slideshow, cube and cards layouts. All views are fully responsive and mobile-optimized. Besides these layouts, Re Gallery offers features like Live Demo, AI-generated image captions, WooCommerce photo gallery integration, pre-designed gallery templates, and customizable gallery styles to help you create professional and engaging photo galleries in WordPress.",
     panelId: "panel9",

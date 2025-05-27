@@ -395,7 +395,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       "The Justified gallery view displays images in full-width rows while preserving their original aspect ratios. This layout ensures a modern look without cropping, making it ideal for portfolios and eCommerce galleries.",
     svgPath: (
       <g
-        fill={"#ffffff91"}
+        fill={"#ffffffff"}
         xmlns="http://www.w3.org/2000/svg"
         id="_01_align_center"
         data-name="01 align center"

@@ -22,6 +22,11 @@ const MyAccordion: React.FC<
       elevation={0}
       expanded={expandedPanel === panelId}
       onChange={() => handleChange(panelId)}
+      sx={{
+        "&.Mui-expanded::before": {
+          opacity: 1,
+        },
+      }}
     >
       <AccordionSummary expandIcon={<ExpandMoreIcon />} id={summeryID}>
         <h3 className="accordion__title">{title}</h3>
