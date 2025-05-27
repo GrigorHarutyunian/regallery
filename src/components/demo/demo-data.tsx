@@ -60,7 +60,7 @@ export const dataDemo = [
     title: "Justified",
     description:
       "Display images in clean, evenly-aligned rows, automatically adjusted to fit the width for a sleek and balanced layout.",
-    demoPath: "https://regallery.team/core/reacg/smart-rows/",
+    demoPath: "https://regallery.team/core/justified/",
     path: (
       <g
         xmlns="http://www.w3.org/2000/svg"

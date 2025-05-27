@@ -392,7 +392,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     imgUrl: SmartRows,
     idView: 889,
     description:
-      "The Justified in Re Gallery lets you showcase images or videos with detailed descriptions and clickable buttons. Perfect for bloggers, eCommerce shop owners, content creators who want to tell a story, highlight products, or guide visitors to take the next step.",
+      "The Justified gallery view displays images in full-width rows while preserving their original aspect ratios. This layout ensures a modern look without cropping, making it ideal for portfolios and eCommerce galleries.",
     svgPath: (
       <g
         fill={"#ffffff91"}
@@ -410,7 +410,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Smart Rows",
         description:
-          "The Smart Rows template in ReGallery arranges your images in evenly aligned horizontal rows, intelligently adjusting their dimensions for a balanced and seamless gallery display. Ideal for photographers, bloggers.",
+          "The Smart Rows template in Re Gallery arranges your images in evenly aligned horizontal rows, intelligently adjusting their dimensions for a balanced and seamless gallery display. Ideal for photographers, bloggers.",
         imgUrl: SmartRows,
         path: "https://regallery.team/core/reacg/smart-rows/",
       },
