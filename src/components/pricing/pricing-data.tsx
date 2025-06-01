@@ -17,7 +17,7 @@ const pricingData = [
     ],
     id: 1,
     title: "Starter",
-    href: "https://wordpress.org/plugins/regallery/ with ",
+    href: "https://wordpress.org/plugins/regallery/",
   },
   {
     price: "$29",

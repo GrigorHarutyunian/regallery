@@ -36,7 +36,7 @@ const Demo: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h1 className="section-text__title-centered ">Gallery views</h1>
+            <h2 className="section-text__title-centered ">Gallery views</h2>
             <div className="demo_buttons_rows ">
               {dataDemo.map((val, index) => {
                 return (
