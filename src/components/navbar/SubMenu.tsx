@@ -135,7 +135,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       className="subMenu-nav-link"
     >
       <a
-        href={"#views"}
+        href={"#gallery_views"}
         id="fade-button"
         onClick={handleToggle}
         className={"nav-link"}
