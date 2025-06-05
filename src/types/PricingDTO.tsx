@@ -1,7 +1,13 @@
+interface Price {
+  main?: string;
+  currency?: string;
+  cents?: string;
+}
+
 export default interface PricingDTO {
   text: string;
   id?: number;
-  price: string;
+  price: Price;
   canceledprice?: string;
   advantages: any[];
   duration?: string;
