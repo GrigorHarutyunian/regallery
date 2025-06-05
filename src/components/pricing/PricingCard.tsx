@@ -1,7 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 import PricingDTO from "../../types/PricingDTO";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Tooltip } from "@mui/material";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
+// import { Tooltip } from "@mui/material";
 const PricingCard: React.FC<PricingDTO> = ({
   price,
   text,
@@ -12,12 +12,12 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
-  const [tooltipText, setTooltipText] = useState<string>("Copy");
+  // const [tooltipText, setTooltipText] = useState<string>("Copy");
 
-  const handleCopy = () => {
-    setTooltipText("Copied");
-    setTimeout(() => setTooltipText("Copy"), 2000);
-  };
+  // const handleCopy = () => {
+  //   setTooltipText("Copied");
+  //   setTimeout(() => setTooltipText("Copy"), 2000);
+  // };
 
   return (
     <div className="pricing-card">
@@ -59,14 +59,12 @@ const PricingCard: React.FC<PricingDTO> = ({
             href={`mailto: regalleryteam@gmail.com?subject=I’m%20interested%20in%20upgrading%20to%20the%20${title}%20plan&body=I’m%20interested%20in%20upgrading%20my%20plan.%20Please%20reach%20out%20to%20me%20with%20the%20next%20steps.%20Thank%20you.`}
             target="_top"
           >
-            <div className="pricing-card__btn">
-              EMAIL US FOR {title.toUpperCase()} PLAN
-            </div>
+            <div className="pricing-card__btn">START FREE TRIAL FOR 7 DAYS</div>
           </a>
           <div className="pricing-card__btn_copy">
             <span>
-              Or copy regalleryteam@gmail.com{" "}
-              <CopyToClipboard
+              No credit card required.{" "}
+              {/* <CopyToClipboard
                 text={"regalleryteam@gmail.com"}
                 onCopy={handleCopy}
               >
@@ -85,7 +83,7 @@ const PricingCard: React.FC<PricingDTO> = ({
                     />
                   </svg>
                 </Tooltip>
-              </CopyToClipboard>
+              </CopyToClipboard> */}
             </span>
           </div>
         </>
