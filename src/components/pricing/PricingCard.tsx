@@ -2,6 +2,7 @@ import { useState } from "react";
 import PricingDTO from "../../types/PricingDTO";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Tooltip } from "@mui/material";
+
 const PricingCard: React.FC<PricingDTO> = ({
   price,
   text,
@@ -13,51 +14,36 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   const [tooltipText, setTooltipText] = useState<string>("Copy");
-
+  const { currency, main, cents } = price;
   const handleCopy = () => {
     setTooltipText("Copied");
     setTimeout(() => setTooltipText("Copy"), 2000);
-  };
-
-  const renderPricingCardTitle = (price: string) => {
-    const isFree = price.toLowerCase() === "free";
-
-    if (isFree) {
-      return <div className="pricing-card__title">Free</div>;
-    }
-
-    const withoutDollar = price.replace("$", "");
-    const [dollar, cents] = withoutDollar.split(".");
-
-    return (
-      <div className="pricing-card__title">
-        <span className="currency">$</span>
-        <span className="dollar">{dollar}</span>
-        {cents && <span className="cents">{cents}</span>}
-      </div>
-    );
   };
 
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {canceledprice && (
+        {canceledprice ? (
           <span className="canceled-price">
-            {canceledprice && <div className="remov_line"></div>}
+            {canceledprice ? <div className="remov_line" /> : null}
             {canceledprice}
           </span>
-        )}
-        {renderPricingCardTitle(price)}
+        ) : null}
+        <div className="pricing-card__title">
+          {currency ? <span className="currency">{currency}</span> : null}
+          {main ? <span className="dollar">{main}</span> : null}
+          {cents ? <span className="cents"> {cents}</span> : null}
+        </div>
         <div className="pricing-card__duration">{duration}</div>
 
-        {savedmoney && (
+        {savedmoney ? (
           <div className="parent_saved_money">
             <div className="saved_money_div">
               <span className="saved_money">Save {savedmoney}</span>
             </div>
           </div>
-        )}
+        ) : null}
 
         <p className="section-text__desc pricing__text">{text}</p>
       </div>

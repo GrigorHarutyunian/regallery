@@ -1,8 +1,11 @@
 import { ai_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { woo_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
+
 const pricingData = [
   {
-    price: "Free",
+    price: {
+      main: "Free",
+    },
     text: "Easy Start for Beginners to Explore Galleries",
     advantages: [
       "Unlimited Galleries",
@@ -20,7 +23,11 @@ const pricingData = [
     href: "https://wordpress.org/plugins/regallery/",
   },
   {
-    price: "$29.99",
+    price: {
+      currency: "$",
+      main: "29",
+      cents: "99",
+    },
     text: "For Photographers & Professionals, Needing Creative Galleries",
     advantages: [
       "Unlimited Galleries",
@@ -47,7 +54,11 @@ const pricingData = [
   },
 
   {
-    price: "$49.99",
+    price: {
+      currency: "$",
+      main: "49",
+      cents: "99",
+    },
     text: "For Businesses & Agencies, Needing Custom Galleries",
     advantages: [
       "Unlimited Galleries",
