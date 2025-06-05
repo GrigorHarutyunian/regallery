@@ -20,7 +20,7 @@ const pricingData = [
     href: "https://wordpress.org/plugins/regallery/",
   },
   {
-    price: "$29.9",
+    price: "$29.99",
     text: "For Photographers & Professionals, Needing Creative Galleries",
     advantages: [
       "Unlimited Galleries",
@@ -47,8 +47,7 @@ const pricingData = [
   },
 
   {
-    price: "$49.9",
-
+    price: "$49.99",
     text: "For Businesses & Agencies, Needing Custom Galleries",
     advantages: [
       "Unlimited Galleries",

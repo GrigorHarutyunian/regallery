@@ -19,6 +19,25 @@ const PricingCard: React.FC<PricingDTO> = ({
     setTimeout(() => setTooltipText("Copy"), 2000);
   };
 
+  const renderPricingCardTitle = (price: string) => {
+    const isFree = price.toLowerCase() === "free";
+
+    if (isFree) {
+      return <div className="pricing-card__title">Free</div>;
+    }
+
+    const withoutDollar = price.replace("$", "");
+    const [dollar, cents] = withoutDollar.split(".");
+
+    return (
+      <div className="pricing-card__title">
+        <span className="currency">$</span>
+        <span className="dollar">{dollar}</span>
+        {cents && <span className="cents">{cents}</span>}
+      </div>
+    );
+  };
+
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
@@ -29,7 +48,7 @@ const PricingCard: React.FC<PricingDTO> = ({
             {canceledprice}
           </span>
         )}
-        <div className="pricing-card__title">{price}</div>
+        {renderPricingCardTitle(price)}
         <div className="pricing-card__duration">{duration}</div>
 
         {savedmoney && (
