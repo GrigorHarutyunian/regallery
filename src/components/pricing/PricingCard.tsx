@@ -32,8 +32,8 @@ const PricingCard: React.FC<PricingDTO> = ({
         ) : null}
         <div className="pricing-card__title">
           {currency ? <span className="currency">{currency}</span> : null}
-          {main ? <span className="dollar">{main}</span> : null}
-          {cents ? <span className="cents"> {cents}</span> : null}
+          {main ? <span>{main}</span> : null}
+          {cents ? <span className="cents"> .{cents}</span> : null}
         </div>
         <div className="pricing-card__duration">{duration}</div>
 
