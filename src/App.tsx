@@ -20,6 +20,7 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
 import { ModalProvider } from "./contexts/ModalContext";
 import FreeTrialModal from "./components/modals/FreeTrialModal/FreeTrialModal";
+
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
