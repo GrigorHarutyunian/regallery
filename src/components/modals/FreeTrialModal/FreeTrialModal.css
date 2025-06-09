@@ -1,0 +1,132 @@
+.free-trial__modal {
+  padding: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  text-align: center;
+  border: 0; /* Ensure no border */
+  background-color: transparent;
+}
+
+.free-trial__modal:focus-visible {
+  outline: unset !important;
+}
+
+.free-trial__content {
+  width: 578px;
+  height: 445px;
+  border: 0;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+  background: #ffff;
+  padding: 0 !important;
+  border-radius: 10px;
+}
+.free-trial__content > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  padding: 0 30px;
+}
+.free-trial__initial-title {
+  font-size: 35px;
+}
+.free-trial__content > div > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.free-trial__inptus-div {
+  display: flex;
+  gap: 20px;
+}
+
+.free-trial__initial-header {
+  display: flex;
+  align-items: center;
+}
+.free-trial__initial-description_bottom {
+  font-size: 12px;
+}
+.free-trial__button_error {
+  background-color: #cc2525;
+}
+
+.free-trial__button_initial {
+  border: 0;
+}
+.free-trial__button_sucsses {
+  background: #198754;
+}
+.animate-dash svg {
+  width: 100px;
+}
+.animate-dash svg .circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash-line 0.9s ease-in-out forwards;
+}
+
+.animate-dash svg .line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash-line 0.95s 0.35s ease-in-out forwards;
+}
+.animate-dash svg .check {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash-check 0.95s 0.35s ease-in-out forwards;
+}
+.free-trial__error_message {
+  color: #dc3545;
+}
+.free-trial__sucsses_message {
+  color: #198754;
+}
+
+@media screen and (max-width: 450px) {
+  .free-trial__initial-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .free-trial__error_message,
+  .free-trial__sucsses_message {
+    font-size: 19px;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

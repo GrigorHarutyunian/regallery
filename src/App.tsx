@@ -18,7 +18,8 @@ import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
-
+import { ModalProvider } from "./contexts/ModalContext";
+import FreeTrialModal from "./components/modals/FreeTrialModal/FreeTrialModal";
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -85,22 +86,27 @@ const App: React.FC = () => {
   return (
     <DemoProvider>
       <WindowWidthProvider>
-        <Navbar />
-        <Banner />
-        <main
-          className={localStorage.getItem("bannerOpen") ? "closed-banner" : ""}
-        >
-          <Hero />
-          <Demo />
-          <Info />
-          <Features />
-          <AboutMobileResponsiveness />
-          <Review />
-          <Faq />
-          <Pricing />
-          <Support />
-        </main>
-        <Footer />
+        <ModalProvider>
+          <Navbar />
+          <Banner />
+          <main
+            className={
+              localStorage.getItem("bannerOpen") ? "closed-banner" : ""
+            }
+          >
+            <Hero />
+            <Demo />
+            <Info />
+            <Features />
+            <AboutMobileResponsiveness />
+            <Review />
+            <Faq />
+            <Pricing />
+            <Support />
+          </main>
+          <Footer />
+          <FreeTrialModal />
+        </ModalProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
     </DemoProvider>
