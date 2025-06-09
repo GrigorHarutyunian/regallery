@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import { useModal } from "../../contexts/ModalContext";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Container } from "react-bootstrap";
 import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
 import "./SupportAndInfo.css";
-import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
+import CustomButton from "../../components/buttons/CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import {
   LazyLoadImage,
@@ -20,6 +21,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
 }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
+  const { handleOpenModal } = useModal();
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -62,12 +64,16 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             )}
 
             <div className="buttons-container">
-              <a href="#pricing">
-                <DownloadBtn className="download-btn" />
-              </a>
+              <CustomButton
+                handleClick={handleOpenModal}
+                className="custom-button"
+              >
+                {"FREE TRIAL"}
+              </CustomButton>
+
               {id === "info" && (
                 <a
-                  className="download-btn watch_video"
+                  className="custom-button watch_video"
                   href="https://wordpress.org/plugins/regallery/?preview=1"
                   target="_blank"
                 >

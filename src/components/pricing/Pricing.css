@@ -321,7 +321,7 @@
   }
 }
 
-@media screen and (min-width: 350px) and (max-width: 475px) {
+@media screen and (min-width: 360px) and (max-width: 475px) {
   .pricing-card__btn {
     padding: 16px;
     width: 80%;
@@ -332,7 +332,7 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 349px) {
+@media screen and (min-width: 0px) and (max-width: 360px) {
   .pricing-card__btn {
     font-size: 0.55rem;
   }

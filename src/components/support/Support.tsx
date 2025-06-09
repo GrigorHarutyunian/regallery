@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import supportData from "./support-data";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import CustomButton from "../buttons/CustomButton/CustomButton";
 import "./Support.css";
 const Support: React.FC = () => {
   let text = supportData.text.split("24/7.");
@@ -22,7 +22,9 @@ const Support: React.FC = () => {
               href="https://wordpress.org/support/plugin/regallery/"
               target="_blank"
             >
-              <DownloadBtn className="download-btn" version={"support"} />
+              <CustomButton className="custom-button">
+                {"SUPPORT FORUM"}
+              </CustomButton>
             </a>
           </div>
         </div>
