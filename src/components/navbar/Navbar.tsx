@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext, useMemo } from "react";
 import "./Navbar.css";
 import iconc from "../../assets/icons/logo.webp";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import CustomButton from "../buttons/CustomButton/CustomButton";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
@@ -144,9 +144,11 @@ const Navbar: React.FC = () => {
                 }}
               >
                 {link.type === "button" ? (
-                  <DownloadBtn
-                    className={"download-btn download-btn__navbar"}
-                  />
+                  <CustomButton
+                    className={"custom-button custom-button__navbar"}
+                  >
+                    {"GET STARTED"}
+                  </CustomButton>
                 ) : (
                   <>
                     <div className={"nav-link__text"}>{link.title}</div>
