@@ -1,8 +1,9 @@
 import React from "react";
 import { useContext, useState } from "react";
+import { useModal } from "../../contexts/ModalContext";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import VideoModal from "../modals/VideoModal/VideoModal";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import CustomButton from "../buttons/CustomButton/CustomButton";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
@@ -14,6 +15,7 @@ import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
 
 const Hero: React.FC = () => {
+  const { handleOpenModal } = useModal();
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
@@ -56,9 +58,14 @@ const Hero: React.FC = () => {
               )}
               <div className="buttons-container">
                 <a href="#pricing">
-                  <DownloadBtn className={"download-btn"} />
+                  <CustomButton
+                    handleClick={handleOpenModal}
+                    className={"custom-button"}
+                  >
+                    {"GET STARTED"}
+                  </CustomButton>
                 </a>
-                <div onClick={handleOpen} className="download-btn watch_video">
+                <div onClick={handleOpen} className="custom-button watch_video">
                   <PlayCircleFilledIcon
                     style={{
                       verticalAlign: "middle",
@@ -72,7 +79,6 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             {version !== "mobile" && (
               <motion.div style={{ maxWidth: `50%` }} className="section-image">
                 <LazyLoadComponent>
