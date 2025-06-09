@@ -8,6 +8,12 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import TextField from "@mui/material/TextField";
 import freeTrialData from "./free-trial-data";
+import ReCAPTCHA from "react-google-recaptcha";
+// const SITE_KEY_LOCAL = "6Lct3ForAAAAAIjbslTuOQDO0q64BrL2j4PPUeAq"; // Replace with your reCAPTCHA site key
+// const SECRET_KEY_LOCAL = "6Lct3ForAAAAAN9Uz_pZczAaLNc2lVGZkuxzUt6p";
+const SITE_KEY = "6Lff4lorAAAAANqedHxr6BfJW1HMzfsDIfUmQc_R"; // Replace with your reCAPTCHA site key
+// const SECRET_KEY = "6Lff4lorAAAAACbPF9gmAD-ScUQrKiB2IE6NeWES";
+import { useState } from "react";
 import "./FreeTrialModal.css";
 
 const FreeTrialModal: React.FC = () => {
@@ -22,7 +28,7 @@ const FreeTrialModal: React.FC = () => {
   const [status, setStatus] = React.useState<"initial" | "success" | "error">(
     "initial"
   );
-
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const handleBackToinitial = () => {
     setStatus("initial");
   };
@@ -87,11 +93,19 @@ const FreeTrialModal: React.FC = () => {
             required
             fullWidth
           />
+          <div className="g-recaptcha ">
+            <ReCAPTCHA
+              sitekey={SITE_KEY}
+              onChange={(token: any) => setCaptchaToken(token)}
+              onExpired={() => setCaptchaToken(null)}
+            />
+          </div>
         </div>
+
         <button
           type="submit"
           className="custom-button free-trial__button_initial"
-          disabled={loading}
+          disabled={loading || !captchaToken}
         >
           {loading ? "Sending..." : "Start Free Trial"}
         </button>
