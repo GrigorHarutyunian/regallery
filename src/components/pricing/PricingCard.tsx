@@ -1,5 +1,8 @@
 import PricingDTO from "../../types/PricingDTO";
 import { useModal } from "../../contexts/ModalContext";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Tooltip } from "@mui/material";
+
 const PricingCard: React.FC<PricingDTO> = ({
   price,
   text,
@@ -11,26 +14,37 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   const { handleOpenModal } = useModal();
+  const [tooltipText, setTooltipText] = useState<string>("Copy");
+  const { currency, main, cents } = price;
+  const handleCopy = () => {
+    setTooltipText("Copied");
+    setTimeout(() => setTooltipText("Copy"), 2000);
+  };
+    
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {canceledprice && (
+        {canceledprice ? (
           <span className="canceled-price">
-            {canceledprice && <div className="remov_line"></div>}
+            {canceledprice ? <div className="remov_line" /> : null}
             {canceledprice}
           </span>
-        )}
-        <div className="pricing-card__title">{price}</div>
+        ) : null}
+        <div className="pricing-card__title">
+          {currency ? <span className="currency">{currency}</span> : null}
+          {main ? <span>{main}</span> : null}
+          {cents ? <span className="cents"> .{cents}</span> : null}
+        </div>
         <div className="pricing-card__duration">{duration}</div>
 
-        {savedmoney && (
+        {savedmoney ? (
           <div className="parent_saved_money">
             <div className="saved_money_div">
               <span className="saved_money">Save {savedmoney}</span>
             </div>
           </div>
-        )}
+        ) : null}
 
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
