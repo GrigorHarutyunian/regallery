@@ -1,7 +1,5 @@
 import PricingDTO from "../../types/PricingDTO";
 import { useModal } from "../../contexts/ModalContext";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Tooltip } from "@mui/material";
 
 const PricingCard: React.FC<PricingDTO> = ({
   price,
@@ -14,13 +12,8 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   const { handleOpenModal } = useModal();
-  const [tooltipText, setTooltipText] = useState<string>("Copy");
   const { currency, main, cents } = price;
-  const handleCopy = () => {
-    setTooltipText("Copied");
-    setTimeout(() => setTooltipText("Copy"), 2000);
-  };
-    
+
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
