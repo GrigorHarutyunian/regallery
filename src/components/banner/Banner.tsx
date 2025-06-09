@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useModal } from "../../contexts/ModalContext";
 import { motion } from "framer-motion";
 
 import "./Banner.css";
@@ -7,7 +8,7 @@ const Banner: React.FC = () => {
   const [bannerOpen, setBannerOpen] = useState<boolean>(
     localStorage.getItem("bannerOpen") !== "false"
   );
-
+  const { handleOpenModal } = useModal();
   const closeBanner = () => {
     setBannerOpen(false);
     localStorage.setItem("bannerOpen", "false");
@@ -40,7 +41,15 @@ const Banner: React.FC = () => {
           </div>
           <p>
             Unlimited access to the <b>Pre-built templates</b> and{" "}
-            <b>AI tools</b>. <a href="#pricing">Get for less than $2.5/month</a>
+            <b>AI tools</b>. <a href="#pricing">Get for less than $2.5/month</a>{" "}
+            or{" "}
+            <a
+              href="#pricing"
+              style={{ cursor: "pointer" }}
+              onClick={handleOpenModal}
+            >
+              start free trial
+            </a>
           </p>
         </motion.div>
         <div id="banner" onClick={closeBanner} className="close-banner">

@@ -400,15 +400,21 @@
   }
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 1015px) {
   .nav {
     top: 70px;
   }
 }
 
-@media screen and (max-width: 364px) {
+@media screen and (min-width: 357px) and (max-width: 420px) {
   .nav {
     top: 116px;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .nav {
+    top: 136px;
   }
 }
 
@@ -424,7 +430,7 @@
 }
 
 @media screen and (min-width: 800px) and (max-width: 1060px) {
-  .download-btn__navbar {
+  .custom-button__navbar {
     font-size: 12px !important;
     white-space: nowrap;
     overflow: hidden;
@@ -444,7 +450,7 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 800px) {
-  .download-btn__navbar {
+  .custom-button__navbar {
     font-size: 9px !important;
     white-space: nowrap;
     overflow: hidden;
@@ -532,7 +538,7 @@
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 365px) and (max-width: 490px) {
+@media screen and (min-width: 421px) and (max-width: 558px) {
   .nav {
     top: 93px;
   }

@@ -95,21 +95,27 @@ p {
   margin: 0;
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 1015px) {
   main {
     margin-top: 70px;
   }
 }
 
-@media screen and (min-width: 365px) and (max-width: 490px) {
+@media screen and (min-width: 421px) and (max-width: 558px) {
   main {
     margin-top: 93px;
   }
 }
 
-@media screen and (max-width: 364px) {
+@media screen and (min-width: 357px) and (max-width: 420px) {
   main {
     margin-top: 116px;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  main {
+    margin-top: 136px;
   }
 }
 
@@ -223,7 +229,7 @@ p {
     margin-top: 20px;
   }
 
-  section#support .download-btn {
+  section#support .custom-button {
     font-size: 0.6rem;
   }
   .contact_us_row {
