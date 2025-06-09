@@ -1,4 +1,4 @@
-.download-btn {
+.custom-button {
   background-color: #2540cc;
   text-decoration: none;
   color: #ffffff;
@@ -12,11 +12,11 @@
   transition: all 0.2s linear;
   margin: 0;
 }
-.download-btn:hover {
+.custom-button:hover {
   filter: brightness(1.1);
 }
 
-.download-btn__navbar {
+.custom-button__navbar {
   background: #2540cc;
   margin-left: 12px;
 }
