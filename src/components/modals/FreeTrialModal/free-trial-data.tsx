@@ -39,8 +39,18 @@ const freeTrialData = {
     title: "7 Day Free Trial",
     descriptionTop:
       "Ready to wow your visitors? One click starts your Re Gallery free trial.Let’s build something beautiful",
-    descriptionBottom:
-      "If you have any questions, feel free to reach out to us on Support Forum. We're always here to help!",
+    descriptionBottom: (
+      <>
+        If you have any questions, feel free to reach out to us on{" "}
+        <a
+          href="https://wordpress.org/support/plugin/regallery/"
+          target="_blank"
+        >
+          Support Forum
+        </a>
+        . We're always here to help!
+      </>
+    ),
   },
   successData: {
     icon: (
@@ -71,9 +81,29 @@ const freeTrialData = {
       </svg>
     ),
     message: "Congrats! Your 7-day free trial has been successfully activated.",
-    description:
-      "Thank you for giving Re Gallery a chance! You can download the photogallery plugin here",
-    buttonTitle: "Try Again",
+    descriptionTop: (
+      <>
+        Thank you for giving Re Gallery a chance! You can download the
+        photogallery plugin{" "}
+        <a href="https://wordpress.org/plugins/regallery/" target="_blank">
+          here
+        </a>
+        .
+      </>
+    ),
+    descriptionBottom: (
+      <>
+        If you have any questions, feel free to reach out to us on{" "}
+        <a
+          href="https://wordpress.org/support/plugin/regallery/"
+          target="_blank"
+        >
+          Support Forum
+        </a>
+        . We're always here to help!
+      </>
+    ),
+    buttonTitle: "Go Back",
   },
 
   errorData: {

@@ -24,7 +24,7 @@
 
 .free-trial__content {
   width: 578px;
-  height: 445px;
+  height: 500px;
   border: 0;
   max-width: 100%;
   overflow: hidden;
@@ -51,20 +51,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 30px;
+  width: 100%;
 }
 .free-trial__inptus-div {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
 .free-trial__initial-header {
   display: flex;
   align-items: center;
+  text-align: start;
+  width: 100%;
 }
-.free-trial__initial-description_bottom {
+.free-trial__initial-title {
+  text-align: start;
+}
+.free-trial__initial-description_top {
+  text-align: start;
+}
+.free-trial__initial-description_bottom,
+.free-trial__success-description_bottom {
   font-size: 12px;
+  text-align: start;
 }
 .free-trial__button_error {
   background-color: #cc2525;
@@ -72,8 +83,19 @@
 
 .free-trial__button_initial {
   border: 0;
+  width: 100%;
+  font-family: inherit;
 }
-.free-trial__button_sucsses {
+.free-trial__success-description_top > a {
+  color: #198754;
+}
+.free-trial__success-description_bottom > a {
+  color: #198754;
+}
+.free-trial__success_message {
+  color: #198754;
+}
+.free-trial__button_success {
   background: #198754;
 }
 .animate-dash svg {
@@ -98,9 +120,6 @@
 .free-trial__error_message {
   color: #dc3545;
 }
-.free-trial__sucsses_message {
-  color: #198754;
-}
 
 @media screen and (max-width: 450px) {
   .free-trial__initial-title {
@@ -110,7 +129,7 @@
 
 @media screen and (max-width: 380px) {
   .free-trial__error_message,
-  .free-trial__sucsses_message {
+  .free-trial__success_message {
     font-size: 19px;
   }
 }

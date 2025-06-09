@@ -43,11 +43,7 @@ const Banner: React.FC = () => {
             Unlimited access to the <b>Pre-built templates</b> and{" "}
             <b>AI tools</b>. <a href="#pricing">Get for less than $2.5/month</a>{" "}
             or{" "}
-            <a
-              href="#pricing"
-              style={{ cursor: "pointer" }}
-              onClick={handleOpenModal}
-            >
+            <a style={{ cursor: "pointer" }} onClick={handleOpenModal}>
               start free trial
             </a>
           </p>

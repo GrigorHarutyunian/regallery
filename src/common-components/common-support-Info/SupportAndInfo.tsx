@@ -64,14 +64,13 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
             )}
 
             <div className="buttons-container">
-              <a href="#pricing">
-                <CustomButton
-                  handleClick={handleOpenModal}
-                  className="custom-button"
-                >
-                  {"GET STARTED"}
-                </CustomButton>
-              </a>
+              <CustomButton
+                handleClick={handleOpenModal}
+                className="custom-button"
+              >
+                {"FREE TRIAL"}
+              </CustomButton>
+
               {id === "info" && (
                 <a
                   className="custom-button watch_video"

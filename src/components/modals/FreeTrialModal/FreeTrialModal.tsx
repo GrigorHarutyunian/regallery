@@ -77,6 +77,7 @@ const FreeTrialModal: React.FC = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="Email"
+            fullWidth
           />
           <TextField
             placeholder="Domain"
@@ -84,11 +85,13 @@ const FreeTrialModal: React.FC = () => {
             value={domain}
             onChange={(e) => setDomain(e.target.value)}
             required
+            fullWidth
           />
         </div>
         <button
           type="submit"
           className="custom-button free-trial__button_initial"
+          disabled={loading}
         >
           {loading ? "Sending..." : "Start Free Trial"}
         </button>

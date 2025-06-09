@@ -57,14 +57,13 @@ const Hero: React.FC = () => {
                 </motion.div>
               )}
               <div className="buttons-container">
-                <a href="#pricing">
-                  <CustomButton
-                    handleClick={handleOpenModal}
-                    className={"custom-button"}
-                  >
-                    {"GET STARTED"}
-                  </CustomButton>
-                </a>
+                <CustomButton
+                  handleClick={handleOpenModal}
+                  className={"custom-button"}
+                >
+                  {"FREE TRIAL"}
+                </CustomButton>
+
                 <div onClick={handleOpen} className="custom-button watch_video">
                   <PlayCircleFilledIcon
                     style={{
