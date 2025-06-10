@@ -9,26 +9,25 @@ import Fade from "@mui/material/Fade";
 import TextField from "@mui/material/TextField";
 import freeTrialData from "./free-trial-data";
 import ReCAPTCHA from "react-google-recaptcha";
-// const SITE_KEY_LOCAL = "6Lct3ForAAAAAIjbslTuOQDO0q64BrL2j4PPUeAq"; // Replace with your reCAPTCHA site key
-// const SECRET_KEY_LOCAL = "6Lct3ForAAAAAN9Uz_pZczAaLNc2lVGZkuxzUt6p";
-const SITE_KEY = "6Lff4lorAAAAANqedHxr6BfJW1HMzfsDIfUmQc_R"; // Replace with your reCAPTCHA site key
-// const SECRET_KEY = "6Lff4lorAAAAACbPF9gmAD-ScUQrKiB2IE6NeWES";
+// const SITE_KEY_LOCAL = "6Ldj-FsrAAAAAKF_Cov4AqlH_j_5_Cg66u1F80WJ"; // Replace with your reCAPTCHA site key
+// const SECRET_KEY_LOCAL = "6Ldj-FsrAAAAAHUTxSzNn9qZUcW6rLxC_mCxH3En";
+const SITE_KEY = "6Lf191srAAAAAHp--PQz0lu1XBIJrbewWhhCkeIL"; // Replace with your reCAPTCHA site key
+// const SECRET_KEY = "6Lf191srAAAAAJEzK_wXL9AcMI5_aAboQide_bzg";
 import { useState } from "react";
 import "./FreeTrialModal.css";
-
+type Status = "initial" | "success" | "error";
 const FreeTrialModal: React.FC = () => {
   const { isOpenModal, handleCloseModal } = useModal();
   const {
     initialData: { icon, title, descriptionTop, descriptionBottom },
   } = freeTrialData;
-  const [email, setEmail] = React.useState("");
-  const [domain, setDomain] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
-  const [errorMessage, setErrorMessage] = React.useState("");
-  const [status, setStatus] = React.useState<"initial" | "success" | "error">(
-    "initial"
-  );
+  const [email, setEmail] = useState<string>("");
+  const [domain, setDomain] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [status, setStatus] = useState<Status>("initial");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
   const handleBackToinitial = () => {
     setStatus("initial");
   };
