@@ -9,9 +9,11 @@ import Fade from "@mui/material/Fade";
 import TextField from "@mui/material/TextField";
 import freeTrialData from "./free-trial-data";
 import ReCAPTCHA from "react-google-recaptcha";
+const SITE_KEY_GRIGOR = "6Ldm_VsrAAAAALyx-Z3GOeBAMsjx772DUw0YQfo6";
+// const SECRET_KEY_GRIGOR_="6Ldm_VsrAAAAAHx0EqOybOIQxYzx1Co_1FRcHJgr";
 // const SITE_KEY_LOCAL = "6Ldj-FsrAAAAAKF_Cov4AqlH_j_5_Cg66u1F80WJ"; // Replace with your reCAPTCHA site key
 // const SECRET_KEY_LOCAL = "6Ldj-FsrAAAAAHUTxSzNn9qZUcW6rLxC_mCxH3En";
-const SITE_KEY = "6Lf191srAAAAAHp--PQz0lu1XBIJrbewWhhCkeIL"; // Replace with your reCAPTCHA site key
+// const SITE_KEY = "6Lf191srAAAAAHp--PQz0lu1XBIJrbewWhhCkeIL"; // Replace with your reCAPTCHA site key
 // const SECRET_KEY = "6Lf191srAAAAAJEzK_wXL9AcMI5_aAboQide_bzg";
 import { useState } from "react";
 import "./FreeTrialModal.css";
@@ -94,7 +96,7 @@ const FreeTrialModal: React.FC = () => {
           />
           <div className="g-recaptcha ">
             <ReCAPTCHA
-              sitekey={SITE_KEY}
+              sitekey={SITE_KEY_GRIGOR}
               onChange={(token: any) => setCaptchaToken(token)}
               onExpired={() => setCaptchaToken(null)}
             />
