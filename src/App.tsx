@@ -18,9 +18,10 @@ import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
-import { ModalProvider } from "./contexts/ModalContext";
+import { FreeTrialModalProvider } from "./contexts/FreeTrialModalContext";
+import { PayPalModalProvider } from "./contexts/PayPalModalContext";
+import PayPalModal from "./components/modals/PayPalModal/PayPalModal";
 import FreeTrialModal from "./components/modals/FreeTrialModal/FreeTrialModal";
-
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -87,27 +88,30 @@ const App: React.FC = () => {
   return (
     <DemoProvider>
       <WindowWidthProvider>
-        <ModalProvider>
-          <Navbar />
-          <Banner />
-          <main
-            className={
-              localStorage.getItem("bannerOpen") ? "closed-banner" : ""
-            }
-          >
-            <Hero />
-            <Demo />
-            <Info />
-            <Features />
-            <AboutMobileResponsiveness />
-            <Review />
-            <Faq />
-            <Pricing />
-            <Support />
-          </main>
-          <Footer />
-          <FreeTrialModal />
-        </ModalProvider>
+        <FreeTrialModalProvider>
+          <PayPalModalProvider>
+            <Navbar />
+            <Banner />
+            <main
+              className={
+                localStorage.getItem("bannerOpen") ? "closed-banner" : ""
+              }
+            >
+              <Hero />
+              <Demo />
+              <Info />
+              <Features />
+              <AboutMobileResponsiveness />
+              <Review />
+              <Faq />
+              <Pricing />
+              <Support />
+            </main>
+            <Footer />
+            <PayPalModal />
+            <FreeTrialModal />
+          </PayPalModalProvider>
+        </FreeTrialModalProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
     </DemoProvider>
