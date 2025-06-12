@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useModal } from "../../contexts/ModalContext";
+import { useFreeTrialModal } from "../../contexts/FreeTrialModalContext";
 import { motion } from "framer-motion";
 
 import "./Banner.css";
@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
   const [bannerOpen, setBannerOpen] = useState<boolean>(
     localStorage.getItem("bannerOpen") !== "false"
   );
-  const { handleOpenModal } = useModal();
+  const { handleOpenModal } = useFreeTrialModal();
   const closeBanner = () => {
     setBannerOpen(false);
     localStorage.setItem("bannerOpen", "false");

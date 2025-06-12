@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext, useState } from "react";
-import { useModal } from "../../contexts/ModalContext";
+import { usePayPalModal } from "../../contexts/PayPalModalContext";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import VideoModal from "../modals/VideoModal/VideoModal";
 import CustomButton from "../buttons/CustomButton/CustomButton";
@@ -15,7 +15,7 @@ import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
 
 const Hero: React.FC = () => {
-  const { handleOpenModal } = useModal();
+  const { handleOpenModal } = usePayPalModal();
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useModal } from "../../../contexts/ModalContext";
+import { useFreeTrialModal } from "../../../contexts/FreeTrialModalContext";
 import SuccessMessage from "./SuccessMessage";
 import ErrorMessage from "./ErrorMessage";
 import Backdrop from "@mui/material/Backdrop";
@@ -19,7 +19,7 @@ import { useState } from "react";
 import "./FreeTrialModal.css";
 type Status = "initial" | "success" | "error";
 const FreeTrialModal: React.FC = () => {
-  const { isOpenModal, handleCloseModal } = useModal();
+  const { isOpenModal, handleCloseModal } = useFreeTrialModal();
   const {
     initialData: { icon, title, descriptionTop, descriptionBottom },
   } = freeTrialData;

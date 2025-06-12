@@ -1,5 +1,5 @@
 import PricingDTO from "../../types/PricingDTO";
-import { useModal } from "../../contexts/ModalContext";
+import { useFreeTrialModal } from "../../contexts/FreeTrialModalContext";
 
 const PricingCard: React.FC<PricingDTO> = ({
   price,
@@ -11,7 +11,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
-  const { handleOpenModal } = useModal();
+  const { handleOpenModal } = useFreeTrialModal();
   const { currency, main, cents } = price;
 
   return (
