@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useModal } from "../../contexts/ModalContext";
+import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Container } from "react-bootstrap";
 import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
@@ -21,7 +21,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
 }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const { handleOpenModal } = useModal();
+  const { handleOpenModal } = useProVersionActivatorModal();
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -65,7 +65,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
 
             <div className="buttons-container">
               <CustomButton
-                handleClick={handleOpenModal}
+                handleClick={() => handleOpenModal("freeTrial")}
                 className="custom-button"
               >
                 {"FREE TRIAL"}

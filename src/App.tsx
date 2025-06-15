@@ -18,8 +18,8 @@ import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
-import { ModalProvider } from "./contexts/ModalContext";
-import FreeTrialModal from "./components/modals/FreeTrialModal/FreeTrialModal";
+import { ProVersionActivatorModalProvider } from "./contexts/ProVersionActivatorModalContext";
+import ProVersionActivatorModal from "./components/modals/ProVersionActivatorModal/ProVersionActivatorModal";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -87,7 +87,7 @@ const App: React.FC = () => {
   return (
     <DemoProvider>
       <WindowWidthProvider>
-        <ModalProvider>
+        <ProVersionActivatorModalProvider>
           <Navbar />
           <Banner />
           <main
@@ -106,8 +106,8 @@ const App: React.FC = () => {
             <Support />
           </main>
           <Footer />
-          <FreeTrialModal />
-        </ModalProvider>
+          <ProVersionActivatorModal />
+        </ProVersionActivatorModalProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
     </DemoProvider>

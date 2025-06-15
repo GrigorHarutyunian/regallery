@@ -1,0 +1,24 @@
+.payment__form,
+.free-trial__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.free-trial__inptus-div,
+.payment__inptus-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.free-trial__g-recaptcha,
+.payment__g-recaptcha {
+  transform: scale(0.65);
+  transform-origin: 0 0;
+}
+.payment__button,
+.free-trial__button {
+  border: 0;
+}

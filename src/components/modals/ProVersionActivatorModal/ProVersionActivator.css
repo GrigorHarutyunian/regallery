@@ -1,4 +1,4 @@
-.free-trial__modal {
+.pro-version-activator__modal {
   padding: 28px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,13 +18,13 @@
   background-color: transparent;
 }
 
-.free-trial__modal:focus-visible {
+.pro-version-activator__modal:focus-visible {
   outline: unset !important;
 }
 
-.free-trial__content {
+.pro-version-activator__content {
   width: 578px;
-  height: 590px;
+  max-height: 590px;
   border: 0;
   max-width: 100%;
   overflow: hidden;
@@ -34,45 +34,52 @@
   background: #ffff;
   padding: 0 !important;
   border-radius: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(189 187 187 / 40%) transparent;
 }
-.free-trial__content > div {
+
+.free-trial__initial,
+.payment__initial,
+.free-trial__error,
+.payment__form-wrapper,
+.free-trial__success {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
   height: 100%;
-  padding: 0 30px;
-}
-.free-trial__initial-title {
-  font-size: 35px;
-}
-.free-trial__content > div > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-.free-trial__inptus-div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 30px;
 }
 
-.free-trial__initial-header {
+.payment__form-wrapper {
+  align-items: unset;
+  padding: 60px;
+}
+.free-trial__initial-title,
+.payment__initial-title {
+  font-size: 35px;
+}
+
+.free-trial__initial-header,
+.payment__initial-header {
   display: flex;
   align-items: center;
   text-align: start;
   width: 100%;
 }
+
 .free-trial__initial-title {
   text-align: start;
 }
-.free-trial__initial-description_top {
+.free-trial__initial-description_top,
+.payment__initial-description_top {
   text-align: start;
 }
 .free-trial__initial-description_bottom,
-.free-trial__success-description_bottom {
+.free-trial__success-description_bottom .animate-dash,
+.payment__initial-description_bottom {
   font-size: 12px;
   text-align: start;
 }
@@ -120,10 +127,6 @@
   color: #dc3545;
 }
 
-.g-recaptcha {
-  transform: scale(0.65);
-  transform-origin: 0 0;
-}
 @media screen and (max-width: 450px) {
   .free-trial__initial-title {
     font-size: 20px;
@@ -150,5 +153,29 @@
 @keyframes dash-line {
   to {
     stroke-dashoffset: 0;
+  }
+}
+.payment__form-wrapper.paypal-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 222px;
+  padding: 60px;
+}
+
+.paypal-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #ffc439; /* PayPal gold */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
