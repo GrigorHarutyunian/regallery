@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useFreeTrialModal } from "../../contexts/FreeTrialModalContext";
+import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
 import { motion } from "framer-motion";
 
 import "./Banner.css";
@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
   const [bannerOpen, setBannerOpen] = useState<boolean>(
     localStorage.getItem("bannerOpen") !== "false"
   );
-  const { handleOpenModal } = useFreeTrialModal();
+  const { handleOpenModal } = useProVersionActivatorModal();
   const closeBanner = () => {
     setBannerOpen(false);
     localStorage.setItem("bannerOpen", "false");
@@ -43,7 +43,10 @@ const Banner: React.FC = () => {
             Unlimited access to the <b>Pre-built templates</b> and{" "}
             <b>AI tools</b>. <a href="#pricing">Get for less than $2.5/month</a>{" "}
             or{" "}
-            <a style={{ cursor: "pointer" }} onClick={handleOpenModal}>
+            <a
+              style={{ cursor: "pointer" }}
+              onClick={() => handleOpenModal("freeTrial")}
+            >
               start free trial
             </a>
           </p>

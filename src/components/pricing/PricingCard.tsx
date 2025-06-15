@@ -1,5 +1,5 @@
 import PricingDTO from "../../types/PricingDTO";
-import { useFreeTrialModal } from "../../contexts/FreeTrialModalContext";
+import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
 
 const PricingCard: React.FC<PricingDTO> = ({
   price,
@@ -11,7 +11,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
-  const { handleOpenModal } = useFreeTrialModal();
+  const { handleOpenModal } = useProVersionActivatorModal();
   const { currency, main, cents } = price;
 
   return (
@@ -53,7 +53,10 @@ const PricingCard: React.FC<PricingDTO> = ({
         </>
       ) : (
         <>
-          <div onClick={handleOpenModal} className="pricing-card__btn">
+          <div
+            onClick={() => handleOpenModal("freeTrial")}
+            className="pricing-card__btn"
+          >
             START FREE TRIAL FOR 7 DAYS
           </div>
           <div className="pricing-card__btn_copy">
