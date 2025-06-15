@@ -1,10 +1,13 @@
 import CustomButton from "../../buttons/CustomButton/CustomButton";
-import freeTrialData from "./free-trial-data";
-interface ErrorMessageProps {
+import freeTrialData from "./pro-version-activator-data";
+interface ErrorMessageContentProps {
   message: string;
   onTryAgain: () => void;
 }
-const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, onTryAgain }) => {
+const ErrorMessageContent: React.FC<ErrorMessageContentProps> = ({
+  message,
+  onTryAgain,
+}) => {
   const {
     errorData: { icon, description, buttonTitle },
   } = freeTrialData;
@@ -23,4 +26,4 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, onTryAgain }) => {
   );
 };
 
-export default ErrorMessage;
+export default ErrorMessageContent;

@@ -1,10 +1,12 @@
 import React from "react";
 import CustomButton from "../../buttons/CustomButton/CustomButton";
-import freeTrialData from "./free-trial-data";
+import freeTrialData from "./pro-version-activator-data";
 interface SuccessMessageProps {
   onTryAgain: () => void;
 }
-const SuccessMessage: React.FC<SuccessMessageProps> = ({ onTryAgain }) => {
+const SuccessMessageContent: React.FC<SuccessMessageProps> = ({
+  onTryAgain,
+}) => {
   const {
     successData: {
       icon,
@@ -33,4 +35,4 @@ const SuccessMessage: React.FC<SuccessMessageProps> = ({ onTryAgain }) => {
   );
 };
 
-export default SuccessMessage;
+export default SuccessMessageContent;
