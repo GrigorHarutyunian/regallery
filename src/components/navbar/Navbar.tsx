@@ -34,11 +34,18 @@ const links: Link[] = [
     external: true,
   },
   { id: 4, title: "Pricing", href: "#pricing" },
-  { id: 5, title: "FAQ", href: "#faq" },
-  { id: 6, title: "Contact us", href: "#support" },
+  {
+    id: 5,
+    title: "Blog",
+    href: "https://regallery.team/core/blog/",
+    target: "_blank",
+    external: true,
+  },
+  { id: 6, title: "FAQ", href: "#faq" },
+  { id: 7, title: "Contact us", href: "#support" },
 
   {
-    id: 7,
+    id: 8,
     title: "Get Started",
     href: "#pricing",
     type: "button",

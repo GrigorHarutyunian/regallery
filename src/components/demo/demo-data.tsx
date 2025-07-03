@@ -4,7 +4,7 @@ export const dataDemo = [
     title: "Thumbnails",
     description:
       "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
-    demoPath: "https://regallery.team/core/thumbnails/",
+    demoPath: "https://regallery.team/core/thumbnails-view/",
     path: (
       <>
         <path
@@ -32,7 +32,7 @@ export const dataDemo = [
     title: "Mosaic",
     description:
       "Create a collage-like presentation by mixing different sizes and shapes.",
-    demoPath: "https://regallery.team/core/mosaic/",
+    demoPath: "https://regallery.team/core/mosaic-view/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -46,7 +46,7 @@ export const dataDemo = [
     title: "Masonry",
     description:
       "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
-    demoPath: "https://regallery.team/core/masonry/",
+    demoPath: "https://regallery.team/core/masonry-view/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -60,7 +60,7 @@ export const dataDemo = [
     title: "Justified",
     description:
       "Display images in clean, evenly-aligned rows, automatically adjusted to fit the width for a sleek and balanced layout.",
-    demoPath: "https://regallery.team/core/justified/",
+    demoPath: "https://regallery.team/core/justified-view/",
     path: (
       <g
         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export const dataDemo = [
     title: "Slideshow",
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content.",
-    demoPath: "https://regallery.team/core/slideshow/",
+    demoPath: "https://regallery.team/core/slideshow-view/",
     path: (
       <>
         <path
@@ -105,7 +105,7 @@ export const dataDemo = [
     title: "Cube",
     description:
       "A 3D photo gallery with an interactive, rotating cube design. Great for displaying images in a unique way.",
-    demoPath: "https://regallery.team/core/cube/",
+    demoPath: "https://regallery.team/core/cube-view/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -120,7 +120,7 @@ export const dataDemo = [
     title: "Carousel",
     description:
       "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
-    demoPath: "https://regallery.team/core/carousel/",
+    demoPath: "https://regallery.team/core/carousel-view/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -135,7 +135,7 @@ export const dataDemo = [
     title: "Cards",
     description:
       "Each item is placed in a distinct card, making it easy for users to scan through various media at a glance.",
-    demoPath: "https://regallery.team/core/cards/",
+    demoPath: "https://regallery.team/core/cards-view/",
     path: (
       <path
         fill={"#ffffff91"}
@@ -149,7 +149,7 @@ export const dataDemo = [
     title: "Blog",
     description:
       "Easily pair images or videos with text and clickable buttons to guide your visitors through your brand story, team intro, product highlights, or customer journey.",
-    demoPath: "https://regallery.team/core/blog/",
+    demoPath: "https://regallery.team/core/blog-view/",
     path: (
       <path
         fill={"#ffffff91"}
