@@ -26,7 +26,7 @@ footer > .container {
   gap: 15px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 860px) {
   footer {
     height: auto;
   }
