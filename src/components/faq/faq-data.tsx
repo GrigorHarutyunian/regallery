@@ -3,7 +3,7 @@ export const faqData = [
     title: "What is Re Gallery photo gallery plugin?",
     description: (
         <>
-      Re Gallery is a responsive WordPress photo gallery plugin that lets you easily create image galleries in WordPress with <b>drag-and-drop tools, AI-generated image captions, and pre-designed gallery templates.</b> It's compatible with major page builders like <b>Gutenberg, Elementor, WPBakery, and Divi,</b> and supports WooCommerce photo gallery integration for eCommerce sites.
+      Re Gallery is a responsive WordPress photo gallery plugin that lets you easily create image galleries in WordPress with <b>drag-and-drop tools, AI-generated image captions, and pre-designed gallery templates.</b> It's compatible with major page builders like <b>Gutenberg, Elementor, WPBakery, Beaver, Bricks, and Divi,</b> and supports WooCommerce photo gallery integration for eCommerce sites.
         </>
     ),
     panelId: "panel1",
@@ -13,7 +13,7 @@ export const faqData = [
     title: "How do I create my first image gallery using Re Gallery?",
     description: (
         <>
-      Go to <b>Re Gallery - Add New Gallery</b> in your WordPress dashboard. Upload images using the drag and drop interface, choose a pre-designed gallery template, customize with AI captions, hover effects, or lightbox, then insert it into any page using shortcode or your page builder <b>(Gutenberg, Elementor, WPBakery, Divi).</b>
+      Go to <b>Re Gallery - Add New Gallery</b> in your WordPress dashboard. Upload images using the drag and drop interface, choose a pre-designed gallery template, customize with AI captions, hover effects, or lightbox, then insert it into any page using shortcode or your page builder <b>(Gutenberg, Elementor, WPBakery, Beaver, Bricks, Divi).</b>
         </>
     ),
     panelId: "panel2",
@@ -24,7 +24,7 @@ export const faqData = [
       "Is Re Gallery photo gallery plugin compatible with Elementor page builder?",
     description: (
         <>
-      Re Gallery works seamlessly with <b>Gutenberg, Elementor, Divi, and WPBakery Page Builder,</b> allowing for flexible gallery integration across different platforms.
+      Re Gallery works seamlessly with <b>Gutenberg, Elementor, Divi, Beaver, Bricks, and WPBakery Page Builder,</b> allowing for flexible gallery integration across different platforms.
         </>
     ),
     panelId: "panel3",
