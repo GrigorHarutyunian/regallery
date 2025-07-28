@@ -22,11 +22,12 @@ footer > .container {
 
 .footer__social-website-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   footer {
     height: auto;
   }
