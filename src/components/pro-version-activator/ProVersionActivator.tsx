@@ -1,136 +1,136 @@
-// import * as React from "react";
-// import { useState } from "react";
-// import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
-// import CloseIcon from "@mui/icons-material/Close";
-// import Modal from "@mui/material/Modal";
-// import Fade from "@mui/material/Fade";
-// import Backdrop from "@mui/material/Backdrop";
-// // import PaymentContent from "./PaymentContent";
+import * as React from "react";
+import { useState } from "react";
+import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
+import CloseIcon from "@mui/icons-material/Close";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Backdrop from "@mui/material/Backdrop";
+import PaymentContent from "./PaymentContent";
+import "./proVersion.css";
+const siteKey = "6LfvH2ErAAAAAHSsZBDGp3G7mRi4ddFXVLOf4gvp";
 
-// const siteKey = "6LfvH2ErAAAAAHSsZBDGp3G7mRi4ddFXVLOf4gvp";
+type Status = "initial" | "success" | "error";
 
-// type Status = "initial" | "success" | "error";
+const ProVersionActivator: React.FC = () => {
+  const { modalState, handleCloseModal } = useProVersionActivatorModal();
 
-// const ProVersionActivator: React.FC = () => {
-//   const { modalState, handleCloseModal } = useProVersionActivatorModal();
+  const [email, setEmail] = useState<string>("");
+  const [domain, setDomain] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [status, setStatus] = useState<Status>("initial");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [isPaymentResponseOk, setIsPaymentResponseOk] =
+    useState<boolean>(false);
+  const [currency, setCurrency] = useState("USD");
 
-//   const [email, setEmail] = useState<string>("");
-//   const [domain, setDomain] = useState<string>("");
-//   const [loading, setLoading] = useState<boolean>(false);
-//   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-//   const [status, setStatus] = useState<Status>("initial");
-//   const [errorMessage, setErrorMessage] = useState<string>("");
-//   const [isPaymentResponseOk, setIsPaymentResponseOk] =
-//     useState<boolean>(false);
-//   const [currency, setCurrency] = useState("USD");
+  const resetState = () => {
+    setEmail("");
+    setDomain("");
+    setCaptchaToken(null);
+    setLoading(false);
+    setStatus("initial");
+    setErrorMessage("");
+    setIsPaymentResponseOk(false);
+  };
 
-//   const resetState = () => {
-//     setEmail("");
-//     setDomain("");
-//     setCaptchaToken(null);
-//     setLoading(false);
-//     setStatus("initial");
-//     setErrorMessage("");
-//     setIsPaymentResponseOk(false);
-//   };
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("initial");
 
-//   const handleFormSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setStatus("initial");
+    try {
+      const response = await fetch(
+        "https://regallery.team/core/wp-json/reacgcore/v2/user",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: "hak.hakobian@gmail.com",
+            domain: "https://wp.org",
+          }),
+        }
+      );
 
-//     try {
-//       const response = await fetch(
-//         "https://regallery.team/core/wp-json/reacgcore/v2/user",
-//         {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify({
-//             email: "hak.hakobian@gmail.com",
-//             domain: "https://wp.org",
-//           }),
-//         }
-//       );
+      const data = await response.json();
 
-//       const data = await response.json();
+      if (!response.ok) {
+        setErrorMessage(data?.message || "An unexpected error occurred.");
+        setIsPaymentResponseOk(true);
+      } else {
+        setStatus("success");
+        setIsPaymentResponseOk(false);
+      }
+    } catch {
+      setErrorMessage("Network error. Please try again.");
+      setIsPaymentResponseOk(true);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-//       if (!response.ok) {
-//         setErrorMessage(data?.message || "An unexpected error occurred.");
-//         setIsPaymentResponseOk(true);
-//       } else {
-//         setStatus("success");
-//         setIsPaymentResponseOk(false);
-//       }
-//     } catch {
-//       setErrorMessage("Network error. Please try again.");
-//       setIsPaymentResponseOk(true);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
+  return (
+    <Modal
+      aria-labelledby="transition-modal-title"
+      aria-describedby="transition-modal-description"
+      open={modalState}
+      onClose={handleCloseModal}
+      disableScrollLock
+      closeAfterTransition
+      slots={{ backdrop: Backdrop }}
+      slotProps={{
+        backdrop: {
+          timeout: 500,
+        },
+      }}
+    >
+      <Fade in={modalState} onExited={resetState}>
+        <div
+          onClick={handleCloseModal}
+          className="pro-version-activator__modal"
+        >
+          <div onClick={handleCloseModal}>
+            <CloseIcon
+              style={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                verticalAlign: "large",
+                width: "30px",
+                height: "30px",
+                marginBottom: "2px",
+                color: "white",
+                cursor: "pointer",
+              }}
+            />
+          </div>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="pro-version-activator__content"
+          >
+            <PaymentContent
+              email={email}
+              domain={domain}
+              captchaToken={captchaToken}
+              loading={loading}
+              currency={currency}
+              isResponseOk={isPaymentResponseOk}
+              setIsResponseOk={setIsPaymentResponseOk}
+              onEmailChange={setEmail}
+              onDomainChange={setDomain}
+              onCaptchaChange={setCaptchaToken}
+              onSubmit={handleFormSubmit}
+              setCurrency={setCurrency}
+              setStatus={setStatus}
+              status={status}
+              errorMessage={errorMessage}
+              siteKey={siteKey}
+            />
+          </div>
+        </div>
+      </Fade>
+    </Modal>
+  );
+};
 
-//   return (
-//     <Modal
-//       aria-labelledby="transition-modal-title"
-//       aria-describedby="transition-modal-description"
-//       open={modalState}
-//       onClose={handleCloseModal}
-//       disableScrollLock
-//       closeAfterTransition
-//       slots={{ backdrop: Backdrop }}
-//       slotProps={{
-//         backdrop: {
-//           timeout: 500,
-//         },
-//       }}
-//     >
-//       <Fade in={modalState} onExited={resetState}>
-//         <div
-//           onClick={handleCloseModal}
-//           className="pro-version-activator__modal"
-//         >
-//           <div onClick={handleCloseModal}>
-//             <CloseIcon
-//               style={{
-//                 position: "absolute",
-//                 top: 0,
-//                 right: 0,
-//                 verticalAlign: "large",
-//                 width: "30px",
-//                 height: "30px",
-//                 marginBottom: "2px",
-//                 color: "white",
-//                 cursor: "pointer",
-//               }}
-//             />
-//           </div>
-//           <div
-//             onClick={(e) => e.stopPropagation()}
-//             className="pro-version-activator__content"
-//           >
-//             <PaymentContent
-//               email={email}
-//               domain={domain}
-//               captchaToken={captchaToken}
-//               loading={loading}
-//               currency={currency}
-//               isResponseOk={isPaymentResponseOk}
-//               setIsResponseOk={setIsPaymentResponseOk}
-//               onEmailChange={setEmail}
-//               onDomainChange={setDomain}
-//               onCaptchaChange={setCaptchaToken}
-//               onSubmit={handleFormSubmit}
-//               setCurrency={setCurrency}
-//               setStatus={setStatus}
-//               status={status}
-//               errorMessage={errorMessage}
-//               siteKey={siteKey}
-//             />
-//           </div>
-//         </div>
-//       </Fade>
-//     </Modal>
-//   );
-// };
-
-// export default ProVersionActivator;
+export default ProVersionActivator;

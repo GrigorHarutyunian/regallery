@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import "./proVersion.css";
 interface EmailDomainFormProps {
   email: string;
   domain: string;
