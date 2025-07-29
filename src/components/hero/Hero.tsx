@@ -12,8 +12,10 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
 import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
+import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
 
 const Hero: React.FC = () => {
+  const { handleOpenModal } = useProVersionActivatorModal();
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
@@ -55,7 +57,7 @@ const Hero: React.FC = () => {
                 </motion.div>
               )}
               <div className="buttons-container">
-                <a href="#pricing">
+                <a onClick={handleOpenModal}>
                   <DownloadBtn className={"download-btn"} />
                 </a>
                 <div onClick={handleOpen} className="download-btn watch_video">
