@@ -19,7 +19,8 @@ import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
 import { ProVersionActivatorModalProvider } from "./contexts/ProVersionActivatorModalContext";
-// import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
+import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
+
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -105,7 +106,7 @@ const App: React.FC = () => {
             <Support />
           </main>
           <Footer />
-          {/* <ProVersionActivator /> */}
+          <ProVersionActivator />
         </ProVersionActivatorModalProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
