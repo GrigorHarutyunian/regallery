@@ -51,7 +51,7 @@ const EmailDomainForm: React.FC<EmailDomainFormProps> = ({
         <div className={`${className}__g-recaptcha`}>
           <ReCAPTCHA
             sitekey={siteKey}
-            onChange={(token) => onCaptchaChange(token)}
+            onChange={(token: string | null) => onCaptchaChange(token)}
             onExpired={() => onCaptchaChange(null)}
           />
         </div>
