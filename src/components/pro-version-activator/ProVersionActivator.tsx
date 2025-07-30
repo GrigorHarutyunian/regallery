@@ -7,7 +7,7 @@ import Fade from "@mui/material/Fade";
 import Backdrop from "@mui/material/Backdrop";
 import PaymentContent from "./PaymentContent";
 import "./proVersion.css";
-const siteKey = "6LfvH2ErAAAAAHSsZBDGp3G7mRi4ddFXVLOf4gvp";
+const siteKey = "6Ldm_VsrAAAAALyx-Z3GOeBAMsjx772DUw0YQfo6";
 
 type Status = "initial" | "success" | "error";
 
