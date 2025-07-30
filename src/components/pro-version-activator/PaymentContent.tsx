@@ -11,8 +11,6 @@ import {
 // import ErrorMessageContent from "./ErrorMessageContent";
 import { SelectChangeEvent } from "@mui/material";
 import PayPalFormControl from "./PayPalFormControl";
-import SuccessMessageContent from "./SuccessMessageContent";
-import ErrorMessageContent from "./ErrorMessageContent";
 
 interface Props {
   email: string;
@@ -46,8 +44,6 @@ const PaymentContent: React.FC<Props> = ({
   onSubmit,
   setCurrency,
   setStatus,
-  status,
-  errorMessage,
   siteKey,
 }) => {
   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
@@ -98,22 +94,6 @@ const PaymentContent: React.FC<Props> = ({
         <div className="paypal-spinner" />
         <p>Preparing secure payment...</p>
       </div>
-    );
-  }
-  if (status === "success") {
-    return (
-      <SuccessMessageContent
-        onTryAgain={() => setStatus("initial")}
-        message={""}
-      />
-    );
-  }
-  if (status === "error") {
-    return (
-      <ErrorMessageContent
-        message={errorMessage}
-        onTryAgain={() => setStatus("initial")}
-      />
     );
   }
 
