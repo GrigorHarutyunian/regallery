@@ -1,80 +1,48 @@
-import * as React from "react";
-import { useState } from "react";
-import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
+import React, {useCallback, useState} from "react";
+import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Backdrop from "@mui/material/Backdrop";
-import PaymentContent from "./PaymentContent";
-import "./proVersion.css";
-const siteKey = "6Ldm_VsrAAAAALyx-Z3GOeBAMsjx772DUw0YQfo6";
+import PaymentContent from "./components/payment-content/PaymentContent";
+import "./proVersionActivator.css";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
-type Status = "initial" | "success" | "error";
+// const siteKey = "6Ldm_VsrAAAAALyx-Z3GOeBAMsjx772DUw0YQfo6";
 
 const ProVersionActivator: React.FC = () => {
-  const { modalState, handleCloseModal } = useProVersionActivatorModal();
+  const { isPaymentModalOpen, closePaymentModal, planId } = useProVersionActivatorContext();
+  const [email, setEmail] = useState<string>('');
+  const [isEmailInvalid, setIsEmailInvalid] = useState<boolean>(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [successMessage, setSuccessMessage] = useState<string | undefined>(undefined);
+  const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
 
-  const [email, setEmail] = useState<string>("");
-  const [domain, setDomain] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const [status, setStatus] = useState<Status>("initial");
-  const [errorMessage, setErrorMessage] = useState<string>("");
-  const [isPaymentResponseOk, setIsPaymentResponseOk] =
-    useState<boolean>(false);
-  const [currency, setCurrency] = useState("USD");
+  const onDialogClosed = useCallback(() => {
+      setEmail('');
+      setIsEmailInvalid(false);
+      setStatus('idle');
+      setSuccessMessage(undefined);
+      setErrorMessage(undefined);
+  }, [])
 
-  const resetState = () => {
-    setEmail("");
-    setDomain("");
-    setCaptchaToken(null);
-    setLoading(false);
-    setStatus("initial");
-    setErrorMessage("");
-    setIsPaymentResponseOk(false);
-  };
+  const onPaymentSuccess = useCallback((successMessage: string) => {
+      setStatus('success');
+      setSuccessMessage(successMessage);
+  }, []);
 
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("initial");
-
-    try {
-      const response = await fetch(
-        "https://regallery.team/core/wp-json/reacgcore/v2/user",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: "hak.hakobian@gmail.com",
-            domain: "https://wp.org",
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setErrorMessage(data?.message || "An unexpected error occurred.");
-        setIsPaymentResponseOk(true);
-      } else {
-        setStatus("success");
-        setIsPaymentResponseOk(false);
-      }
-    } catch {
-      setErrorMessage("Network error. Please try again.");
-      setIsPaymentResponseOk(true);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const onPaymentError = useCallback((errorMessage: string) => {
+      setStatus('error');
+      setErrorMessage(errorMessage);
+  }, []);
 
   return (
     <Modal
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
-      open={modalState}
-      onClose={handleCloseModal}
+      open={isPaymentModalOpen}
+      onClose={closePaymentModal}
       disableScrollLock
       closeAfterTransition
       slots={{ backdrop: Backdrop }}
@@ -84,12 +52,12 @@ const ProVersionActivator: React.FC = () => {
         },
       }}
     >
-      <Fade in={modalState} onExited={resetState}>
+      <Fade in={isPaymentModalOpen} onExited={onDialogClosed}>
         <div
-          onClick={handleCloseModal}
+          onClick={closePaymentModal}
           className="pro-version-activator__modal"
         >
-          <div onClick={handleCloseModal}>
+          <div onClick={closePaymentModal}>
             <CloseIcon
               style={{
                 position: "absolute",
@@ -108,24 +76,23 @@ const ProVersionActivator: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
             className="pro-version-activator__content"
           >
-            <PaymentContent
-              email={email}
-              domain={domain}
-              captchaToken={captchaToken}
-              loading={loading}
-              currency={currency}
-              isResponseOk={isPaymentResponseOk}
-              setIsResponseOk={setIsPaymentResponseOk}
-              onEmailChange={setEmail}
-              onDomainChange={setDomain}
-              onCaptchaChange={setCaptchaToken}
-              onSubmit={handleFormSubmit}
-              setCurrency={setCurrency}
-              setStatus={setStatus}
-              status={status}
-              errorMessage={errorMessage}
-              siteKey={siteKey}
-            />
+              {status === 'success' && <div className={'pro-version-activator__result pro-version-activator__result_success'}>
+                  <CheckCircleOutlineIcon />
+                  <p>{successMessage}</p>
+              </div>}
+              {status === 'error' && <div className={'pro-version-activator__result pro-version-activator__result_error'}>
+                  <ErrorOutlineIcon />
+                  <p>{errorMessage}</p>
+              </div>}
+              {status === 'idle' && <PaymentContent
+                  email={email}
+                  setEmail={setEmail}
+                  isEmailInvalid={isEmailInvalid}
+                  setIsEmailInvalid={setIsEmailInvalid}
+                  planId={planId}
+                  handleSuccess={onPaymentSuccess}
+                  handleError={onPaymentError}
+            />}
           </div>
         </div>
       </Fade>

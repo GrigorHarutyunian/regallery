@@ -1,52 +1,60 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
+import React, {createContext, useContext, useState, ReactNode} from "react";
+import {PayPalScriptProvider} from "@paypal/react-paypal-js";
+import {PayPalScriptOptions} from "@paypal/paypal-js/types/script-options";
 
-type PaymentModalContextType = {
-  modalState: boolean;
-  handleOpenModal: () => void;
-  handleCloseModal: () => void;
-};
-const initialOptions: PayPalScriptOptions = {
-  clientId:
-    // "ARAKzGBBZQf1XhY_fR-D00X8TXZcDMwpqnHrnWtTkp1WHCqPOF1kziiVNl4b6jD3nWoZWxmkY3vIvF5r",
-    "ARB7wIjhMa6mPTPtdhFTnpWjc2Ks7Or1GBuH6eIZVFKxGr4PXxCqt9otd8a7MssnOodtAGZIA4ihz1Kg",
-  currency: "USD",
-  intent: "capture",
+interface IProVersionActivatorProviderProps {
+    children: ReactNode;
+}
+
+interface IProVersionActivatorContextValue {
+    isPaymentModalOpen: boolean;
+    openPaymentModal: (planId: number) => void;
+    closePaymentModal: () => void;
+    planId: number;
+}
+
+const initialPaypalOptions: PayPalScriptOptions = {
+    clientId: "AQPbs6yybkF6z6xVouU0fU3RrQ7wuBf_BJejPDHBjmbS6VYRlTEngz3i2KBugXxVWoDcsK40sZU3MckS",
+    currency: "USD",
+    intent: "capture", // Payment will be captured immediately upon approval.
+    environment: "sandbox",
 };
 
-const ProVersionActivatorModalContext = createContext<
-  PaymentModalContextType | undefined
+const ProVersionActivatorContext = createContext<
+    IProVersionActivatorContextValue | undefined
 >(undefined);
 
-export const ProVersionActivatorModalProvider: React.FC<{
-  children: ReactNode;
-}> = ({ children }) => {
-  const [modalState, setModalState] = useState<boolean>(false);
+export const ProVersionActivatorProvider: React.FC<IProVersionActivatorProviderProps> = ({children}: IProVersionActivatorProviderProps) => {
+    const [isPaymentModalOpen, setIsPaymentModalOpen] = useState<boolean>(false);
+    const [planId, setPlanId] = useState<number>(0);
 
-  const handleOpenModal = () => {
-    setModalState(true);
-  };
+    const openPaymentModal = (planId: number) => {
+        setPlanId(planId);
+        setIsPaymentModalOpen(true);
+    };
 
-  const handleCloseModal = () => {
-    setModalState(false);
-  };
+    const closePaymentModal = () => {
+        setIsPaymentModalOpen(false);
+        setPlanId(0);
+    };
 
-  return (
-    <ProVersionActivatorModalContext.Provider
-      value={{ modalState, handleOpenModal, handleCloseModal }}
-    >
-      <PayPalScriptProvider options={initialOptions}>
-        {children}
-      </PayPalScriptProvider>
-    </ProVersionActivatorModalContext.Provider>
-  );
+    return (
+        <ProVersionActivatorContext.Provider
+            value={{isPaymentModalOpen, openPaymentModal, closePaymentModal, planId}}
+        >
+            <PayPalScriptProvider options={initialPaypalOptions}>
+                {children}
+            </PayPalScriptProvider>
+        </ProVersionActivatorContext.Provider>
+    );
 };
 
-export const useProVersionActivatorModal = () => {
-  const context = useContext(ProVersionActivatorModalContext);
-  if (!context) {
-    throw new Error("useModal must be used within a ModalProvider");
-  }
-  return context;
+export const useProVersionActivatorContext = () => {
+    const context = useContext(ProVersionActivatorContext);
+
+    if (!context) {
+        throw new Error("useProVersionActivatorContext must be used within a ProVersionActivatorProvider");
+    }
+
+    return context;
 };

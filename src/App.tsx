@@ -18,7 +18,7 @@ import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
-import { ProVersionActivatorModalProvider } from "./contexts/ProVersionActivatorModalContext";
+import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
 
 const App: React.FC = () => {
@@ -87,7 +87,7 @@ const App: React.FC = () => {
   return (
     <DemoProvider>
       <WindowWidthProvider>
-        <ProVersionActivatorModalProvider>
+        <ProVersionActivatorProvider>
           <Navbar />
           <Banner />
           <main
@@ -107,7 +107,7 @@ const App: React.FC = () => {
           </main>
           <Footer />
           <ProVersionActivator />
-        </ProVersionActivatorModalProvider>
+        </ProVersionActivatorProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
     </DemoProvider>

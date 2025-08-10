@@ -11,11 +11,11 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
 import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
-import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
+import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 
 const Hero: React.FC = () => {
-  const { handleOpenModal } = useProVersionActivatorModal();
+  const { openPaymentModal } = useProVersionActivatorContext();
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
               )}
               <div className="buttons-container">
                 <CustomButton
-                  handleClick={handleOpenModal}
+                  handleClick={openPaymentModal}
                   className={"custom-button"}
                 >
                   {"FREE TRIAL"}

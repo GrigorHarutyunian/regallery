@@ -1,36 +1,31 @@
-import { useState } from "react";
 import PricingDTO from "../../types/PricingDTO";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Tooltip } from "@mui/material";
-import { useProVersionActivatorModal } from "../../contexts/ProVersionActivatorModalContext";
+import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 
 const PricingCard: React.FC<PricingDTO> = ({
+  id,
   price,
+  currency,
   text,
+  buttonText,
   advantages,
-  canceledprice,
+  canceledPrice,
   duration,
-  savedmoney,
+  savedMoney,
   title,
   href,
 }) => {
-  const [tooltipText, setTooltipText] = useState<string>("Copy");
-  const { currency, main, cents } = price;
-  const handleCopy = () => {
-    setTooltipText("Copied");
-    setTimeout(() => setTooltipText("Copy"), 2000);
-  };
-  const { handleOpenModal } = useProVersionActivatorModal();
+  const [main, cents] = price.toString().split('.');
+  const { openPaymentModal } = useProVersionActivatorContext();
 
   return (
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {canceledprice ? (
+        {canceledPrice ? (
           <span className="canceled-price">
-            {canceledprice ? <div className="remov_line" /> : null}
-            {canceledprice}
+            <div className="remove_line" />
+            {canceledPrice}
           </span>
         ) : null}
         <div className="pricing-card__title">
@@ -40,10 +35,10 @@ const PricingCard: React.FC<PricingDTO> = ({
         </div>
         <div className="pricing-card__duration">{duration}</div>
 
-        {savedmoney ? (
+        {savedMoney ? (
           <div className="parent_saved_money">
             <div className="saved_money_div">
-              <span className="saved_money">Save {savedmoney}</span>
+              <span className="saved_money">Save {savedMoney}</span>
             </div>
           </div>
         ) : null}
@@ -51,46 +46,28 @@ const PricingCard: React.FC<PricingDTO> = ({
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
 
-      {title === "Starter" ? (
-        <>
-          <a target={"_blank"} href={href}>
-            <div className="pricing-card__btn pricing-card__btn_starter">
-              DOWNLOAD NOW
-            </div>
-          </a>
-          <div className="pricing-card__btn_copy"></div>
-        </>
+      {href ? (
+          <>
+            <a target={"_blank"} href={href}>
+              <div className="pricing-card__btn pricing-card__btn_starter">
+                {buttonText}
+              </div>
+            </a>
+          </>
       ) : (
-        <>
-        <CustomButton
-                          handleClick={handleOpenModal}
-                          className={"custom-button"}
-                        >
-                          {"FREE TRIAL"}
-                        </CustomButton>
-        </>
+          <CustomButton
+              handleClick={() => openPaymentModal(id)}
+              className="pricing-card__btn"
+          >
+            {buttonText}
+          </CustomButton>
       )}
-
       <ul className="pricing-card__features">
         {advantages.map((val, id) => {
-          const boldText =
-            typeof val === "string" && val.includes("1 Site")
-              ? "1 Site"
-              : typeof val === "string" && val.includes("5 Sites")
-              ? "5 Sites"
-              : null;
           return (
-            <li className={"pricing-card__features__list"} key={id}>
-              {boldText ? (
-                <>
-                  {val.split(boldText)[0]}{" "}
-                  <span className="bold__list">{boldText}</span>
-                  {val.split(boldText)[1]}{" "}
-                </>
-              ) : (
-                val
-              )}
-            </li>
+              <li className="pricing-card__features__list" key={id}>
+                {val}
+              </li>
           );
         })}
       </ul>
