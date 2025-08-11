@@ -103,3 +103,8 @@
 .pro-version-activator__result_error svg {
   fill: #b71c1c;
 }
+
+/* Keep disabled buttons fully opaque to maintain their initial appearance before an email is entered. */
+.paypal-buttons-disabled {
+  opacity: 1 !important;
+}

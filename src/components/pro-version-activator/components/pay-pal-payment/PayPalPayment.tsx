@@ -1,13 +1,17 @@
 import React, {useCallback} from "react";
 import {PayPalButtons} from "@paypal/react-paypal-js";
-import {CreateOrderData, OnApproveActions, OnApproveData, PayPalButtonStyle} from "@paypal/paypal-js";
-import {OrderResponseBody} from "@paypal/paypal-js/types/apis/orders";
-import {CreateOrderActions} from "@paypal/paypal-js/types/components/buttons";
-import pricingData from "../../../pricing/pricing-data";
+import {
+    CreateSubscriptionActions,
+    OnApproveData,
+    OnClickActions,
+    PayPalButtonStyle
+} from "@paypal/paypal-js";
 
 interface IPayPalPaymentProps {
+    email: string;
     isEmailInvalid: boolean;
-    planId: number;
+    setIsEmailInvalid: (isEmailInvalid: boolean) => void;
+    planID: number;
     handleApprove: (paymentData: Record<string, unknown>) => Promise<void>
     handleError: (message: string) => void
 }
@@ -16,27 +20,39 @@ const style: PayPalButtonStyle = {
     layout: "vertical",
     color: "gold",
     shape: "rect",
-    label: "pay",
     height: 45,
 };
 
-const PayPalPayment: React.FC<IPayPalPaymentProps> = ({isEmailInvalid, planId, handleApprove, handleError}: IPayPalPaymentProps) => {
-    const onClick = useCallback(() => {
-        if (isEmailInvalid) {
-            return;
+const paypalplanIDs: Record<number, string> = {
+    2: "P-7DU43314C2322545VNCMIF3Y",//todo https://sandbox.paypal.com/billing/plans
+    3: "P-0XS63825EF796480VNCMIWKQ"//todo
+};
+
+const PayPalPayment: React.FC<IPayPalPaymentProps> = ({
+                                                          email,
+                                                          isEmailInvalid,
+                                                          setIsEmailInvalid,
+                                                          planID,
+                                                          handleApprove,
+                                                          handleError
+                                                      }: IPayPalPaymentProps) => {
+    const onClick = useCallback((_data: Record<string, unknown>, actions: OnClickActions) => {
+        if (email === "") {
+            setIsEmailInvalid(true);
         }
-    }, [isEmailInvalid]);
+        if (isEmailInvalid) {
+            return actions.reject();
+        }
+    }, [email, setIsEmailInvalid, isEmailInvalid]);
 
-    const onApprove = useCallback(async (_data: OnApproveData, actions: OnApproveActions) => {
+    const onApprove = useCallback(async (data: OnApproveData) => {
         try {
-            const order: OrderResponseBody | undefined = await actions.order?.capture();
-
-            const paymentData: Record<string, unknown> | undefined = order?.id ? {
+            const paymentData = {
                 paymentType: 'paypal',
-                orderId: order.id
-            } : undefined;
+                subscriptionID: data.subscriptionID
+            };
 
-            paymentData && await handleApprove(paymentData);
+            await handleApprove(paymentData);
         } catch (e) {
             handleError((e as TypeError).message);
         }
@@ -46,30 +62,22 @@ const PayPalPayment: React.FC<IPayPalPaymentProps> = ({isEmailInvalid, planId, h
         handleError(e.toString());
     }, [handleError]);
 
-    const onCreateOrder = useCallback((_data: CreateOrderData, actions: CreateOrderActions) => {
-        return actions.order.create({
-            intent: 'capture' as 'CAPTURE',
-            purchase_units: [
-                {
-                    amount: {
-                        currency_code: 'USD',
-                        value: Number(pricingData[planId].price).toFixed(2),
-                    },
-                },
-            ],
-            application_context: {
-                shipping_preference: "NO_SHIPPING",
-            },
-        });
-    }, [planId]);
+    const onCreateSubscription = useCallback(
+        (_data: unknown, actions: CreateSubscriptionActions) => {
+            return actions.subscription.create({
+                plan_id: paypalplanIDs[planID]
+            });
+        },
+        [planID]
+    );
 
     return <PayPalButtons
         onClick={onClick}
         onApprove={onApprove}
         onError={onError}
-        createOrder={onCreateOrder}
-        forceReRender={[isEmailInvalid]}
-        disabled={isEmailInvalid}
+        createSubscription={onCreateSubscription}
+        forceReRender={[isEmailInvalid, planID, email]}
+        disabled={isEmailInvalid || email === ""}
         style={style}
     />;
 }

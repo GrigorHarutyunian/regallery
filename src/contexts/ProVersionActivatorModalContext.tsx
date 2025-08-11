@@ -8,16 +8,17 @@ interface IProVersionActivatorProviderProps {
 
 interface IProVersionActivatorContextValue {
     isPaymentModalOpen: boolean;
-    openPaymentModal: (planId: number) => void;
+    openPaymentModal: (planID: number) => void;
     closePaymentModal: () => void;
-    planId: number;
+    planID: number;
 }
 
 const initialPaypalOptions: PayPalScriptOptions = {
-    clientId: "AQPbs6yybkF6z6xVouU0fU3RrQ7wuBf_BJejPDHBjmbS6VYRlTEngz3i2KBugXxVWoDcsK40sZU3MckS",
+    clientId: "AQPbs6yybkF6z6xVouU0fU3RrQ7wuBf_BJejPDHBjmbS6VYRlTEngz3i2KBugXxVWoDcsK40sZU3MckS", //todo
     currency: "USD",
-    intent: "capture", // Payment will be captured immediately upon approval.
-    environment: "sandbox",
+    vault: true,
+    intent: "subscription", // "capture" for immediately upon approval.
+    environment: "sandbox", //todo
 };
 
 const ProVersionActivatorContext = createContext<
@@ -26,21 +27,21 @@ const ProVersionActivatorContext = createContext<
 
 export const ProVersionActivatorProvider: React.FC<IProVersionActivatorProviderProps> = ({children}: IProVersionActivatorProviderProps) => {
     const [isPaymentModalOpen, setIsPaymentModalOpen] = useState<boolean>(false);
-    const [planId, setPlanId] = useState<number>(0);
+    const [planID, setplanID] = useState<number>(0);
 
-    const openPaymentModal = (planId: number) => {
-        setPlanId(planId);
+    const openPaymentModal = (planID: number) => {
+        setplanID(planID);
         setIsPaymentModalOpen(true);
     };
 
     const closePaymentModal = () => {
         setIsPaymentModalOpen(false);
-        setPlanId(0);
+        setplanID(0);
     };
 
     return (
         <ProVersionActivatorContext.Provider
-            value={{isPaymentModalOpen, openPaymentModal, closePaymentModal, planId}}
+            value={{isPaymentModalOpen, openPaymentModal, closePaymentModal, planID}}
         >
             <PayPalScriptProvider options={initialPaypalOptions}>
                 {children}
