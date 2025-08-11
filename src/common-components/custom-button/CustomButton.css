@@ -1,0 +1,22 @@
+.custom-button {
+  background-color: #2540cc;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 16px 38px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  margin: 0;
+}
+.custom-button:hover {
+  filter: brightness(1.1);
+}
+
+.custom-button__navbar {
+  background: #2540cc;
+  margin-left: 12px;
+}

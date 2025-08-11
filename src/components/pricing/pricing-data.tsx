@@ -1,40 +1,19 @@
 import { ai_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { woo_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
+import PricingDTO from "../../types/PricingDTO";
 
-const pricingData = [
-  {
-    price: {
-      main: "Free",
-    },
-    text: "Easy Start for Beginners to Explore Galleries",
-    advantages: [
-      "Unlimited Galleries",
-      "Unlimited Users",
-      "9 Gallery Views",
-      "Live Demo",
-      "Gutenberg Block Support",
-      "Elementor Widget Integration",
-      "Divi Builder Compatibility",
-      "WPBakery Page Builder Available",
-      "Beaver Builder Module Inclusion",
-      "Bricks Builder Element Access",
-      "10+ Pre-built Templates",
-    ],
+const pricingData: { [key: number]: PricingDTO } = {
+  1: {
     id: 1,
     title: "Starter",
     href: "https://wordpress.org/plugins/regallery/",
-  },
-  {
-    price: {
-      currency: "$",
-      main: "29",
-      cents: "99",
-    },
-    text: "For Photographers & Professionals, Needing Creative Galleries",
+    price: "Free",
+    text: "Easy Start for Beginners to Explore Galleries",
+    buttonText: "DOWNLOAD NOW",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "9 Gallery Views",
+      <><strong className="bold__list">9</strong> Gallery Views</>,
       "Live Demo",
       "Gutenberg Block Support",
       "Elementor Widget Integration",
@@ -42,32 +21,52 @@ const pricingData = [
       "WPBakery Page Builder Available",
       "Beaver Builder Module Inclusion",
       "Bricks Builder Element Access",
-      "30+ Pre-built Templates",
-      "Use on 1 Site",
+      <><strong className="bold__list">10+</strong> Pre-built Templates</>,
+    ],
+  },
+  2: {
+    id: 2,
+    title: "Basic",
+    price: 29.99,
+    currency: "$",
+    duration: "1 year",
+    text: "For Photographers & Professionals, Needing Creative Galleries",
+    buttonText: "BUY NOW",
+    advantages: [
+      "Unlimited Galleries",
+      "Unlimited Users",
+      <><strong className="bold__list">9</strong> Gallery Views</>,
+      "Live Demo",
+      "Gutenberg Block Support",
+      "Elementor Widget Integration",
+      "Divi Builder Compatibility",
+      "WPBakery Page Builder Available",
+      "Beaver Builder Module Inclusion",
+      "Bricks Builder Element Access",
+      <><strong className="bold__list">30+</strong> Pre-built Templates</>,
+      <>Use on <strong className="bold__list">1 Site</strong></>,
       "Pro Templates",
       <>Generated Image Title{ai_icon}</>,
       <>Generated Image Description{ai_icon}</>,
+      <>Generated Image Caption{ai_icon}</>,
       <>Generated Image Alt Text{ai_icon}</>,
       <>WooCommerce Products{woo_icon}</>,
       "1 Year Pro Support",
     ],
-    id: 2,
-    duration: "1 year",
-    title: "Basic",
-    href: "https://regallery.team/checkout/?plan=basic",
   },
 
-  {
-    price: {
-      currency: "$",
-      main: "49",
-      cents: "99",
-    },
+  3: {
+    id: 3,
+    title: "Plus",
+    price: 49.99,
+    currency: "$",
+    duration: "1 Year",
     text: "For Businesses & Agencies, Needing Custom Galleries",
+    buttonText: "BUY NOW",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
-      "9 Gallery Views",
+      <><strong className="bold__list">9</strong> Gallery Views</>,
       "Live Demo",
       "Gutenberg Block Support",
       "Elementor Widget Integration",
@@ -75,21 +74,18 @@ const pricingData = [
       "WPBakery Page Builder Available",
       "Beaver Builder Module Inclusion",
       "Bricks Builder Element Access",
-      "30+ Pre-built Templates",
-      "Use on 5 Sites",
+      <><strong className="bold__list">30+</strong> Pre-built Templates</>,
+      <>Use on <strong className="bold__list">5 Sites</strong></>,
       "Pro Templates",
       <>Generated Image Title{ai_icon}</>,
+      <>Generated Image Caption{ai_icon}</>,
       <>Generated Image Description{ai_icon}</>,
       <>Generated Image Alt Text{ai_icon}</>,
       <>WooCommerce Products{woo_icon}</>,
       "1 Year Pro Support",
       "1 Year Customizations",
     ],
-    id: 3,
-    duration: "1 Year",
-    title: "Plus",
-    href: "https://regallery.team/checkout/?plan=plus",
-  },
-];
+  }
+};
 
 export default pricingData;

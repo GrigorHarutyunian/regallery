@@ -1,0 +1,110 @@
+.pro-version-activator__modal {
+  padding: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  border: 0; /* Ensure no border */
+  background-color: transparent;
+}
+
+.pro-version-activator__modal:focus-visible {
+  outline: unset !important;
+}
+
+.pro-version-activator__content {
+  width: 578px;
+  max-height: 590px;
+  border: 0;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+  background: #ffff;
+  padding: 0;
+  border-radius: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(189 187 187 / 40%) transparent;
+}
+
+.payment__form-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  height: 100%;
+  align-items: unset;
+  padding: 60px;
+  text-align: left;
+}
+.payment__form-wrapper__field-description {
+  color: #6C6C89;
+  font-size: 13px;
+  padding: 5px 8px 0;
+}
+
+.payment__form-wrapper__terms {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a3a3a3;
+}
+
+.payment__form-wrapper__terms a {
+  text-decoration: underline;
+  color: #2540cc;
+}
+
+.pro-version-activator__result {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.pro-version-activator__result svg {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.pro-version-activator__result_success {
+  background-color: #d4f8d4;
+  border: 1px solid #38c172;
+  color: #1b8f3a;
+}
+
+.pro-version-activator__result_success svg {
+  fill: #1b8f3a;
+}
+
+.pro-version-activator__result_error {
+  background-color: #fdecea;
+  border: 1px solid #f5c2c0;
+  color: #b71c1c;
+}
+
+
+.pro-version-activator__result_error svg {
+  fill: #b71c1c;
+}
+
+/* Keep disabled buttons fully opaque to maintain their initial appearance before an email is entered. */
+.paypal-buttons-disabled {
+  opacity: 1 !important;
+}

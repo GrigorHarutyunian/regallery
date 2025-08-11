@@ -1,17 +1,13 @@
-interface Price {
-  main?: string;
-  currency?: string;
-  cents?: string;
-}
-
 export default interface PricingDTO {
+  id: number;
   text: string;
-  id?: number;
-  price: Price;
-  canceledprice?: string;
-  advantages: any[];
+  buttonText: string;
+  price: number | string;
+  currency?: string;
+  canceledPrice?: string;
+  advantages: (string | JSX.Element)[];
   duration?: string;
-  savedmoney?: string;
+  savedMoney?: string;
   title: string;
-  href: string;
+  href?: string;
 }

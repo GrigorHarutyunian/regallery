@@ -9,16 +9,19 @@ const Pricing: React.FC = () => {
         <div className="section-text_cards">
           <h2 className="section-text__title-centered">Unlock more features</h2>
           <div className="pricing-cards">
-            {pricingData.map((val: PricingDTO) => {
+            {Object.values(pricingData).map((val: PricingDTO) => {
               return (
                 <PricingCard
                   key={val.id}
+                  id={val.id}
                   text={val.text}
+                  buttonText={val.buttonText}
                   price={val.price}
+                  currency={val.currency}
+                  canceledPrice={val?.canceledPrice}
                   advantages={val.advantages}
-                  canceledprice={val?.canceledprice}
                   duration={val.duration}
-                  savedmoney={val.savedmoney}
+                  savedMoney={val.savedMoney}
                   title={val.title}
                   href={val.href}
                 />

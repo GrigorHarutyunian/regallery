@@ -2,7 +2,6 @@ import React from "react";
 import { useContext, useState } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import VideoModal from "../modals/VideoModal/VideoModal";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
@@ -12,8 +11,11 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 // import imgSmall from "../../assets/imgs/preview-small.webp";
 import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
 import "./Hero.css";
+import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
+import CustomButton from "../../common-components/custom-button/CustomButton";
 
 const Hero: React.FC = () => {
+  const { openPaymentModal } = useProVersionActivatorContext();
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
@@ -55,9 +57,13 @@ const Hero: React.FC = () => {
                 </motion.div>
               )}
               <div className="buttons-container">
-                <a href="#pricing">
-                  <DownloadBtn className={"download-btn"} />
-                </a>
+                <CustomButton
+                  handleClick={openPaymentModal}
+                  className={"custom-button"}
+                >
+                  {"FREE TRIAL"}
+                </CustomButton>
+
                 <div onClick={handleOpen} className="download-btn watch_video">
                   <PlayCircleFilledIcon
                     style={{
