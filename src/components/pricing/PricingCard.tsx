@@ -56,7 +56,7 @@ const PricingCard: React.FC<PricingDTO> = ({
           </>
       ) : (
           <CustomButton
-              handleClick={() => openPaymentModal(id)}
+              handleClick={() => openPaymentModal(4)}//todo
               className="pricing-card__btn"
           >
             {buttonText}

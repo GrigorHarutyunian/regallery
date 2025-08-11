@@ -24,8 +24,11 @@ const style: PayPalButtonStyle = {
 };
 
 const paypalplanIDs: Record<number, string> = {
-    2: "P-7DU43314C2322545VNCMIF3Y",//todo https://sandbox.paypal.com/billing/plans
-    3: "P-0XS63825EF796480VNCMIWKQ"//todo
+    // 2: "P-69354733JW929133GNCNE2IY",//todo https://sandbox.paypal.com/billing/plans
+    2: "P-02C76123FM722133GNCNFOII",//todo https://paypal.com/billing/plans
+    // 3: "P-69354733JW929133GNCNE2IY"//todo
+    3: "P-6UD71719R7286810YNCNFPCY",//todo
+    4: "P-8KF89009TN182242RNCNFP2I",//todo test plan
 };
 
 const PayPalPayment: React.FC<IPayPalPaymentProps> = ({

@@ -31,8 +31,8 @@ const PaymentContent: React.FC<Props> = ({
 
   const onPaymentApprove = useCallback(async (paymentData: Record<string, unknown>) => {
     try {
-      // const response = await fetch("https://regallery.team/core/wp-json/reacgcore/v2/user", {
-      const response = await fetch("http://localhost/wordpress/wp-json/reacgcore/v2/user", { //todo
+      const response = await fetch("https://regallery.team/core/wp-json/reacgcore/v2/user", {
+      //const response = await fetch("http://localhost/wordpress/wp-json/reacgcore/v2/user", { //todo
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
