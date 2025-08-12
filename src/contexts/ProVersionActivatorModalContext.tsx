@@ -14,13 +14,13 @@ interface IProVersionActivatorContextValue {
 }
 
 const initialPaypalOptions: PayPalScriptOptions = {
-    clientId: "AVwxVkMOTRkixoaT2d2QCzMHbj5Fr6Ov7t0NkFHoz4OQqmYgF1lqyykS7noCTa3zTAYkRYchtGO6Cuhb", // sandbox todo
-    // clientId: "ASloPHOXR7iImLFSfgyaHevQQmf4iL2U8DLynt-uE0VHLjyGkuFBhzowxbLI02EbewiXOFCR6zfSVFtP", // prod todo
+    // clientId: "AVwxVkMOTRkixoaT2d2QCzMHbj5Fr6Ov7t0NkFHoz4OQqmYgF1lqyykS7noCTa3zTAYkRYchtGO6Cuhb", // sandbox
+    clientId: "ASloPHOXR7iImLFSfgyaHevQQmf4iL2U8DLynt-uE0VHLjyGkuFBhzowxbLI02EbewiXOFCR6zfSVFtP", // prod
     currency: "USD",
     vault: true,
-    intent: "subscription", // "capture" for immediately upon approval.
-    environment: "sandbox", //todo
-    // environment: "production", //todo
+    intent: "subscription",
+    // environment: "sandbox", // sandbox
+    environment: "production", // prod
 };
 
 const ProVersionActivatorContext = createContext<
