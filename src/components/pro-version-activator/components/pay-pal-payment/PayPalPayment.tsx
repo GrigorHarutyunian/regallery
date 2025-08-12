@@ -79,7 +79,6 @@ const PayPalPayment: React.FC<IPayPalPaymentProps> = ({
         onApprove={onApprove}
         onError={onError}
         createSubscription={onCreateSubscription}
-        forceReRender={[isEmailInvalid, planID, email]}
         disabled={isEmailInvalid || email === ""}
         style={style}
     />;
