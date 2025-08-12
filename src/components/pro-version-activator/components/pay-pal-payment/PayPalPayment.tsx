@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React, {useCallback, useState} from "react";
 import {PayPalButtons} from "@paypal/react-paypal-js";
 import {
     CreateSubscriptionActions,
@@ -39,6 +39,8 @@ const PayPalPayment: React.FC<IPayPalPaymentProps> = ({
                                                           handleApprove,
                                                           handleError
                                                       }: IPayPalPaymentProps) => {
+    const [init, setInit] = useState<boolean>(false);
+
     const onClick = useCallback((_data: Record<string, unknown>, actions: OnClickActions) => {
         if (email === "") {
             setIsEmailInvalid(true);
@@ -47,6 +49,10 @@ const PayPalPayment: React.FC<IPayPalPaymentProps> = ({
             return actions.reject();
         }
     }, [email, setIsEmailInvalid, isEmailInvalid]);
+
+    const onInit = useCallback(() => {
+        setInit(true);
+    }, []);
 
     const onApprove = useCallback(async (data: OnApproveData) => {
         try {
@@ -74,14 +80,19 @@ const PayPalPayment: React.FC<IPayPalPaymentProps> = ({
         [planID]
     );
 
-    return <PayPalButtons
+    return <div
+            style={{
+                pointerEvents: init ? "auto" : "none",
+            }}
+        ><PayPalButtons
         onClick={onClick}
         onApprove={onApprove}
+        onInit={onInit}
         onError={onError}
         createSubscription={onCreateSubscription}
-        disabled={isEmailInvalid || email === ""}
+        disabled={isEmailInvalid || email == ""}
         style={style}
-    />;
+    /></div>;
 }
 
 export default PayPalPayment;
