@@ -5,6 +5,7 @@ import Features from "./components/features/Features";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Info from "./components/info/Info";
+import Builder from "./components/builder/Builder";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
@@ -99,8 +100,9 @@ const App: React.FC = () => {
             <Demo />
             <Info />
             <Features />
-            <AboutMobileResponsiveness />
+            <Builder />
             <Review />
+            <AboutMobileResponsiveness />
             <Faq />
             <Pricing />
             <Support />

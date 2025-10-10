@@ -36,7 +36,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                     : undefined
                 }
               >
-                {id === "info" ? (
+                {id === "info" || id === "builder" ? (
                   <LazyLoadComponent>
                     <video
                       height="100%"
@@ -78,7 +78,7 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           </motion.div>
           {version !== "mobile" && (
             <motion.div style={{ maxWidth: "50%" }} className="section-image">
-              {id !== "info" ? (
+              {id !== "info" && id !== "builder" ? (
                 <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
               ) : (
                 <LazyLoadComponent>
