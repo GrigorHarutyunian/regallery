@@ -17,6 +17,8 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   video,
   img,
   alt,
+  additionalButtonLink,
+  additionalButtonName,
 }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
@@ -65,13 +67,13 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               <a href="#pricing">
                 <DownloadBtn className="download-btn" />
               </a>
-              {id === "info" && (
+              {additionalButtonLink && (
                 <a
                   className="download-btn watch_video"
-                  href="https://wordpress.org/plugins/regallery/?preview=1"
+                  href={additionalButtonLink}
                   target="_blank"
                 >
-                  PREVIEW ADMIN
+                  {additionalButtonName}
                 </a>
               )}
             </div>

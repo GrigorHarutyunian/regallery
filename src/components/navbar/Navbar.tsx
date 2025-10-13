@@ -24,7 +24,7 @@ const links: Link[] = [
     type: "menu",
     subMenuItems: viewsDataSubMenu,
   },
-  { id: 2, title: "Features", href: "#features" },
+  { id: 2, title: "Page builder", href: "#builder" },
 
   {
     id: 3,

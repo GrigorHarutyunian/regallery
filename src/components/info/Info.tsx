@@ -28,6 +28,8 @@ const Info: React.FC = () => {
       video={infoData.video}
       sizes={infoData.sizes}
       alt={infoData.alt}
+      additionalButtonLink={infoData.additionalButtonLink}
+      additionalButtonName={infoData.additionalButtonName}
     />
   );
 };

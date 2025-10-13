@@ -103,8 +103,8 @@ const App: React.FC = () => {
             <Builder />
             <Review />
             <AboutMobileResponsiveness />
-            <Faq />
             <Pricing />
+            <Faq />
             <Support />
           </main>
           <Footer />

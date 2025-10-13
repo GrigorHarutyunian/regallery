@@ -8,4 +8,6 @@ export default interface SupportAndInfoDTO {
   alt: string;
   video?: any;
   img?: any;
+  additionalButtonLink?: string;
+  additionalButtonName?: string;
 }
