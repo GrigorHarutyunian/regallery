@@ -12,7 +12,7 @@ import {
 import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
 interface ExtendedSupportAndInfoDTO extends SupportAndInfoDTO {
-  video: string | string[];
+  video?: string | string[];
   additionalButtonLink?: string;
   additionalButtonLinks?: string[];
 }
