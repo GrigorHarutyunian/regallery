@@ -15,11 +15,11 @@ const Info: React.FC = () => {
     <SupportAndInfo
       title={builderData.title}
       text={builderData.text}
-      additionalButtonLink={builderData.additionalButtonLink}
+      additionalButtonLinks={builderData.additionalButtonLinks}
       id={"builder"}
       width={width}
       height={height}
-      video={builderData.video}
+      video={builderData.videos}
       sizes={builderData.sizes}
       alt={builderData.alt}
       additionalButtonName={builderData.additionalButtonName}

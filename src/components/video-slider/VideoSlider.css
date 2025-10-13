@@ -1,0 +1,58 @@
+.video-slider {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  padding-bottom: 30px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.video-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(204, 204, 204, 0.7);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(51, 51, 51, 0.7);
+}
+
+.dot.active {
+  background-color: rgba(51, 51, 51, 0.9);
+  transform: scale(1.2);
+}

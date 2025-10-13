@@ -9,8 +9,15 @@ import {
   LazyLoadImage,
   LazyLoadComponent,
 } from "react-lazy-load-image-component";
+import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
-const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
+interface ExtendedSupportAndInfoDTO extends SupportAndInfoDTO {
+  video: string | string[];
+  additionalButtonLink?: string;
+  additionalButtonLinks?: string[];
+}
+
+const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
   title,
   text,
   id,
@@ -18,10 +25,14 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
   img,
   alt,
   additionalButtonLink,
+  additionalButtonLinks,
   additionalButtonName,
 }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
+  const [currentButtonLink, setCurrentButtonLink] = React.useState(
+    additionalButtonLinks?.[0] || additionalButtonLink
+  );
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -38,18 +49,29 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
                     : undefined
                 }
               >
-                {id === "info" || id === "builder" ? (
+                {id === "info" ? (
                   <LazyLoadComponent>
                     <video
                       height="100%"
                       width="100%"
-                      src={video}
+                      src={video as string}
                       autoPlay
                       loop
                       muted
                       playsInline
                     />
                   </LazyLoadComponent>
+                ) : id === "builder" ? (
+                  <VideoSlider
+                    videos={video as string[]}
+                    height="100%"
+                    width="100%"
+                    onSlideChange={(index) => {
+                      if (additionalButtonLinks) {
+                        setCurrentButtonLink(additionalButtonLinks[index]);
+                      }
+                    }}
+                  />
                 ) : (
                   id === "aboutMobileResponsiveness" && (
                     <LazyLoadImage
@@ -67,10 +89,10 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
               <a href="#pricing">
                 <DownloadBtn className="download-btn" />
               </a>
-              {additionalButtonLink && (
+              {(additionalButtonLink || additionalButtonLinks) && (
                 <a
                   className="download-btn watch_video"
-                  href={additionalButtonLink}
+                  href={currentButtonLink}
                   target="_blank"
                 >
                   {additionalButtonName}
@@ -80,20 +102,31 @@ const SupportAndInfo: React.FC<SupportAndInfoDTO> = ({
           </motion.div>
           {version !== "mobile" && (
             <motion.div style={{ maxWidth: "50%" }} className="section-image">
-              {id !== "info" && id !== "builder" ? (
-                <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
-              ) : (
+              {id === "builder" ? (
+                <VideoSlider
+                  videos={video as string[]}
+                  height="100%"
+                  width="100%"
+                  onSlideChange={(index) => {
+                    if (additionalButtonLinks) {
+                      setCurrentButtonLink(additionalButtonLinks[index]);
+                    }
+                  }}
+                />
+              ) : id === "info" ? (
                 <LazyLoadComponent>
                   <video
                     height="100%"
                     width="100%"
-                    src={video}
+                    src={video as string}
                     autoPlay
                     loop
                     muted
                     playsInline
                   />
                 </LazyLoadComponent>
+              ) : (
+                <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
               )}
             </motion.div>
           )}
