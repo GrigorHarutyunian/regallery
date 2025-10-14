@@ -23,7 +23,7 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
   };
 
   useEffect(() => {
-    const slideDurations = [24000, 21000]; // 24 seconds for first slide, 21 for second
+    const slideDurations = [22000, 14000];
 
     const timeout = setTimeout(() => {
       const nextIndex = (currentVideoIndex + 1) % videos.length;

@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: visible;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .video-container {
@@ -33,7 +33,6 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 15px;
   z-index: 2;
 }
 

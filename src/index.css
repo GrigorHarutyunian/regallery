@@ -164,7 +164,7 @@ p {
   .section-image,
   .section-image-features,
   .section-image__small {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     width: 100%;
   }
 
@@ -174,6 +174,12 @@ p {
   .support__row {
     flex-direction: column-reverse;
   }
+}
+
+.buttons-container a {
+  width: 185px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .watch_video {
