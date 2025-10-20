@@ -15,7 +15,7 @@ const Info: React.FC = () => {
     <SupportAndInfo
       title={builderData.title}
       text={builderData.text}
-      additionalButtonLinks={builderData.additionalButtonLinks}
+      additionalButtonLink={builderData.additionalButtonLink}
       id={"builder"}
       width={width}
       height={height}
@@ -23,6 +23,7 @@ const Info: React.FC = () => {
       sizes={builderData.sizes}
       alt={builderData.alt}
       additionalButtonName={builderData.additionalButtonName}
+      viewMoreLinks={builderData.viewMoreLinks}
     />
   );
 };
