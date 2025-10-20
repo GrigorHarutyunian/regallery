@@ -14,7 +14,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 interface ExtendedSupportAndInfoDTO extends SupportAndInfoDTO {
   video?: string | string[];
   additionalButtonLink?: string;
-  additionalButtonLinks?: string[];
+  viewMoreLinks?: string[];
 }
 
 const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
@@ -25,14 +25,11 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
   img,
   alt,
   additionalButtonLink,
-  additionalButtonLinks,
   additionalButtonName,
+  viewMoreLinks = [],
 }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
-  const [currentButtonLink, setCurrentButtonLink] = React.useState(
-    additionalButtonLinks?.[0] || additionalButtonLink
-  );
   return (
     <section id={id} className="supportandInfo">
       <Container>
@@ -66,11 +63,7 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
                     videos={video as string[]}
                     height="100%"
                     width="100%"
-                    onSlideChange={(index) => {
-                      if (additionalButtonLinks) {
-                        setCurrentButtonLink(additionalButtonLinks[index]);
-                      }
-                    }}
+                    viewMoreLinks={viewMoreLinks}
                   />
                 ) : (
                   id === "aboutMobileResponsiveness" && (
@@ -89,10 +82,10 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
               <a href="#pricing">
                 <DownloadBtn className="download-btn" />
               </a>
-              {(additionalButtonLink || additionalButtonLinks) && (
+              {additionalButtonLink && (
                 <a
                   className="download-btn watch_video"
-                  href={currentButtonLink}
+                  href={additionalButtonLink}
                   target="_blank"
                 >
                   {additionalButtonName}
@@ -107,11 +100,7 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
                   videos={video as string[]}
                   height="100%"
                   width="100%"
-                  onSlideChange={(index) => {
-                    if (additionalButtonLinks) {
-                      setCurrentButtonLink(additionalButtonLinks[index]);
-                    }
-                  }}
+                  viewMoreLinks={viewMoreLinks}
                 />
               ) : id === "info" ? (
                 <LazyLoadComponent>

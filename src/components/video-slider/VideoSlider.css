@@ -25,6 +25,16 @@
   position: relative;
 }
 
+.view-more-button {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+  z-index: 2;
+}
+
 .slider-dots {
   position: absolute;
   bottom: -20px;
@@ -33,7 +43,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .dot {
