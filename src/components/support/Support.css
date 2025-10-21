@@ -32,6 +32,9 @@ section.supportandInfo .container {
   max-width: 800px;
   text-align: center;
 }
+.contact_us_buttons_container.buttons-container a {
+  width: unset;
+}
 
 @media screen and (min-width: 518px) {
   .contact_us_row .contact_us_buttons_container {
