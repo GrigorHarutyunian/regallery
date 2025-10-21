@@ -20,6 +20,8 @@ const AboutMobileResponsiveness: React.FC = () => {
       img={aboutMobileResponsivenessData.img}
       sizes={aboutMobileResponsivenessData.sizes}
       alt={aboutMobileResponsivenessData.alt}
+      additionalButtonName={aboutMobileResponsivenessData.additionalButtonName}
+      additionalButtonLink={aboutMobileResponsivenessData.additionalButtonLink}
     />
   );
 };

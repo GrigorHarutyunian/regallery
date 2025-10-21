@@ -15,6 +15,6 @@ const builderData = {
     "https://regallery.team/core/menu-landing-page/",
     "https://regallery.team/core/shop-landing-page/",
   ],
-  additionalButtonName: "LANDING PAGE",
+  additionalButtonName: "LANDING DEMO",
 };
 export default builderData;
