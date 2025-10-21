@@ -10,6 +10,6 @@ const infoData = {
     "(max-width: 700px) 298px, (min-width: 701px) and (max-width: 1100px) 397px, 595px",
   alt: `Discover why Re Gallery is the best WordPress photo gallery plugin. Featuring responsive design, intuitive interface, and extensive customization options.`,
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "PREVIEW ADMIN",
+  additionalButtonName: "ADMIN DEMO",
 };
 export default infoData;

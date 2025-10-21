@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 import "./VideoSlider.css";
@@ -19,26 +19,32 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
   viewMoreLinks,
 }) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const handleSlideChange = (index: number) => {
     setCurrentVideoIndex(index);
     onSlideChange?.(index);
   };
 
+  const handleVideoEnded = () => {
+    const nextIndex = (currentVideoIndex + 1) % videos.length;
+    handleSlideChange(nextIndex);
+  };
+
   useEffect(() => {
-    const slideDurations = [22000, 14000, 17000];
-
-    const timeout = setTimeout(() => {
-      const nextIndex = (currentVideoIndex + 1) % videos.length;
-      handleSlideChange(nextIndex);
-    }, slideDurations[currentVideoIndex]);
-
-    return () => clearTimeout(timeout);
-  }, [currentVideoIndex, videos.length]);
+    // Play the current video when the slide changes
+    const currentVideo = videoRefs.current[currentVideoIndex];
+    if (currentVideo) {
+      currentVideo.currentTime = 0;
+      currentVideo.play().catch((error) => {
+        console.log("Video play failed:", error);
+      });
+    }
+  }, [currentVideoIndex]);
 
   return (
     <div className="video-slider">
-      <div className="video-container">
+      <div className="video-slide-wrapper">
         {videos.map((video, index) => (
           <div
             key={index}
@@ -48,13 +54,14 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
           >
             <LazyLoadComponent>
               <video
+                ref={(el) => (videoRefs.current[index] = el)}
                 height={height}
                 width={width}
                 src={video}
-                autoPlay
-                loop
+                autoPlay={index === 0}
                 muted
                 playsInline
+                onEnded={handleVideoEnded}
               />
             </LazyLoadComponent>
           </div>
