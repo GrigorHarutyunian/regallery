@@ -23,7 +23,7 @@
 
 .pro-version-activator__content {
   width: 578px;
-  max-height: 590px;
+  max-height: 670px;
   border: 0;
   max-width: 100%;
   overflow: hidden;
@@ -48,10 +48,43 @@
   padding: 60px;
   text-align: left;
 }
+@media screen and (max-width: 480px) {
+  .payment__form-wrapper {
+    padding: 30px;
+  }
+}
+.payment__form-wrapper__input::placeholder,
+.payment__form-wrapper__card-input::placeholder {
+  color: #aab7c4;
+}
+.payment__form-wrapper__input,
+.payment__form-wrapper__card-input {
+  padding: 16.5px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
 .payment__form-wrapper__field-description {
-  color: #6C6C89;
+  color: #6c6c89;
   font-size: 13px;
   padding: 5px 8px 0;
+}
+.payment__form-wrapper__submit-button {
+  text-transform: uppercase;
+  width: 100%;
+  height: 56px;
+  background-color: rgb(37, 64, 204);
+  border: none;
+  border-radius: 4px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.2s;
+  color: #ffffff;
+}
+.payment__form-wrapper__submit-button:disabled {
+  cursor: not-allowed;
+  background-color: #aaa;
 }
 
 .payment__form-wrapper__terms {
@@ -98,7 +131,6 @@
   border: 1px solid #f5c2c0;
   color: #b71c1c;
 }
-
 
 .pro-version-activator__result_error svg {
   fill: #b71c1c;
