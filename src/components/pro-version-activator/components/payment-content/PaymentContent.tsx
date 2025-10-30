@@ -4,12 +4,15 @@ import TextField from "@mui/material/TextField";
 import StripePayment from "../stripe-payment/StripePayment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import CountrySelect from "../countries/CountrySelect";
 
 const stripePromise = loadStripe(
   "pk_test_51RyMmg2E9JX99Lm5HUrRp2igX5UG3OL9oVOKrEyVawaOoG691IMWXAbpvtc1r590mS9BiAiSZRFI8Tkd8HLPgj7j00kwQpNhiN"
 ); // todo
 
 interface Props {
+  fullname: string;
+  setFullname: (fullname: string) => void;
   email: string;
   setEmail: (email: string) => void;
   isEmailInvalid: boolean;
@@ -17,9 +20,13 @@ interface Props {
   planID: number;
   handleSuccess: (successMessage: string) => void;
   handleError: (errorMessage: string) => void;
+  country: string;
+  setCountry: (country: string) => void;
 }
 
 const PaymentContent: React.FC<Props> = ({
+  fullname,
+  setFullname,
   email,
   setEmail,
   isEmailInvalid,
@@ -27,6 +34,8 @@ const PaymentContent: React.FC<Props> = ({
   planID,
   handleSuccess,
   handleError,
+  country,
+  setCountry,
 }) => {
   const [touched, setTouched] = useState(false);
 
@@ -99,7 +108,7 @@ const PaymentContent: React.FC<Props> = ({
             setIsEmailInvalid(!validateEmail(email));
           }}
           required
-          placeholder="Your email address"
+          label="Email Address"
           fullWidth
           error={isEmailInvalid}
           helperText={isEmailInvalid && "Please provide a valid email address."}
@@ -108,9 +117,37 @@ const PaymentContent: React.FC<Props> = ({
           We’ll send your license key to this email after purchase.
         </p>
       </div>
+      <div>
+        <TextField
+          className="payment__form-wrapper__input"
+          type="text"
+          value={fullname}
+          onChange={(e) => {
+            const val = e.target.value;
+            setFullname(val);
+          }}
+          onBlur={() => {
+            setTouched(true);
+            setIsEmailInvalid(!validateEmail(email));
+          }}
+          required
+          label="Full Name"
+          fullWidth
+          helperText={fullname === "" && "Please provide your full name."}
+        />
+      </div>
+      <div>
+        <CountrySelect
+          value={country}
+          onChange={setCountry}
+          label="Country (optional)"
+        />
+      </div>
       {/* <PayPalPayment email={email} isEmailInvalid={isEmailInvalid} setIsEmailInvalid={setIsEmailInvalid} planID={planID} handleApprove={onPaymentApprove} handleError={onPaymentError} /> */}
       <Elements stripe={stripePromise}>
         <StripePayment
+          fullname={fullname}
+          country={country}
           email={email}
           isEmailInvalid={isEmailInvalid}
           setIsEmailInvalid={setIsEmailInvalid}

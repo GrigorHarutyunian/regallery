@@ -3,6 +3,8 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import stripeBadge from "../../../../assets/icons/stripe-badge-white.webp";
 
 interface IStripePaymentProps {
+  fullname: string;
+  country: string;
   email: string;
   isEmailInvalid: boolean;
   setIsEmailInvalid: (isEmailInvalid: boolean) => void;
@@ -13,6 +15,8 @@ interface IStripePaymentProps {
 }
 
 const StripePayment: React.FC<IStripePaymentProps> = ({
+  fullname,
+  country,
   email,
   isEmailInvalid,
   setIsEmailInvalid,
@@ -26,10 +30,11 @@ const StripePayment: React.FC<IStripePaymentProps> = ({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    debugger;
     if (email === "") {
       setIsEmailInvalid(true);
     }
-    if (isEmailInvalid) {
+    if (isEmailInvalid || fullname === "") {
       return;
     }
 
@@ -52,7 +57,13 @@ const StripePayment: React.FC<IStripePaymentProps> = ({
         await stripe.createPaymentMethod({
           type: "card",
           card,
-          billing_details: { email },
+          billing_details: {
+            name: fullname,
+            email: email,
+            address: {
+              country: country,
+            },
+          },
         });
 
       if (pmError) {
@@ -72,6 +83,8 @@ const StripePayment: React.FC<IStripePaymentProps> = ({
           body: JSON.stringify({
             planID: planID,
             email,
+            fullname,
+            country,
             paymentMethod: paymentMethod.id,
           }),
         }
@@ -120,6 +133,8 @@ const StripePayment: React.FC<IStripePaymentProps> = ({
           body: JSON.stringify({
             email: email,
             planID: planID,
+            fullname: fullname,
+            country: country,
             action: "ordered",
             subscriptionID: subscriptionId,
             paymentType: "stripe",
@@ -150,7 +165,7 @@ const StripePayment: React.FC<IStripePaymentProps> = ({
       <div className="payment__form-wrapper__card-input">
         <CardElement
           options={{
-            hidePostalCode: true,
+            hidePostalCode: false,
             style: {
               base: {
                 fontSize: "16px",
