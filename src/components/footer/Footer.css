@@ -4,10 +4,14 @@ footer > .container {
   flex-direction: column;
 }
 
-.footer-text__title {
-  color: #ffffffff;
+.footer-text__title,
+.footer-text__title a {
+  color: #ffffff;
   font-size: 17px;
   font-weight: 400;
+}
+.footer-text__links {
+  margin-top: 8px;
 }
 
 .row__social-website {

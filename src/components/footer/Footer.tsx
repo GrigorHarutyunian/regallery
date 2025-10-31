@@ -5,8 +5,25 @@ const Footer: React.FC = () => {
     <footer>
       <div className="row__social-website">
         <div className="footer-text__title footer-copyright">
-          <span>Copyright © 2025 Re Gallery.</span>{" "}
-          <span>All rights reserved.</span>
+          <div>
+            <span>Copyright © 2025 Re Gallery.</span>{" "}
+            <span>All rights reserved.</span>
+          </div>
+          <div className="footer-text__links">
+            <a
+              href="https://regallery.team/core/terms-conditions/"
+              target="_blank"
+            >
+              Terms & Conditions
+            </a>
+            &nbsp; &nbsp;
+            <a
+              href="https://regallery.team/core/privacy-policy/"
+              target="_blank"
+            >
+              Privacy Policy
+            </a>
+          </div>
         </div>
         <div className="footer__social-website-icons">
           {socialWebsiteData.map((websiteData) => {
