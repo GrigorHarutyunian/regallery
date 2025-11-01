@@ -16,7 +16,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   const [main, cents] = price.toString().split('.');
-  const { openPaymentModal } = useProVersionActivatorContext();
+  const { openPaymentModal, openStripeCheckout } = useProVersionActivatorContext();
 
   return (
     <div className="pricing-card">
@@ -56,7 +56,9 @@ const PricingCard: React.FC<PricingDTO> = ({
           </>
       ) : (
           <CustomButton
-              handleClick={() => openPaymentModal(id)}
+              // TODO: this is assuming only Stripe is used for now.
+              // handleClick={() => openPaymentModal(id)}
+              handleClick={() => openStripeCheckout(id)}
               className="pricing-card__btn"
           >
             {buttonText}

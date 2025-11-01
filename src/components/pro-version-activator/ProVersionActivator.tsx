@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useState, useEffect} from "react";
 import {useProVersionActivatorContext} from "../../contexts/ProVersionActivatorModalContext";
 import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
@@ -10,12 +10,30 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const ProVersionActivator: React.FC = () => {
-    const {isPaymentModalOpen, closePaymentModal, planID} = useProVersionActivatorContext();
+    const {isPaymentModalOpen, closePaymentModal, planID, showSuccessMessage} = useProVersionActivatorContext();
     const [email, setEmail] = useState<string>('');
     const [isEmailInvalid, setIsEmailInvalid] = useState<boolean>(false);
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [successMessage, setSuccessMessage] = useState<string | undefined>(undefined);
     const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
+
+    // If Stripe payment success is in URL, show success message and open modal
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const payment = urlParams.get('payment');
+        const sessionId = urlParams.get('session_id');
+
+        if (payment === 'success' && sessionId) {
+            if (sessionId.startsWith('cs_') || sessionId.startsWith('cs_test_')) {
+                const message = "Thanks for your purchase! We've sent your license key to your email.";
+                setStatus('success');
+                setSuccessMessage(message);
+                showSuccessMessage(message);
+                const newUrl = window.location.pathname;
+                window.history.replaceState({}, '', newUrl);
+            }
+        }
+    }, [showSuccessMessage]);
 
     const onDialogClosed = useCallback(() => {
         setEmail('');
@@ -29,6 +47,7 @@ const ProVersionActivator: React.FC = () => {
         setStatus('success');
         setSuccessMessage(successMessage);
     }, []);
+
 
     const onPaymentError = useCallback((errorMessage: string) => {
         setStatus('error');

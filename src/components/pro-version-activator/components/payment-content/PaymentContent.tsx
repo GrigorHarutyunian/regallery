@@ -2,6 +2,7 @@ import React, {useCallback, useState} from "react";
 import "../../proVersionActivator.css";
 import TextField from "@mui/material/TextField";
 import PayPalPayment from "../pay-pal-payment/PayPalPayment";
+import StripePayment from "../stripe-payment/StripePayment";
 
 interface Props {
   email: string;
@@ -81,10 +82,20 @@ const PaymentContent: React.FC<Props> = ({
             error={isEmailInvalid}
             helperText={isEmailInvalid && 'Please provide a valid email address.'}
         />
-        <p className="payment__form-wrapper__field-description">We’ll send your license key to this email after purchase.</p>
+        <p className="payment__form-wrapper__field-description">We'll send your license key to this email after purchase.</p>
       </div>
+      <StripePayment email={email} isEmailInvalid={isEmailInvalid} setIsEmailInvalid={setIsEmailInvalid} planID={planID} handleError={onPaymentError} />
       <PayPalPayment email={email} isEmailInvalid={isEmailInvalid} setIsEmailInvalid={setIsEmailInvalid} planID={planID} handleApprove={onPaymentApprove} handleError={onPaymentError} />
-      <div className="payment__form-wrapper__terms">
+
+      <div className="payment__form-wrapper__terms" style={{
+        marginTop: 20,
+        padding: 16,
+        backgroundColor: '#f8f9fa',
+        borderRadius: 8,
+        fontSize: '14px',
+        color: '#6b7280',
+        lineHeight: 1.5
+      }}>
         Our 14-day money back guarantee applies to all purchases. All plans automatically renew yearly at regular price using the payment method you provide today. You can cancel your plan at any time. By purchasing, you agree to the <a href="https://www.paypal.com/us/legalhub/paypal/useragreement-full" target="_blank" rel="noopener noreferrer">PayPal User Agreement</a> and <a href="https://www.paypal.com/us/legalhub/paypal/privacy-full" target="_blank" rel="noopener noreferrer">PayPal Privacy Policy</a>.
       </div>
     </div>

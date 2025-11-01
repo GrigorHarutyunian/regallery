@@ -11,6 +11,8 @@ interface IProVersionActivatorContextValue {
     openPaymentModal: (planID: number) => void;
     closePaymentModal: () => void;
     planID: number;
+    openStripeCheckout: (planID: number) => void;
+    showSuccessMessage: (message: string) => void;
 }
 
 const initialPaypalOptions: PayPalScriptOptions = {
@@ -41,9 +43,35 @@ export const ProVersionActivatorProvider: React.FC<IProVersionActivatorProviderP
         setplanID(0);
     };
 
+    const showSuccessMessage = (message: string) => {
+        setIsPaymentModalOpen(true);
+    };
+
+    const openStripeCheckout = async (planID: number) => {
+        try {
+            const response = await fetch("https://regallery.team/core/wp-json/reacgcore/v2/stripe/createCheckoutSession", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    planID: planID,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.url) {
+                window.location.href = result.url;
+            } else {
+                throw new Error(result.errors?.message || 'Failed to create Stripe checkout session');
+            }
+        } catch (error) {
+            console.error('Error creating Stripe checkout:', error);
+        }
+    };
+
     return (
         <ProVersionActivatorContext.Provider
-            value={{isPaymentModalOpen, openPaymentModal, closePaymentModal, planID}}
+            value={{isPaymentModalOpen, openPaymentModal, openStripeCheckout, closePaymentModal, planID, showSuccessMessage}}
         >
             <PayPalScriptProvider options={initialPaypalOptions}>
                 {children}
