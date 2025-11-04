@@ -1,8 +1,7 @@
-import React, {useCallback, useState} from "react";
+import React, { useCallback, useState } from "react";
 import "../../proVersionActivator.css";
 import TextField from "@mui/material/TextField";
 import PayPalPayment from "../pay-pal-payment/PayPalPayment";
-import StripePayment from "../stripe-payment/StripePayment";
 
 interface Props {
   email: string;
@@ -15,88 +14,127 @@ interface Props {
 }
 
 const PaymentContent: React.FC<Props> = ({
-    email,
-    setEmail,
-    isEmailInvalid,
-    setIsEmailInvalid,
-    planID,
-    handleSuccess,
-    handleError
+  email,
+  setEmail,
+  isEmailInvalid,
+  setIsEmailInvalid,
+  planID,
+  handleSuccess,
+  handleError,
 }) => {
   const [touched, setTouched] = useState(false);
 
   const validateEmail = (value: string) =>
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
-  const onPaymentApprove = useCallback(async (paymentData: Record<string, unknown>) => {
-    try {
-      const response = await fetch("https://regallery.team/core/wp-json/reacgcore/v2/user", {
-      //const response = await fetch("http://localhost/wordpress/wp-json/reacgcore/v2/user", { //todo
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email,
-          planID: planID,
-          action: "ordered",
-          ...paymentData
-        }),
-      });
+  const onPaymentApprove = useCallback(
+    async (paymentData: Record<string, unknown>) => {
+      try {
+        const response = await fetch(
+          "https://regallery.team/core/wp-json/reacgcore/v2/user",
+          {
+            //const response = await fetch("http://localhost/wordpress/wp-json/reacgcore/v2/user", { //todo
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: email,
+              planID: planID,
+              action: "ordered",
+              ...paymentData,
+            }),
+          }
+        );
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (response.ok) {
-        handleSuccess(result.message);
-      } else {
-        handleError(result.errors.message);
+        if (response.ok) {
+          handleSuccess(result.message);
+        } else {
+          handleError(result.errors.message);
+        }
+      } catch (e) {
+        handleError((e as TypeError).message);
       }
-    } catch (e) {
-      handleError((e as TypeError).message);
-    }
-  }, [email, planID, handleSuccess, handleError]);
+    },
+    [email, planID, handleSuccess, handleError]
+  );
 
-  const onPaymentError = useCallback((errorMessage: string) => {
-    handleError(errorMessage);
-  }, [handleError]);
+  const onPaymentError = useCallback(
+    (errorMessage: string) => {
+      handleError(errorMessage);
+    },
+    [handleError]
+  );
 
   return (
     <div className="payment__form-wrapper">
       <div>
         <TextField
-            type="email"
-            value={email}
-            onChange={(e) => {
-              const val = e.target.value;
-              setEmail(val);
-              // Only revalidate immediately if it was already touched/invalid
-              if (touched) {
-                setIsEmailInvalid(!validateEmail(val));
-              }
-            }}
-            onBlur={() => {
-              setTouched(true);
-              setIsEmailInvalid(!validateEmail(email));
-            }}
-            required
-            placeholder="Your email address"
-            fullWidth
-            error={isEmailInvalid}
-            helperText={isEmailInvalid && 'Please provide a valid email address.'}
+          type="email"
+          value={email}
+          onChange={(e) => {
+            const val = e.target.value;
+            setEmail(val);
+            // Only revalidate immediately if it was already touched/invalid
+            if (touched) {
+              setIsEmailInvalid(!validateEmail(val));
+            }
+          }}
+          onBlur={() => {
+            setTouched(true);
+            setIsEmailInvalid(!validateEmail(email));
+          }}
+          required
+          placeholder="Your email address"
+          fullWidth
+          error={isEmailInvalid}
+          helperText={isEmailInvalid && "Please provide a valid email address."}
         />
-        <p className="payment__form-wrapper__field-description">We'll send your license key to this email after purchase.</p>
+        <p className="payment__form-wrapper__field-description">
+          We'll send your license key to this email after purchase.
+        </p>
       </div>
-      <StripePayment email={email} isEmailInvalid={isEmailInvalid} setIsEmailInvalid={setIsEmailInvalid} planID={planID} handleError={onPaymentError} />
-      <PayPalPayment email={email} isEmailInvalid={isEmailInvalid} setIsEmailInvalid={setIsEmailInvalid} planID={planID} handleApprove={onPaymentApprove} handleError={onPaymentError} />
+      <PayPalPayment
+        email={email}
+        isEmailInvalid={isEmailInvalid}
+        setIsEmailInvalid={setIsEmailInvalid}
+        planID={planID}
+        handleApprove={onPaymentApprove}
+        handleError={onPaymentError}
+      />
 
-      <div className="payment__form-wrapper__terms" style={{
-        marginTop: 20,
-        padding: 16,
-        backgroundColor: '#f8f9fa',
-        borderRadius: 8,
-        fontSize: '14px',
-        color: '#6b7280',
-        lineHeight: 1.5
-      }}>
-        Our 14-day money back guarantee applies to all purchases. All plans automatically renew yearly at regular price using the payment method you provide today. You can cancel your plan at any time. By purchasing, you agree to the <a href="https://www.paypal.com/us/legalhub/paypal/useragreement-full" target="_blank" rel="noopener noreferrer">PayPal User Agreement</a> and <a href="https://www.paypal.com/us/legalhub/paypal/privacy-full" target="_blank" rel="noopener noreferrer">PayPal Privacy Policy</a>.
+      <div
+        className="payment__form-wrapper__terms"
+        style={{
+          marginTop: 20,
+          padding: 16,
+          backgroundColor: "#f8f9fa",
+          borderRadius: 8,
+          fontSize: "14px",
+          color: "#6b7280",
+          lineHeight: 1.5,
+        }}
+      >
+        Our 14-day money back guarantee applies to all purchases. All plans
+        automatically renew yearly at regular price using the payment method you
+        provide today. You can cancel your plan at any time. By purchasing, you
+        agree to the{" "}
+        <a
+          href="https://www.paypal.com/us/legalhub/paypal/useragreement-full"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PayPal User Agreement
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://www.paypal.com/us/legalhub/paypal/privacy-full"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PayPal Privacy Policy
+        </a>
+        .
       </div>
     </div>
   );
