@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PricingDTO from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
@@ -15,8 +16,19 @@ const PricingCard: React.FC<PricingDTO> = ({
   title,
   href,
 }) => {
-  const [main, cents] = price.toString().split('.');
-  const { openPaymentModal } = useProVersionActivatorContext();
+  const [main, cents] = price.toString().split(".");
+  const [isLoading, setIsLoading] = useState(false);
+  const { openStripeCheckout } = useProVersionActivatorContext();
+
+  const handleCheckout = async () => {
+    setIsLoading(true);
+    try {
+      await openStripeCheckout(id);
+    } catch (error) {
+      console.error("Stripe checkout error:", error);
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="pricing-card">
@@ -47,27 +59,28 @@ const PricingCard: React.FC<PricingDTO> = ({
       </div>
 
       {href ? (
-          <>
-            <a target={"_blank"} href={href}>
-              <div className="pricing-card__btn pricing-card__btn_starter">
-                {buttonText}
-              </div>
-            </a>
-          </>
+        <>
+          <a target={"_blank"} href={href}>
+            <div className="pricing-card__btn pricing-card__btn_starter">
+              {buttonText}
+            </div>
+          </a>
+        </>
       ) : (
-          <CustomButton
-              handleClick={() => openPaymentModal(id)}
-              className="pricing-card__btn"
-          >
-            {buttonText}
-          </CustomButton>
+        <CustomButton
+          handleClick={handleCheckout}
+          className="pricing-card__btn"
+          isLoading={isLoading}
+        >
+          {buttonText}
+        </CustomButton>
       )}
       <ul className="pricing-card__features">
         {advantages.map((val, id) => {
           return (
-              <li className="pricing-card__features__list" key={id}>
-                {val}
-              </li>
+            <li className="pricing-card__features__list" key={id}>
+              {val}
+            </li>
           );
         })}
       </ul>
