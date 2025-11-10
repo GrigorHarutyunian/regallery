@@ -67,13 +67,24 @@ const PricingCard: React.FC<PricingDTO> = ({
           </a>
         </>
       ) : (
-        <CustomButton
-          handleClick={handleCheckout}
-          className="pricing-card__btn"
-          isLoading={isLoading}
-        >
-          {buttonText}
-        </CustomButton>
+        <>
+          <CustomButton
+            handleClick={handleCheckout}
+            className="pricing-card__btn"
+            isLoading={isLoading}
+          >
+            {buttonText}
+          </CustomButton>
+          <div className="pricing-card__free-link">
+            <a
+              href="https://wordpress.org/plugins/regallery/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Or try the free version
+            </a>
+          </div>
+        </>
       )}
       <ul className="pricing-card__features">
         {advantages.map((val, id) => {

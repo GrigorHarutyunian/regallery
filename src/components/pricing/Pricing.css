@@ -133,6 +133,17 @@
   margin-right: auto;
   margin-left: auto;
 }
+.pricing-card__free-link {
+  margin-top: 12px;
+}
+.pricing-card__free-link a {
+  color: black;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.pricing-card__free-link a:hover {
+  color: #2540cc;
+}
 .pricing-card__btn_starter {
   background-color: #000000;
 }
