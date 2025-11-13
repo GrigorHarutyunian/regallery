@@ -3,11 +3,10 @@ export default interface PricingDTO {
   text: string;
   buttonText: string;
   price: number | string;
+  discount?: number;
   currency?: string;
-  canceledPrice?: string;
   advantages: (string | JSX.Element)[];
   duration?: string;
-  savedMoney?: string;
   title: string;
   href?: string;
 }

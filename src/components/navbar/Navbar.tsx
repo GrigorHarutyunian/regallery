@@ -52,7 +52,6 @@ const links: Link[] = [
   },
 ];
 
-("Get unlimited access to the pre-built templates for less than$2/month.");
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
@@ -112,7 +111,7 @@ const Navbar: React.FC = () => {
   return (
     <div
       className={`nav${menuOpen ? " nav-open" : ""}${
-        localStorage.getItem("bannerOpen") ? " closed-banner" : ""
+        localStorage.getItem("topBannerOpen") ? " closed-banner" : ""
       }`}
     >
       <div className={"nav-content"}>

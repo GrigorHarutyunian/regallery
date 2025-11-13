@@ -11,7 +11,7 @@ import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
 // import Views from "./components/views/Views";
 import Pricing from "./components/pricing/Pricing";
-import Banner from "./components/banner/Banner";
+import TopBanner from "./components/TopBanner/TopBanner";
 import AboutMobileResponsiveness from "./components/about-mobile-responsiveness/AboutMobileResponsiveness";
 import Demo from "./components/demo/Demo";
 import InteractiveAIIcon from "./components/interactive-aI-icon/InteractiveAIIcon";
@@ -21,6 +21,7 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
+import BlackFridayBanner from "./components/black-friday-banner/BlackFridayBanner";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -90,10 +91,10 @@ const App: React.FC = () => {
       <WindowWidthProvider>
         <ProVersionActivatorProvider>
           <Navbar />
-          <Banner />
+          <TopBanner />
           <main
             className={
-              localStorage.getItem("bannerOpen") ? "closed-banner" : ""
+              localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
             }
           >
             <Hero />
@@ -109,6 +110,7 @@ const App: React.FC = () => {
           </main>
           <Footer />
           <ProVersionActivator />
+          <BlackFridayBanner />
         </ProVersionActivatorProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>

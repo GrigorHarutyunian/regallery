@@ -75,10 +75,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 4px;
+  height: 2px;
   background-color: red;
-  transform: translate(-50%, -50%);
-  width: 70px;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  width: 100%;
 }
 
 .parent_saved_money {
@@ -86,9 +86,9 @@
 }
 
 .saved_money_div {
-  color: #000000;
+  color: #ffffff;
   display: block;
-  background-color: #eeeeee;
+  background-color: #8ea96e;
   padding: 9px 28px;
   max-width: 100px;
   margin: auto;
@@ -213,10 +213,6 @@
   }
   .pricing-card__title {
     font-size: 35px;
-  }
-  .remove_line {
-    width: 35px;
-    height: 2px;
   }
   .saved_money_div {
     padding: 4px 10px;

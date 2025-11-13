@@ -400,18 +400,6 @@
   }
 }
 
-@media screen and (max-width: 865px) {
-  .nav {
-    top: 70px;
-  }
-}
-
-@media screen and (max-width: 364px) {
-  .nav {
-    top: 116px;
-  }
-}
-
 @media screen and (min-width: 800px) and (max-width: 1120px) {
   .download-btn__navbar {
     font-size: 12px !important;
@@ -522,9 +510,6 @@
   }
 }
 @media screen and (min-width: 365px) and (max-width: 490px) {
-  .nav {
-    top: 93px;
-  }
   .nav-open {
     min-height: calc(100vh - 94px);
   }
