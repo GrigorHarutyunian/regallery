@@ -17,11 +17,10 @@ const Pricing: React.FC = () => {
                   text={val.text}
                   buttonText={val.buttonText}
                   price={val.price}
+                  discount={val?.discount}
                   currency={val.currency}
-                  canceledPrice={val?.canceledPrice}
                   advantages={val.advantages}
                   duration={val.duration}
-                  savedMoney={val.savedMoney}
                   title={val.title}
                   href={val.href}
                 />

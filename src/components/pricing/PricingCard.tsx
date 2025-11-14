@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getCurrentDiscount } from "../../utils/getCurrentDiscount";
 import PricingDTO from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
@@ -6,17 +7,26 @@ import CustomButton from "../../common-components/custom-button/CustomButton";
 const PricingCard: React.FC<PricingDTO> = ({
   id,
   price,
+  discount,
   currency,
   text,
   buttonText,
   advantages,
-  canceledPrice,
   duration,
-  savedMoney,
   title,
   href,
 }) => {
-  const [main, cents] = price.toString().split(".");
+  if (typeof discount === "undefined") {
+    discount = getCurrentDiscount();
+  }
+  const saveBadgeType = discount && discount >= 30 ? "amount" : "percent";
+  const discountPrice =
+    typeof price === "number" && discount
+      ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100
+      : undefined;
+  const [main, cents] = discountPrice
+    ? discountPrice.toString().split(".")
+    : price.toString().split(".");
   const [isLoading, setIsLoading] = useState(false);
   const { openStripeCheckout } = useProVersionActivatorContext();
 
@@ -34,10 +44,11 @@ const PricingCard: React.FC<PricingDTO> = ({
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {canceledPrice ? (
+        {discountPrice ? (
           <span className="canceled-price">
             <div className="remove_line" />
-            {canceledPrice}
+            {currency}
+            {price}
           </span>
         ) : null}
         <div className="pricing-card__title">
@@ -47,10 +58,15 @@ const PricingCard: React.FC<PricingDTO> = ({
         </div>
         <div className="pricing-card__duration">{duration}</div>
 
-        {savedMoney ? (
+        {discountPrice && typeof price === "number" ? (
           <div className="parent_saved_money">
             <div className="saved_money_div">
-              <span className="saved_money">Save {savedMoney}</span>
+              <span className="saved_money">
+                Save{" "}
+                {saveBadgeType === "amount"
+                  ? `${currency}${Math.round(price - discountPrice)}`
+                  : `${discount}%`}
+              </span>
             </div>
           </div>
         ) : null}

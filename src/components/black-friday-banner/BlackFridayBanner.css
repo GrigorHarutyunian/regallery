@@ -1,0 +1,92 @@
+.black-friday-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.black-friday-banner {
+  max-width: min(800px, 90vw);
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.3s ease-in-out;
+  position: relative;
+}
+
+.black-friday-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.2s ease;
+  z-index: 10001;
+  padding: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.black-friday-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .black-friday-banner {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .black-friday-close-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .black-friday-image {
+    max-height: 95vh;
+  }
+}
