@@ -15,9 +15,9 @@ function pstToUtcTimestamp(year: number, month: number, day: number, hour: numbe
 }
 
 // Boundaries converted to UTC timestamps.
-const phase1StartUtc = pstToUtcTimestamp(2025, 11, 14, 0, 0, 0);
-const phase1EndUtc = pstToUtcTimestamp(2025, 11, 27, 23, 59, 59);
-const phase2StartUtc = pstToUtcTimestamp(2025, 11, 28, 0, 0, 0);
+const phase1StartUtc = pstToUtcTimestamp(2025, 11, 16, 12, 0, 0);
+const phase1EndUtc = pstToUtcTimestamp(2025, 11, 27, 11, 59, 59);
+const phase2StartUtc = pstToUtcTimestamp(2025, 11, 27, 12, 0, 0);
 const phase2EndUtc = pstToUtcTimestamp(2025, 11, 30, 23, 59, 59);
 const phase3StartUtc = pstToUtcTimestamp(2025, 12, 1, 0, 0, 0);
 const phase3EndUtc = pstToUtcTimestamp(2025, 12, 7, 23, 59, 59);

@@ -16,7 +16,7 @@ const InteractiveAIIcon: React.FC = () => {
   };
 
   useEffect(() => {
-    const hasOpened = localStorage.getItem("aiPopoverOpened");
+    const hasOpened = true; //localStorage.getItem("aiPopoverOpened");
     if (!hasOpened) {
       const timer = setTimeout(() => {
         if (aiIconRef.current) {
