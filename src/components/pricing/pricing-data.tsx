@@ -33,7 +33,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     title: "Basic",
     price: 29.99,
     currency: "$",
-    duration: "1 year",
+    duration: "1 Year",
     text: "For Photographers & Creatives Using WordPress",
     buttonText: "BUY NOW",
     advantages: [
