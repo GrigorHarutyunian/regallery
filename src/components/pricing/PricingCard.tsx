@@ -9,6 +9,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   price,
   discount,
   currency,
+  planType,
   text,
   buttonText,
   advantages,
@@ -56,7 +57,11 @@ const PricingCard: React.FC<PricingDTO> = ({
           {main ? <span>{main}</span> : null}
           {cents ? <span className="cents"> .{cents}</span> : null}
         </div>
-        <div className="pricing-card__duration">{duration}</div>
+        {planType ? <div className="plan-type">/{planType}</div> : null}
+
+        {duration ? (
+          <div className="pricing-card__duration">{duration}</div>
+        ) : null}
 
         {discountPrice && typeof price === "number" ? (
           <div className="parent_saved_money">
