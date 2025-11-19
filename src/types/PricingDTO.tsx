@@ -5,6 +5,7 @@ export default interface PricingDTO {
   price: number | string;
   discount?: number;
   currency?: string;
+  planType?: "yearly" | "monthly";
   advantages: (string | JSX.Element)[];
   duration?: string;
   title: string;

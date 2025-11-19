@@ -43,6 +43,14 @@
   vertical-align: top;
   font-weight: 500;
 }
+.plan-type {
+  vertical-align: bottom;
+  font-size: 13px;
+  position: relative;
+  top: -27px;
+  left: 60px;
+  font-weight: 400;
+}
 .pricing-card__subtitle {
   color: #000000aa;
   font-size: 24px;
@@ -55,7 +63,6 @@
 .pricing__text {
   text-align: center;
   color: #000000aa;
-  margin-bottom: 0;
   height: 67px;
   max-width: 300px;
   margin: auto;
@@ -82,7 +89,7 @@
 }
 
 .parent_saved_money {
-  min-height: 48px;
+  margin-bottom: 20px;
 }
 
 .saved_money_div {
@@ -213,6 +220,14 @@
   }
   .pricing-card__title {
     font-size: 35px;
+  }
+  .pricing-card__title > span.cents {
+    font-size: 20px;
+  }
+  .plan-type {
+    font-size: 10px;
+    top: -20px;
+    left: 40px;
   }
   .saved_money_div {
     padding: 4px 10px;

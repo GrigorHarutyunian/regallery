@@ -19,6 +19,7 @@ const Pricing: React.FC = () => {
                   price={val.price}
                   discount={val?.discount}
                   currency={val.currency}
+                  planType={val.planType}
                   advantages={val.advantages}
                   duration={val.duration}
                   title={val.title}

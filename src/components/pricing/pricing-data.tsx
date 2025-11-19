@@ -33,7 +33,8 @@ const pricingData: { [key: number]: PricingDTO } = {
     title: "Basic",
     price: 29.99,
     currency: "$",
-    duration: "1 Year",
+    planType: "yearly",
+    // duration: "1 Year",
     text: "For Photographers & Creatives Using WordPress",
     buttonText: "BUY NOW",
     advantages: [
@@ -73,7 +74,8 @@ const pricingData: { [key: number]: PricingDTO } = {
     title: "Plus",
     price: 49.99,
     currency: "$",
-    duration: "1 Year",
+    planType: "yearly",
+    // duration: "1 Year",
     text: "For Businesses & Teams Building on WordPress",
     buttonText: "BUY NOW",
     advantages: [
@@ -113,7 +115,8 @@ const pricingData: { [key: number]: PricingDTO } = {
     title: "Agency",
     price: 99.99,
     currency: "$",
-    duration: "1 Year",
+    planType: "yearly",
+    // duration: "1 Year",
     text: "For WordPress Agencies & Enterprise Users",
     buttonText: "BUY NOW",
     advantages: [
