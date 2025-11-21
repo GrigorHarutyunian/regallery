@@ -20,14 +20,25 @@ const PricingCard: React.FC<PricingDTO> = ({
   if (typeof discount === "undefined") {
     discount = getCurrentDiscount();
   }
-  const saveBadgeType = discount && discount >= 30 ? "amount" : "percent";
-  const discountPrice =
-    typeof price === "number" && discount
-      ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100
-      : undefined;
-  const [main, cents] = discountPrice
-    ? discountPrice.toString().split(".")
-    : price.toString().split(".");
+  var discountedPrice = discount
+    ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100
+    : 0;
+
+  const savedMoney =
+    "Save " +
+    (discount && discount > 50
+      ? `${currency}${Math.round(price - discountedPrice)}`
+      : `${discount}%`);
+
+  const originalPrice =
+    planType === "monthly" ? (price / 12).toFixed(2) : price.toFixed(2);
+  const finalPrice =
+    planType === "monthly"
+      ? (discountedPrice / 12).toFixed(2)
+      : discountedPrice.toFixed(2);
+  const [main, cents] = discount
+    ? finalPrice.toString().split(".")
+    : originalPrice.toString().split(".");
   const [isLoading, setIsLoading] = useState(false);
   const { openStripeCheckout } = useProVersionActivatorContext();
 
@@ -45,37 +56,35 @@ const PricingCard: React.FC<PricingDTO> = ({
     <div className="pricing-card">
       <div className="pricing-card__header">
         <span className="pricing-card__subtitle">{title}</span>
-        {discountPrice ? (
-          <span className="canceled-price">
-            <div className="remove_line" />
-            {currency}
-            {price}
-          </span>
-        ) : null}
-        <div className="pricing-card__title">
-          {currency ? <span className="currency">{currency}</span> : null}
-          {main ? <span>{main}</span> : null}
-          {cents ? <span className="cents"> .{cents}</span> : null}
-        </div>
-        {planType ? <div className="plan-type">/{planType}</div> : null}
-
-        {duration ? (
-          <div className="pricing-card__duration">{duration}</div>
-        ) : null}
-
-        {discountPrice && typeof price === "number" ? (
-          <div className="parent_saved_money">
-            <div className="saved_money_div">
-              <span className="saved_money">
-                Save{" "}
-                {saveBadgeType === "amount"
-                  ? `${currency}${Math.round(price - discountPrice)}`
-                  : `${discount}%`}
+        {price === 0 ? (
+          <span className="pricing-card__title">Free</span>
+        ) : (
+          <>
+            {discount ? (
+              <span className="canceled-price">
+                <div className="remove_line" />
+                {currency}
+                {originalPrice}
               </span>
+            ) : null}
+            <div className="pricing-card__title">
+              {currency ? <span className="currency">{currency}</span> : null}
+              {main ? <span>{main}</span> : null}
+              {cents ? <span className="cents"> .{cents}</span> : null}
             </div>
-          </div>
-        ) : null}
-
+            {planType ? <div className="plan-type">/{planType}</div> : null}
+            {duration ? (
+              <div className="pricing-card__duration">{duration}</div>
+            ) : null}
+            {discount ? (
+              <div className="parent_saved_money">
+                <div className="saved_money_div">
+                  <span className="saved_money">{savedMoney}</span>
+                </div>
+              </div>
+            ) : null}
+          </>
+        )}
         <p className="section-text__desc pricing__text">{text}</p>
       </div>
 
