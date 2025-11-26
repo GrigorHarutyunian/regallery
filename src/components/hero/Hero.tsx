@@ -29,12 +29,13 @@ const Hero: React.FC = () => {
           <motion.div className="hero-container">
             <motion.div className="home-text">
               <h1 className="section-text__title ">
-                The Intuitive <br></br> Photo Gallery Plugin
+                Easily Create
+                <br></br> AI Photo Gallery that Wow Your Visitors
               </h1>
               <p className="section-text__body">
-                The WordPress photo gallery plugin is your ideal solution for
-                easily building stunning, mobile-friendly galleries in just
-                minutes.
+                Re Gallery helps you build responsive photo galleries in
+                minutes, with <b>pre-built templates, AI-powered tools,</b> and{" "}
+                <b>full WordPress integration</b>: No coding required!
               </p>
               {version === "mobile" && (
                 <motion.div className="section-image">
