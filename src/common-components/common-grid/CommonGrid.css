@@ -23,6 +23,9 @@
 ._features .section-text__desc {
   margin-bottom: 15px;
 }
+._features svg > path {
+  fill: #2540cc;
+}
 
 .section-text__desc {
   color: #000000aa;
