@@ -1,7 +1,7 @@
 // Dynamic discount utility based on Pacific Time windows.
 // Schedule (PST):
 // - 20% until Nov 27 2025 23:59:59
-// - 40% Nov 28 2025 00:00:00 through Nov 30 2025 23:59:59
+// - 50% Nov 28 2025 00:00:00 through Nov 30 2025 23:59:59
 // - 30% Dec 1 2025 00:00:00 through Dec 7 2025 23:59:59
 // After these periods: no discount.
 
@@ -24,7 +24,7 @@ const phase3EndUtc = pstToUtcTimestamp(2025, 12, 7, 23, 59, 59);
 
 export function getCurrentDiscount(now: number = Date.now()): number | undefined {
   if (now >= phase1StartUtc && now <= phase1EndUtc) return 20;
-  if (now >= phase2StartUtc && now <= phase2EndUtc) return 40;
+  if (now >= phase2StartUtc && now <= phase2EndUtc) return 50;
   if (now >= phase3StartUtc && now <= phase3EndUtc) return 30;
   return undefined;
 }
@@ -32,7 +32,7 @@ export function getCurrentDiscount(now: number = Date.now()): number | undefined
 export function getDiscountLabel(): string | undefined {
   const v = getCurrentDiscount();
   if (v === 20) return "Black Friday Early Access";
-  if (v === 40) return "Black Friday";
+  if (v === 50) return "Black Friday";
   if (v === 30) return "Cyber Monday";
   return undefined;
 }
