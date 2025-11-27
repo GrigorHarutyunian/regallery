@@ -35,6 +35,10 @@ import BlogGeneralImg from "../../assets/imgs/views/menu_general_imgs/blog.webp"
 import AboutUsTemplate from "../../assets/imgs/views/subViews/blog/AboutUs.webp";
 import TravelBlogTemplate from "../../assets/imgs/views/subViews/blog/TravelBlog.webp";
 import SmartRows from "../../assets/imgs/views/subViews/justified/Smart_Rows.webp";
+import SoftHover from "../../assets/imgs/views/subViews/justified/Soft_Hover.webp";
+import GlideCaptions from "../../assets/imgs/views/subViews/mosaic/Glide_Captions.webp";
+import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
+import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -155,6 +159,20 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         imgUrl: SimplePrisme,
         path: "https://regallery.team/core/reacg/simple-prism/",
       },
+      {
+        title: "Team",
+        description:
+          "The Team template presents portraits in a clear, professional grid with space for names and roles, making it easy to highlight team members. Ideal for business websites, agencies, and organizational pages.",
+        imgUrl: Team,
+        path: "https://regallery.team/core/reacg/team/",
+      },
+      {
+        title: "Products",
+        description:
+          "The Products template displays images in a clean, structured layout optimized for showcasing items with clarity. Great for online shops, product catalogs, and promotional image collections.",
+        imgUrl: Products,
+        path: "https://regallery.team/core/reacg/products/",
+      },
     ],
   },
   {
@@ -191,6 +209,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Latte Mosaic template in Re Gallery presents a warm and visually appealing way to display your images in a mosaic-style grid. Ideal for photographers, interior designers, bloggers, and creatives.",
         imgUrl: Displaycollectionhumbnail,
         path: "https://regallery.team/core/reacg/latte-mosaic/",
+      },
+      {
+        title: "Glide Captions",
+        description:
+          "The Glide Captions template reveals image captions with a clean sliding motion, offering an engaging way to showcase titles. Ideal for storytelling galleries, portfolios, and featured collections.",
+        imgUrl: GlideCaptions,
+        path: "https://regallery.team/core/reacg/glide-captions/",
       },
     ],
   },
@@ -413,6 +438,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Smart Rows template in Re Gallery arranges your images in evenly aligned horizontal rows, intelligently adjusting their dimensions for a balanced and seamless gallery display. Ideal for photographers, bloggers.",
         imgUrl: SmartRows,
         path: "https://regallery.team/core/reacg/smart-rows/",
+      },
+      {
+        title: "Soft Hover",
+        description:
+          "The Soft Hover template adds a gentle, elegant hover animation to your images, creating a smooth and modern visual experience. Perfect for portfolios, creative projects, and minimalist gallery layouts.",
+        imgUrl: SoftHover,
+        path: "https://regallery.team/core/reacg/soft-hover/",
       },
     ],
   },
