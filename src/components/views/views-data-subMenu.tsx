@@ -39,6 +39,7 @@ import SoftHover from "../../assets/imgs/views/subViews/justified/Soft_Hover.web
 import GlideCaptions from "../../assets/imgs/views/subViews/mosaic/Glide_Captions.webp";
 import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
 import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
+import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered_Caption.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -172,6 +173,13 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Products template displays images in a clean, structured layout optimized for showcasing items with clarity. Great for online shops, product catalogs, and promotional image collections.",
         imgUrl: Products,
         path: "https://regallery.team/core/reacg/products/",
+      },
+      {
+        title: "Centered Caption",
+        description:
+          "The Centered Caption template displays your image titles and descriptions neatly in the center of each photo, revealing them with a clean and subtle hover effect.",
+        imgUrl: CenteredCaption,
+        path: "https://regallery.team/core/reacg/centered-caption/",
       },
     ],
   },
