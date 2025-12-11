@@ -4,7 +4,7 @@ const Views: React.FC<any> = () => {
   return (
     <CommonGrid
       sectionId="views"
-      title="Gallery views"
+      title="Gallery layouts"
       data={viewsData}
       gridClassname="grid__6"
     />

@@ -34,7 +34,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
           <h3 className="section-text__title-small">{title}</h3>
 
           <p className="section-text__desc">{description}</p>
-          {globalTitle === "Gallery views" && (
+          {globalTitle === "Gallery layouts" && (
             <a href={demoLink} target="_blank">
               <div className="absolute_btn">
                 <span>Demo</span>
@@ -72,7 +72,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
               </div>
             </a>
           )}
-          {globalTitle === "Gallery views" && (
+          {globalTitle === "Gallery layouts" && (
             <div className="back">
               <img src={img} alt="as" />
             </div>
