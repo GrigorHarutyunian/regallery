@@ -1,10 +1,10 @@
 export const dataDemo = [
   {
     id: 1,
-    title: "Thumbnails",
+    title: "Grid",
     description:
       "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
-    demoPath: "https://regallery.team/core/thumbnails-view/",
+    demoPath: "https://regallery.team/core/grid-view/",
     path: (
       <>
         <path

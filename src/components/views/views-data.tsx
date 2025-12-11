@@ -8,7 +8,7 @@ import cardsImg from "../../assets/imgs/views/Cards_card_img.png";
 export const viewsData = [
   {
     id: 1,
-    title: "Thumbnails",
+    title: "Grid",
     demoLink: "https://regallery.team/core/thumbnails/",
     img: thumbnailsImg,
     description:

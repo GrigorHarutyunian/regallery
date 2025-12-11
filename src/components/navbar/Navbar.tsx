@@ -19,7 +19,7 @@ interface Link {
 const links: Link[] = [
   {
     id: 1,
-    title: "Gallery views",
+    title: "Gallery layouts",
     href: "#views",
     type: "menu",
     subMenuItems: viewsDataSubMenu,

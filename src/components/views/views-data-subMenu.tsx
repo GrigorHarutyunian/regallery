@@ -43,10 +43,10 @@ import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered
 export const viewsDataSubMenu = [
   {
     id: 1,
-    title: "Thumbnails",
+    title: "Grid",
     imgUrl: ThumbnailsGeneralImg,
     idView: 420,
-    description: `The Thumbnails view in Re Gallery allows you to show your images in a clean, organized grid of clickable preview images.
+    description: `The Grid view in Re Gallery allows you to show your images in a clean, organized grid of clickable preview images.
 Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     svgPath: (
       <>

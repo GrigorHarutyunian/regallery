@@ -21,7 +21,7 @@ const TopBanner: React.FC = () => {
     </>
   ) : (
     <>
-      Unlimited access to the <b>Pre-built templates</b> and <b>AI tools</b>.{" "}
+      Unlimited access to the <b>Pre-Designed Layouts</b>, <b>AI tools</b>.{" "}
       <a href="#pricing">Get for less than $2.5/month</a>
     </>
   );

@@ -1,5 +1,6 @@
 import { ai_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { woo_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
+import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import PricingDTO from "../../types/PricingDTO";
 
 const pricingData: { [key: number]: PricingDTO } = {
@@ -16,7 +17,7 @@ const pricingData: { [key: number]: PricingDTO } = {
   //     <>
   //       <strong className="bold__list">9</strong> Gallery Views
   //     </>,
-  //     "Live Demo",
+  //     "Real-Time Preview",
   //     "Gutenberg Block Support",
   //     "Elementor Widget Integration",
   //     "Divi Builder Compatibility",
@@ -38,34 +39,51 @@ const pricingData: { [key: number]: PricingDTO } = {
     text: "For Photographers & Creatives Using WordPress",
     buttonText: "BUY NOW",
     advantages: [
-      "Unlimited Galleries",
-      "Unlimited Users",
       <>
         Use on <strong className="bold__list">1 Site</strong>
       </>,
+      "Unlimited Galleries and Images",
       <>
         <strong className="bold__list">9</strong> Gallery Views
+        <span
+          className="info-icon"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Live Demo",
-      "Gutenberg Block Support",
-      "Elementor Widget Integration",
-      "Divi Builder Compatibility",
-      "WPBakery Page Builder Available",
-      "Beaver Builder Module Inclusion",
-      "Bricks Builder Element Access",
+      "Real-Time Preview",
       <>
-        <strong className="bold__list">30+</strong> Pre-built Templates
+        Compatibility with 6+ Builders
+        <span
+          className="info-icon"
+          data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Pro Templates",
-      "Style Editor",
-      "Watermark",
-      "White Label",
-      <>Generated Image Title{ai_icon}</>,
-      <>Generated Image Description{ai_icon}</>,
-      <>Generated Image Caption{ai_icon}</>,
-      <>Generated Image Alt Text{ai_icon}</>,
-      <>WooCommerce Products{woo_icon}</>,
-      "1 Year Pro Support",
+      <>
+        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+      </>,
+      "Template Library",
+      "Retina Compatible",
+      "Lazy Loading",
+      <>
+        AI Automation Tools
+        <span
+          className="info-icon"
+          data-tooltip="Generated Image Title, Description, Caption, and Alt Text"
+        >
+          {ai_icon}
+        </span>
+      </>,
+      <>WooCommerce Gallery{woo_icon}</>,
+      "Posts/Pages Gallery",
+      "Video Gallery",
+      "Custom CSS Editor",
+      "Watermarking",
+      "White Labeling",
+      "24/7 PRO Support",
     ],
   },
 
@@ -79,35 +97,52 @@ const pricingData: { [key: number]: PricingDTO } = {
     text: "For Businesses & Teams Building on WordPress",
     buttonText: "BUY NOW",
     advantages: [
-      "Unlimited Galleries",
-      "Unlimited Users",
       <>
-        Use on <strong className="bold__list">5 Sites</strong>
+        Use on <strong className="bold__list">1 Site</strong>
       </>,
+      "Unlimited Galleries and Images",
       <>
         <strong className="bold__list">9</strong> Gallery Views
+        <span
+          className="info-icon"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Live Demo",
-      "Gutenberg Block Support",
-      "Elementor Widget Integration",
-      "Divi Builder Compatibility",
-      "WPBakery Page Builder Available",
-      "Beaver Builder Module Inclusion",
-      "Bricks Builder Element Access",
+      "Real-Time Preview",
       <>
-        <strong className="bold__list">30+</strong> Pre-built Templates
+        Compatibility with 6+ Builders
+        <span
+          className="info-icon"
+          data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Pro Templates",
-      "Style Editor",
-      "Watermark",
-      "White Label",
-      <>Generated Image Title{ai_icon}</>,
-      <>Generated Image Caption{ai_icon}</>,
-      <>Generated Image Description{ai_icon}</>,
-      <>Generated Image Alt Text{ai_icon}</>,
-      <>WooCommerce Products{woo_icon}</>,
-      "1 Year Pro Support",
-      "1 Year Customizations",
+      <>
+        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+      </>,
+      "Template Library",
+      "Retina Compatible",
+      "Lazy Loading",
+      <>
+        AI Automation Tools
+        <span
+          className="info-icon"
+          data-tooltip="Generated Image Title, Description, Caption, and Alt Text"
+        >
+          {ai_icon}
+        </span>
+      </>,
+      <>WooCommerce Gallery{woo_icon}</>,
+      "Posts/Pages Gallery",
+      "Video Gallery",
+      "Custom CSS Editor",
+      "Watermarking",
+      "White Labeling",
+      "24/7 PRO Support",
+      "Advanced Customization",
     ],
   },
   4: {
@@ -120,35 +155,52 @@ const pricingData: { [key: number]: PricingDTO } = {
     text: "For WordPress Agencies & Enterprise Users",
     buttonText: "BUY NOW",
     advantages: [
-      "Unlimited Galleries",
-      "Unlimited Users",
       <>
-        Use on <strong className="bold__list">25 Sites</strong>
+        Use on <strong className="bold__list">1 Site</strong>
       </>,
+      "Unlimited Galleries and Images",
       <>
         <strong className="bold__list">9</strong> Gallery Views
+        <span
+          className="info-icon"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Live Demo",
-      "Gutenberg Block Support",
-      "Elementor Widget Integration",
-      "Divi Builder Compatibility",
-      "WPBakery Page Builder Available",
-      "Beaver Builder Module Inclusion",
-      "Bricks Builder Element Access",
+      "Real-Time Preview",
       <>
-        <strong className="bold__list">30+</strong> Pre-built Templates
+        Compatibility with 6+ Builders
+        <span
+          className="info-icon"
+          data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
+        >
+          {info_icon}
+        </span>
       </>,
-      "Pro Templates",
-      "Style Editor",
-      "Watermark",
-      "White Label",
-      <>Generated Image Title{ai_icon}</>,
-      <>Generated Image Caption{ai_icon}</>,
-      <>Generated Image Description{ai_icon}</>,
-      <>Generated Image Alt Text{ai_icon}</>,
-      <>WooCommerce Products{woo_icon}</>,
-      "1 Year Pro Support",
-      "1 Year Customizations",
+      <>
+        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+      </>,
+      "Template Library",
+      "Retina Compatible",
+      "Lazy Loading",
+      <>
+        AI Automation Tools
+        <span
+          className="info-icon"
+          data-tooltip="Generated Image Title, Description, Caption, and Alt Text"
+        >
+          {ai_icon}
+        </span>
+      </>,
+      <>WooCommerce Gallery{woo_icon}</>,
+      "Posts/Pages Gallery",
+      "Video Gallery",
+      "Custom CSS Editor",
+      "Watermarking",
+      "White Labeling",
+      "24/7 PRO Support",
+      "Advanced Customization",
     ],
   },
 };
