@@ -32,7 +32,7 @@ const Demo: React.FC = () => {
   }, [selecteIdFromMenu]);
 
   return (
-    <section ref={sectionRef} id="gallery_views">
+    <section ref={sectionRef} id="gallery_layouts">
       <Container>
         <Row>
           <div className="demo_columns_content">
