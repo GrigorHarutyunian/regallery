@@ -1,6 +1,6 @@
-import builderMp4_1 from "../../assets/mp4s/builder_940_1.mp4";
-import builderMp4_2 from "../../assets/mp4s/builder_940_2.mp4";
-import builderMp4_3 from "../../assets/mp4s/builder_940_3.mp4";
+import builderMp4_1 from "../../assets/sections/builder_940_1.mp4";
+import builderMp4_2 from "../../assets/sections/builder_940_2.mp4";
+import builderMp4_3 from "../../assets/sections/builder_940_3.mp4";
 
 const builderData = {
   title: "Landing Page Builder",

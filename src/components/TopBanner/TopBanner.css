@@ -56,7 +56,7 @@
     align-items: center;
   }
   a {
-    color: #000000;
+    color: #2540cc;
     text-decoration: underline;
     transition: all 0.3s;
     &:hover {

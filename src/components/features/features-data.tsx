@@ -16,7 +16,7 @@ export const featuresData = [
     ),
   },
   {
-    title: "Pre-Designed Layouts",
+    title: "Pre-Designed Templates",
     description:
       "Create eye-catching galleries in seconds. Choose from professionally designed templates that adapt to your content, style, and layout needs - no design skills required.",
     path: (
@@ -32,7 +32,7 @@ export const featuresData = [
   {
     title: "Built-in Landing Page Builder",
     description:
-      "Easily create beautiful, responsive landing pages right inside WordPress. Re Gallery’s built-in landing page builder lets you design galleries, portfolios, and products with drag-and-drop simplicity and Pre-Designed Layouts. No coding required. Perfect for WordPress users who want visually stunning pages that engage visitors and highlight their content.",
+      "Easily create beautiful, responsive landing pages right inside WordPress. Re Gallery’s built-in landing page builder lets you design galleries, portfolios, and products with drag-and-drop simplicity and Pre-Designed Templates. No coding required. Perfect for WordPress users who want visually stunning pages that engage visitors and highlight their content.",
     path: (
       <path d="m3 5.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zm5.5 1.5c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm15.5-1v12c0 2.757-2.243 5-5 5h-14c-2.757 0-5-2.243-5-5v-12c0-2.757 2.243-5 5-5h14c2.757 0 5 2.243 5 5zm-15 10v5h6v-5zm13-2v-4h-20v4zm-20-8v2h20v-2c0-1.654-1.346-3-3-3h-14c-1.654 0-3 1.346-3 3zm3 15h2v-5h-5v2c0 1.654 1.346 3 3 3zm17-3v-2h-5v5h2c1.654 0 3-1.346 3-3z" />
     ),

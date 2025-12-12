@@ -26,7 +26,7 @@ const interactiveAiIconData = [
       external: true,
     },
     {
-      title: "Re Gallery Demo",
+      title: "Gallery Demo",
       path: "https://regallery.team/core/demo/",
       svgPath: (
         <g

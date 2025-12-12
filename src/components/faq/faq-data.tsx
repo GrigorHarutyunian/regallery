@@ -175,15 +175,15 @@ export const faqData = [
   },
   {
     title:
-      "What are Pro Pre-Designed Layouts in Re Gallery photo gallery plugin?",
+      "What are Pro Pre-Designed Templates in Re Gallery photo gallery plugin?",
     description: (
       <>
-        <b>Pro Pre-Designed Layouts</b> are professionally designed, ready-to-use
-        gallery templates included in the premium plans of the Re Gallery
-        plugin. These templates allow you to quickly create stunning, responsive
-        photo galleries with customizable layouts, hover effects, and lightbox
-        features. They save you time and work perfectly with popular WordPress
-        page builders.
+        <b>Pro Pre-Designed Templates</b> are professionally designed,
+        ready-to-use gallery templates included in the premium plans of the Re
+        Gallery plugin. These templates allow you to quickly create stunning,
+        responsive photo galleries with customizable layouts, hover effects, and
+        lightbox features. They save you time and work perfectly with popular
+        WordPress page builders.
       </>
     ),
     panelId: "panel11",
@@ -215,7 +215,7 @@ export const faqData = [
           WooCommerce photo gallery integration, AI-generated image captions,
           customizable gallery layouts,
         </b>{" "}
-        and access to <b>Pro Pre-Designed Layouts</b>. Plans vary based on the
+        and access to <b>Pro Pre-Designed Templates</b>. Plans vary based on the
         number of sites and include options for annual subscriptions.
       </>
     ),

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import heroMp4 from "../../assets/mp4s/first_section_940.mp4";
+import heroMp4 from "../../assets/sections/first_section_940.mp4";
 import "./Hero.css";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 

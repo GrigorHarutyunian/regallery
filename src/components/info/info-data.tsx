@@ -1,4 +1,4 @@
-import infoMp4 from "../../assets/mp4s/Second_section_940.mp4";
+import infoMp4 from "../../assets/sections/Second_section_940.mp4";
 const infoData = {
   title: "Why Choose the Re Gallery plugin?",
   text: (
