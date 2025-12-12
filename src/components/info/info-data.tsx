@@ -4,11 +4,11 @@ const infoData = {
   text: (
     <>
       Create stunning WordPress photo galleries in minutes. Choose from <b>9</b>{" "}
-      beautiful, fully customizable AI-powered layouts, explore pre-built
+      beautiful, fully customizable AI-powered layouts, explore pre-designed
       templates, and even <b>build landing pages</b> right inside the plugin.
-      With our interactive <b>Live Demo</b>, you can experiment with every
-      setting and see instant results, making it simple, fast, and fun to design
-      responsive galleries that make your website shine.
+      With our interactive <b>Real-Time Preview</b>, you can experiment with
+      every setting and see instant results, making it simple, fast, and fun to
+      design responsive galleries that make your website shine.
     </>
   ),
   video: infoMp4,

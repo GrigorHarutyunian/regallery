@@ -44,7 +44,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       </>,
       "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Views
+        <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
@@ -54,7 +54,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       </>,
       "Real-Time Preview",
       <>
-        Compatibility with 6+ Builders
+        Compatibility with 6 Builders
         <span
           className="info-icon"
           data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
@@ -63,9 +63,9 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>
-        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+        <strong className="bold__list">40+</strong> Pre-Designed Templates
       </>,
-      "Template Library",
+      "Templates Library",
       "Retina Compatible",
       "Lazy Loading",
       <>
@@ -98,11 +98,11 @@ const pricingData: { [key: number]: PricingDTO } = {
     buttonText: "BUY NOW",
     advantages: [
       <>
-        Use on <strong className="bold__list">1 Site</strong>
+        Use on <strong className="bold__list">5 Sites</strong>
       </>,
       "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Views
+        <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
@@ -112,7 +112,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       </>,
       "Real-Time Preview",
       <>
-        Compatibility with 6+ Builders
+        Compatibility with 6 Builders
         <span
           className="info-icon"
           data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
@@ -121,9 +121,9 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>
-        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+        <strong className="bold__list">40+</strong> Pre-Designed Templates
       </>,
-      "Template Library",
+      "Templates Library",
       "Retina Compatible",
       "Lazy Loading",
       <>
@@ -156,11 +156,11 @@ const pricingData: { [key: number]: PricingDTO } = {
     buttonText: "BUY NOW",
     advantages: [
       <>
-        Use on <strong className="bold__list">1 Site</strong>
+        Use on <strong className="bold__list">25 Sites</strong>
       </>,
       "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Views
+        <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
@@ -170,7 +170,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       </>,
       "Real-Time Preview",
       <>
-        Compatibility with 6+ Builders
+        Compatibility with 6 Builders
         <span
           className="info-icon"
           data-tooltip="Gutenberg, Elementor, Divi Builder, WPBakery Page Builder, Beaver Builder, and Bricks Builder"
@@ -179,9 +179,9 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>
-        <strong className="bold__list">40+</strong> Pre-Designed Layouts
+        <strong className="bold__list">40+</strong> Pre-Designed Templates
       </>,
-      "Template Library",
+      "Templates Library",
       "Retina Compatible",
       "Lazy Loading",
       <>

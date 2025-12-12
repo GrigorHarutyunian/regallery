@@ -21,8 +21,8 @@ const TopBanner: React.FC = () => {
     </>
   ) : (
     <>
-      Unlimited access to the <b>Pre-Designed Layouts</b>, <b>AI tools</b>.{" "}
-      <a href="#pricing">Get for less than $2.5/month</a>
+      Unlimited access to the <b>Pre-Designed Templates</b>, <b>AI tools</b>.{" "}
+      <a href="#pricing">Less than $2.5/month</a>
     </>
   );
   const [topBannerOpen, setTopBannerOpen] = useState<boolean>(
