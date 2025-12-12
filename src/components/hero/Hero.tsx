@@ -34,7 +34,8 @@ const Hero: React.FC = () => {
               </h1>
               <p className="section-text__body">
                 Re Gallery helps you build responsive photo galleries in
-                minutes, with <b>Pre-Designed Layouts, AI-powered tools,</b> and{" "}
+                minutes, with{" "}
+                <b>Pre-Designed Templates, AI Automation Tools,</b> and{" "}
                 <b>full WordPress integration</b>: No coding required!
               </p>
               {version === "mobile" && (
