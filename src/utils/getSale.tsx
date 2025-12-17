@@ -4,10 +4,10 @@ import blackFridayDesktop from "../assets/sale/Black Friday.webp";
 import blackFridayMobile from "../assets/sale/Black Friday Portrait.webp";
 import cyberMondayDesktop from "../assets/sale/Cyber Monday.webp";
 import cyberMondayMobile from "../assets/sale/Cyber Monday Portrait.webp";
-import christmasSale1Desktop from "../assets/sale/Christmas Sale1.png";
-import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.png";
-import christmasSale2Desktop from "../assets/sale/Christmas Sale2.png";
-import christmasSale2Mobile from "../assets/sale/Christmas Sale2 Portrait.png";
+import christmasSale1Desktop from "../assets/sale/Christmas Sale1.webp";
+import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.webp";
+import christmasSale2Desktop from "../assets/sale/Christmas Sale2.webp";
+import christmasSale2Mobile from "../assets/sale/Christmas Sale2 Portrait.webp";
 // Dynamic discount utility based on Pacific Time windows.
 
 // PST is UTC-8 for these dates (standard time).
@@ -36,7 +36,7 @@ const bfPhase2EndUtc = pstToUtcTimestamp(2025, 11, 30, 23, 59, 59);
 const bfPhase3StartUtc = pstToUtcTimestamp(2025, 12, 1, 0, 0, 0);
 const bfPhase3EndUtc = pstToUtcTimestamp(2025, 12, 7, 23, 59, 59);
 
-const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 16, 0, 0, 0);
+const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 19, 0, 0, 0);
 const csPhase1EndUtc = pstToUtcTimestamp(2025, 12, 23, 23, 59, 59);
 
 const csPhase2StartUtc = pstToUtcTimestamp(2025, 12, 24, 0, 0, 0);
