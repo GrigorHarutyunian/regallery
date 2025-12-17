@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getCurrentDiscount } from "../../utils/getCurrentDiscount";
+import { getSale } from "../../utils/getSale";
 import PricingDTO from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
@@ -18,7 +18,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   if (typeof discount === "undefined") {
-    discount = getCurrentDiscount();
+    discount = getSale()?.discount;
   }
   var discountedPrice = discount
     ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100

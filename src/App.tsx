@@ -21,7 +21,7 @@ import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
-import BlackFridayBanner from "./components/black-friday-banner/BlackFridayBanner";
+import Sale from "./components/sale-banner/SaleBanner";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -110,7 +110,7 @@ const App: React.FC = () => {
           </main>
           <Footer />
           <ProVersionActivator />
-          <BlackFridayBanner />
+          <Sale />
         </ProVersionActivatorProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
