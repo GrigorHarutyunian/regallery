@@ -64,8 +64,8 @@ export const viewsData = [
   },
   {
     id: 4,
-    title: "Slideshow",
-    demoLink: "https://regallery.team/core/slideshow/",
+    title: "Slider",
+    demoLink: "https://regallery.team/core/slider/",
     img: slideShowImg,
     description:
       "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content. The layout is clean and organized.",

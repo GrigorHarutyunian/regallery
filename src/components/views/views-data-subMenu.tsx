@@ -259,11 +259,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
   },
   {
     id: 4,
-    title: "Slideshow",
+    title: "Slider",
     imgUrl: SlideShowGeneralImg,
     idView: 624,
     description:
-      "The Slideshow view  provides a seamless, full-screen image viewing experience , perfect for displaying high-quality images. Ideal for photographers, artists, and businesses to show products.",
+      "The Slider view  provides a seamless, full-screen image viewing experience, perfect for displaying high-quality images. Ideal for photographers, artists, and businesses to show products.",
     svgPath: (
       <>
         <path

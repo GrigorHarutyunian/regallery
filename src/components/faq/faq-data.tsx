@@ -57,7 +57,7 @@ export const faqData = [
         like{" "}
         <b>
           Mosaic, Justified, Masonry, Grid, Cards, Carousel, Cube, Blog and
-          Slideshow
+          Slider
         </b>{" "}
         are designed to be fully responsive, making Re Gallery perfect for
         creating mobile-friendly WordPress sites.
@@ -126,7 +126,7 @@ export const faqData = [
         </b>{" "}
         such as{" "}
         <b>
-          Masonry, Mosaic, Justified, Grid, Carousel, Cards, Slideshow, Blog and
+          Masonry, Mosaic, Justified, Grid, Carousel, Cards, Slider, Blog and
           Cube.
         </b>{" "}
         These tools help make your product galleries more engaging,{" "}
@@ -144,7 +144,7 @@ export const faqData = [
       <>
         Re Gallery supports multiple gallery layouts including{" "}
         <b>
-          Mosaic, Grid, Masonry, Justified, Carousel, Slideshow, Cube, Blog and
+          Mosaic, Grid, Masonry, Justified, Carousel, Slider, Cube, Blog and
           Cards layouts
         </b>
         . All views are fully responsive and mobile-optimized. Besides these

@@ -47,7 +47,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
         >
           {info_icon}
         </span>
@@ -105,7 +105,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
         >
           {info_icon}
         </span>
@@ -163,7 +163,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         <strong className="bold__list">9</strong> Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slideshow, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
         >
           {info_icon}
         </span>
