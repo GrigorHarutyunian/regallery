@@ -18,7 +18,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   href,
 }) => {
   if (typeof discount === "undefined") {
-    discount = getSale()?.discount;
+    discount = getSale()?.couponCode ? 0 : getSale()?.discount;
   }
   var discountedPrice = discount
     ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100

@@ -8,13 +8,8 @@ import "./TopBanner.css";
 const TopBanner: React.FC = () => {
   const sale = getSale();
   const inverse = sale?.discount !== undefined;
-  const topBannerText = sale?.discount ? (
-    <>
-      <a href="#pricing">
-        <b>{sale.discount}% OFF</b> Re Gallery all Pro features
-        {sale.label ? ` - ${sale.label}!` : ""}
-      </a>
-    </>
+  const topBannerText = sale?.message ? (
+    <>{sale.message}</>
   ) : (
     <>
       Unlimited access to the <b>Pre-Designed Templates</b>, <b>AI tools</b>.{" "}

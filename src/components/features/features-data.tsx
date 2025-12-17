@@ -1,5 +1,6 @@
 export const featuresData = [
   {
+    id: 1,
     title: "Generative AI Captions",
     description:
       "Let AI do the talking. Automatically generate smart, engaging captions, including titles, image descriptions, and alt text, based on visual content or metadata. No writing needed. Ideal for galleries that need to tell a story or sell a vibe.",
@@ -8,6 +9,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 2,
     title: "WooCommerce Products Gallery",
     description:
       "Show off your WooCommerce products in beautiful, fully responsive galleries on your WordPress site. Re Gallery automatically pulls product images, titles, and prices, so you can create visually stunning galleries that attract visitors, highlight your products, and boost sales without any extra work.",
@@ -16,6 +18,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 3,
     title: "Pre-Designed Templates",
     description:
       "Create eye-catching galleries in seconds. Choose from professionally designed templates that adapt to your content, style, and layout needs - no design skills required.",
@@ -30,6 +33,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 4,
     title: "Built-in Landing Page Builder",
     description:
       "Easily create beautiful, responsive landing pages right inside WordPress. Re Gallery’s built-in landing page builder lets you design galleries, portfolios, and products with drag-and-drop simplicity and Pre-Designed Templates. No coding required. Perfect for WordPress users who want visually stunning pages that engage visitors and highlight their content.",
@@ -38,6 +42,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 5,
     title: "Watermark Protection",
     description:
       "Protect your images with Re Gallery’s built-in watermark feature. Add logo or any image based watermark to your galleries directly in WordPress to safeguard your photos while keeping them looking professional. Perfect for photographers, artists, and anyone showcasing original content online.",
@@ -46,6 +51,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 6,
     title: "Interactive Real-Time Preview",
     description:
       "Try out our Real-Time Preview to see instant updates as you adjust settings, making sure your gallery looks its best.",
@@ -57,6 +63,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 7,
     title: "A user-friendly interface",
     description:
       "The plugin’s UX/UI design closely aligns with WordPress, making it incredibly intuitive and easy to use. Enjoy a user-friendly dashboard within the WordPress admin interface, carefully crafted for maximum efficiency and ease of use.",
@@ -65,6 +72,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 8,
     title: "Creating has never been so easy",
     description:
       "Discover how creating stunning websites has never been so easy with our intuitive tools and user-friendly interface. Manage your entire gallery easily with our all-in-one solution designed for smooth and efficient gallery management.",
@@ -73,6 +81,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 9,
     title: "Integration with Page builders",
     description:
       "Smoothly add your gallery to any page builder with our blocks and modules. Customize and integrate your gallery for a streamlined design experience within minutes.",
@@ -81,6 +90,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 10,
     title: "Powered by React.js",
     description:
       "Enjoy rapid, responsive updates and a smooth user experience with our cutting-edge REACT frontend framework.",
@@ -89,6 +99,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 11,
     title: "Ultra-Lightweight Design",
     description:
       "We engineered our plugin for lightning-fast performance, significantly reducing load times and boosting the overall user experience. Enjoy a seamless, efficient, and engaging website that keeps your visitors satisfied.",
@@ -97,6 +108,7 @@ export const featuresData = [
     ),
   },
   {
+    id: 12,
     title: "Custom CSS Panel",
     description:
       "Take full control of your gallery’s design with Re Gallery’s built-in Custom CSS panel. Easily add your own styles to tweak layouts, colors, fonts, and spacing. Perfect for WordPress developers, agencies, and anyone who wants unique photo galleries that match their website’s branding.",

@@ -30,24 +30,49 @@ const SaleBanner: React.FC = () => {
     localStorage.setItem(sales.key, "true");
   };
 
+  const [copiedMessage, setCopiedMessage] = useState<string | null>(null);
+
+  const handleClick = async (e: React.MouseEvent) => {
+    // prevent overlay click from closing the banner
+    e.stopPropagation();
+    if (!sales || !sales.couponCode) {
+      handleClose();
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(sales.couponCode);
+      setCopiedMessage(`Coupon code "${sales.couponCode}" copied`);
+      // hide message after 2.6s
+      setTimeout(() => setCopiedMessage(null), 2600);
+    } catch (err) {
+      setCopiedMessage("Failed to copy coupon code");
+      setTimeout(() => setCopiedMessage(null), 2600);
+    }
+  };
+
   if (!isVisible || !sales) return null;
 
   return (
-    <div className="black-friday-overlay" onClick={handleClose}>
-      <div className="black-friday-banner">
+    <div className="sale-overlay" onClick={handleClose}>
+      <div className="sale-banner" onClick={(e) => e.stopPropagation()}>
         <button
-          className="black-friday-close-btn"
+          className="sale-close-btn"
           onClick={handleClose}
           aria-label="Close"
         >
           ×
         </button>
-        <picture>
+        {copiedMessage && (
+          <div className="sale-tooltip" role="status">
+            {copiedMessage}
+          </div>
+        )}
+        <picture onClick={handleClick}>
           <source srcSet={sales.mobile} media="(max-width: 560px)" />
           <img
             src={sales.desktop}
             alt={sales.label}
-            className="black-friday-image"
+            className="sale-image"
             loading="lazy"
           />
         </picture>
