@@ -36,7 +36,7 @@ const bfPhase2EndUtc = pstToUtcTimestamp(2025, 11, 30, 23, 59, 59);
 const bfPhase3StartUtc = pstToUtcTimestamp(2025, 12, 1, 0, 0, 0);
 const bfPhase3EndUtc = pstToUtcTimestamp(2025, 12, 7, 23, 59, 59);
 
-const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 19, 0, 0, 0);
+const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 16, 0, 0, 0);
 const csPhase1EndUtc = pstToUtcTimestamp(2025, 12, 23, 23, 59, 59);
 
 const csPhase2StartUtc = pstToUtcTimestamp(2025, 12, 24, 0, 0, 0);
