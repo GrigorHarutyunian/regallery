@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getDiscountLabel } from "../../utils/getCurrentDiscount";
+import { getDiscountLabel } from "../../utils/getSale";
 import blackFridayEarlyAccessDesktop from "../../assets/Black Friday Early Access.webp";
 import blackFridayEarlyAccessMobile from "../../assets/Black Friday Early Access Portrait.webp";
 import blackFridayDesktop from "../../assets/Black Friday.webp";

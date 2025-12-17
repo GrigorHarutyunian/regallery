@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import interactiveAiIconData from "./interactive-ai-icon-data";
 import "./InteractiveAIIcon.css";
 import { Popover } from "@mui/material";
+import { getSale } from "../../utils/getSale";
 const InteractiveAIIcon: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [popoverKey, setPopoverKey] = useState(0);
@@ -16,7 +17,9 @@ const InteractiveAIIcon: React.FC = () => {
   };
 
   useEffect(() => {
-    const hasOpened = localStorage.getItem("aiPopoverOpened");
+    const hasOpened = getSale()
+      ? true
+      : localStorage.getItem("aiPopoverOpened");
     if (!hasOpened) {
       const timer = setTimeout(() => {
         if (aiIconRef.current) {

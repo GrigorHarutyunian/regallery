@@ -1,24 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import {
-  getCurrentDiscount,
-  getDiscountLabel,
-} from "../../utils/getCurrentDiscount";
+import { getSale } from "../../utils/getSale";
 
 import "./TopBanner.css";
 
 const TopBanner: React.FC = () => {
-  const discount = getCurrentDiscount();
-  const inverse = discount !== undefined;
-  const discountLabel = getDiscountLabel();
-  const topBannerText = discount ? (
-    <>
-      <a href="#pricing">
-        <b>{discount}% OFF</b> Re Gallery all Pro features
-        {discountLabel ? ` - ${discountLabel}!` : ""}
-      </a>
-    </>
+  const sale = getSale();
+  const inverse = sale?.discount !== undefined;
+  const topBannerText = sale?.message ? (
+    <>{sale.message}</>
   ) : (
     <>
       Unlimited access to the <b>Pre-Designed Templates</b>, <b>AI tools</b>.{" "}

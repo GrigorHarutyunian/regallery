@@ -1,4 +1,4 @@
-.black-friday-overlay {
+.sale-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.black-friday-banner {
+.sale-banner {
   max-width: min(800px, 90vw);
   max-height: 90vh;
   display: flex;
@@ -23,7 +23,7 @@
   position: relative;
 }
 
-.black-friday-close-btn {
+.sale-close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -44,12 +44,50 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.black-friday-image {
+.sale-image {
   max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.sale-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.92);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 10002;
+  animation: saleTooltipInOut 2.6s ease forwards;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: 90vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes saleTooltipInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
 }
 
 @keyframes fadeIn {
@@ -73,12 +111,12 @@
 }
 
 @media (max-width: 560px) {
-  .black-friday-banner {
+  .sale-banner {
     max-width: 95vw;
     max-height: 95vh;
   }
 
-  .black-friday-close-btn {
+  .sale-close-btn {
     width: 35px;
     height: 35px;
     font-size: 35px;
@@ -86,7 +124,7 @@
     right: 5px;
   }
 
-  .black-friday-image {
+  .sale-image {
     max-height: 95vh;
   }
 }
