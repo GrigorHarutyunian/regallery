@@ -7,7 +7,7 @@ const SaleBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sales = getSale();
 
-  const bannerTime = 5; // Time in seconds before showing the banner.
+  const bannerTime = 4; // Time in seconds before showing the banner.
 
   useEffect(() => {
     // Don't show banner if no active discount phase

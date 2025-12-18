@@ -1,9 +1,9 @@
-import blackFridayEarlyAccessDesktop from "../assets/sale/Black Friday Early Access.webp";
-import blackFridayEarlyAccessMobile from "../assets/sale/Black Friday Early Access Portrait.webp";
-import blackFridayDesktop from "../assets/sale/Black Friday.webp";
-import blackFridayMobile from "../assets/sale/Black Friday Portrait.webp";
-import cyberMondayDesktop from "../assets/sale/Cyber Monday.webp";
-import cyberMondayMobile from "../assets/sale/Cyber Monday Portrait.webp";
+// import blackFridayEarlyAccessDesktop from "../assets/sale/Black Friday Early Access.webp";
+// import blackFridayEarlyAccessMobile from "../assets/sale/Black Friday Early Access Portrait.webp";
+// import blackFridayDesktop from "../assets/sale/Black Friday.webp";
+// import blackFridayMobile from "../assets/sale/Black Friday Portrait.webp";
+// import cyberMondayDesktop from "../assets/sale/Cyber Monday.webp";
+// import cyberMondayMobile from "../assets/sale/Cyber Monday Portrait.webp";
 import christmasSale1Desktop from "../assets/sale/Christmas Sale1.webp";
 import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.webp";
 import christmasSale2Desktop from "../assets/sale/Christmas Sale2.webp";
@@ -36,10 +36,10 @@ const bfPhase2EndUtc = pstToUtcTimestamp(2025, 11, 30, 23, 59, 59);
 const bfPhase3StartUtc = pstToUtcTimestamp(2025, 12, 1, 0, 0, 0);
 const bfPhase3EndUtc = pstToUtcTimestamp(2025, 12, 7, 23, 59, 59);
 
-const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 16, 0, 0, 0);
-const csPhase1EndUtc = pstToUtcTimestamp(2025, 12, 23, 23, 59, 59);
+const csPhase1StartUtc = pstToUtcTimestamp(2025, 12, 19, 0, 0, 0);
+const csPhase1EndUtc = pstToUtcTimestamp(2025, 12, 23, 22, 59, 59);
 
-const csPhase2StartUtc = pstToUtcTimestamp(2025, 12, 24, 0, 0, 0);
+const csPhase2StartUtc = pstToUtcTimestamp(2025, 12, 23, 0, 0, 0);
 const csPhase2EndUtc = pstToUtcTimestamp(2025, 12, 30, 23, 59, 59);
 
 export function getSaleKey(now: number = Date.now()): number | undefined {
@@ -61,52 +61,52 @@ export function getSale(): {
   key: string;
 } | null {
   switch (getSaleKey()) {
-    case 1:
-      return {
-        discount: 20,
-        label: "Black Friday Early Access",
-        message: (
-          <>
-            <a href="#pricing">
-              <b>20% OFF</b> Re Gallery all Pro features - Black Friday Early
-              Access
-            </a>
-          </>
-        ),
-        desktop: blackFridayEarlyAccessDesktop,
-        mobile: blackFridayEarlyAccessMobile,
-        key: "blackFridayEarlyAccessBannerSeen",
-      };
-    case 2:
-      return {
-        discount: 50,
-        label: "Black Friday",
-        message: (
-          <>
-            <a href="#pricing">
-              <b>50% OFF</b> Re Gallery all Pro features - Black Friday
-            </a>
-          </>
-        ),
-        desktop: blackFridayDesktop,
-        mobile: blackFridayMobile,
-        key: "blackFridayBannerSeen",
-      };
-    case 3:
-      return {
-        discount: 30,
-        label: "Cyber Monday",
-        message: (
-          <>
-            <a href="#pricing">
-              <b>30% OFF</b> Re Gallery all Pro features - Cyber Monday
-            </a>
-          </>
-        ),
-        desktop: cyberMondayDesktop,
-        mobile: cyberMondayMobile,
-        key: "cyberMondayBannerSeen",
-      };
+    // case 1:
+    //   return {
+    //     discount: 20,
+    //     label: "Black Friday Early Access",
+    //     message: (
+    //       <>
+    //         <a href="#pricing">
+    //           <b>20% OFF</b> Re Gallery all Pro features - Black Friday Early
+    //           Access
+    //         </a>
+    //       </>
+    //     ),
+    //     desktop: blackFridayEarlyAccessDesktop,
+    //     mobile: blackFridayEarlyAccessMobile,
+    //     key: "blackFridayEarlyAccessBannerSeen",
+    //   };
+    // case 2:
+    //   return {
+    //     discount: 50,
+    //     label: "Black Friday",
+    //     message: (
+    //       <>
+    //         <a href="#pricing">
+    //           <b>50% OFF</b> Re Gallery all Pro features - Black Friday
+    //         </a>
+    //       </>
+    //     ),
+    //     desktop: blackFridayDesktop,
+    //     mobile: blackFridayMobile,
+    //     key: "blackFridayBannerSeen",
+    //   };
+    // case 3:
+    //   return {
+    //     discount: 30,
+    //     label: "Cyber Monday",
+    //     message: (
+    //       <>
+    //         <a href="#pricing">
+    //           <b>30% OFF</b> Re Gallery all Pro features - Cyber Monday
+    //         </a>
+    //       </>
+    //     ),
+    //     desktop: cyberMondayDesktop,
+    //     mobile: cyberMondayMobile,
+    //     key: "cyberMondayBannerSeen",
+    //   };
     case 4:
       return {
         discount: 50,
