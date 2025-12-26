@@ -1,6 +1,4 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
 
 interface IProVersionActivatorProviderProps {
   children: ReactNode;
@@ -13,17 +11,6 @@ interface IProVersionActivatorContextValue {
   planID: number;
   openStripeCheckout: (planID: number) => Promise<void>;
 }
-
-const initialPaypalOptions: PayPalScriptOptions = {
-  // clientId: "AVwxVkMOTRkixoaT2d2QCzMHbj5Fr6Ov7t0NkFHoz4OQqmYgF1lqyykS7noCTa3zTAYkRYchtGO6Cuhb", // sandbox
-  clientId:
-    "ASloPHOXR7iImLFSfgyaHevQQmf4iL2U8DLynt-uE0VHLjyGkuFBhzowxbLI02EbewiXOFCR6zfSVFtP", // prod
-  currency: "USD",
-  vault: true,
-  intent: "subscription",
-  // environment: "sandbox", // sandbox
-  environment: "production", // prod
-};
 
 const ProVersionActivatorContext = createContext<
   IProVersionActivatorContextValue | undefined
@@ -84,9 +71,7 @@ export const ProVersionActivatorProvider: React.FC<
         openStripeCheckout,
       }}
     >
-      <PayPalScriptProvider options={initialPaypalOptions}>
-        {children}
-      </PayPalScriptProvider>
+      {children}
     </ProVersionActivatorContext.Provider>
   );
 };
