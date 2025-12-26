@@ -81,13 +81,13 @@
 .inverse {
   .nav-banner-content {
     background-color: #8ea96e;
-    color: #2f3f1f;
+    color: #000000;
     a {
-      color: #2f3f1f;
+      color: #000000;
       text-decoration: none;
     }
   }
   .banner-icon path {
-    fill: #2f3f1f;
+    fill: #000000;
   }
 }
