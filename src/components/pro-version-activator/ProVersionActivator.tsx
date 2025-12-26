@@ -9,10 +9,8 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 
 const ProVersionActivator: React.FC = () => {
-  const { isPaymentModalOpen, closePaymentModal, planID, openPaymentModal } =
+  const { isPaymentModalOpen, closePaymentModal, openPaymentModal } =
     useProVersionActivatorContext();
-  const [email, setEmail] = useState<string>("");
-  const [isEmailInvalid, setIsEmailInvalid] = useState<boolean>(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [successMessage, setSuccessMessage] = useState<string | undefined>(
     undefined
@@ -44,21 +42,9 @@ const ProVersionActivator: React.FC = () => {
   }, [isPaymentModalOpen, openPaymentModal]);
 
   const onDialogClosed = useCallback(() => {
-    setEmail("");
-    setIsEmailInvalid(false);
     setStatus("idle");
     setSuccessMessage(undefined);
     setErrorMessage(undefined);
-  }, []);
-
-  const onPaymentSuccess = useCallback((successMessage: string) => {
-    setStatus("success");
-    setSuccessMessage(successMessage);
-  }, []);
-
-  const onPaymentError = useCallback((errorMessage: string) => {
-    setStatus("error");
-    setErrorMessage(errorMessage);
   }, []);
 
   return (
@@ -120,17 +106,6 @@ const ProVersionActivator: React.FC = () => {
                 <p>{errorMessage}</p>
               </div>
             )}
-            {/* {status === "idle" && (
-              <PaymentContent
-                email={email}
-                setEmail={setEmail}
-                isEmailInvalid={isEmailInvalid}
-                setIsEmailInvalid={setIsEmailInvalid}
-                planID={planID}
-                handleSuccess={onPaymentSuccess}
-                handleError={onPaymentError}
-              />
-            )} */}
           </div>
         </div>
       </Fade>
