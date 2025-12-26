@@ -4,7 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Backdrop from "@mui/material/Backdrop";
-import PaymentContent from "./components/payment-content/PaymentContent";
 import "./proVersionActivator.css";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
@@ -121,7 +120,7 @@ const ProVersionActivator: React.FC = () => {
                 <p>{errorMessage}</p>
               </div>
             )}
-            {status === "idle" && (
+            {/* {status === "idle" && (
               <PaymentContent
                 email={email}
                 setEmail={setEmail}
@@ -131,7 +130,7 @@ const ProVersionActivator: React.FC = () => {
                 handleSuccess={onPaymentSuccess}
                 handleError={onPaymentError}
               />
-            )}
+            )} */}
           </div>
         </div>
       </Fade>
