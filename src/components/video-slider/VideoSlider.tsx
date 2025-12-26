@@ -69,7 +69,7 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
       </div>
       <div className="slider-dots">
         {videos.map((_, index) => (
-          <button
+          <span
             key={index}
             className={`dot ${index === currentVideoIndex ? "active" : ""}`}
             onClick={() => handleSlideChange(index)}

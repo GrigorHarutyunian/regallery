@@ -135,7 +135,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     currency: "$",
     planType: "monthly",
     // duration: "1 Year",
-    text: "For WordPress Agencies & Enterprise Users",
+    text: "For Agencies Managing Multiple WordPress Sites",
     buttonText: "BUY NOW",
     advantages: [
       <>

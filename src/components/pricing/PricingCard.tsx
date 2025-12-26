@@ -61,7 +61,7 @@ const PricingCard: React.FC<PricingDTO> = ({
         <div className="pricing-card__popular-badge">Most Popular</div>
       ) : null}
       <div className="pricing-card__header text-start">
-        <h5 className="pricing-card__subtitle">{title}</h5>
+        <div className="pricing-card__subtitle">{title}</div>
         <p className="section-text__desc pricing__text">{text}</p>
         {price === 0 ? (
           <span className="pricing-card__title">Free</span>
