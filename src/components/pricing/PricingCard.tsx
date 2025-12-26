@@ -16,6 +16,7 @@ const PricingCard: React.FC<PricingDTO> = ({
   duration,
   title,
   href,
+  mostPopular,
 }) => {
   if (typeof discount === "undefined") {
     discount = getSale()?.couponCode ? 0 : getSale()?.discount;
@@ -53,9 +54,15 @@ const PricingCard: React.FC<PricingDTO> = ({
   };
 
   return (
-    <div className="pricing-card">
-      <div className="pricing-card__header">
-        <span className="pricing-card__subtitle">{title}</span>
+    <div
+      className={`pricing-card ${mostPopular ? "pricing-card__popular" : ""}`}
+    >
+      {mostPopular ? (
+        <div className="pricing-card__popular-badge">Most Popular</div>
+      ) : null}
+      <div className="pricing-card__header text-start">
+        <h5 className="pricing-card__subtitle">{title}</h5>
+        <p className="section-text__desc pricing__text">{text}</p>
         {price === 0 ? (
           <span className="pricing-card__title">Free</span>
         ) : (
@@ -70,9 +77,14 @@ const PricingCard: React.FC<PricingDTO> = ({
             <div className="pricing-card__title">
               {currency ? <span className="currency">{currency}</span> : null}
               {main ? <span>{main}</span> : null}
-              {cents ? <span className="cents"> .{cents}</span> : null}
+              {cents ? <span className="cents">.{cents}</span> : null}
             </div>
-            {planType ? <div className="plan-type">/{planType}</div> : null}
+            {planType ? (
+              <div className="plan-type">
+                Per {planType === "monthly" ? "month" : "year"} / Billed
+                annually
+              </div>
+            ) : null}
             {duration ? (
               <div className="pricing-card__duration">{duration}</div>
             ) : null}
@@ -85,7 +97,6 @@ const PricingCard: React.FC<PricingDTO> = ({
             ) : null}
           </>
         )}
-        <p className="section-text__desc pricing__text">{text}</p>
       </div>
 
       {href ? (

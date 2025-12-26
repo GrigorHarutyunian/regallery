@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 35px;
   justify-items: center;
 }
 .pricing-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -20,51 +20,100 @@
   transition: all 0.5s ease;
   width: 79%;
 }
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.pricing-card__popular {
+  position: relative;
+  --angle: 0deg;
+  --ring-thickness: 1.2px;
+  overflow: visible;
+}
+
+.pricing-card__popular::before {
+  content: "";
+  position: absolute;
+  inset: calc(
+    -1 * var(--ring-thickness)
+  ); /* outer extent, controls ring thickness */
+  border-radius: inherit;
+  background: conic-gradient(from var(--angle), #2540cc, #c251be, #2540cc);
+  z-index: 0;
+  animation: rotate 4s linear infinite;
+  pointer-events: none;
+}
+
+.pricing-card__popular::after {
+  content: "";
+  position: absolute;
+  inset: var(--ring-thickness); /* inner cutout to make the ring */
+  border-radius: calc(15px - var(--ring-thickness));
+  background: #ffffff; /* same as card background */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ensure content and badge are above the ring */
+.pricing-card__popular > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
 .pricing-card:hover {
   box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
   transform: translateY(-5px);
 }
-.pricing-card__header {
-  border-bottom: 2px solid #f4f4f4;
+.pricing-card__popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; /* same as card background to "cut" the border */
+  color: #2540cc; /* blue text */
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 2px solid #2540cc; /* outline so badge matches brand */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  z-index: 3;
 }
+
 .pricing-card__title {
   color: #000000;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
 }
 
 .pricing-card__title > span.currency {
   font-weight: 500;
 }
 
-.pricing-card__title > span.cents {
-  font-size: 25px;
-  vertical-align: top;
-  font-weight: 500;
-}
 .plan-type {
-  vertical-align: bottom;
   font-size: 13px;
-  position: relative;
-  top: -27px;
-  left: 60px;
   font-weight: 400;
 }
+.text-start {
+  text-align: start;
+}
 .pricing-card__subtitle {
-  color: #000000aa;
   font-size: 24px;
-  font-weight: 300;
   display: block;
-  min-height: 1.5em;
-  opacity: 0.6;
+  margin: 0 0 0.5rem 0;
 }
 
 .pricing__text {
-  text-align: center;
   color: #000000aa;
-  height: 67px;
-  max-width: 300px;
-  margin: auto;
+  height: 50px;
+  margin: 0 0 1rem 0;
 }
 .canceled-price {
   min-height: 24px;
@@ -110,7 +159,6 @@
 .pricing-card__features__list {
   margin: 10px 0px;
   color: #000000;
-  font-weight: 300;
   font-size: 17px;
   .ai-icon {
     width: 20px;
@@ -118,7 +166,7 @@
   }
 }
 .bold__list {
-  font-weight: bold;
+  font-weight: 700;
 }
 .pricing-card__btn {
   margin-top: 24px;
@@ -175,17 +223,7 @@
     font-size: 15px;
   }
 }
-@media screen and (min-width: 1125px) {
-  .pricing-card__subtitle {
-    margin-bottom: 19px;
-  }
-}
 
-@media screen and (min-width: 966px) and (max-width: 1160px) {
-  .pricing__text {
-    height: 80px;
-  }
-}
 @media screen and (min-width: 966px) and (max-width: 1125px) {
   .pricing-card__btn {
     font-size: 0.8rem;
@@ -247,8 +285,6 @@
 
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .pricing__text {
-    max-width: 200px;
-    height: 80px;
     font-size: 14px;
   }
   .pricing-card__duration {
@@ -262,13 +298,8 @@
   .pricing-card__title {
     font-size: 35px;
   }
-  .pricing-card__title > span.cents {
-    font-size: 20px;
-  }
   .plan-type {
     font-size: 10px;
-    top: -20px;
-    left: 40px;
   }
   .saved_money_div {
     padding: 4px 10px;
@@ -291,10 +322,6 @@
     max-width: 318px;
     width: 79%;
     padding: 25px;
-  }
-  .pricing__text {
-    margin: auto;
-    height: auto;
   }
 
   .pricing-card__btn {

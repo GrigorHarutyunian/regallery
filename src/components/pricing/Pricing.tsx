@@ -24,6 +24,7 @@ const Pricing: React.FC = () => {
                   duration={val.duration}
                   title={val.title}
                   href={val.href}
+                  mostPopular={val.mostPopular}
                 />
               );
             })}

@@ -10,4 +10,5 @@ export default interface PricingDTO {
   duration?: string;
   title: string;
   href?: string;
+  mostPopular?: boolean;
 }

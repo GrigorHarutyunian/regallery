@@ -42,9 +42,8 @@ const pricingData: { [key: number]: PricingDTO } = {
       <>
         Use on <strong className="bold__list">1 Site</strong>
       </>,
-      "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Layouts
+        9 Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
@@ -52,7 +51,6 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "Real-Time Preview",
       <>
         Compatibility with 6 Builders
         <span
@@ -62,12 +60,8 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      <>
-        <strong className="bold__list">40+</strong> Pre-Designed Templates
-      </>,
+      "40+ Pre-Designed Templates",
       "Templates Library",
-      "Retina Compatible",
-      "Lazy Loading",
       <>
         AI Automation Tools
         <span
@@ -78,9 +72,6 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>WooCommerce Gallery{woo_icon}</>,
-      "Posts/Pages Gallery",
-      "Video Gallery",
-      "Custom CSS Editor",
       "Watermarking",
       "White Labeling",
       "24/7 PRO Support",
@@ -93,6 +84,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     price: 49.99,
     currency: "$",
     planType: "monthly",
+    mostPopular: true,
     // duration: "1 Year",
     text: "For Businesses & Teams Building on WordPress",
     buttonText: "BUY NOW",
@@ -100,9 +92,8 @@ const pricingData: { [key: number]: PricingDTO } = {
       <>
         Use on <strong className="bold__list">5 Sites</strong>
       </>,
-      "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Layouts
+        9 Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
@@ -110,7 +101,6 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "Real-Time Preview",
       <>
         Compatibility with 6 Builders
         <span
@@ -120,12 +110,8 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      <>
-        <strong className="bold__list">40+</strong> Pre-Designed Templates
-      </>,
+      "40+ Pre-Designed Templates",
       "Templates Library",
-      "Retina Compatible",
-      "Lazy Loading",
       <>
         AI Automation Tools
         <span
@@ -136,9 +122,6 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>WooCommerce Gallery{woo_icon}</>,
-      "Posts/Pages Gallery",
-      "Video Gallery",
-      "Custom CSS Editor",
       "Watermarking",
       "White Labeling",
       "24/7 PRO Support",
@@ -158,9 +141,8 @@ const pricingData: { [key: number]: PricingDTO } = {
       <>
         Use on <strong className="bold__list">25 Sites</strong>
       </>,
-      "Unlimited Galleries and Images",
       <>
-        <strong className="bold__list">9</strong> Gallery Layouts
+        9 Gallery Layouts
         <span
           className="info-icon"
           data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
@@ -168,7 +150,6 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "Real-Time Preview",
       <>
         Compatibility with 6 Builders
         <span
@@ -178,12 +159,8 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      <>
-        <strong className="bold__list">40+</strong> Pre-Designed Templates
-      </>,
+      "40+ Pre-Designed Templates",
       "Templates Library",
-      "Retina Compatible",
-      "Lazy Loading",
       <>
         AI Automation Tools
         <span
@@ -194,9 +171,6 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       <>WooCommerce Gallery{woo_icon}</>,
-      "Posts/Pages Gallery",
-      "Video Gallery",
-      "Custom CSS Editor",
       "Watermarking",
       "White Labeling",
       "24/7 PRO Support",

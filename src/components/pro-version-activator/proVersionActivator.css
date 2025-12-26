@@ -49,13 +49,13 @@
   text-align: left;
 }
 .payment__form-wrapper__field-description {
-  color: #6C6C89;
+  color: #6c6c89;
   font-size: 13px;
   padding: 5px 8px 0;
 }
 
 .payment__form-wrapper__terms {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   color: #a3a3a3;
@@ -98,7 +98,6 @@
   border: 1px solid #f5c2c0;
   color: #b71c1c;
 }
-
 
 .pro-version-activator__result_error svg {
   fill: #b71c1c;

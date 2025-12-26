@@ -54,7 +54,6 @@
   padding: 0px 12px;
   color: #ffffff !important;
   font-size: 1.1rem;
-  font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -270,7 +269,7 @@
 }
 
 .sub-menu__item a {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 17px;
   padding-left: 13px;
   display: block;
@@ -314,7 +313,7 @@
   color: #ffffff;
   font-size: 20px;
   margin-bottom: 13px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .sub-menu__item {
@@ -382,11 +381,9 @@
     gap: 10px;
   }
   .dropdown-menu li {
-    font-weight: 300;
     font-size: 17.6px;
   }
   .sub-menu__item a {
-    font-weight: 300;
     font-size: 16px;
   }
   .submenu_lists ul:nth-child(1) {
