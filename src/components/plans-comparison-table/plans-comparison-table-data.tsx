@@ -1,0 +1,558 @@
+import {
+  PlansComparisonTableDTO,
+  IPlansComparisonTableFeatureDTO,
+} from "../../types/PlansComparisonDTO ";
+
+export const plansComparisonTableData: PlansComparisonTableDTO[] = [
+  {
+    id: "free",
+    name: "Free",
+    price: {
+      dollars: "0",
+      cents: ".0",
+      period: "/ year",
+    },
+    url: "",
+  },
+  {
+    id: "basic",
+    name: "Basic",
+    price: {
+      dollars: "29",
+      cents: ".99",
+      period: "/ year",
+    },
+    url: "",
+  },
+  {
+    id: "plus",
+    name: "Plus",
+    badge: "Most Popular",
+    isBest: true,
+    price: {
+      dollars: "49",
+      cents: ".99",
+      period: "/ year",
+    },
+    url: "",
+  },
+  {
+    id: "agency",
+    name: "Agency",
+    price: {
+      dollars: "99",
+      cents: ".99",
+      period: "/ year",
+    },
+    url: "",
+  },
+];
+
+export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "supported-sites",
+    label: "Supported Sites",
+    tooltip: "Number of sites supported across plans",
+    values: ["1 Site", "1 Sites", "5 Sites", "25 Sites"],
+  },
+  {
+    id: "updates",
+    label: "Updates",
+    tooltip:
+      "Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog",
+    values: [true, true, true, true],
+  },
+  {
+    id: "unlimited-galleries",
+    label: "Unlimited Galleries",
+    tooltip: "Unlimited number of galleries",
+    values: [true, true, true, true],
+  },
+  {
+    id: "unlimited-images",
+    label: "Unlimited Images",
+    tooltip: "Unlimited number of galleries",
+    values: [true, true, true, true],
+  },
+  {
+    id: "support",
+    label: "Support on Public Forums",
+    tooltip: "Standard support",
+    values: [true, true, true, true],
+  },
+  {
+    id: "pro-support",
+    label: "24/7 PRO Support",
+    tooltip: "Priority support for urgent issues",
+    values: [false, true, true, true],
+  },
+  {
+    id: "advanced-customization",
+    label: "Advanced Customization",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+];
+
+export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
+  [
+    {
+      id: "layout-grid",
+      label: "Grid",
+      tooltip: "Supports WordPress multisite Grid",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-masonry",
+      label: "Masonry",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-mosaic",
+      label: "Mosaic",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-justified",
+      label: "Justified",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-slider",
+      label: "Slider",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-carousel",
+      label: "Carousel",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-cube",
+      label: "Cube",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-cards",
+      label: "Cards",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+    {
+      id: "layout-blog",
+      label: "Blog",
+      tooltip: "",
+      values: [true, true, true, true],
+    },
+  ];
+
+export const plansComparisonPostsPages: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "posts-manual-selection",
+    label: "Manual Selection",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+  {
+    id: "posts-dynamic-galleries",
+    label: "Dynamic Galleries",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+  {
+    id: "posts-filter-by-posts-pages",
+    label: "Filter by Posts / Pages",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+  {
+    id: "posts-filter-by-taxonomy",
+    label: "Filter by Taxonomy",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+  {
+    id: "posts-exclude-specific",
+    label: "Exclude Specific Posts / Pages",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+  {
+    id: "posts-exclude-without-images",
+    label: "Exclude Posts / Pages without Images",
+    tooltip: "",
+    values: [true, true, true, true],
+  },
+];
+
+export const plansComparisonWooCommerce: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "woo-manual-selection",
+    label: "Manual Selection",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "woo-dynamic-galleries",
+    label: "Dynamic Galleries",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "woo-filter-by-products",
+    label: "Filter by Products",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "woo-filter-by-taxonomy",
+    label: "Filter by Taxonomy",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "woo-exclude-specific-products",
+    label: "Exclude Specific Products",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "woo-exclude-without-images",
+    label: "Exclude Products without Images",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+];
+
+export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "text-title",
+    label: "Title",
+    values: [true, true, true, true],
+  },
+  {
+    id: "text-caption",
+    label: "Caption",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "text-description",
+    label: "Description",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "text-product-price",
+    label: "Product Price",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "text-exif",
+    label: "Image EXIF",
+    values: [true, true, true, true],
+  },
+  {
+    id: "text-author",
+    label: "Author",
+    values: [true, true, true, true],
+  },
+  {
+    id: "text-hover-options",
+    label: "Hover Options",
+    tooltip: "Some hover options are available in Pro and higher plans",
+    values: ["Limited", "Limited", true, true],
+  },
+  {
+    id: "text-blend-mode",
+    label: "Blend Mode",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+];
+
+export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "template-1",
+    label: "Template 1",
+    values: [false, true, true, true],
+  },
+  {
+    id: "template-2",
+    label: "Template 2",
+    values: [false, true, true, true],
+  },
+  {
+    id: "template-3",
+    label: "Template 3",
+    values: [false, false, true, true],
+  },
+  {
+    id: "template-4",
+    label: "Template 4",
+    values: [false, true, true, true],
+  },
+  {
+    id: "template-5",
+    label: "Template 5",
+    values: [false, false, true, true],
+  },
+  {
+    id: "template-6",
+    label: "Template 6",
+    values: [false, true, true, true],
+  },
+  {
+    id: "template-7",
+    label: "Template 7",
+    values: [false, true, true, true],
+  },
+  {
+    id: "template-8",
+    label: "Template 8",
+    values: [false, false, true, true],
+  },
+];
+
+export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "lightbox-fullscreen",
+    label: "Full-Screen Mode",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-custom-size",
+    label: "Custom-sized Lightbox",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-animations",
+    label: "Animations",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "lightbox-loop",
+    label: "Loop",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-autoplay",
+    label: "Autoplay",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-counter",
+    label: "Counter",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-share-images",
+    label: "Share Images",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-download-images",
+    label: "Download Images",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-deeplinking",
+    label: "Image Deeplinking",
+    values: [true, true, true, true],
+  },
+  {
+    id: "lightbox-filmstrip",
+    label: "Filmstrip",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+];
+
+export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
+  [
+    {
+      id: "general-drag-drop-uploader",
+      label: "Drag & Drop Uploader",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-image-click-actions",
+      label: "Image Click Actions",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-hover-effects",
+      label: "Hover Effects",
+      tooltip: "Some options available in Pro and higher plans",
+      values: ["Limited", "Limited", true, true],
+    },
+    {
+      id: "general-customizable-options",
+      label: "Customizable Options",
+      tooltip: "160+ PRO options",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-sorting",
+      label: "Sorting",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-filtering",
+      label: "Filtering",
+      tooltip: "Available in Pro and higher plans",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-paged-pagination",
+      label: "Paged Pagination",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-load-more-button",
+      label: "Load More Button",
+      tooltip: "Available in Pro and higher plans",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-infinite-scroll",
+      label: "Infinite Scroll",
+      tooltip: "Available in Pro and higher plans",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-lazy-loading",
+      label: "Lazy Loading",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-watermarking",
+      label: "Watermarking",
+      tooltip: "Available in Pro and higher plans",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-white-labeling",
+      label: "White Labeling",
+      tooltip: "Available in Pro and higher plans",
+      values: [false, false, true, true],
+    },
+    {
+      id: "general-responsive-galleries",
+      label: "Responsive Galleries",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-drag-drop-sorting",
+      label: "Drag & Drop Sorting",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-retina-4k-support",
+      label: "Retina and 4K Support",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-mobile-responsiveness",
+      label: "Mobile Responsiveness",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-translation-localization",
+      label: "Translation and Localization Support",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-video-galleries",
+      label: "Video Galleries",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-mixed-galleries",
+      label: "Mixed Galleries",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-seo-optimization",
+      label: "SEO Optimization",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-real-time-preview",
+      label: "Real Time Preview",
+      values: [true, true, true, true],
+    },
+  ];
+
+export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "ai-generative-title",
+    label: "Generative Title",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "ai-generative-alt-text",
+    label: "Generative Alt Text",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "ai-generative-caption",
+    label: "Generative Caption",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+  {
+    id: "ai-generative-description",
+    label: "Generative Description",
+    tooltip: "Available in Pro and higher plans",
+    values: [false, false, true, true],
+  },
+];
+
+export const plansComparisonBuilders: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "builder-gutenberg",
+    label: "Gutenberg Block",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-elementor",
+    label: "Elementor Widget",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-buiver",
+    label: "Buiver Builder Widget",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-divi",
+    label: "Divi Module",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-bricks",
+    label: "Bricks Widget",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-wpbakery",
+    label: "WPBakery Page Builder Widget",
+    values: [true, true, true, true],
+  },
+  {
+    id: "builder-shortcode",
+    label: "Shortcode for Gallery",
+    values: [true, true, true, true],
+  },
+];
