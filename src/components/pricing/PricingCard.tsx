@@ -135,6 +135,12 @@ const PricingCard: React.FC<PricingDTO> = ({
             </li>
           );
         })}
+        <a
+          className="pricing-card__features-link--see-all"
+          href="#plans-comparison-table"
+        >
+          See all features
+        </a>
       </ul>
     </div>
   );
