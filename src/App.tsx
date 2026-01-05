@@ -22,7 +22,7 @@ import scrollToTarget from "./common-components/scrollToTarget";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
 import Sale from "./components/sale-banner/SaleBanner";
-
+import PlansComparisonTable from "./components/plans-comparison-table/PlansComparisonTable";
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -106,6 +106,7 @@ const App: React.FC = () => {
             <AboutMobileResponsiveness />
             <Pricing />
             <Faq />
+            <PlansComparisonTable />
             <Support />
           </main>
           <Footer />

@@ -1,0 +1,90 @@
+.plans-table__table-mobile {
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  border-color: gray;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  display: none;
+}
+
+.plans-table__mobile-row {
+  display: table-row;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.plans-table__mobile-cell--header.is-active {
+  border-bottom: 2px solid #2540cc;
+}
+
+.plans-table__mobile-row--header {
+  border-top: 1px solid #e2e8f0;
+  color: #141b38;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  position: sticky;
+  top: 70px;
+  z-index: 1;
+  box-shadow: inset 1px 0 0 #e2e8f0, inset -1px 0 0 #e2e8f0;
+}
+
+.plans-table__mobile-row--label {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ebf0ff;
+}
+
+.plans-table__mobile-cell {
+  padding: 20px;
+}
+.plans-table__mobile-cell span {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  color: #000000aa;
+}
+
+.plans-table__mobile-cell > span[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; /* above the span */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 150ms ease;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
+.plans-table__mobile-cell > span[data-tooltip]:hover::after,
+.plans-table__mobile-cell > span[data-tooltip]:focus::after {
+  opacity: 1;
+}
+
+.plans-table__mobile-spacer {
+  height: 65px; /* adjust as needed */
+  border: 0;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .plans-table__table-mobile {
+    display: table;
+  }
+}
