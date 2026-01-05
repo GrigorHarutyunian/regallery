@@ -2,13 +2,14 @@ import "./Pricing.css";
 import pricingData from "./pricing-data";
 import PricingCard from "./PricingCard";
 import PricingDTO from "../../types/PricingDTO";
+import { pricing__guarantee_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 const Pricing: React.FC = () => {
   return (
     <section id="pricing">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text_cards">
           <h2 className="section-text__title-centered">Unlock more features</h2>
-          <div className="pricing-cards">
+          <div className="pricing__cards">
             {Object.values(pricingData).map((val: PricingDTO) => {
               return (
                 <PricingCard
@@ -29,6 +30,23 @@ const Pricing: React.FC = () => {
               );
             })}
           </div>
+        </div>
+      </div>
+
+      <div className="pricing__guarantee">
+        <div className="pricing__guarantee-badge">
+          {pricing__guarantee_icon}
+        </div>
+        <div className="pricing__guarantee-text">
+          <h3 className="pricing__guarantee-title">
+            100% No-Risk Money Back Guarantee!
+          </h3>
+
+          <p className="pricing__guarantee-description">
+            You are fully protected by our 100% No-Risk-Double-Guarantee. If you
+            don’t like the products over the next 14 days, then we will happily
+            refund 100% of your money. No questions asked.
+          </p>
         </div>
       </div>
     </section>

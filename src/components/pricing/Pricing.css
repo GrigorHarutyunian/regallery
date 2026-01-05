@@ -1,7 +1,8 @@
 .pricing-card a {
   text-decoration: none;
 }
-.pricing-cards {
+
+.pricing__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -222,6 +223,16 @@
   padding-left: 5px;
   margin-bottom: -2px;
 }
+
+.pricing-card__features-link--see-all {
+  align-items: center;
+  color: #2540cc;
+  display: inline-flex;
+  font-weight: 700;
+  gap: 5px;
+  line-height: 24px;
+  margin-top: 24px;
+}
 @media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
     font-size: 15px;
@@ -287,6 +298,61 @@
   opacity: 1;
 }
 
+/* Pricing Guarantee */
+.pricing__guarantee {
+  display: flex;
+  margin: 12px 10px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px 0 lightgrey;
+  transition: all 0.5s ease;
+  max-width: 1320px;
+  margin: 40px auto 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pricing__guarantee:hover {
+  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
+  transform: translateY(-5px);
+}
+.pricing__guarantee-badge {
+  width: calc(16% + 0px);
+}
+
+.pricing__guarantee-text {
+  width: calc(84% + 0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pricing__guarantee-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: Inter;
+  text-align: left;
+  padding: 10px 10px 3px;
+}
+.pricing__guarantee-description {
+  padding: 10px;
+  color: #000000aa;
+  text-align: left;
+}
+.pricing__guarantee-badge svg {
+  animation: guarantee-rotate 8s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes guarantee-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .pricing__text {
     font-size: 14px;
@@ -319,7 +385,7 @@
 }
 
 @media screen and (max-width: 860px) {
-  .pricing-cards {
+  .pricing__cards {
     grid-template-columns: repeat(1, 1fr);
   }
   .pricing-card {
@@ -333,6 +399,24 @@
     width: 80%;
     font-size: 1rem;
   }
+  .pricing__guarantee {
+    flex-direction: column;
+    max-width: 318px;
+    width: 79%;
+    box-sizing: content-box;
+  }
+  .pricing__guarantee-badge {
+    width: unset;
+  }
+  .pricing__guarantee-text {
+    width: unset;
+  }
+  /* .pricing__guarantee-title {
+    text-align: center;
+  }
+  .pricing__guarantee-description {
+    text-align: center;
+  } */
 }
 
 @media screen and (min-width: 476px) and (max-width: 859px) {
