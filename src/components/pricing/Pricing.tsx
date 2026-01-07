@@ -9,7 +9,7 @@ const Pricing: React.FC = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text_cards">
           <h2 className="section-text__title-centered">Unlock more features</h2>
-          <div className="pricing__cards">
+          <div className="grid grid__3 pricing__cards">
             {Object.values(pricingData).map((val: PricingDTO) => {
               return (
                 <PricingCard

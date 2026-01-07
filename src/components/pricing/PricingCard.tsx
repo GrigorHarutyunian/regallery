@@ -55,7 +55,9 @@ const PricingCard: React.FC<PricingDTO> = ({
 
   return (
     <div
-      className={`pricing-card ${mostPopular ? "pricing-card__popular" : ""}`}
+      className={`grid-item pricing-card ${
+        mostPopular ? "pricing-card__popular" : ""
+      }`}
     >
       {mostPopular ? (
         <div className="pricing-card__popular-badge">Most Popular</div>

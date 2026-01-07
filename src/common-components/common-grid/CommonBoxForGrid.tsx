@@ -18,7 +18,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
   demoLink,
 }) => {
   return (
-    <motion.div id={title} className="feature-box col-50">
+    <motion.div id={title} className="grid-item feature-box col-50">
       {title !== "none" && (
         <>
           <svg

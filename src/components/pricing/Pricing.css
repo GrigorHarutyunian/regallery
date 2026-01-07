@@ -2,25 +2,6 @@
   text-decoration: none;
 }
 
-.pricing__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  justify-items: center;
-}
-.pricing-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 12px 10px;
-  padding: 25px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 5px 10px 20px 0 lightgrey;
-  transition: all 0.5s ease;
-  width: 79%;
-}
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -66,10 +47,6 @@
   to {
     --angle: 360deg;
   }
-}
-.pricing-card:hover {
-  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
-  transform: translateY(-5px);
 }
 .pricing-card__popular-badge {
   position: absolute;
@@ -312,10 +289,7 @@
   text-align: center;
   box-sizing: border-box;
 }
-.pricing__guarantee:hover {
-  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
-  transform: translateY(-5px);
-}
+
 .pricing__guarantee-badge {
   width: calc(16% + 0px);
 }
@@ -385,15 +359,6 @@
 }
 
 @media screen and (max-width: 860px) {
-  .pricing__cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .pricing-card {
-    max-width: 318px;
-    width: 79%;
-    padding: 25px;
-  }
-
   .pricing-card__btn {
     padding: 16px;
     width: 80%;
@@ -411,12 +376,6 @@
   .pricing__guarantee-text {
     width: unset;
   }
-  /* .pricing__guarantee-title {
-    text-align: center;
-  }
-  .pricing__guarantee-description {
-    text-align: center;
-  } */
 }
 
 @media screen and (min-width: 476px) and (max-width: 859px) {

@@ -7,7 +7,7 @@ const Features: React.FC = () => {
       sectionId="features"
       title="Features"
       data={featuresData}
-      gridClassname="grid__9  _features"
+      gridClassname="grid grid__9  _features"
     />
   );
 };

@@ -12,31 +12,7 @@
 #gallery_layouts .section-text__title-centered {
   color: #ffffff;
 }
-.grid__3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  justify-items: center;
-}
 
-.review-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 12px 15px;
-  transition: all 0.5s ease;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 5px 10px 20px #d3d3d3;
-  width: 79%;
-  padding: 25px;
-}
-
-.review-card:hover {
-  box-shadow: 0 10px 30px 0 rgb(133, 133, 133);
-  transform: translateY(-5px);
-}
 .review-card__icon img {
   border-radius: 50%;
   object-fit: cover;
@@ -87,22 +63,12 @@
 
 .review__title {
   height: 26px;
-  max-width: 300px;
   text-align: center;
   margin-bottom: 41px;
 }
 
-/* .review__text {
-  max-width: 233px;
-}
-
-.review__title {
-  max-width: 233px;
-} */
-
 .review__text {
   margin-top: 22px;
-  max-width: 300px;
   text-align: left;
   cursor: pointer;
 }
@@ -178,14 +144,5 @@
   .faq__title {
     font-size: 30px;
     margin-bottom: 20px;
-  }
-  .review-card__author {
-    margin-bottom: 0;
-  }
-  .grid__3 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .review-card {
-    max-width: 318px;
   }
 }
