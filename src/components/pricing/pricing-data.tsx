@@ -4,31 +4,33 @@ import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import PricingDTO from "../../types/PricingDTO";
 
 const pricingData: { [key: number]: PricingDTO } = {
-  // 1: {
-  //   id: 1,
-  //   title: "Starter",
-  //   href: "https://wordpress.org/plugins/regallery/",
-  //   price: 0,
-  //   text: "Easy Start for Beginners to Explore Galleries",
-  //   buttonText: "DOWNLOAD NOW",
-  //   advantages: [
-  //     "Unlimited Galleries",
-  //     "Unlimited Users",
-  //     <>
-  //       <strong className="bold__list">9</strong> Gallery Views
-  //     </>,
-  //     "Real-Time Preview",
-  //     "Gutenberg Block Support",
-  //     "Elementor Widget Integration",
-  //     "Divi Builder Compatibility",
-  //     "WPBakery Page Builder Available",
-  //     "Beaver Builder Module Inclusion",
-  //     "Bricks Builder Element Access",
-  //     <>
-  //       <strong className="bold__list">10+</strong> Pre-built Templates
-  //     </>,
-  //   ],
-  // },
+  1: {
+    id: 1,
+    title: "Free",
+    href: "https://wordpress.org/plugins/regallery/",
+    price: 0,
+    currency: "$",
+    planType: "free",
+    text: "Easy Start for Beginners to Explore Galleries",
+    buttonText: "DOWNLOAD",
+    advantages: [
+      "Unlimited Galleries",
+      "Unlimited Users",
+      <>
+        <strong className="bold__list">9</strong> Gallery Views
+      </>,
+      "Real-Time Preview",
+      "Gutenberg Block Support",
+      "Elementor Widget Integration",
+      "Divi Builder Compatibility",
+      "WPBakery Page Builder Available",
+      "Beaver Builder Module Inclusion",
+      "Bricks Builder Element Access",
+      <>
+        <strong className="bold__list">10+</strong> Pre-built Templates
+      </>,
+    ],
+  },
   2: {
     id: 2,
     title: "Basic",
