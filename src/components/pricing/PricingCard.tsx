@@ -127,21 +127,23 @@ const PricingCard: React.FC<PricingDTO> = ({
           </div>
         </>
       )}
-      <ul className="pricing-card__features">
-        {advantages.map((val, id) => {
-          return (
-            <li className="pricing-card__features__list" key={id}>
-              {val}
-            </li>
-          );
-        })}
+      <div className="pricing-card__features-wrapper">
+        <ul className="pricing-card__features">
+          {advantages.map((val, id) => {
+            return (
+              <li className="pricing-card__features__list" key={id}>
+                {val}
+              </li>
+            );
+          })}
+        </ul>
         <a
           className="pricing-card__features-link--see-all"
           href="#plans-comparison-table"
         >
           See all features
         </a>
-      </ul>
+      </div>
     </div>
   );
 };

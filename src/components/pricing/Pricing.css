@@ -158,6 +158,11 @@
   padding: 0;
   text-align: start;
 }
+.pricing-card__features-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .pricing-card__features__list {
   margin: 10px 0px;
   color: #000000;
@@ -231,7 +236,8 @@
   font-weight: 700;
   gap: 5px;
   line-height: 24px;
-  margin-top: 24px;
+  margin-top: auto;
+  margin-left: 12px;
 }
 @media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
@@ -339,20 +345,7 @@
   color: #000000aa;
   text-align: left;
 }
-.pricing__guarantee-badge svg {
-  animation: guarantee-rotate 8s linear infinite;
-  transform-origin: center;
-  will-change: transform;
-}
 
-@keyframes guarantee-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .pricing__text {
     font-size: 14px;
