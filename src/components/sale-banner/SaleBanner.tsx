@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import clsx from "clsx";
+import React, { useEffect, useState } from "react";
 import { getSale } from "../../utils/getSale";
-
 import "./SaleBanner.css";
 
 const SaleBanner: React.FC = () => {
@@ -50,10 +50,10 @@ const SaleBanner: React.FC = () => {
     }
   };
 
-  if (!isVisible || !sales) return null;
+  if (!sales) return null;
 
   return (
-    <div className="sale-overlay" onClick={handleClose}>
+    <div className={clsx('sale-overlay', {'sale-overlay_hidden': !isVisible })} onClick={handleClose} >
       <div className="sale-banner" onClick={(e) => e.stopPropagation()}>
         <button
           className="sale-close-btn"
@@ -73,7 +73,6 @@ const SaleBanner: React.FC = () => {
             src={sales.desktop}
             alt={sales.label}
             className="sale-image"
-            loading="lazy"
           />
         </picture>
       </div>

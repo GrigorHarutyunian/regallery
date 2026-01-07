@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="row__social-website">
         <div className="footer-text__title footer-copyright">
           <div>
-            <span>Copyright © 2025 Re Gallery.</span>{" "}
+            <span>Copyright © {new Date().getFullYear()} Re Gallery.</span>{" "}
             <span>All rights reserved.</span>
           </div>
           <div className="footer-text__links">
