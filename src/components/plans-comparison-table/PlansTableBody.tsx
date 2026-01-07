@@ -1,9 +1,9 @@
 import React from "react";
-import { plansComparisonTableData } from "./plans-comparison-table-data";
 import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
+import pricingData from "../pricing/pricing-data";
 
 interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
@@ -18,14 +18,13 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
     <tbody>
       {/* Header row */}
       <tr className="plans-table__row plans-table__row--header">
-        <td className="plans-table__cell" scope="row">
+        <td
+          className="plans-table__cell"
+          scope="row"
+          colSpan={Object.values(pricingData).length + 1}
+        >
           {leftTitle}
         </td>
-        {plansComparisonTableData.map(({ name }) => (
-          <td key={name} className="plans-table__cell">
-            {name}
-          </td>
-        ))}
       </tr>
 
       {/* Feature rows */}
@@ -65,7 +64,7 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
         );
       })}
       <tr className="plans-table__spacer">
-        <td colSpan={plansComparisonTableData.length + 1}>&nbsp;</td>
+        <td colSpan={Object.values(pricingData).length + 1}>&nbsp;</td>
       </tr>
     </tbody>
   );
