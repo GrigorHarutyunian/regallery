@@ -113,21 +113,21 @@
 }
 
 .plans-table__badge {
-  opacity: 1;
   position: absolute;
-  bottom: 100%;
-  background: #f97316;
-  border-radius: 8px 8px 0 0;
-  font-weight: 900;
-  text-align: center;
-  left: 0;
-  right: 0;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 6px 5px 7px;
-  line-height: 24px;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: #2540cc;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 2px solid #2540cc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  z-index: 3;
 }
+
 /* Plans Table Body*/
 
 .plans-table__row {
@@ -193,7 +193,11 @@
 }
 
 .plans-table__cell-info-icon {
-  fill: #2540cc36;
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
 }
 .plans-table__spacer td {
   height: 65px; /* adjust as needed */
