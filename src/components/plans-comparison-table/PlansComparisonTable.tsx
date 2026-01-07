@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./PlansComparisonTable.css";
 import "./PlansTableBodyMobile.css";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import PlansTableBody from "./PlansTableBody";
 import PlansTableBodyMobile from "./PlansTableBodyMobile";
 
@@ -17,10 +16,12 @@ import {
   plansComparisonBuilders,
   plansComparisonGeneralFeatures,
   plansComparisonLightbox,
-  plansComparisonTableData,
 } from "./plans-comparison-table-data";
 
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
+import pricingData from "../pricing/pricing-data";
+import CustomButton from "../../common-components/custom-button/CustomButton";
+import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
   leftTitle: string;
@@ -39,6 +40,19 @@ const sections: PlansTableBodyProps[] = [
 ];
 
 const PlansComparisonTable: React.FC = () => {
+  const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
+  const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
+  const { openStripeCheckout } = useProVersionActivatorContext();
+  const handleCheckout = async (id: number) => {
+    setLoadingPlanId(id);
+    try {
+      await openStripeCheckout(id);
+    } catch (error) {
+      console.error("Stripe checkout error:", error);
+    } finally {
+      setLoadingPlanId(null); // reset after checkout
+    }
+  };
   return (
     <section id="plans-comparison-table" className="plans-table">
       <Container>
@@ -52,48 +66,68 @@ const PlansComparisonTable: React.FC = () => {
                 <tr className="plans-table__header">
                   <td className="plans-table__empty-cell plans-table__empty-cell--top" />
 
-                  {plansComparisonTableData.map(
+                  {Object.values(pricingData).map(
                     ({
                       id,
-                      isBest,
-                      badge,
-                      name,
-                      price: { dollars, cents, period },
-                    }) => (
-                      <td
-                        key={id}
-                        className={`plans-table__column plans-table__column--discounted ${
-                          isBest ? "plans-table__column--best" : ""
-                        }`}
-                      >
-                        {badge && (
-                          <div className="plans-table__badge">{badge}</div>
-                        )}
-                        <div className="plans-table__plan-name">{name}</div>
-                        <div className="plans-table__price">
-                          <span className="plans-table__price-inner">
-                            <span className="plans-table__price-currency">
-                              $
+                      mostPopular,
+                      price,
+                      title,
+                      currency,
+                      buttonText,
+                      href,
+                    }) => {
+                      const [integer, fraction = "00"] = price
+                        .toFixed(2)
+                        .split(".");
+                      return (
+                        <td
+                          key={id}
+                          className={`plans-table__column plans-table__column--discounted ${
+                            mostPopular ? "plans-table__column--best" : ""
+                          }`}
+                        >
+                          {mostPopular && (
+                            <div className="plans-table__badge">
+                              Most Popular
+                            </div>
+                          )}
+                          <div className="plans-table__plan-name">{title}</div>
+                          <div className="plans-table__price">
+                            <span className="plans-table__price-inner">
+                              <span className="plans-table__price-currency">
+                                {currency}
+                              </span>
+                              <span className="plans-table__price-value">
+                                {integer}
+                              </span>
+                              <span className="plans-table__price-cents">
+                                .{fraction}
+                              </span>
+                              <span className="plans-table__price-period">
+                                {"/ year"}
+                              </span>
                             </span>
-                            <span className="plans-table__price-value">
-                              {dollars}
-                            </span>
-                            <span className="plans-table__price-cents">
-                              {cents}
-                            </span>
-                            <span className="plans-table__price-period">
-                              {period}
-                            </span>
-                          </span>
-                        </div>
-
-                        <DownloadBtn
-                          className={
-                            "download-btn plans-table__button plans-table__button--primary"
-                          }
-                        />
-                      </td>
-                    )
+                          </div>
+                          {href ? (
+                            <>
+                              <a target={"_blank"} href={href}>
+                                <div className="pricing-card__btn plans-table__button--primary">
+                                  {buttonText}
+                                </div>
+                              </a>
+                            </>
+                          ) : (
+                            <CustomButton
+                              handleClick={() => handleCheckout(id)}
+                              className="pricing-card__btn plans-table__button--primary"
+                              isLoading={loadingPlanId === id ? true : false}
+                            >
+                              {buttonText}
+                            </CustomButton>
+                          )}
+                        </td>
+                      );
+                    }
                   )}
                 </tr>
               </tbody>
@@ -114,6 +148,8 @@ const PlansComparisonTable: React.FC = () => {
                     key={leftTitle}
                     features={features}
                     leftTitle={leftTitle}
+                    setActivePlanIndex={setActivePlanIndex}
+                    activePlanIndex={activePlanIndex}
                   />
                 );
               })}
