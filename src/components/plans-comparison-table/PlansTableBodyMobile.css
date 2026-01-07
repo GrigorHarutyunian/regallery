@@ -19,7 +19,8 @@
 }
 
 .plans-table__mobile-cell--header.is-active {
-  border-bottom: 2px solid #2540cc;
+  /* make sure it's above other rows */
+  box-shadow: inset 0 -2px 0 #2540cc;
 }
 
 .plans-table__mobile-row--header {
@@ -31,7 +32,7 @@
   cursor: pointer;
   position: sticky;
   top: 70px;
-  z-index: 1;
+  z-index: 10;
   box-shadow: inset 1px 0 0 #e2e8f0, inset -1px 0 0 #e2e8f0;
 }
 
@@ -43,6 +44,11 @@
 
 .plans-table__mobile-cell {
   padding: 20px;
+}
+.plans-table__mobile-cell--value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .plans-table__mobile-cell span {
   display: flex;
