@@ -10,29 +10,30 @@ const Pricing: React.FC = () => {
         <div className="section-text_cards">
           <h2 className="section-text__title-centered">Unlock more features</h2>
           <div className="pricing__cards">
-            {Object.values(pricingData).map((val: PricingDTO) => {
-              return (
-                <PricingCard
-                  key={val.id}
-                  id={val.id}
-                  text={val.text}
-                  buttonText={val.buttonText}
-                  price={val.price}
-                  discount={val?.discount}
-                  currency={val.currency}
-                  planType={val.planType}
-                  advantages={val.advantages}
-                  duration={val.duration}
-                  title={val.title}
-                  href={val.href}
-                  mostPopular={val.mostPopular}
-                />
-              );
-            })}
+            {Object.values(pricingData)
+              .filter((val: PricingDTO) => val.planType !== "free")
+              .map((val: PricingDTO) => {
+                return (
+                  <PricingCard
+                    key={val.id}
+                    id={val.id}
+                    text={val.text}
+                    buttonText={val.buttonText}
+                    price={val.price}
+                    discount={val?.discount}
+                    currency={val.currency}
+                    planType={val.planType}
+                    advantages={val.advantages}
+                    duration={val.duration}
+                    title={val.title}
+                    href={val.href}
+                    mostPopular={val.mostPopular}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>
-
       <div className="pricing__guarantee">
         <div className="pricing__guarantee-badge">
           {pricing__guarantee_icon}
