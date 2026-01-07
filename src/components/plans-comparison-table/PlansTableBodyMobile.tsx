@@ -1,35 +1,22 @@
-import { plansComparisonTableData } from "./plans-comparison-table-data";
 import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
-import { useState } from "react";
+import pricingData from "../pricing/pricing-data";
 interface MobileSectionProps {
   leftTitle: string;
   features: IPlansComparisonTableFeatureDTO[];
+  setActivePlanIndex: any;
+  activePlanIndex: any;
 }
 
 const PlansTableBodyMobile: React.FC<MobileSectionProps> = ({
   leftTitle,
   features,
+  activePlanIndex,
 }) => {
-  const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
   return (
     <tbody>
-      {/* Sticky section header */}
-      <tr className="plans-table__mobile-row plans-table__mobile-row--header">
-        {plansComparisonTableData.map(({ name }, index) => (
-          <td
-            key={name}
-            className={`plans-table__mobile-cell plans-table__mobile-cell--header ${
-              activePlanIndex === index ? "is-active" : ""
-            }`}
-            onClick={() => setActivePlanIndex(index)}
-          >
-            {name}
-          </td>
-        ))}
-      </tr>
       <tr className="plans-table__mobile-row plans-table__mobile-row--label">
         <td className="plans-table__mobile-cell" colSpan={4}>
           {leftTitle}
@@ -49,21 +36,21 @@ const PlansTableBodyMobile: React.FC<MobileSectionProps> = ({
               className="plans-table__mobile-cell plans-table__mobile-cell--feature"
               colSpan={3}
             >
-              <span
-                {...(feature.tooltip
-                  ? { "data-tooltip": feature.tooltip }
-                  : {})}
-              >
+              <span>
                 {feature.label}{" "}
                 {feature.tooltip && (
-                  <span className="plans-table__cell-info-icon">
+                  <span data-tooltip={feature.tooltip} className="info-icon">
                     {info_icon}
                   </span>
                 )}
               </span>
             </td>
 
-            <td className="plans-table__mobile-cell">
+            <td
+              className={`plans-table__mobile-cell plans-table__mobile-cell--value ${
+                activePlanIndex === activePlanIndex ? "is-active" : ""
+              }`}
+            >
               {typeof value === "boolean" ? (
                 value ? (
                   <CheckIcon sx={{ color: "#52BD94" }} />
@@ -77,9 +64,6 @@ const PlansTableBodyMobile: React.FC<MobileSectionProps> = ({
           </tr>
         );
       })}
-      <tr className="plans-table__mobile-spacer">
-        <td colSpan={plansComparisonTableData.length}>&nbsp;</td>
-      </tr>
     </tbody>
   );
 };

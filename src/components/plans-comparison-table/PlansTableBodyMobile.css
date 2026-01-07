@@ -17,74 +17,54 @@
   border-right: 1px solid #e2e8f0;
   font-size: 14px;
 }
-
+.plans-table__mobile-cell--header {
+  text-align: center;
+}
 .plans-table__mobile-cell--header.is-active {
-  border-bottom: 2px solid #2540cc;
+  box-shadow: inset 0 -2px 0 #2540cc;
 }
 
 .plans-table__mobile-row--header {
   border-top: 1px solid #e2e8f0;
-  color: #141b38;
+  color: black;
   font-weight: 700;
   font-size: 20px;
-  background-color: #f5f5f5;
-  cursor: pointer;
+  background-color: #ffffff;
   position: sticky;
   top: 70px;
-  z-index: 1;
-  box-shadow: inset 1px 0 0 #e2e8f0, inset -1px 0 0 #e2e8f0;
+  z-index: 10;
 }
 
 .plans-table__mobile-row--label {
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  background-color: #ebf0ff;
+  background-color: #f5f5f5;
 }
 
 .plans-table__mobile-cell {
   padding: 20px;
+}
+.plans-table__mobile-cell--value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .plans-table__mobile-cell span {
   display: flex;
   gap: 6px;
   position: relative;
   text-align: left;
-  cursor: pointer;
   color: #000000aa;
 }
 
-.plans-table__mobile-cell > span[data-tooltip]::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%; /* above the span */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 15px;
-  line-height: 1.5;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  transition: opacity 150ms ease;
-  z-index: 1000;
-  margin-bottom: 10px;
-}
-.plans-table__mobile-cell > span[data-tooltip]:hover::after,
-.plans-table__mobile-cell > span[data-tooltip]:focus::after {
-  opacity: 1;
-}
-
-.plans-table__mobile-spacer {
-  height: 65px; /* adjust as needed */
-  border: 0;
-  padding: 0;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .plans-table__table-mobile {
     display: table;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-table__mobile-cell--header {
+    padding: 20px 5px;
   }
 }

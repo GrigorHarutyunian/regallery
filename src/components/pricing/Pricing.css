@@ -62,6 +62,8 @@
   border: 2px solid #2540cc; /* outline so badge matches brand */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   z-index: 3;
+  width: max-content;
+  line-height: normal;
 }
 
 .pricing-card__title {
@@ -78,6 +80,9 @@
 .plan-type {
   font-size: 13px;
   font-weight: 400;
+}
+.free-plan .plan-type {
+  visibility: hidden;
 }
 .text-start {
   text-align: start;
@@ -134,6 +139,11 @@
   margin: 12px;
   padding: 0;
   text-align: start;
+}
+.pricing-card__features-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .pricing-card__features__list {
   margin: 10px 0px;
@@ -208,7 +218,8 @@
   font-weight: 700;
   gap: 5px;
   line-height: 24px;
-  margin-top: 24px;
+  margin-top: auto;
+  margin-left: 12px;
 }
 @media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
@@ -288,14 +299,18 @@
   margin: 40px auto 0;
   text-align: center;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .pricing__guarantee-badge {
-  width: calc(16% + 0px);
+  width: 200px;
+  img {
+    width: 100%;
+  }
 }
 
 .pricing__guarantee-text {
-  width: calc(84% + 0px);
+  width: calc(100% - 200px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,20 +328,7 @@
   color: #000000aa;
   text-align: left;
 }
-.pricing__guarantee-badge svg {
-  animation: guarantee-rotate 8s linear infinite;
-  transform-origin: center;
-  will-change: transform;
-}
 
-@keyframes guarantee-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @media screen and (min-width: 861px) and (max-width: 965px) {
   .pricing__text {
     font-size: 14px;
@@ -364,14 +366,11 @@
     width: 80%;
     font-size: 1rem;
   }
+}
+
+@media screen and (max-width: 860px) {
   .pricing__guarantee {
     flex-direction: column;
-    max-width: 318px;
-    width: 79%;
-    box-sizing: content-box;
-  }
-  .pricing__guarantee-badge {
-    width: unset;
   }
   .pricing__guarantee-text {
     width: unset;

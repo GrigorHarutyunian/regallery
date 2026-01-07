@@ -1,9 +1,9 @@
 import React from "react";
-import { plansComparisonTableData } from "./plans-comparison-table-data";
 import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
+import pricingData from "../pricing/pricing-data";
 
 interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
@@ -16,19 +16,15 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
 }) => {
   return (
     <tbody>
-      {/* Header row */}
       <tr className="plans-table__row plans-table__row--header">
-        <td className="plans-table__cell" scope="row">
+        <td
+          className="plans-table__cell"
+          scope="row"
+          colSpan={Object.values(pricingData).length + 1}
+        >
           {leftTitle}
         </td>
-        {plansComparisonTableData.map(({ name }) => (
-          <td key={name} className="plans-table__cell">
-            {name}
-          </td>
-        ))}
       </tr>
-
-      {/* Feature rows */}
       {features.map(({ id, label, tooltip, values }, index) => {
         const isLastRow = index === features.length - 1;
         return (
@@ -39,10 +35,10 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
             }`}
           >
             <td className="plans-table__cell plans-table__cell--feature">
-              <span {...(tooltip ? { "data-tooltip": tooltip } : {})}>
+              <span>
                 {label}{" "}
                 {tooltip && (
-                  <span className="plans-table__cell-info-icon">
+                  <span data-tooltip={tooltip} className="info-icon">
                     {info_icon}
                   </span>
                 )}
@@ -52,21 +48,18 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
               <td key={idx} className="plans-table__cell">
                 {typeof value === "boolean" ? (
                   value ? (
-                    <CheckIcon sx={{ color: "#52BD94" }} /> // blue check
+                    <CheckIcon sx={{ color: "#52BD94" }} />
                   ) : (
-                    <CloseIcon sx={{ color: "#D14343" }} /> // gray cross
+                    <CloseIcon sx={{ color: "#D14343" }} />
                   )
                 ) : (
-                  <span>{value}</span> // string value
+                  <span>{value}</span>
                 )}
               </td>
             ))}
           </tr>
         );
       })}
-      <tr className="plans-table__spacer">
-        <td colSpan={plansComparisonTableData.length + 1}>&nbsp;</td>
-      </tr>
     </tbody>
   );
 };

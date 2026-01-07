@@ -1,52 +1,4 @@
-import {
-  PlansComparisonTableDTO,
-  IPlansComparisonTableFeatureDTO,
-} from "../../types/PlansComparisonDTO ";
-
-export const plansComparisonTableData: PlansComparisonTableDTO[] = [
-  {
-    id: "free",
-    name: "Free",
-    price: {
-      dollars: "0",
-      cents: ".0",
-      period: "/ year",
-    },
-    url: "",
-  },
-  {
-    id: "basic",
-    name: "Basic",
-    price: {
-      dollars: "29",
-      cents: ".99",
-      period: "/ year",
-    },
-    url: "",
-  },
-  {
-    id: "plus",
-    name: "Plus",
-    badge: "Most Popular",
-    isBest: true,
-    price: {
-      dollars: "49",
-      cents: ".99",
-      period: "/ year",
-    },
-    url: "",
-  },
-  {
-    id: "agency",
-    name: "Agency",
-    price: {
-      dollars: "99",
-      cents: ".99",
-      period: "/ year",
-    },
-    url: "",
-  },
-];
+import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
 
 export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
   {
@@ -90,7 +42,7 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
     id: "advanced-customization",
     label: "Advanced Customization",
     tooltip: "",
-    values: [true, true, true, true],
+    values: [false, false, true, true],
   },
 ];
 
@@ -196,37 +148,37 @@ export const plansComparisonWooCommerce: IPlansComparisonTableFeatureDTO[] = [
     id: "woo-manual-selection",
     label: "Manual Selection",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "woo-dynamic-galleries",
     label: "Dynamic Galleries",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "woo-filter-by-products",
     label: "Filter by Products",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "woo-filter-by-taxonomy",
     label: "Filter by Taxonomy",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "woo-exclude-specific-products",
     label: "Exclude Specific Products",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "woo-exclude-without-images",
     label: "Exclude Products without Images",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
 ];
 
@@ -240,19 +192,19 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
     id: "text-caption",
     label: "Caption",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "text-description",
     label: "Description",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "text-product-price",
     label: "Product Price",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "text-exif",
@@ -268,13 +220,13 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
     id: "text-hover-options",
     label: "Hover Options",
     tooltip: "Some hover options are available in Pro and higher plans",
-    values: ["Limited", "Limited", true, true],
+    values: [true, true, true, true],
   },
   {
     id: "text-blend-mode",
     label: "Blend Mode",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
 ];
 
@@ -317,7 +269,7 @@ export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "template-8",
     label: "Template 8",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
 ];
 
@@ -336,7 +288,7 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
     id: "lightbox-animations",
     label: "Animations",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "lightbox-loop",
@@ -372,7 +324,7 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
     id: "lightbox-filmstrip",
     label: "Filmstrip",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
 ];
 
@@ -392,13 +344,12 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-hover-effects",
       label: "Hover Effects",
       tooltip: "Some options available in Pro and higher plans",
-      values: ["Limited", "Limited", true, true],
+      values: [true, true, true, true],
     },
     {
       id: "general-customizable-options",
       label: "Customizable Options",
-      tooltip: "160+ PRO options",
-      values: [false, false, true, true],
+      values: ["220+ options", "300+ options", "300+ options", "300+ options"],
     },
     {
       id: "general-sorting",
@@ -409,7 +360,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-filtering",
       label: "Filtering",
       tooltip: "Available in Pro and higher plans",
-      values: [false, false, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-paged-pagination",
@@ -420,13 +371,13 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-load-more-button",
       label: "Load More Button",
       tooltip: "Available in Pro and higher plans",
-      values: [false, false, true, true],
+      values: [true, true, true, true],
     },
     {
       id: "general-infinite-scroll",
       label: "Infinite Scroll",
       tooltip: "Available in Pro and higher plans",
-      values: [false, false, true, true],
+      values: [true, true, true, true],
     },
     {
       id: "general-lazy-loading",
@@ -437,13 +388,13 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-watermarking",
       label: "Watermarking",
       tooltip: "Available in Pro and higher plans",
-      values: [false, false, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-white-labeling",
       label: "White Labeling",
       tooltip: "Available in Pro and higher plans",
-      values: [false, false, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-responsive-galleries",
@@ -478,7 +429,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-mixed-galleries",
       label: "Mixed Galleries",
-      values: [true, true, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-seo-optimization",
@@ -497,25 +448,25 @@ export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
     id: "ai-generative-title",
     label: "Generative Title",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "ai-generative-alt-text",
     label: "Generative Alt Text",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "ai-generative-caption",
     label: "Generative Caption",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "ai-generative-description",
     label: "Generative Description",
     tooltip: "Available in Pro and higher plans",
-    values: [false, false, true, true],
+    values: [false, true, true, true],
   },
 ];
 

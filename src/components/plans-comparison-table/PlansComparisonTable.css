@@ -1,5 +1,5 @@
 .plans-table:target {
-  display: block; /* show when linked */
+  display: block;
 }
 .plans-table {
   display: none;
@@ -37,7 +37,9 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
+}
+.plans-table__header > td {
+  padding-top: 35px;
 }
 
 .plans-table__column {
@@ -49,16 +51,6 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  line-height: 24px;
-}
-
-.plans-table__plan-name {
-  text-align: center;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  margin: 0 0 12px;
-  color: var(--color-header);
 }
 
 .plans-table__price {
@@ -79,57 +71,6 @@
   line-height: 28px;
 }
 
-.plans-table__price-value {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
-  padding-left: 17px;
-}
-
-.plans-table__price-cents {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 500;
-  letter-spacing: 0.25px;
-  position: absolute;
-  top: 3px;
-  left: 107%;
-}
-
-.plans-table__price-period {
-  position: absolute;
-  bottom: 10px;
-  left: 107%;
-  color: #a3a3a3;
-  font-size: 12px;
-  line-height: 18px;
-  word-break: keep-all;
-  width: 40px;
-}
-
-.plans-table__button {
-  margin: 24px 0 0;
-}
-
-.plans-table__badge {
-  opacity: 1;
-  position: absolute;
-  bottom: 100%;
-  background: #f97316;
-  border-radius: 8px 8px 0 0;
-  font-weight: 900;
-  text-align: center;
-  left: 0;
-  right: 0;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 6px 5px 7px;
-  line-height: 24px;
-}
-/* Plans Table Body*/
-
 .plans-table__row {
   border-left: 1px solid #e2e8f0;
   border-right: 1px solid #e2e8f0;
@@ -138,18 +79,16 @@
 
 .plans-table__row--header {
   position: sticky;
-  top: 285px;
+  top: 313px;
   z-index: 2;
   color: #000;
   background-color: #f5f5f5;
   border-top: 1px solid #e2e8f0;
   font-weight: 700;
   font-size: 20px;
-  box-shadow: inset 1px 0 0 #e2e8f0, outset -1px 0 0 #e2e8f0;
 }
 .plans-table__row .plans-table__cell:nth-child(1) {
   text-align: left;
-  cursor: pointer;
 }
 
 .plans-table__cell {
@@ -162,92 +101,35 @@
   display: flex;
   gap: 6px;
   position: relative;
+  align-items: center;
 }
 
-.plans-table__cell--feature > span[data-tooltip]::after {
-  content: attr(data-tooltip);
+.plans-table__wrapper .info-icon::after {
   position: absolute;
-  bottom: 100%; /* above the span */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 15px;
-  line-height: 1.5;
-  opacity: 0;
-  pointer-events: none;
   white-space: nowrap;
-  transition: opacity 150ms ease;
-  z-index: 1000;
-  margin-bottom: 10px;
-}
-.plans-table__cell--feature > span[data-tooltip]:hover::after,
-.plans-table__cell--feature > span[data-tooltip]:focus::after {
-  opacity: 1;
 }
 
 .plans-table__row__bottom-border {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.plans-table__cell-info-icon {
-  fill: #2540cc36;
-}
-.plans-table__spacer td {
-  height: 65px; /* adjust as needed */
-  border: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 801px) and (max-width: 1260px) {
+@media screen and (min-width: 861px) and (max-width: 1260px) {
   .plans-table__table {
     table-layout: fixed;
   }
   .plans-table__empty-cell {
     min-width: unset;
   }
-  .plans-table__button {
-    font-size: 0.7rem;
-    padding: 16px 20px;
-  }
 
   .plans-table__column {
     padding: 10px;
-  }
-  .plans-table__price-value {
-    font-size: 35px;
   }
   .plans-table__row--header {
     top: 265px;
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 800px) {
-  .plans-table__table {
-    table-layout: fixed;
-  }
-  .plans-table__empty-cell {
-    min-width: unset;
-  }
-  .plans-table__button {
-    font-size: 0.6rem;
-    padding: 15px 18px;
-  }
-
-  .plans-table__column {
-    padding: 10px;
-  }
-  .plans-table__price-value {
-    font-size: 35px;
-  }
-  .plans-table__row--header {
-    top: 264px;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .plans-table__table {
     display: none;
   }
