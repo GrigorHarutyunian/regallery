@@ -12,7 +12,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     currency: "$",
     planType: "monthly",
     text: "Easy Start for Beginners to Explore Galleries",
-    buttonText: "DOWNLOAD",
+    buttonText: "FREE DOWNLOAD",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",

@@ -26,13 +26,10 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
         </td>
       </tr>
       {features.map(({ id, label, tooltip, values }, index) => {
-        const isLastRow = index === features.length - 1;
         return (
           <tr
             key={id}
-            className={`plans-table__row ${
-              isLastRow ? "plans-table__row__bottom-border" : ""
-            }`}
+            className={`plans-table__row plans-table__row__bottom-border`}
           >
             <td className="plans-table__cell plans-table__cell--feature">
               <span>

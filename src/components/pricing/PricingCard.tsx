@@ -104,9 +104,7 @@ const PricingCard: React.FC<PricingDTO> = ({
       {href ? (
         <>
           <a target={"_blank"} href={href}>
-            <div className="pricing-card__btn pricing-card__btn_starter">
-              {buttonText}
-            </div>
+            <div className="pricing-card__btn">{buttonText}</div>
           </a>
         </>
       ) : (

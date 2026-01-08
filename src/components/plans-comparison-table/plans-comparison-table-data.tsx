@@ -1,11 +1,12 @@
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
+import { allTemplates } from "../views/views-data-subMenu";
 
 export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "supported-sites",
     label: "Supported Sites",
     tooltip: "Number of sites supported across plans",
-    values: ["1 Site", "1 Sites", "5 Sites", "25 Sites"],
+    values: [<b>1 Site</b>, <b>1 Site</b>, <b>5 Sites</b>, <b>25 Sites</b>],
   },
   {
     id: "updates",
@@ -230,48 +231,12 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
   },
 ];
 
-export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] = [
-  {
-    id: "template-1",
-    label: "Template 1",
-    values: [false, true, true, true],
-  },
-  {
-    id: "template-2",
-    label: "Template 2",
-    values: [false, true, true, true],
-  },
-  {
-    id: "template-3",
-    label: "Template 3",
-    values: [false, false, true, true],
-  },
-  {
-    id: "template-4",
-    label: "Template 4",
-    values: [false, true, true, true],
-  },
-  {
-    id: "template-5",
-    label: "Template 5",
-    values: [false, false, true, true],
-  },
-  {
-    id: "template-6",
-    label: "Template 6",
-    values: [false, true, true, true],
-  },
-  {
-    id: "template-7",
-    label: "Template 7",
-    values: [false, true, true, true],
-  },
-  {
-    id: "template-8",
-    label: "Template 8",
-    values: [false, true, true, true],
-  },
-];
+export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] =
+  allTemplates.map((subItem, index) => ({
+    id: `template-${index}`,
+    label: subItem.title,
+    values: [!subItem.pro, true, true, true],
+  }));
 
 export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
   {

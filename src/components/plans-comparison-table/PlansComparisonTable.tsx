@@ -50,7 +50,7 @@ const PlansComparisonTable: React.FC = () => {
     } catch (error) {
       console.error("Stripe checkout error:", error);
     } finally {
-      setLoadingPlanId(null); // reset after checkout
+      setLoadingPlanId(null);
     }
   };
   return (

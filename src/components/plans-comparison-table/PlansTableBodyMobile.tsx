@@ -22,15 +22,12 @@ const PlansTableBodyMobile: React.FC<MobileSectionProps> = ({
           {leftTitle}
         </td>
       </tr>
-      {features.map((feature, index) => {
+      {features.map((feature) => {
         const value = feature.values[activePlanIndex];
-        const isLastRow = index === features.length - 1;
         return (
           <tr
             key={feature.id}
-            className={`plans-table__mobile-row ${
-              isLastRow ? "plans-table__row__bottom-border" : ""
-            }`}
+            className={`plans-table__mobile-row plans-table__row__bottom-border`}
           >
             <td
               className="plans-table__mobile-cell plans-table__mobile-cell--feature"
