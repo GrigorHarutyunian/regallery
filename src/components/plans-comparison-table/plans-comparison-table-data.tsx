@@ -5,44 +5,36 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "supported-sites",
     label: "Supported Sites",
-    tooltip: "Number of sites supported across plans",
     values: [<b>1 Site</b>, <b>1 Site</b>, <b>5 Sites</b>, <b>25 Sites</b>],
   },
   {
     id: "updates",
     label: "Updates",
-    tooltip:
-      "Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog",
     values: [true, true, true, true],
   },
   {
     id: "unlimited-galleries",
     label: "Unlimited Galleries",
-    tooltip: "Unlimited number of galleries",
     values: [true, true, true, true],
   },
   {
     id: "unlimited-images",
     label: "Unlimited Images",
-    tooltip: "Unlimited number of galleries",
     values: [true, true, true, true],
   },
   {
     id: "support",
     label: "Support on Public Forums",
-    tooltip: "Standard support",
     values: [true, true, true, true],
   },
   {
     id: "pro-support",
     label: "24/7 PRO Support",
-    tooltip: "Priority support for urgent issues",
     values: [false, true, true, true],
   },
   {
     id: "advanced-customization",
     label: "Advanced Customization",
-    tooltip: "",
     values: [false, false, true, true],
   },
 ];
@@ -52,55 +44,46 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
     {
       id: "layout-grid",
       label: "Grid",
-      tooltip: "Supports WordPress multisite Grid",
       values: [true, true, true, true],
     },
     {
       id: "layout-masonry",
       label: "Masonry",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-mosaic",
       label: "Mosaic",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-justified",
       label: "Justified",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-slider",
       label: "Slider",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-carousel",
       label: "Carousel",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-cube",
       label: "Cube",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-cards",
       label: "Cards",
-      tooltip: "",
       values: [true, true, true, true],
     },
     {
       id: "layout-blog",
       label: "Blog",
-      tooltip: "",
       values: [true, true, true, true],
     },
   ];
@@ -109,37 +92,31 @@ export const plansComparisonPostsPages: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "posts-manual-selection",
     label: "Manual Selection",
-    tooltip: "",
     values: [true, true, true, true],
   },
   {
     id: "posts-dynamic-galleries",
     label: "Dynamic Galleries",
-    tooltip: "",
     values: [true, true, true, true],
   },
   {
     id: "posts-filter-by-posts-pages",
     label: "Filter by Posts / Pages",
-    tooltip: "",
     values: [true, true, true, true],
   },
   {
     id: "posts-filter-by-taxonomy",
     label: "Filter by Taxonomy",
-    tooltip: "",
     values: [true, true, true, true],
   },
   {
     id: "posts-exclude-specific",
     label: "Exclude Specific Posts / Pages",
-    tooltip: "",
     values: [true, true, true, true],
   },
   {
     id: "posts-exclude-without-images",
     label: "Exclude Posts / Pages without Images",
-    tooltip: "",
     values: [true, true, true, true],
   },
 ];
@@ -148,37 +125,31 @@ export const plansComparisonWooCommerce: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "woo-manual-selection",
     label: "Manual Selection",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "woo-dynamic-galleries",
     label: "Dynamic Galleries",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "woo-filter-by-products",
     label: "Filter by Products",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "woo-filter-by-taxonomy",
     label: "Filter by Taxonomy",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "woo-exclude-specific-products",
     label: "Exclude Specific Products",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "woo-exclude-without-images",
     label: "Exclude Products without Images",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
 ];
@@ -192,19 +163,16 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "text-caption",
     label: "Caption",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "text-description",
     label: "Description",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "text-product-price",
     label: "Product Price",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
@@ -220,13 +188,11 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "text-hover-options",
     label: "Hover Options",
-    tooltip: "Some hover options are available in Pro and higher plans",
     values: [true, true, true, true],
   },
   {
     id: "text-blend-mode",
     label: "Blend Mode",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
 ];
@@ -252,7 +218,6 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "lightbox-animations",
     label: "Animations",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
@@ -288,7 +253,6 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "lightbox-filmstrip",
     label: "Filmstrip",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
 ];
@@ -308,7 +272,6 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-hover-effects",
       label: "Hover Effects",
-      tooltip: "Some options available in Pro and higher plans",
       values: [true, true, true, true],
     },
     {
@@ -324,7 +287,6 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-filtering",
       label: "Filtering",
-      tooltip: "Available in Pro and higher plans",
       values: [false, true, true, true],
     },
     {
@@ -335,13 +297,11 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-load-more-button",
       label: "Load More Button",
-      tooltip: "Available in Pro and higher plans",
       values: [true, true, true, true],
     },
     {
       id: "general-infinite-scroll",
       label: "Infinite Scroll",
-      tooltip: "Available in Pro and higher plans",
       values: [true, true, true, true],
     },
     {
@@ -352,13 +312,11 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-watermarking",
       label: "Watermarking",
-      tooltip: "Available in Pro and higher plans",
       values: [false, true, true, true],
     },
     {
       id: "general-white-labeling",
       label: "White Labeling",
-      tooltip: "Available in Pro and higher plans",
       values: [false, true, true, true],
     },
     {
@@ -412,25 +370,21 @@ export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "ai-generative-title",
     label: "Generative Title",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "ai-generative-alt-text",
     label: "Generative Alt Text",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "ai-generative-caption",
     label: "Generative Caption",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
   {
     id: "ai-generative-description",
     label: "Generative Description",
-    tooltip: "Available in Pro and higher plans",
     values: [false, true, true, true],
   },
 ];
