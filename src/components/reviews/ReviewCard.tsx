@@ -3,13 +3,7 @@ import "./Review.css";
 import Rating from "@mui/material/Rating";
 import { motion } from "framer-motion";
 
-const ReviewCards: React.FC<ReviewDTO> = ({
-  title,
-  text,
-  author,
-  seeMore,
-  id,
-}) => {
+const ReviewCards: React.FC<ReviewDTO> = ({ title, text, author, seeMore }) => {
   return (
     <motion.div className="grid-item review-card">
       <div className="review-card__icon">
