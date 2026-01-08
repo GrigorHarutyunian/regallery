@@ -2,7 +2,6 @@ import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
-import pricingData from "../pricing/pricing-data";
 interface MobileSectionProps {
   leftTitle: string;
   features: IPlansComparisonTableFeatureDTO[];
