@@ -55,7 +55,9 @@ const PricingCard: React.FC<PricingDTO> = ({
 
   return (
     <div
-      className={`pricing-card ${mostPopular ? "pricing-card__popular" : ""}`}
+      className={`grid-item pricing-card ${
+        mostPopular ? "pricing-card__popular" : ""
+      }`}
     >
       {mostPopular ? (
         <div className="pricing-card__popular-badge">Most Popular</div>
@@ -102,9 +104,7 @@ const PricingCard: React.FC<PricingDTO> = ({
       {href ? (
         <>
           <a target={"_blank"} href={href}>
-            <div className="pricing-card__btn pricing-card__btn_starter">
-              {buttonText}
-            </div>
+            <div className="pricing-card__btn">{buttonText}</div>
           </a>
         </>
       ) : (
@@ -127,15 +127,23 @@ const PricingCard: React.FC<PricingDTO> = ({
           </div>
         </>
       )}
-      <ul className="pricing-card__features">
-        {advantages.map((val, id) => {
-          return (
-            <li className="pricing-card__features__list" key={id}>
-              {val}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="pricing-card__features-wrapper">
+        <ul className="pricing-card__features">
+          {advantages.map((val, id) => {
+            return (
+              <li className="pricing-card__features__list" key={id}>
+                {val}
+              </li>
+            );
+          })}
+        </ul>
+        <a
+          className="pricing-card__features-link--see-all"
+          href="#plans-comparison-table"
+        >
+          See all features
+        </a>
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Services: React.FC = () => {
             <h2 className="section-text__title-centered">
               What our clients are saying
             </h2>
-            <motion.div className="grid__3">
+            <motion.div className="grid grid__3">
               {reviewData.map((val: ReviewDTO) => {
                 return (
                   <ReviewCards

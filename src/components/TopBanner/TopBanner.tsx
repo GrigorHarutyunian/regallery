@@ -25,8 +25,10 @@ const TopBanner: React.FC = () => {
     localStorage.setItem("topBannerOpen", "false");
     const main = document.querySelector("main");
     const nav = document.querySelector(".nav");
+    const plansTable = document.querySelector(".plans-table");
     main?.classList.add("closed-banner");
     nav?.classList.add("closed-banner");
+    plansTable?.classList.add("closed-banner");
   };
   return (
     <div

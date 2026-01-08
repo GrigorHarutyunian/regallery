@@ -18,7 +18,7 @@ const ReviewCards: React.FC<ReviewDTO> = ({
       "On top of that, the development team is very friendly and very quick to help and answer emails.";
   }
   return (
-    <motion.div className="review-card">
+    <motion.div className="grid-item review-card">
       <div className="review-card__icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
