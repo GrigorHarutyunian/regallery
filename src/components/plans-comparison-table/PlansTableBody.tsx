@@ -25,7 +25,7 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
           {leftTitle}
         </td>
       </tr>
-      {features.map(({ id, label, tooltip, values }, index) => {
+      {features.map(({ id, label, tooltip, values }) => {
         return (
           <tr
             key={id}
