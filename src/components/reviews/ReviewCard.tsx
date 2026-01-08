@@ -10,13 +10,6 @@ const ReviewCards: React.FC<ReviewDTO> = ({
   seeMore,
   id,
 }) => {
-  let cutText = "Thank you for a great plugin!";
-  if (id === 1) {
-    cutText = "The user interface is very intuitive which is a big plus";
-  } else if (id === 2) {
-    cutText =
-      "On top of that, the development team is very friendly and very quick to help and answer emails.";
-  }
   return (
     <motion.div className="grid-item review-card">
       <div className="review-card__icon">
@@ -44,8 +37,8 @@ const ReviewCards: React.FC<ReviewDTO> = ({
             <h3 className="section-text__title-small review__title">{title}</h3>
           </a>
           <a href={seeMore} target="_blank">
-            <p className="section-text__desc review__text">
-              {text.split(cutText)[0]}
+            <p className="section-text__desc">
+              <span className="review__text">{text}</span>
               <span className="read_more_str">Read more...</span>
             </p>
           </a>
