@@ -58,7 +58,8 @@
 }
 
 .plans-table__mobile-cell {
-  padding: 20px;
+  padding: 20px 14px;
+  line-height: 24px;
 }
 .plans-table__mobile-cell--value {
   display: flex;
