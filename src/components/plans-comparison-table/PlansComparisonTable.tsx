@@ -29,14 +29,14 @@ interface PlansTableBodyProps {
 const sections: PlansTableBodyProps[] = [
   { leftTitle: "Core Features", features: plansComparisonCoreFeatures },
   { leftTitle: "Gallery Layouts", features: plansComparisonGalleryLayouts },
-  { leftTitle: "Posts/Pages", features: plansComparisonPostsPages },
-  { leftTitle: "WooCommerce", features: plansComparisonWooCommerce },
-  { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
-  { leftTitle: "Templates", features: plansComparisonTemplates },
-  { leftTitle: "Lightbox", features: plansComparisonLightbox },
   { leftTitle: "General Features", features: plansComparisonGeneralFeatures },
-  { leftTitle: "AI Tools", features: plansComparisonAITools },
+  { leftTitle: "Templates Library", features: plansComparisonTemplates },
   { leftTitle: "Builders", features: plansComparisonBuilders },
+  { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
+  { leftTitle: "AI Automation Tools", features: plansComparisonAITools },
+  { leftTitle: "Lightbox", features: plansComparisonLightbox },
+  { leftTitle: "Posts/Pages", features: plansComparisonPostsPages },
+  { leftTitle: "WooCommerce Gallery", features: plansComparisonWooCommerce },
 ];
 
 const PlansComparisonTable: React.FC = () => {
