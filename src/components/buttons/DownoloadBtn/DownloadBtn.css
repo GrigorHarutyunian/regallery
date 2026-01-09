@@ -13,7 +13,7 @@
   margin: 0;
 }
 .download-btn:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.3);
 }
 
 .download-btn__navbar {

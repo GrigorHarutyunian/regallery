@@ -5,4 +5,5 @@ export interface IPlansComparisonTableFeatureDTO {
   label: string;
   tooltip?: string;
   values: (boolean | string | ReactNode)[];
+  href?: string;
 }

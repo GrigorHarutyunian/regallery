@@ -120,7 +120,7 @@ const PlansComparisonTable: React.FC = () => {
                             </div>
                           ) : null}
                           <div className="pricing-card__subtitle">{title}</div>
-                          {discount ? (
+                          {price !== 0 && discount ? (
                             <span className="canceled-price">
                               <div className="remove_line" />
                               {currency}
@@ -132,7 +132,7 @@ const PlansComparisonTable: React.FC = () => {
                               <span className="currency">{currency}</span>
                             ) : null}
                             {main ? <span>{main}</span> : null}
-                            {cents ? (
+                            {price !== 0 && cents ? (
                               <span className="cents">.{cents}</span>
                             ) : null}
                           </div>

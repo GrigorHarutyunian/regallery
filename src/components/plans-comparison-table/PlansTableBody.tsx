@@ -25,7 +25,7 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
           {leftTitle}
         </td>
       </tr>
-      {features.map(({ id, label, tooltip, values }) => {
+      {features.map(({ id, label, tooltip, values, href }) => {
         return (
           <tr
             key={id}
@@ -33,7 +33,12 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
           >
             <td className="plans-table__cell plans-table__cell--feature">
               <span>
-                {label}{" "}
+                {href && (
+                  <a target="_blank" href={href}>
+                    {label}
+                  </a>
+                )}
+                {!href && label}
                 {tooltip && (
                   <span data-tooltip={tooltip} className="info-icon">
                     {info_icon}

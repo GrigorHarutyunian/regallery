@@ -26,11 +26,12 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
     id: "support",
     label: "Support on Public Forums",
     values: [true, true, true, true],
+    href: "https://wordpress.org/support/plugin/regallery/",
   },
   {
     id: "pro-support",
     label: "24/7 PRO Support",
-    values: [false, true, true, true],
+    values: [false, false, true, true],
   },
   {
     id: "advanced-customization",
@@ -45,46 +46,55 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
       id: "layout-grid",
       label: "Grid",
       values: [true, true, true, true],
-    },
-    {
-      id: "layout-masonry",
-      label: "Masonry",
-      values: [true, true, true, true],
+      href: "https://regallery.team/core/grid-view/",
     },
     {
       id: "layout-mosaic",
       label: "Mosaic",
       values: [true, true, true, true],
+      href: "https://regallery.team/core/mosaic-view/",
+    },
+    {
+      id: "layout-masonry",
+      label: "Masonry",
+      values: [true, true, true, true],
+      href: "https://regallery.team/core/masonry-view/",
     },
     {
       id: "layout-justified",
       label: "Justified",
       values: [true, true, true, true],
+      href: "https://regallery.team/core/justified-view/",
     },
     {
       id: "layout-slider",
       label: "Slider",
       values: [true, true, true, true],
-    },
-    {
-      id: "layout-carousel",
-      label: "Carousel",
-      values: [true, true, true, true],
+      href: "https://regallery.team/core/slider-view/",
     },
     {
       id: "layout-cube",
       label: "Cube",
       values: [true, true, true, true],
+      href: "https://regallery.team/core/cube-view/",
+    },
+    {
+      id: "layout-carousel",
+      label: "Carousel",
+      values: [true, true, true, true],
+      href: "https://regallery.team/core/carousel-view/",
     },
     {
       id: "layout-cards",
       label: "Cards",
       values: [true, true, true, true],
+      href: "https://regallery.team/core/cards-view/",
     },
     {
       id: "layout-blog",
       label: "Blog",
       values: [true, true, true, true],
+      href: "https://regallery.team/core/blog-view/",
     },
   ];
 
@@ -98,6 +108,7 @@ export const plansComparisonPostsPages: IPlansComparisonTableFeatureDTO[] = [
     id: "posts-dynamic-galleries",
     label: "Dynamic Galleries",
     values: [true, true, true, true],
+    href: "https://youtu.be/IQETfwbUKKg",
   },
   {
     id: "posts-filter-by-posts-pages",
@@ -159,6 +170,7 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
     id: "text-title",
     label: "Title",
     values: [true, true, true, true],
+    href: "https://youtu.be/p2LDwCibQhs",
   },
   {
     id: "text-caption",
@@ -202,6 +214,7 @@ export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] =
     id: `template-${index}`,
     label: subItem.title,
     values: [!subItem.pro, true, true, true],
+    href: subItem.path,
   }));
 
 export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
@@ -268,6 +281,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-image-click-actions",
       label: "Image Click Actions",
       values: [true, true, true, true],
+      href: "https://youtu.be/u_AAWKQuaTA",
     },
     {
       id: "general-hover-effects",
@@ -277,7 +291,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-customizable-options",
       label: "Customizable Options",
-      values: ["220+", "300+", "300+", "300+"],
+      values: ["150+", "220+", "300+", "300+"],
     },
     {
       id: "general-sorting",
@@ -293,6 +307,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-paged-pagination",
       label: "Paged Pagination",
       values: [true, true, true, true],
+      href: "https://youtu.be/SQawgaxwm1c",
     },
     {
       id: "general-load-more-button",
@@ -328,6 +343,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-drag-drop-sorting",
       label: "Drag & Drop Sorting",
       values: [true, true, true, true],
+      href: "https://youtu.be/X7cvfWWo-UU",
     },
     {
       id: "general-retina-4k-support",
@@ -364,28 +380,43 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       label: "Real Time Preview",
       values: [true, true, true, true],
     },
+    {
+      id: "general-templates-library",
+      label: "Templates Library",
+      values: ["5+", "40+", "40+", "40+"],
+      href: "https://youtu.be/FVJbXOmu2TA",
+    },
   ];
 
 export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
   {
+    id: "ai-generations",
+    label: "AI Generations",
+    values: [false, "Up to 1000", "Up to 1500", "Unlimited"],
+  },
+  {
     id: "ai-generative-title",
     label: "Generative Title",
     values: [false, true, true, true],
+    href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-alt-text",
     label: "Generative Alt Text",
     values: [false, true, true, true],
+    href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-caption",
     label: "Generative Caption",
     values: [false, true, true, true],
+    href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-description",
     label: "Generative Description",
     values: [false, true, true, true],
+    href: "https://youtu.be/z0bK6SP8jbg",
   },
 ];
 
@@ -394,31 +425,37 @@ export const plansComparisonBuilders: IPlansComparisonTableFeatureDTO[] = [
     id: "builder-gutenberg",
     label: "Gutenberg Block",
     values: [true, true, true, true],
+    href: "https://youtu.be/6AVPJ2fjaYs",
   },
   {
     id: "builder-elementor",
     label: "Elementor Widget",
     values: [true, true, true, true],
+    href: "https://youtu.be/GedxyRxQ02A",
   },
   {
     id: "builder-buiver",
     label: "Buiver Builder Widget",
     values: [true, true, true, true],
+    href: "https://youtu.be/A5U2ghLKYNg",
   },
   {
     id: "builder-divi",
     label: "Divi Module",
     values: [true, true, true, true],
+    href: "https://youtu.be/Z69eZOoWJi0",
   },
   {
     id: "builder-bricks",
     label: "Bricks Widget",
     values: [true, true, true, true],
+    href: "https://youtu.be/aiYdYAn1D_8",
   },
   {
     id: "builder-wpbakery",
     label: "WPBakery Page Builder Widget",
     values: [true, true, true, true],
+    href: "https://youtu.be/FClpKpREzPQ",
   },
   {
     id: "builder-shortcode",

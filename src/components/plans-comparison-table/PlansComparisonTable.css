@@ -3,6 +3,17 @@
 }
 .plans-table {
   display: none;
+  a {
+    text-decoration: none;
+    border-bottom: 1px dashed #9ca3af;
+    cursor: pointer;
+    padding-bottom: 3px;
+    color: inherit;
+  }
+  a:hover {
+    border-bottom: 1px dashed #2540cc;
+    color: #2540cc;
+  }
 }
 .plans-table__wrapper {
   width: 100%;
@@ -27,11 +38,11 @@
     top: 50px;
   }
   .plans-table__row--header {
-    top: 293px;
+    top: 286px;
   }
   @media screen and (min-width: 861px) and (max-width: 1260px) {
     .plans-table__row--header {
-      top: 279px;
+      top: 272px;
     }
   }
 }
@@ -91,7 +102,7 @@
 
 .plans-table__row--header {
   position: sticky;
-  top: 333px;
+  top: 326px;
   z-index: 2;
   color: #000;
   background-color: #f5f5f5;
@@ -134,7 +145,7 @@
     padding: 10px;
   }
   .plans-table__row--header {
-    top: 319px;
+    top: 312px;
   }
 }
 

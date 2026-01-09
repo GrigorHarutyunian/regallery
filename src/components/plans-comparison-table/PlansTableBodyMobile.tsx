@@ -33,7 +33,12 @@ const PlansTableBodyMobile: React.FC<MobileSectionProps> = ({
               colSpan={3}
             >
               <span>
-                {feature.label}{" "}
+                {feature.href && (
+                  <a target="_blank" href={feature.href}>
+                    {feature.label}
+                  </a>
+                )}
+                {!feature.href && feature.label}
                 {feature.tooltip && (
                   <span data-tooltip={feature.tooltip} className="info-icon">
                     {info_icon}
