@@ -45,11 +45,11 @@
     top: 50px;
   }
   .plans-table__row--header {
-    top: 286px;
+    top: 281px;
   }
   @media screen and (min-width: 861px) and (max-width: 1260px) {
     .plans-table__row--header {
-      top: 272px;
+      top: 267px;
     }
   }
 }
@@ -91,7 +91,7 @@
 
 .plans-table__row--header {
   position: sticky;
-  top: 326px;
+  top: 321px;
   z-index: 2;
   color: #000;
   background-color: #f5f5f5;
@@ -134,7 +134,7 @@
     padding: 10px;
   }
   .plans-table__row--header {
-    top: 312px;
+    top: 307px;
   }
 }
 

@@ -1,24 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
-@font-face {
-  font-family: "Evergrow Sans";
-  font-weight: 400;
-  font-display: swap;
-  src: url(assets/fonts/evergrowsans-regular.woff) format("woff");
-}
-@font-face {
-  font-family: "Evergrow Sans";
-  font-weight: 700;
-  font-display: swap;
-  src: url(assets/fonts/evergrowsans-bold.woff) format("woff");
-}
 body {
   width: 100%;
   padding: 0px;
   margin: 0px;
   font-size: 16px;
-  font-family: "Evergrow Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   background-color: #ffffff;
   overflow-x: hidden;
