@@ -110,9 +110,9 @@ const PlansComparisonTable: React.FC = () => {
                       return (
                         <td
                           key={id}
-                          className={`plans-table__column ${
-                            price === 0 ? "free-plan" : ""
-                          }`}
+                          className={`plans-table__column${
+                            price === 0 ? " free-plan" : ""
+                          }${mostPopular ? " pricing-card__popular" : ""}`}
                         >
                           {mostPopular ? (
                             <div className="pricing-card__popular-badge">

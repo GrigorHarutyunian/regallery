@@ -38,6 +38,8 @@ const Pricing: React.FC = () => {
       <div className="pricing__guarantee">
         <div className="pricing__guarantee-badge">
           <img
+            width={150}
+            height={150}
             src={money_back_guarantee}
             alt="Money back guarantee"
             className="pricing__guarantee_icon"

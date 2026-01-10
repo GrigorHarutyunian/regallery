@@ -14,6 +14,13 @@
     border-bottom: 1px dashed #2540cc;
     color: #2540cc;
   }
+  .pricing-card__popular::after {
+    border-radius: unset;
+  }
+  .pricing-card__popular::before {
+    inset: calc(-1 * var(--ring-thickness)) calc(-1 * var(--ring-thickness)) 2px
+      calc(-1 * var(--ring-thickness));
+  }
 }
 .plans-table__wrapper {
   width: 100%;
@@ -74,24 +81,6 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-}
-
-.plans-table__price {
-  text-align: center;
-}
-
-.plans-table__price-inner {
-  display: inline-block;
-  position: relative;
-  margin-right: 27px;
-}
-
-.plans-table__price-currency {
-  position: absolute;
-  left: 0;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
 }
 
 .plans-table__row {
