@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./PlansComparisonTable.css";
 import "./PlansTableBodyMobile.css";
@@ -45,6 +45,19 @@ const PlansComparisonTable: React.FC = () => {
   const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
   const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
   const { openStripeCheckout } = useProVersionActivatorContext();
+
+  // Show the table if it's the current hash target on mount
+  useEffect(() => {
+    if (location.hash === "#see-all-features") {
+      const section = document.getElementById(
+        "see-all-features",
+      ) as HTMLElement;
+      if (section) {
+        section.style.display = "block";
+      }
+    }
+  }, []);
+
   const handleCheckout = async (id: number) => {
     setLoadingPlanId(id);
     try {
@@ -56,7 +69,7 @@ const PlansComparisonTable: React.FC = () => {
     }
   };
   return (
-    <section id="plans-comparison-table" className="plans-table">
+    <section id="see-all-features" className="plans-table">
       <Container>
         <Row>
           <div className="plans-table__wrapper">

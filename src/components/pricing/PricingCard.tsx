@@ -139,7 +139,7 @@ const PricingCard: React.FC<PricingDTO> = ({
         </ul>
         <a
           className="pricing-card__features-link--see-all"
-          href="#plans-comparison-table"
+          href="#see-all-features"
         >
           See all features
         </a>
