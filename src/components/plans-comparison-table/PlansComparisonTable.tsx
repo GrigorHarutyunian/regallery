@@ -12,6 +12,7 @@ import {
   plansComparisonWooCommerce,
   plansComparisonTextMetadata,
   plansComparisonTemplates,
+  plansComparisonHoverEffects,
   plansComparisonAITools,
   plansComparisonBuilders,
   plansComparisonGeneralFeatures,
@@ -31,6 +32,7 @@ const sections: PlansTableBodyProps[] = [
   { leftTitle: "Gallery Layouts", features: plansComparisonGalleryLayouts },
   { leftTitle: "General Features", features: plansComparisonGeneralFeatures },
   { leftTitle: "Templates Library", features: plansComparisonTemplates },
+  { leftTitle: "Hover Effects", features: plansComparisonHoverEffects },
   { leftTitle: "Builders", features: plansComparisonBuilders },
   { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
   { leftTitle: "AI Automation Tools", features: plansComparisonAITools },
@@ -86,7 +88,8 @@ const PlansComparisonTable: React.FC = () => {
                       }
                       var discountedPrice = discount
                         ? Math.round(
-                            (price - (Math.round(price) * discount) / 100) * 100
+                            (price - (Math.round(price) * discount) / 100) *
+                              100,
                           ) / 100
                         : 0;
 
@@ -175,7 +178,7 @@ const PlansComparisonTable: React.FC = () => {
                           )}
                         </td>
                       );
-                    }
+                    },
                   )}
                 </tr>
               </tbody>

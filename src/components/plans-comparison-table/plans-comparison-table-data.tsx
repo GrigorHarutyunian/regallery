@@ -137,6 +137,7 @@ export const plansComparisonWooCommerce: IPlansComparisonTableFeatureDTO[] = [
     id: "woo-manual-selection",
     label: "Manual Selection",
     values: [false, true, true, true],
+    href: "https://regallery.team/core/how-to-create-a-woocommerce-products-gallery-optimized-for-speed-sales-seo/",
   },
   {
     id: "woo-dynamic-galleries",
@@ -244,24 +245,24 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
     values: [true, true, true, true],
   },
   {
+    id: "lightbox-deeplinking",
+    label: "Image Deeplinking",
+    values: [true, true, true, true],
+  },
+  {
     id: "lightbox-counter",
     label: "Counter",
-    values: [true, true, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "lightbox-share-images",
     label: "Share Images",
-    values: [true, true, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "lightbox-download-images",
     label: "Download Images",
-    values: [true, true, true, true],
-  },
-  {
-    id: "lightbox-deeplinking",
-    label: "Image Deeplinking",
-    values: [true, true, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "lightbox-filmstrip",
@@ -278,20 +279,25 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       values: [true, true, true, true],
     },
     {
+      id: "general-customizable-options",
+      label: "Customizable Options",
+      values: ["150+", "220+", "300+", "300+"],
+    },
+    {
       id: "general-image-click-actions",
       label: "Image Click Actions",
       values: [true, true, true, true],
       href: "https://youtu.be/u_AAWKQuaTA",
     },
     {
-      id: "general-hover-effects",
-      label: "Hover Effects",
-      values: [true, true, true, true],
+      id: "action-url",
+      label: "Action URL",
+      values: [false, true, true, true],
     },
     {
-      id: "general-customizable-options",
-      label: "Customizable Options",
-      values: ["150+", "220+", "300+", "300+"],
+      id: "general-hover-effects",
+      label: "Hover Effects",
+      values: ["7", "15", "15", "15"],
     },
     {
       id: "general-sorting",
@@ -317,7 +323,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-infinite-scroll",
       label: "Infinite Scroll",
-      values: [true, true, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-lazy-loading",
@@ -387,6 +393,83 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       href: "https://youtu.be/FVJbXOmu2TA",
     },
   ];
+export const plansComparisonHoverEffects: IPlansComparisonTableFeatureDTO[] = [
+  {
+    id: "zoom-in",
+    label: "Zoom In",
+    values: [true, true, true, true],
+  },
+  {
+    id: "zoom-out",
+    label: "Zoom Out",
+    values: [true, true, true, true],
+  },
+  {
+    id: "slide",
+    label: "Slide",
+    values: [true, true, true, true],
+  },
+  {
+    id: "rotate",
+    label: "Rotate",
+    values: [true, true, true, true],
+  },
+  {
+    id: "circle",
+    label: "Circle",
+    values: [true, true, true, true],
+  },
+  {
+    id: "sepia",
+    label: "Sepia",
+    values: [true, true, true, true],
+  },
+  {
+    id: "overlay",
+    label: "Overlay",
+    values: [true, true, true, true],
+  },
+  {
+    id: "flash",
+    label: "Flash",
+    values: [false, true, true, true],
+  },
+  {
+    id: "shine",
+    label: "Shine",
+    values: [false, true, true, true],
+  },
+  {
+    id: "blur",
+    label: "Blur",
+    values: [false, true, true, true],
+  },
+  {
+    id: "gray-scale",
+    label: "Gray Scale",
+    values: [false, true, true, true],
+  },
+  {
+    id: "overlay-zoom-icon",
+    label: "Overlay Zoom Icon",
+    values: [false, true, true, true],
+  },
+  {
+    id: "overlay-cart-icon",
+    label: "Overlay Cart Icon",
+    values: [false, true, true, true],
+  },
+  {
+    id: "overlay-plus-icon",
+    label: "Overlay Plus Icon",
+    values: [false, true, true, true],
+  },
+  {
+    id: "overlay-fullscreen-icon",
+    label: "Overlay Fullscreen Icon",
+    values: [false, true, true, true],
+  },
+];
 
 export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
   {
