@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Container } from "react-bootstrap";
-import SupportAndInfoDTO from "../../types/SupportAndInfoDTO";
-import "./SupportAndInfo.css";
+import SectionDTO from "../../types/SectionDTO";
+import "./Section.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
 import {
@@ -11,67 +11,48 @@ import {
 } from "react-lazy-load-image-component";
 import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
-interface ExtendedSupportAndInfoDTO extends SupportAndInfoDTO {
-  video?: string | string[];
-  additionalButtonLink?: string;
-  viewMoreLinks?: string[];
-}
 
-const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
-  title,
-  text,
-  id,
-  video,
-  img,
-  alt,
-  additionalButtonLink,
-  additionalButtonName,
-  viewMoreLinks = [],
-}) => {
+const Section: React.FC<SectionDTO> = ({ data }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
   return (
-    <section id={id} className="supportandInfo">
+    <section id={data.id} className="supportandInfo">
       <Container>
         <motion.div className="support__row info">
           <motion.div className="section-text">
-            <h2 className="section-text__title">{title}</h2>
-            <p className="section-text__body">{text}</p>
+            <h2 className="section-text__title">{data.title}</h2>
+            <p className="section-text__body">{data.text}</p>
             {version === "mobile" && (
               <motion.div
                 className="section-image"
-                style={
-                  id === "aboutMobileResponsiveness"
-                    ? { maxWidth: "unset" }
-                    : undefined
-                }
+                style={data.img ? { maxWidth: "unset" } : undefined}
               >
-                {id === "info" ? (
+                {data.video ? (
                   <LazyLoadComponent>
                     <video
                       height="100%"
                       width="100%"
-                      src={video as string}
+                      src={data.video as string}
                       autoPlay
                       loop
                       muted
                       playsInline
                     />
                   </LazyLoadComponent>
-                ) : id === "builder" ? (
+                ) : data.slides ? (
                   <VideoSlider
-                    videos={video as string[]}
+                    videos={data.slides as string[]}
                     height="100%"
                     width="100%"
-                    viewMoreLinks={viewMoreLinks}
+                    viewMoreLinks={data.viewMoreLinks}
                   />
                 ) : (
-                  id === "aboutMobileResponsiveness" && (
+                  data.img && (
                     <LazyLoadImage
                       height="100%"
                       width="100%"
-                      src={img}
-                      alt={alt}
+                      src={data.img}
+                      alt={data.alt}
                     />
                   )
                 )}
@@ -82,32 +63,32 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
               <a href="#pricing">
                 <DownloadBtn className="download-btn" />
               </a>
-              {additionalButtonLink && (
+              {data.additionalButtonLink && (
                 <a
                   className="download-btn watch_video"
-                  href={additionalButtonLink}
+                  href={data.additionalButtonLink}
                   target="_blank"
                 >
-                  {additionalButtonName}
+                  {data.additionalButtonName}
                 </a>
               )}
             </div>
           </motion.div>
           {version !== "mobile" && (
             <motion.div style={{ maxWidth: "50%" }} className="section-image">
-              {id === "builder" ? (
+              {data.slides ? (
                 <VideoSlider
-                  videos={video as string[]}
+                  videos={data.slides as string[]}
                   height="100%"
                   width="100%"
-                  viewMoreLinks={viewMoreLinks}
+                  viewMoreLinks={data.viewMoreLinks}
                 />
-              ) : id === "info" ? (
+              ) : data.video ? (
                 <LazyLoadComponent>
                   <video
                     height="100%"
                     width="100%"
-                    src={video as string}
+                    src={data.video as string}
                     autoPlay
                     loop
                     muted
@@ -115,7 +96,12 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
                   />
                 </LazyLoadComponent>
               ) : (
-                <LazyLoadImage height="100%" width="100%" src={img} alt={alt} />
+                <LazyLoadImage
+                  height="100%"
+                  width="100%"
+                  src={data.img}
+                  alt={data.alt}
+                />
               )}
             </motion.div>
           )}
@@ -125,4 +111,4 @@ const SupportAndInfo: React.FC<ExtendedSupportAndInfoDTO> = ({
   );
 };
 
-export default SupportAndInfo;
+export default Section;

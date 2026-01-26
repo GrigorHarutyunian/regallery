@@ -14,6 +14,7 @@ interface Link {
   type?: string;
   subMenuItems?: Array<any>;
   external?: boolean;
+  badge?: string;
 }
 
 const links: Link[] = [
@@ -33,15 +34,15 @@ const links: Link[] = [
     target: "_blank",
     external: true,
   },
-  { id: 4, title: "Pricing", href: "#pricing" },
+  { id: 4, title: "Re Gallery Studio", href: "#studio", badge: "NEW!" },
+  { id: 5, title: "Pricing", href: "#pricing" },
   {
-    id: 5,
+    id: 6,
     title: "Blog",
     href: "https://regallery.team/core/blog/",
     target: "_blank",
     external: true,
   },
-  { id: 6, title: "FAQ", href: "#faq" },
   { id: 7, title: "Contact us", href: "#support" },
 
   {
@@ -93,7 +94,7 @@ const Navbar: React.FC = () => {
     // }
 
     const container = document.querySelector(
-      ".demo_live_container"
+      ".demo_live_container",
     ) as HTMLElement;
 
     if (container.offsetHeight > 320) {
@@ -155,12 +156,17 @@ const Navbar: React.FC = () => {
                   />
                 ) : (
                   <>
-                    <div className={"nav-link__text"}>{link.title}</div>
+                    <div className={"nav-link__text"}>
+                      {link.title}
+                      {link.badge && (
+                        <span className="nav-link__badge">{link.badge}</span>
+                      )}
+                    </div>
                     <div className={"nav-link__background"} />
                   </>
                 )}
               </a>
-            )
+            ),
           )}
         </nav>
         <div

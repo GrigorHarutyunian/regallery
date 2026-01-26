@@ -1,5 +1,6 @@
-import infoMp4 from "../../assets/sections/Second_section_940.mp4";
+import infoMp4 from "../assets/sections/Second_section_940.mp4";
 const infoData = {
+  id: "info",
   title: "Why Choose the Re Gallery plugin?",
   text: (
     <>
@@ -12,8 +13,6 @@ const infoData = {
     </>
   ),
   video: infoMp4,
-  sizes:
-    "(max-width: 700px) 298px, (min-width: 701px) and (max-width: 1100px) 397px, 595px",
   alt: `Discover why Re Gallery is the best WordPress photo gallery plugin. Featuring responsive design, intuitive interface, and extensive customization options.`,
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
   additionalButtonName: "ADMIN DEMO",

@@ -28,6 +28,7 @@ main.closed-banner {
 
 main > section#views,
 section#features,
+section#benefits,
 section#review,
 section#pricing {
   background-color: #eee !important;
