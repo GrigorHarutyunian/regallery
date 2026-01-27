@@ -338,7 +338,7 @@
 }
 @media screen and (min-width: 701px) and (max-width: 920px) {
   .dropdown-menu {
-    width: calc(100% - 50px);
+    width: 100%;
   }
   .submenu_lists {
     padding: 0px 20px;
@@ -396,7 +396,7 @@
   }
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (min-width: 1023px) and (max-width: 1279px) {
   .download-btn__navbar {
     font-size: 0.9rem !important;
     white-space: nowrap;
@@ -415,7 +415,7 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 900px) and (max-width: 1023px) {
   .download-btn__navbar {
     font-size: 0.8rem !important;
     white-space: nowrap;
@@ -434,7 +434,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 780px) and (max-width: 900px) {
   .download-btn__navbar {
     font-size: 9px !important;
     white-space: nowrap;

@@ -134,7 +134,7 @@ p {
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 765px) {
+@media screen and (min-width: 780px) and (max-width: 1024px) {
   .fi-rs-angle-small-down {
     height: 13px;
     width: 13px;
