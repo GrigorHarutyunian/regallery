@@ -158,6 +158,14 @@
 .pricing-card__features__list:last-child {
   margin-bottom: 0;
 }
+.badge {
+  font-size: 15px;
+  color: #df2a4a;
+  white-space: nowrap;
+  margin-left: 4px;
+  margin-top: -3px;
+  position: absolute;
+}
 .bold__list {
   font-weight: 700;
 }
@@ -223,26 +231,6 @@ a.pricing-card__features-link--see-all {
   margin-left: 12px;
   text-decoration: underline;
 }
-@media screen and (min-width: 1126px) and (max-width: 1240px) {
-  .pricing-card__features__list {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: 966px) and (max-width: 1125px) {
-  .pricing-card__btn {
-    font-size: 0.8rem;
-  }
-  .pricing-card__features__list {
-    font-size: 12px;
-  }
-}
-
-@media screen and (min-width: 861px) and (max-width: 975px) {
-  .woo-icon {
-    width: 46px;
-  }
-}
 
 /* Tooltip for small info icons in lists */
 .info-icon {
@@ -254,8 +242,8 @@ a.pricing-card__features-link--see-all {
   vertical-align: middle;
   position: relative;
   svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     fill: currentColor;
   }
 }
@@ -332,42 +320,35 @@ a.pricing-card__features-link--see-all {
   line-height: 26px;
 }
 
-@media screen and (min-width: 861px) and (max-width: 965px) {
-  .pricing__text {
-    font-size: 14px;
-  }
-  .pricing-card__duration {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
+@media screen and (min-width: 1126px) and (max-width: 1240px) {
   .pricing-card__features__list {
-    font-size: 10px;
+    font-size: 15px;
   }
-  .pricing-card__title {
-    font-size: 35px;
+  .badge {
+    font-size: 13px;
   }
-  .plan-type {
-    font-size: 10px;
-  }
-  .saved_money_div {
-    padding: 4px 10px;
-    max-width: 84px;
-  }
-  .pricing-card__btn {
-    margin-top: 14px;
-    font-size: 0.7rem;
-  }
-  .pricing-card__subtitle {
-    font-size: 20px;
+  .info-icon svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
-@media screen and (max-width: 860px) {
-  .pricing-card__btn {
-    padding: 16px;
-    width: 80%;
-    font-size: 1rem;
+@media screen and (min-width: 1024px) and (max-width: 1125px) {
+  .pricing-card__features__list {
+    font-size: 12px;
+  }
+  .badge {
+    font-size: 10px;
+  }
+  .info-icon svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 975px) {
+  .woo-icon {
+    width: 46px;
   }
 }
 
@@ -380,31 +361,8 @@ a.pricing-card__features-link--see-all {
   }
 }
 
-@media screen and (min-width: 476px) and (max-width: 859px) {
-  .pricing-card__features__list {
-    font-size: 15px;
-  }
-}
-
 @media screen and (min-width: 350px) and (max-width: 475px) {
-  .pricing-card__btn {
-    padding: 16px;
-    width: 80%;
-    font-size: 0.8rem;
-  }
-  .pricing-card__features__list {
-    font-size: 13px;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 349px) {
-  .pricing-card__btn {
-    font-size: 0.55rem;
-  }
-  .pricing-card__features__list {
-    font-size: 12px;
-  }
-  .woo-icon {
+  .pricing-card__features__list > svg {
     width: 46px;
   }
 }
