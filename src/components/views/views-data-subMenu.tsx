@@ -20,6 +20,8 @@ import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay
 import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.webp";
 import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
+import TemplateSwipeflow from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
+import TemplateTravelAgency from "../../assets/imgs/views/subViews/carousel/Travel_Agency.webp";
 import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Blinds_Slider.webp";
 import Horizontalscrollthumbnail from "../../assets/imgs/views/subViews/carousel/Horizontal_Scroll.webp";
 import Carouselshowcasethumbnail from "../../assets/imgs/views/subViews/carousel/Carousel_Showcase.webp";
@@ -368,6 +370,22 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       />
     ),
     subItems: [
+      {
+        title: "Swipeflow",
+        description:
+          "The Swipeflow Gallery template in Re Gallery features a modern swipe-based gallery layout for displaying images in a clean and engaging way. Ideal for creative and portfolio websites.",
+        imgUrl: TemplateSwipeflow,
+        path: "https://regallery.team/core/reacg/swipeflow/",
+        pro: true,
+      },
+      {
+        title: "Travel Agency",
+        description:
+          "Create a stunning, responsive website for your travel agency or tour business. Showcase destinations, enable bookings, and attract more travelers with ease!",
+        imgUrl: TemplateTravelAgency,
+        path: "https://regallery.team/core/reacg/travel-agency/",
+        pro: true,
+      },
       {
         title: "Blinds Slider",
         description:
