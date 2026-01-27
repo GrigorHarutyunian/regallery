@@ -38,6 +38,11 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
     label: "Advanced Customization",
     values: [false, false, true, true],
   },
+  {
+    id: "re-gallery-studio",
+    label: "Re Gallery Studio",
+    values: [false, false, false, true],
+  },
 ];
 
 export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
