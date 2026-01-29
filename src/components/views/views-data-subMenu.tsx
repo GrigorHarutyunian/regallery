@@ -20,8 +20,10 @@ import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay
 import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.webp";
 import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
+import VideoCubeGallery from "../../assets/imgs/views/subViews/cube/Video_Cube.webp";
 import TemplateSwipeflow from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
 import TemplateTravelAgency from "../../assets/imgs/views/subViews/carousel/Travel_Agency.webp";
+import TemplateAdvertisement from "../../assets/imgs/views/subViews/carousel/Advertisement.webp";
 import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Blinds_Slider.webp";
 import Horizontalscrollthumbnail from "../../assets/imgs/views/subViews/carousel/Horizontal_Scroll.webp";
 import Carouselshowcasethumbnail from "../../assets/imgs/views/subViews/carousel/Carousel_Showcase.webp";
@@ -353,6 +355,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         path: "https://regallery.team/core/reacg/testimonial-gallery/",
         pro: false,
       },
+      {
+        title: "Video Cube",
+        description:
+          "Showcase your videos in a dynamic 3D cube layout! Perfect for portfolios, product demos, and creative projects. Fully responsive, smooth, and engaging.",
+        imgUrl: VideoCubeGallery,
+        path: "https://regallery.team/core/reacg/video-cube/",
+        pro: true,
+      },
     ],
   },
 
@@ -384,6 +394,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "Create a stunning, responsive website for your travel agency or tour business. Showcase destinations, enable bookings, and attract more travelers with ease!",
         imgUrl: TemplateTravelAgency,
         path: "https://regallery.team/core/reacg/travel-agency/",
+        pro: true,
+      },
+      {
+        title: "Advertisement",
+        description:
+          "Showcase ads, banners, and featured content in a smooth carousel layout. Perfect for promotions, announcements, and highlights. Fully responsive and easy to set up with Re Gallery.",
+        imgUrl: TemplateAdvertisement,
+        path: "https://regallery.team/core/reacg/advertisement/",
         pro: true,
       },
       {
