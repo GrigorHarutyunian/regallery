@@ -18,6 +18,11 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
     values: [true, true, true, true],
   },
   {
+    id: "unlimited-albums",
+    label: "Unlimited Albums",
+    values: [true, true, true, true],
+  },
+  {
     id: "unlimited-images",
     label: "Unlimited Images",
     values: [true, true, true, true],
