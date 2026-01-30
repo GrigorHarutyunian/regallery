@@ -16,6 +16,7 @@ import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/Latte_
 import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/Display_Collection.webp";
 import MemoryWall from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp";
 import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite_Scroll.webp";
+import BorderHover from "../../assets/imgs/views/subViews/masonry/Border_Hover.webp";
 import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay_Slideshow.webp";
 import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.webp";
 import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
@@ -276,9 +277,17 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Tide Frame",
         description:
-          "The Tide Frame template in Re Gallery offers a clean and elegant way to display your images within dynamic, fluid frames. Perfect for photographers, artists, and creatives",
+          "The Tide Frame template in Re Gallery offers a clean and elegant way to display your images within dynamic, fluid frames. Perfect for photographers, artists, and creatives.",
         imgUrl: InfiniteScroll,
         path: "https://regallery.team/core/reacg/tide-frame/",
+        pro: true,
+      },
+      {
+        title: "Border Hover",
+        description:
+          "A clean gallery layout with an elegant border hover effect. Perfect for portfolios, photography, and modern WordPress websites. Fully responsive and easy to use with Re Gallery.",
+        imgUrl: BorderHover,
+        path: "https://regallery.team/core/reacg/border-hover/",
         pro: true,
       },
     ],
