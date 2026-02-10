@@ -23,6 +23,7 @@ import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
 import VideoCubeGallery from "../../assets/imgs/views/subViews/cube/Video_Cube.webp";
 import TemplateSwipeflow from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
+import TemplateServiceBlocks from "../../assets/imgs/views/subViews/carousel/Service_Blocks.webp";
 import TemplateTravelAgency from "../../assets/imgs/views/subViews/carousel/Travel_Agency.webp";
 import TemplateAdvertisement from "../../assets/imgs/views/subViews/carousel/Advertisement.webp";
 import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Blinds_Slider.webp";
@@ -436,6 +437,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         imgUrl: Horizontalscrollthumbnail,
         path: "https://regallery.team/core/reacg/horizontal-scroll/",
         pro: false,
+      },
+      {
+        title: "Service Blocks",
+        description:
+          "A visually engaging section to showcase what makes you stand out—perfect for “Why Choose Us” or key benefits on any website.",
+        imgUrl: TemplateServiceBlocks,
+        path: "https://regallery.team/core/reacg/service-blocks/",
+        pro: true,
       },
     ],
   },
