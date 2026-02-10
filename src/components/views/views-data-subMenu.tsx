@@ -44,6 +44,7 @@ import SmartRows from "../../assets/imgs/views/subViews/justified/Smart_Rows.web
 import SoftHover from "../../assets/imgs/views/subViews/justified/Soft_Hover.webp";
 import GlideCaptions from "../../assets/imgs/views/subViews/mosaic/Glide_Captions.webp";
 import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
+import ProductCards from "../../assets/imgs/views/subViews/thumbnail/Product_Cards.webp";
 import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
 import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered_Caption.webp";
 export const viewsDataSubMenu = [
@@ -249,6 +250,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Glide Captions template reveals image captions with a clean sliding motion, offering an engaging way to showcase titles. Ideal for storytelling galleries, portfolios, and featured collections.",
         imgUrl: GlideCaptions,
         path: "https://regallery.team/core/reacg/glide-captions/",
+        pro: true,
+      },
+      {
+        title: "Product Cards",
+        description:
+          "Product Cards template showcases images in elegant cards with title, price - perfect for product showcases and shop-style galleries.",
+        imgUrl: ProductCards,
+        path: "https://regallery.team/core/reacg/product-cards/",
         pro: true,
       },
     ],
