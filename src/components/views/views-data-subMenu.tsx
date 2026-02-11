@@ -41,6 +41,7 @@ import BlogGeneralImg from "../../assets/imgs/views/menu_general_imgs/blog.webp"
 import AboutUsTemplate from "../../assets/imgs/views/subViews/blog/AboutUs.webp";
 import TravelBlogTemplate from "../../assets/imgs/views/subViews/blog/TravelBlog.webp";
 import SmartRows from "../../assets/imgs/views/subViews/justified/Smart_Rows.webp";
+import Portfolio from "../../assets/imgs/views/subViews/justified/Portfolio.webp";
 import SoftHover from "../../assets/imgs/views/subViews/justified/Soft_Hover.webp";
 import GlideCaptions from "../../assets/imgs/views/subViews/mosaic/Glide_Captions.webp";
 import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
@@ -549,6 +550,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Soft Hover template adds a gentle, elegant hover animation to your images, creating a smooth and modern visual experience. Perfect for portfolios, creative projects, and minimalist gallery layouts.",
         imgUrl: SoftHover,
         path: "https://regallery.team/core/reacg/soft-hover/",
+        pro: true,
+      },
+      {
+        title: "Portfolio",
+        description:
+          "Responsive gallery with 3D mockups, particle interactions, testimonials & cinematic video sections. Ideal for UI/UX, motion & visual artists.",
+        imgUrl: Portfolio,
+        path: "https://regallery.team/core/reacg/portfolio/",
         pro: true,
       },
     ],
