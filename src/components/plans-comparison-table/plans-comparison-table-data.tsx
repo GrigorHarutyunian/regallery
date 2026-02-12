@@ -341,6 +341,11 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       values: [true, true, true, true],
     },
     {
+      id: "general-right-click-protection",
+      label: "Right click protection",
+      values: [false, true, true, true],
+    },
+    {
       id: "general-watermarking",
       label: "Watermarking",
       values: [false, true, true, true],
