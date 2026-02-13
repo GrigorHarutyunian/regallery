@@ -17,7 +17,7 @@ const TopBanner: React.FC = () => {
     </>
   );
   const [topBannerOpen, setTopBannerOpen] = useState<boolean>(
-    localStorage.getItem("topBannerOpen") !== "false"
+    localStorage.getItem("topBannerOpen") !== "false",
   );
 
   const closeTopBanner = () => {
@@ -34,8 +34,9 @@ const TopBanner: React.FC = () => {
     <div
       className={clsx(
         "nav-banner",
+        sale?.className,
         { closed: !topBannerOpen },
-        { inverse: inverse }
+        { inverse: inverse },
       )}
     >
       <div className="nav-banner-content">

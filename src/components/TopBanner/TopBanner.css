@@ -91,3 +91,12 @@
     fill: #000000;
   }
 }
+.inverse.valentine {
+  .nav-banner-content {
+    background-color: #d9898c;
+    color: #ffffff;
+  }
+  .banner-icon path {
+    fill: #ffffff;
+  }
+}
