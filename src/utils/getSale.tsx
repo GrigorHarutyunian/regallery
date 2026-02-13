@@ -4,10 +4,12 @@
 // import blackFridayMobile from "../assets/sale/Black Friday Portrait.webp";
 // import cyberMondayDesktop from "../assets/sale/Cyber Monday.webp";
 // import cyberMondayMobile from "../assets/sale/Cyber Monday Portrait.webp";
-import christmasSale1Desktop from "../assets/sale/Christmas Sale1.webp";
-import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.webp";
-import christmasSale2Desktop from "../assets/sale/Christmas Sale2.webp";
-import christmasSale2Mobile from "../assets/sale/Christmas Sale2 Portrait.webp";
+// import christmasSale1Desktop from "../assets/sale/Christmas Sale1.webp";
+// import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.webp";
+// import christmasSale2Desktop from "../assets/sale/Christmas Sale2.webp";
+// import christmasSale2Mobile from "../assets/sale/Christmas Sale2 Portrait.webp";
+import ValentineSaleDesktop from "../assets/sale/Valentine Sale.webp";
+import ValentineSaleMobile from "../assets/sale/Valentine Sale Portrait.webp";
 // Dynamic discount utility based on Pacific Time windows.
 
 // PST is UTC-8 for these dates (standard time).
@@ -19,7 +21,7 @@ function pstToUtcTimestamp(
   day: number,
   hour: number,
   minute: number,
-  second: number
+  second: number,
 ) {
   // month is 1-based; Date.UTC month param is 0-based.
   const utcHour = hour + PST_OFFSET_HOURS; // shift to UTC
@@ -42,12 +44,16 @@ const csPhase1EndUtc = pstToUtcTimestamp(2025, 12, 23, 22, 59, 59);
 const csPhase2StartUtc = pstToUtcTimestamp(2025, 12, 23, 0, 0, 0);
 const csPhase2EndUtc = pstToUtcTimestamp(2025, 12, 30, 23, 59, 59);
 
+const vsPhase2StartUtc = pstToUtcTimestamp(2026, 2, 13, 0, 0, 0);
+const vsPhase2EndUtc = pstToUtcTimestamp(2026, 2, 15, 23, 59, 59);
+
 export function getSaleKey(now: number = Date.now()): number | undefined {
   if (now >= bfPhase1StartUtc && now <= bfPhase1EndUtc) return 1;
   if (now >= bfPhase2StartUtc && now <= bfPhase2EndUtc) return 2;
   if (now >= bfPhase3StartUtc && now <= bfPhase3EndUtc) return 3;
   if (now >= csPhase1StartUtc && now <= csPhase1EndUtc) return 4;
   if (now >= csPhase2StartUtc && now <= csPhase2EndUtc) return 5;
+  if (now >= vsPhase2StartUtc && now <= vsPhase2EndUtc) return 6;
   return undefined;
 }
 
@@ -59,6 +65,7 @@ export function getSale(): {
   desktop: string;
   mobile: string;
   key: string;
+  className?: string;
 } | null {
   switch (getSaleKey()) {
     // case 1:
@@ -107,41 +114,61 @@ export function getSale(): {
     //     mobile: cyberMondayMobile,
     //     key: "cyberMondayBannerSeen",
     //   };
-    case 4:
+    // case 4:
+    //   return {
+    //     discount: 50,
+    //     couponCode: "CHRISTMAS25",
+    //     label: "Christmas Sale",
+    //     message: (
+    //       <>
+    //         Christmas Sale.{" "}
+    //         <a href="#pricing">
+    //           <b>Get 50% off</b>
+    //         </a>{" "}
+    //         with Coupon Code: CHRISTMAS25
+    //       </>
+    //     ),
+    //     desktop: christmasSale1Desktop,
+    //     mobile: christmasSale1Mobile,
+    //     key: "christmasSale1BannerSeen",
+    //   };
+    // case 5:
+    //   return {
+    //     discount: 50,
+    //     couponCode: "CHRISTMAS25",
+    //     label: "Christmas Sale",
+    //     message: (
+    //       <>
+    //         Christmas Sale.{" "}
+    //         <a href="#pricing">
+    //           <b>Get 50% off</b>
+    //         </a>{" "}
+    //         with Coupon Code: CHRISTMAS25
+    //       </>
+    //     ),
+    //     desktop: christmasSale2Desktop,
+    //     mobile: christmasSale2Mobile,
+    //     key: "christmasSale2BannerSeen",
+    //   };
+
+    case 6:
       return {
-        discount: 50,
-        couponCode: "CHRISTMAS25",
-        label: "Christmas Sale",
+        discount: 28,
+        couponCode: "VALENTINE2026",
+        label: "Valentine Sale",
+        className: "valentine",
         message: (
           <>
-            Christmas Sale.{" "}
+            Valentine Sale.{" "}
             <a href="#pricing">
-              <b>Get 50% off</b>
+              <b>Get 2 x 14% off</b>
             </a>{" "}
-            with Coupon Code: CHRISTMAS25
+            with Coupon Code: VALENTINE2026
           </>
         ),
-        desktop: christmasSale1Desktop,
-        mobile: christmasSale1Mobile,
-        key: "christmasSale1BannerSeen",
-      };
-    case 5:
-      return {
-        discount: 50,
-        couponCode: "CHRISTMAS25",
-        label: "Christmas Sale",
-        message: (
-          <>
-            Christmas Sale.{" "}
-            <a href="#pricing">
-              <b>Get 50% off</b>
-            </a>{" "}
-            with Coupon Code: CHRISTMAS25
-          </>
-        ),
-        desktop: christmasSale2Desktop,
-        mobile: christmasSale2Mobile,
-        key: "christmasSale2BannerSeen",
+        desktop: ValentineSaleDesktop,
+        mobile: ValentineSaleMobile,
+        key: "ValentineSaleDesktopBannerSeen",
       };
 
     default:
