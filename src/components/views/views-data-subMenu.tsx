@@ -48,6 +48,8 @@ import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
 import ProductCards from "../../assets/imgs/views/subViews/thumbnail/Product_Cards.webp";
 import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
 import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered_Caption.webp";
+import DetailGrid from "../../assets/imgs/views/subViews/thumbnail/DetailGrid.webp";
+import CTACards from "../../assets/imgs/views/subViews/thumbnail/CTACards.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -204,6 +206,20 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         imgUrl: CenteredCaption,
         path: "https://regallery.team/core/reacg/centered-caption/",
         pro: true,
+      },
+      {
+        title: "Detail Grid",
+        description:
+          "Combine images with titles, dates, and detailed descriptions in a clean grid format. Perfect for lookbooks, blog previews, case studies, and editorial-style showcases.",
+        imgUrl: DetailGrid,
+        path: "https://regallery.team/core/reacg/detail-grid/",
+      },
+      {
+        title: "CTA Cards",
+        description:
+          "Easily boost engagement and conversions with our customizable CTA Cards template—perfect for guiding viewers to subscribe, click, or explore your content.",
+        imgUrl: CTACards,
+        path: "https://regallery.team/core/reacg/cta-cards/",
       },
     ],
   },
