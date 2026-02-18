@@ -22,6 +22,7 @@ import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.
 import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
 import VideoCubeGallery from "../../assets/imgs/views/subViews/cube/Video_Cube.webp";
+import LiquidGlass from "../../assets/imgs/views/subViews/carousel/LiquidGlass.webp";
 import TemplateSwipeflow from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
 import TemplateServiceBlocks from "../../assets/imgs/views/subViews/carousel/Service_Blocks.webp";
 import TemplateTravelAgency from "../../assets/imgs/views/subViews/carousel/Travel_Agency.webp";
@@ -418,6 +419,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       />
     ),
     subItems: [
+      {
+        title: "Liquid Glass",
+        description:
+          "Liquid Glass is a modern template inspired by the sleek, frosted “liquid glass” aesthetic. Featuring category badges, elegant overlays, and smooth sliding interaction, it delivers a premium presentation, perfect for restaurants, cafés, hospitality, and lifestyle showcases.",
+        imgUrl: LiquidGlass,
+        path: "https://regallery.team/core/reacg/liquid-glass/",
+        pro: true,
+      },
       {
         title: "Swipeflow",
         description:
