@@ -14,7 +14,8 @@ import SimplePrisme from "../../assets/imgs/views/subViews/thumbnail/Simple_Pris
 import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/Monochrome_Collection.webp";
 import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/Latte_Mosaic.webp";
 import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/Display_Collection.webp";
-import MemoryWall from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp";
+import MotionView from "../../assets/imgs/views/subViews/masonry/MotionView.webp";
+import TideFrame from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp";
 import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite_Scroll.webp";
 import BorderHover from "../../assets/imgs/views/subViews/masonry/Border_Hover.webp";
 import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay_Slideshow.webp";
@@ -297,10 +298,18 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
+        title: "Motion View",
+        description:
+          "Motion View is a minimal gallery template designed to showcase images and short videos in one seamless layout.",
+        imgUrl: MotionView,
+        path: "https://regallery.team/core/reacg/motion-view/",
+        pro: true,
+      },
+      {
         title: "Infinite Scroll",
         description:
-          "The Infinite Scroll template in Re Gallery allows for a continuous, smooth browsing experience by automatically loading more content as users scroll. Ideal for blogs, image galleries, and content-heavy websites",
-        imgUrl: MemoryWall,
+          "The Infinite Scroll template in Re Gallery allows for a continuous, smooth browsing experience by automatically loading more content as users scroll. Ideal for blogs, image galleries, and content-heavy websites.",
+        imgUrl: InfiniteScroll,
         path: "https://regallery.team/core/reacg/infinite-scroll/",
         pro: true,
       },
@@ -308,7 +317,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         title: "Tide Frame",
         description:
           "The Tide Frame template in Re Gallery offers a clean and elegant way to display your images within dynamic, fluid frames. Perfect for photographers, artists, and creatives.",
-        imgUrl: InfiniteScroll,
+        imgUrl: TideFrame,
         path: "https://regallery.team/core/reacg/tide-frame/",
         pro: true,
       },
