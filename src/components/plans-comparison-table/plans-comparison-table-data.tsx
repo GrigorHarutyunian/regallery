@@ -404,7 +404,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-templates-library",
       label: "Templates Library",
-      values: ["5+", "40+", "40+", "40+"],
+      values: ["15+", "45+", "45+", "45+"],
       href: "https://youtu.be/FVJbXOmu2TA",
     },
   ];
