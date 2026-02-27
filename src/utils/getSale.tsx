@@ -8,8 +8,8 @@
 // import christmasSale1Mobile from "../assets/sale/Christmas Sale1 Portrait.webp";
 // import christmasSale2Desktop from "../assets/sale/Christmas Sale2.webp";
 // import christmasSale2Mobile from "../assets/sale/Christmas Sale2 Portrait.webp";
-import ValentineSaleDesktop from "../assets/sale/Valentine Sale.webp";
-import ValentineSaleMobile from "../assets/sale/Valentine Sale Portrait.webp";
+// import ValentineSaleDesktop from "../assets/sale/Valentine Sale.webp";
+// import ValentineSaleMobile from "../assets/sale/Valentine Sale Portrait.webp";
 // Dynamic discount utility based on Pacific Time windows.
 
 // PST is UTC-8 for these dates (standard time).
@@ -151,25 +151,25 @@ export function getSale(): {
     //     key: "christmasSale2BannerSeen",
     //   };
 
-    case 6:
-      return {
-        discount: 28,
-        couponCode: "VALENTINE2026",
-        label: "Valentine Sale",
-        className: "valentine",
-        message: (
-          <>
-            Valentine Sale.{" "}
-            <a href="#pricing">
-              <b>Get 2 x 14% off</b>
-            </a>{" "}
-            with Coupon Code: VALENTINE2026
-          </>
-        ),
-        desktop: ValentineSaleDesktop,
-        mobile: ValentineSaleMobile,
-        key: "ValentineSaleDesktopBannerSeen",
-      };
+    // case 6:
+    //   return {
+    //     discount: 28,
+    //     couponCode: "VALENTINE2026",
+    //     label: "Valentine Sale",
+    //     className: "valentine",
+    //     message: (
+    //       <>
+    //         Valentine Sale.{" "}
+    //         <a href="#pricing">
+    //           <b>Get 2 x 14% off</b>
+    //         </a>{" "}
+    //         with Coupon Code: VALENTINE2026
+    //       </>
+    //     ),
+    //     desktop: ValentineSaleDesktop,
+    //     mobile: ValentineSaleMobile,
+    //     key: "ValentineSaleDesktopBannerSeen",
+    //   };
 
     default:
       return null;
