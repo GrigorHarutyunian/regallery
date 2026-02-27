@@ -82,6 +82,22 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
+        title: "Product Cards",
+        description:
+          "Product Cards template showcases images in elegant cards with title, price - perfect for product showcases and shop-style galleries.",
+        imgUrl: ProductCards,
+        path: "https://regallery.team/core/reacg/product-cards/",
+        pro: true,
+      },
+      {
+        title: "Centered Caption",
+        description:
+          "The Centered Caption template displays your image titles and descriptions neatly in the center of each photo, revealing them with a clean and subtle hover effect.",
+        imgUrl: CenteredCaption,
+        path: "https://regallery.team/core/reacg/centered-caption/",
+        pro: false,
+      },
+      {
         title: "Dynamic Slant",
         description:
           "The Dynamic Slant template in Re Gallery brings a modern, stylish twist to your WordPress photo gallery with its unique angled layout. Ideal for photographers, creative agencies, designers, and bloggers.",
@@ -202,14 +218,6 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: true,
       },
       {
-        title: "Centered Caption",
-        description:
-          "The Centered Caption template displays your image titles and descriptions neatly in the center of each photo, revealing them with a clean and subtle hover effect.",
-        imgUrl: CenteredCaption,
-        path: "https://regallery.team/core/reacg/centered-caption/",
-        pro: false,
-      },
-      {
         title: "Detail Grid",
         description:
           "Combine images with titles, dates, and detailed descriptions in a clean grid format. Perfect for lookbooks, blog previews, case studies, and editorial-style showcases.",
@@ -253,7 +261,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         title: "Display Collection",
         description:
           "The Display Collection template in Re Gallery is perfect for photographers, online stores, portfolios, and galleries.",
-        imgUrl: Lattemosaicthumbnail,
+        imgUrl: Displaycollectionhumbnail,
         path: "https://regallery.team/core/reacg/display-collection/",
         pro: true,
       },
@@ -261,7 +269,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         title: "Latte Mosaic",
         description:
           "The Latte Mosaic template in Re Gallery presents a warm and visually appealing way to display your images in a mosaic-style grid. Ideal for photographers, interior designers, bloggers, and creatives.",
-        imgUrl: Displaycollectionhumbnail,
+        imgUrl: Lattemosaicthumbnail,
         path: "https://regallery.team/core/reacg/latte-mosaic/",
         pro: true,
       },
@@ -271,14 +279,6 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "The Glide Captions template reveals image captions with a clean sliding motion, offering an engaging way to showcase titles. Ideal for storytelling galleries, portfolios, and featured collections.",
         imgUrl: GlideCaptions,
         path: "https://regallery.team/core/reacg/glide-captions/",
-        pro: true,
-      },
-      {
-        title: "Product Cards",
-        description:
-          "Product Cards template showcases images in elegant cards with title, price - perfect for product showcases and shop-style galleries.",
-        imgUrl: ProductCards,
-        path: "https://regallery.team/core/reacg/product-cards/",
         pro: true,
       },
     ],
