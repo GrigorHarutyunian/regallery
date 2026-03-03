@@ -63,7 +63,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       "40+ Pre-Designed Templates",
-      "Templates Library",
+      "Template Library",
       <>
         AI Automation Tools
         <span
@@ -113,7 +113,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       "40+ Pre-Designed Templates",
-      "Templates Library",
+      "Template Library",
       <>
         AI Automation Tools
         <span
@@ -162,7 +162,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         </span>
       </>,
       "40+ Pre-Designed Templates",
-      "Templates Library",
+      "Template Library",
       <>
         AI Automation Tools
         <span

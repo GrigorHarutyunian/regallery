@@ -31,7 +31,7 @@ const sections: PlansTableBodyProps[] = [
   { leftTitle: "Core Features", features: plansComparisonCoreFeatures },
   { leftTitle: "Gallery Layouts", features: plansComparisonGalleryLayouts },
   { leftTitle: "General Features", features: plansComparisonGeneralFeatures },
-  { leftTitle: "Templates Library", features: plansComparisonTemplates },
+  { leftTitle: "Template Library", features: plansComparisonTemplates },
   { leftTitle: "Hover Effects", features: plansComparisonHoverEffects },
   { leftTitle: "Builders", features: plansComparisonBuilders },
   { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
