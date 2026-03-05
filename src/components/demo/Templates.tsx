@@ -52,6 +52,7 @@ const Templates: React.FC = () => {
                 return (
                   <button
                     onClick={() => handleButtonClick(val.idView)}
+                    aria-label="Select template"
                     className={`templates_button${
                       selectedIdView === val.idView
                         ? " demo_selectedButton"
