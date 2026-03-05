@@ -98,9 +98,138 @@
 }
 
 .demo_description p svg {
-  margin-left: 20px;
+  margin-left: 10px;
   display: inline-block;
   vertical-align: bottom;
+}
+
+.templates_button {
+  cursor: pointer;
+  align-items: center;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.templates_button_dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff91;
+  transition: all 0.3s ease;
+}
+.templates_button:hover .templates_button_dot,
+.demo_selectedButton .templates_button_dot {
+  background: #ffffffff;
+  transform: scale(1.2);
+}
+.templates_buttons_rows {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.responsive_viewport_controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+.responsive_viewport_button {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.responsive_viewport_button svg {
+  width: 70px;
+  height: 70px;
+}
+
+.responsive_viewport_button svg path {
+  fill: #ffffff91;
+  transition: fill 0.25s ease;
+}
+
+.responsive_viewport_button.demo_selectedButton svg path {
+  fill: #ffffffff;
+}
+
+.responsive_viewport_button span {
+  color: #ffffff91;
+  font-size: 1.4rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+.responsive_viewport_button:hover span,
+.responsive_viewport_button.demo_selectedButton span {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.responsive_viewport_button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.responsive_viewport_button:disabled svg path {
+  fill: #ffffff4d;
+}
+
+.responsive_viewport_button:disabled:hover span {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.responsive_viewport_button.demo_selectedButton span {
+  color: #ffffffff;
+}
+
+.responsive_live_container {
+  align-items: center;
+}
+
+.responsive_live_container .reacg-gallery {
+  width: 100%;
+  margin: 0 auto;
+  transition: max-width 0.3s ease;
+}
+
+.responsive_live_container.viewport-desktop {
+  max-width: 100%;
+}
+
+.responsive_live_container.viewport-tablet {
+  max-width: 860px;
+}
+
+.responsive_live_container.viewport-mobile {
+  max-width: 400px;
+}
+
+.templates_description {
+  max-width: 700px;
+}
+.templates_description,
+.responsive_description {
+  margin: 0;
+  p {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 1060px) {
@@ -114,15 +243,9 @@
   .demo_button span {
     font-size: 18px;
   }
-  /* .reduced-height {
-    max-height: 342px;
-  } */
 }
 
 @media screen and (min-width: 861px) and (max-width: 965px) {
-  /* .reduced-height {
-    max-height: 424px;
-  } */
   .demo_description {
     max-width: 900px;
     font-size: 1.3rem;
@@ -139,9 +262,6 @@
 }
 
 @media screen and (min-width: 701px) and (max-width: 860px) {
-  /* .reduced-height {
-    max-height: 380px;
-  } */
   .demo_description {
     max-width: 615px;
     font-size: 1.2rem;
@@ -158,9 +278,6 @@
 }
 
 @media screen and (min-width: 640px) and (max-width: 700px) {
-  /* .reduced-height {
-    max-height: 350px;
-  } */
   .demo_description {
     max-width: 615px;
     font-size: 1.2rem;
@@ -202,13 +319,17 @@
   .demo_button {
     max-width: 40px;
   }
+
+  .responsive_live_container.viewport-tablet .reacg-gallery {
+    max-width: 100%;
+  }
+
+  .responsive_live_container.viewport-mobile .reacg-gallery {
+    max-width: min(430px, 100%);
+  }
 }
 
 @media screen and (min-width: 549px) and (max-width: 639px) {
-  /* .reduced-height {
-    max-height: 263px;
-  } */
-
   .demo_description p svg {
     height: 34px;
     width: 34px;
@@ -220,10 +341,6 @@
 }
 
 @media screen and (min-width: 495px) and (max-width: 548px) {
-  /* .reduced-height {
-    max-height: 364px;
-  } */
-
   .demo_description p svg {
     height: 34px;
     width: 34px;
@@ -235,9 +352,6 @@
 }
 
 @media screen and (max-width: 495px) {
-  /* .reduced-height {
-    max-height: 355px;
-  } */
   .demo_description {
     font-size: 0.7rem;
     line-height: 1.2rem;
