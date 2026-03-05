@@ -3,22 +3,15 @@ import { useDemoContext } from "../../contexts/DemoContext";
 import "./Demo.css";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
-import { dataDemo } from "./demo-data";
 import { motion } from "framer-motion";
+import { dataTemplates } from "./templates-data";
 import { arrow_icon } from "../../assets/icons/arrow-icon";
 
-const Demo: React.FC = () => {
+const Templates: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
-  const [selectedIdView, setSelectedIdView] = useState<number>(420);
+  const [selectedIdView, setSelectedIdView] = useState<number>(1942);
 
   const sectionRef = useRef<HTMLOptionElement | null>(null);
-
-  const selectedViewDesrciption = dataDemo.find(
-    (val) => val.idView === selectedIdView
-  )?.description;
-  const selectedValueDemoPath = dataDemo.find(
-    (val) => val.idView === selectedIdView
-  )?.demoPath;
 
   const handleButtonClick = (idView: number) => {
     if (idView === selectedIdView) return;
@@ -33,41 +26,16 @@ const Demo: React.FC = () => {
   }, [selecteIdFromMenu]);
 
   return (
-    <section ref={sectionRef} id="gallery_layouts" className="black-section">
+    <section ref={sectionRef} id="template_library" className="black-section">
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h2 className="section-text__title-centered">Gallery layouts</h2>
-            <div className="demo_buttons_rows ">
-              {dataDemo.map((val, index) => {
-                return (
-                  <button
-                    onClick={() => handleButtonClick(val.idView)}
-                    className={`demo_button${
-                      selectedIdView === val.idView
-                        ? " demo_selectedButton"
-                        : ""
-                    }`}
-                    key={index}
-                  >
-                    <svg
-                      height={70}
-                      width={70}
-                      id="Outline"
-                      viewBox="0 0 24 24"
-                    >
-                      {val.path}
-                    </svg>
-                    <span>{val.title}</span>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="demo_description">
+            <h2 className="section-text__title-centered">Template library</h2>
+            <div className="demo_description templates_description">
               <motion.p>
-                <span>{selectedViewDesrciption}</span>
+                <span>Explore ready-made WordPress gallery layouts built with Re Gallery’s 45+ pre-built templates.</span>
                 <a
-                  href={selectedValueDemoPath}
+                  href={"https://regallery.team/core/reacg/demo"}
                   target="_blank"
                   title="View more"
                   aria-label="View more"
@@ -76,8 +44,25 @@ const Demo: React.FC = () => {
                 </a>
               </motion.p>
             </div>
+            <div className="templates_buttons_rows ">
+              {dataTemplates.map((val) => {
+                return (
+                  <button
+                    onClick={() => handleButtonClick(val.idView)}
+                    className={`templates_button${
+                      selectedIdView === val.idView
+                        ? " demo_selectedButton"
+                        : ""
+                    }`}
+                    key={val.idView}
+                  >
+                    <span className="templates_button_dot" />
+                  </button>
+                );
+              })}
+            </div>
             <div className={`demo_live_container`}>
-              {dataDemo.map((val) => (
+              {dataTemplates.map((val) => (
                 <div
                   key={val.idView} // Ensure each div has a unique key
                   id={`reacg-root${val.idView}`}
@@ -85,9 +70,6 @@ const Demo: React.FC = () => {
                     selectedIdView === val.idView ? "active" : "hidden"
                   }`} // Add "active" class to the selected div
                   data-options-section="0"
-                  data-plugin-version="1.10.0"
-                  data-gallery-timestamp=""
-                  data-options-timestamp=""
                   data-gallery-id={`${val.idView}`}
                 ></div>
               ))}
@@ -99,4 +81,4 @@ const Demo: React.FC = () => {
   );
 };
 
-export default Demo;
+export default Templates;

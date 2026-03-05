@@ -1,4 +1,4 @@
-import studioVideo from "../assets/sections/studio.mp4";
+import media from "../assets/sections/third_section.webp";
 
 const studioData = {
   id: "studio",
@@ -17,7 +17,7 @@ const studioData = {
       can build galleries that actually serve your website goals.
     </>
   ),
-  video: studioVideo,
+  img: media,
   alt: `Re Gallery Studio`,
 };
 export default studioData;

@@ -34,8 +34,11 @@ section#pricing {
   background-color: #eee !important;
 }
 
-main > section#gallery_layouts {
+.black-section {
   background-color: #000000 !important;
+  .section-text__title-centered {
+    color: #ffffff !important;
+  }
 }
 
 section {

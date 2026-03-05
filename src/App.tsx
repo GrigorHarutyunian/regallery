@@ -10,6 +10,7 @@ import Support from "./components/support/Support";
 import Pricing from "./components/pricing/Pricing";
 import TopBanner from "./components/TopBanner/TopBanner";
 import Demo from "./components/demo/Demo";
+import Templates from "./components/demo/Templates";
 import InteractiveAIIcon from "./components/interactive-aI-icon/InteractiveAIIcon";
 import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
@@ -24,7 +25,7 @@ import { featuresData1, featuresData2 } from "./data/features-data";
 import studioData from "./data/studio-data";
 import infoData from "./data/info-data";
 import builderData from "./data/builder-data";
-import mobileResponsivenessData from "./data/mobileResponsiveness-data";
+import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -102,12 +103,13 @@ const App: React.FC = () => {
             <Hero />
             <Demo />
             <Section data={infoData} />
+            <Templates />
             <ItemsSection data={featuresData1} />
             <Section data={studioData} />
+            <ResponsiveTemplate/>
             <ItemsSection data={featuresData2} />
             <Section data={builderData} />
             <Review />
-            <Section data={mobileResponsivenessData} />
             <Pricing />
             <Faq />
             <PlansComparisonTable />
