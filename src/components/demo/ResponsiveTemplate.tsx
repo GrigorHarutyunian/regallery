@@ -25,10 +25,10 @@ const modePriority: Record<ViewportMode, number> = {
 const ResponsiveTemplate: React.FC = () => {
   const sectionRef = useRef<HTMLOptionElement | null>(null);
   const [maxAllowedMode, setMaxAllowedMode] = useState<ViewportMode>(() =>
-    getMaxAllowedMode()
+    getMaxAllowedMode(),
   );
   const [viewportMode, setViewportMode] = useState<ViewportMode>(() =>
-    getMaxAllowedMode()
+    getMaxAllowedMode(),
   );
 
   const isDesktopDisabled = maxAllowedMode !== "desktop";
@@ -53,7 +53,7 @@ const ResponsiveTemplate: React.FC = () => {
       setViewportMode((prevMode) =>
         modePriority[prevMode] > modePriority[nextMaxAllowedMode]
           ? nextMaxAllowedMode
-          : prevMode
+          : prevMode,
       );
     };
 
@@ -65,16 +65,24 @@ const ResponsiveTemplate: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="responsive_template" className="black-section">
+    <section
+      ref={sectionRef}
+      id="responsive_template"
+      className="black-section"
+    >
       <Container>
         <Row>
           <div className="demo_columns_content">
             <h2 className="section-text__title-centered">Responsive Gallery</h2>
             <div className="demo_description responsive_description">
               <p>
-                <span>Re Gallery is fully optimized for mobile, tablets, and 4K retina screens, delivering fast, high-quality galleries on every device while boosting SEO and user engagement.</span>
+                <span>
+                  Re Gallery is fully optimized for mobile, tablets, and 4K
+                  retina screens, delivering fast, high-quality galleries on
+                  every device while boosting SEO and user engagement.
+                </span>
                 <a
-                  href={"https://regallery.team/core/reacg/demo"}
+                  href={"https://regallery.team/core/demo/"}
                   target="_blank"
                   title="View more"
                   aria-label="View more"

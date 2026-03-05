@@ -33,9 +33,12 @@ const Templates: React.FC = () => {
             <h2 className="section-text__title-centered">Template Library</h2>
             <div className="demo_description templates_description">
               <motion.p>
-                <span>Explore ready-made WordPress gallery layouts built with Re Gallery’s 45+ pre-built templates.</span>
+                <span>
+                  Explore ready-made WordPress gallery layouts built with Re
+                  Gallery’s 45+ pre-built templates.
+                </span>
                 <a
-                  href={"https://regallery.team/core/reacg/demo"}
+                  href={"https://regallery.team/core/demo/"}
                   target="_blank"
                   title="View more"
                   aria-label="View more"
