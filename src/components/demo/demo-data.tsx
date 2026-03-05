@@ -3,7 +3,7 @@ export const dataDemo = [
     id: 1,
     title: "Grid",
     description:
-      "Organize photos in a grid for easy browsing. Users can quickly find and view specific images in your photo gallery.",
+      "Organize images in a clean grid layout, making browsing simple and helping visitors quickly find specific photos.",
     demoPath: "https://regallery.team/core/grid-view/",
     path: (
       <>
@@ -31,7 +31,7 @@ export const dataDemo = [
     id: 2,
     title: "Mosaic",
     description:
-      "Create a collage-like presentation by mixing different sizes and shapes.",
+      "Create a collage-style gallery by mixing image sizes and shapes for a dynamic and visually engaging layout.",
     demoPath: "https://regallery.team/core/mosaic-view/",
     path: (
       <path
@@ -45,7 +45,7 @@ export const dataDemo = [
     id: 3,
     title: "Masonry",
     description:
-      "Arrange items in a back-and-forth pattern with our customization options. This will create a smooth, organic look.",
+      "Arrange images in a flowing masonry pattern that adapts naturally to different sizes and creates a modern gallery.",
     demoPath: "https://regallery.team/core/masonry-view/",
     path: (
       <path
@@ -80,7 +80,7 @@ export const dataDemo = [
     id: 5,
     title: "Slider",
     description:
-      "Display images or videos in a sequential, animated format. This layout displays one item at a time. This makes it simple for the viewer to concentrate on the content.",
+      "Show images or videos one at a time in an animated slider, keeping visitors focused on each item.",
     demoPath: "https://regallery.team/core/slider-view/",
     path: (
       <>
@@ -119,7 +119,7 @@ export const dataDemo = [
     id: 7,
     title: "Carousel",
     description:
-      "Show multiple images in a horizontal scroll, perfect for displaying related photos in a compact space. Great for highlighting products, portfolios, or collections.",
+      "Display images in a smooth horizontal carousel, ideal for showcasing products, portfolios, or related collections.",
     demoPath: "https://regallery.team/core/carousel-view/",
     path: (
       <path
@@ -148,7 +148,7 @@ export const dataDemo = [
     id: 9,
     title: "Blog",
     description:
-      "Easily pair images or videos with text and clickable buttons to guide your visitors through your brand story, team intro, product highlights, or customer journey.",
+      "Combine images, text, and buttons to create storytelling galleries perfect for brand pages or product highlights.",
     demoPath: "https://regallery.team/core/blog-view/",
     path: (
       <path

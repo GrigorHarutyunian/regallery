@@ -16,10 +16,20 @@ const getMaxAllowedMode = (): ViewportMode => {
   return "desktop";
 };
 
+const modePriority: Record<ViewportMode, number> = {
+  mobile: 1,
+  tablet: 2,
+  desktop: 3,
+};
+
 const ResponsiveTemplate: React.FC = () => {
   const sectionRef = useRef<HTMLOptionElement | null>(null);
-  const [maxAllowedMode] = useState<ViewportMode>(() => getMaxAllowedMode());
-  const [viewportMode, setViewportMode] = useState<ViewportMode>(maxAllowedMode);
+  const [maxAllowedMode, setMaxAllowedMode] = useState<ViewportMode>(() =>
+    getMaxAllowedMode()
+  );
+  const [viewportMode, setViewportMode] = useState<ViewportMode>(() =>
+    getMaxAllowedMode()
+  );
 
   const isDesktopDisabled = maxAllowedMode !== "desktop";
   const isTabletDisabled = maxAllowedMode === "mobile";
@@ -35,6 +45,25 @@ const ResponsiveTemplate: React.FC = () => {
     });
   }, [viewportMode]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const nextMaxAllowedMode = getMaxAllowedMode();
+
+      setMaxAllowedMode(nextMaxAllowedMode);
+      setViewportMode((prevMode) =>
+        modePriority[prevMode] > modePriority[nextMaxAllowedMode]
+          ? nextMaxAllowedMode
+          : prevMode
+      );
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section ref={sectionRef} id="responsive_template" className="black-section">
       <Container>
@@ -43,7 +72,7 @@ const ResponsiveTemplate: React.FC = () => {
             <h2 className="section-text__title-centered">Responsive Gallery</h2>
             <div className="demo_description responsive_description">
               <p>
-                <span>Re Gallery is fully optimized for mobile devices, tablets, and 4K retina screens.</span>
+                <span>Re Gallery is fully optimized for mobile, tablets, and 4K retina screens, delivering fast, high-quality galleries on every device while boosting SEO and user engagement.</span>
                 <a
                   href={"https://regallery.team/core/reacg/demo"}
                   target="_blank"

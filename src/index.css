@@ -35,6 +35,7 @@ section#pricing {
 }
 
 .black-section {
+  overflow: hidden;
   background-color: #000000 !important;
   .section-text__title-centered {
     color: #ffffff !important;
