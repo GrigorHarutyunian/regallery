@@ -12,5 +12,7 @@ export default interface SectionDTO {
     additionalButtonLink?: string;
     additionalButtonName?: string;
     viewMoreLinks?: any;
+    itemsTop?: { title: string; image: string }[];
+    itemsBottom?: { title: string; image: string }[];
   };
 }

@@ -4,6 +4,7 @@ import Faq from "./components/faq/Faq";
 import ItemsSection from "./common-components/common-items/ItemsSection";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
+import PageBuilder from "./components/page-builder/PageBuilder";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
@@ -108,7 +109,7 @@ const App: React.FC = () => {
             <Section data={studioData} />
             <ResponsiveTemplate/>
             <ItemsSection data={featuresData2} />
-            <Section data={builderData} />
+            <PageBuilder data={builderData} />
             <Review />
             <Pricing />
             <Faq />
