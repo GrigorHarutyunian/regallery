@@ -57,7 +57,10 @@ const Hero: React.FC = () => {
                 <a href="#pricing">
                   <DownloadBtn className={"download-btn"} />
                 </a>
-                <div onClick={handleOpen} className="download-btn watch_video">
+                <div
+                  onClick={handleOpen}
+                  className="download-btn secondary-btn"
+                >
                   <PlayCircleFilledIcon
                     style={{
                       verticalAlign: "middle",

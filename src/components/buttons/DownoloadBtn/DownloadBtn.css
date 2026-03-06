@@ -11,8 +11,9 @@
   cursor: pointer;
   transition: all 0.2s linear;
   margin: 0;
+  border: 1px solid #2540cc;
 }
-.download-btn:hover {
+.download-btn:not(.secondary-btn):hover {
   filter: brightness(1.3);
 }
 

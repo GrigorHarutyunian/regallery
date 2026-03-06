@@ -33,7 +33,7 @@ const builderData = {
     { image: landingGallery15, title: "Travel Blog" },
     { image: landingGallery16, title: "Media Catalog" },
     { image: landingGallery8, title: "Cinematic Showcase" },
-    { image: landingGallery17, title: "CTA Cards1" },
+    { image: landingGallery17, title: "CTA Cards" },
   ],
   itemsBottom: [
     { image: landingGallery2, title: "Modern Grid" },

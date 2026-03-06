@@ -12,13 +12,13 @@ const PageBuilder: React.FC<SectionDTO> = ({ data }) => {
           <div className="pagebuilder_content" id="builder">
             <h2 className="section-text__title-centered">{data.title}</h2>
             <p className="pagebuilder_description">{data.text}</p>
-            <div className="buttons-container pagebuilder_buttons">
+            <div className="buttons-container buttons-container-centered">
               <a href="#pricing" aria-label="Get started">
                 <DownloadBtn className="download-btn" />
               </a>
               {data.additionalButtonLink && (
                 <a
-                  className="download-btn watch_video"
+                  className="download-btn secondary-btn"
                   href={data.additionalButtonLink}
                   target="_blank"
                   rel="noreferrer"

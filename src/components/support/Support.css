@@ -35,13 +35,3 @@ section.supportandInfo .container {
 .contact_us_buttons_container.buttons-container a {
   width: unset;
 }
-
-@media screen and (min-width: 518px) {
-  .contact_us_row .contact_us_buttons_container {
-    flex-direction: row;
-    align-items: baseline;
-  }
-  .contact_us_row .contact_us_buttons_container .watch_video {
-    margin-left: 20px;
-  }
-}

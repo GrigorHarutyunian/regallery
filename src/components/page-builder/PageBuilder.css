@@ -45,12 +45,11 @@
   font-size: 1.2rem;
   line-height: 2rem;
   max-width: 980px;
-  margin: 25px auto 0;
+  margin: 30px auto;
 }
 
-.pagebuilder_buttons {
+.buttons-container-centered {
   justify-content: center;
-  margin-top: 35px;
 }
 
 .pagebuilder_carousel {
@@ -156,41 +155,16 @@
 @media screen and (max-width: 965px) {
   .pagebuilder_thumb {
     width: 220px;
-    height: 138px;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  .pagebuilder_description {
-    font-size: 1rem;
-    line-height: 1.7rem;
-    margin-top: 16px;
+    height: 162px;
   }
 
-  .pagebuilder_buttons {
-    margin-top: 24px;
-  }
-
-  .pagebuilder_carousel {
-    margin-top: 30px;
-    gap: 12px;
-  }
-
-  .pagebuilder_thumb {
-    width: 180px;
-    height: 112px;
-    border-radius: 10px;
+  .pagebuilder_carousel,
+  .pagebuilder_track {
+    gap: 16px;
   }
 
   .pagebuilder_thumb_title {
     font-size: 0.8rem;
-    left: 10px;
-    bottom: 8px;
-  }
-}
-
-@media screen and (max-width: 348px) {
-  .section-text__title-big {
-    font-size: 3rem;
+    padding: 20px 25px;
   }
 }

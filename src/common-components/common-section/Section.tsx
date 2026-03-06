@@ -65,7 +65,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
               </a>
               {data.additionalButtonLink && (
                 <a
-                  className="download-btn watch_video"
+                  className="download-btn secondary-btn"
                   href={data.additionalButtonLink}
                   target="_blank"
                 >
