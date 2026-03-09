@@ -1,5 +1,11 @@
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
+import { formatCountByStep } from "../../utils/formatCountByStep";
 import { allTemplates } from "../views/views-data-subMenu";
+
+const freeTemplatesCount = formatCountByStep(
+  allTemplates.filter((template) => !template.pro).length,
+);
+const allTemplatesCount = formatCountByStep(allTemplates.length);
 
 export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
   {
@@ -404,7 +410,12 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-templates-library",
       label: "Template Library",
-      values: ["15+", "45+", "45+", "45+"],
+      values: [
+        freeTemplatesCount,
+        allTemplatesCount,
+        allTemplatesCount,
+        allTemplatesCount,
+      ],
       href: "https://youtu.be/FVJbXOmu2TA",
     },
   ];

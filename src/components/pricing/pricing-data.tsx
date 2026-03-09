@@ -2,6 +2,13 @@ import { ai_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { woo_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import PricingDTO from "../../types/PricingDTO";
+import { formatCountByStep } from "../../utils/formatCountByStep";
+import { allTemplates } from "../views/views-data-subMenu";
+
+const freeTemplatesCount = formatCountByStep(
+  allTemplates.filter((template) => !template.pro).length,
+);
+const allTemplatesCount = formatCountByStep(allTemplates.length);
 
 const pricingData: { [key: number]: PricingDTO } = {
   1: {
@@ -27,7 +34,8 @@ const pricingData: { [key: number]: PricingDTO } = {
       "Beaver Builder Module Inclusion",
       "Bricks Builder Element Access",
       <>
-        <strong className="bold__list">10+</strong> Pre-built Templates
+        <strong className="bold__list">{freeTemplatesCount}</strong>{" "}
+        Pre-Designed Templates
       </>,
     ],
   },
@@ -62,7 +70,7 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "40+ Pre-Designed Templates",
+      `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
         AI Automation Tools
@@ -112,7 +120,7 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "40+ Pre-Designed Templates",
+      `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
         AI Automation Tools
@@ -161,7 +169,7 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      "40+ Pre-Designed Templates",
+      `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
         AI Automation Tools

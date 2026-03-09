@@ -52,6 +52,13 @@ import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
 import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered_Caption.webp";
 import DetailGrid from "../../assets/imgs/views/subViews/thumbnail/DetailGrid.webp";
 import CTACards from "../../assets/imgs/views/subViews/thumbnail/CTACards.webp";
+import UniforGrid from "../../assets/imgs/page-builder/Uniform Grid.webp";
+import StudioLayout from "../../assets/imgs/page-builder/Studio Layout.webp";
+import ElegantGrid from "../../assets/imgs/page-builder/Elegant Grid.webp";
+import ModernGrid from "../../assets/imgs/page-builder/Modern Grid.webp";
+import SimpleSlider from "../../assets/imgs/page-builder/Simple Slider.webp";
+import EdgeToEdgeRows from "../../assets/imgs/page-builder/Edge-to-Edge Rows.webp";
+import HeroFocus from "../../assets/imgs/page-builder/Hero Focus.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -233,6 +240,38 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         path: "https://regallery.team/core/reacg/cta-cards/",
         pro: false,
       },
+      {
+        title: "Uniform Grid",
+        description:
+          "A clean grid where all images share the same size for a perfectly balanced gallery.",
+        imgUrl: UniforGrid,
+        path: "https://regallery.team/core/reacg/uniform-grid/",
+        pro: true,
+      },
+      {
+        title: "Studio Layout",
+        description:
+          "Minimal portfolio-style layout designed to highlight photography and creative work.",
+        imgUrl: StudioLayout,
+        path: "https://regallery.team/core/reacg/studio-layout/",
+        pro: true,
+      },
+      {
+        title: "Elegant Grid",
+        description:
+          "A refined grid layout with balanced spacing for a polished, modern presentation.",
+        imgUrl: ElegantGrid,
+        path: "https://regallery.team/core/reacg/elegant-grid/",
+        pro: true,
+      },
+      {
+        title: "Modern Grid",
+        description:
+          "A contemporary image grid optimized for clean design and responsive viewing.",
+        imgUrl: ModernGrid,
+        path: "https://regallery.team/core/reacg/modern-grid/",
+        pro: true,
+      },
     ],
   },
   {
@@ -371,6 +410,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         path: "https://regallery.team/core/reacg/focus-frame/",
         pro: true,
       },
+      {
+        title: "Hero Focus",
+        description:
+          "A gallery layout featuring a large highlighted image with supporting thumbnails.",
+        imgUrl: HeroFocus,
+        path: "https://regallery.team/core/reacg/hero-focus/",
+        pro: true,
+      },
     ],
   },
   {
@@ -492,6 +539,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         path: "https://regallery.team/core/reacg/service-blocks/",
         pro: true,
       },
+      {
+        title: "Simple Slider",
+        description:
+          "A lightweight image slider that lets visitors browse photos one by one.",
+        imgUrl: SimpleSlider,
+        path: "https://regallery.team/core/reacg/simple-slider/",
+        pro: false,
+      },
     ],
   },
 
@@ -594,6 +649,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "Responsive gallery with 3D mockups, particle interactions, testimonials & cinematic video sections. Ideal for UI/UX, motion & visual artists.",
         imgUrl: Portfolio,
         path: "https://regallery.team/core/reacg/portfolio/",
+        pro: true,
+      },
+      {
+        title: "Edge-to-Edge Rows",
+        description:
+          "A justified layout where images align perfectly across the full width.",
+        imgUrl: EdgeToEdgeRows,
+        path: "https://regallery.team/core/reacg/edge-to-edge-rows/",
         pro: true,
       },
     ],

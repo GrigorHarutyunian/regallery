@@ -6,10 +6,13 @@ import { Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { dataTemplates } from "./templates-data";
 import { arrow_icon } from "../../assets/icons/arrow-icon";
+import { allTemplates } from "../views/views-data-subMenu";
+import { formatCountByStep } from "../../utils/formatCountByStep";
 
 const Templates: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(1942);
+  const allTemplatesCount = formatCountByStep(allTemplates.length);
 
   const sectionRef = useRef<HTMLOptionElement | null>(null);
 
@@ -35,7 +38,7 @@ const Templates: React.FC = () => {
               <motion.p>
                 <span>
                   Explore ready-made WordPress gallery layouts built with Re
-                  Gallery’s 45+ pre-built templates.
+                  Gallery&apos;s {allTemplatesCount} pre-built templates.
                 </span>
                 <a
                   href={"https://regallery.team/core/demo/"}
