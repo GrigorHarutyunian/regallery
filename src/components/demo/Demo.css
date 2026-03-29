@@ -16,7 +16,10 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  box-sizing: border-box;
   padding: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .demo_live_container {
@@ -115,11 +118,11 @@
   transform: scale(1.2);
 }
 .templates_buttons_rows {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 40px 0;
-    gap: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 20px;
 }
 
 .responsive_viewport_controls {
@@ -220,7 +223,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1160px) {
   .demo_button svg {
     height: 50px;
     width: 50px;
@@ -230,6 +233,9 @@
   }
   .demo_button span {
     font-size: 18px;
+  }
+  .demo_buttons_rows {
+    gap: 50px;
   }
 }
 
@@ -246,22 +252,6 @@
   }
   .demo_button span {
     font-size: 16px;
-  }
-  .demo_buttons_rows {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    padding: 20px;
-    flex-flow: wrap;
-    row-gap: 20px;
-  }
-  .demo_button svg {
-    height: 40px;
-    width: 40px;
-  }
-  .demo_button {
-    max-width: 40px;
   }
 
   .responsive_live_container.viewport-tablet .reacg-gallery {
