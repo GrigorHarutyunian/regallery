@@ -13,9 +13,20 @@ const PageBuilder: React.FC<SectionDTO> = ({ data }) => {
             <h2 className="section-text__title-centered">{data.title}</h2>
             <p className="pagebuilder_description">{data.text}</p>
             <div className="buttons-container buttons-container-centered">
-              <a href="#pricing" aria-label="Get started">
-                <DownloadBtn className="download-btn" />
-              </a>
+              <div className="primary-cta">
+                <a href="#pricing">
+                  <DownloadBtn className={"download-btn"} />
+                </a>
+                <div className="primary-btn__free-link">
+                  <a
+                    href="https://wordpress.org/plugins/regallery/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Try the free version
+                  </a>
+                </div>
+              </div>
               {data.additionalButtonLink && (
                 <a
                   className="download-btn secondary-btn"

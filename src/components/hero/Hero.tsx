@@ -7,6 +7,8 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Row, Container } from "react-bootstrap";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import heroMp4 from "../../assets/sections/first_section_940.mp4";
+import heroPoster from "../../assets/sections/first_section_940.webp";
+
 import "./Hero.css";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 
@@ -14,10 +16,6 @@ const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
-
-  // const width = version === "mobile" ? 260 : version === "mid" ? 347 : 698;
-  // const ration = 940 / 540;
-  // const height = Math.round(width / ration);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -28,15 +26,18 @@ const Hero: React.FC = () => {
         <Row>
           <motion.div className="hero-container">
             <motion.div className="home-text">
-              <h1 className="section-text__title ">
-                Easily Create
-                <br></br> AI Photo Gallery that Wow Your Visitors
+              <p className="hero-badge">WORDPRESS GALLERY PLUGIN</p>
+              <h1 className="section-text__title">
+                Beautiful galleries.
+                <br></br>
+                <i>Built automatically</i> by AI
               </h1>
               <p className="section-text__body">
-                Re Gallery helps you build responsive photo galleries in
-                minutes, with{" "}
-                <b>Pre-Designed Templates, AI Automation Tools,</b> and{" "}
-                <b>full WordPress integration</b>: No coding required!
+                Re Gallery gives you{" "}
+                <b>9 responsive layouts, 50+ pro templates,</b> and built-in AI
+                that writes alt text, generates captions, and handles image SEO
+                — so you don't have to. Works with Elementor, Gutenberg, Divi,
+                and more. No coding required.
               </p>
               {version === "mobile" && (
                 <motion.div className="section-image">
@@ -49,14 +50,26 @@ const Hero: React.FC = () => {
                       muted
                       playsInline
                       src={heroMp4}
+                      poster={heroPoster}
                     />
                   </LazyLoadComponent>
                 </motion.div>
               )}
               <div className="buttons-container">
-                <a href="#pricing">
-                  <DownloadBtn className={"download-btn"} />
-                </a>
+                <div className="primary-cta">
+                  <a href="#pricing">
+                    <DownloadBtn className={"download-btn"} />
+                  </a>
+                  <div className="primary-btn__free-link">
+                    <a
+                      href="https://wordpress.org/plugins/regallery/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Try the free version
+                    </a>
+                  </div>
+                </div>
                 <div
                   onClick={handleOpen}
                   className="download-btn secondary-btn"
@@ -67,7 +80,7 @@ const Hero: React.FC = () => {
                       width: "25px",
                       height: "19px",
                       marginBottom: "2px",
-                      color: "#000000",
+                      color: "var(--re-primary-color, #2540cc)",
                     }}
                   />
                   WATCH INTRO
@@ -86,11 +99,22 @@ const Hero: React.FC = () => {
                     muted
                     playsInline
                     src={heroMp4}
+                    poster={heroPoster}
                   />
                 </LazyLoadComponent>
               </motion.div>
             )}
           </motion.div>
+        </Row>
+        <Row>
+          <div className="hero-trust-row" aria-label="Trust highlights">
+            <span className="hero-trust-item">5/5 stars on WordPress.org</span>
+            <span className="hero-trust-item">
+              Free version - no credit card
+            </span>
+            <span className="hero-trust-item">14-day money-back guarantee</span>
+            <span className="hero-trust-item">Works with 6 page builders</span>
+          </div>
         </Row>
       </Container>
       <VideoModal open={open} handleClose={handleClose} />

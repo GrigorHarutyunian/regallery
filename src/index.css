@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  --re-primary-color: #6a3eff;
+  --re-secondary-color: #dce9ff;
+  --re-button-radius: 30px;
+
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -40,6 +44,9 @@ section#pricing {
   .section-text__title-centered {
     color: #ffffff !important;
   }
+  .primary-btn__free-link a {
+    color: #ffffff;
+  }
 }
 
 section {
@@ -67,7 +74,21 @@ footer {
   > video,
   .video-slider {
     object-fit: cover;
+  }
+  .video-slider {
     box-shadow: 0 0 15px 5px #aaaaaa;
+  }
+}
+
+.section-text__title {
+  font-size: 50px;
+  max-width: 580px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+  i {
+    color: var(--re-primary-color, #2540cc);
+    font-size: 47px;
   }
 }
 
@@ -117,12 +138,12 @@ p {
   .section-text__desc {
     font-size: 14px;
   }
-  .section-text__title-big {
-    font-size: 3rem;
-  }
   .section-text__title {
     font-size: 35px;
     max-width: 500px;
+    i {
+      font-size: 30px;
+    }
   }
   .section-text__body {
     font-size: 20px;
@@ -177,22 +198,60 @@ p {
   }
 }
 
+.download-btn {
+  background-color: var(--re-primary-color, #2540cc);
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 16px 38px;
+  border-radius: var(--re-button-radius, 6px);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  margin: 0;
+  border: 1px solid var(--re-primary-color, #2540cc);
+}
+.download-btn:not(.secondary-btn):hover {
+  filter: brightness(1.3);
+}
+
+.download-btn__navbar {
+  background: var(--re-primary-color, #2540cc);
+  margin-left: 12px;
+}
+
 .buttons-container a,
 .secondary-btn {
-  width: 187px;
+  width: 220px;
   box-sizing: border-box;
   text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.primary-btn__free-link {
+  margin: 12px auto 0;
+  a {
+    color: black;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+}
+.primary-btn__free-link a:hover {
+  color: var(--re-primary-color, #2540cc);
 }
 
 .secondary-btn {
-  background-color: #ffffff;
-  border: 1px solid #000000;
+  background-color: var(--re-secondary-color, #dce9ff);
+  border: 1px solid var(--re-secondary-color, #dce9ff);
   padding: 15px 22px;
-  color: #000000;
+  color: var(--re-primary-color, #2540cc);
   text-transform: uppercase;
+  height: fit-content;
 }
 .secondary-btn:hover {
-  background-color: #f7f5f5;
+  filter: brightness(1.05);
 }
 .buttons-container {
   display: flex;

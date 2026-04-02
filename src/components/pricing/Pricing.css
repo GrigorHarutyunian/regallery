@@ -55,12 +55,12 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffffff; /* same as card background to "cut" the border */
-  color: #2540cc; /* blue text */
+  color: var(--re-primary-color, #2540cc);
   padding: 6px 16px;
   border-radius: 6px;
   font-weight: 700;
   font-size: 13px;
-  border: 2px solid #2540cc; /* outline so badge matches brand */
+  border: 2px solid var(--re-primary-color, #2540cc);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   z-index: 3;
   width: max-content;
@@ -174,29 +174,18 @@
   margin-top: 24px;
   position: relative;
   text-decoration: none;
-  background-color: #2540cc;
+  background-color: var(--re-primary-color, #2540cc);
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 16px 0;
-  border-radius: 6px;
+  border-radius: var(--re-button-radius, 6px);
   transition: all 0.2s linear;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-.pricing-card__free-link {
-  margin-top: 12px;
-}
-.pricing-card__free-link a {
-  color: black;
-  font-size: 0.9rem;
-  text-decoration: underline;
-}
-.pricing-card__free-link a:hover {
-  color: #2540cc;
 }
 .pricing-card__btn_starter {
   background-color: #000000;
@@ -223,7 +212,7 @@
 
 a.pricing-card__features-link--see-all {
   align-items: center;
-  color: #2540cc;
+  color: var(--re-primary-color, #2540cc);
   display: inline-flex;
   font-weight: 700;
   gap: 5px;

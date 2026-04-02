@@ -7,6 +7,7 @@ export default interface SectionDTO {
     height?: number;
     alt: string;
     video?: any;
+    poster?: string;
     slides?: any;
     img?: any;
     additionalButtonLink?: string;

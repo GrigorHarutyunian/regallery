@@ -1,4 +1,5 @@
 import infoMp4 from "../assets/sections/Second_section_940.mp4";
+import infoPoster from "../assets/sections/Second_section_940.webp";
 const infoData = {
   id: "info",
   title: "Why Choose the Re Gallery plugin?",
@@ -13,6 +14,7 @@ const infoData = {
     </>
   ),
   video: infoMp4,
+  poster: infoPoster,
   alt: `Discover why Re Gallery is the best WordPress photo gallery plugin. Featuring responsive design, intuitive interface, and extensive customization options.`,
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
   additionalButtonName: "ADMIN DEMO",

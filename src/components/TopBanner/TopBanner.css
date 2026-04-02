@@ -56,11 +56,11 @@
     align-items: center;
   }
   a {
-    color: #2540cc;
+    color: var(--re-primary-color, #2540cc);
     text-decoration: underline;
     transition: all 0.3s;
     &:hover {
-      color: #2540cc;
+      color: var(--re-primary-color, #2540cc);
     }
   }
   .banner-icon {

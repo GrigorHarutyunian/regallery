@@ -116,7 +116,7 @@ const PricingCard: React.FC<PricingDTO> = ({
           >
             {buttonText}
           </CustomButton>
-          <div className="pricing-card__free-link">
+          <div className="primary-btn__free-link">
             <a
               href="https://wordpress.org/plugins/regallery/"
               target="_blank"

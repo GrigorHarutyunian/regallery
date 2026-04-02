@@ -1,5 +1,5 @@
 .custom-button {
-  background-color: #2540cc;
+  background-color: var(--re-primary-color, #2540cc);
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
@@ -17,6 +17,6 @@
 }
 
 .custom-button__navbar {
-  background: #2540cc;
+  background: var(--re-primary-color, #2540cc);
   margin-left: 12px;
 }

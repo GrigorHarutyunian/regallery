@@ -126,7 +126,7 @@
 }
 
 .nav-logo {
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffffff;
   display: flex;
   align-items: center;
@@ -137,7 +137,6 @@
 .nav-logo__icon {
   width: 35px;
   height: 35px;
-
   vertical-align: middle;
 }
 

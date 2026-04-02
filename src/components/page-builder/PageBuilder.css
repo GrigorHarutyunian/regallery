@@ -1,12 +1,3 @@
-.section-text__title-big {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #0e4a70;
-  line-height: 1.3;
-  margin-bottom: 24px;
-  max-width: 600px;
-}
-
 .section-text__body {
   color: #000000aa;
   font-size: 1.2rem;
@@ -17,20 +8,8 @@
   font-weight: 400;
 }
 
-.hero-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1320px;
-  gap: 10px;
-}
-
 .section-image {
   display: inherit;
-}
-.section-text__title-big span {
-  color: #0e4a70;
 }
 
 .pagebuilder_content {

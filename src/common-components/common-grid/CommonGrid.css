@@ -4,14 +4,6 @@
   width: 100%;
 }
 
-.section-text__title {
-  font-size: 50px;
-  max-width: 530px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #000000;
-}
-
 .section-text__title-small {
   font-size: 24px;
   font-weight: 700;
@@ -21,7 +13,7 @@
 }
 
 ._features svg > path {
-  fill: #2540cc;
+  fill: var(--re-primary-color, #2540cc);
 }
 
 .section-text__desc {

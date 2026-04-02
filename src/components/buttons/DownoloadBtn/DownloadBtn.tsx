@@ -1,4 +1,3 @@
-import "./DownloadBtn.css";
 import React from "react";
 
 interface DownloadBtnProps {

@@ -33,6 +33,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                       height="100%"
                       width="100%"
                       src={data.video as string}
+                      poster={data.poster}
                       autoPlay
                       loop
                       muted
@@ -60,9 +61,20 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
             )}
 
             <div className="buttons-container">
-              <a href="#pricing">
-                <DownloadBtn className="download-btn" />
-              </a>
+              <div className="primary-cta">
+                <a href="#pricing">
+                  <DownloadBtn className={"download-btn"} />
+                </a>
+                <div className="primary-btn__free-link">
+                  <a
+                    href="https://wordpress.org/plugins/regallery/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Try the free version
+                  </a>
+                </div>
+              </div>
               {data.additionalButtonLink && (
                 <a
                   className="download-btn secondary-btn"
@@ -89,6 +101,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                     height="100%"
                     width="100%"
                     src={data.video as string}
+                    poster={data.poster}
                     autoPlay
                     loop
                     muted
