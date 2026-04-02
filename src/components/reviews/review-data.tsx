@@ -114,6 +114,33 @@ Thank you for a great plugin!`,
     id: 12,
     alt: `Users reviews about Re Gallery - Hear from photographers about their experiences with our WordPress Re gallery plugin.`,
   },
+
+  {
+    title: "Awesome guys",
+    text: `Thank you for your prompt reply. I’m already using this amazing gallery, you’re doing a really great job! Looking forward to the ability to protect images from being downloaded.`,
+    author: "jamesanderson99",
+    seeMore: "https://wordpress.org/support/topic/awesome-guys-2/",
+    id: 13,
+    alt: `Users reviews about Re Gallery - Hear from photographers about their experiences with our WordPress Re gallery plugin.`,
+  },
+
+  {
+    title: "Great Plugin & Support",
+    text: `I am only using the free version at the moment, as it meets my needs. For a free version of a plugin that also offers a PRO option, it’s very very robust. I tried out about a dozen different gallery plugins before choosing this one. No limitations imposed on number of images or number of galleries you can have, really decent options for gallery display, and even a module for the Divi builder so you don’t have to use the shortcode. You can even build/edit your gallery from inside the Divi module, instead of having to build it in a separate screen and then load it onto your page.`,
+    author: "aeryrose",
+    seeMore: "https://wordpress.org/support/topic/great-plugin-support-412/",
+    id: 14,
+    alt: `Users reviews about Re Gallery - Hear from photographers about their experiences with our WordPress Re gallery plugin.`,
+  },
+
+  {
+    title: "Unprecented support",
+    text: `I bought the Pro version and encountered a technical issue. Against all expectations, I decided to send an email to support anyway. To my great surprise, I received a reply very quickly, followed by close communication. The problem has been resolved.`,
+    author: "someonejml",
+    seeMore: "https://wordpress.org/support/topic/terrific-support-27/",
+    id: 15,
+    alt: `Users reviews about Re Gallery - Hear from photographers about their experiences with our WordPress Re gallery plugin.`,
+  },
 ];
 
 export default reviewData;
