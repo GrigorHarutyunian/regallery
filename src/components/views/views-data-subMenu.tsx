@@ -8,13 +8,13 @@ import FlickerFrame from "../../assets/imgs/views/subViews/thumbnail/Flicker_Fra
 import Collagethumbnail from "../../assets/imgs/views/subViews/thumbnail/Collage.webp";
 import Circlegridthumbnail from "../../assets/imgs/views/subViews/thumbnail/Circle_Grid.webp";
 import Photoalbumthumbnail from "../../assets/imgs/views/subViews/thumbnail/Photo_Album.webp";
-import Modernpatternthumbnial from "../../assets/imgs/views/subViews/thumbnail/Modern_Pattern.webp";
+import Latticethumbnail from "../../assets/imgs/views/subViews/thumbnail/Modern_Pattern.webp";
 import Polaroidgallerythumbnail from "../../assets/imgs/views/subViews/thumbnail/Polaroid_Gallery.webp";
 import SimplePrisme from "../../assets/imgs/views/subViews/thumbnail/Simple_Prism.webp";
 import Monochromethumbnail from "../../assets/imgs/views/subViews/mosaic/Monochrome_Collection.webp";
 import Lattemosaicthumbnail from "../../assets/imgs/views/subViews/mosaic/Latte_Mosaic.webp";
 import Displaycollectionhumbnail from "../../assets/imgs/views/subViews/mosaic/Display_Collection.webp";
-import MotionView from "../../assets/imgs/views/subViews/masonry/MotionView.webp";
+import Kinetic from "../../assets/imgs/views/subViews/masonry/MotionView.webp";
 import TideFrame from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp";
 import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite_Scroll.webp";
 import BorderHover from "../../assets/imgs/views/subViews/masonry/Border_Hover.webp";
@@ -24,8 +24,8 @@ import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
 import VideoCubeGallery from "../../assets/imgs/views/subViews/cube/Video_Cube.webp";
 import LiquidGlass from "../../assets/imgs/views/subViews/carousel/LiquidGlass.webp";
-import TemplateSwipeflow from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
-import TemplateServiceBlocks from "../../assets/imgs/views/subViews/carousel/Service_Blocks.webp";
+import TemplateSwipe from "../../assets/imgs/views/subViews/carousel/Swipeflow.webp";
+import TemplateServices from "../../assets/imgs/views/subViews/carousel/Service_Blocks.webp";
 import TemplateTravelAgency from "../../assets/imgs/views/subViews/carousel/Travel_Agency.webp";
 import TemplateAdvertisement from "../../assets/imgs/views/subViews/carousel/Advertisement.webp";
 import TemplateBlindesSlider from "../../assets/imgs/views/subViews/carousel/Blinds_Slider.webp";
@@ -44,21 +44,21 @@ import AboutUsTemplate from "../../assets/imgs/views/subViews/blog/AboutUs.webp"
 import TravelBlogTemplate from "../../assets/imgs/views/subViews/blog/TravelBlog.webp";
 import SmartRows from "../../assets/imgs/views/subViews/justified/Smart_Rows.webp";
 import Portfolio from "../../assets/imgs/views/subViews/justified/Portfolio.webp";
-import SoftHover from "../../assets/imgs/views/subViews/justified/Soft_Hover.webp";
+import Bloom from "../../assets/imgs/views/subViews/justified/Soft_Hover.webp";
 import GlideCaptions from "../../assets/imgs/views/subViews/mosaic/Glide_Captions.webp";
 import Team from "../../assets/imgs/views/subViews/thumbnail/Team.webp";
-import ProductCards from "../../assets/imgs/views/subViews/thumbnail/Product_Cards.webp";
+import ShopCards from "../../assets/imgs/views/subViews/thumbnail/Product_Cards.webp";
 import Products from "../../assets/imgs/views/subViews/thumbnail/Products.webp";
 import CenteredCaption from "../../assets/imgs/views/subViews/thumbnail/Centered_Caption.webp";
 import DetailGrid from "../../assets/imgs/views/subViews/thumbnail/DetailGrid.webp";
 import CTACards from "../../assets/imgs/views/subViews/thumbnail/CTACards.webp";
-import UniforGrid from "../../assets/imgs/page-builder/Uniform Grid.webp";
-import StudioLayout from "../../assets/imgs/page-builder/Studio Layout.webp";
-import ElegantGrid from "../../assets/imgs/page-builder/Elegant Grid.webp";
-import ModernGrid from "../../assets/imgs/page-builder/Modern Grid.webp";
-import SimpleSlider from "../../assets/imgs/page-builder/Simple Slider.webp";
+import EvenGrid from "../../assets/imgs/page-builder/Uniform Grid.webp";
+import Studio from "../../assets/imgs/page-builder/Studio Layout.webp";
+import SerifGrid from "../../assets/imgs/page-builder/Elegant Grid.webp";
+import OpenGrid from "../../assets/imgs/page-builder/Modern Grid.webp";
+import Slideshow from "../../assets/imgs/page-builder/Simple Slider.webp";
 import EdgeToEdgeRows from "../../assets/imgs/page-builder/Edge-to-Edge Rows.webp";
-import HeroFocus from "../../assets/imgs/page-builder/Hero Focus.webp";
+import Feature from "../../assets/imgs/page-builder/Hero Focus.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -89,11 +89,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
-        title: "Product Cards",
+        title: "Shop Cards",
         description:
-          "Product Cards template showcases images in elegant cards with title, price - perfect for product showcases and shop-style galleries.",
-        imgUrl: ProductCards,
-        path: "https://regallery.team/core/reacg/product-cards/",
+          "Shop Cards template showcases images in elegant cards with title, price - perfect for product showcases and shop-style galleries.",
+        imgUrl: ShopCards,
+        path: "https://regallery.team/core/reacg/shop-cards/",
         pro: true,
       },
       {
@@ -185,11 +185,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: true,
       },
       {
-        title: "Modern Pattern",
+        title: "Lattice",
         description:
-          "The Modern Pattern template in Re Gallery is perfect for photographers, designers, eCommerce sites, and digital agencies. ",
-        imgUrl: Modernpatternthumbnial,
-        path: "https://regallery.team/core/reacg/modern-pattern/",
+          "The Lattice template in Re Gallery is perfect for photographers, designers, eCommerce sites, and digital agencies. ",
+        imgUrl: Latticethumbnail,
+        path: "https://regallery.team/core/reacg/lattice/",
         pro: true,
       },
       {
@@ -241,35 +241,35 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: false,
       },
       {
-        title: "Uniform Grid",
+        title: "Even Grid",
         description:
           "A clean grid where all images share the same size for a perfectly balanced gallery.",
-        imgUrl: UniforGrid,
-        path: "https://regallery.team/core/reacg/uniform-grid/",
+        imgUrl: EvenGrid,
+        path: "https://regallery.team/core/reacg/even-grid/",
         pro: true,
       },
       {
-        title: "Studio Layout",
+        title: "Studio",
         description:
           "Minimal portfolio-style layout designed to highlight photography and creative work.",
-        imgUrl: StudioLayout,
-        path: "https://regallery.team/core/reacg/studio-layout/",
+        imgUrl: Studio,
+        path: "https://regallery.team/core/reacg/studio/",
         pro: true,
       },
       {
-        title: "Elegant Grid",
+        title: "Serif Grid",
         description:
           "A refined grid layout with balanced spacing for a polished, modern presentation.",
-        imgUrl: ElegantGrid,
-        path: "https://regallery.team/core/reacg/elegant-grid/",
+        imgUrl: SerifGrid,
+        path: "https://regallery.team/core/reacg/serif-grid/",
         pro: true,
       },
       {
-        title: "Modern Grid",
+        title: "Open Grid",
         description:
           "A contemporary image grid optimized for clean design and responsive viewing.",
-        imgUrl: ModernGrid,
-        path: "https://regallery.team/core/reacg/modern-grid/",
+        imgUrl: OpenGrid,
+        path: "https://regallery.team/core/reacg/open-grid/",
         pro: true,
       },
     ],
@@ -337,11 +337,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
-        title: "Motion View",
+        title: "Kinetic",
         description:
-          "Motion View is a minimal gallery template designed to showcase images and short videos in one seamless layout.",
-        imgUrl: MotionView,
-        path: "https://regallery.team/core/reacg/motion-view/",
+          "Kinetic is a minimal gallery template designed to showcase images and short videos in one seamless layout.",
+        imgUrl: Kinetic,
+        path: "https://regallery.team/core/reacg/kinetic/",
         pro: true,
       },
       {
@@ -411,11 +411,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: true,
       },
       {
-        title: "Hero Focus",
+        title: "Feature",
         description:
           "A gallery layout featuring a large highlighted image with supporting thumbnails.",
-        imgUrl: HeroFocus,
-        path: "https://regallery.team/core/reacg/hero-focus/",
+        imgUrl: Feature,
+        path: "https://regallery.team/core/reacg/feature/",
         pro: true,
       },
     ],
@@ -484,11 +484,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: true,
       },
       {
-        title: "Swipeflow",
+        title: "Swipe",
         description:
-          "The Swipeflow Gallery template in Re Gallery features a modern swipe-based gallery layout for displaying images in a clean and engaging way. Ideal for creative and portfolio websites.",
-        imgUrl: TemplateSwipeflow,
-        path: "https://regallery.team/core/reacg/swipeflow/",
+          "The Swipe Gallery template in Re Gallery features a modern swipe-based gallery layout for displaying images in a clean and engaging way. Ideal for creative and portfolio websites.",
+        imgUrl: TemplateSwipe,
+        path: "https://regallery.team/core/reacg/swipe/",
         pro: true,
       },
       {
@@ -532,19 +532,19 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: false,
       },
       {
-        title: "Service Blocks",
+        title: "Services",
         description:
           "A visually engaging section to showcase what makes you stand out—perfect for “Why Choose Us” or key benefits on any website.",
-        imgUrl: TemplateServiceBlocks,
-        path: "https://regallery.team/core/reacg/service-blocks/",
+        imgUrl: TemplateServices,
+        path: "https://regallery.team/core/reacg/services/",
         pro: true,
       },
       {
-        title: "Simple Slider",
+        title: "Slideshow",
         description:
           "A lightweight image slider that lets visitors browse photos one by one.",
-        imgUrl: SimpleSlider,
-        path: "https://regallery.team/core/reacg/simple-slider/",
+        imgUrl: Slideshow,
+        path: "https://regallery.team/core/reacg/slideshow/",
         pro: false,
       },
     ],
@@ -636,11 +636,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         pro: true,
       },
       {
-        title: "Soft Hover",
+        title: "Bloom",
         description:
-          "The Soft Hover template adds a gentle, elegant hover animation to your images, creating a smooth and modern visual experience. Perfect for portfolios, creative projects, and minimalist gallery layouts.",
-        imgUrl: SoftHover,
-        path: "https://regallery.team/core/reacg/soft-hover/",
+          "The Bloom template adds a gentle, elegant hover animation to your images, creating a smooth and modern visual experience. Perfect for portfolios, creative projects, and minimalist gallery layouts.",
+        imgUrl: Bloom,
+        path: "https://regallery.team/core/reacg/bloom/",
         pro: false,
       },
       {
