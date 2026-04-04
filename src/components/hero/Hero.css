@@ -115,4 +115,7 @@
     grid-template-columns: 1fr;
     padding: 30px 0 0 0;
   }
+  .hero-trust-item {
+    font-size: 0.9rem;
+  }
 }

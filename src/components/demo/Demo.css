@@ -228,6 +228,13 @@
     height: 50px;
     width: 50px;
   }
+  .responsive_viewport_button svg {
+    width: 60px;
+    height: 60px;
+  }
+  .responsive_viewport_button span {
+    font-size: 1.2rem;
+  }
   .demo_button {
     max-width: 50px;
   }
