@@ -33,7 +33,6 @@ main.closed-banner {
 main > section#views,
 section#features,
 section#benefits,
-section#review,
 section#pricing {
   background-color: #eee !important;
 }
@@ -54,7 +53,7 @@ section {
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: 75px 25px;
+  padding: 60px 25px;
 }
 
 footer {
@@ -139,10 +138,10 @@ p {
     font-size: 14px;
   }
   .section-text__title {
-    font-size: 35px;
+    font-size: 37px;
     max-width: 500px;
     i {
-      font-size: 30px;
+      font-size: 37px;
     }
   }
   .section-text__body {
@@ -153,9 +152,6 @@ p {
 
   .section-text__title-small {
     font-size: 20px;
-  }
-  section[id] {
-    padding: 25px 25px;
   }
 }
 
@@ -214,11 +210,6 @@ p {
 }
 .download-btn:not(.secondary-btn):hover {
   filter: brightness(1.3);
-}
-
-.download-btn__navbar {
-  background: var(--re-primary-color, #2540cc);
-  margin-left: 12px;
 }
 
 .buttons-container a,

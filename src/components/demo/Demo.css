@@ -262,16 +262,3 @@
     max-width: min(430px, 100%);
   }
 }
-
-@media screen and (max-width: 500px) {
-  .demo_description {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
-  }
-
-  .demo_description p svg {
-    height: 26px;
-    width: 26px;
-    vertical-align: middle;
-  }
-}

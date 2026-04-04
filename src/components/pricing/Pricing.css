@@ -352,6 +352,10 @@ a.pricing-card__features-link--see-all {
 }
 
 @media screen and (min-width: 350px) and (max-width: 475px) {
+  .pricing-card__features {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .pricing-card__features__list > svg {
     width: 46px;
   }

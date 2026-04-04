@@ -51,9 +51,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
+
 .nav-link:hover .nav-link__background {
   width: 100%;
 }
@@ -325,6 +325,12 @@
   align-items: center;
 }
 
+.download-btn__navbar {
+  background: var(--re-primary-color, #2540cc);
+  margin-left: 12px;
+  width: fit-content;
+}
+
 @media screen and (max-width: 1380px) {
   .dropdown-menu {
     width: calc(100% - 50px);
@@ -480,7 +486,6 @@
     border: 4px solid transparent; /* Creates an illusion of a smaller width */
     box-shadow: inset 0 0 6px #727272;
   }
-
   .nav-open .nav-content {
     height: 70px;
     margin-top: 0px;
@@ -497,9 +502,15 @@
   .nav .nav-links__container {
     display: none;
   }
-
+  .subMenu-nav-link {
+    width: 100%;
+  }
   .nav-link {
+    width: 100%;
     height: 60px;
+  }
+  .nav-link__background {
+    display: none;
   }
 
   .nav-menu__icon {

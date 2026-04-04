@@ -22,6 +22,7 @@ section.supportandInfo .container {
   background-color: #000000;
   box-sizing: border-box;
   border-radius: 15px;
+  margin-top: -74px;
 }
 
 .contact_us_row h2,

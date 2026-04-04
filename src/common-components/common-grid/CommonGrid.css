@@ -87,12 +87,28 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .grid-item {
+    padding: 35px;
+  }
+}
+
 div#none {
   visibility: hidden;
 }
 
+._features .feature-box__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+._features .feature-box__header svg {
+  flex-shrink: 0;
+}
 ._features .grid-item .section-text__title-small {
-  height: 44px;
-  margin-bottom: 27px;
+  height: auto;
+  margin: 0;
   text-align: left;
 }

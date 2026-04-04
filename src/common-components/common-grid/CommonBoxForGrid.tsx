@@ -18,16 +18,12 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
     <motion.div id={title} className="grid-item feature-box col-50">
       {title !== "none" && (
         <>
-          <svg
-            style={{ marginBottom: "5px" }}
-            height={41}
-            width={41}
-            id="Outline"
-            viewBox="0 0 24 24"
-          >
-            {path}
-          </svg>
-          <h3 className="section-text__title-small">{title}</h3>
+          <div className="feature-box__header">
+            <svg height={55} width={55} id="Outline" viewBox="0 0 24 24">
+              {path}
+            </svg>
+            <h3 className="section-text__title-small">{title}</h3>
+          </div>
           <p className="section-text__desc">{description}</p>
         </>
       )}
