@@ -458,14 +458,14 @@
 
 @media screen and (max-width: 780px) {
   .nav-open {
-    min-height: calc(100vh - 70px);
+    min-height: calc(100dvh - 70px);
     background-color: #000000;
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
   .nav-open.closed-banner {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
   .nav-open::-webkit-scrollbar {
     scrollbar-width: thin;
@@ -524,7 +524,7 @@
 }
 @media screen and (min-width: 365px) and (max-width: 490px) {
   .nav-open {
-    min-height: calc(100vh - 94px);
+    min-height: calc(100dvh - 94px);
   }
 }
 @keyframes nav-enter-anim {
@@ -549,7 +549,7 @@
     height: 70px;
   }
   to {
-    height: 100vh;
+    height: 100dvh;
   }
 }
 @-webkit-keyframes nav-open {
@@ -557,7 +557,7 @@
     height: 70px;
   }
   to {
-    height: 100vh;
+    height: 100dvh;
   }
 }
 
