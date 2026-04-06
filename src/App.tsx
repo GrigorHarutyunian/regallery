@@ -25,6 +25,7 @@ import PlansComparisonTable from "./components/plans-comparison-table/PlansCompa
 import { featuresData1, featuresData2 } from "./data/features-data";
 import studioData from "./data/studio-data";
 import infoData from "./data/info-data";
+import aiData from "./data/ai-data";
 import builderData from "./data/builder-data";
 import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 const App: React.FC = () => {
@@ -103,13 +104,14 @@ const App: React.FC = () => {
           >
             <Hero />
             <Demo />
-            <Section data={infoData} />
+            <Section data={aiData} />
             <Templates />
             <ItemsSection data={featuresData1} />
-            <Section data={studioData} />
-            <ResponsiveTemplate/>
+            <Section data={infoData} />
+            <ResponsiveTemplate />
             <ItemsSection data={featuresData2} />
             <PageBuilder data={builderData} />
+            <Section data={studioData} />
             <Review />
             <Pricing />
             <Faq />

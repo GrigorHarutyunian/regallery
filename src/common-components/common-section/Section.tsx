@@ -5,16 +5,16 @@ import SectionDTO from "../../types/SectionDTO";
 import "./Section.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
 import { motion } from "framer-motion";
-import {
-  LazyLoadImage,
-  LazyLoadComponent,
-} from "react-lazy-load-image-component";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Section: React.FC<SectionDTO> = ({ data }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
+  const responsiveSizes = data.imgSrcSet
+    ? (data.imgSizes ?? "(max-width: 768px) 100vw, 50vw")
+    : undefined;
   return (
     <section id={data.id} className="supportandInfo">
       <Container>
@@ -38,6 +38,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                       loop
                       muted
                       playsInline
+                      aria-label={data.alt}
                     />
                   </LazyLoadComponent>
                 ) : data.slides ? (
@@ -49,11 +50,14 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                   />
                 ) : (
                   data.img && (
-                    <LazyLoadImage
-                      height="100%"
-                      width="100%"
+                    <img
                       src={data.img}
+                      srcSet={data.imgSrcSet}
+                      sizes={responsiveSizes}
                       alt={data.alt}
+                      loading="lazy"
+                      decoding="async"
+                      style={{ width: "100%", height: "100%" }}
                     />
                   )
                 )}
@@ -106,15 +110,21 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                     loop
                     muted
                     playsInline
+                    aria-label={data.alt}
                   />
                 </LazyLoadComponent>
               ) : (
-                <LazyLoadImage
-                  height="100%"
-                  width="100%"
-                  src={data.img}
-                  alt={data.alt}
-                />
+                data.img && (
+                  <img
+                    src={data.img}
+                    srcSet={data.imgSrcSet}
+                    sizes={responsiveSizes}
+                    alt={data.alt}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                )
               )}
             </motion.div>
           )}

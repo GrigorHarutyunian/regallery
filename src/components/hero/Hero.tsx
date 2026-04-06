@@ -8,6 +8,8 @@ import { Row, Container } from "react-bootstrap";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import heroMp4 from "../../assets/sections/first_section_940.mp4";
 import heroPoster from "../../assets/sections/first_section_940.webp";
+import { allTemplates } from "../views/views-data-subMenu";
+import { formatCountByStep } from "../../utils/formatCountByStep";
 
 import "./Hero.css";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
@@ -16,6 +18,7 @@ const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
   const [open, setOpen] = useState(false);
   const version = windowWitdth.version;
+  const allTemplatesCount = formatCountByStep(allTemplates.length);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -34,10 +37,12 @@ const Hero: React.FC = () => {
               </h1>
               <p className="section-text__body">
                 Re Gallery gives you{" "}
-                <b>9 responsive layouts, 50+ pro templates,</b> and built-in AI
-                that writes alt text, generates captions, and handles image SEO
-                — so you don't have to. Works with Elementor, Gutenberg, Divi,
-                and more. No coding required.
+                <b>9 responsive layouts, {allTemplatesCount} templates,</b> and
+                built-in AI that writes alt text, generates captions, and
+                handles image SEO — so you don't have to. Works with Elementor,
+                Gutenberg, Divi, and more.
+                <br />
+                <i>No coding required.</i>
               </p>
               {version === "mobile" && (
                 <motion.div className="section-image">
@@ -100,6 +105,7 @@ const Hero: React.FC = () => {
                     playsInline
                     src={heroMp4}
                     poster={heroPoster}
+                    aria-label={`AI-powered WordPress gallery builder creating responsive photo galleries with automatic alt text and captions`}
                   />
                 </LazyLoadComponent>
               </motion.div>

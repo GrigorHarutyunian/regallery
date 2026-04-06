@@ -1,4 +1,7 @@
-import media from "../assets/sections/third_section.webp";
+import image480 from "../assets/sections/responsive-480x276.webp";
+import image640 from "../assets/sections/responsive-640x368.webp";
+import image768 from "../assets/sections/responsive-768x441.webp";
+import image940 from "../assets/sections/responsive-940x540.webp";
 
 const studioData = {
   id: "studio",
@@ -17,7 +20,11 @@ const studioData = {
       can build galleries that actually serve your website goals.
     </>
   ),
-  img: media,
-  alt: `Re Gallery Studio`,
+  img: image940,
+  imgSrcSet: `${image480} 480w, ${image640} 640w, ${image768} 768w, ${image940} 940w`,
+  imgSizes: "(max-width: 768px) 100vw, 50vw",
+  alt: `Re Gallery Studio providing expert guidance for building high-converting WordPress photo galleries`,
+  additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
+  additionalButtonName: "ADMIN DEMO",
 };
 export default studioData;

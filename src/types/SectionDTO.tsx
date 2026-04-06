@@ -10,6 +10,8 @@ export default interface SectionDTO {
     poster?: string;
     slides?: any;
     img?: any;
+    imgSrcSet?: string;
+    imgSizes?: string;
     additionalButtonLink?: string;
     additionalButtonName?: string;
     viewMoreLinks?: any;

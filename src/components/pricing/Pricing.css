@@ -85,6 +85,9 @@
 .free-plan .plan-type {
   visibility: hidden;
 }
+.free-plan .pricing-card__btn {
+  background-color: #000000;
+}
 .text-start {
   text-align: start;
 }
