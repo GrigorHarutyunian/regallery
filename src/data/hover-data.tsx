@@ -1,7 +1,10 @@
-// import image480 from "../assets/sections/responsive-480x276.webp";
-// import image640 from "../assets/sections/responsive-640x368.webp";
-// import image768 from "../assets/sections/responsive-768x441.webp";
+import image480 from "../assets/sections/hover-480x276.webp";
+import image640 from "../assets/sections/hover-640x368.webp";
+import image768 from "../assets/sections/hover-768x441.webp";
+import image1024 from "../assets/sections/hover-1024x588.webp";
 import image1280 from "../assets/sections/hover-1280x735.webp";
+import image1500 from "../assets/sections/hover-1500x862.webp";
+import image1880 from "../assets/sections/hover-1880x1080.webp";
 import type SectionDTO from "../types/SectionDTO";
 
 const hoverData: SectionDTO["data"] = {
@@ -9,16 +12,17 @@ const hoverData: SectionDTO["data"] = {
   title: "Hover Effects",
   text: (
     <>
-      Pick a hover style and preview how each image can reveal captions, create
-      focus, and add motion without extra custom code.
+      Choose a hover style and see instantly how each image can{" "}
+      <b>reveal captions, create focus, and add motion.</b>
       <br />
-      From subtle fades to framed overlays and bloom-style highlights, Re
-      Gallery helps you match the interaction to your brand in just a few
-      clicks.
+      Match the interaction to your brand in just a few clicks, and control how
+      it looks across every breakpoint.
+      <br />
+      <i>No custom code, no setup complexity.</i>
     </>
   ),
-  img: image1280,
-  // imgSrcSet: `${image480} 480w, ${image640} 640w, ${image768} 768w, ${image940} 940w`,
+  img: image1880,
+  imgSrcSet: `${image480} 480w, ${image640} 640w, ${image768} 768w, ${image1024} 1024w, ${image1280} 1280w, ${image1500} 1500w, ${image1880} 1880w`,
   imgSizes: "(max-width: 768px) 100vw, 50vw",
   alt: `Preview selectable image hover effects in Re Gallery`,
   hoverEffects: [
