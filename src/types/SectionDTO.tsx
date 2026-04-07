@@ -17,5 +17,13 @@ export default interface SectionDTO {
     viewMoreLinks?: any;
     itemsTop?: { title: string; image: string }[];
     itemsBottom?: { title: string; image: string }[];
+    hoverEffects?: {
+      value: string;
+      label: string;
+      previewTitle?: string;
+      previewText?: string;
+      captionDisplay?: "always" | "hover" | "hidden";
+      captionPosition?: "top" | "center" | "bottom";
+    }[];
   };
 }

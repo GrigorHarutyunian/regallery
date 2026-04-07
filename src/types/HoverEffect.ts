@@ -1,0 +1,38 @@
+export enum HoverEffect {
+  ZOOM_IN = "zoom-in",
+  ZOOM_OUT = "zoom-out",
+  SLIDE = "slide",
+  ROTATE = "rotate",
+  BLUR = "blur",
+  SCALE = "scale",
+  SEPIA = "sepia",
+  OVERLAY = "overlay",
+  OVERLAY_ZOOM_ICON = "overlay-icon-zoom",
+  OVERLAY_CART_ICON = "overlay-icon-cart",
+  OVERLAY_PLUS_ICON = "overlay-icon-plus",
+  OVERLAY_FULLSCREEN_ICON = "overlay-icon-fullscreen",
+  FLASH = "flash",
+  SHINE = "shine",
+  CIRCLE = "circle",
+}
+
+export const hoverEffectOptions = [
+  { value: HoverEffect.ZOOM_IN, label: "Zoom In" },
+  { value: HoverEffect.ZOOM_OUT, label: "Zoom Out" },
+  { value: HoverEffect.SLIDE, label: "Slide" },
+  { value: HoverEffect.ROTATE, label: "Rotate" },
+  { value: HoverEffect.BLUR, label: "Blur" },
+  { value: HoverEffect.SCALE, label: "Gray Scale" },
+  { value: HoverEffect.SEPIA, label: "Sepia" },
+  { value: HoverEffect.OVERLAY, label: "Overlay" },
+  { value: HoverEffect.OVERLAY_ZOOM_ICON, label: "Overlay Zoom Icon" },
+  { value: HoverEffect.OVERLAY_CART_ICON, label: "Overlay Cart Icon" },
+  { value: HoverEffect.OVERLAY_PLUS_ICON, label: "Overlay Plus Icon" },
+  {
+    value: HoverEffect.OVERLAY_FULLSCREEN_ICON,
+    label: "Overlay Fullscreen Icon",
+  },
+  { value: HoverEffect.FLASH, label: "Flash" },
+  { value: HoverEffect.SHINE, label: "Shine" },
+  { value: HoverEffect.CIRCLE, label: "Circle" },
+] as const;

@@ -18,6 +18,7 @@ import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import Section from "./common-components/common-section/Section";
 import scrollToTarget from "./common-components/scrollToTarget";
+import HoverEffectsSection from "./components/hover-effects-section/HoverEffectsSection";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
 import Sale from "./components/sale-banner/SaleBanner";
@@ -26,6 +27,7 @@ import { featuresData1, featuresData2 } from "./data/features-data";
 import studioData from "./data/studio-data";
 import infoData from "./data/info-data";
 import aiData from "./data/ai-data";
+import hoverData from "./data/hover-data.tsx";
 import builderData from "./data/builder-data";
 import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 const App: React.FC = () => {
@@ -110,8 +112,9 @@ const App: React.FC = () => {
             <Section data={infoData} />
             <ResponsiveTemplate />
             <ItemsSection data={featuresData2} />
-            <PageBuilder data={builderData} />
             <Section data={studioData} />
+            <PageBuilder data={builderData} />
+            <HoverEffectsSection data={hoverData} />
             <Review />
             <Pricing />
             <Faq />
