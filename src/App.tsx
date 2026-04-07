@@ -115,7 +115,6 @@ const App: React.FC = () => {
             <HoverEffectsSection data={hoverData} />
             <PageBuilder data={builderData} />
             <Section data={studioData} />
-            <HoverEffectsSection data={hoverData} />
             <Review />
             <Pricing />
             <Faq />
