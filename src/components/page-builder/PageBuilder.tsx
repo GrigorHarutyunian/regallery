@@ -2,7 +2,6 @@ import React from "react";
 import "./PageBuilder.css";
 import { Container, Row } from "react-bootstrap";
 import SectionDTO from "../../types/SectionDTO";
-import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import { arrow_icon } from "../../assets/icons/arrow-icon";
 
 const PageBuilder: React.FC<SectionDTO> = ({ data }) => {

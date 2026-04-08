@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./Demo.css";
 import { Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
