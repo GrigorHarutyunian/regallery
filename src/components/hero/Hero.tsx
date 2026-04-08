@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                 Re Gallery gives you{" "}
                 <b>9 responsive layouts, {allTemplatesCount} templates,</b> and
                 built-in AI that writes alt text, generates captions, and
-                handles image SEO — so you don't have to. Works with Elementor,
+                handles image SEO - so you don't have to. Works with Elementor,
                 Gutenberg, Divi, and more.
                 <br />
                 <i>No coding required.</i>

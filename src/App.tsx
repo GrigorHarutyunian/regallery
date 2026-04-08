@@ -30,6 +30,8 @@ import aiData from "./data/ai-data";
 import hoverData from "./data/hover-data.tsx";
 import builderData from "./data/builder-data";
 import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
+import LightboxShowcase from "./components/demo/LightboxShowcase";
+
 const App: React.FC = () => {
   useEffect(() => {
     const container = document.querySelector(
@@ -110,11 +112,12 @@ const App: React.FC = () => {
             <Templates />
             <ItemsSection data={featuresData1} />
             <Section data={infoData} />
-            <ResponsiveTemplate />
+            <LightboxShowcase />
             <ItemsSection data={featuresData2} />
             <HoverEffectsSection data={hoverData} />
-            <PageBuilder data={builderData} />
+            <ResponsiveTemplate />
             <Section data={studioData} />
+            <PageBuilder data={builderData} />
             <Review />
             <Pricing />
             <Faq />

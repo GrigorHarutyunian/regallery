@@ -19,6 +19,7 @@ import TideFrame from "../../assets/imgs/views/subViews/masonry/Tide_Frame.webp"
 import InfiniteScroll from "../../assets/imgs/views/subViews/masonry/Infinite_Scroll.webp";
 import BorderHover from "../../assets/imgs/views/subViews/masonry/Border_Hover.webp";
 import OverlaySlideshow from "../../assets/imgs/views/subViews/slideshow/Overlay_Slideshow.webp";
+import UltimateShowcase from "../../assets/imgs/views/subViews/slideshow/Ultimate Showcase.webp";
 import FocusFrame1 from "../../assets/imgs/views/subViews/slideshow/Focus_Frame.webp";
 import DigitalShop from "../../assets/imgs/views/subViews/cube/Digital_Shop.webp";
 import TestimonialGallery from "../../assets/imgs/views/subViews/cube/Testimonial_Gallery.webp";
@@ -235,7 +236,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "CTA Cards",
         description:
-          "Easily boost engagement and conversions with our customizable CTA Cards template—perfect for guiding viewers to subscribe, click, or explore your content.",
+          "Easily boost engagement and conversions with our customizable CTA Cards template-perfect for guiding viewers to subscribe, click, or explore your content.",
         imgUrl: CTACards,
         path: "https://regallery.team/core/reacg/cta-cards/",
         pro: false,
@@ -418,6 +419,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         path: "https://regallery.team/core/reacg/feature/",
         pro: true,
       },
+      {
+        title: "Ultimate Showcase",
+        description:
+          "A complete slideshow experience with titles, descriptions, filmstrip navigation, and built-in zoom, share, and download controls.",
+        imgUrl: UltimateShowcase,
+        path: "https://regallery.team/core/reacg/ultimate-showcase/",
+        pro: true,
+      },
     ],
   },
   {
@@ -534,7 +543,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       {
         title: "Services",
         description:
-          "A visually engaging section to showcase what makes you stand out—perfect for “Why Choose Us” or key benefits on any website.",
+          "A visually engaging section to showcase what makes you stand out-perfect for “Why Choose Us” or key benefits on any website.",
         imgUrl: TemplateServices,
         path: "https://regallery.team/core/reacg/services/",
         pro: true,

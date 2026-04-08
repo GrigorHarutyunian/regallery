@@ -3,6 +3,7 @@ import "./PageBuilder.css";
 import { Container, Row } from "react-bootstrap";
 import SectionDTO from "../../types/SectionDTO";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+import { arrow_icon } from "../../assets/icons/arrow-icon";
 
 const PageBuilder: React.FC<SectionDTO> = ({ data }) => {
   return (
@@ -11,33 +12,18 @@ const PageBuilder: React.FC<SectionDTO> = ({ data }) => {
         <Row>
           <div className="pagebuilder_content" id="builder">
             <h2 className="section-text__title-centered">{data.title}</h2>
-            <p className="pagebuilder_description">{data.text}</p>
-            <div className="buttons-container buttons-container-centered">
-              <div className="primary-cta">
-                <a href="#pricing">
-                  <DownloadBtn className={"download-btn"} />
-                </a>
-                <div className="primary-btn__free-link">
-                  <a
-                    href="https://wordpress.org/plugins/regallery/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Try the free version
-                  </a>
-                </div>
-              </div>
-              {data.additionalButtonLink && (
+            <div className="demo_description pagebuilder_description">
+              <p>
+                <span>{data.text}</span>
                 <a
-                  className="download-btn secondary-btn"
-                  href={data.additionalButtonLink}
+                  href={"https://regallery.team/core/landing-pages/"}
                   target="_blank"
-                  rel="noreferrer"
-                  aria-label="Landing Demo"
+                  title="LANDING DEMO"
+                  aria-label="LANDING DEMO"
                 >
-                  Landing Demo
+                  {arrow_icon}
                 </a>
-              )}
+              </p>
             </div>
             <div className="pagebuilder_carousel">
               <div className="pagebuilder_row pagebuilder_row--right">

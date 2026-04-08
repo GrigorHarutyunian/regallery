@@ -219,8 +219,13 @@
 }
 
 .templates_description,
-.responsive_description {
+.responsive_description,
+.lightbox_description {
   margin: 0;
+}
+
+.lightbox_description {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1160px) {

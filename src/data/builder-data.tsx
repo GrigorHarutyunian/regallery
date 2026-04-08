@@ -48,7 +48,5 @@ const builderData = {
     { image: landingGallery20, title: "Overlay Slideshow" },
   ],
   alt: `Use the landing page builder to create stunning landing pages with ease`,
-  additionalButtonLink: "https://regallery.team/core/landing-pages/",
-  additionalButtonName: "LANDING DEMO",
 };
 export default builderData;

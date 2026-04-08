@@ -18,12 +18,7 @@
   margin: 0 auto;
 }
 
-.pagebuilder_description {
-  color: #ffffffc4;
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  max-width: 980px;
+.demo_description.pagebuilder_description {
   margin: 30px auto;
 }
 

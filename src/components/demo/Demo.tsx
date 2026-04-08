@@ -14,10 +14,10 @@ const Demo: React.FC = () => {
   const sectionRef = useRef<HTMLOptionElement | null>(null);
 
   const selectedViewDesrciption = dataDemo.find(
-    (val) => val.idView === selectedIdView
+    (val) => val.idView === selectedIdView,
   )?.description;
   const selectedValueDemoPath = dataDemo.find(
-    (val) => val.idView === selectedIdView
+    (val) => val.idView === selectedIdView,
   )?.demoPath;
 
   const handleButtonClick = (idView: number) => {
@@ -37,7 +37,7 @@ const Demo: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h2 className="section-text__title-centered">Gallery layouts</h2>
+            <h2 className="section-text__title-centered">Gallery Layouts</h2>
             <div className="demo_buttons_rows ">
               {dataDemo.map((val, index) => {
                 return (

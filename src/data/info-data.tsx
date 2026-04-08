@@ -17,10 +17,10 @@ const infoData = {
     <>
       Re Gallery is built for people who want professional results without the
       complexity. With an intuitive <b>Real-Time Preview</b>, every setting
-      change shows instantly — no guessing, no re-publishing, no wasted time.
+      change shows instantly - no guessing, no re-publishing, no wasted time.
       Choose from <b>9 responsive layouts</b> and{" "}
       <b>{allTemplatesCount} pre-designed templates</b>, drop your gallery into
-      any page builder, and even build landing pages — all from inside a single,
+      any page builder, and even build landing pages - all from inside a single,
       lightweight plugin that feels native to WordPress.
     </>
   ),
