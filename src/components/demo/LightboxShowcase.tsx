@@ -12,7 +12,7 @@ const LightboxShowcase: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h2 className="section-text__title-centered">Lightbox Showcase</h2>
+            <h2 className="section-text__title-centered">Lightbox</h2>
             <div className="demo_description lightbox_description">
               <motion.p>
                 <span>
