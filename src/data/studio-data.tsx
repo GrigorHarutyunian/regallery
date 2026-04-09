@@ -25,6 +25,6 @@ const studioData = {
   imgSizes: "(max-width: 768px) 100vw, 50vw",
   alt: `Re Gallery Studio providing expert guidance for building high-converting WordPress photo galleries`,
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "ADMIN DEMO",
+  additionalButtonName: "Admin demo",
 };
 export default studioData;

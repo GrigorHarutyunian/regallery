@@ -30,7 +30,7 @@ const DownloadBtn: React.FC<DownloadBtnProps> = ({
 
   return (
     <div className={className} onClick={handleClick}>
-      {version === "support" ? "SUPPORT FORUM" : "GET STARTED"}
+      {version === "support" ? "Support forum" : "Get started"}
     </div>
   );
 };

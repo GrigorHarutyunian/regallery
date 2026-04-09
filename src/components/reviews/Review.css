@@ -77,8 +77,8 @@
   overflow: hidden;
 }
 .read_more_str:hover {
-  color: var(--re-primary-color, #2540cc);
-  border-color: var(--re-primary-color, #2540cc);
+  color: var(--re-tertiary-color, #2540cc);
+  border-color: var(--re-tertiary-color, #2540cc);
 }
 
 .toggle {

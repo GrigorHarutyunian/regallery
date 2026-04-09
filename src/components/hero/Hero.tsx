@@ -85,10 +85,10 @@ const Hero: React.FC = () => {
                       width: "25px",
                       height: "19px",
                       marginBottom: "2px",
-                      color: "var(--re-primary-color, #2540cc)",
+                      color: "var(--re-tertiary-color, #2540cc)",
                     }}
                   />
-                  WATCH INTRO
+                  Watch intro
                 </div>
               </div>
             </motion.div>

@@ -14,7 +14,7 @@
   padding: 10px 26px;
   border-radius: 999px;
   background: var(--re-secondary-color, #dce9ff);
-  color: var(--re-primary-color, #2540cc);
+  color: var(--re-tertiary-color, #2540cc);
   font-size: 0.9rem;
   line-height: 1;
   letter-spacing: 0.07em;

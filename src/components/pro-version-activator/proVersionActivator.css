@@ -63,7 +63,7 @@
 
 .payment__form-wrapper__terms a {
   text-decoration: underline;
-  color: var(--re-primary-color, #2540cc);
+  color: var(--re-tertiary-color, #2540cc);
 }
 
 .pro-version-activator__result {

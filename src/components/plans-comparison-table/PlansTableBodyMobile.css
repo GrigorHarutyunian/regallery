@@ -21,7 +21,7 @@
   text-align: center;
 }
 .plans-table__mobile-cell--header.is-active {
-  box-shadow: inset 0 -2px 0 var(--re-primary-color, #2540cc);
+  box-shadow: inset 0 -2px 0 var(--re-tertiary-color, #2540cc);
 }
 
 .closed-banner {

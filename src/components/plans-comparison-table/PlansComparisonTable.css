@@ -11,8 +11,8 @@
     color: inherit;
   }
   a:hover {
-    border-bottom: 1px dashed var(--re-primary-color, #2540cc);
-    color: var(--re-primary-color, #2540cc);
+    border-bottom: 1px dashed var(--re-tertiary-color, #2540cc);
+    color: var(--re-tertiary-color, #2540cc);
   }
   .pricing-card__popular::after {
     border-radius: unset;

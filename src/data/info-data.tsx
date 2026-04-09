@@ -29,6 +29,6 @@ const infoData = {
   imgSizes: "(max-width: 768px) 100vw, 50vw",
   alt: `Re Gallery WordPress plugin interface showing real-time preview and gallery customization controls`,
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "ADMIN DEMO",
+  additionalButtonName: "Admin demo",
 };
 export default infoData;

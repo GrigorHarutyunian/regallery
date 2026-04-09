@@ -19,7 +19,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     currency: "$",
     planType: "yearly",
     text: "Easy Start for Beginners to Explore Galleries",
-    buttonText: "FREE DOWNLOAD",
+    buttonText: "Free download",
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
@@ -47,7 +47,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     planType: "yearly",
     // duration: "1 Year",
     text: "For Photographers & Creatives Using WordPress",
-    buttonText: "BUY NOW",
+    buttonText: "Get Basic",
     advantages: [
       <>
         Use on <strong className="bold__list">1 Site</strong>
@@ -97,7 +97,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     mostPopular: true,
     // duration: "1 Year",
     text: "For Businesses & Teams Building on WordPress",
-    buttonText: "BUY NOW",
+    buttonText: "Get Plus",
     advantages: [
       <>
         Use on <strong className="bold__list">5 Sites</strong>
@@ -146,7 +146,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     planType: "yearly",
     // duration: "1 Year",
     text: "For Agencies Managing Multiple WordPress Sites",
-    buttonText: "BUY NOW",
+    buttonText: "Get Agency",
     advantages: [
       <>
         Use on <strong className="bold__list">25 Sites</strong>

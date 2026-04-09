@@ -149,7 +149,7 @@
   height: 30px;
   display: block;
   path {
-    fill: var(--re-primary-color, #2540cc);
+    fill: var(--re-tertiary-color, #2540cc);
   }
 }
 

@@ -21,7 +21,12 @@
     -1 * var(--ring-thickness)
   ); /* outer extent, controls ring thickness */
   border-radius: inherit;
-  background: conic-gradient(from var(--angle), #2540cc, #c251be, #2540cc);
+  background: conic-gradient(
+    from var(--angle),
+    var(--re-tertiary-color, #2540cc),
+    var(--re-primary-color, #c251be),
+    var(--re-tertiary-color, #2540cc)
+  );
   z-index: 0;
   animation: rotate 4s linear infinite;
   pointer-events: none;
@@ -215,7 +220,7 @@
 
 a.pricing-card__features-link--see-all {
   align-items: center;
-  color: var(--re-primary-color, #2540cc);
+  color: var(--re-tertiary-color, #2540cc);
   display: inline-flex;
   font-weight: 700;
   gap: 5px;
