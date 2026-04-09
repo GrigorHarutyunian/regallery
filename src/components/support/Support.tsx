@@ -22,7 +22,11 @@ const Support: React.FC = () => {
               href="https://wordpress.org/support/plugin/regallery/"
               target="_blank"
             >
-              <DownloadBtn className="download-btn" version={"support"} />
+              <DownloadBtn
+                className="download-btn"
+                version={"support"}
+                location="support"
+              />
             </a>
           </div>
         </div>

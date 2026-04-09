@@ -67,7 +67,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
             <div className="buttons-container">
               <div className="primary-cta">
                 <a href="#pricing">
-                  <DownloadBtn className={"download-btn"} />
+                  <DownloadBtn className={"download-btn"} location={data.id} />
                 </a>
                 <div className="primary-btn__free-link">
                   <a

@@ -153,6 +153,7 @@ const Navbar: React.FC = () => {
                 {link.type === "button" ? (
                   <DownloadBtn
                     className={"download-btn download-btn__navbar"}
+                    location="navbar"
                   />
                 ) : (
                   <>

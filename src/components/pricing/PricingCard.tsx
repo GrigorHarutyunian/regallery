@@ -43,6 +43,21 @@ const PricingCard: React.FC<PricingDTO> = ({
   const [isLoading, setIsLoading] = useState(false);
   const { openStripeCheckout } = useProVersionActivatorContext();
 
+  const trackPricingConversion = () => {
+    if (typeof window === "undefined") return;
+
+    const trackingWindow = window as Window & {
+      dataLayer?: Array<Record<string, unknown>>;
+    };
+
+    trackingWindow.dataLayer = trackingWindow.dataLayer || [];
+    trackingWindow.dataLayer.push({
+      event: "conversion",
+      experiment: "button_color_test",
+      variant: window.localStorage.getItem("abTest_v1"),
+    });
+  };
+
   const handleCheckout = async () => {
     setIsLoading(true);
     try {
@@ -103,14 +118,17 @@ const PricingCard: React.FC<PricingDTO> = ({
 
       {href ? (
         <>
-          <a target={"_blank"} href={href}>
+          <a target={"_blank"} href={href} onClick={trackPricingConversion}>
             <div className="pricing-card__btn">{buttonText}</div>
           </a>
         </>
       ) : (
         <>
           <CustomButton
-            handleClick={handleCheckout}
+            handleClick={() => {
+              trackPricingConversion();
+              handleCheckout();
+            }}
             className="pricing-card__btn"
             isLoading={isLoading}
           >

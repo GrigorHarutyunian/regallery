@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
               <div className="buttons-container">
                 <div className="primary-cta">
                   <a href="#pricing">
-                    <DownloadBtn className={"download-btn"} />
+                    <DownloadBtn className={"download-btn"} location="hero" />
                   </a>
                   <div className="primary-btn__free-link">
                     <a

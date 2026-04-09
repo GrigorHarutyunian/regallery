@@ -51,6 +51,35 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"
       />
     </noscript>
+
+    <!-- A/B testing -->
+    <script>
+      (function () {
+        const key = "abTest_v1";
+        let variant = localStorage.getItem(key);
+
+        if (!variant) {
+          variant = Math.random() < 0.5 ? "A" : "B";
+          localStorage.setItem(key, variant);
+        }
+
+        document.documentElement.classList.add("ab-" + variant);
+      })();
+    </script>
+
+    <script>
+      window.addEventListener("load", function () {
+        const variant = localStorage.getItem("abTest_v1");
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "ab_test_view_v1",
+          experiment: "button_color_test",
+          variant: variant,
+        });
+      });
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {

@@ -46,6 +46,21 @@ const PlansComparisonTable: React.FC = () => {
   const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
   const { openStripeCheckout } = useProVersionActivatorContext();
 
+  const trackPricingConversion = () => {
+    if (typeof window === "undefined") return;
+
+    const trackingWindow = window as Window & {
+      dataLayer?: Array<Record<string, unknown>>;
+    };
+
+    trackingWindow.dataLayer = trackingWindow.dataLayer || [];
+    trackingWindow.dataLayer.push({
+      event: "conversion",
+      experiment: "button_color_test",
+      variant: window.localStorage.getItem("abTest_v1"),
+    });
+  };
+
   // Show the table if it's the current hash target on mount
   useEffect(() => {
     if (location.hash === "#see-all-features") {
@@ -174,7 +189,11 @@ const PlansComparisonTable: React.FC = () => {
                           ) : null}
                           {href ? (
                             <>
-                              <a target={"_blank"} href={href}>
+                              <a
+                                target={"_blank"}
+                                href={href}
+                                onClick={trackPricingConversion}
+                              >
                                 <div className="pricing-card__btn">
                                   {buttonText}
                                 </div>
@@ -182,7 +201,10 @@ const PlansComparisonTable: React.FC = () => {
                             </>
                           ) : (
                             <CustomButton
-                              handleClick={() => handleCheckout(id)}
+                              handleClick={() => {
+                                trackPricingConversion();
+                                handleCheckout(id);
+                              }}
                               className="pricing-card__btn"
                               isLoading={loadingPlanId === id ? true : false}
                             >
