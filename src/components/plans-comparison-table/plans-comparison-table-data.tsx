@@ -501,30 +501,30 @@ export const plansComparisonAITools: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "ai-generations",
     label: "AI Generations",
-    values: [false, "Up to 1000", "Up to 1500", "Unlimited"],
+    values: ["Limited", "Up to 1000", "Up to 1500", "Unlimited"],
   },
   {
     id: "ai-generative-title",
     label: "Generative Title",
-    values: [false, true, true, true],
+    values: [true, true, true, true],
     href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-alt-text",
     label: "Generative Alt Text",
-    values: [false, true, true, true],
+    values: [true, true, true, true],
     href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-caption",
     label: "Generative Caption",
-    values: [false, true, true, true],
+    values: [true, true, true, true],
     href: "https://youtu.be/z0bK6SP8jbg",
   },
   {
     id: "ai-generative-description",
     label: "Generative Description",
-    values: [false, true, true, true],
+    values: [true, true, true, true],
     href: "https://youtu.be/z0bK6SP8jbg",
   },
 ];
