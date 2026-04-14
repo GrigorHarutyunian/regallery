@@ -297,7 +297,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-customizable-options",
       label: "Customizable Options",
-      values: ["150+", "220+", "300+", "300+"],
+      values: ["150+", "250+", "350+", "350+"],
     },
     {
       id: "general-image-click-actions",
@@ -318,7 +318,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-sorting",
       label: "Sorting",
-      values: [true, true, true, true],
+      values: [false, true, true, true],
     },
     {
       id: "general-filtering",
