@@ -253,7 +253,7 @@ export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "lightbox-loop",
     label: "Loop",
-    values: [true, true, true, true],
+    values: [false, true, true, true],
   },
   {
     id: "lightbox-autoplay",
