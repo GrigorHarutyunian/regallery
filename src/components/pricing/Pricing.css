@@ -366,7 +366,7 @@ a.pricing-card__features-link--see-all {
   justify-content: center;
 }
 .pricing__guarantee-title {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 700;
   font-style: normal;
   font-family: Inter;
@@ -405,6 +405,11 @@ a.pricing-card__features-link--see-all {
     height: 11px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .pricing__billing-toggle-row {
+    justify-content: center;
+  }
+}
 
 @media screen and (min-width: 861px) and (max-width: 975px) {
   .woo-icon {
@@ -413,20 +418,6 @@ a.pricing-card__features-link--see-all {
 }
 
 @media screen and (max-width: 860px) {
-  .pricing__billing-toggle-row {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .pricing__billing-toggle {
-    display: flex;
-    width: 100%;
-  }
-
-  .pricing__billing-toggle-btn {
-    flex: 1;
-  }
-
   .pricing__guarantee {
     flex-direction: column;
   }
@@ -443,5 +434,8 @@ a.pricing-card__features-link--see-all {
   }
   .pricing-card__features__list > svg {
     width: 46px;
+  }
+  .pricing__guarantee-title {
+    font-size: 20px;
   }
 }
