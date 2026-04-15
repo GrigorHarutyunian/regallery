@@ -1,47 +1,19 @@
 import { useState } from "react";
-import { getSale } from "../../utils/getSale";
-import PricingDTO from "../../types/PricingDTO";
+import PricingDTO, { BillingPeriod } from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
+import { getPricingDetails } from "./pricing-utils";
 
-const PricingCard: React.FC<PricingDTO> = ({
-  id,
-  price,
-  discount,
-  currency,
-  planType,
-  text,
-  buttonText,
-  advantages,
-  duration,
-  title,
-  href,
-  mostPopular,
-}) => {
-  if (typeof discount === "undefined") {
-    discount = getSale()?.couponCode ? 0 : getSale()?.discount;
-  }
-  var discountedPrice = discount
-    ? Math.round((price - (Math.round(price) * discount) / 100) * 100) / 100
-    : 0;
+interface PricingCardProps {
+  plan: PricingDTO;
+  billingPeriod: BillingPeriod;
+}
 
-  const savedMoney =
-    "Save " +
-    (discount && discount > 50
-      ? `${currency}${Math.round(price - discountedPrice)}`
-      : `${discount}%`);
-
-  const originalPrice =
-    planType === "monthly" ? (price / 12).toFixed(2) : price.toFixed(2);
-  const finalPrice =
-    planType === "monthly"
-      ? (discountedPrice / 12).toFixed(2)
-      : discountedPrice.toFixed(2);
-  const [main, cents] = discount
-    ? finalPrice.toString().split(".")
-    : originalPrice.toString().split(".");
+const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
+  const { currency, text, advantages, title, href, mostPopular } = plan;
   const [isLoading, setIsLoading] = useState(false);
   const { openStripeCheckout } = useProVersionActivatorContext();
+  const pricingDetails = getPricingDetails(plan, billingPeriod);
 
   const trackPricingConversion = () => {
     if (typeof window === "undefined") return;
@@ -59,9 +31,13 @@ const PricingCard: React.FC<PricingDTO> = ({
   };
 
   const handleCheckout = async () => {
+    if (!pricingDetails?.checkoutPlanId) {
+      return;
+    }
+
     setIsLoading(true);
     try {
-      await openStripeCheckout(id);
+      await openStripeCheckout(pricingDetails.checkoutPlanId);
     } catch (error) {
       console.error("Stripe checkout error:", error);
       setIsLoading(false);
@@ -80,35 +56,38 @@ const PricingCard: React.FC<PricingDTO> = ({
       <div className="pricing-card__header text-start">
         <div className="pricing-card__subtitle">{title}</div>
         <p className="section-text__desc pricing__text">{text}</p>
-        {price === 0 ? (
+        {!pricingDetails ? (
           <span className="pricing-card__title">Free</span>
         ) : (
           <>
-            {discount ? (
+            {pricingDetails.effectiveDiscount ? (
               <span className="canceled-price">
                 <div className="remove_line" />
                 {currency}
-                {originalPrice}
+                {pricingDetails.originalPrice}
               </span>
             ) : null}
             <div className="pricing-card__title">
               {currency ? <span className="currency">{currency}</span> : null}
-              {main ? <span>{main}</span> : null}
-              {cents ? <span className="cents">.{cents}</span> : null}
+              {pricingDetails.main ? <span>{pricingDetails.main}</span> : null}
+              {pricingDetails.cents ? (
+                <span className="cents">.{pricingDetails.cents}</span>
+              ) : null}
             </div>
-            {planType ? (
-              <div className="plan-type">
-                Per {planType === "monthly" ? "month" : "year"} / Billed
-                annually
+            {pricingDetails.billingLabel ? (
+              <div className="plan-type">{pricingDetails.billingLabel}</div>
+            ) : null}
+            {pricingDetails.option.duration ? (
+              <div className="pricing-card__duration">
+                {pricingDetails.option.duration}
               </div>
             ) : null}
-            {duration ? (
-              <div className="pricing-card__duration">{duration}</div>
-            ) : null}
-            {discount ? (
+            {pricingDetails.savedMoney ? (
               <div className="parent_saved_money">
                 <div className="saved_money_div">
-                  <span className="saved_money">{savedMoney}</span>
+                  <span className="saved_money">
+                    {pricingDetails.savedMoney}
+                  </span>
                 </div>
               </div>
             ) : null}
@@ -119,7 +98,7 @@ const PricingCard: React.FC<PricingDTO> = ({
       {href ? (
         <>
           <a target={"_blank"} href={href} onClick={trackPricingConversion}>
-            <div className="pricing-card__btn">{buttonText}</div>
+            <div className="pricing-card__btn">{plan.buttonText}</div>
           </a>
         </>
       ) : (
@@ -131,8 +110,9 @@ const PricingCard: React.FC<PricingDTO> = ({
             }}
             className="pricing-card__btn"
             isLoading={isLoading}
+            disabled={!pricingDetails?.hasCheckout}
           >
-            {buttonText}
+            {pricingDetails?.buttonText ?? plan.buttonText}
           </CustomButton>
           <div className="primary-btn__free-link">
             <a

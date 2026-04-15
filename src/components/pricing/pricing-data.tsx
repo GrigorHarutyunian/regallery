@@ -15,11 +15,19 @@ const pricingData: { [key: number]: PricingDTO } = {
     id: 1,
     title: "Free",
     href: "https://wordpress.org/plugins/regallery/",
-    price: 0,
     currency: "$",
-    planType: "yearly",
     text: "Easy Start for Beginners to Explore Galleries",
     buttonText: "Free download",
+    billingOptions: {
+      yearly: {
+        price: 0,
+        planType: "yearly",
+      },
+      monthly: {
+        price: 0,
+        planType: "monthly",
+      },
+    },
     advantages: [
       "Unlimited Galleries",
       "Unlimited Users",
@@ -42,12 +50,21 @@ const pricingData: { [key: number]: PricingDTO } = {
   2: {
     id: 2,
     title: "Basic",
-    price: 29.99,
     currency: "$",
-    planType: "yearly",
-    // duration: "1 Year",
     text: "For Photographers & Creatives Using WordPress",
     buttonText: "Get Basic",
+    billingOptions: {
+      yearly: {
+        checkoutPlanId: 2,
+        price: 29.99,
+        planType: "yearly",
+      },
+      monthly: {
+        checkoutPlanId: 5,
+        price: 3.49,
+        planType: "monthly",
+      },
+    },
     advantages: [
       <>
         Use on <strong className="bold__list">1 Site</strong>
@@ -91,13 +108,22 @@ const pricingData: { [key: number]: PricingDTO } = {
   3: {
     id: 3,
     title: "Plus",
-    price: 49.99,
     currency: "$",
-    planType: "yearly",
     mostPopular: true,
-    // duration: "1 Year",
     text: "For Businesses & Teams Building on WordPress",
     buttonText: "Get Plus",
+    billingOptions: {
+      yearly: {
+        checkoutPlanId: 3,
+        price: 49.99,
+        planType: "yearly",
+      },
+      monthly: {
+        checkoutPlanId: 6,
+        price: 5.99,
+        planType: "monthly",
+      },
+    },
     advantages: [
       <>
         Use on <strong className="bold__list">5 Sites</strong>
@@ -141,12 +167,21 @@ const pricingData: { [key: number]: PricingDTO } = {
   4: {
     id: 4,
     title: "Agency",
-    price: 99.99,
     currency: "$",
-    planType: "yearly",
-    // duration: "1 Year",
     text: "For Agencies Managing Multiple WordPress Sites",
     buttonText: "Get Agency",
+    billingOptions: {
+      yearly: {
+        checkoutPlanId: 4,
+        price: 99.99,
+        planType: "yearly",
+      },
+      monthly: {
+        checkoutPlanId: 7,
+        price: 11.99,
+        planType: "monthly",
+      },
+    },
     advantages: [
       <>
         Use on <strong className="bold__list">25 Sites</strong>

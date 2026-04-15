@@ -4,7 +4,6 @@ import "./PlansComparisonTable.css";
 import "./PlansTableBodyMobile.css";
 import PlansTableBody from "./PlansTableBody";
 import PlansTableBodyMobile from "./PlansTableBodyMobile";
-import { getSale } from "../../utils/getSale";
 import {
   plansComparisonCoreFeatures,
   plansComparisonGalleryLayouts,
@@ -23,6 +22,14 @@ import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO 
 import pricingData from "../pricing/pricing-data";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
+import { BillingPeriod } from "../../types/PricingDTO";
+import BillingToggle from "../pricing/BillingToggle";
+import {
+  getAvailableBillingPeriods,
+  getPaidPricingPlans,
+  getPricingDetails,
+} from "../pricing/pricing-utils";
+import type { CSSProperties } from "react";
 interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
   leftTitle: string;
@@ -41,10 +48,24 @@ const sections: PlansTableBodyProps[] = [
   { leftTitle: "WooCommerce Gallery", features: plansComparisonWooCommerce },
 ];
 
-const PlansComparisonTable: React.FC = () => {
+interface PlansComparisonTableProps {
+  billingPeriod: BillingPeriod;
+  setBillingPeriod: (period: BillingPeriod) => void;
+}
+
+const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
+  billingPeriod,
+  setBillingPeriod,
+}) => {
   const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
   const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
   const { openStripeCheckout } = useProVersionActivatorContext();
+  const paidPlans = getPaidPricingPlans(pricingData);
+  const availableBillingPeriods = getAvailableBillingPeriods(paidPlans);
+  const tablePlans = Object.values(pricingData);
+  const tableColumnStyles = {
+    "--plans-table-feature-column-width": "280px",
+  } as CSSProperties;
 
   const trackPricingConversion = () => {
     if (typeof window === "undefined") return;
@@ -73,10 +94,10 @@ const PlansComparisonTable: React.FC = () => {
     }
   }, []);
 
-  const handleCheckout = async (id: number) => {
-    setLoadingPlanId(id);
+  const handleCheckout = async (checkoutPlanId: number) => {
+    setLoadingPlanId(checkoutPlanId);
     try {
-      await openStripeCheckout(id);
+      await openStripeCheckout(checkoutPlanId);
     } catch (error) {
       console.error("Stripe checkout error:", error);
     } finally {
@@ -91,58 +112,47 @@ const PlansComparisonTable: React.FC = () => {
             <h2 className="plans-table__title section-text__title-centered">
               What’s the difference between plans?
             </h2>
-            <table className="plans-table__table">
+            <div className="plans-table__billing-toggle">
+              <BillingToggle
+                billingPeriod={billingPeriod}
+                availablePeriods={availableBillingPeriods}
+                onChange={setBillingPeriod}
+              />
+            </div>
+            <table className="plans-table__table" style={tableColumnStyles}>
+              <colgroup>
+                <col className="plans-table__feature-column" />
+                {tablePlans.map(({ id }) => (
+                  <col key={id} className="plans-table__plan-column" />
+                ))}
+              </colgroup>
               <tbody className="plans-table__table-body-header">
                 <tr className="plans-table__header">
                   <td className="plans-table__empty-cell plans-table__empty-cell--top" />
 
-                  {Object.values(pricingData).map(
+                  {tablePlans.map(
                     ({
                       id,
                       mostPopular,
-                      price,
                       title,
                       currency,
                       buttonText,
                       href,
-                      discount,
-                      planType,
-                      duration,
+                      billingOptions,
                     }) => {
-                      if (typeof discount === "undefined") {
-                        discount = getSale()?.couponCode
-                          ? 0
-                          : getSale()?.discount;
-                      }
-                      var discountedPrice = discount
-                        ? Math.round(
-                            (price - (Math.round(price) * discount) / 100) *
-                              100,
-                          ) / 100
-                        : 0;
+                      const plan = pricingData[id];
+                      const pricingDetails = getPricingDetails(
+                        plan,
+                        billingPeriod,
+                      );
 
-                      const savedMoney =
-                        "Save " +
-                        (discount && discount > 50
-                          ? `${currency}${Math.round(price - discountedPrice)}`
-                          : `${discount}%`);
-
-                      const originalPrice =
-                        planType === "monthly"
-                          ? (price / 12).toFixed(2)
-                          : price.toFixed(2);
-                      const finalPrice =
-                        planType === "monthly"
-                          ? (discountedPrice / 12).toFixed(2)
-                          : discountedPrice.toFixed(2);
-                      const [main, cents] = discount
-                        ? finalPrice.toString().split(".")
-                        : originalPrice.toString().split(".");
                       return (
                         <td
                           key={id}
                           className={`plans-table__column${
-                            price === 0 ? " free-plan" : ""
+                            billingOptions?.yearly?.price === 0
+                              ? " free-plan"
+                              : ""
                           }${mostPopular ? " pricing-card__popular" : ""}`}
                         >
                           {mostPopular ? (
@@ -151,38 +161,41 @@ const PlansComparisonTable: React.FC = () => {
                             </div>
                           ) : null}
                           <div className="pricing-card__subtitle">{title}</div>
-                          {price !== 0 && discount ? (
+                          {pricingDetails?.effectiveDiscount ? (
                             <span className="canceled-price">
                               <div className="remove_line" />
                               {currency}
-                              {originalPrice}
+                              {pricingDetails.originalPrice}
                             </span>
                           ) : null}
                           <div className="pricing-card__title">
                             {currency ? (
                               <span className="currency">{currency}</span>
                             ) : null}
-                            {main ? <span>{main}</span> : null}
-                            {price !== 0 && cents ? (
-                              <span className="cents">.{cents}</span>
+                            {pricingDetails?.main ? (
+                              <span>{pricingDetails.main}</span>
+                            ) : null}
+                            {pricingDetails?.cents ? (
+                              <span className="cents">
+                                .{pricingDetails.cents}
+                              </span>
                             ) : null}
                           </div>
-                          {planType ? (
+                          {pricingDetails?.billingLabel ? (
                             <div className="plan-type">
-                              Per {planType === "monthly" ? "month" : "year"} /
-                              Billed annually
+                              {pricingDetails.billingLabel}
                             </div>
                           ) : null}
-                          {duration ? (
+                          {pricingDetails?.option.duration ? (
                             <div className="pricing-card__duration">
-                              {duration}
+                              {pricingDetails.option.duration}
                             </div>
                           ) : null}
-                          {discount ? (
+                          {pricingDetails?.savedMoney ? (
                             <div className="parent_saved_money">
                               <div className="saved_money_div">
                                 <span className="saved_money">
-                                  {savedMoney}
+                                  {pricingDetails.savedMoney}
                                 </span>
                               </div>
                             </div>
@@ -203,12 +216,20 @@ const PlansComparisonTable: React.FC = () => {
                             <CustomButton
                               handleClick={() => {
                                 trackPricingConversion();
-                                handleCheckout(id);
+                                if (pricingDetails?.checkoutPlanId) {
+                                  handleCheckout(pricingDetails.checkoutPlanId);
+                                }
                               }}
                               className="pricing-card__btn"
-                              isLoading={loadingPlanId === id ? true : false}
+                              isLoading={
+                                pricingDetails?.checkoutPlanId
+                                  ? loadingPlanId ===
+                                    pricingDetails.checkoutPlanId
+                                  : false
+                              }
+                              disabled={!pricingDetails?.hasCheckout}
                             >
-                              {buttonText}
+                              {pricingDetails?.buttonText ?? buttonText}
                             </CustomButton>
                           )}
                         </td>

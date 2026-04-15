@@ -44,7 +44,7 @@ export const ProVersionActivatorProvider: React.FC<
           body: JSON.stringify({
             planID: planID,
           }),
-        }
+        },
       );
 
       const result = await response.json();
@@ -53,7 +53,7 @@ export const ProVersionActivatorProvider: React.FC<
         window.location.href = result.url;
       } else {
         throw new Error(
-          result.errors?.message || "Failed to create Stripe checkout session"
+          result.errors?.message || "Failed to create Stripe checkout session",
         );
       }
     } catch (error) {
@@ -81,7 +81,7 @@ export const useProVersionActivatorContext = () => {
 
   if (!context) {
     throw new Error(
-      "useProVersionActivatorContext must be used within a ProVersionActivatorProvider"
+      "useProVersionActivatorContext must be used within a ProVersionActivatorProvider",
     );
   }
 

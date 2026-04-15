@@ -28,8 +28,13 @@
 }
 .plans-table__title {
   max-width: none;
-  margin-bottom: 80px;
+  margin-bottom: 24px;
 }
+
+.plans-table__billing-toggle {
+  display: block;
+}
+
 .plans-table__table {
   display: table;
   box-sizing: border-box;
@@ -39,6 +44,7 @@
   border-color: gray;
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 .closed-banner {
   .plans-table__table-body-header {
@@ -62,6 +68,14 @@
 
 .plans-table__empty-cell {
   min-width: 280px;
+}
+
+.plans-table__feature-column {
+  width: var(--plans-table-feature-column-width, 280px);
+}
+
+.plans-table__plan-column {
+  width: auto;
 }
 .plans-table__header {
   text-align: center;
@@ -139,7 +153,8 @@
 }
 
 @media (max-width: 1024px) {
-  .plans-table__table {
+  .plans-table__table,
+  .plans-table__billing-toggle {
     display: none;
   }
 }
