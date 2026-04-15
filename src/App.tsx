@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Faq from "./components/faq/Faq";
 import ItemsSection from "./common-components/common-items/ItemsSection";
@@ -31,8 +31,11 @@ import hoverData from "./data/hover-data.tsx";
 import builderData from "./data/builder-data";
 import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 import LightboxShowcase from "./components/demo/LightboxShowcase";
+import { BillingPeriod } from "./types/PricingDTO";
 
 const App: React.FC = () => {
+  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("yearly");
+
   useEffect(() => {
     const container = document.querySelector(
       ".demo_live_container",
@@ -119,9 +122,15 @@ const App: React.FC = () => {
             <Section data={studioData} />
             <PageBuilder data={builderData} />
             <Review />
-            <Pricing />
+            <Pricing
+              billingPeriod={billingPeriod}
+              setBillingPeriod={setBillingPeriod}
+            />
             <Faq />
-            <PlansComparisonTable />
+            <PlansComparisonTable
+              billingPeriod={billingPeriod}
+              setBillingPeriod={setBillingPeriod}
+            />
             <Support />
           </main>
           <Footer />

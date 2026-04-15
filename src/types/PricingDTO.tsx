@@ -1,14 +1,23 @@
+export type BillingPeriod = "yearly" | "monthly";
+
+export interface PricingBillingOptionDTO {
+  checkoutPlanId?: number;
+  price: number;
+  discount?: number;
+  duration?: string;
+  billingLabel?: string;
+  planType?: BillingPeriod;
+  buttonText?: string;
+}
+
 export default interface PricingDTO {
   id: number;
   text: string;
   buttonText: string;
-  price: number;
-  discount?: number;
   currency?: string;
-  planType?: "yearly" | "monthly" | "free";
   advantages: (string | JSX.Element)[];
-  duration?: string;
   title: string;
   href?: string;
   mostPopular?: boolean;
+  billingOptions?: Partial<Record<BillingPeriod, PricingBillingOptionDTO>>;
 }
