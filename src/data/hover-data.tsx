@@ -98,6 +98,14 @@ const hoverData: SectionDTO["data"] = {
       captionPosition: "center",
     },
     {
+      value: "soft-light",
+      label: "Soft Light",
+      previewText:
+        "Layer in a subtle glassmorphism-style caption while the image gently darkens and zooms on hover.",
+      captionDisplay: "always",
+      captionPosition: "bottom",
+    },
+    {
       value: "overlay-icon-zoom",
       label: "Overlay Zoom Icon",
       previewTitle: "Zoom Preview",

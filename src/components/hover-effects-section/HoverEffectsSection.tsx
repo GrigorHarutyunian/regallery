@@ -138,16 +138,21 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
 
           {shouldShowCaption && (
             <div className={captionClassName}>
-              <span className="hover-effects-gallery__badge">
-                {activeHoverEffect?.label ?? "Hover effect"}
-              </span>
-              <h3 className="hover-effects-gallery__caption-title">
-                {activeHoverEffect?.previewTitle ?? "Creative Focus"}
-              </h3>
-              <p className="hover-effects-gallery__caption-text">
-                {activeHoverEffect?.previewText ??
-                  "Preview how the selected hover effect displays gallery captions."}
-              </p>
+              {activeHoverEffect?.label && (
+                <span className="hover-effects-gallery__badge">
+                  {activeHoverEffect?.label}
+                </span>
+              )}
+              {activeHoverEffect?.previewTitle && (
+                <h3 className="hover-effects-gallery__caption-title">
+                  {activeHoverEffect?.previewTitle}
+                </h3>
+              )}
+              {activeHoverEffect?.previewText && (
+                <p className="hover-effects-gallery__caption-text">
+                  {activeHoverEffect?.previewText}
+                </p>
+              )}
             </div>
           )}
         </div>

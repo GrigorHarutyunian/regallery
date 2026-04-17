@@ -357,6 +357,68 @@
   animation: shine 0.85s;
 }
 
+/* Soft Light */
+.hover-effects-gallery__image-wrapper_soft-light {
+  isolation: isolate;
+}
+
+.hover-effects-gallery__image-wrapper_soft-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(19, 22, 29, 0.22) 100%
+  );
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.hover-effects-gallery__image-wrapper_soft-light img,
+.hover-effects-gallery__image-wrapper_soft-light video {
+  -webkit-transition:
+    opacity 0.35s ease-in-out,
+    transform 0.35s ease-in-out,
+    filter 0.35s ease-in-out;
+  transition:
+    opacity 0.35s ease-in-out,
+    transform 0.35s ease-in-out,
+    filter 0.35s ease-in-out;
+}
+
+.hover-effects-gallery__image-wrapper_soft-light:hover::after {
+  opacity: 1;
+}
+
+.hover-effects-gallery__image-wrapper_soft-light:hover img,
+.hover-effects-gallery__image-wrapper_soft-light:hover video {
+  opacity: 0.9;
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+.hover-effects-gallery__image-wrapper_soft-light
+  .hover-effects-gallery__caption {
+  top: auto;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  padding: 20px 24px;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(32, 35, 43, 0.42);
+  background-image: none;
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
 /* Circle */
 .hover-effects-gallery__image-wrapper_circle::before {
   content: "";
