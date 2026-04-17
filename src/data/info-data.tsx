@@ -6,9 +6,11 @@ import image1280 from "../assets/sections/options-1280x735.webp";
 import image1500 from "../assets/sections/options-1500x862.webp";
 import image1880 from "../assets/sections/options-1880x1080.webp";
 import { allTemplates } from "../components/views/views-data-subMenu";
+import { dataDemo } from "../components/demo/demo-data";
 import { formatCountByStep } from "../utils/formatCountByStep";
 
 const allTemplatesCount = formatCountByStep(allTemplates.length);
+const allLayoutsCount = dataDemo.length;
 
 const infoData = {
   id: "info",
@@ -18,7 +20,7 @@ const infoData = {
       Re Gallery is built for people who want professional results without the
       complexity. With an intuitive <b>Real-Time Preview</b>, every setting
       change shows instantly - no guessing, no re-publishing, no wasted time.
-      Choose from <b>9 responsive layouts</b> and{" "}
+      Choose from <b>{allLayoutsCount} responsive layouts</b> and{" "}
       <b>{allTemplatesCount} pre-designed templates</b>, drop your gallery into
       any page builder, and even build landing pages - all from inside a single,
       lightweight plugin that feels native to WordPress.

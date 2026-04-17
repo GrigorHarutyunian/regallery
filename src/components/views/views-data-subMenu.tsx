@@ -479,8 +479,8 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       "The Carousel view offers a sleek, rotating image slider, allowing you to display multiple images in a compact and elegant way. Ideal for e-commerce websites, portfolios, and businesses looking to show products, services, or visuals in an interactive format.",
     svgPath: (
       <path
-        fill={"#ffffffff"}
-        d="m21,0h-8c-1.654,0-3,1.346-3,3v21h14V3c0-1.654-1.346-3-3-3Zm1,22h-10V3c0-.551.449-1,1-1h8c.551,0,1,.449,1,1v19ZM5,3h2v18h-2V3ZM0,6h2v12H0V6Z"
+        fill="#FFFFFFff"
+        d="m19,2H5C2.243,2,0,4.243,0,7v10c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-4,2v16h-6V4h6ZM2,17V7c0-1.654,1.346-3,3-3h2v16h-2c-1.654,0-3-1.346-3-3Zm20,0c0,1.654-1.346,3-3,3h-2V4h2c1.654,0,3,1.346,3,3v10Z"
       />
     ),
     subItems: [
@@ -666,6 +666,30 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "A justified layout where images align perfectly across the full width.",
         imgUrl: EdgeToEdgeRows,
         path: "https://regallery.team/core/reacg/edge-to-edge-rows/",
+        pro: true,
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Coverflow",
+    imgUrl: Carouselshowcasethumbnail,
+    idView: 910,
+    description:
+      "The Coverflow view highlights a centered active slide with a sleek, layered carousel effect, making it ideal for portfolios, featured products, and visual storytelling.",
+    svgPath: (
+      <path
+        fill={"#ffffffff"}
+        d="m21,0h-8c-1.654,0-3,1.346-3,3v21h14V3c0-1.654-1.346-3-3-3Zm1,22h-10V3c0-.551.449-1,1-1h8c.551,0,1,.449,1,1v19ZM5,3h2v18h-2V3ZM0,6h2v12H0V6Z"
+      />
+    ),
+    subItems: [
+      {
+        title: "Coverflow",
+        description:
+          "The Coverflow template presents images in a stylish 3D-inspired carousel with a centered focal slide, ideal for portfolios, featured collections, and product storytelling.",
+        imgUrl: Carouselshowcasethumbnail,
+        path: "https://regallery.team/core/reacg/coverflow/",
         pro: true,
       },
     ],
