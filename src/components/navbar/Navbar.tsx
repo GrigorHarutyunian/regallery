@@ -87,11 +87,6 @@ const Navbar: React.FC = () => {
 
   const handleMenuClick = (e: React.MouseEvent, ref: any) => {
     e.preventDefault();
-    // const currentPath = window.location.href;
-
-    // if (currentPath.endsWith(ref)) {
-    //   return;
-    // }
 
     const container = document.querySelector(
       ".demo_live_container",

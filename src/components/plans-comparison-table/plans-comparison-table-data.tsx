@@ -112,6 +112,12 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
       values: [true, true, true, true],
       href: "https://regallery.team/core/blog-view/",
     },
+    {
+      id: "layout-coverflow",
+      label: "Coverflow",
+      values: [false, true, true, true],
+      href: "https://regallery.team/core/coverflow-view/",
+    },
   ];
 
 export const plansComparisonPostsPages: IPlansComparisonTableFeatureDTO[] = [
@@ -313,7 +319,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-hover-effects",
       label: "Hover Effects",
-      values: ["7", "15", "15", "15"],
+      values: ["7", "16", "16", "16"],
     },
     {
       id: "general-sorting",
@@ -454,6 +460,11 @@ export const plansComparisonHoverEffects: IPlansComparisonTableFeatureDTO[] = [
     id: "overlay",
     label: "Overlay",
     values: [true, true, true, true],
+  },
+  {
+    id: "soft-light",
+    label: "Soft Light",
+    values: [false, true, true, true],
   },
   {
     id: "flash",

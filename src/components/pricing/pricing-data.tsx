@@ -4,11 +4,13 @@ import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import PricingDTO from "../../types/PricingDTO";
 import { formatCountByStep } from "../../utils/formatCountByStep";
 import { allTemplates } from "../views/views-data-subMenu";
+import { dataDemo } from "../demo/demo-data";
 
 const freeTemplatesCount = formatCountByStep(
   allTemplates.filter((template) => !template.pro).length,
 );
 const allTemplatesCount = formatCountByStep(allTemplates.length);
+const allLayoutsCount = dataDemo.length;
 
 const pricingData: { [key: number]: PricingDTO } = {
   1: {
@@ -32,7 +34,8 @@ const pricingData: { [key: number]: PricingDTO } = {
       "Unlimited Galleries",
       "Unlimited Users",
       <>
-        <strong className="bold__list">9</strong> Gallery Views
+        <strong className="bold__list">{allLayoutsCount}</strong> Gallery
+        Layouts
       </>,
       "Real-Time Preview",
       "Gutenberg Block Support",
@@ -70,10 +73,10 @@ const pricingData: { [key: number]: PricingDTO } = {
         Use on <strong className="bold__list">1 Site</strong>
       </>,
       <>
-        9 Gallery Layouts
+        {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
         >
           {info_icon}
         </span>
@@ -129,10 +132,10 @@ const pricingData: { [key: number]: PricingDTO } = {
         Use on <strong className="bold__list">5 Sites</strong>
       </>,
       <>
-        9 Gallery Layouts
+        {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
         >
           {info_icon}
         </span>
@@ -187,10 +190,10 @@ const pricingData: { [key: number]: PricingDTO } = {
         Use on <strong className="bold__list">25 Sites</strong>
       </>,
       <>
-        9 Gallery Layouts
+        {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, and Blog"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
         >
           {info_icon}
         </span>
