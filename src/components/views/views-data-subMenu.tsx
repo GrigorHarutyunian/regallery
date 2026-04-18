@@ -60,6 +60,8 @@ import OpenGrid from "../../assets/imgs/page-builder/Modern Grid.webp";
 import Slideshow from "../../assets/imgs/page-builder/Simple Slider.webp";
 import EdgeToEdgeRows from "../../assets/imgs/page-builder/Edge-to-Edge Rows.webp";
 import Feature from "../../assets/imgs/page-builder/Hero Focus.webp";
+import DepthFlow from "../../assets/imgs/views/subViews/coverflow/DepthFlow.webp";
+import Coverflow from "../../assets/imgs/views/menu_general_imgs/coverflow.webp";
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -673,8 +675,8 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
   {
     id: 10,
     title: "Coverflow",
-    imgUrl: Carouselshowcasethumbnail,
-    idView: 910,
+    imgUrl: Coverflow,
+    idView: 2290,
     description:
       "The Coverflow view highlights a centered active slide with a sleek, layered carousel effect, making it ideal for portfolios, featured products, and visual storytelling.",
     svgPath: (
@@ -685,11 +687,11 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
-        title: "Coverflow",
+        title: "DepthFlow",
         description:
-          "The Coverflow template presents images in a stylish 3D-inspired carousel with a centered focal slide, ideal for portfolios, featured collections, and product storytelling.",
-        imgUrl: Carouselshowcasethumbnail,
-        path: "https://regallery.team/core/reacg/coverflow/",
+          "Modern 3D coverflow gallery template with smooth sliding animation, responsive layout, and centered image focus for portfolios, products, and travel galleries.",
+        imgUrl: DepthFlow,
+        path: "https://regallery.team/core/reacg/depthflow/",
         pro: true,
       },
     ],
