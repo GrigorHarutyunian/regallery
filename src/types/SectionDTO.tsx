@@ -1,6 +1,8 @@
+import React from "react";
+
 export default interface SectionDTO {
   data: {
-    title: string;
+    title: string | React.ReactNode;
     text: string | any;
     id: string;
     width?: number;
