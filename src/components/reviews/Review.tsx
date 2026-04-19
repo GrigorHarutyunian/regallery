@@ -6,25 +6,56 @@ import { motion } from "framer-motion";
 import { Row, Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
+const MOBILE_BREAKPOINT = 1025;
+const MAX_VISIBLE_DOTS = 5;
+
 const Services: React.FC = () => {
-  const itemsPerPage = 3;
+  const [itemsPerPage, setItemsPerPage] = useState(() =>
+    window.innerWidth < MOBILE_BREAKPOINT ? 1 : 3,
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const autoSlideInterval = 10000;
 
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerPage(window.innerWidth < MOBILE_BREAKPOINT ? 1 : 3);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    setCurrentIndex((prev) => Math.floor(prev / itemsPerPage) * itemsPerPage);
+  }, [itemsPerPage]);
+
   const totalPages = Math.ceil(reviewData.length / itemsPerPage);
   const currentReviews = reviewData.slice(
     currentIndex,
-    currentIndex + itemsPerPage
+    currentIndex + itemsPerPage,
   );
 
   const handleNext = () => {
     setCurrentIndex((prev) =>
-      prev + itemsPerPage >= reviewData.length ? 0 : prev + itemsPerPage
+      prev + itemsPerPage >= reviewData.length ? 0 : prev + itemsPerPage,
     );
   };
 
   const currentPage = Math.floor(currentIndex / itemsPerPage);
+  const visibleDotCount = Math.min(totalPages, MAX_VISIBLE_DOTS);
+  const visibleDotStart =
+    totalPages > MAX_VISIBLE_DOTS
+      ? Math.min(
+          Math.floor(currentPage / MAX_VISIBLE_DOTS) * MAX_VISIBLE_DOTS,
+          totalPages - MAX_VISIBLE_DOTS,
+        )
+      : 0;
+  const visiblePages = Array.from({ length: visibleDotCount }, (_, index) => {
+    return visibleDotStart + index;
+  });
 
   // Auto-slide effect with pause on hover
   useEffect(() => {
@@ -35,7 +66,7 @@ const Services: React.FC = () => {
     }, autoSlideInterval);
 
     return () => clearInterval(interval);
-  }, [isHovering]);
+  }, [isHovering, itemsPerPage]);
   const showControls = reviewData.length > itemsPerPage;
 
   return (
@@ -77,12 +108,12 @@ const Services: React.FC = () => {
             {showControls && (
               <div className="review-dots-container">
                 <div className="dots">
-                  {Array.from({ length: totalPages }).map((_, i) => (
+                  {visiblePages.map((pageIndex) => (
                     <button
-                      key={i}
-                      className={`dot ${i === currentPage ? "active" : ""}`}
-                      onClick={() => setCurrentIndex(i * itemsPerPage)}
-                      aria-label={`Go to page ${i + 1}`}
+                      key={pageIndex}
+                      className={`dot ${pageIndex === currentPage ? "active" : ""}`}
+                      onClick={() => setCurrentIndex(pageIndex * itemsPerPage)}
+                      aria-label={`Go to page ${pageIndex + 1}`}
                     />
                   ))}
                 </div>
