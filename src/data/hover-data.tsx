@@ -100,6 +100,7 @@ const hoverData: SectionDTO["data"] = {
     {
       value: "soft-light",
       label: "Soft Light",
+      previewTitle: "Glassmorphism",
       previewText:
         "Layer in a subtle glassmorphism-style caption while the image gently darkens and zooms on hover.",
       captionDisplay: "always",

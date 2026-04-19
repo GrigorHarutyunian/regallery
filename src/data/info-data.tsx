@@ -14,7 +14,7 @@ const allLayoutsCount = dataDemo.length;
 
 const infoData = {
   id: "info",
-  title: "Why Choose Re Gallery",
+  title: <>Why Choose Re&nbsp;Gallery</>,
   text: (
     <>
       Re Gallery is built for people who want professional results without the

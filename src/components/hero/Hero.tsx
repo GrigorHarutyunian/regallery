@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               <h1 className="section-text__title">
                 Beautiful galleries.
                 <br></br>
-                <i>Built automatically</i> by AI
+                <i>Built automatically</i> by&nbsp;AI
               </h1>
               <p className="section-text__body">
                 Re Gallery gives you{" "}
