@@ -313,8 +313,8 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     },
     {
       id: "action-url",
-      label: "Action URL",
-      values: [false, true, true, true],
+      label: "Open Link",
+      values: [true, true, true, true],
     },
     {
       id: "general-hover-effects",
