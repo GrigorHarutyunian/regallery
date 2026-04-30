@@ -113,6 +113,12 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
       href: "https://regallery.team/core/blog-view/",
     },
     {
+      id: "layout-scroller",
+      label: "Scroller",
+      values: [true, true, true, true],
+      href: "https://regallery.team/core/scroller-view/",
+    },
+    {
       id: "layout-coverflow",
       label: "Coverflow",
       values: [false, true, true, true],
