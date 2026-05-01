@@ -64,6 +64,7 @@ import DepthFlow from "../../assets/imgs/views/subViews/coverflow/DepthFlow.webp
 import Coverflow from "../../assets/imgs/views/menu_general_imgs/coverflow.webp";
 import TwinFlow from "../../assets/imgs/views/subViews/scroller/Twin Flow.webp";
 import Scroller from "../../assets/imgs/views/menu_general_imgs/scroller.webp";
+import ActiveDrift from "../../assets/imgs/views/subViews/scroller/Active Drift.webp";
 
 export const viewsDataSubMenu = [
   {
@@ -696,7 +697,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     id: 11,
     title: "Scroller",
     imgUrl: Scroller,
-    idView: 2349,
+    idView: 2371,
     description:
       "The Scroller view provides a smooth horizontal scrolling experience, perfect for showcasing a large number of images in a compact space.",
     svgPath: (
@@ -707,7 +708,15 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
     ),
     subItems: [
       {
-        title: "TwinFlow",
+        title: "Active Drift",
+        description:
+          "A sleek scrolling gallery layout built for dynamic storytelling, immersive portfolios, and modern visual showcases.",
+        imgUrl: ActiveDrift,
+        path: "https://regallery.team/core/reacg/active-drift/",
+        pro: true,
+      },
+      {
+        title: "Twin Flow",
         description:
           "Showcase your work in two seamlessly scrolling rows with alternating motion, creating a balanced, dynamic gallery perfect for portfolios, creative projects, and visual storytelling.",
         imgUrl: TwinFlow,
