@@ -23,7 +23,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     billingOptions: {
       yearly: {
         price: 0,
-        planType: "yearly",
+        planType: "monthly",
       },
       monthly: {
         price: 0,
@@ -60,7 +60,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       yearly: {
         checkoutPlanId: 2,
         price: 29.99,
-        planType: "yearly",
+        planType: "monthly",
       },
       monthly: {
         checkoutPlanId: 5,
@@ -119,7 +119,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       yearly: {
         checkoutPlanId: 3,
         price: 49.99,
-        planType: "yearly",
+        planType: "monthly",
       },
       monthly: {
         checkoutPlanId: 6,
@@ -177,7 +177,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       yearly: {
         checkoutPlanId: 4,
         price: 99.99,
-        planType: "yearly",
+        planType: "monthly",
       },
       monthly: {
         checkoutPlanId: 7,
