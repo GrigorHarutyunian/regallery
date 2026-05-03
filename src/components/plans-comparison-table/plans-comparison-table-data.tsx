@@ -77,12 +77,6 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
       href: "https://regallery.team/core/masonry-view/",
     },
     {
-      id: "layout-justified",
-      label: "Justified",
-      values: [true, true, true, true],
-      href: "https://regallery.team/core/justified-view/",
-    },
-    {
       id: "layout-slider",
       label: "Slider",
       values: [true, true, true, true],
@@ -101,28 +95,34 @@ export const plansComparisonGalleryLayouts: IPlansComparisonTableFeatureDTO[] =
       href: "https://regallery.team/core/carousel-view/",
     },
     {
-      id: "layout-cards",
-      label: "Cards",
-      values: [true, true, true, true],
-      href: "https://regallery.team/core/cards-view/",
-    },
-    {
       id: "layout-blog",
       label: "Blog",
       values: [true, true, true, true],
       href: "https://regallery.team/core/blog-view/",
     },
     {
-      id: "layout-scroller",
-      label: "Scroller",
-      values: [true, true, true, true],
-      href: "https://regallery.team/core/scroller-view/",
+      id: "layout-justified",
+      label: "Justified",
+      values: [false, true, true, true],
+      href: "https://regallery.team/core/justified-view/",
+    },
+    {
+      id: "layout-cards",
+      label: "Cards",
+      values: [false, true, true, true],
+      href: "https://regallery.team/core/cards-view/",
     },
     {
       id: "layout-coverflow",
       label: "Coverflow",
       values: [false, true, true, true],
       href: "https://regallery.team/core/coverflow-view/",
+    },
+    {
+      id: "layout-scroller",
+      label: "Scroller",
+      values: [false, true, true, true],
+      href: "https://regallery.team/core/scroller-view/",
     },
   ];
 
