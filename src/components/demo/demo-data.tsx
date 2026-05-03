@@ -165,4 +165,18 @@ export const dataDemo = [
     ),
     idView: 2290,
   },
+  {
+    id: 11,
+    title: "Scroller",
+    description:
+      "Display images in continuously moving horizontal rows with seamless auto-scrolling motion, creating a dynamic showcase ideal for galleries, brand visuals, and engaging visual storytelling.",
+    demoPath: "https://regallery.team/core/scroller-view/",
+    path: (
+      <path
+        fill={"#ffffff91"}
+        d="M23,4H1c-.55,0-1-.45-1-1s.45-1,1-1H23c.55,0,1,.45,1,1s-.45,1-1,1Zm1,17c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1Zm-4-8v-2c0-2.21-1.79-4-4-4H8c-2.21,0-4,1.79-4,4v2c0,2.21,1.79,4,4,4h8c2.21,0,4-1.79,4-4Zm-4-4c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2H8c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h8Z"
+      />
+    ),
+    idView: 2371,
+  },
 ];

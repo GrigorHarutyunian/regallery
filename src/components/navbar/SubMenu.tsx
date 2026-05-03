@@ -119,7 +119,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
   };
 
   const splitItems = (items: any[]) => [
-    [items[0]],
+    [items[0], items[10]],
     [items[1], items[3], items[5], items[9]],
     [items[2], items[8], items[4], items[6], items[7]],
   ];

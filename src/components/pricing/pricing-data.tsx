@@ -76,7 +76,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, Coverflow, and Scroller"
         >
           {info_icon}
         </span>
@@ -135,7 +135,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, Coverflow, and Scroller"
         >
           {info_icon}
         </span>
@@ -193,7 +193,7 @@ const pricingData: { [key: number]: PricingDTO } = {
         {allLayoutsCount} Gallery Layouts
         <span
           className="info-icon"
-          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, and Coverflow"
+          data-tooltip="Grid, Mosaic, Masonry, Justified, Slider, Cube, Carousel, Cards, Blog, Coverflow, and Scroller"
         >
           {info_icon}
         </span>

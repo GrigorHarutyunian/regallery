@@ -62,6 +62,10 @@ import EdgeToEdgeRows from "../../assets/imgs/page-builder/Edge-to-Edge Rows.web
 import Feature from "../../assets/imgs/page-builder/Hero Focus.webp";
 import DepthFlow from "../../assets/imgs/views/subViews/coverflow/DepthFlow.webp";
 import Coverflow from "../../assets/imgs/views/menu_general_imgs/coverflow.webp";
+import TwinFlow from "../../assets/imgs/views/subViews/scroller/Twin Flow.webp";
+import Scroller from "../../assets/imgs/views/menu_general_imgs/scroller.webp";
+import ActiveDrift from "../../assets/imgs/views/subViews/scroller/Active Drift.webp";
+
 export const viewsDataSubMenu = [
   {
     id: 1,
@@ -685,6 +689,38 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
           "Modern 3D coverflow gallery template with smooth sliding animation, responsive layout, and centered image focus for portfolios, products, and travel galleries.",
         imgUrl: DepthFlow,
         path: "https://regallery.team/core/reacg/depthflow/",
+        pro: true,
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "Scroller",
+    imgUrl: Scroller,
+    idView: 2371,
+    description:
+      "The Scroller view provides a smooth horizontal scrolling experience, perfect for showcasing a large number of images in a compact space.",
+    svgPath: (
+      <path
+        fill={"#ffffffff"}
+        d="M23,4H1c-.55,0-1-.45-1-1s.45-1,1-1H23c.55,0,1,.45,1,1s-.45,1-1,1Zm1,17c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1Zm-4-8v-2c0-2.21-1.79-4-4-4H8c-2.21,0-4,1.79-4,4v2c0,2.21,1.79,4,4,4h8c2.21,0,4-1.79,4-4Zm-4-4c1.1,0,2,.9,2,2v2c0,1.1-.9,2-2,2H8c-1.1,0-2-.9-2-2v-2c0-1.1,.9-2,2-2h8Z"
+      />
+    ),
+    subItems: [
+      {
+        title: "Active Drift",
+        description:
+          "A sleek scrolling gallery layout built for dynamic storytelling, immersive portfolios, and modern visual showcases.",
+        imgUrl: ActiveDrift,
+        path: "https://regallery.team/core/reacg/active-drift/",
+        pro: true,
+      },
+      {
+        title: "Twin Flow",
+        description:
+          "Showcase your work in two seamlessly scrolling rows with alternating motion, creating a balanced, dynamic gallery perfect for portfolios, creative projects, and visual storytelling.",
+        imgUrl: TwinFlow,
+        path: "https://regallery.team/core/reacg/twin-flow/",
         pro: true,
       },
     ],
