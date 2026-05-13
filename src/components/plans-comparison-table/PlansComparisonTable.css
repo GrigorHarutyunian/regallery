@@ -21,6 +21,28 @@
     inset: calc(-1 * var(--ring-thickness)) calc(-1 * var(--ring-thickness)) 2px
       calc(-1 * var(--ring-thickness));
   }
+
+  .pricing-card__trial-link {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 0 0 3px;
+    color: black;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .pricing-card__trial-link:hover {
+    color: var(--re-primary-color, #2540cc);
+  }
+
+  .pricing-card__trial-link:disabled {
+    color: #9ca3af;
+    cursor: default;
+  }
 }
 .plans-table__wrapper {
   width: 100%;
@@ -53,9 +75,15 @@
   .plans-table__row--header {
     top: 280px;
   }
+  .plans-table__row--header.plans-table__row--header--trial-enabled {
+    top: 310px;
+  }
   @media screen and (min-width: 861px) and (max-width: 1260px) {
     .plans-table__row--header {
       top: 267px;
+    }
+    .plans-table__row--header.plans-table__row--header--trial-enabled {
+      top: 297px;
     }
   }
 }
@@ -95,6 +123,11 @@
   text-align: center;
   font-weight: 700;
   font-size: 16px;
+  vertical-align: middle;
+}
+
+.plans-table__column.free-plan {
+  vertical-align: top;
 }
 
 .plans-table__row {
@@ -112,6 +145,9 @@
   border-top: 1px solid #e2e8f0;
   font-weight: 700;
   font-size: 20px;
+}
+.plans-table__row--header.plans-table__row--header--trial-enabled {
+  top: 350px;
 }
 .plans-table__row .plans-table__cell:nth-child(1) {
   text-align: left;
@@ -149,6 +185,9 @@
   }
   .plans-table__row--header {
     top: 307px;
+  }
+  .plans-table__row--header.plans-table__row--header--trial-enabled {
+    top: 337px;
   }
 }
 

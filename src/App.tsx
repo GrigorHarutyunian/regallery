@@ -20,7 +20,9 @@ import Section from "./common-components/common-section/Section";
 import scrollToTarget from "./common-components/scrollToTarget";
 import HoverEffectsSection from "./components/hover-effects-section/HoverEffectsSection";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
+import { TrialModalProvider } from "./contexts/TrialModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
+import TrialModal from "./components/modals/TrialModal/TrialModal";
 import Sale from "./components/sale-banner/SaleBanner";
 import PlansComparisonTable from "./components/plans-comparison-table/PlansComparisonTable";
 import { featuresData1, featuresData2 } from "./data/features-data";
@@ -102,40 +104,43 @@ const App: React.FC = () => {
     <DemoProvider>
       <WindowWidthProvider>
         <ProVersionActivatorProvider>
-          <Navbar />
-          <TopBanner />
-          <main
-            className={
-              localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
-            }
-          >
-            <Hero />
-            <Demo />
-            <Section data={aiData} />
-            <Templates />
-            <ItemsSection data={featuresData1} />
-            <Section data={infoData} />
-            <LightboxShowcase />
-            <ItemsSection data={featuresData2} />
-            <HoverEffectsSection data={hoverData} />
-            <ResponsiveTemplate />
-            <Section data={studioData} />
-            <PageBuilder data={builderData} />
-            <Review />
-            <Pricing
-              billingPeriod={billingPeriod}
-              setBillingPeriod={setBillingPeriod}
-            />
-            <Faq />
-            <PlansComparisonTable
-              billingPeriod={billingPeriod}
-              setBillingPeriod={setBillingPeriod}
-            />
-            <Support />
-          </main>
-          <Footer />
-          <ProVersionActivator />
-          <Sale />
+          <TrialModalProvider>
+            <Navbar />
+            <TopBanner />
+            <TrialModal />
+            <main
+              className={
+                localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
+              }
+            >
+              <Hero />
+              <Demo />
+              <Section data={aiData} />
+              <Templates />
+              <ItemsSection data={featuresData1} />
+              <Section data={infoData} />
+              <LightboxShowcase />
+              <ItemsSection data={featuresData2} />
+              <HoverEffectsSection data={hoverData} />
+              <ResponsiveTemplate />
+              <Section data={studioData} />
+              <PageBuilder data={builderData} />
+              <Review />
+              <Pricing
+                billingPeriod={billingPeriod}
+                setBillingPeriod={setBillingPeriod}
+              />
+              <Faq />
+              <PlansComparisonTable
+                billingPeriod={billingPeriod}
+                setBillingPeriod={setBillingPeriod}
+              />
+              <Support />
+            </main>
+            <Footer />
+            <ProVersionActivator />
+            <Sale />
+          </TrialModalProvider>
         </ProVersionActivatorProvider>
         <InteractiveAIIcon />
       </WindowWidthProvider>
