@@ -99,7 +99,11 @@ const TrialModal: React.FC = () => {
                 No credit card required.
               </p>
 
-              <form onSubmit={handleSubmit} className="trial-modal__form">
+              <form
+                onSubmit={handleSubmit}
+                className="trial-modal__form"
+                noValidate
+              >
                 <div className="trial-modal__form-group">
                   <label htmlFor="email" className="trial-modal__label">
                     Enter your email to get license key
@@ -117,6 +121,8 @@ const TrialModal: React.FC = () => {
                     <input
                       id="email"
                       type="email"
+                      inputMode="email"
+                      autoComplete="email"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);

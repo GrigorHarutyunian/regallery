@@ -138,10 +138,6 @@
   border-color: #d14343;
 }
 
-.trial-modal__input--error:focus {
-  box-shadow: 0 0 0 3px rgba(209, 67, 67, 0.1);
-}
-
 .trial-modal__error {
   color: #d14343;
   font-size: 13px;
