@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
 import pricingData from "../pricing/pricing-data";
+import { IS_TRIAL_ENABLED } from "../pricing/pricing-data";
 
 interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
@@ -16,7 +17,11 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
 }) => {
   return (
     <tbody>
-      <tr className="plans-table__row plans-table__row--header">
+      <tr
+        className={`plans-table__row plans-table__row--header${
+          IS_TRIAL_ENABLED ? " plans-table__row--header--trial-enabled" : ""
+        }`}
+      >
         <td
           className="plans-table__cell"
           scope="row"

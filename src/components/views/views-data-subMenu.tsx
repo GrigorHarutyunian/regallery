@@ -503,7 +503,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
         description:
           "The Swipe Gallery template in Re Gallery features a modern swipe-based gallery layout for displaying images in a clean and engaging way. Ideal for creative and portfolio websites.",
         imgUrl: TemplateSwipe,
-        path: "https://regallery.team/core/reacg/swipe/",
+        path: "https://regallery.team/core/reacg/swipeflow/",
         pro: true,
       },
       {

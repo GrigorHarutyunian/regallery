@@ -1,8 +1,14 @@
 import { useState } from "react";
 import PricingDTO, { BillingPeriod } from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
+import { useTrialModalContext } from "../../contexts/TrialModalContext";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 import { getPricingDetails } from "./pricing-utils";
+import {
+  IS_TRIAL_ENABLED,
+  TRIAL_BUTTON_TEXT,
+  TRIAL_DAYS,
+} from "./pricing-data";
 
 interface PricingCardProps {
   plan: PricingDTO;
@@ -11,8 +17,10 @@ interface PricingCardProps {
 
 const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
   const { currency, text, advantages, title, href, mostPopular } = plan;
+  const hasTrialCta = !href && IS_TRIAL_ENABLED;
   const [isLoading, setIsLoading] = useState(false);
   const { openStripeCheckout } = useProVersionActivatorContext();
+  const { openTrialModal } = useTrialModalContext();
   const pricingDetails = getPricingDetails(plan, billingPeriod);
 
   const trackPricingConversion = () => {
@@ -103,28 +111,39 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
         </>
       ) : (
         <>
+          {hasTrialCta ? (
+            <CustomButton
+              handleClick={() => {
+                trackPricingConversion();
+                openTrialModal(plan.id);
+              }}
+              className="pricing-card__btn"
+              isLoading={false}
+              disabled={!pricingDetails?.hasCheckout}
+            >
+              {TRIAL_BUTTON_TEXT}
+            </CustomButton>
+          ) : null}
           <CustomButton
             handleClick={() => {
               trackPricingConversion();
               handleCheckout();
             }}
-            className="pricing-card__btn"
-            isLoading={isLoading}
+            className={`pricing-card__btn${hasTrialCta ? " pricing-card__btn--outlined" : ""}`}
+            isLoading={!hasTrialCta ? isLoading : false}
             disabled={!pricingDetails?.hasCheckout}
           >
             {pricingDetails?.buttonText ?? plan.buttonText}
           </CustomButton>
-          <div className="primary-btn__free-link">
-            <a
-              href="https://wordpress.org/plugins/regallery/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Or try the free version
-            </a>
-          </div>
+          {hasTrialCta ? (
+            <div className="pricing-card__trial-note">
+              <span className="pricing-card__trial-check">✓</span>
+              {TRIAL_DAYS}-day free trial
+            </div>
+          ) : null}
         </>
       )}
+      <div className="pricing-card__divider" />
       <div className="pricing-card__features-wrapper">
         <ul className="pricing-card__features">
           {advantages.map((val, id) => {

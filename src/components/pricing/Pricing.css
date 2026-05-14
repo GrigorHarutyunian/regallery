@@ -264,6 +264,50 @@
   filter: brightness(0.9);
 }
 
+.pricing-card__btn--outlined {
+  background-color: transparent;
+  color: var(--re-primary-color, #2540cc);
+  border: 2px solid var(--re-primary-color, #2540cc);
+  margin-top: 12px;
+  padding: 14px 0;
+  box-sizing: border-box;
+}
+
+.pricing-card__btn--outlined:hover {
+  filter: none;
+  background-color: var(--re-secondary-color, #dce9ff);
+}
+
+.pricing-card__trial-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+.plans-table {
+  .pricing-card__trial-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pricing-card__trial-check {
+    margin: 0 10px 0 20px;
+  }
+}
+
+.pricing-card__trial-check {
+  color: var(--re-primary-color, #2540cc);
+  font-weight: 700;
+}
+
+.pricing-card__divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0 0;
+}
+
 .pricing-card__btn.is-disabled:hover {
   filter: none;
 }

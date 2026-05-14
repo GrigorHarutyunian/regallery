@@ -6,6 +6,10 @@ import { formatCountByStep } from "../../utils/formatCountByStep";
 import { allTemplates } from "../views/views-data-subMenu";
 import { dataDemo } from "../demo/demo-data";
 
+export const TRIAL_DAYS = 7;
+export const TRIAL_BUTTON_TEXT = "Start Free Trial";
+export const IS_TRIAL_ENABLED = true;
+
 const freeTemplatesCount = formatCountByStep(
   allTemplates.filter((template) => !template.pro).length,
 );

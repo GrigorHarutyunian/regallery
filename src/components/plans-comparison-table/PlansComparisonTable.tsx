@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, MouseEvent } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./PlansComparisonTable.css";
 import "./PlansTableBodyMobile.css";
@@ -20,8 +20,10 @@ import {
 
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
 import pricingData from "../pricing/pricing-data";
+import { IS_TRIAL_ENABLED, TRIAL_BUTTON_TEXT } from "../pricing/pricing-data";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
+import { useTrialModalContext } from "../../contexts/TrialModalContext";
 import { BillingPeriod } from "../../types/PricingDTO";
 import BillingToggle from "../pricing/BillingToggle";
 import {
@@ -60,6 +62,7 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
   const [activePlanIndex, setActivePlanIndex] = useState<number>(0);
   const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
   const { openStripeCheckout } = useProVersionActivatorContext();
+  const { openTrialModal } = useTrialModalContext();
   const paidPlans = getPaidPricingPlans(pricingData);
   const availableBillingPeriods = getAvailableBillingPeriods(paidPlans);
   const tablePlans = Object.values(pricingData);
@@ -141,6 +144,7 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                       billingOptions,
                     }) => {
                       const plan = pricingData[id];
+                      const hasTrialCta = !href && IS_TRIAL_ENABLED;
                       const pricingDetails = getPricingDetails(
                         plan,
                         billingPeriod,
@@ -213,24 +217,44 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                               </a>
                             </>
                           ) : (
-                            <CustomButton
-                              handleClick={() => {
-                                trackPricingConversion();
-                                if (pricingDetails?.checkoutPlanId) {
-                                  handleCheckout(pricingDetails.checkoutPlanId);
+                            <>
+                              <CustomButton
+                                handleClick={() => {
+                                  trackPricingConversion();
+                                  if (pricingDetails?.checkoutPlanId) {
+                                    handleCheckout(
+                                      pricingDetails.checkoutPlanId,
+                                    );
+                                  }
+                                }}
+                                className="pricing-card__btn"
+                                isLoading={
+                                  pricingDetails?.checkoutPlanId
+                                    ? loadingPlanId ===
+                                      pricingDetails.checkoutPlanId
+                                    : false
                                 }
-                              }}
-                              className="pricing-card__btn"
-                              isLoading={
-                                pricingDetails?.checkoutPlanId
-                                  ? loadingPlanId ===
-                                    pricingDetails.checkoutPlanId
-                                  : false
-                              }
-                              disabled={!pricingDetails?.hasCheckout}
-                            >
-                              {pricingDetails?.buttonText ?? buttonText}
-                            </CustomButton>
+                                disabled={!pricingDetails?.hasCheckout}
+                              >
+                                {pricingDetails?.buttonText ?? buttonText}
+                              </CustomButton>
+                              {hasTrialCta ? (
+                                <button
+                                  type="button"
+                                  className="pricing-card__trial-link"
+                                  onClick={(
+                                    event: MouseEvent<HTMLButtonElement>,
+                                  ) => {
+                                    event.preventDefault();
+                                    trackPricingConversion();
+                                    openTrialModal(plan.id);
+                                  }}
+                                  disabled={!pricingDetails?.hasCheckout}
+                                >
+                                  Or {TRIAL_BUTTON_TEXT}
+                                </button>
+                              ) : null}
+                            </>
                           )}
                         </td>
                       );
