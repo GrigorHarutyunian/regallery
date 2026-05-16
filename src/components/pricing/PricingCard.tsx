@@ -118,7 +118,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
               handleCheckout();
             }}
             className={`pricing-card__btn${hasTrialCta ? " pricing-card__btn--outlined" : ""}`}
-            isLoading={!hasTrialCta ? isLoading : false}
+            isLoading={isLoading}
             disabled={!pricingDetails?.hasCheckout}
           >
             {pricingDetails?.buttonText ?? plan.buttonText}
