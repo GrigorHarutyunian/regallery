@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SectionDTO from "../../types/SectionDTO";
+import { IS_TRIAL_ENABLED, TRIAL_BUTTON_TEXT } from "../pricing/pricing-data";
 import { HoverEffect, hoverEffectOptions } from "../../types/HoverEffect";
 import "../../common-components/common-section/Section.css";
 import "./HoverEffectsSection.css";
@@ -220,15 +221,23 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
                 <a href="#pricing">
                   <DownloadBtn className={"download-btn"} location={data.id} />
                 </a>
-                <div className="primary-btn__free-link">
-                  <a
-                    href="https://wordpress.org/plugins/regallery/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Try the free version
-                  </a>
-                </div>
+                {IS_TRIAL_ENABLED ? (
+                  <div className="primary-btn__free-link">
+                    <a href="#pricing" rel="noreferrer noopener">
+                      {TRIAL_BUTTON_TEXT}
+                    </a>
+                  </div>
+                ) : (
+                  <div className="primary-btn__free-link">
+                    <a
+                      href="https://wordpress.org/plugins/regallery/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Try the free version
+                    </a>
+                  </div>
+                )}
               </div>
               {data.additionalButtonLink && (
                 <a
