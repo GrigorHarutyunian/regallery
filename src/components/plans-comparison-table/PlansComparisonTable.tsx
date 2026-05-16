@@ -241,7 +241,7 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                               {hasTrialCta ? (
                                 <button
                                   type="button"
-                                  className="pricing-card__trial-link"
+                                  className="trial-link"
                                   onClick={(
                                     event: MouseEvent<HTMLButtonElement>,
                                   ) => {

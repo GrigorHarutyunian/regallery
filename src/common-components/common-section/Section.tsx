@@ -4,6 +4,10 @@ import { Container } from "react-bootstrap";
 import SectionDTO from "../../types/SectionDTO";
 import "./Section.css";
 import DownloadBtn from "../../components/buttons/DownoloadBtn/DownloadBtn";
+import {
+  IS_TRIAL_ENABLED,
+  TRIAL_BUTTON_TEXT,
+} from "../../components/pricing/pricing-data";
 import { motion } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import VideoSlider from "../../components/video-slider/VideoSlider";
@@ -69,15 +73,23 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                 <a href="#pricing">
                   <DownloadBtn className={"download-btn"} location={data.id} />
                 </a>
-                <div className="primary-btn__free-link">
-                  <a
-                    href="https://wordpress.org/plugins/regallery/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Try the free version
-                  </a>
-                </div>
+                {IS_TRIAL_ENABLED ? (
+                  <div className="primary-btn__free-link">
+                    <a href="#pricing" rel="noreferrer noopener">
+                      {TRIAL_BUTTON_TEXT}
+                    </a>
+                  </div>
+                ) : (
+                  <div className="primary-btn__free-link">
+                    <a
+                      href="https://wordpress.org/plugins/regallery/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Try the free version
+                    </a>
+                  </div>
+                )}
               </div>
               {data.additionalButtonLink && (
                 <a

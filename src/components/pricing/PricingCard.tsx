@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PricingDTO, { BillingPeriod } from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import { useTrialModalContext } from "../../contexts/TrialModalContext";
@@ -111,19 +112,6 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
         </>
       ) : (
         <>
-          {hasTrialCta ? (
-            <CustomButton
-              handleClick={() => {
-                trackPricingConversion();
-                openTrialModal(plan.id);
-              }}
-              className="pricing-card__btn"
-              isLoading={false}
-              disabled={!pricingDetails?.hasCheckout}
-            >
-              {TRIAL_BUTTON_TEXT}
-            </CustomButton>
-          ) : null}
           <CustomButton
             handleClick={() => {
               trackPricingConversion();
@@ -136,9 +124,24 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
             {pricingDetails?.buttonText ?? plan.buttonText}
           </CustomButton>
           {hasTrialCta ? (
+            <CustomButton
+              handleClick={() => {
+                trackPricingConversion();
+                openTrialModal(plan.id);
+              }}
+              className="pricing-card__btn pricing-card__btn--trial"
+              isLoading={false}
+              disabled={!pricingDetails?.hasCheckout}
+            >
+              {TRIAL_BUTTON_TEXT}
+            </CustomButton>
+          ) : null}
+          {hasTrialCta ? (
             <div className="pricing-card__trial-note">
-              <span className="pricing-card__trial-check">✓</span>
+              <CheckCircleIcon className="pricing-card__trial-check" />
               {TRIAL_DAYS}-day free trial
+              <span className="pricing-card__trial-separator">•</span>
+              No credit card required
             </div>
           ) : null}
         </>
