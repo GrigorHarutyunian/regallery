@@ -162,6 +162,6 @@ const hoverData: SectionDTO["data"] = {
     },
   ],
   additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "Admin demo",
+  additionalButtonName: "Admin Demo",
 };
 export default hoverData;

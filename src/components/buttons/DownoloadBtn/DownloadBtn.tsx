@@ -1,4 +1,8 @@
 import React from "react";
+import {
+  IS_TRIAL_ENABLED,
+  TRIAL_BUTTON_TEXT,
+} from "../../pricing/pricing-data";
 
 interface DownloadBtnProps {
   className: string;
@@ -30,7 +34,11 @@ const DownloadBtn: React.FC<DownloadBtnProps> = ({
 
   return (
     <div className={className} onClick={handleClick}>
-      {version === "support" ? "Support forum" : "Get started"}
+      {version === "support"
+        ? "Support forum"
+        : IS_TRIAL_ENABLED
+          ? TRIAL_BUTTON_TEXT
+          : "Get started"}
     </div>
   );
 };

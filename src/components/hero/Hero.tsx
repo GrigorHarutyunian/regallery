@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext, useState } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
-import { IS_TRIAL_ENABLED, TRIAL_BUTTON_TEXT } from "../pricing/pricing-data";
 import VideoModal from "../modals/VideoModal/VideoModal";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
@@ -71,23 +70,15 @@ const Hero: React.FC = () => {
                   <a href="#pricing">
                     <DownloadBtn className={"download-btn"} location="hero" />
                   </a>
-                  {IS_TRIAL_ENABLED ? (
-                    <div className="primary-btn__free-link">
-                      <a href="#pricing" rel="noreferrer noopener">
-                        {TRIAL_BUTTON_TEXT}
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="primary-btn__free-link">
-                      <a
-                        href="https://wordpress.org/plugins/regallery/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        Try the free version
-                      </a>
-                    </div>
-                  )}
+                  <div className="primary-btn__free-link">
+                    <a
+                      href="https://wordpress.org/plugins/regallery/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Download Free Version
+                    </a>
+                  </div>
                 </div>
                 <div
                   onClick={handleOpen}
@@ -102,7 +93,7 @@ const Hero: React.FC = () => {
                       color: "var(--re-tertiary-color, #2540cc)",
                     }}
                   />
-                  Watch intro
+                  Watch Intro
                 </div>
               </div>
             </motion.div>
