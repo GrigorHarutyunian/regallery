@@ -2,7 +2,7 @@
   display: block;
 }
 .plans-table {
-  display: none;
+  display: block;
   a {
     text-decoration: none;
     border-bottom: 1px dashed #9ca3af;
