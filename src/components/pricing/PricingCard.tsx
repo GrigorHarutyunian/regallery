@@ -106,7 +106,13 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
 
       {href ? (
         <>
-          <a target={"_blank"} href={href} onClick={trackPricingConversion}>
+          <a
+            target={"_blank"}
+            href={href}
+            onClick={trackPricingConversion}
+            data-track="download_free_version"
+            data-location="pricing"
+          >
             <div className="pricing-card__btn">{plan.buttonText}</div>
           </a>
         </>
@@ -120,6 +126,8 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
             className={`pricing-card__btn${hasTrialCta ? " pricing-card__btn--outlined" : ""}`}
             isLoading={isLoading}
             disabled={!pricingDetails?.hasCheckout}
+            data-track="pricing_checkout"
+            data-location="pricing"
           >
             {pricingDetails?.buttonText ?? plan.buttonText}
           </CustomButton>
@@ -132,6 +140,8 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
               className="pricing-card__btn pricing-card__btn--trial"
               isLoading={false}
               disabled={!pricingDetails?.hasCheckout}
+              data-track="start_free_trial"
+              data-location="pricing"
             >
               {TRIAL_BUTTON_TEXT}
             </CustomButton>

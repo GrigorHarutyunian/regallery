@@ -210,6 +210,8 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                                 target={"_blank"}
                                 href={href}
                                 onClick={trackPricingConversion}
+                                data-track="download_free_version"
+                                data-location="pricing_comparison_table"
                               >
                                 <div className="pricing-card__btn">
                                   {buttonText}
@@ -235,6 +237,8 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                                     : false
                                 }
                                 disabled={!pricingDetails?.hasCheckout}
+                                data-track="pricing_checkout"
+                                data-location="pricing_comparison_table"
                               >
                                 {pricingDetails?.buttonText ?? buttonText}
                               </CustomButton>
@@ -250,6 +254,8 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
                                     openTrialModal(plan.id);
                                   }}
                                   disabled={!pricingDetails?.hasCheckout}
+                                  data-track="start_free_trial"
+                                  data-location="pricing_comparison_table"
                                 >
                                   Or {TRIAL_BUTTON_TEXT}
                                 </button>

@@ -217,7 +217,11 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
 
             <div className="buttons-container">
               <div className="primary-cta">
-                <a href="#pricing">
+                <a
+                  href="#pricing"
+                  data-track="start_free_trial"
+                  data-location={data.id}
+                >
                   <DownloadBtn className={"download-btn"} location={data.id} />
                 </a>
                 <div className="primary-btn__free-link">
@@ -225,6 +229,8 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
                     href="https://wordpress.org/plugins/regallery/"
                     target="_blank"
                     rel="noreferrer noopener"
+                    data-track="download_free_version"
+                    data-location={data.id}
                   >
                     Download Free Version
                   </a>
@@ -236,6 +242,8 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
                   href={data.additionalButtonLink}
                   target="_blank"
                   rel="noreferrer noopener"
+                  data-track="secondary_action"
+                  data-location={data.id}
                 >
                   {data.additionalButtonName}
                 </a>

@@ -21,6 +21,9 @@ const Support: React.FC = () => {
             <a
               href="https://wordpress.org/support/plugin/regallery/"
               target="_blank"
+              data-track="visit_support_forum"
+              data-location="support"
+              rel="noreferrer noopener"
             >
               <DownloadBtn
                 className="download-btn"

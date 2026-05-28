@@ -138,6 +138,10 @@ const Navbar: React.FC = () => {
                 className={"nav-link"}
                 target={link.target}
                 href={link.href}
+                data-track={
+                  link.type === "button" ? "start_free_trial" : undefined
+                }
+                data-location={link.type === "button" ? "navbar" : undefined}
                 onClick={(e) => {
                   !link.external && handleMenuClick(e, link.href);
                   if (version === "mobile") {

@@ -67,7 +67,11 @@ const Hero: React.FC = () => {
               )}
               <div className="buttons-container">
                 <div className="primary-cta">
-                  <a href="#pricing">
+                  <a
+                    href="#pricing"
+                    data-track="start_free_trial"
+                    data-location="hero"
+                  >
                     <DownloadBtn className={"download-btn"} location="hero" />
                   </a>
                   <div className="primary-btn__free-link">
@@ -75,6 +79,8 @@ const Hero: React.FC = () => {
                       href="https://wordpress.org/plugins/regallery/"
                       target="_blank"
                       rel="noreferrer noopener"
+                      data-track="download_free_version"
+                      data-location="hero"
                     >
                       Download Free Version
                     </a>
