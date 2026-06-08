@@ -227,9 +227,6 @@ const pricingData: { [key: number]: PricingDTO } = {
       "White Labeling",
       "24/7 PRO Support",
       "Advanced Customization",
-      <>
-        Re Gallery Studio<span className="badge">NEW!</span>
-      </>,
     ],
   },
 };

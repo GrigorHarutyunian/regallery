@@ -5,19 +5,17 @@ import image940 from "../assets/sections/responsive-940x540.webp";
 
 const studioData = {
   id: "studio",
-  title: "Re Gallery Studio",
+  title: "Fully Responsive WordPress Galleries",
   text: (
     <>
-      Most photo gallery plugins stop at features. Re Gallery Studio goes
-      further.
+      Your visitors aren't all using the same device. Your galleries shouldn't
+      look like they are.
       <br />
-      Instead of guessing which layout, template, or feature will work best, you
-      get expert guidance from idea to implementation, built around your
-      website, your product, and your goals.
-      <br />
-      <b>Re Gallery Studio</b> was created to bridge that gap - combining a
-      powerful WordPress gallery plugin with expert guidance and support, so you
-      can build galleries that actually serve your website goals.
+      Re Gallery ensures every gallery is fully responsive, automatically
+      adapting layouts, spacing, and image presentation for any screen size.
+      From large desktop monitors to mobile phones, your galleries remain fast,
+      engaging, and visually stunning - helping you deliver a better user
+      experience and keep visitors focused on your content.
     </>
   ),
   img: image940,

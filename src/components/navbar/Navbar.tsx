@@ -34,7 +34,7 @@ const links: Link[] = [
     target: "_blank",
     external: true,
   },
-  { id: 4, title: "Re Gallery Studio", href: "#studio", badge: "NEW!" },
+  { id: 4, title: "Re Gallery AI", href: "#ai" },
   { id: 5, title: "Pricing", href: "#pricing" },
   {
     id: 6,
