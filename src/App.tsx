@@ -215,6 +215,22 @@ const App: React.FC = () => {
 
   const isPricingPage = currentPath === "/pricing";
 
+  useEffect(() => {
+    if (isPricingPage) return;
+
+    const initializeGalleryScript = window.setTimeout(() => {
+      const hasGalleryContainers = document.querySelector(".reacg-gallery");
+
+      if (hasGalleryContainers) {
+        addScriptsToBody({ reloadGalleryScript: true });
+      }
+    }, 0);
+
+    return () => {
+      window.clearTimeout(initializeGalleryScript);
+    };
+  }, [isPricingPage]);
+
   return (
     <DemoProvider>
       <WindowWidthProvider>
