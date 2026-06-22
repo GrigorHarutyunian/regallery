@@ -1,9 +1,11 @@
 section.supportandInfo {
   position: relative;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
+  .section-text__title-centered {
+    margin-bottom: 0;
+  }
 }
 
 section.supportandInfo .container {
@@ -11,10 +13,6 @@ section.supportandInfo .container {
   display: flex;
   justify-content: center;
 }
-
-/* section#support .container {
-  height: 30vh;
-} */
 
 .support__row {
   display: flex;

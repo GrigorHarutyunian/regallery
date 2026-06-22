@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Faq from "./components/faq/Faq";
+import { homeFaqData } from "./components/faq/home-faq-data";
+import { pricingFaqData } from "./components/faq/pricing-faq-data";
 import ItemsSection from "./common-components/common-items/ItemsSection";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
@@ -9,6 +11,7 @@ import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
 import Support from "./components/support/Support";
 import Pricing from "./components/pricing/Pricing";
+import PricingValueSection from "./components/pricing/PricingValueSection";
 import TopBanner from "./components/TopBanner/TopBanner";
 import Demo from "./components/demo/Demo";
 import Templates from "./components/demo/Templates";
@@ -25,6 +28,7 @@ import ProVersionActivator from "./components/pro-version-activator/ProVersionAc
 import TrialModal from "./components/modals/TrialModal/TrialModal";
 import Sale from "./components/sale-banner/SaleBanner";
 import PlansComparisonTable from "./components/plans-comparison-table/PlansComparisonTable";
+import PricingSupport from "./components/support/PricingSupport";
 import { featuresData1, featuresData2 } from "./data/features-data";
 import studioData from "./data/studio-data";
 import infoData from "./data/info-data";
@@ -35,8 +39,56 @@ import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 import LightboxShowcase from "./components/demo/LightboxShowcase";
 import { BillingPeriod } from "./types/PricingDTO";
 
+const PRICING_HASH = "#pricing";
+
+const getCurrentPath = () => {
+  if (window.location.hash === PRICING_HASH) {
+    window.history.replaceState(null, "", "/pricing");
+
+    return "/pricing";
+  }
+
+  const normalizedPath = window.location.pathname.replace(/\/+$/, "");
+
+  return normalizedPath || "/";
+};
+
+const scrollToCurrentLocation = () => {
+  if (window.location.hash) {
+    scrollToTarget(window.location.hash);
+    return;
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+interface PricingContentProps {
+  billingPeriod: BillingPeriod;
+  setBillingPeriod: (period: BillingPeriod) => void;
+}
+
+const PricingContent: React.FC<PricingContentProps> = ({
+  billingPeriod,
+  setBillingPeriod,
+}) => (
+  <>
+    <Pricing
+      billingPeriod={billingPeriod}
+      setBillingPeriod={setBillingPeriod}
+    />
+    <PricingValueSection />
+    <Faq data={pricingFaqData} title="Pricing Questions" />
+    <PlansComparisonTable
+      billingPeriod={billingPeriod}
+      setBillingPeriod={setBillingPeriod}
+    />
+    <PricingSupport />
+  </>
+);
+
 const App: React.FC = () => {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("yearly");
+  const [currentPath, setCurrentPath] = useState(getCurrentPath);
 
   useEffect(() => {
     const container = document.querySelector(
@@ -82,7 +134,7 @@ const App: React.FC = () => {
     if (location.hash && !scriptsLoaded) {
       addScriptsOnce();
 
-      if (container?.offsetHeight > 320) {
+      if (!container || container.offsetHeight > 320) {
         scrollToTarget(location.hash);
       } else {
         const intervalId = setInterval(() => {
@@ -100,6 +152,69 @@ const App: React.FC = () => {
       });
     };
   }, []);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(getCurrentPath());
+      window.setTimeout(scrollToCurrentLocation, 0);
+    };
+
+    const handleInternalLinkClick = (event: MouseEvent) => {
+      const target = event.target as Element | null;
+      const anchor = target?.closest("a");
+      const href = anchor?.getAttribute("href");
+
+      if (
+        !anchor ||
+        !href ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:") ||
+        (anchor.target && anchor.target !== "_self")
+      ) {
+        return;
+      }
+
+      const targetUrl = new URL(href, window.location.href);
+
+      if (targetUrl.origin !== window.location.origin) return;
+
+      event.preventDefault();
+
+      if (targetUrl.hash === PRICING_HASH) {
+        window.history.pushState(null, "", "/pricing");
+        handleLocationChange();
+
+        return;
+      }
+
+      if (
+        targetUrl.pathname !== window.location.pathname ||
+        targetUrl.search !== window.location.search ||
+        targetUrl.hash !== window.location.hash
+      ) {
+        window.history.pushState(
+          null,
+          "",
+          `${targetUrl.pathname}${targetUrl.search}${targetUrl.hash}`,
+        );
+      }
+
+      handleLocationChange();
+    };
+
+    window.addEventListener("popstate", handleLocationChange);
+    window.addEventListener("hashchange", handleLocationChange);
+    document.addEventListener("click", handleInternalLinkClick);
+
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+      window.removeEventListener("hashchange", handleLocationChange);
+      document.removeEventListener("click", handleInternalLinkClick);
+    };
+  }, []);
+
+  const isPricingPage = currentPath === "/pricing";
+
   return (
     <DemoProvider>
       <WindowWidthProvider>
@@ -109,33 +224,34 @@ const App: React.FC = () => {
             <TopBanner />
             <TrialModal />
             <main
-              className={
+              className={`${isPricingPage ? "pricing-page" : ""} ${
                 localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
-              }
+              }`.trim()}
             >
-              <Hero />
-              <Demo />
-              <Section data={aiData} />
-              <Templates />
-              <ItemsSection data={featuresData1} />
-              <Section data={infoData} />
-              <LightboxShowcase />
-              <ItemsSection data={featuresData2} />
-              <HoverEffectsSection data={hoverData} />
-              <ResponsiveTemplate />
-              <Section data={studioData} />
-              <PageBuilder data={builderData} />
-              <Review />
-              <Pricing
-                billingPeriod={billingPeriod}
-                setBillingPeriod={setBillingPeriod}
-              />
-              <Faq />
-              <PlansComparisonTable
-                billingPeriod={billingPeriod}
-                setBillingPeriod={setBillingPeriod}
-              />
-              <Support />
+              {isPricingPage ? (
+                <PricingContent
+                  billingPeriod={billingPeriod}
+                  setBillingPeriod={setBillingPeriod}
+                />
+              ) : (
+                <>
+                  <Hero />
+                  <Demo />
+                  <Section data={aiData} />
+                  <Templates />
+                  <ItemsSection data={featuresData1} />
+                  <Section data={infoData} />
+                  <LightboxShowcase />
+                  <ItemsSection data={featuresData2} />
+                  <HoverEffectsSection data={hoverData} />
+                  <ResponsiveTemplate />
+                  <Section data={studioData} />
+                  <PageBuilder data={builderData} />
+                  <Review />
+                  <Faq data={homeFaqData} />
+                  <Support />
+                </>
+              )}
             </main>
             <Footer />
             <ProVersionActivator />

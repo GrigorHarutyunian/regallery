@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PricingDTO, { BillingPeriod } from "../../types/PricingDTO";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
@@ -10,6 +10,16 @@ import {
   TRIAL_BUTTON_TEXT,
   TRIAL_DAYS,
 } from "./pricing-data";
+import { plansComparisonAITools } from "../plans-comparison-table/plans-comparison-table-data";
+
+const getAiGenerationsForPlan = (planId: number): ReactNode | null => {
+  const aiGenerationsFeature = plansComparisonAITools.find(
+    ({ id }) => id === "ai-generations",
+  );
+  const value = aiGenerationsFeature?.values[planId - 1];
+
+  return typeof value === "boolean" ? null : (value ?? null);
+};
 
 interface PricingCardProps {
   plan: PricingDTO;
@@ -23,6 +33,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
   const { openStripeCheckout } = useProVersionActivatorContext();
   const { openTrialModal } = useTrialModalContext();
   const pricingDetails = getPricingDetails(plan, billingPeriod);
+  const aiGenerations = getAiGenerationsForPlan(plan.id);
 
   const trackPricingConversion = () => {
     if (typeof window === "undefined") return;
@@ -103,6 +114,19 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
           </>
         )}
       </div>
+
+      {aiGenerations ? (
+        <div className="pricing-card__ai-generations">
+          <div>
+            <div className="pricing-card__ai-generations-label">
+              AI Generations
+            </div>
+            <div className="pricing-card__ai-generations-value">
+              {aiGenerations}
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       {href ? (
         <>

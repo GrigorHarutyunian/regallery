@@ -57,6 +57,21 @@ section#review {
     color: #ffffff;
   }
 }
+.colored-section {
+  background-color: var(--re-primary-color) !important;
+  .section-text__title-centered {
+    color: #ffffff !important;
+  }
+  .section-text__description-centered {
+    color: #ffffff !important;
+  }
+  .trial-link {
+    color: #ffffff !important;
+    &:hover {
+      color: var(--re-secondary-color) !important;
+    }
+  }
+}
 
 section {
   height: calc(100vh - 100px);
@@ -66,9 +81,17 @@ section {
   padding: 60px 25px;
 }
 
+main.pricing-page > section#pricing {
+  padding-top: 90px;
+}
+
 footer {
   padding: 150px 25px 25px;
   background-color: #1d1d1d;
+}
+
+main.no-support-section + footer {
+  padding-top: 25px;
 }
 
 .row {
@@ -90,14 +113,13 @@ footer {
 }
 
 .section-text__title {
-  font-size: 50px;
+  font-size: 40px;
   max-width: 580px;
   font-weight: 700;
   line-height: 1.2;
   color: #000000;
   i {
     color: var(--re-tertiary-color, #2540cc);
-    font-size: 47px;
   }
 }
 
@@ -106,6 +128,9 @@ footer {
     padding: 0;
   }
   section:not([id]) {
+    padding-top: 105px;
+  }
+  main.pricing-page > section#pricing {
     padding-top: 105px;
   }
 }
@@ -223,6 +248,7 @@ p {
 }
 
 .buttons-container a,
+.primary-cta a,
 .secondary-btn {
   width: 220px;
   box-sizing: border-box;

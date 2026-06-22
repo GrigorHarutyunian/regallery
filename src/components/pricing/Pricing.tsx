@@ -25,7 +25,17 @@ const Pricing: React.FC<PricingProps> = ({
     <section id="pricing">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="section-text_cards">
-          <h2 className="section-text__title-centered">Pricing</h2>
+          <h2 className="section-text__title-centered">
+            Simple pricing. AI included, every plan.
+          </h2>
+          <div className="section-text__description-centered">
+            <p>
+              No tier locks AI behind an upgrade. Every plan generates alt text,
+              titles, and image SEO for your WordPress galleries — the only
+              difference is how many sites you run and how much you generate
+              each month.
+            </p>
+          </div>
           <BillingToggle
             billingPeriod={billingPeriod}
             availablePeriods={availableBillingPeriods}

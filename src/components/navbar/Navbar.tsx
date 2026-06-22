@@ -5,7 +5,6 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
-import scrollToTarget from "../../common-components/scrollToTarget";
 interface Link {
   id: number;
   title: string;
@@ -21,11 +20,10 @@ const links: Link[] = [
   {
     id: 1,
     title: "Gallery layouts",
-    href: "#views",
+    href: "/#gallery_layouts",
     type: "menu",
     subMenuItems: viewsDataSubMenu,
   },
-  { id: 2, title: "Page builder", href: "#builder" },
 
   {
     id: 3,
@@ -34,8 +32,8 @@ const links: Link[] = [
     target: "_blank",
     external: true,
   },
-  { id: 4, title: "Re Gallery AI", href: "#ai" },
-  { id: 5, title: "Pricing", href: "#pricing" },
+  { id: 4, title: "Re Gallery AI", href: "/#ai" },
+  { id: 5, title: "Pricing", href: "/pricing" },
   {
     id: 6,
     title: "Blog",
@@ -43,12 +41,12 @@ const links: Link[] = [
     target: "_blank",
     external: true,
   },
-  { id: 7, title: "Contact us", href: "#support" },
+  { id: 7, title: "Contact us", href: "/#support" },
 
   {
     id: 8,
     title: "Get Started",
-    href: "#pricing",
+    href: "/pricing",
     type: "button",
   },
 ];
@@ -74,36 +72,6 @@ const Navbar: React.FC = () => {
     };
   }, [menuOpen, version]);
 
-  const scrollAndReplace = (ref: string) => {
-    scrollToTarget(ref);
-    if (typeof ref === "string" && ref.startsWith("#")) {
-      setTimeout(() => {
-        if (typeof ref === "string" && ref.startsWith("#")) {
-          history.replaceState(null, "", ref);
-        }
-      }, 1);
-    }
-  };
-
-  const handleMenuClick = (e: React.MouseEvent, ref: any) => {
-    e.preventDefault();
-
-    const container = document.querySelector(
-      ".demo_live_container",
-    ) as HTMLElement;
-
-    if (container.offsetHeight > 320) {
-      scrollAndReplace(ref);
-    } else {
-      const intervalId = setInterval(() => {
-        if (container.offsetHeight > 320) {
-          clearInterval(intervalId);
-          scrollAndReplace(ref);
-        }
-      }, 100);
-    }
-  };
-
   return (
     <div
       className={`nav${menuOpen ? " nav-open" : ""}${
@@ -111,10 +79,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className={"nav-content"}>
-        <a
-          href="#home"
-          style={{ textDecoration: "none", display: "inline-flex" }}
-        >
+        <a href="/" style={{ textDecoration: "none", display: "inline-flex" }}>
           <div className={"nav-logo"}>
             <img height={50} width={50} src={iconc} alt="Re Gallery" />
 
@@ -142,10 +107,9 @@ const Navbar: React.FC = () => {
                   link.type === "button" ? "start_free_trial" : undefined
                 }
                 data-location={link.type === "button" ? "navbar" : undefined}
-                onClick={(e) => {
-                  !link.external && handleMenuClick(e, link.href);
+                onClick={() => {
                   if (version === "mobile") {
-                    setMenuOpen(!menuOpen);
+                    setMenuOpen(false);
                   }
                 }}
               >

@@ -23,7 +23,7 @@ const pricingData: { [key: number]: PricingDTO } = {
     href: "https://wordpress.org/plugins/regallery/",
     currency: "$",
     text: "Easy Start for Beginners to Explore Galleries",
-    buttonText: "Free download",
+    buttonText: "Free Download",
     billingOptions: {
       yearly: {
         price: 0,
@@ -97,7 +97,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
-        AI Automation Tools
+        AI alt text, titles & descriptions
         <span
           className="info-icon"
           data-tooltip="Generated Image Title, Description, Caption, and Alt Text"
@@ -156,7 +156,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
-        AI Automation Tools
+        AI alt text, titles & descriptions
         <span
           className="info-icon"
           data-tooltip="Generated Image Title, Description, Caption, and Alt Text"
@@ -214,7 +214,7 @@ const pricingData: { [key: number]: PricingDTO } = {
       `${allTemplatesCount} Pre-Designed Templates`,
       "Template Library",
       <>
-        AI Automation Tools
+        AI alt text, titles & descriptions
         <span
           className="info-icon"
           data-tooltip="Generated Image Title, Description, Caption, and Alt Text"

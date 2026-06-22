@@ -11,7 +11,7 @@ interface subItem {
   imgUrl: string;
   path: string;
 }
-const SubMenu = ({ title, items, version, onClick }: any) => {
+const SubMenu = ({ title, items, version, onClick, href }: any) => {
   const { setSelecteIdFromMenu } = useDemoContext();
   const [openSubMenu, setOpenSubMenu] = useState<boolean>(false);
   const [hoveredElement, setHoveredElement] = useState<subItem>({
@@ -135,7 +135,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
       className="subMenu-nav-link"
     >
       <a
-        href={"#gallery_layouts"}
+        href={href}
         id="fade-button"
         onClick={handleToggle}
         className={"nav-link"}
@@ -251,7 +251,7 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
                                   setSelecteIdFromMenu(val.idView);
                                 },
                               })}
-                          href="#gallery_layouts"
+                          href={href}
                         >
                           {val.title}
                         </a>
