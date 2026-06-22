@@ -1,7 +1,14 @@
-const addScriptsToBody = () => {
-  const script1 = document.createElement("script");
-  script1.id = "reacg_thumbnails-js-extra";
-  script1.innerHTML = `
+interface AddScriptsToBodyOptions {
+  reloadGalleryScript?: boolean;
+}
+
+const addScriptsToBody = ({
+  reloadGalleryScript = false,
+}: AddScriptsToBodyOptions = {}) => {
+  if (!document.getElementById("reacg_thumbnails-js-extra")) {
+    const script1 = document.createElement("script");
+    script1.id = "reacg_thumbnails-js-extra";
+    script1.innerHTML = `
         var reacg_global = {
           rest_root: "https://regallery.team/core/wp-json/reacg/v1/",
           rest_nonce: "1c55173374",
@@ -10,15 +17,22 @@ const addScriptsToBody = () => {
         };
       `;
 
-  document.body.appendChild(script1);
+    document.body.appendChild(script1);
+  }
+
+  const existingGalleryScript = document.getElementById("reacg_thumbnails-js");
+
+  if (existingGalleryScript && !reloadGalleryScript) {
+    return;
+  }
+
+  existingGalleryScript?.remove();
 
   const script2 = document.createElement("script");
   script2.id = "reacg_thumbnails-js";
   script2.src =
     "https://regallery.team/core/wp-content/plugins/regallery/assets/js/wp-gallery.js?ver=1.10.0";
   script2.async = true;
-  document.body.appendChild(script2);
-
   document.body.appendChild(script2);
 };
 export default addScriptsToBody;

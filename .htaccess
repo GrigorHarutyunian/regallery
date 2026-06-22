@@ -5,3 +5,8 @@ RewriteCond %{SERVER_PORT} 80
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.regallery\.team$ [NC]
 RewriteRule ^(.*)$ https://regallery.team/$1 [L,R=301]
+
+# Serve the SPA for client-side routes such as /pricing.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

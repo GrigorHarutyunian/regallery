@@ -5,7 +5,7 @@
 }
 
 .section-text__title-small {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 8px;
@@ -21,7 +21,6 @@
   font-size: 1rem;
   line-height: 26px;
   font-weight: 400;
-  max-width: 339px;
   text-align: start;
 }
 .grid__9:not(._features) .section-text__desc {
@@ -42,12 +41,16 @@
   grid-template-rows: repeat(3, auto);
 }
 
+.grid__2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-item {
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 40px;
+  padding: 35px;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 10px 20px 0 lightgrey;
@@ -100,7 +103,7 @@ div#none {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 ._features .feature-box__header svg {

@@ -17,7 +17,7 @@ const Support: React.FC = () => {
               {text[1]}
             </>
           </p>
-          <div className="buttons-container contact_us_buttons_container">
+          <div className="buttons-container primary-cta">
             <a
               href="https://wordpress.org/support/plugin/regallery/"
               target="_blank"
