@@ -66,7 +66,8 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .grid__9 {
+  .grid__9,
+  .grid__2 {
     grid-template-columns: repeat(2, 1fr);
     max-width: 840px;
     margin: 0 auto;
@@ -84,7 +85,8 @@
 }
 
 @media screen and (max-width: 860px) {
-  .grid__9 {
+  .grid__9,
+  .grid__2 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
