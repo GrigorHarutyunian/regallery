@@ -37,50 +37,48 @@
   align-items: flex-start;
 }
 
-.hero-trust-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0;
+.hero-trust-card.grid-item {
+  text-align: left;
 }
 
-.hero-trust-item {
-  position: relative;
-  color: #4f4f4f;
-  font-size: 1rem;
+.hero-trust-card__icon {
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.hero-trust-card__icon svg {
+  font-size: 25px;
+}
+
+.hero-trust-card__icon--stars {
+  color: #f4c84b;
+}
+
+.hero-trust-card__icon--guarantee {
+  color: #8fdb5c;
+}
+
+.hero-trust-card__icon--free {
+  color: #77a7e8;
+}
+
+.hero-trust-card__icon--builders {
+  color: #000000aa;
+}
+
+.hero-trust-card__title {
+  color: #000000;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 6px;
+}
+
+.hero-trust-card__description {
+  color: #000000aa;
+  font-size: 0.96rem;
   font-weight: 500;
-  line-height: 1.4;
-  padding: 0 20px 0 44px;
-  white-space: nowrap;
-  margin: 5px 0;
-}
-
-.hero-trust-item::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #fec54c;
-  transform: translateY(-50%);
-}
-
-.hero-trust-item::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  width: 7px;
-  height: 4px;
-  border-left: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  transform: translateY(-60%) rotate(-45deg);
-}
-
-.hero-trust-item + .hero-trust-item {
-  border-left: 1px solid #b8b6b6;
+  line-height: 1.15;
 }
 
 .section-image {
@@ -98,24 +96,19 @@
   }
 }
 
-@media screen and (max-width: 1180px) {
-  .hero-trust-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
-  }
-  .hero-trust-item + .hero-trust-item,
-  .hero-trust-item:last-child {
-    border: 0;
-  }
-}
-
 @media screen and (max-width: 700px) {
   .hero-trust-row {
-    grid-template-columns: 1fr;
-    padding: 30px 0 0 0;
+    padding-top: 30px;
   }
-  .hero-trust-item {
+  .hero-trust-card {
+    min-height: auto;
+  }
+
+  .hero-trust-card__title {
+    font-size: 1.05rem;
+  }
+
+  .hero-trust-card__description {
     font-size: 0.9rem;
   }
 }

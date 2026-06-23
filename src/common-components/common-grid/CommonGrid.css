@@ -41,6 +41,10 @@
   grid-template-rows: repeat(3, auto);
 }
 
+.grid__4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .grid__2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -63,6 +67,11 @@
 .grid-item:hover {
   box-shadow: 0 10px 30px #858585;
   transform: translateY(-5px);
+}
+@media screen and (max-width: 1160px) {
+  .grid__4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -87,6 +96,12 @@
 @media screen and (max-width: 860px) {
   .grid__9,
   .grid__2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .grid__4 {
     grid-template-columns: repeat(1, 1fr);
   }
 }

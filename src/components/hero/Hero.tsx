@@ -4,6 +4,10 @@ import WindowWidthContext from "../../contexts/WindowWidthContext";
 import VideoModal from "../modals/VideoModal/VideoModal";
 import { motion } from "framer-motion";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import ExtensionOutlinedIcon from "@mui/icons-material/ExtensionOutlined";
 import { Row, Container } from "react-bootstrap";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import heroMp4 from "../../assets/sections/hero.mp4";
@@ -14,6 +18,33 @@ import { formatCountByStep } from "../../utils/formatCountByStep";
 
 import "./Hero.css";
 import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
+
+const trustHighlights = [
+  {
+    icon: <StarBorderIcon />,
+    iconClassName: "hero-trust-card__icon--stars",
+    title: "5/5 stars",
+    description: "On WordPress.org",
+  },
+  {
+    icon: <VerifiedUserOutlinedIcon />,
+    iconClassName: "hero-trust-card__icon--guarantee",
+    title: "14-day guarantee",
+    description: "Full refund, no questions",
+  },
+  {
+    icon: <FileDownloadOutlinedIcon />,
+    iconClassName: "hero-trust-card__icon--free",
+    title: "Free to start",
+    description: "No credit card needed",
+  },
+  {
+    icon: <ExtensionOutlinedIcon />,
+    iconClassName: "hero-trust-card__icon--builders",
+    title: "Works everywhere",
+    description: "Elementor, Gutenberg, Divi & more",
+  },
+];
 
 const Hero: React.FC = () => {
   const windowWitdth = useContext(WindowWidthContext);
@@ -124,13 +155,26 @@ const Hero: React.FC = () => {
           </motion.div>
         </Row>
         <Row>
-          <div className="hero-trust-row" aria-label="Trust highlights">
-            <span className="hero-trust-item">5/5 stars on WordPress.org</span>
-            <span className="hero-trust-item">
-              Free version - no credit card
-            </span>
-            <span className="hero-trust-item">14-day money-back guarantee</span>
-            <span className="hero-trust-item">Works with 6 page builders</span>
+          <div
+            className="hero-trust-row grid grid__4"
+            aria-label="Trust highlights"
+          >
+            {trustHighlights.map((highlight) => (
+              <div className="grid-item hero-trust-card" key={highlight.title}>
+                <span
+                  className={`hero-trust-card__icon ${highlight.iconClassName}`}
+                  aria-hidden="true"
+                >
+                  {highlight.icon}
+                </span>
+                <span className="hero-trust-card__title">
+                  {highlight.title}
+                </span>
+                <span className="hero-trust-card__description">
+                  {highlight.description}
+                </span>
+              </div>
+            ))}
           </div>
         </Row>
       </Container>
