@@ -1,12 +1,12 @@
 export const pricingFaqData = [
   {
     title:
-      "How does Re Gallery photo gallery plugin integrate with WooCommerce for photo galleries?",
+      "How does Re&nbsp;Gallery photo gallery plugin integrate with WooCommerce for photo galleries?",
     description: (
       <>
-        Re Gallery integrates smoothly with <b>WooCommerce</b>, allowing you to
-        create beautiful, responsive photo galleries for your products. It
-        includes features like lightbox viewing, hover effects, AI-generated
+        Re&nbsp;Gallery integrates smoothly with <b>WooCommerce</b>, allowing
+        you to create beautiful, responsive photo galleries for your products.
+        It includes features like lightbox viewing, hover effects, AI-generated
         image captions, and customizable gallery layouts such as Masonry,
         Mosaic, Justified, Grid, Carousel, Cards, Slider, Blog, Coverflow,
         Scroller, and Cube. These tools help make your product galleries more
@@ -19,7 +19,7 @@ export const pricingFaqData = [
   },
   {
     title:
-      "What are Pro Pre-Designed Templates in Re Gallery photo gallery plugin?",
+      "What are Pro Pre-Designed Templates in Re&nbsp;Gallery photo gallery plugin?",
     description: (
       <>
         <b>Pro Pre-Designed Templates</b> are professionally designed,
@@ -35,12 +35,12 @@ export const pricingFaqData = [
   },
   {
     title:
-      "What plans do you offer for Re Gallery WordPress photo gallery plugin?",
+      "What plans do you offer for Re&nbsp;Gallery WordPress photo gallery plugin?",
     description: (
       <>
-        Re Gallery offers flexible pricing plans, including a free version with
-        essential features and multiple premium plans with advanced options like{" "}
-        WooCommerce photo gallery integration, AI-generated image captions,
+        Re&nbsp;Gallery offers flexible pricing plans, including a free version
+        with essential features and multiple premium plans with advanced options
+        like WooCommerce photo gallery integration, AI-generated image captions,
         customizable gallery layouts, and access to{" "}
         <b>Pro Pre-Designed Templates</b>. Plans vary based on the number of
         sites and include options for annual subscriptions.
@@ -51,12 +51,12 @@ export const pricingFaqData = [
   },
   {
     title:
-      "What happens to my galleries when my Re Gallery plugin plan expires?",
+      "What happens to my galleries when my Re&nbsp;Gallery plugin plan expires?",
     description: (
       <>
-        If your Re Gallery plugin plan expires, your galleries will continue to
-        function normally on your WordPress site. However, you will lose access
-        to <b>premium features.</b>
+        If your Re&nbsp;Gallery plugin plan expires, your galleries will
+        continue to function normally on your WordPress site. However, you will
+        lose access to <b>premium features.</b>
       </>
     ),
     panelId: "panel14",

@@ -40,8 +40,8 @@ const Templates: React.FC = () => {
               <motion.p>
                 <span>
                   Explore ready-made WordPress gallery {allLayoutsCount} layouts
-                  built with Re Gallery&apos;s {allTemplatesCount} pre-built
-                  templates.
+                  built with Re&nbsp;Gallery&apos;s {allTemplatesCount}{" "}
+                  pre-built templates.
                 </span>
                 <a
                   href={"https://regallery.team/core/demo/"}

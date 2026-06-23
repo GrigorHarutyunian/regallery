@@ -17,11 +17,11 @@ const infoData = {
   title: <>Why Choose Re&nbsp;Gallery</>,
   text: (
     <>
-      Most gallery plugins stop at layout. Re Gallery's built-in AI writes the
-      alt text, titles, and descriptions for every image you upload — work no
-      other gallery plugin does natively. Every other setting updates the same
-      way: change a watermark position, toggle a title, drag a spacing slider,
-      and the real-time preview shows it instantly — no guessing, no
+      Most gallery plugins stop at layout. Re&nbsp;Gallery's built-in AI writes
+      the alt text, titles, and descriptions for every image you upload — work
+      no other gallery plugin does natively. Every other setting updates the
+      same way: change a watermark position, toggle a title, drag a spacing
+      slider, and the real-time preview shows it instantly — no guessing, no
       re-publishing. Choose from <b>{allLayoutsCount} responsive layouts</b> and{" "}
       <b>{allTemplatesCount} templates</b>, drop your gallery into any page
       builder, even build full landing pages. All of it, including the AI, lives

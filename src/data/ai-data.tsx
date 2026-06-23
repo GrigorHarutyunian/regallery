@@ -6,8 +6,9 @@ const aiData = {
   text: (
     <>
       Stop writing <b>alt text, titles,</b> and <b>descriptions</b> for every
-      image by hand. Re Gallery's built-in AI automatically generates accurate,
-      SEO-ready metadata the moment you need it - saving hours on every project.
+      image by hand. Re&nbsp;Gallery's built-in AI automatically generates
+      accurate, SEO-ready metadata the moment you need it - saving hours on
+      every project.
       <br />
       <i>No separate tools. No extra plugins. Just less manual work.</i>
     </>

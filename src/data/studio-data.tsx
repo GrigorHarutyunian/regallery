@@ -11,7 +11,7 @@ const studioData = {
       Your visitors aren't all using the same device. Your galleries shouldn't
       look like they are.
       <br />
-      Re Gallery ensures every gallery is fully responsive, automatically
+      Re&nbsp;Gallery ensures every gallery is fully responsive, automatically
       adapting layouts, spacing, and image presentation for any screen size.
       From large desktop monitors to mobile phones, your galleries remain fast,
       engaging, and visually stunning - helping you deliver a better user

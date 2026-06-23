@@ -77,7 +77,7 @@ const ResponsiveTemplate: React.FC = () => {
             <div className="demo_description responsive_description">
               <p>
                 <span>
-                  Re Gallery is fully optimized for mobile, tablets, and 4K
+                  Re&nbsp;Gallery is fully optimized for mobile, tablets, and 4K
                   retina screens, delivering fast, high-quality galleries on
                   every device while boosting SEO and user engagement.
                 </span>

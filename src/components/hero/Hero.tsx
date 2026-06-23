@@ -69,8 +69,9 @@ const Hero: React.FC = () => {
                 <i>In your site's language</i>
               </h1>
               <p className="section-text__body">
-                Upload your photos and Re Gallery AI generates the alt text,
-                titles, captions, and SEO descriptions automatically across{" "}
+                Upload your photos and Re&nbsp;Gallery AI generates the alt
+                text, titles, captions, and SEO descriptions automatically
+                across{" "}
                 <b>
                   {allLayoutsCount}&nbsp;responsive layouts, {allTemplatesCount}
                   &nbsp; templates.
