@@ -331,3 +331,27 @@ p {
     align-items: center;
   }
 }
+
+.reacg-gallery {
+  border-radius: 15px;
+  overflow: hidden;
+}
+#reacg-root2011 {
+  .thumbnail-gallery__image-wrapper,
+  .thumbnail-gallery__title-content_below {
+    border-radius: 15px !important;
+  }
+}
+#reacg-root1166 {
+  .thumbnail-gallery__image-wrapper {
+    border-radius: 15px !important;
+  }
+  .MuiImageListItemBar-title {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+  }
+  .MuiImageListItemBar-subtitle {
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+  }
+}
