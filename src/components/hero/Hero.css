@@ -2,9 +2,9 @@
   color: #000000aa;
   font-size: 1.2rem;
   line-height: 36px;
-  margin-top: 50px;
+  margin-top: 40px;
   max-width: 580px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-weight: 400;
 }
 
@@ -29,6 +29,10 @@
   width: 100%;
   max-width: 1320px;
   gap: 10px;
+  .section-image {
+    border-radius: 15px;
+    overflow: hidden;
+  }
 }
 
 .primary-cta {

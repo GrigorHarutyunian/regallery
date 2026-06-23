@@ -33,7 +33,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   justify-items: center;
-  gap: 40px;
+  gap: 30px;
   max-width: 1320px;
   margin: 0 auto;
 }
