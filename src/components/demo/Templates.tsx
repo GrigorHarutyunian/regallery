@@ -8,10 +8,12 @@ import { dataTemplates } from "./templates-data";
 import { arrow_icon } from "../../assets/icons/arrow-icon";
 import { allTemplates } from "../views/views-data-subMenu";
 import { formatCountByStep } from "../../utils/formatCountByStep";
+import { dataDemo } from "./demo-data";
 
 const Templates: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(1942);
+  const allLayoutsCount = dataDemo.length;
   const allTemplatesCount = formatCountByStep(allTemplates.length);
 
   const sectionRef = useRef<HTMLOptionElement | null>(null);
@@ -37,8 +39,9 @@ const Templates: React.FC = () => {
             <div className="demo_description templates_description">
               <motion.p>
                 <span>
-                  Explore ready-made WordPress gallery layouts built with Re
-                  Gallery&apos;s {allTemplatesCount} pre-built templates.
+                  Explore ready-made WordPress gallery {allLayoutsCount} layouts
+                  built with Re Gallery&apos;s {allTemplatesCount} pre-built
+                  templates.
                 </span>
                 <a
                   href={"https://regallery.team/core/demo/"}
