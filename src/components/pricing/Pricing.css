@@ -82,8 +82,8 @@
   align-items: center;
   display: flex;
   gap: 6px;
-  justify-content: flex-end;
-  margin: 0 0 32px;
+  justify-content: center;
+  margin: 0 0 45px;
 }
 
 .pricing__billing-toggle {
@@ -249,7 +249,7 @@
 
 .pricing-value__table th,
 .pricing-value__table td {
-  border-bottom: 1px solid #ececf2;
+  border-bottom: 1px solid #dddddd;
   font-size: 15px;
   padding: 22px 18px;
   text-align: center;
@@ -306,7 +306,7 @@
 
 .pricing-value__mobile-value {
   align-items: center;
-  border-top: 1px solid #ececf2;
+  border-top: 1px solid #dddddd;
   display: flex;
   gap: 16px;
   justify-content: space-between;
@@ -603,9 +603,6 @@ a.pricing-card__features-link--see-all {
   }
 }
 @media screen and (max-width: 1024px) {
-  .pricing__billing-toggle-row {
-    justify-content: center;
-  }
   .pricing-value__header {
     margin-bottom: 28px;
   }

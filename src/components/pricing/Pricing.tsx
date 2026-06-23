@@ -8,7 +8,7 @@ import {
   getAvailableBillingPeriods,
   getPaidPricingPlans,
 } from "./pricing-utils";
-
+import { Row, Container } from "react-bootstrap";
 interface PricingProps {
   billingPeriod: BillingPeriod;
   setBillingPeriod: (period: BillingPeriod) => void;
@@ -23,35 +23,37 @@ const Pricing: React.FC<PricingProps> = ({
 
   return (
     <section id="pricing">
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="section-text_cards">
-          <h2 className="section-text__title-centered">
-            Simple pricing. AI included, every plan.
-          </h2>
-          <div className="section-text__description-centered">
-            <p>
-              No tier locks AI behind an upgrade. Every plan generates alt text,
-              titles, and image SEO for your WordPress galleries — the only
-              difference is how many sites you run and how much you generate
-              each month.
-            </p>
+      <Container>
+        <Row>
+          <div className="section-text_cards">
+            <h2 className="section-text__title-centered">
+              Simple pricing. AI included, every plan.
+            </h2>
+            <div className="section-text__description-centered">
+              <p>
+                No tier locks AI behind an upgrade. Every plan generates alt
+                text, titles, and image SEO for your WordPress galleries — the
+                only difference is how many sites you run and how much you
+                generate each month.
+              </p>
+            </div>
+            <BillingToggle
+              billingPeriod={billingPeriod}
+              availablePeriods={availableBillingPeriods}
+              onChange={setBillingPeriod}
+            />
+            <div className="grid grid__3 pricing__cards">
+              {paidPlans.map((plan) => (
+                <PricingCard
+                  key={plan.id}
+                  plan={plan}
+                  billingPeriod={billingPeriod}
+                />
+              ))}
+            </div>
           </div>
-          <BillingToggle
-            billingPeriod={billingPeriod}
-            availablePeriods={availableBillingPeriods}
-            onChange={setBillingPeriod}
-          />
-          <div className="grid grid__3 pricing__cards">
-            {paidPlans.map((plan) => (
-              <PricingCard
-                key={plan.id}
-                plan={plan}
-                billingPeriod={billingPeriod}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
       <div className="pricing__guarantee">
         <div className="pricing__guarantee-badge">
           <img

@@ -20,7 +20,7 @@ export const pricingValueData = {
     },
     {
       label: "Entry price (annual, per month)",
-      values: ["$2.50", "~$5,79", "~$3.29", "~$3.33", "~$3.25"],
+      values: ["$29.99", "~$69.50", "~$39.50", "~$39.99", "~$39.00"],
     },
   ],
 };
