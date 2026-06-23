@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 interface FeaturesBoxProps {
   title: string;
-  description: string;
-  path: string;
+  description: ReactNode;
+  path: ReactNode;
   globalTitle: string;
   demoLink?: string;
   img?: string;
@@ -24,7 +25,7 @@ const CommonBoxForGrid: React.FC<FeaturesBoxProps> = ({
             </svg>
             <h3 className="section-text__title-small">{title}</h3>
           </div>
-          <p className="section-text__desc">{description}</p>
+          <div className="section-text__desc">{description}</div>
         </>
       )}
     </motion.div>

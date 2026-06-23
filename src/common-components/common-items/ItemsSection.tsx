@@ -4,6 +4,7 @@ interface FeaturesProps {
   data: {
     id: string;
     title: string;
+    description?: string;
     items: any[];
   };
 }
@@ -13,6 +14,7 @@ const ItemsSection: React.FC<FeaturesProps> = ({ data }) => {
     <CommonGrid
       sectionId={data.id}
       title={data.title}
+      description={data.description}
       data={data.items}
       gridClassname="grid grid__9 _features"
     />
