@@ -64,19 +64,18 @@ const Hero: React.FC = () => {
             <motion.div className="home-text">
               <p className="hero-badge">WORDPRESS GALLERY PLUGIN</p>
               <h1 className="section-text__title">
-                Beautiful galleries.
+                Your images speak
                 <br></br>
-                <i>Built automatically</i> by&nbsp;AI
+                <i>In your site's language</i>
               </h1>
               <p className="section-text__body">
-                Re Gallery gives you{" "}
+                Upload your photos and Re Gallery AI generates the alt text,
+                titles, captions, and SEO descriptions automatically across{" "}
                 <b>
-                  {allLayoutsCount} responsive layouts, {allTemplatesCount}{" "}
-                  templates,
+                  {allLayoutsCount}&nbsp;responsive layouts, {allTemplatesCount}
+                  &nbsp; templates.
                 </b>{" "}
-                and built-in AI that writes alt text, generates captions, and
-                handles image SEO - so you don't have to. Works with Elementor,
-                Gutenberg, Divi, and more.
+                Works with Elementor, Gutenberg, Divi, and more.
                 <br />
                 <i>No coding required.</i>
               </p>
