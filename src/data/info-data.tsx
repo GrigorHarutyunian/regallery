@@ -17,13 +17,15 @@ const infoData = {
   title: <>Why Choose Re&nbsp;Gallery</>,
   text: (
     <>
-      Re Gallery is built for people who want professional results without the
-      complexity. With an intuitive <b>Real-Time Preview</b>, every setting
-      change shows instantly - no guessing, no re-publishing, no wasted time.
-      Choose from <b>{allLayoutsCount} responsive layouts</b> and{" "}
-      <b>{allTemplatesCount} pre-designed templates</b>, drop your gallery into
-      any page builder, and even build landing pages - all from inside a single,
-      lightweight plugin that feels native to WordPress.
+      Most gallery plugins stop at layout. Re Gallery's built-in AI writes the
+      alt text, titles, and descriptions for every image you upload — work no
+      other gallery plugin does natively. Every other setting updates the same
+      way: change a watermark position, toggle a title, drag a spacing slider,
+      and the real-time preview shows it instantly — no guessing, no
+      re-publishing. Choose from <b>{allLayoutsCount} responsive layouts</b> and{" "}
+      <b>{allTemplatesCount} templates</b>, drop your gallery into any page
+      builder, even build full landing pages. All of it, including the AI, lives
+      in one lightweight plugin — not a gallery plugin plus a separate SEO tool.
     </>
   ),
   img: image1880,
