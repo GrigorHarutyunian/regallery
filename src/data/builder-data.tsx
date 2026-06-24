@@ -22,7 +22,14 @@ import landingGallery20 from "../assets/imgs/page-builder/Overlay Slideshow.webp
 const builderData = {
   id: "builder",
   title: "Landing Page Builder",
-  text: "Design WordPress landing pages only with Re&nbsp;Gallery, no extra plugins, no coding required. Choose from responsive Gallery templates, image galleries, sliders, and video blocks to build high-converting landing pages with ease.",
+  text: (
+    <>
+      Design WordPress landing pages only with Re&nbsp;Gallery, no extra
+      plugins, no coding required. Choose from responsive Gallery templates,
+      image galleries, sliders, and video blocks to build high-converting
+      landing pages with ease.
+    </>
+  ),
   itemsTop: [
     { image: landingGallery1, title: "Feature" },
     { image: landingGallery9, title: "Spotlight Layout" },

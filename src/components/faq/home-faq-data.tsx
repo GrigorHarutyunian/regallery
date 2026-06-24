@@ -1,6 +1,6 @@
 export const homeFaqData = [
   {
-    title: "What is Re&nbsp;Gallery photo gallery plugin?",
+    title: <>What is Re&nbsp;Gallery photo gallery plugin?</>,
     description: (
       <>
         Re&nbsp;Gallery is a responsive WordPress photo gallery plugin that lets
@@ -15,7 +15,7 @@ export const homeFaqData = [
     summeryID: "panel1bh-header",
   },
   {
-    title: "How do I create my first image gallery using Re&nbsp;Gallery?",
+    title: <>How do I create my first image gallery using Re&nbsp;Gallery?</>,
     description: (
       <>
         Go to <b>Re&nbsp;Gallery - Add New Gallery</b> in your WordPress
@@ -30,8 +30,12 @@ export const homeFaqData = [
     summeryID: "panel2bh-header",
   },
   {
-    title:
-      "Is Re&nbsp;Gallery photo gallery plugin compatible with Elementor page builder?",
+    title: (
+      <>
+        Is Re&nbsp;Gallery photo gallery plugin compatible with Elementor page
+        builder?
+      </>
+    ),
     description: (
       <>
         Re&nbsp;Gallery works seamlessly with Gutenberg, Elementor, Divi,
@@ -43,8 +47,12 @@ export const homeFaqData = [
     summeryID: "panel3bh-header",
   },
   {
-    title:
-      "Is Re&nbsp;Gallery WordPress gallery plugin optimized for mobile devices?",
+    title: (
+      <>
+        Is Re&nbsp;Gallery WordPress gallery plugin optimized for mobile
+        devices?
+      </>
+    ),
     description: (
       <>
         Yes, Re&nbsp;Gallery is fully <b>mobile-optimized.</b> All responsive
@@ -60,8 +68,11 @@ export const homeFaqData = [
     summeryID: "panel4bh-header",
   },
   {
-    title:
-      "What are Generative AI Captions in Re&nbsp;Gallery photo gallery plugin?",
+    title: (
+      <>
+        What are Generative AI Captions in Re&nbsp;Gallery photo gallery plugin?
+      </>
+    ),
     description: (
       <>
         Generative AI Captions in Re&nbsp;Gallery automatically create image
@@ -76,8 +87,12 @@ export const homeFaqData = [
     summeryID: "panel5bh-header",
   },
   {
-    title:
-      "Can I edit AI-generated image captions in Re&nbsp;Gallery photo gallery plugin?",
+    title: (
+      <>
+        Can I edit AI-generated image captions in Re&nbsp;Gallery photo gallery
+        plugin?
+      </>
+    ),
     description: (
       <>
         Yes, you can fully edit the <b>AI-generated</b> image captions in Re
@@ -90,7 +105,7 @@ export const homeFaqData = [
     summeryID: "panel6bh-header",
   },
   {
-    title: "Is Re&nbsp;Gallery photo gallery plugin SEO friendly?",
+    title: <>Is Re&nbsp;Gallery photo gallery plugin SEO friendly?</>,
     description: (
       <>
         Yes, Re&nbsp;Gallery is highly <b>SEO friendly.</b> Its AI-generated
@@ -105,8 +120,12 @@ export const homeFaqData = [
     summeryID: "panel7bh-header",
   },
   {
-    title:
-      "Which gallery layouts like masonry, carousel, justified are available in WordPress photo gallery plugin?",
+    title: (
+      <>
+        Which gallery layouts like masonry, carousel, justified are available in
+        WordPress photo gallery plugin?
+      </>
+    ),
     description: (
       <>
         Re&nbsp;Gallery supports multiple gallery layouts including Mosaic,
@@ -123,7 +142,7 @@ export const homeFaqData = [
     summeryID: "panel9bh-header",
   },
   {
-    title: "Does Re&nbsp;Gallery offer a live preview or template layouts?",
+    title: <>Does Re&nbsp;Gallery offer a live preview or template layouts?</>,
     description: (
       <>
         Yes, Re&nbsp;Gallery provides a <b>Real-Time Preview</b> feature that
@@ -135,8 +154,12 @@ export const homeFaqData = [
     summeryID: "panel10bh-header",
   },
   {
-    title:
-      "Can Re&nbsp;Gallery  photo gallery plugin display video files as well as photos?",
+    title: (
+      <>
+        Can Re&nbsp;Gallery photo gallery plugin display video files as well as
+        photos?
+      </>
+    ),
     description: (
       <>
         Yes, Re&nbsp;Gallery allows you to display both <b>videos and photos</b>{" "}

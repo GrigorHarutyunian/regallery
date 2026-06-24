@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
                 across{" "}
                 <b>
                   {allLayoutsCount}&nbsp;responsive layouts, {allTemplatesCount}
-                  &nbsp; templates.
+                  &nbsp;templates.
                 </b>{" "}
                 Works with Elementor, Gutenberg, Divi, and more.
                 <br />

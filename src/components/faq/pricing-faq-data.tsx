@@ -1,7 +1,11 @@
 export const pricingFaqData = [
   {
-    title:
-      "How does Re&nbsp;Gallery photo gallery plugin integrate with WooCommerce for photo galleries?",
+    title: (
+      <>
+        How does Re&nbsp;Gallery photo gallery plugin integrate with WooCommerce
+        for photo galleries?
+      </>
+    ),
     description: (
       <>
         Re&nbsp;Gallery integrates smoothly with <b>WooCommerce</b>, allowing
@@ -18,8 +22,12 @@ export const pricingFaqData = [
     summeryID: "panel8bh-header",
   },
   {
-    title:
-      "What are Pro Pre-Designed Templates in Re&nbsp;Gallery photo gallery plugin?",
+    title: (
+      <>
+        What are Pro Pre-Designed Templates in Re&nbsp;Gallery photo gallery
+        plugin?
+      </>
+    ),
     description: (
       <>
         <b>Pro Pre-Designed Templates</b> are professionally designed,
@@ -34,8 +42,12 @@ export const pricingFaqData = [
     summeryID: "panel11bh-header",
   },
   {
-    title:
-      "What plans do you offer for Re&nbsp;Gallery WordPress photo gallery plugin?",
+    title: (
+      <>
+        What plans do you offer for Re&nbsp;Gallery WordPress photo gallery
+        plugin?
+      </>
+    ),
     description: (
       <>
         Re&nbsp;Gallery offers flexible pricing plans, including a free version
@@ -50,8 +62,12 @@ export const pricingFaqData = [
     summeryID: "panel13bh-header",
   },
   {
-    title:
-      "What happens to my galleries when my Re&nbsp;Gallery plugin plan expires?",
+    title: (
+      <>
+        What happens to my galleries when my Re&nbsp;Gallery plugin plan
+        expires?
+      </>
+    ),
     description: (
       <>
         If your Re&nbsp;Gallery plugin plan expires, your galleries will
