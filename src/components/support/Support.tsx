@@ -6,7 +6,7 @@ import "./Support.css";
 const Support: React.FC = () => {
   let text = supportData.text.split("24/7.");
   return (
-    <section id={"support"} className="supportandInfo">
+    <section id={"support"} className="section">
       <Container>
         <div className="contact_us_row">
           <h2 className="section-text__title">{supportData.title}</h2>

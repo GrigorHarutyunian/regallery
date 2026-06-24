@@ -25,7 +25,7 @@ const PricingSupport: React.FC = () => {
   };
 
   return (
-    <section id="pricing-support" className="supportandInfo">
+    <section id="pricing-support" className="section">
       <Container>
         <div className="contact_us_row colored-section">
           <h2 className="section-text__title-centered">

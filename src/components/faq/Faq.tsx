@@ -13,10 +13,10 @@ const Faq: React.FC<FaqProps> = ({ data, title = "FAQ" }) => {
         <Row>
           <div>
             <h2 className="section-text__title-centered">{title}</h2>
-            <div className="grid grid__2 _features">
+            <div className="grid grid__2">
               {data.map((val: any, index) => (
-                <div key={index} className="grid-item feature-box">
-                  <div className="feature-box__header">
+                <div key={index} className="grid-item">
+                  <div className="grid-item__header">
                     <svg
                       height={55}
                       width={55}

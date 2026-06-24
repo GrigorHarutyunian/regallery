@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Faq from "./components/faq/Faq";
-import { homeFaqData } from "./components/faq/home-faq-data";
-import { pricingFaqData } from "./components/faq/pricing-faq-data";
+import { homeFaqData } from "./data/home-faq-data.tsx";
+import { pricingFaqData } from "./data/pricing-faq-data.tsx";
 import ItemsSection from "./common-components/common-items/ItemsSection";
 import Footer from "./components/footer/Footer";
-import Hero from "./components/hero/Hero";
 import PageBuilder from "./components/page-builder/PageBuilder";
 import Navbar from "./components/navbar/Navbar";
 import Review from "./components/reviews/Review";
@@ -29,11 +27,14 @@ import TrialModal from "./components/modals/TrialModal/TrialModal";
 import Sale from "./components/sale-banner/SaleBanner";
 import PlansComparisonTable from "./components/plans-comparison-table/PlansComparisonTable";
 import PricingSupport from "./components/support/PricingSupport";
-import { featuresData1, featuresData2 } from "./data/features-data";
+import { featuresData } from "./data/features-data";
+import { benefitsData } from "./data/benefits-data";
+import { trustData } from "./data/trust-data";
 import studioData from "./data/studio-data";
 import infoData from "./data/info-data";
 import aiData from "./data/ai-data";
-import hoverData from "./data/hover-data.tsx";
+import hoverData from "./data/hover-data";
+import heroData from "./data/hero-data.tsx";
 import builderData from "./data/builder-data";
 import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
 import LightboxShowcase from "./components/demo/LightboxShowcase";
@@ -77,7 +78,7 @@ const PricingContent: React.FC<PricingContentProps> = ({
       setBillingPeriod={setBillingPeriod}
     />
     <PricingValueSection />
-    <Faq data={pricingFaqData} title="Pricing Questions" />
+    <ItemsSection data={pricingFaqData} columns={2} />
     <PlansComparisonTable
       billingPeriod={billingPeriod}
       setBillingPeriod={setBillingPeriod}
@@ -251,20 +252,21 @@ const App: React.FC = () => {
                 />
               ) : (
                 <>
-                  <Hero />
+                  <Section data={heroData} />
+                  <ItemsSection data={trustData} columns={4} />
                   <Demo />
                   <Section data={aiData} />
                   <Templates />
-                  <ItemsSection data={featuresData1} />
+                  <ItemsSection data={featuresData} columns={3} />
                   <Section data={infoData} />
                   <LightboxShowcase />
-                  <ItemsSection data={featuresData2} />
+                  <ItemsSection data={benefitsData} columns={3} />
                   <HoverEffectsSection data={hoverData} />
                   <ResponsiveTemplate />
                   <Section data={studioData} />
                   <PageBuilder data={builderData} />
                   <Review />
-                  <Faq data={homeFaqData} />
+                  <ItemsSection data={homeFaqData} columns={2} />
                   <Support />
                 </>
               )}

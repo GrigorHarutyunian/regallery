@@ -2,9 +2,11 @@ import React from "react";
 
 export default interface SectionDTO {
   data: {
+    badge?: string;
     title: string | React.ReactNode;
     text: string | any;
     id: string;
+    className?: string;
     width?: number;
     height?: number;
     alt: string;
@@ -15,7 +17,7 @@ export default interface SectionDTO {
     imgSrcSet?: string;
     imgSizes?: string;
     additionalButtonLink?: string;
-    additionalButtonName?: string;
+    additionalButtonName?: string | React.ReactNode;
     viewMoreLinks?: any;
     itemsTop?: { title: string; image: string }[];
     itemsBottom?: { title: string; image: string }[];

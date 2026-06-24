@@ -5,7 +5,7 @@ section#pricing-support {
   padding-top: 0;
 }
 
-section.supportandInfo .container {
+.section .container {
   position: relative;
   width: 100%;
   max-width: 1320px;

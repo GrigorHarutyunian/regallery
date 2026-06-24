@@ -11,14 +11,15 @@ const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
   data,
   title,
   description,
+  className,
   gridClassname,
 }) => {
   return (
-    <section id={sectionId}>
+    <section id={sectionId} className={className}>
       <Container>
         <Row>
           <div className="section-text_cards">
-            <h2 className="section-text__title-centered dark">{title}</h2>
+            {title && <h2 className="section-text__title-centered">{title}</h2>}
             {description && (
               <div className="section-text__description-centered">
                 {description}

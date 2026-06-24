@@ -2,6 +2,7 @@ import video from "../assets/sections/ai-1880-1080.mp4";
 import poster from "../assets/sections/ai-1024x588.webp";
 const aiData = {
   id: "ai",
+  className: "ai-section",
   title: "Let AI handle the work",
   text: (
     <>

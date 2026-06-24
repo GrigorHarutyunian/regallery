@@ -176,9 +176,9 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
   };
 
   return (
-    <section id={data.id} className="supportandInfo hover-effects-section">
+    <section id={data.id} className="section hover-effects-section">
       <Container>
-        <motion.div className="support__row info">
+        <motion.div className="section__row">
           <motion.div className="section-text">
             <h2 className="section-text__title">{data.title}</h2>
             <p className="section-text__body">{data.text}</p>

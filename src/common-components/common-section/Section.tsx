@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
 import { Container } from "react-bootstrap";
 import SectionDTO from "../../types/SectionDTO";
@@ -8,19 +8,29 @@ import { motion } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import VideoModal from "../../components/modals/VideoModal/VideoModal";
 
 const Section: React.FC<SectionDTO> = ({ data }) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const responsiveSizes = data.imgSrcSet
     ? (data.imgSizes ?? "(max-width: 768px) 100vw, 50vw")
     : undefined;
   return (
-    <section id={data.id} className="supportandInfo">
+    <section id={data.id} className={`section ${data.className}`}>
       <Container>
-        <motion.div className="support__row info">
+        <motion.div className="section__row">
           <motion.div className="section-text">
-            <h2 className="section-text__title">{data.title}</h2>
+            {data.badge && <p className="section-text__badge">{data.badge}</p>}
+            {data.id === "hero" && (
+              <h1 className="section-text__title">{data.title}</h1>
+            )}
+            {data.id !== "hero" && (
+              <h2 className="section-text__title">{data.title}</h2>
+            )}
             <p className="section-text__body">{data.text}</p>
             {version === "mobile" && (
               <motion.div
@@ -63,7 +73,6 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                 )}
               </motion.div>
             )}
-
             <div className="buttons-container">
               <div className="primary-cta">
                 <a
@@ -85,6 +94,14 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
                   </a>
                 </div>
               </div>
+              {data.id === "hero" && (
+                <div
+                  onClick={handleOpen}
+                  className="download-btn secondary-btn"
+                >
+                  {data.additionalButtonName}
+                </div>
+              )}
               {data.additionalButtonLink && (
                 <a
                   className="download-btn secondary-btn"
@@ -138,6 +155,9 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
           )}
         </motion.div>
       </Container>
+      {data.id === "hero" && (
+        <VideoModal open={open} handleClose={handleClose} />
+      )}
     </section>
   );
 };

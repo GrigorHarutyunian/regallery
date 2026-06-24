@@ -1,4 +1,4 @@
-section.supportandInfo {
+.section {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -6,25 +6,91 @@ section.supportandInfo {
   .section-text__title-centered {
     margin-bottom: 0;
   }
+  .container {
+    margin: auto 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .section__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1320px;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0;
+  }
+  .section-text__badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 10px 26px;
+    border-radius: 999px;
+    background: var(--re-secondary-color, #dce9ff);
+    color: var(--re-tertiary-color, #2540cc);
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .section-image {
+    border-radius: 15px;
+    overflow: hidden;
+  }
 }
-
-section.supportandInfo .container {
-  margin: auto 0px;
-  display: flex;
-  justify-content: center;
+.hero-section {
+  padding-bottom: 0;
 }
+.trust-section {
+  padding-top: 0;
+  .grid-item {
+    .grid-item__header {
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
 
-.support__row {
+  .section-text__title-small {
+    font-size: 1.18rem;
+  }
+  .section-text__desc {
+    font-size: 0.96rem;
+    line-height: 1.15;
+  }
+}
+.primary-cta {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1320px;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 1200px) {
-  section.supportandInfo {
+  .section {
     height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-text__badge {
+    padding: 9px 16px;
+    max-width: 100%;
+  }
+}
+.primary-cta {
+  align-items: center;
+}
+.trust-section {
+  .section-text__title-small {
+    font-size: 1.05rem;
+  }
+  .section-text__desc {
+    font-size: 0.9rem;
   }
 }
