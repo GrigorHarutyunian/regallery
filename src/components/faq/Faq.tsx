@@ -14,8 +14,8 @@ const Faq: React.FC<FaqProps> = ({ data, title = "FAQ" }) => {
           <div>
             <h2 className="section-text__title-centered">{title}</h2>
             <div className="grid grid__2 _features">
-              {data.map((val: any) => (
-                <div key={val.title} className="grid-item feature-box">
+              {data.map((val: any, index) => (
+                <div key={index} className="grid-item feature-box">
                   <div className="feature-box__header">
                     <svg
                       height={55}

@@ -1,4 +1,5 @@
 export type BillingPeriod = "yearly" | "monthly";
+import type { ReactNode } from "react";
 
 export interface PricingBillingOptionDTO {
   checkoutPlanId?: number;
@@ -15,7 +16,7 @@ export default interface PricingDTO {
   text: string;
   buttonText: string;
   currency?: string;
-  advantages: (string | JSX.Element)[];
+  advantages: (string | ReactNode)[];
   title: string;
   href?: string;
   mostPopular?: boolean;

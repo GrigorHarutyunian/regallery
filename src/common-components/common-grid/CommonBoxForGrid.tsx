@@ -5,7 +5,7 @@ interface FeaturesBoxProps {
   title: string;
   description: ReactNode;
   path: ReactNode;
-  globalTitle: string;
+  globalTitle: ReactNode;
   demoLink?: string;
   img?: string;
 }

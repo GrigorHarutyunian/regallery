@@ -8,7 +8,6 @@ export const featuresData1 = {
   title: <>What Makes Re&nbsp;Gallery Different From Other Gallery Plugins</>,
   items: [
     {
-      id: 1,
       title: "Al alt text, titles & descriptions",
       description:
         "Every image gets accurate, SEO-ready alt text, a title, and a description the moment you upload it. No competitor's gallery plugin generates these natively — you'd normally need a separate plugin.",
@@ -17,7 +16,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 2,
       title: "Multilingual Al output",
       description:
         "Metadata generates in each language automatically, instead of you rewriting alt text by hand for every translation.",
@@ -26,7 +24,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 3,
       title: "WooCommerce Products Gallery",
       description: (
         <>
@@ -41,7 +38,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 4,
       title: `${allTemplatesCount} Templates`,
       description:
         "Create eye-catching galleries in seconds. Choose from professionally designed templates that adapt to your content, style, and layout needs - no design skills required.",
@@ -56,7 +52,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 5,
       title: "Built light, stays fast",
       description:
         "Lazy loading and minimal dependencies keep load times down, even on galleries with hundreds of images.",
@@ -65,7 +60,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 6,
       title: "Watermark Protection",
       description:
         "Add logo or any image based watermark to your galleries directly in WordPress to safeguard your photos while keeping them looking professional.",
@@ -74,7 +68,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 7,
       title: "Works with your page builder",
       description:
         "Native blocks for Elementor, Gutenberg, Divi, Beaver, Bricks, and Beaver Builder. Drop a gallery into any layout without fighting compatibility issues.",
@@ -83,7 +76,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 8,
       title: "Dynamic Galleries From Posts",
       description:
         "Create a gallery that automatically updates every time you publish a new post — ideal for portfolios and blogs that need to stay current without manual maintenance.",
@@ -92,7 +84,6 @@ export const featuresData1 = {
       ),
     },
     {
-      id: 9,
       title: "A user-friendly interface",
       description:
         "The plugin’s UX/UI design closely aligns with WordPress, making it incredibly intuitive and easy to use. Enjoy a user-friendly dashboard within the WordPress admin interface.",
@@ -104,10 +95,9 @@ export const featuresData1 = {
 };
 export const featuresData2 = {
   id: "benefits",
-  title: "Built for Real WordPress Workflows",
+  title: <>Built for Real WordPress Workflows</>,
   items: [
     {
-      id: 1,
       title: "Photography Portfolios",
       description: (
         <div className="feature-box__list">
@@ -146,7 +136,6 @@ export const featuresData2 = {
     },
 
     {
-      id: 2,
       title: "WooCommerce Product Pages",
       description: (
         <div className="feature-box__list">
@@ -185,7 +174,6 @@ export const featuresData2 = {
       ),
     },
     {
-      id: 3,
       title: "Freelance & Agency Client Sites",
       description: (
         <div className="feature-box__list">
@@ -220,7 +208,6 @@ export const featuresData2 = {
       ),
     },
     {
-      id: 4,
       title: "Blogs and Content Sites",
       description: (
         <div className="feature-box__list">
@@ -255,7 +242,6 @@ export const featuresData2 = {
       ),
     },
     {
-      id: 5,
       title: "Marketing Agencies",
       description: (
         <div className="feature-box__list">
@@ -290,7 +276,6 @@ export const featuresData2 = {
       ),
     },
     {
-      id: 6,
       title: "Creative & Design Portfolios",
       description: (
         <div className="feature-box__list">

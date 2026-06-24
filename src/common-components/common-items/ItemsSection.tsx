@@ -1,10 +1,11 @@
 import CommonGrid from "../common-grid/CommonGrid";
+import type { ReactNode } from "react";
 
 interface FeaturesProps {
   data: {
     id: string;
-    title: string;
-    description?: string;
+    title: ReactNode;
+    description?: ReactNode;
     items: any[];
   };
 }
