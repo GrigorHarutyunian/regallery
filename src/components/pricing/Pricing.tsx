@@ -27,14 +27,13 @@ const Pricing: React.FC<PricingProps> = ({
         <Row>
           <div className="section-text_cards">
             <h2 className="section-text__title-centered">
-              Simple pricing. AI included, every plan.
+              One WordPress Gallery Plugin. AI on Every Plan
             </h2>
             <div className="section-text__description-centered">
               <p>
-                No tier locks AI behind an upgrade. Every plan generates alt
-                text, titles, and image SEO for your WordPress galleries — the
-                only difference is how many sites you run and how much you
-                generate each month.
+                Every Re Gallery plan includes AI-generated alt text, titles,
+                and image SEO — built directly into your WordPress gallery
+                plugin. No locked tiers, no upgrade wall.
               </p>
             </div>
             <BillingToggle
