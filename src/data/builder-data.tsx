@@ -21,7 +21,7 @@ import landingGallery20 from "../assets/imgs/page-builder/Overlay Slideshow.webp
 
 const builderData = {
   id: "builder",
-  title: "Landing Page Builder",
+  title: "Landing page builder",
   text: (
     <>
       Design WordPress landing pages only with Re&nbsp;Gallery, no extra

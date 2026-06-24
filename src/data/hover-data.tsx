@@ -9,7 +9,7 @@ import type SectionDTO from "../types/SectionDTO";
 
 const hoverData: SectionDTO["data"] = {
   id: "hover",
-  title: "Hover Effects",
+  title: "Hover effects",
   text: (
     <>
       Choose a hover style and see instantly how each image can{" "}

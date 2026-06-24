@@ -73,7 +73,7 @@ const ResponsiveTemplate: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h2 className="section-text__title-centered">Responsive Gallery</h2>
+            <h2 className="section-text__title-centered">Responsive gallery</h2>
             <div className="demo_description responsive_description">
               <p>
                 <span>

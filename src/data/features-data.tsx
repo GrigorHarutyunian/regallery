@@ -5,7 +5,7 @@ import { formatCountByStep } from "../utils/formatCountByStep";
 export const featuresData = {
   id: "features",
   className: "features-section",
-  title: <>What Makes Re&nbsp;Gallery Different From Other Gallery Plugins</>,
+  title: <>What makes Re&nbsp;Gallery different from other gallery plugins</>,
   items: [
     {
       title: "Al alt text, titles & descriptions",

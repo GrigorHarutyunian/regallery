@@ -35,7 +35,7 @@ const Templates: React.FC = () => {
       <Container>
         <Row>
           <div className="demo_columns_content">
-            <h2 className="section-text__title-centered">Template Library</h2>
+            <h2 className="section-text__title-centered">Template library</h2>
             <div className="demo_description templates_description">
               <motion.p>
                 <span>

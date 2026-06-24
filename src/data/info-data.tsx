@@ -14,7 +14,7 @@ const allLayoutsCount = dataDemo.length;
 
 const infoData = {
   id: "info",
-  title: <>Why Choose Re&nbsp;Gallery</>,
+  title: <>Why choose Re&nbsp;Gallery</>,
   text: (
     <>
       Most gallery plugins stop at layout. Re&nbsp;Gallery's built-in AI writes

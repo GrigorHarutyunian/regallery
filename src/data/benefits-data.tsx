@@ -3,10 +3,10 @@ import CheckIcon from "@mui/icons-material/Check";
 export const benefitsData = {
   id: "benefits",
   className: "benefits-section",
-  title: <>Built for Real WordPress Workflows</>,
+  title: <>Built for real WordPress workflows</>,
   items: [
     {
-      title: "Photography Portfolios",
+      title: "Photography portfolios",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
@@ -44,7 +44,7 @@ export const benefitsData = {
     },
 
     {
-      title: "WooCommerce Product Pages",
+      title: "WooCommerce product pages",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
@@ -82,7 +82,7 @@ export const benefitsData = {
       ),
     },
     {
-      title: "Freelance & Agency Client Sites",
+      title: "Freelance & agency client sites",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
@@ -116,7 +116,7 @@ export const benefitsData = {
       ),
     },
     {
-      title: "Blogs and Content Sites",
+      title: "Blogs and content sites",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
@@ -150,7 +150,7 @@ export const benefitsData = {
       ),
     },
     {
-      title: "Marketing Agencies",
+      title: "Marketing agencies",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
@@ -184,7 +184,7 @@ export const benefitsData = {
       ),
     },
     {
-      title: "Creative & Design Portfolios",
+      title: "Creative & design portfolios",
       description: (
         <div className="grid-item__list">
           <div className="grid-item__list-item">
