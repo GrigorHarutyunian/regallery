@@ -41,10 +41,24 @@ import LightboxShowcase from "./components/demo/LightboxShowcase";
 import { BillingPeriod } from "./types/PricingDTO";
 
 const PRICING_HASH = "#pricing";
+const SEE_ALL_FEATURES_HASH = "#see-all-features";
+
+const getPricingUrl = (hash = "") =>
+  `/pricing${window.location.search}${hash}`;
 
 const getCurrentPath = () => {
   if (window.location.hash === PRICING_HASH) {
-    window.history.replaceState(null, "", "/pricing");
+    window.history.replaceState(null, "", getPricingUrl());
+
+    return "/pricing";
+  }
+
+  if (window.location.hash === SEE_ALL_FEATURES_HASH) {
+    window.history.replaceState(
+      null,
+      "",
+      getPricingUrl(SEE_ALL_FEATURES_HASH),
+    );
 
     return "/pricing";
   }
@@ -182,7 +196,18 @@ const App: React.FC = () => {
       event.preventDefault();
 
       if (targetUrl.hash === PRICING_HASH) {
-        window.history.pushState(null, "", "/pricing");
+        window.history.pushState(null, "", getPricingUrl());
+        handleLocationChange();
+
+        return;
+      }
+
+      if (targetUrl.hash === SEE_ALL_FEATURES_HASH) {
+        window.history.pushState(
+          null,
+          "",
+          `/pricing${targetUrl.search}${SEE_ALL_FEATURES_HASH}`,
+        );
         handleLocationChange();
 
         return;
