@@ -1,4 +1,5 @@
 import ItemsSection from "../common-components/common-items/ItemsSection";
+import TableSection from "../common-components/table-section/TableSection";
 import Section from "../common-components/common-section/Section";
 import Demo from "../components/demo/Demo";
 import Templates from "../components/demo/Templates";
@@ -9,6 +10,7 @@ import PageBuilder from "../components/page-builder/PageBuilder";
 import Review from "../components/reviews/Review";
 import FloatingSection from "../common-components/floating-section/FloatingSection";
 import { homeFaqData } from "../data/home-faq-data";
+import { homeComparisonData } from "../data/home-comparison-data";
 import { featuresData } from "../data/features-data";
 import { benefitsData } from "../data/benefits-data";
 import { trustData } from "../data/trust-data";
@@ -37,6 +39,7 @@ const HomePage: React.FC = () => (
     <PageBuilder data={builderData} />
     <Review />
     <ItemsSection data={homeFaqData} columns={2} />
+    <TableSection data={homeComparisonData} />
     <FloatingSection data={supportData} color="dark" />
   </>
 );
