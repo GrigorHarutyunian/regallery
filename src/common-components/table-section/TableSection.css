@@ -1,0 +1,235 @@
+.table-section {
+  background: #f7f7fa;
+}
+
+.table-section__inner {
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
+}
+
+.table-section__mobile-list {
+  display: none;
+}
+
+.table-section__header {
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.table-section__table-wrapper {
+  border: 1px solid #e7e7ef;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.table-section__table {
+  background: #ffffff;
+  border-collapse: collapse;
+  color: #252733;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-section__table th,
+.table-section__table td {
+  border-bottom: 1px solid #dddddd;
+  font-size: 15px;
+  padding: 22px 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-section__feature-column,
+.table-section__row-label {
+  text-align: left !important;
+  width: 25%;
+}
+
+.table-section__table th {
+  background: var(--re-background-color-light);
+  color: #171923;
+  font-weight: 800;
+}
+
+.table-section__table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table-section__column-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.table-section__column-description {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 4px;
+  opacity: 0.75;
+}
+
+.table-section__group-row td {
+  background: var(--re-background-color-light);
+  border-bottom: 1px solid #dddddd;
+  color: #171923;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 14px 18px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table-section__cell-value {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.table-section__icon {
+  font-size: 22px;
+}
+
+.table-section__icon--yes {
+  color: #52bd94;
+}
+
+.table-section__icon--no {
+  color: #d14343;
+}
+
+.table-section__highlight {
+  background: var(--re-secondary-color, #dce9ff);
+  color: var(--re-tertiary-color, #2540cc);
+  font-weight: 800;
+}
+
+.table-section__table th.table-section__highlight {
+  background: var(--re-primary-color, #2540cc);
+  color: #ffffff;
+}
+
+.table-section__table
+  th.table-section__highlight
+  .table-section__column-description {
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 1;
+}
+
+.table-section__mobile-card {
+  background: #ffffff;
+  border: 1px solid #e7e7ef;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.table-section__mobile-group-title {
+  color: #171923;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.table-section__mobile-group + .table-section__mobile-group {
+  margin-top: 20px;
+}
+
+.table-section__mobile-title {
+  background: #f8f7fb;
+  color: #171923;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+  padding: 16px;
+  margin: 0;
+}
+
+.table-section__mobile-values {
+  display: grid;
+}
+
+.table-section__mobile-value {
+  align-items: center;
+  border-top: 1px solid #dddddd;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.table-section__mobile-value--highlight {
+  background: var(--re-secondary-color, #dce9ff);
+  color: var(--re-tertiary-color, #2540cc);
+  font-weight: 800;
+}
+
+.table-section__mobile-column {
+  color: #171923;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 2px;
+}
+
+.table-section__mobile-column-desc {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.table-section__mobile-result {
+  color: inherit;
+  font-size: 14px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .table-section__header {
+    margin-bottom: 28px;
+  }
+  .table-section__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table-section__table {
+    min-width: 820px;
+  }
+  .table-section__table th,
+  .table-section__table td {
+    font-size: 14px;
+    padding: 18px 14px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .table-section__table-wrapper {
+    display: none;
+  }
+  .table-section__mobile-list {
+    display: grid;
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 475px) {
+  .table-section__mobile-value {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .table-section__mobile-result {
+    text-align: left;
+  }
+}
