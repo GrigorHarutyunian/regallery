@@ -10,7 +10,18 @@ import VideoSlider from "../../components/video-slider/VideoSlider";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import VideoModal from "../../components/modals/VideoModal/VideoModal";
 
-const Section: React.FC<SectionDTO> = ({ data }) => {
+const sectionColorClassNames = {
+  light: "",
+  dark: "black-section",
+  colorful: "colorful-section",
+  "light-colorful": "light-colorful-section",
+};
+
+const Section: React.FC<SectionDTO> = ({
+  data,
+  direction = "right",
+  color = "light",
+}) => {
   const windowWitdth = useContext(WindowWidthContext);
   const version = windowWitdth.version;
   const [open, setOpen] = useState(false);
@@ -19,10 +30,34 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
   const responsiveSizes = data.imgSrcSet
     ? (data.imgSizes ?? "(max-width: 768px) 100vw, 50vw")
     : undefined;
+  const rowClassName = `section__row${
+    direction === "left" ? " section__row--image-left" : ""
+  }`;
+  const sectionClassName = [
+    "section",
+    data.className,
+    sectionColorClassNames[color],
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const primaryButton = data.primaryButton;
+  const shouldShowPrimaryButton = primaryButton !== false;
+  const customPrimaryButton =
+    primaryButton && typeof primaryButton === "object" ? primaryButton : null;
+  const primaryButtonLink =
+    customPrimaryButton?.primaryButtonLink ?? "/pricing";
+  const secondaryButton = data.secondaryButton;
+  const secondaryButtonClickHandlers = {
+    openVideoModal: handleOpen,
+  };
+  const handleSecondaryButtonClick = () => {
+    secondaryButton?.onClick?.(secondaryButtonClickHandlers);
+  };
+
   return (
-    <section id={data.id} className={`section ${data.className}`}>
+    <section id={data.id} className={sectionClassName}>
       <Container>
-        <motion.div className="section__row">
+        <motion.div className={rowClassName}>
           <motion.div className="section-text">
             {data.badge && <p className="section-text__badge">{data.badge}</p>}
             {data.id === "hero" && (
@@ -31,7 +66,7 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
             {data.id !== "hero" && (
               <h2 className="section-text__title">{data.title}</h2>
             )}
-            <p className="section-text__body">{data.text}</p>
+            <div className="section-text__body">{data.text}</div>
             {version === "mobile" && (
               <motion.div
                 className="section-image"
@@ -74,45 +109,58 @@ const Section: React.FC<SectionDTO> = ({ data }) => {
               </motion.div>
             )}
             <div className="buttons-container">
-              <div className="primary-cta">
-                <a
-                  href="/pricing"
-                  data-track="start_free_trial"
-                  data-location={data.id}
-                >
-                  <DownloadBtn className={"download-btn"} location={data.id} />
-                </a>
-                <div className="primary-btn__free-link">
+              {shouldShowPrimaryButton && (
+                <div className="primary-cta">
                   <a
-                    href="https://wordpress.org/plugins/regallery/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    data-track="download_free_version"
+                    className={
+                      customPrimaryButton?.primaryButtonName
+                        ? "download-btn"
+                        : undefined
+                    }
+                    href={primaryButtonLink}
+                    data-track="start_free_trial"
                     data-location={data.id}
                   >
-                    Download Free Version
+                    {customPrimaryButton?.primaryButtonName ?? (
+                      <DownloadBtn
+                        className={"download-btn"}
+                        location={data.id}
+                      />
+                    )}
                   </a>
-                </div>
-              </div>
-              {data.id === "hero" && (
-                <div
-                  onClick={handleOpen}
-                  className="download-btn secondary-btn"
-                >
-                  {data.additionalButtonName}
+                  {!customPrimaryButton && (
+                    <div className="primary-btn__free-link">
+                      <a
+                        href="https://wordpress.org/plugins/regallery/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        data-track="download_free_version"
+                        data-location={data.id}
+                      >
+                        Download Free Version
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
-              {data.additionalButtonLink && (
+              {secondaryButton?.link ? (
                 <a
                   className="download-btn secondary-btn"
-                  href={data.additionalButtonLink}
-                  target="_blank"
+                  href={secondaryButton.link}
+                  target={secondaryButton.target ?? "_blank"}
                   data-track="secondary_action"
                   data-location={data.id}
                 >
-                  {data.additionalButtonName}
+                  {secondaryButton.label}
                 </a>
-              )}
+              ) : secondaryButton?.onClick ? (
+                <div
+                  onClick={handleSecondaryButtonClick}
+                  className="download-btn secondary-btn"
+                >
+                  {secondaryButton.label}
+                </div>
+              ) : null}
             </div>
           </motion.div>
           {version !== "mobile" && (

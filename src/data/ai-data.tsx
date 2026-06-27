@@ -17,7 +17,10 @@ const aiData = {
   video: video,
   poster: poster,
   alt: `AI generating image alt text, titles and descriptions automatically in Re Gallery WordPress plugin`,
-  additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "Admin Demo",
+  secondaryButton: {
+    link: "/ai",
+    label: "Learn More",
+    target: "_self",
+  },
 };
 export default aiData;

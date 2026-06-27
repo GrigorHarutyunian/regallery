@@ -133,7 +133,7 @@ div#none {
 .grid-item__check {
   padding-top: 4px;
   align-items: center;
-  color: #19a974;
+  color: var(--re-primary-color, #2540cc);
   display: inline-flex;
   flex-shrink: 0;
   svg {

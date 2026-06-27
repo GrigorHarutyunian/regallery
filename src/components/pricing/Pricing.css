@@ -263,7 +263,7 @@
 }
 
 .pricing-value__table th {
-  background: #f8f7fb;
+  background: var(--re-background-color-light);
   color: #171923;
   font-weight: 800;
 }

@@ -93,6 +93,11 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
   const responsiveSizes = data.imgSrcSet
     ? (data.imgSizes ?? "(max-width: 768px) 100vw, 50vw")
     : undefined;
+  const primaryButton = data.primaryButton;
+  const shouldShowPrimaryButton = primaryButton !== false;
+  const customPrimaryButton =
+    primaryButton && typeof primaryButton === "object" ? primaryButton : null;
+  const primaryButtonLink = customPrimaryButton?.primaryButtonLink ?? "/pricing";
 
   const activeHoverEffect = useMemo(
     () =>
@@ -216,36 +221,50 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
             )}
 
             <div className="buttons-container">
-              <div className="primary-cta">
-                <a
-                  href="/pricing"
-                  data-track="start_free_trial"
-                  data-location={data.id}
-                >
-                  <DownloadBtn className={"download-btn"} location={data.id} />
-                </a>
-                <div className="primary-btn__free-link">
+              {shouldShowPrimaryButton && (
+                <div className="primary-cta">
                   <a
-                    href="https://wordpress.org/plugins/regallery/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    data-track="download_free_version"
+                    className={
+                      customPrimaryButton?.primaryButtonName
+                        ? "download-btn"
+                        : undefined
+                    }
+                    href={primaryButtonLink}
+                    data-track="start_free_trial"
                     data-location={data.id}
                   >
-                    Download Free Version
+                    {customPrimaryButton?.primaryButtonName ?? (
+                      <DownloadBtn
+                        className={"download-btn"}
+                        location={data.id}
+                      />
+                    )}
                   </a>
+                  {!customPrimaryButton && (
+                    <div className="primary-btn__free-link">
+                      <a
+                        href="https://wordpress.org/plugins/regallery/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        data-track="download_free_version"
+                        data-location={data.id}
+                      >
+                        Download Free Version
+                      </a>
+                    </div>
+                  )}
                 </div>
-              </div>
-              {data.additionalButtonLink && (
+              )}
+              {data.secondaryButton?.link && (
                 <a
                   className="download-btn secondary-btn"
-                  href={data.additionalButtonLink}
+                  href={data.secondaryButton.link}
                   target="_blank"
                   rel="noreferrer noopener"
                   data-track="secondary_action"
                   data-location={data.id}
                 >
-                  {data.additionalButtonName}
+                  {data.secondaryButton.label}
                 </a>
               )}
             </div>

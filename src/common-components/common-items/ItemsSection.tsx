@@ -10,15 +10,21 @@ interface FeaturesProps {
     className?: string;
   };
   columns: number | 3;
+  color?: "light" | "dark" | "colorful" | "light-colorful";
 }
 
-const ItemsSection: React.FC<FeaturesProps> = ({ data, columns }) => {
+const ItemsSection: React.FC<FeaturesProps> = ({
+  data,
+  columns,
+  color = "light",
+}) => {
   return (
     <CommonGrid
       sectionId={data.id}
       title={data.title}
       description={data.description}
       data={data.items}
+      color={color}
       className={data.className}
       gridClassname={`grid grid__${columns}`}
     />
