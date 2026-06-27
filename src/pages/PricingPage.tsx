@@ -2,8 +2,9 @@ import FloatingSection from "../common-components/floating-section/FloatingSecti
 import ItemsSection from "../common-components/common-items/ItemsSection";
 import PlansComparisonTable from "../components/plans-comparison-table/PlansComparisonTable";
 import Pricing from "../components/pricing/Pricing";
-import PricingValueSection from "../components/pricing/PricingValueSection";
+import TableSection from "../common-components/table-section/TableSection";
 import pricingSupportData from "../data/pricing-support-data";
+import { pricingValueData } from "../data/pricing-value-data";
 import { pricingFaqData } from "../data/pricing-faq-data";
 import { BillingPeriod } from "../types/PricingDTO";
 
@@ -21,7 +22,7 @@ const PricingPage: React.FC<PricingPageProps> = ({
       billingPeriod={billingPeriod}
       setBillingPeriod={setBillingPeriod}
     />
-    <PricingValueSection />
+    <TableSection data={pricingValueData} />
     <ItemsSection data={pricingFaqData} columns={2} />
     <PlansComparisonTable
       billingPeriod={billingPeriod}

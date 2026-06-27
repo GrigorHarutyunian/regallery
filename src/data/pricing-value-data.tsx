@@ -1,8 +1,17 @@
-export const pricingValueData = {
+import type { TableSectionData } from "../common-components/table-section/TableSection";
+
+export const pricingValueData: TableSectionData = {
+  id: "pricing-value",
   title: "What you'd pay elsewhere for the same result",
   description:
     "NextGEN, Envira, FooGallery, and Modula don't generate AI metadata at any price. To match what Re Gallery includes on every plan, you'd need a second plugin on top of theirs.",
-  columns: ["Re Gallery", "NextGEN", "Envira", "FooGallery", "Modula"],
+  columns: [
+    { title: "Re Gallery" },
+    { title: "NextGEN" },
+    { title: "Envira" },
+    { title: "FooGallery" },
+    { title: "Modula" },
+  ],
   rows: [
     {
       label: "AI alt text, titles & descriptions",
