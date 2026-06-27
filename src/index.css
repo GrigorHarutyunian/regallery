@@ -46,13 +46,6 @@ main.closed-banner {
   transition: top 0.8s ease;
 }
 
-main > section#views,
-section#features,
-section#benefits,
-section#review {
-  background-color: #eee !important;
-}
-
 .black-section {
   overflow: hidden;
   background-color: var(--re-background-color-dark) !important;

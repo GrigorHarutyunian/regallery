@@ -23,7 +23,7 @@ const PricingPage: React.FC<PricingPageProps> = ({
       setBillingPeriod={setBillingPeriod}
     />
     <TableSection data={pricingValueData} />
-    <ItemsSection data={pricingFaqData} columns={2} />
+    <ItemsSection data={pricingFaqData} columns={2} color="light-colorful" />
     <PlansComparisonTable
       billingPeriod={billingPeriod}
       setBillingPeriod={setBillingPeriod}

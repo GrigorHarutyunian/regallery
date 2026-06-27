@@ -9,7 +9,18 @@ import { useState, useEffect } from "react";
 const MOBILE_BREAKPOINT = 1025;
 const MAX_VISIBLE_DOTS = 5;
 
-const Services: React.FC = () => {
+const sectionColorClassNames = {
+  light: "",
+  dark: "black-section",
+  colorful: "colorful-section",
+  "light-colorful": "light-colorful-section",
+};
+
+interface ReviewProps {
+  color?: "light" | "dark" | "colorful" | "light-colorful";
+}
+
+const Services: React.FC<ReviewProps> = ({ color = "light" }) => {
   const [itemsPerPage, setItemsPerPage] = useState(() =>
     window.innerWidth < MOBILE_BREAKPOINT ? 1 : 3,
   );
@@ -68,9 +79,10 @@ const Services: React.FC = () => {
     return () => clearInterval(interval);
   }, [isHovering, itemsPerPage]);
   const showControls = reviewData.length > itemsPerPage;
+  const sectionClassName = [sectionColorClassNames[color]].filter(Boolean).join(" ");
 
   return (
-    <section id="review">
+    <section id="review" className={sectionClassName}>
       <Container>
         <Row>
           <div className="section-text_cards">

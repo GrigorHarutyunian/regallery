@@ -41,7 +41,15 @@ export interface TableSectionData {
 
 interface TableSectionProps {
   data: TableSectionData;
+  color?: "light" | "dark" | "colorful" | "light-colorful";
 }
+
+const sectionColorClassNames = {
+  light: "",
+  dark: "black-section",
+  colorful: "colorful-section",
+  "light-colorful": "light-colorful-section",
+};
 
 const renderCellValue = (value: TableSectionCellValue): ReactNode => {
   if (typeof value === "boolean") {
@@ -98,13 +106,16 @@ const getRowGroups = (data: TableSectionData): TableSectionRowGroup[] => {
   return [];
 };
 
-const TableSection: React.FC<TableSectionProps> = ({ data }) => {
+const TableSection: React.FC<TableSectionProps> = ({ data, color = "light" }) => {
   const highlightIndex = data.highlightColumnIndex ?? 0;
   const rowGroups = getRowGroups(data);
   const featureColumnTitle = data.featureColumnTitle ?? "Feature";
+  const sectionClassName = ["table-section", sectionColorClassNames[color]]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <section id={data.id} className="table-section">
+    <section id={data.id} className={sectionClassName}>
       <Container>
         <Row>
           <div className="table-section__inner">

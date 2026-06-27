@@ -43,7 +43,7 @@ section.floating-section {
 }
 
 #ai-footer {
-  background-color: #eee;
+  background-color: var(--re-background-color-light);
 }
 
 #ai-page-multilingual {

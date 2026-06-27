@@ -29,16 +29,16 @@ const HomePage: React.FC = () => (
     <Demo />
     <Section data={aiData} />
     <Templates />
-    <ItemsSection data={featuresData} columns={3} />
+    <ItemsSection data={featuresData} columns={3} color="light-colorful" />
     <Section data={infoData} />
     <LightboxShowcase />
-    <ItemsSection data={benefitsData} columns={3} />
+    <ItemsSection data={benefitsData} columns={3} color="light-colorful" />
     <HoverEffectsSection data={hoverData} />
     <ResponsiveTemplate />
     <Section data={studioData} />
     <PageBuilder data={builderData} />
     <Review />
-    <ItemsSection data={homeFaqData} columns={2} />
+    <ItemsSection data={homeFaqData} columns={2} color="light-colorful" />
     <TableSection data={homeComparisonData} />
     <FloatingSection data={supportData} color="dark" />
   </>
