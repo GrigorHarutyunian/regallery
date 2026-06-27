@@ -1,28 +1,31 @@
 import "./Footer.css";
+import { footerLinksData } from "./footer-links-data";
 import { socialWebsiteData } from "./social-website-data";
+
 const Footer: React.FC = () => {
   return (
     <footer>
+      <div className="footer__links-grid">
+        {footerLinksData.map((column) => (
+          <div key={column.title} className="footer__column">
+            <h3 className="footer__column-title">{column.title}</h3>
+            <ul className="footer__column-links">
+              {column.links.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} target={link.target}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
       <div className="row__social-website">
         <div className="footer-text__title footer-copyright">
           <div>
             <span>Copyright © {new Date().getFullYear()} Re Gallery.</span>{" "}
             <span>All rights reserved.</span>
-          </div>
-          <div className="footer-text__links">
-            <a
-              href="https://regallery.team/core/terms-conditions/"
-              target="_blank"
-            >
-              Terms & Conditions
-            </a>
-            &nbsp; &nbsp;
-            <a
-              href="https://regallery.team/core/privacy-policy/"
-              target="_blank"
-            >
-              Privacy Policy
-            </a>
           </div>
         </div>
         <div className="footer__social-website-icons">
@@ -52,7 +55,7 @@ const Footer: React.FC = () => {
             );
           })}
         </div>
-      </div>{" "}
+      </div>
     </footer>
   );
 };
