@@ -1,43 +1,21 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { homeFaqData } from "./data/home-faq-data.tsx";
-import { pricingFaqData } from "./data/pricing-faq-data.tsx";
-import ItemsSection from "./common-components/common-items/ItemsSection";
 import Footer from "./components/footer/Footer";
-import PageBuilder from "./components/page-builder/PageBuilder";
 import Navbar from "./components/navbar/Navbar";
-import Review from "./components/reviews/Review";
-import Support from "./components/support/Support";
-import Pricing from "./components/pricing/Pricing";
-import PricingValueSection from "./components/pricing/PricingValueSection";
 import TopBanner from "./components/TopBanner/TopBanner";
-import Demo from "./components/demo/Demo";
-import Templates from "./components/demo/Templates";
 import InteractiveAIIcon from "./components/interactive-aI-icon/InteractiveAIIcon";
 import { DemoProvider } from "./contexts/DemoContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
-import Section from "./common-components/common-section/Section";
 import scrollToTarget from "./common-components/scrollToTarget";
-import HoverEffectsSection from "./components/hover-effects-section/HoverEffectsSection";
 import { ProVersionActivatorProvider } from "./contexts/ProVersionActivatorModalContext";
 import { TrialModalProvider } from "./contexts/TrialModalContext";
 import ProVersionActivator from "./components/pro-version-activator/ProVersionActivator";
 import TrialModal from "./components/modals/TrialModal/TrialModal";
 import Sale from "./components/sale-banner/SaleBanner";
-import PlansComparisonTable from "./components/plans-comparison-table/PlansComparisonTable";
-import PricingSupport from "./components/support/PricingSupport";
-import { featuresData } from "./data/features-data";
-import { benefitsData } from "./data/benefits-data";
-import { trustData } from "./data/trust-data";
-import studioData from "./data/studio-data";
-import infoData from "./data/info-data";
-import aiData from "./data/ai-data";
-import hoverData from "./data/hover-data";
-import heroData from "./data/hero-data.tsx";
-import builderData from "./data/builder-data";
-import ResponsiveTemplate from "./components/demo/ResponsiveTemplate";
-import LightboxShowcase from "./components/demo/LightboxShowcase";
+import AiPage from "./pages/AiPage";
+import HomePage from "./pages/HomePage";
+import PricingPage from "./pages/PricingPage";
 import { BillingPeriod } from "./types/PricingDTO";
 
 const PRICING_HASH = "#pricing";
@@ -76,30 +54,6 @@ const scrollToCurrentLocation = () => {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
-
-interface PricingContentProps {
-  billingPeriod: BillingPeriod;
-  setBillingPeriod: (period: BillingPeriod) => void;
-}
-
-const PricingContent: React.FC<PricingContentProps> = ({
-  billingPeriod,
-  setBillingPeriod,
-}) => (
-  <>
-    <Pricing
-      billingPeriod={billingPeriod}
-      setBillingPeriod={setBillingPeriod}
-    />
-    <PricingValueSection />
-    <ItemsSection data={pricingFaqData} columns={2} />
-    <PlansComparisonTable
-      billingPeriod={billingPeriod}
-      setBillingPeriod={setBillingPeriod}
-    />
-    <PricingSupport />
-  </>
-);
 
 const App: React.FC = () => {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("yearly");
@@ -240,6 +194,7 @@ const App: React.FC = () => {
   }, []);
 
   const isPricingPage = currentPath === "/pricing";
+  const isAiPage = currentPath === "/ai";
 
   useEffect(() => {
     if (isPricingPage) return;
@@ -255,7 +210,7 @@ const App: React.FC = () => {
     return () => {
       window.clearTimeout(initializeGalleryScript);
     };
-  }, [isPricingPage]);
+  }, [currentPath, isPricingPage]);
 
   return (
     <DemoProvider>
@@ -271,29 +226,14 @@ const App: React.FC = () => {
               }`.trim()}
             >
               {isPricingPage ? (
-                <PricingContent
+                <PricingPage
                   billingPeriod={billingPeriod}
                   setBillingPeriod={setBillingPeriod}
                 />
+              ) : isAiPage ? (
+                <AiPage />
               ) : (
-                <>
-                  <Section data={heroData} />
-                  <ItemsSection data={trustData} columns={4} />
-                  <Demo />
-                  <Section data={aiData} />
-                  <Templates />
-                  <ItemsSection data={featuresData} columns={3} />
-                  <Section data={infoData} />
-                  <LightboxShowcase />
-                  <ItemsSection data={benefitsData} columns={3} />
-                  <HoverEffectsSection data={hoverData} />
-                  <ResponsiveTemplate />
-                  <Section data={studioData} />
-                  <PageBuilder data={builderData} />
-                  <Review />
-                  <ItemsSection data={homeFaqData} columns={2} />
-                  <Support />
-                </>
+                <HomePage />
               )}
             </main>
             <Footer />

@@ -1,11 +1,16 @@
-section#support,
-section#pricing-support {
+section.floating-section {
   align-items: center;
   padding-bottom: 0;
   padding-top: 0;
 }
+.floating-section {
+  .section-text__title,
+  .section-text__body {
+    text-align: center;
+  }
+}
 
-.section .container {
+.floating-section .container {
   position: relative;
   width: 100%;
   max-width: 1320px;
@@ -20,17 +25,29 @@ section#pricing-support {
   padding: 60px;
   max-width: 1320px;
   align-items: center;
-  background-color: #000000;
   box-sizing: border-box;
   border-radius: 15px;
   margin-top: -74px;
 }
 
-.contact_us_row h2,
-.contact_us_row p {
-  color: #fff;
+.contact_us_row:not(.black-section):not(.colorful-section):not(
+    .light-colorful-section
+  ) {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
 }
+
 .contact_us_row .contact_us {
   max-width: 800px;
   text-align: center;
+}
+
+#ai-footer {
+  background-color: #eee;
+}
+
+#ai-page-multilingual {
+  .section-text__body {
+    margin-bottom: 0;
+  }
 }

@@ -6,16 +6,31 @@ import "./CommonGrid.css";
 import "../../components/reviews/Review.css";
 import { motion } from "framer-motion";
 
+const sectionColorClassNames = {
+  light: "",
+  dark: "black-section",
+  colorful: "colorful-section",
+  "light-colorful": "light-colorful-section",
+};
+
 const CommonGrid: React.FC<FeaturesAndViewsDTO> = ({
   sectionId,
   data,
   title,
   description,
+  color = "light",
   className,
   gridClassname,
 }) => {
+  const sectionClassName = [
+    className,
+    sectionColorClassNames[color],
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <section id={sectionId} className={className}>
+    <section id={sectionId} className={sectionClassName}>
       <Container>
         <Row>
           <div className="section-text_cards">

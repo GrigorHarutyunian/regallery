@@ -17,6 +17,9 @@ body {
   --re-secondary-color: #e3f2fd;
   --re-tertiary-color: #5c6bc0;
   --re-button-radius: 30px;
+  --re-background-color-dark: #000000;
+  --re-background-color-light: #eeeeee;
+  --re-background-color-light-dark: #1d1d1d;
 }
 
 .ab-B {
@@ -24,6 +27,9 @@ body {
   --re-secondary-color: #eef4ff;
   --re-tertiary-color: #4c8bf5;
   --re-button-radius: 8px;
+  --re-background-color-dark: #131b2e;
+  --re-background-color-light: #f2f3ff;
+  --re-background-color-light-dark: #283044;
 }
 
 main {
@@ -49,16 +55,24 @@ section#review {
 
 .black-section {
   overflow: hidden;
-  background-color: #000000 !important;
+  background-color: var(--re-background-color-dark) !important;
+  .section-text__title,
+  .section-text__body,
   .section-text__title-centered {
     color: #ffffff !important;
   }
   .primary-btn__free-link a {
     color: #ffffff;
   }
+  .section-image {
+    box-shadow: 0 0 15px 5px #1a1a1a;
+  }
 }
-.colored-section {
+.colored-section,
+.colorful-section {
   background-color: var(--re-primary-color) !important;
+  .section-text__title,
+  .section-text__body,
   .section-text__title-centered {
     color: #ffffff !important;
   }
@@ -71,6 +85,9 @@ section#review {
       color: var(--re-secondary-color) !important;
     }
   }
+}
+.light-colorful-section {
+  background-color: var(--re-background-color-light) !important;
 }
 
 section {
@@ -87,7 +104,7 @@ main.pricing-page > section#pricing {
 
 footer {
   padding: 150px 25px 25px;
-  background-color: #1d1d1d;
+  background-color: var(--re-background-color-light-dark);
 }
 
 main.no-support-section + footer {

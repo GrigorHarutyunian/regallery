@@ -32,7 +32,9 @@ const infoData = {
   imgSrcSet: `${image480} 480w, ${image640} 640w, ${image768} 768w, ${image1024} 1024w, ${image1280} 1280w, ${image1500} 1500w, ${image1880} 1880w`,
   imgSizes: "(max-width: 768px) 100vw, 50vw",
   alt: `Re Gallery WordPress plugin interface showing real-time preview and gallery customization controls`,
-  additionalButtonLink: "https://wordpress.org/plugins/regallery/?preview=1",
-  additionalButtonName: "Admin Demo",
+  secondaryButton: {
+    link: "https://wordpress.org/plugins/regallery/?preview=1",
+    label: "Admin Demo",
+  },
 };
 export default infoData;

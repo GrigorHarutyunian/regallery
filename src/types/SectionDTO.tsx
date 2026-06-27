@@ -1,6 +1,12 @@
 import React from "react";
 
+export interface SecondaryButtonClickHandlers {
+  openVideoModal: () => void;
+}
+
 export default interface SectionDTO {
+  direction?: "left" | "right";
+  color?: "light" | "dark" | "colorful" | "light-colorful";
   data: {
     badge?: string;
     title: string | React.ReactNode;
@@ -16,8 +22,18 @@ export default interface SectionDTO {
     img?: any;
     imgSrcSet?: string;
     imgSizes?: string;
-    additionalButtonLink?: string;
-    additionalButtonName?: string | React.ReactNode;
+    primaryButton?:
+      | false
+      | {
+          primaryButtonLink?: string;
+          primaryButtonName?: string | React.ReactNode;
+        };
+    secondaryButton?: {
+      link?: string;
+      target?: string;
+      onClick?: (handlers: SecondaryButtonClickHandlers) => void;
+      label: string | React.ReactNode;
+    };
     viewMoreLinks?: any;
     itemsTop?: { title: string; image: string }[];
     itemsBottom?: { title: string; image: string }[];
