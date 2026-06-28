@@ -1,7 +1,7 @@
 const interactiveAiIconData = [
   [
     {
-      title: "AI tools",
+      title: "SEO AI",
       path: "/ai",
       svgPath: (
         <path

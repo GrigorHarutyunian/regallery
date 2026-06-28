@@ -3,9 +3,9 @@ import type { TableSectionData } from "../common-components/table-section/TableS
 export const homeComparisonData: TableSectionData = {
   id: "plugin-comparison",
   featureColumnTitle: "Feature",
-  title: "Re Gallery vs NextGEN, Envira, FooGallery, Modula",
+  title: "Re Gallery vs NextGEN, Envira, FooGallery & Modula",
   description:
-    "Scoped to the features buyers actually evaluate — not a padded checklist. Pricing reflects each vendor's single-site annual plan where the relevant feature is unlocked.",
+    "Compare modern gallery features, AI image SEO, performance, and pricing across the most popular WordPress gallery plugins.",
   columns: [
     { title: "Re Gallery", description: "from $0" },
     { title: "NextGEN Gallery", description: "Imagely" },
@@ -18,130 +18,130 @@ export const homeComparisonData: TableSectionData = {
       title: "AI & IMAGE SEO",
       rows: [
         {
-          label: "AI-generated alt text",
+          label: "AI-generated titles, alt text & descriptions",
           values: [true, false, false, false, false],
         },
         {
-          label: "AI-generated titles",
+          label: "Bulk AI generation for existing media",
           values: [true, false, false, false, false],
         },
         {
-          label: "AI-generated descriptions",
+          label: "AI writes in your site's language",
           values: [true, false, false, false, false],
         },
         {
-          label: "Bulk AI processing of existing libraries",
+          label: "Built-in image SEO workflow",
           values: [true, false, false, false, false],
         },
         {
-          label: "Multilingual AI output",
-          values: [true, false, false, false, false],
-        },
-        {
-          label: "Requires a separate plugin for image SEO",
-          values: [
-            "No",
-            "Yes, third-party",
-            "Yes, third-party",
-            "Yes, third-party",
-            "Yes, third-party",
-          ],
+          label: "Requires additional plugin for image SEO",
+          values: ["No", "Yes", "Yes", "Yes", "Yes"],
         },
       ],
     },
+
     {
-      title: "GALLERY BUILDING",
+      title: "GALLERY EXPERIENCE",
       rows: [
         {
           label: "Responsive galleries",
           values: [true, true, true, true, true],
         },
         {
-          label: "Modern layout templates",
-          values: [true, "~ Dated UI", true, true, true],
+          label: "Multiple gallery layouts",
+          values: [true, true, true, true, true],
         },
         {
           label: "Dynamic galleries",
-          values: [true, true, { icon: true, note: "Pro only" }, "~", false],
-        },
-        {
-          label: "Lightbox included",
-          values: [true, true, true, true, true],
+          values: [
+            true,
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Highest plan only" },
+            { icon: true, note: "Highest plan only" },
+            { icon: true, note: "Highest plan only" },
+          ],
         },
         {
           label: "Video gallery support",
           values: [
             true,
-            { icon: true, note: "Pro only" },
-            { icon: true, note: "Pro only" },
-            { icon: true, note: "Pro only" },
+            "~",
+            { icon: true, note: "Highest plan only" },
+            { icon: true, note: "Highest plan only" },
+            { icon: true, note: "Pro" },
+          ],
+        },
+        {
+          label: "Advanced lightbox",
+          values: [
             true,
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Pro" },
           ],
         },
       ],
     },
+
     {
-      title: "PERFORMANCE & TECHNICAL",
+      title: "PERFORMANCE & COMPATIBILITY",
       rows: [
         {
-          label: "Lightweight / minimal bloat",
+          label: "Lazy loading",
           values: [
             true,
-            { icon: false, note: "Heavier core" },
-            "~",
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Pro" },
             true,
             true,
-          ],
-        },
-        {
-          label: "Lazy loading built in",
-          values: [
-            true,
-            { icon: false, note: "Needs add-on" },
-            "~",
-            true,
-            true,
-          ],
-        },
-        {
-          label: "Page builder support (Elementor, Beaver, Divi, blocks)",
-          values: [true, "~", true, true, true],
-        },
-        {
-          label: "WordPress-native",
-          values: [true, true, true, true, true],
-        },
-      ],
-    },
-    {
-      title: "COMMERCE & SCALE",
-      rows: [
-        {
-          label: "WooCommerce integration",
-          values: [
-            true,
-            { icon: true, note: "Built-in commerce" },
-            { icon: true, note: "Requires WooCommerce" },
-            { icon: true, note: "Commerce tier" },
-            "~",
           ],
         },
         {
           label: "Bulk image processing",
-          values: [true, true, "~", "~", "~"],
+          values: [true, true, "~", { icon: true, note: "Pro" }, "~"],
+        },
+        {
+          label: "Elementor support",
+          values: [
+            true,
+            { icon: true, note: "Highest plan only" },
+            true,
+            true,
+            true,
+          ],
+        },
+        {
+          label: "Gutenberg support",
+          values: [true, true, true, true, true],
+        },
+        {
+          label: "WooCommerce integration",
+          values: [
+            { icon: true, note: "Pro" },
+            { icon: false, note: "eCommerce in highest plan only" },
+            { icon: true, note: "Highest plan only" },
+            { icon: true, note: "Highest plan only" },
+            "~",
+          ],
         },
       ],
     },
+
     {
-      title: "PRICING & ACCESS",
+      title: "PRICING",
       rows: [
         {
-          label: "Free version on WordPress.org",
+          label: "Free version available",
           values: [true, true, true, true, true],
         },
         {
-          label: "Transparent public pricing",
-          values: [true, true, true, true, true],
+          label: "Starting annual price",
+          values: ["$29.99", "~$69.50", "~$39.50", "~$33.99", "~$39.00"],
+        },
+        {
+          label: "AI included",
+          values: [true, false, false, false, false],
         },
       ],
     },
