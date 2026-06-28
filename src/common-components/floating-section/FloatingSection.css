@@ -45,9 +45,3 @@ section.floating-section {
 #ai-footer {
   background-color: var(--re-background-color-light);
 }
-
-#ai-page-multilingual {
-  .section-text__body {
-    margin-bottom: 0;
-  }
-}
