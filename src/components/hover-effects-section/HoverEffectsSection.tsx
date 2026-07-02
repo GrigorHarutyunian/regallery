@@ -36,6 +36,7 @@ const getDefaultCaptionPosition = (
   if (
     effect === HoverEffect.OVERLAY ||
     effect === HoverEffect.CIRCLE ||
+    effect === HoverEffect.PUSH ||
     hiddenCaptionEffects.includes(effect)
   ) {
     return "center";
@@ -97,7 +98,8 @@ const HoverEffectsSection: React.FC<SectionDTO> = ({ data }) => {
   const shouldShowPrimaryButton = primaryButton !== false;
   const customPrimaryButton =
     primaryButton && typeof primaryButton === "object" ? primaryButton : null;
-  const primaryButtonLink = customPrimaryButton?.primaryButtonLink ?? "/pricing";
+  const primaryButtonLink =
+    customPrimaryButton?.primaryButtonLink ?? "/pricing";
 
   const activeHoverEffect = useMemo(
     () =>

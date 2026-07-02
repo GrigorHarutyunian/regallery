@@ -54,6 +54,15 @@ const hoverData: SectionDTO["data"] = {
       captionPosition: "bottom",
     },
     {
+      value: "push",
+      label: "Push",
+      previewTitle: "Downward Reveal",
+      previewText:
+        "Slide the image down on hover to reveal the caption above a solid black background.",
+      captionDisplay: "hover",
+      captionPosition: "center",
+    },
+    {
       value: "rotate",
       label: "Rotate",
       previewTitle: "Dynamic Tilt",

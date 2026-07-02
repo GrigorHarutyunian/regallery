@@ -27,6 +27,13 @@
   width: 100%;
 }
 
+.hover-effects-section .section-image {
+  aspect-ratio: auto;
+  overflow: visible;
+  display: block;
+  height: auto;
+}
+
 .hover-effects-gallery__caption {
   text-align: left;
   position: absolute;
@@ -160,6 +167,7 @@
 .hover-effects-gallery__image-wrapper {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 660 / 380;
   border-radius: 15px;
   background: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
@@ -439,6 +447,23 @@
 .hover-effects-gallery__image-wrapper_circle:hover::before {
   opacity: 1;
   transform: translate(-50%, -50%) scale(9);
+}
+
+/* Push */
+.hover-effects-gallery__image-wrapper_push {
+  background-color: #000000;
+}
+
+.hover-effects-gallery__image-wrapper_push img,
+.hover-effects-gallery__image-wrapper_push video {
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+}
+
+.hover-effects-gallery__image-wrapper_push:hover img,
+.hover-effects-gallery__image-wrapper_push:hover video {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .hover-effects-gallery__image-wrapper_none:hover img,
