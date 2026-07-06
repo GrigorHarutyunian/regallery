@@ -55,11 +55,11 @@
     <!-- A/B testing -->
     <script>
       (function () {
-        const key = "abTest_v1";
+        const key = "abTest_v2";
         let variant = localStorage.getItem(key);
 
         if (!variant) {
-          variant = Math.random() < 0.5 ? "A" : "B";
+          variant = Math.random() < 0.5 ? "C" : "D";
           localStorage.setItem(key, variant);
         }
 
@@ -69,11 +69,11 @@
 
     <script>
       window.addEventListener("load", function () {
-        const variant = localStorage.getItem("abTest_v1");
+        const variant = localStorage.getItem("abTest_v2");
 
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: "ab_test_view_v1",
+          event: "ab_test_view_v2",
           experiment: "button_color_test",
           variant: variant,
         });

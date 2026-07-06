@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-:root {
+.ab-A {
   --re-primary-color: #ff5722;
   --re-secondary-color: #e3f2fd;
   --re-tertiary-color: #5c6bc0;
@@ -23,6 +23,26 @@ body {
 }
 
 .ab-B {
+  --re-primary-color: #6a3eff;
+  --re-secondary-color: #eef4ff;
+  --re-tertiary-color: #4c8bf5;
+  --re-button-radius: 8px;
+  --re-background-color-dark: #131b2e;
+  --re-background-color-light: #f2f3ff;
+  --re-background-color-light-dark: #283044;
+}
+
+:root {
+  --re-primary-color: #2540cc;
+  --re-secondary-color: #edf2ff;
+  --re-tertiary-color: #5b7cff;
+  --re-button-radius: 30px;
+  --re-background-color-dark: #000000;
+  --re-background-color-light: #eeeeee;
+  --re-background-color-light-dark: #1d1d1d;
+}
+
+.ab-D {
   --re-primary-color: #6a3eff;
   --re-secondary-color: #eef4ff;
   --re-tertiary-color: #4c8bf5;

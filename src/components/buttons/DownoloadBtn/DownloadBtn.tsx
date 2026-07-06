@@ -18,7 +18,7 @@ const DownloadBtn: React.FC<DownloadBtnProps> = ({
   const handleClick = () => {
     if (typeof window === "undefined") return;
 
-    const variant = window.localStorage.getItem("abTest_v1");
+    const variant = window.localStorage.getItem("abTest_v2");
     const trackingWindow = window as Window & {
       dataLayer?: Array<Record<string, unknown>>;
     };

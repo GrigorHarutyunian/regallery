@@ -46,7 +46,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
     trackingWindow.dataLayer.push({
       event: "conversion",
       experiment: "button_color_test",
-      variant: window.localStorage.getItem("abTest_v1"),
+      variant: window.localStorage.getItem("abTest_v2"),
     });
   };
 
