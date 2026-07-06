@@ -320,7 +320,7 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-hover-effects",
       label: "Hover Effects",
-      values: ["7", "17", "17", "17"],
+      values: ["8", "17", "17", "17"],
     },
     {
       id: "general-sorting",
@@ -443,6 +443,11 @@ export const plansComparisonHoverEffects: IPlansComparisonTableFeatureDTO[] = [
     values: [true, true, true, true],
   },
   {
+    id: "push",
+    label: "Push",
+    values: [true, true, true, true],
+  },
+  {
     id: "rotate",
     label: "Rotate",
     values: [true, true, true, true],
@@ -505,11 +510,6 @@ export const plansComparisonHoverEffects: IPlansComparisonTableFeatureDTO[] = [
   {
     id: "overlay-fullscreen-icon",
     label: "Overlay Fullscreen Icon",
-    values: [false, true, true, true],
-  },
-  {
-    id: "push",
-    label: "Push",
     values: [false, true, true, true],
   },
 ];
