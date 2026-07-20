@@ -1,4 +1,7 @@
 /* ── Shared gallery demo sections (match Features header/spacing) ── */
+.reacg-gallery-wrapper * {
+  font-family: inherit !important;
+}
 .gallery-demo-section {
   background: #0a0a11;
   color: #fff;
