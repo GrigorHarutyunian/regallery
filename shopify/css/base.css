@@ -95,6 +95,12 @@ body {
 }
 
 /* ── Sticky nav ── */
+#nav-mount {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+#nav-mount > nav,
 nav.sticky {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
