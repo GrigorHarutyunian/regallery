@@ -10,47 +10,50 @@
       name="description"
       content="The only Shopify gallery app with built-in AI that writes alt text, titles, and image descriptions for every product photo. Beautiful layouts. Zero manual SEO."
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.tailwindcss.com" defer></script>
+
     <script defer>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              canvas: "#0D0D14",
-              "canvas-card": "#13131F",
-              "canvas-border": "#1E1E2E",
-              violet: {
-                DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
-                soft: "var(--primary-soft)",
-                dim: "var(--primary-dim)",
-                glow: "var(--primary-glow)",
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                canvas: "#0D0D14",
+                "canvas-card": "#13131F",
+                "canvas-border": "#1E1E2E",
+                violet: {
+                  DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+                  soft: "var(--primary-soft)",
+                  dim: "var(--primary-dim)",
+                  glow: "var(--primary-glow)",
+                },
+                primary: {
+                  DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+                  soft: "var(--primary-soft)",
+                  dim: "var(--primary-dim)",
+                  light: "var(--primary-light)",
+                },
+                amber: { DEFAULT: "#F59E0B", soft: "#FEF3C7" },
+                green: { DEFAULT: "#22C55E", soft: "#DCFCE7" },
+                ink: "#0D0D14",
+                "ink-soft": "#64748B",
+                paper: "#FAFAFA",
               },
-              primary: {
-                DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
-                soft: "var(--primary-soft)",
-                dim: "var(--primary-dim)",
-                light: "var(--primary-light)",
+              fontFamily: {
+                sans: ['"Inter"', "system-ui", "sans-serif"],
               },
-              amber: { DEFAULT: "#F59E0B", soft: "#FEF3C7" },
-              green: { DEFAULT: "#22C55E", soft: "#DCFCE7" },
-              ink: "#0D0D14",
-              "ink-soft": "#64748B",
-              paper: "#FAFAFA",
-            },
-            fontFamily: {
-              sans: ['"Inter"', "system-ui", "sans-serif"],
-            },
-            borderRadius: {
-              lg: "var(--radius)",
-              xl: "var(--radius)",
-              "2xl": "var(--radius)",
-              "3xl": "var(--radius)",
-            },
-            maxWidth: {
-              "7xl": "var(--content-max)",
+              borderRadius: {
+                lg: "var(--radius)",
+                xl: "var(--radius)",
+                "2xl": "var(--radius)",
+                "3xl": "var(--radius)",
+              },
+              maxWidth: {
+                "7xl": "var(--content-max)",
+              },
             },
           },
         },
@@ -60,7 +63,10 @@
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link

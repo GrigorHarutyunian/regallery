@@ -8,42 +8,44 @@
       name="description"
       content="Terms of Service for the Re Gallery Shopify application."
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.tailwindcss.com" defer></script>
     <script defer>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              canvas: "#0D0D14",
-              "canvas-card": "#13131F",
-              "canvas-border": "#1E1E2E",
-              violet: {
-                DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
-                soft: "var(--primary-soft)",
-                dim: "var(--primary-dim)",
-                glow: "var(--primary-glow)",
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                canvas: "#0D0D14",
+                "canvas-card": "#13131F",
+                "canvas-border": "#1E1E2E",
+                violet: {
+                  DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+                  soft: "var(--primary-soft)",
+                  dim: "var(--primary-dim)",
+                  glow: "var(--primary-glow)",
+                },
+                primary: {
+                  DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+                  soft: "var(--primary-soft)",
+                  dim: "var(--primary-dim)",
+                  light: "var(--primary-light)",
+                },
               },
-              primary: {
-                DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
-                soft: "var(--primary-soft)",
-                dim: "var(--primary-dim)",
-                light: "var(--primary-light)",
+              fontFamily: {
+                sans: ['"Inter"', "system-ui", "sans-serif"],
               },
-            },
-            fontFamily: {
-              sans: ['"Inter"', "system-ui", "sans-serif"],
-            },
-            borderRadius: {
-              lg: "var(--radius)",
-              xl: "var(--radius)",
-              "2xl": "var(--radius)",
-              "3xl": "var(--radius)",
-            },
-            maxWidth: {
-              "7xl": "var(--content-max)",
+              borderRadius: {
+                lg: "var(--radius)",
+                xl: "var(--radius)",
+                "2xl": "var(--radius)",
+                "3xl": "var(--radius)",
+              },
+              maxWidth: {
+                "7xl": "var(--content-max)",
+              },
             },
           },
         },
@@ -53,7 +55,10 @@
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link
@@ -452,26 +457,7 @@
       </article>
     </main>
 
-    <footer class="bg-canvas border-t border-canvas-border py-10 mt-auto">
-      <div
-        class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4"
-      >
-        <div class="text-white/25 text-[12.5px]">
-          © 2026 Re Gallery. All rights reserved.
-        </div>
-        <div class="flex gap-6 text-white/25 text-[12.5px]">
-          <a
-            href="../privacy-policy/"
-            class="hover:text-white/50 transition-colors"
-            >Privacy Policy</a
-          >
-          <a
-            href="../terms-of-service/"
-            class="hover:text-white/50 transition-colors"
-            >Terms of Service</a
-          >
-        </div>
-      </div>
-    </footer>
+    <div id="footer-mount" data-base="../"></div>
+    <script type="module" src="../js/footer.js"></script>
   </body>
 </html>
