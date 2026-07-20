@@ -136,9 +136,6 @@ nav.sticky {
   background: #fff;
   color: #0d0d14;
 }
-.section-dim {
-  background: #0a0a11;
-}
 
 /* ── Mobile nav ── */
 #mobile-menu {
@@ -171,4 +168,17 @@ nav.sticky {
   .nav-brand-tag {
     display: inline;
   }
+}
+
+/* ── Footer social icons ── */
+.footer-social-icon {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.2s ease;
+}
+.footer-social-icon:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.footer-social-icon svg {
+  display: block;
 }
