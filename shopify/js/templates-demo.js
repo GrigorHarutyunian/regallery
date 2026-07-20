@@ -39,8 +39,8 @@ function renderTemplates() {
             href="https://regallery.team/core/demo/"
             target="_blank"
             rel="noopener noreferrer"
-            title="View more"
-            aria-label="View more"
+            title="View more gallery templates"
+            aria-label="View more gallery templates"
           >${ARROW_ICON}</a>
         </p>
       </div>

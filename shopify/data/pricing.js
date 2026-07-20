@@ -1,5 +1,3 @@
-import { APP_URL } from "./shared.js";
-
 export const pricingData = {
   title: "AI included. Every plan.",
   description:
@@ -8,7 +6,7 @@ export const pricingData = {
     "Each AI generation = one field written for one image (title, alt text, caption, or description). Allowance resets monthly.",
   saveNoteAccent: "Save up to 29%",
   trialLabel: "Start 7-day free trial",
-  appUrl: APP_URL,
+  appUrl: "https://apps.shopify.com/re-gallery",
   prices: {
     monthly: {
       amounts: ["5.99", "12.99", "24.99"],

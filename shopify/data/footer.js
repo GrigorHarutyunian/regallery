@@ -1,5 +1,3 @@
-import { APP_URL, DEMO_URL } from "./shared.js";
-
 export const footerData = {
   brand: "Re Gallery",
   logo: "./assets/logo.webp",
@@ -7,7 +5,7 @@ export const footerData = {
     "The only Shopify gallery app with built-in AI image SEO. Beautiful galleries. Zero manual alt text.",
   shopifyApp: {
     label: "Shopify App→",
-    href: APP_URL,
+    href: "https://apps.shopify.com/re-gallery",
   },
   socials: [
     {
@@ -57,14 +55,18 @@ export const footerData = {
       links: [
         { label: "AI Features", href: "#features" },
         { label: "Gallery Layouts", href: "#layouts" },
-        { label: "Demo", href: DEMO_URL, external: true },
+        { label: "Demo", href: "https://regallery.team/core/demo/", external: true },
         { label: "Pricing", href: "#pricing" },
       ],
     },
     {
       title: "Support",
       links: [
-        { label: "Support forum", href: APP_URL, external: true },
+        {
+          label: "Support forum",
+          href: "https://apps.shopify.com/re-gallery",
+          external: true,
+        },
         { label: "FAQ", href: "#faq" },
       ],
     },

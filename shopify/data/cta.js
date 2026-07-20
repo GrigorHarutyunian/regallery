@@ -1,5 +1,3 @@
-import { APP_URL } from "./shared.js";
-
 export const ctaData = {
   eyebrow: "Free 7-day trial",
   title: "Stop leaving your product<br />photos invisible to Google.",
@@ -7,7 +5,7 @@ export const ctaData = {
     "Install Re Gallery, run bulk AI on your product photos, and have every image SEO-ready before your next coffee.",
   primaryCta: {
     label: "Install for Free",
-    href: APP_URL,
+    href: "https://apps.shopify.com/re-gallery",
     external: true,
   },
   secondaryCta: {

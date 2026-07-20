@@ -1,5 +1,3 @@
-import { APP_URL } from "./shared.js";
-
 export const heroData = {
   eyebrow: "The only Shopify gallery app with built-in AI image SEO",
   headline: {
@@ -11,7 +9,7 @@ export const heroData = {
     "Re Gallery adds AI-generated alt text, titles, and image descriptions to every Shopify product photo — automatically, in your store's language — while giving you beautiful, conversion-focused gallery layouts.",
   primaryCta: {
     label: "Install for Free",
-    href: APP_URL,
+    href: "https://apps.shopify.com/re-gallery",
     external: true,
   },
   secondaryCta: {

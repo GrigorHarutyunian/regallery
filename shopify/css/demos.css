@@ -51,10 +51,11 @@
   vertical-align: middle;
   margin-left: 8px;
 }
-.gallery-demo-section .demo_section_desc a svg {
-  width: 28px;
-  height: 28px;
+.demo-arrow-icon {
+  width: 32px;
+  height: 32px;
   vertical-align: middle;
+  display: inline-block;
 }
 .gallery-demo-section .demo_live_container {
   width: 100%;
@@ -188,10 +189,6 @@
   }
 }
 @media screen and (max-width: 680px) {
-  .gallery-demo-section .demo_section_desc a svg {
-    height: 24px;
-    width: 24px;
-  }
   .responsive_live_container.viewport-tablet .reacg-gallery {
     max-width: 100%;
   }

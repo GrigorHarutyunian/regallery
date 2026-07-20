@@ -47,14 +47,14 @@ function renderNav() {
         <a href="./" class="flex items-center gap-1.5 min-w-0 shrink">
           <img
             src="${menuData.logo}"
-            alt="${menuData.brand}"
+            alt="AI gallery app for Shopify with image SEO"
             width="36"
             height="36"
             class="w-9 h-9 shrink-0"
           />
           <span class="font-bold text-white text-[15px] tracking-tight truncate"
             >${menuData.brand}
-            <span class="nav-brand-tag text-white/40 font-normal">
+            <span class="nav-brand-tag text-white/70 font-normal">
               ${menuData.brandTag}</span
             ></span
           >
@@ -131,7 +131,7 @@ function renderHero() {
     .map(
       (field) => `
               <div>
-                <div class="text-white/30 text-[11px] mb-1">${field.label}</div>
+                <div class="text-white/65 text-[11px] mb-1">${field.label}</div>
                 <div
                   class="bg-white/5 border border-white/8 rounded-lg h-9 flex items-center px-3"
                 >
@@ -154,7 +154,7 @@ function renderHero() {
                       fill="#F59E0B"
                     />
                   </svg>
-                  <span class="text-white/40 text-[11px]">${field.label}</span>
+                  <span class="text-white/70 text-[11px]">${field.label}</span>
                 </div>
                 <div
                   class="bg-green-DEFAULT/8 border border-green-DEFAULT/20 rounded-lg px-3 py-2"
@@ -262,7 +262,7 @@ function renderHero() {
             <div class="flex items-center gap-2 mb-4">
               <div class="w-2 h-2 rounded-full bg-red-400"></div>
               <span
-                class="text-white/40 text-xs font-medium uppercase tracking-widest"
+                class="text-white/70 text-xs font-medium uppercase tracking-widest"
                 >${beforeCard.label}</span
               >
             </div>
@@ -480,9 +480,9 @@ function renderFeatures() {
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold text-[16px] mb-1.5">
+                <h3 class="text-white font-semibold text-[16px] mb-1.5">
                   ${card.title}
-                </h4>
+                </h3>
                 <p class="text-white/45 text-[13.5px] leading-relaxed">
                   ${card.text}
                 </p>
@@ -586,9 +586,9 @@ function renderWhy() {
                 ${pathHtml}
               </svg>
             </div>
-            <h4 class="text-white font-bold text-[17px] mb-2">
+            <h3 class="text-white font-bold text-[17px] mb-2">
               ${item.title}
-            </h4>
+            </h3>
             <p class="text-white/45 text-[14px] leading-relaxed">
               ${item.text}
             </p>
@@ -918,7 +918,7 @@ function renderFooter() {
             >
               ${col.title}
             </div>
-            <ul class="space-y-3 text-[13.5px] text-white/40">
+            <ul class="space-y-3 text-[13.5px] text-white/65">
               ${links}
             </ul>
           </div>`;
@@ -930,7 +930,7 @@ function renderFooter() {
       (link) => `
             <a
               href="${link.href}"
-              class="hover:text-white/50 transition-colors"
+              class="hover:text-white transition-colors"
               >${link.label}</a
             >`,
     )
@@ -944,7 +944,7 @@ function renderFooter() {
             <a href="./" class="flex items-center gap-1.5 mb-4">
               <img
                 src="${footerData.logo}"
-                alt="${footerData.brand}"
+                alt="AI gallery app for Shopify with image SEO"
                 width="36"
                 height="36"
                 class="w-9 h-9"
@@ -952,14 +952,14 @@ function renderFooter() {
               <span class="font-bold text-white text-[15px]">${footerData.brand}</span>
             </a>
             <p
-              class="text-white/35 text-[13.5px] leading-relaxed mb-5 max-w-xs"
+              class="text-white/70 text-[13.5px] leading-relaxed mb-5 max-w-xs"
             >
               ${footerData.blurb}
             </p>
             <div class="flex gap-4 mb-5">
               <a
                 ${linkAttrs(footerData.shopifyApp.href, true)}
-                class="text-white/30 hover:text-white/60 transition-colors text-[13px]"
+                class="text-white/65 hover:text-white/90 transition-colors text-[13px]"
                 >${footerData.shopifyApp.label}</a
               >
             </div>
@@ -975,10 +975,10 @@ function renderFooter() {
         <div
           class="border-t border-canvas-border pt-7 flex flex-col md:flex-row items-center justify-between gap-4"
         >
-          <div class="text-white/25 text-[12.5px]">
+          <div class="text-white/65 text-[12.5px]">
             ${footerData.copyright}
           </div>
-          <div class="flex gap-6 text-white/25 text-[12.5px]">
+          <div class="flex gap-6 text-white/65 text-[12.5px]">
             ${legal}
           </div>
         </div>

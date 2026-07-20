@@ -20,7 +20,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--primary-on-light);
 }
 .hover-effects-section__row {
   display: flex;
@@ -59,13 +59,13 @@
   gap: 16px;
 }
 .hover-effects-section__secondary {
-  color: var(--primary);
+  color: var(--primary-on-light);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .hover-effects-section__secondary:hover {
-  color: var(--primary-light);
+  color: #312e81;
 }
 @media screen and (max-width: 900px) {
   .hover-effects-section__row {

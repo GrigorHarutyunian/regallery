@@ -8,8 +8,11 @@
       name="description"
       content="Privacy Policy for the Re Gallery Shopify application — how we collect, use, and protect information."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script defer>
       tailwind.config = {
         theme: {
           extend: {
@@ -46,12 +49,18 @@
         },
       };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="../css/shopify.css" />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/legal.css" />
   </head>
   <body class="legal-page">
@@ -65,14 +74,14 @@
         <a href="../" class="flex items-center gap-1.5 min-w-0 shrink">
           <img
             src="../assets/logo.webp"
-            alt="Re Gallery"
+            alt="AI gallery app for Shopify with image SEO"
             width="36"
             height="36"
             class="w-9 h-9 shrink-0"
           />
           <span class="font-bold text-white text-[15px] tracking-tight truncate"
             >Re Gallery
-            <span class="nav-brand-tag text-white/40 font-normal">
+            <span class="nav-brand-tag text-white/70 font-normal">
               for Shopify</span
             ></span
           >

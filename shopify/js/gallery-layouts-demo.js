@@ -22,7 +22,12 @@ function selectLayout(idView) {
   const description = section.querySelector("[data-layout-description]");
   const demoLink = section.querySelector("[data-layout-demo-link]");
   if (description) description.textContent = layout.description;
-  if (demoLink) demoLink.href = layout.demoPath;
+  if (demoLink) {
+    const label = `View more about ${layout.title} layout`;
+    demoLink.href = layout.demoPath;
+    demoLink.setAttribute("aria-label", label);
+    demoLink.setAttribute("title", label);
+  }
 
   section.querySelectorAll(".reacg-gallery").forEach((gallery) => {
     const isActive = Number(gallery.dataset.galleryId) === idView;
@@ -66,8 +71,8 @@ function renderGalleryLayouts() {
             href="${defaultLayout.demoPath}"
             target="_blank"
             rel="noopener noreferrer"
-            title="View more"
-            aria-label="View more"
+            title="View more about ${defaultLayout.title} layout"
+            aria-label="View more about ${defaultLayout.title} layout"
             data-layout-demo-link
           >${ARROW_ICON}</a>
         </p>

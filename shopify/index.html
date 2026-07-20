@@ -10,8 +10,11 @@
       name="description"
       content="The only Shopify gallery app with built-in AI that writes alt text, titles, and image descriptions for every product photo. Beautiful layouts. Zero manual SEO."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script defer>
       tailwind.config = {
         theme: {
           extend: {
@@ -53,54 +56,64 @@
         },
       };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="./css/shopify.css" />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    /></noscript>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/demos.css" />
+    <link rel="stylesheet" href="./css/layouts.css" />
+    <link rel="stylesheet" href="./css/hover.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/pricing.css" />
   </head>
   <body>
     <div id="nav-mount"></div>
-    <section id="hero" class="relative overflow-hidden">
-      <div id="hero-mount"></div>
-    </section>
-    <section id="layouts" class="gallery-layouts-section">
-      <div id="layouts-mount"></div>
-    </section>
-    <section id="problem" class="section-paper py-24">
-      <div id="problem-mount"></div>
-    </section>
-    <section id="features" class="section-dim py-24">
-      <div id="features-mount"></div>
-    </section>
-    <section id="template_library" class="gallery-demo-section">
-      <div id="template-library-mount"></div>
-    </section>
-    <section id="why" class="section-dim py-24">
-      <div id="why-mount"></div>
-    </section>
-    <section id="lightbox_showcase" class="gallery-demo-section">
-      <div id="lightbox-showcase-mount"></div>
-    </section>
-    <section id="hover" class="hover-effects-section">
-      <div id="hover-mount"></div>
-    </section>
-    <section id="pricing" class="pricing-section-dark">
-      <div id="pricing-mount"></div>
-    </section>
-    <section id="faq" class="section-paper py-24">
-      <div id="faq-mount"></div>
-    </section>
-    <section id="cta" class="section-dim py-24">
-      <div id="cta-mount"></div>
-    </section>
+    <main>
+      <section id="hero" class="relative overflow-hidden">
+        <div id="hero-mount"></div>
+      </section>
+      <section id="layouts" class="gallery-layouts-section">
+        <div id="layouts-mount"></div>
+      </section>
+      <section id="problem" class="section-paper py-24">
+        <div id="problem-mount"></div>
+      </section>
+      <section id="features" class="section-dim py-24">
+        <div id="features-mount"></div>
+      </section>
+      <section id="template_library" class="gallery-demo-section">
+        <div id="template-library-mount"></div>
+      </section>
+      <section id="why" class="section-dim py-24">
+        <div id="why-mount"></div>
+      </section>
+      <section id="lightbox_showcase" class="gallery-demo-section">
+        <div id="lightbox-showcase-mount"></div>
+      </section>
+      <section id="hover" class="hover-effects-section">
+        <div id="hover-mount"></div>
+      </section>
+      <section id="pricing" class="pricing-section-dark">
+        <div id="pricing-mount"></div>
+      </section>
+      <section id="faq" class="section-paper py-24">
+        <div id="faq-mount"></div>
+      </section>
+      <section id="cta" class="section-dim py-24">
+        <div id="cta-mount"></div>
+      </section>
+    </main>
     <div id="footer-mount"></div>
 
     <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/gallery-layouts-demo.js"></script>
-    <script type="module" src="./js/templates-demo.js"></script>
-    <script type="module" src="./js/lightbox-demo.js"></script>
-    <script type="module" src="./js/hover-demo.js"></script>
+    <script type="module" src="./js/demos-loader.js"></script>
   </body>
 </html>

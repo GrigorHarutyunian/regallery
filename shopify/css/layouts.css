@@ -92,7 +92,7 @@
 }
 #layouts .demo_description a {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-left: 10px;
 }
 @media screen and (max-width: 1160px) {
@@ -121,11 +121,6 @@
     font-size: 0.9rem;
     line-height: 1.8rem;
     margin-top: 10px;
-  }
-  #layouts .demo_description a svg {
-    height: 34px;
-    width: 34px;
-    vertical-align: middle;
   }
   #layouts .demo_button span {
     font-size: 16px;

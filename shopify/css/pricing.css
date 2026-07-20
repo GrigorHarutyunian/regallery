@@ -201,7 +201,7 @@
 }
 #pricing .pricing__billing-toggle-btn.is-active {
   background: #fff;
-  color: var(--primary);
+  color: var(--primary-on-light);
   box-shadow: 0 8px 24px rgb(var(--primary-rgb) / 0.25);
 }
 #pricing .pricing__billing-toggle-note {
@@ -336,7 +336,7 @@
 }
 #pricing .pricing__footnote {
   text-align: center;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   margin: 28px auto 0;
   max-width: 560px;
