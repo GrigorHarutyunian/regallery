@@ -7,6 +7,7 @@ import { pricingData } from "../data/pricing.js";
 import { faqData } from "../data/faq.js";
 import { ctaData } from "../data/cta.js";
 import "./footer.js";
+import { getWatchIntroIcon, openVideoModal } from "./video-modal.js";
 
 function extAttrs(external) {
   return external ? ' target="_blank" rel="noopener noreferrer"' : "";
@@ -247,12 +248,15 @@ function renderHero() {
           >
             ${heroData.primaryCta.label}
           </a>
-          <a
-            href="${heroData.secondaryCta.href}"
-            class="bg-white/8 hover:bg-white/12 border border-white/12 text-white font-semibold text-[15px] px-8 py-3.5 rounded-xl transition-colors w-full sm:w-auto text-center"
+          <button
+            type="button"
+            class="hero-watch-intro bg-white/8 hover:bg-white/12 border border-white/12 text-white font-semibold text-[15px] px-8 py-3.5 rounded-xl transition-colors w-full sm:w-auto text-center"
+            data-watch-intro
+            data-video-id="${heroData.secondaryCta.videoId}"
           >
+            ${getWatchIntroIcon()}
             ${heroData.secondaryCta.label}
-          </a>
+          </button>
         </div>
 
         <div class="grid md:grid-cols-2 gap-[var(--card-gap)]">
@@ -375,6 +379,10 @@ function renderHero() {
         </div>
       </div>
   `;
+
+  mount.querySelector("[data-watch-intro]")?.addEventListener("click", () => {
+    openVideoModal(heroData.secondaryCta.videoId);
+  });
 }
 
 function renderProblem() {

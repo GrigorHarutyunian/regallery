@@ -13,8 +13,8 @@ export const heroData = {
     external: true,
   },
   secondaryCta: {
-    label: "See how it works ↓",
-    href: "#features",
+    label: "Watch Intro",
+    videoId: "98fZbFEN12I",
   },
   image: {
     src: "./assets/hero/product-photo-768.webp",
