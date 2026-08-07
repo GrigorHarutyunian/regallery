@@ -1,4 +1,5 @@
 import { footerData } from "../data/footer.js";
+import { initComingSoonModal } from "./coming-soon-modal.js";
 
 function extAttrs(external) {
   return external ? ' target="_blank" rel="noopener noreferrer"' : "";
@@ -161,3 +162,6 @@ export function renderFooter() {
 }
 
 renderFooter();
+const footerMount = document.getElementById("footer-mount");
+const base = footerMount ? (footerMount.dataset.base || "./") : "./";
+initComingSoonModal(base);

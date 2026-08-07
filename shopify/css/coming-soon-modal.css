@@ -1,0 +1,21 @@
+.coming-soon-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-modal[hidden] {
+  display: none;
+}
+
+.coming-soon-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
