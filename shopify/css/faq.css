@@ -1,0 +1,81 @@
+/* ── FAQ (matches main site Faq section) ── */
+#faq .section-text__title-centered {
+  text-align: center;
+  margin: 0 auto 40px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+}
+#faq .section-text__title-small {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: #000000;
+  text-align: left;
+}
+#faq .section-text__desc {
+  color: #000000aa;
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: start;
+}
+#faq .grid {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: var(--card-gap);
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+#faq .grid__2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#faq .grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 5px 10px 20px 0 lightgrey;
+  transition: all 0.5s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+#faq .grid-item:hover {
+  box-shadow: 0 10px 30px #858585;
+  transform: translateY(-5px);
+}
+#faq .grid-item__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+#faq .grid-item__header svg {
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  fill: var(--primary);
+}
+@media screen and (max-width: 1024px) {
+  #faq .grid__2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 840px;
+  }
+}
+@media screen and (max-width: 865px) {
+  #faq .section-text__title-centered {
+    font-size: 37px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 860px) {
+  #faq .grid__2 {
+    grid-template-columns: 1fr;
+  }
+}

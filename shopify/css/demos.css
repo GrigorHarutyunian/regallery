@@ -1,0 +1,198 @@
+/* ── Shared gallery demo sections (match Features header/spacing) ── */
+.reacg-gallery-wrapper * {
+  font-family: inherit !important;
+}
+.gallery-demo-section {
+  background: #0a0a11;
+  color: #fff;
+  padding: 6rem 0; /* py-24 */
+}
+.gallery-demo-section .demo_columns_content {
+  min-width: 0;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 1.25rem; /* px-5 */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.gallery-demo-section .demo_section_header {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 4rem; /* mb-16 like Features */
+}
+.gallery-demo-section .demo_section_eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+.gallery-demo-section .demo_section_title {
+  margin: 0 0 1rem;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  color: #fff;
+}
+.gallery-demo-section .demo_section_desc {
+  margin: 0 auto;
+  max-width: 36rem; /* max-w-xl */
+  color: rgb(255 255 255 / 0.5);
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75;
+}
+.gallery-demo-section .demo_section_desc a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.demo-arrow-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.gallery-demo-section .demo_live_container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-demo-section .reacg-gallery {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.gallery-demo-section .reacg-gallery.hidden {
+  visibility: hidden;
+  position: absolute;
+  right: -2000px;
+  width: 100%;
+}
+
+/* Template dots */
+.templates_button {
+  cursor: pointer;
+  align-items: center;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.templates_button_dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff91;
+  transition: all 0.3s ease;
+}
+.templates_button:hover .templates_button_dot,
+.demo_selectedButton .templates_button_dot {
+  background: #ffffffff;
+  transform: scale(1.2);
+}
+.templates_buttons_rows {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0 0 2.5rem;
+  gap: 20px;
+}
+
+/* Responsive viewport controls */
+.responsive_viewport_controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 0 2.5rem;
+}
+.responsive_viewport_button {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.responsive_viewport_button svg {
+  width: 70px;
+  height: 70px;
+}
+.responsive_viewport_button svg path {
+  fill: #ffffff91;
+  transition: fill 0.25s ease;
+}
+.responsive_viewport_button.demo_selectedButton svg path {
+  fill: #ffffffff;
+}
+.responsive_viewport_button span {
+  color: #ffffff91;
+  font-size: 1.4rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+.responsive_viewport_button:hover span,
+.responsive_viewport_button.demo_selectedButton span {
+  transform: translateY(0);
+  opacity: 1;
+}
+.responsive_viewport_button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.responsive_viewport_button:disabled svg path {
+  fill: #ffffff4d;
+}
+.responsive_viewport_button:disabled:hover span {
+  opacity: 0;
+  transform: translateY(5px);
+}
+.responsive_viewport_button.demo_selectedButton span {
+  color: #ffffffff;
+}
+.responsive_live_container {
+  align-items: center;
+}
+.responsive_live_container .reacg-gallery {
+  width: 100%;
+  margin: 0 auto;
+  transition: max-width 0.3s ease;
+}
+.responsive_live_container.viewport-desktop {
+  max-width: 100%;
+}
+.responsive_live_container.viewport-tablet {
+  max-width: 860px;
+}
+.responsive_live_container.viewport-mobile {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1160px) {
+  .responsive_viewport_button svg {
+    width: 60px;
+    height: 60px;
+  }
+  .responsive_viewport_button span {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .responsive_live_container.viewport-tablet .reacg-gallery {
+    max-width: 100%;
+  }
+  .responsive_live_container.viewport-mobile .reacg-gallery {
+    max-width: min(430px, 100%);
+  }
+}
