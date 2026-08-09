@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
-const shopifyDir = path.resolve(rootDir, "shopify");
+const shopifyDir = path.resolve(rootDir, "shop-app");
 
 const CONTENT_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -30,7 +30,7 @@ function shopifyStaticPlugin() {
     const [pathname, query = ""] = url.split("?");
     const querySuffix = query ? `?${query}` : "";
 
-    const prefixes = ["/regallery/shopify", "/shopify"];
+    const prefixes = ["/regallery/shop-app", "/shop-app"];
     const prefix = prefixes.find(
       (item) => pathname === item || pathname.startsWith(`${item}/`),
     );
@@ -84,7 +84,7 @@ function shopifyStaticPlugin() {
     },
     closeBundle() {
       if (!existsSync(shopifyDir)) return;
-      cpSync(shopifyDir, path.resolve(rootDir, "dist/shopify"), {
+      cpSync(shopifyDir, path.resolve(rootDir, "dist/shop-app"), {
         recursive: true,
       });
     },
