@@ -40,7 +40,6 @@ function renderLightbox() {
   `;
 
   loadGalleryScriptsOnInteraction(["#lightbox_showcase"]);
-  loadGalleryScripts();
 }
 
 renderLightbox();

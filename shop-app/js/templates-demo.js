@@ -5,7 +5,7 @@ import {
   loadGalleryScriptsOnInteraction,
 } from "./gallery-scripts.js";
 
-function selectTemplate(section, idView) {
+function selectTemplate(section, idView, reloadScripts = true) {
   section.querySelectorAll(".templates_button").forEach((button) => {
     const selected = Number(button.dataset.idView) === idView;
     button.classList.toggle("demo_selectedButton", selected);
@@ -18,7 +18,9 @@ function selectTemplate(section, idView) {
     gallery.classList.toggle("hidden", !isActive);
   });
 
-  loadGalleryScripts();
+  if (reloadScripts) {
+    loadGalleryScripts();
+  }
 }
 
 function renderTemplates() {
@@ -89,7 +91,7 @@ function renderTemplates() {
   });
 
   loadGalleryScriptsOnInteraction(["#template_library"]);
-  selectTemplate(section, defaultId);
+  selectTemplate(section, defaultId, false);
 }
 
 renderTemplates();
