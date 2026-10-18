@@ -3,10 +3,6 @@ const TEMPLATES_API_URL = `https://regallery.team/core/wp-json/reacgcore/v3/temp
 const CACHE_KEY = "reacg_templates_count_v3";
 const COUNT_STEP = 5;
 
-// Templates that exist but are not returned by the endpoint (the Album
-// template).
-const EXTRA_TEMPLATES_COUNT = 1;
-
 // Shown until the endpoint responds (or if it is unreachable).
 const FALLBACK_COUNT = 65;
 
@@ -46,7 +42,7 @@ export function fetchTemplatesCount() {
         if (!Array.isArray(data) || data.length === 0) {
           throw new Error("Templates response is empty");
         }
-        const count = data.length + EXTRA_TEMPLATES_COUNT;
+        const count = data.length;
         writeCache(count);
         return count;
       })
