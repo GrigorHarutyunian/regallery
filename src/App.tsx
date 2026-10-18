@@ -5,6 +5,7 @@ import Navbar from "./components/navbar/Navbar";
 import TopBanner from "./components/TopBanner/TopBanner";
 import InteractiveAIIcon from "./components/interactive-aI-icon/InteractiveAIIcon";
 import { DemoProvider } from "./contexts/DemoContext";
+import { TemplatesProvider } from "./contexts/TemplatesContext";
 import { WindowWidthProvider } from "./contexts/WindowWidthContext";
 import addScriptsToBody from "./common-components/addScriptsToBody";
 import scrollToTarget from "./common-components/scrollToTarget";
@@ -213,37 +214,39 @@ const App: React.FC = () => {
   }, [currentPath, isPricingPage]);
 
   return (
-    <DemoProvider>
-      <WindowWidthProvider>
-        <ProVersionActivatorProvider>
-          <TrialModalProvider>
-            <Navbar />
-            <TopBanner />
-            <TrialModal />
-            <main
-              className={`${isPricingPage ? "pricing-page" : ""} ${
-                localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
-              }`.trim()}
-            >
-              {isPricingPage ? (
-                <PricingPage
-                  billingPeriod={billingPeriod}
-                  setBillingPeriod={setBillingPeriod}
-                />
-              ) : isAiPage ? (
-                <AiPage />
-              ) : (
-                <HomePage />
-              )}
-            </main>
-            <Footer />
-            <ProVersionActivator />
-            <Sale />
-          </TrialModalProvider>
-        </ProVersionActivatorProvider>
-        <InteractiveAIIcon />
-      </WindowWidthProvider>
-    </DemoProvider>
+    <TemplatesProvider>
+      <DemoProvider>
+        <WindowWidthProvider>
+          <ProVersionActivatorProvider>
+            <TrialModalProvider>
+              <Navbar />
+              <TopBanner />
+              <TrialModal />
+              <main
+                className={`${isPricingPage ? "pricing-page" : ""} ${
+                  localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
+                }`.trim()}
+              >
+                {isPricingPage ? (
+                  <PricingPage
+                    billingPeriod={billingPeriod}
+                    setBillingPeriod={setBillingPeriod}
+                  />
+                ) : isAiPage ? (
+                  <AiPage />
+                ) : (
+                  <HomePage />
+                )}
+              </main>
+              <Footer />
+              <ProVersionActivator />
+              <Sale />
+            </TrialModalProvider>
+          </ProVersionActivatorProvider>
+          <InteractiveAIIcon />
+        </WindowWidthProvider>
+      </DemoProvider>
+    </TemplatesProvider>
   );
 };
 

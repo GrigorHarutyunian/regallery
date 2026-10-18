@@ -5,11 +5,9 @@ import image1024 from "../assets/sections/options-1024x588.webp";
 import image1280 from "../assets/sections/options-1280x735.webp";
 import image1500 from "../assets/sections/options-1500x862.webp";
 import image1880 from "../assets/sections/options-1880x1080.webp";
-import { allTemplates } from "../components/views/views-data-subMenu";
 import { dataDemo } from "../components/demo/demo-data";
-import { formatCountByStep } from "../utils/formatCountByStep";
+import TemplatesCount from "../components/templates-count/TemplatesCount";
 
-const allTemplatesCount = formatCountByStep(allTemplates.length);
 const allLayoutsCount = dataDemo.length;
 
 const infoData = {
@@ -23,9 +21,12 @@ const infoData = {
       same way: change a watermark position, toggle a title, drag a spacing
       slider, and the real-time preview shows it instantly — no guessing, no
       re-publishing. Choose from <b>{allLayoutsCount} responsive layouts</b> and{" "}
-      <b>{allTemplatesCount} templates</b>, drop your gallery into any page
-      builder, even build full landing pages. All of it, including the AI, lives
-      in one lightweight plugin — not a gallery plugin plus a separate SEO tool.
+      <b>
+        <TemplatesCount /> templates
+      </b>
+      , drop your gallery into any page builder, even build full landing pages.
+      All of it, including the AI, lives in one lightweight plugin — not a
+      gallery plugin plus a separate SEO tool.
     </>
   ),
   img: image1880,

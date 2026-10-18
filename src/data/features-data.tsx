@@ -1,6 +1,4 @@
-const allTemplatesCount = formatCountByStep(allTemplates.length);
-import { allTemplates } from "../components/views/views-data-subMenu";
-import { formatCountByStep } from "../utils/formatCountByStep";
+import TemplatesCount from "../components/templates-count/TemplatesCount";
 
 export const featuresData = {
   id: "features",
@@ -38,7 +36,11 @@ export const featuresData = {
       ),
     },
     {
-      title: `${allTemplatesCount} Templates`,
+      title: (
+        <>
+          <TemplatesCount /> Templates
+        </>
+      ),
       description:
         "Create eye-catching galleries in seconds. Choose from professionally designed templates that adapt to your content, style, and layout needs - no design skills required.",
       path: (

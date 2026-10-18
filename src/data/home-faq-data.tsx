@@ -1,3 +1,5 @@
+import TemplatesCount from "../components/templates-count/TemplatesCount";
+
 export const homeFaqData = {
   id: "faq",
   className: "faq-section",
@@ -9,9 +11,9 @@ export const homeFaqData = {
         <>
           Re&nbsp;Gallery combines gallery design, image SEO, and AI automation
           in one plugin. While most gallery plugins focus on displaying images,
-          Re&nbsp;Gallery helps you create galleries faster with 11 layouts, 55+
-          templates, dynamic galleries, WooCommerce support, and AI-generated
-          image metadata.
+          Re&nbsp;Gallery helps you create galleries faster with 11 layouts,{" "}
+          <TemplatesCount /> templates, dynamic galleries, WooCommerce support,
+          and AI-generated image metadata.
         </>
       ),
       path: (

@@ -1,3 +1,5 @@
+import { templatesCountHtml } from "../js/templates-count.js";
+
 export const pricingData = {
   title: "AI included. Every plan.",
   description:
@@ -43,7 +45,7 @@ export const pricingData = {
       ctaLabel: "Get Basic",
       features: [
         "11 Gallery Layouts",
-        "55+ Pre-Designed Templates",
+        `${templatesCountHtml()} Pre-Designed Templates`,
         "Template Library",
         "AI alt text, titles, captions &amp; descriptions",
         "Watermarking",
@@ -68,7 +70,7 @@ export const pricingData = {
       ctaLabel: "Get Plus",
       features: [
         "11 Gallery Layouts",
-        "55+ Pre-Designed Templates",
+        `${templatesCountHtml()} Pre-Designed Templates`,
         "Template Library",
         "AI alt text, titles, captions &amp; descriptions",
         "Watermarking",
@@ -94,7 +96,7 @@ export const pricingData = {
       ctaLabel: "Get Agency",
       features: [
         "11 Gallery Layouts",
-        "55+ Pre-Designed Templates",
+        `${templatesCountHtml()} Pre-Designed Templates`,
         "Template Library",
         "AI alt text, titles, captions &amp; descriptions",
         "Watermarking",

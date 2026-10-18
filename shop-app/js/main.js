@@ -8,6 +8,7 @@ import { faqData } from "../data/faq.js";
 import { ctaData } from "../data/cta.js";
 import "./footer.js";
 import { getWatchIntroIcon, openVideoModal } from "./video-modal.js";
+import { applyTemplatesCount } from "./templates-count.js";
 
 function extAttrs(external) {
   return external ? ' target="_blank" rel="noopener noreferrer"' : "";
@@ -945,6 +946,7 @@ function init() {
   initMobileNav();
   initPricingToggle();
   initSmoothScroll();
+  applyTemplatesCount();
 }
 
 init();

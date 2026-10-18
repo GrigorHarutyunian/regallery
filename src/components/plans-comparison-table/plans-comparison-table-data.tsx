@@ -1,11 +1,6 @@
 import { IPlansComparisonTableFeatureDTO } from "../../types/PlansComparisonDTO ";
-import { formatCountByStep } from "../../utils/formatCountByStep";
-import { allTemplates } from "../views/views-data-subMenu";
-
-const freeTemplatesCount = formatCountByStep(
-  allTemplates.filter((template) => !template.pro).length,
-);
-const allTemplatesCount = formatCountByStep(allTemplates.length);
+import { TemplateDTO } from "../../types/TemplateDTO";
+import TemplatesCount from "../templates-count/TemplatesCount";
 
 export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
   {
@@ -233,12 +228,14 @@ export const plansComparisonTextMetadata: IPlansComparisonTableFeatureDTO[] = [
   },
 ];
 
-export const plansComparisonTemplates: IPlansComparisonTableFeatureDTO[] =
-  allTemplates.map((subItem, index) => ({
-    id: `template-${index}`,
-    label: subItem.title,
-    values: [!subItem.pro, true, true, true],
-    href: subItem.path,
+export const getPlansComparisonTemplates = (
+  templates: TemplateDTO[],
+): IPlansComparisonTableFeatureDTO[] =>
+  templates.map((template) => ({
+    id: `template-${template.id}`,
+    label: template.title,
+    values: [!template.paid, true, true, true],
+    href: template.preview_url,
   }));
 
 export const plansComparisonLightbox: IPlansComparisonTableFeatureDTO[] = [
@@ -418,10 +415,10 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
       id: "general-templates-library",
       label: "Template Library",
       values: [
-        freeTemplatesCount,
-        allTemplatesCount,
-        allTemplatesCount,
-        allTemplatesCount,
+        <TemplatesCount type="free" />,
+        <TemplatesCount />,
+        <TemplatesCount />,
+        <TemplatesCount />,
       ],
       href: "https://youtu.be/FVJbXOmu2TA",
     },

@@ -4,6 +4,7 @@ import {
   loadGalleryScripts,
   loadGalleryScriptsOnInteraction,
 } from "./gallery-scripts.js";
+import { applyTemplatesCount, templatesCountHtml } from "./templates-count.js";
 
 function selectTemplate(section, idView, reloadScripts = true) {
   section.querySelectorAll(".templates_button").forEach((button) => {
@@ -36,7 +37,7 @@ function renderTemplates() {
         <h2 class="demo_section_title">Template library</h2>
         <p class="demo_section_desc">
           Explore ready-made Shopify gallery layouts built with Re&nbsp;Gallery&apos;s
-          55+ pre-built templates.
+          ${templatesCountHtml()} pre-built templates.
           <a
             href="https://regallery.team/core/demo/"
             target="_blank"
@@ -92,6 +93,7 @@ function renderTemplates() {
 
   loadGalleryScriptsOnInteraction(["#template_library"]);
   selectTemplate(section, defaultId, false);
+  applyTemplatesCount(mount);
 }
 
 renderTemplates();

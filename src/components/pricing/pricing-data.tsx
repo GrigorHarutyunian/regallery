@@ -2,18 +2,13 @@ import { ai_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { woo_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import { info_icon } from "../../assets/icons/pricinngs-icons/pricing-iconst";
 import PricingDTO from "../../types/PricingDTO";
-import { formatCountByStep } from "../../utils/formatCountByStep";
-import { allTemplates } from "../views/views-data-subMenu";
+import TemplatesCount from "../templates-count/TemplatesCount";
 import { dataDemo } from "../demo/demo-data";
 
 export const TRIAL_DAYS = 7;
 export const TRIAL_BUTTON_TEXT = "Start Free Trial";
 export const IS_TRIAL_ENABLED = true;
 
-const freeTemplatesCount = formatCountByStep(
-  allTemplates.filter((template) => !template.pro).length,
-);
-const allTemplatesCount = formatCountByStep(allTemplates.length);
 const allLayoutsCount = dataDemo.length;
 
 const pricingData: { [key: number]: PricingDTO } = {
@@ -49,7 +44,9 @@ const pricingData: { [key: number]: PricingDTO } = {
       "Beaver Builder Module Inclusion",
       "Bricks Builder Element Access",
       <>
-        <strong className="bold__list">{freeTemplatesCount}</strong>{" "}
+        <strong className="bold__list">
+          <TemplatesCount type="free" />
+        </strong>{" "}
         Pre-Designed Templates
       </>,
     ],
@@ -94,7 +91,9 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      `${allTemplatesCount} Pre-Designed Templates`,
+      <>
+        <TemplatesCount /> Pre-Designed Templates
+      </>,
       "Template Library",
       <>
         AI alt text, titles & descriptions
@@ -153,7 +152,9 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      `${allTemplatesCount} Pre-Designed Templates`,
+      <>
+        <TemplatesCount /> Pre-Designed Templates
+      </>,
       "Template Library",
       <>
         AI alt text, titles & descriptions
@@ -211,7 +212,9 @@ const pricingData: { [key: number]: PricingDTO } = {
           {info_icon}
         </span>
       </>,
-      `${allTemplatesCount} Pre-Designed Templates`,
+      <>
+        <TemplatesCount /> Pre-Designed Templates
+      </>,
       "Template Library",
       <>
         AI alt text, titles & descriptions

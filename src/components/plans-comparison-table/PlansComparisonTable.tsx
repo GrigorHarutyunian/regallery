@@ -1,4 +1,4 @@
-import React, { useState, useEffect, MouseEvent } from "react";
+import React, { useState, useEffect, useMemo, MouseEvent } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./PlansComparisonTable.css";
 import "./PlansTableBodyMobile.css";
@@ -10,7 +10,7 @@ import {
   plansComparisonPostsPages,
   plansComparisonWooCommerce,
   plansComparisonTextMetadata,
-  plansComparisonTemplates,
+  getPlansComparisonTemplates,
   plansComparisonHoverEffects,
   plansComparisonAITools,
   plansComparisonBuilders,
@@ -24,6 +24,7 @@ import { IS_TRIAL_ENABLED, TRIAL_BUTTON_TEXT } from "../pricing/pricing-data";
 import CustomButton from "../../common-components/custom-button/CustomButton";
 import { useProVersionActivatorContext } from "../../contexts/ProVersionActivatorModalContext";
 import { useTrialModalContext } from "../../contexts/TrialModalContext";
+import { useTemplatesContext } from "../../contexts/TemplatesContext";
 import { BillingPeriod } from "../../types/PricingDTO";
 import BillingToggle from "../pricing/BillingToggle";
 import {
@@ -36,19 +37,28 @@ interface PlansTableBodyProps {
   features: IPlansComparisonTableFeatureDTO[];
   leftTitle: string;
 }
-const sections: PlansTableBodyProps[] = [
-  { leftTitle: "Core Features", features: plansComparisonCoreFeatures },
-  { leftTitle: "Gallery Layouts", features: plansComparisonGalleryLayouts },
-  { leftTitle: "General Features", features: plansComparisonGeneralFeatures },
-  { leftTitle: "Template Library", features: plansComparisonTemplates },
-  { leftTitle: "Hover Effects", features: plansComparisonHoverEffects },
-  { leftTitle: "Builders", features: plansComparisonBuilders },
-  { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
-  { leftTitle: "AI Automation Tools", features: plansComparisonAITools },
-  { leftTitle: "Lightbox", features: plansComparisonLightbox },
-  { leftTitle: "Posts/Pages", features: plansComparisonPostsPages },
-  { leftTitle: "WooCommerce Gallery", features: plansComparisonWooCommerce },
-];
+const getSections = (
+  plansComparisonTemplates: IPlansComparisonTableFeatureDTO[],
+): PlansTableBodyProps[] =>
+  [
+    { leftTitle: "Core Features", features: plansComparisonCoreFeatures },
+    { leftTitle: "Gallery Layouts", features: plansComparisonGalleryLayouts },
+    {
+      leftTitle: "General Features",
+      features: plansComparisonGeneralFeatures,
+    },
+    { leftTitle: "Template Library", features: plansComparisonTemplates },
+    { leftTitle: "Hover Effects", features: plansComparisonHoverEffects },
+    { leftTitle: "Builders", features: plansComparisonBuilders },
+    { leftTitle: "Text & Metadata", features: plansComparisonTextMetadata },
+    { leftTitle: "AI Automation Tools", features: plansComparisonAITools },
+    { leftTitle: "Lightbox", features: plansComparisonLightbox },
+    { leftTitle: "Posts/Pages", features: plansComparisonPostsPages },
+    {
+      leftTitle: "WooCommerce Gallery",
+      features: plansComparisonWooCommerce,
+    },
+  ].filter(({ features }) => features.length > 0);
 
 interface PlansComparisonTableProps {
   billingPeriod: BillingPeriod;
@@ -63,6 +73,11 @@ const PlansComparisonTable: React.FC<PlansComparisonTableProps> = ({
   const [loadingPlanId, setLoadingPlanId] = useState<number | null>(null);
   const { openStripeCheckout } = useProVersionActivatorContext();
   const { openTrialModal } = useTrialModalContext();
+  const { templates } = useTemplatesContext();
+  const sections = useMemo(
+    () => getSections(getPlansComparisonTemplates(templates)),
+    [templates],
+  );
   const paidPlans = getPaidPricingPlans(pricingData);
   const availableBillingPeriods = getAvailableBillingPeriods(paidPlans);
   const tablePlans = Object.values(pricingData);

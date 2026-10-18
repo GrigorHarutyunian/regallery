@@ -7,7 +7,7 @@ import "./Navbar.css";
 import ThumbnailsGeneralImg from "../../assets/imgs/views/menu_general_imgs/thumbnails.webp";
 interface subItem {
   title: string;
-  description: string;
+  description?: string;
   imgUrl: string;
   path: string;
 }
@@ -196,12 +196,14 @@ Ideal for portfolio sites, product galleries, and image-heavy blogs.`,
                           width={300}
                           height={221}
                           src={hoveredElement.imgUrl}
-                          alt="aas"
+                          alt={hoveredElement.title}
                         />
                       </a>
 
                       <h3>{hoveredElement.title}</h3>
-                      <p>{hoveredElement.description}</p>
+                      {hoveredElement.description && (
+                        <p>{hoveredElement.description}</p>
+                      )}
                     </motion.div>
                   )}
                 </LazyLoadComponent>

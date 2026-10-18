@@ -5,6 +5,7 @@ import DownloadBtn from "../buttons/DownoloadBtn/DownloadBtn";
 import SubMenu from "./SubMenu";
 import { viewsDataSubMenu } from "../views/views-data-subMenu";
 import WindowWidthContext from "../../contexts/WindowWidthContext";
+import { useTemplatesContext } from "../../contexts/TemplatesContext";
 interface Link {
   id: number;
   title: string;
@@ -22,7 +23,6 @@ const links: Link[] = [
     title: "Gallery layouts",
     href: "/#gallery_layouts",
     type: "menu",
-    subMenuItems: viewsDataSubMenu,
   },
 
   {
@@ -54,6 +54,23 @@ const links: Link[] = [
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const windowWitdth = useContext(WindowWidthContext);
+  const { templatesByType } = useTemplatesContext();
+
+  // Attach the templates loaded from the API to their gallery layout.
+  const galleryLayoutsMenuItems = useMemo(
+    () =>
+      viewsDataSubMenu.map((view) => ({
+        ...view,
+        subItems: (templatesByType[view.title] ?? []).map((template) => ({
+          title: template.title,
+          description: view.description,
+          imgUrl: template.thumbnail,
+          path: template.preview_url,
+          pro: template.paid,
+        })),
+      })),
+    [templatesByType],
+  );
 
   const version = useMemo(() => windowWitdth.version, [windowWitdth.version]);
   useEffect(() => {
@@ -93,7 +110,7 @@ const Navbar: React.FC = () => {
                 key={link.id}
                 onClick={() => setMenuOpen(!menuOpen)}
                 title={link.title}
-                items={link.subMenuItems}
+                items={galleryLayoutsMenuItems}
                 href={link.href}
                 version={version}
               />

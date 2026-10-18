@@ -1,10 +1,8 @@
 import video from "../assets/sections/hero.mp4";
 import poster from "../assets/sections/hero.webp";
-import { allTemplates } from "../components/views/views-data-subMenu";
 import { dataDemo } from "../components/demo/demo-data";
-import { formatCountByStep } from "../utils/formatCountByStep";
+import TemplatesCount from "../components/templates-count/TemplatesCount";
 import type { SecondaryButtonClickHandlers } from "../types/SectionDTO";
-const allTemplatesCount = formatCountByStep(allTemplates.length);
 const allLayoutsCount = dataDemo.length;
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 const heroData = {
@@ -22,7 +20,7 @@ const heroData = {
       Upload your photos and Re&nbsp;Gallery AI generates the alt text, titles,
       captions, and SEO descriptions automatically across{" "}
       <b>
-        {allLayoutsCount}&nbsp;responsive layouts, {allTemplatesCount}
+        {allLayoutsCount}&nbsp;responsive layouts, <TemplatesCount />
         &nbsp;templates.
       </b>{" "}
       Works with Elementor, Gutenberg, Divi, and more.

@@ -6,15 +6,14 @@ import { Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { dataTemplates } from "./templates-data";
 import { arrow_icon } from "../../assets/icons/arrow-icon";
-import { allTemplates } from "../views/views-data-subMenu";
-import { formatCountByStep } from "../../utils/formatCountByStep";
+import { useTemplatesContext } from "../../contexts/TemplatesContext";
 import { dataDemo } from "./demo-data";
 
 const Templates: React.FC = () => {
   const { selecteIdFromMenu } = useDemoContext();
   const [selectedIdView, setSelectedIdView] = useState<number>(1942);
   const allLayoutsCount = dataDemo.length;
-  const allTemplatesCount = formatCountByStep(allTemplates.length);
+  const { allTemplatesCount } = useTemplatesContext();
 
   const sectionRef = useRef<HTMLOptionElement | null>(null);
 
