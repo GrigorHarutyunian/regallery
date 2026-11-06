@@ -137,6 +137,14 @@
   color: #000000aa;
 }
 
+.plans-table__cell--feature {
+  position: relative;
+}
+
+.plans-table__row:hover .plans-table__cell--feature {
+  z-index: 15;
+}
+
 .plans-table__cell--feature span {
   display: flex;
   gap: 6px;
@@ -144,9 +152,68 @@
   align-items: center;
 }
 
+.plans-table__wrapper .info-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.plans-table__wrapper .info-icon:hover,
+.plans-table__wrapper .info-icon:focus-within {
+  z-index: 30;
+}
+
 .plans-table__wrapper .info-icon::after {
+  content: attr(data-tooltip);
   position: absolute;
-  white-space: nowrap;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-18%);
+  width: max-content;
+  max-width: 280px;
+  white-space: normal;
+  word-break: break-word;
+  background: rgba(17, 24, 39, 0.95);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms ease, visibility 150ms ease;
+  z-index: 100;
+}
+
+.plans-table__wrapper .info-icon:hover::after,
+.plans-table__wrapper .info-icon:focus::after,
+.plans-table__wrapper .info-icon:focus-within::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  .plans-table__wrapper .info-icon::after {
+    position: fixed;
+    top: auto;
+    bottom: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100vw - 32px);
+    max-width: 380px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+  }
 }
 
 .plans-table__row__bottom-border {

@@ -322,11 +322,42 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
     {
       id: "general-sorting",
       label: "Sorting",
-      values: [false, true, true, true],
+      tooltip: "Order media by default, title, date, date modified, or random",
+      values: [true, true, true, true],
     },
     {
       id: "general-filtering",
-      label: "Filtering",
+      label: "Category Filtering",
+      tooltip:
+        "Filter gallery items with frontend category buttons or dropdown",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-category-taxonomy",
+      label: "Gallery Category Taxonomy",
+      tooltip:
+        "Categorize images, videos, posts, and WooCommerce products from the edit modal and uploader",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-loaded-effects",
+      label: "Loaded Effect Animations",
+      tooltip:
+        "Animate images and videos on load (fade, slide, scale, swing, drop, fly, flip)",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-bulk-edit",
+      label: "Bulk Edit Images",
+      tooltip:
+        "Edit metadata, captions, alt text, and categories across multiple images at once",
+      values: [true, true, true, true],
+    },
+    {
+      id: "general-image-converter",
+      label: "Image Converter (WebP / AVIF)",
+      tooltip:
+        "Convert image attachments and generated sizes to lighter WebP or AVIF formats while preserving EXIF metadata",
       values: [false, true, true, true],
     },
     {
@@ -421,6 +452,13 @@ export const plansComparisonGeneralFeatures: IPlansComparisonTableFeatureDTO[] =
         <TemplatesCount />,
       ],
       href: "https://youtu.be/FVJbXOmu2TA",
+    },
+    {
+      id: "general-import-templates-with-media",
+      label: "Import Templates with Sample Media",
+      tooltip:
+        "Import ready-to-use template designs pre-loaded with sample images",
+      values: [true, true, true, true],
     },
   ];
 export const plansComparisonHoverEffects: IPlansComparisonTableFeatureDTO[] = [
@@ -558,7 +596,7 @@ export const plansComparisonBuilders: IPlansComparisonTableFeatureDTO[] = [
   },
   {
     id: "builder-buiver",
-    label: "Buiver Builder Widget",
+    label: "Beaver Builder Widget",
     values: [true, true, true, true],
     href: "https://youtu.be/A5U2ghLKYNg",
   },

@@ -45,7 +45,13 @@ const PlansTableBody: React.FC<PlansTableBodyProps> = ({
                 )}
                 {!href && label}
                 {tooltip && (
-                  <span data-tooltip={tooltip} className="info-icon">
+                  <span
+                    data-tooltip={tooltip}
+                    className="info-icon"
+                    tabIndex={0}
+                    role="button"
+                    aria-label={tooltip}
+                  >
                     {info_icon}
                   </span>
                 )}

@@ -81,6 +81,16 @@ export const homeComparisonData: TableSectionData = {
             { icon: true, note: "Pro" },
           ],
         },
+        {
+          label: "Category filtering & sorting",
+          values: [
+            true,
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Plus plan only" },
+            { icon: true, note: "Pro" },
+            { icon: true, note: "Pro" },
+          ],
+        },
       ],
     },
 
@@ -96,6 +106,10 @@ export const homeComparisonData: TableSectionData = {
             true,
             true,
           ],
+        },
+        {
+          label: "Image converter (WebP / AVIF)",
+          values: [{ icon: true, note: "Pro" }, false, false, false, false],
         },
         {
           label: "Bulk image processing",
@@ -114,6 +128,10 @@ export const homeComparisonData: TableSectionData = {
         {
           label: "Gutenberg support",
           values: [true, true, true, true, true],
+        },
+        {
+          label: "Unified floating builder panel",
+          values: [true, false, false, false, false],
         },
         {
           label: "WooCommerce integration",
