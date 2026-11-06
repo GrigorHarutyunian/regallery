@@ -17,6 +17,7 @@ import Sale from "./components/sale-banner/SaleBanner";
 import AiPage from "./pages/AiPage";
 import HomePage from "./pages/HomePage";
 import PricingPage from "./pages/PricingPage";
+import ChangelogPage from "./pages/ChangelogPage";
 import { BillingPeriod } from "./types/PricingDTO";
 
 const PRICING_HASH = "#pricing";
@@ -196,9 +197,10 @@ const App: React.FC = () => {
 
   const isPricingPage = currentPath === "/pricing";
   const isAiPage = currentPath === "/ai";
+  const isChangelogPage = currentPath === "/changelog";
 
   useEffect(() => {
-    if (isPricingPage) return;
+    if (isPricingPage || isChangelogPage) return;
 
     const initializeGalleryScript = window.setTimeout(() => {
       const hasGalleryContainers = document.querySelector(".reacg-gallery");
@@ -211,7 +213,7 @@ const App: React.FC = () => {
     return () => {
       window.clearTimeout(initializeGalleryScript);
     };
-  }, [currentPath, isPricingPage]);
+  }, [currentPath, isPricingPage, isChangelogPage]);
 
   return (
     <TemplatesProvider>
@@ -224,6 +226,8 @@ const App: React.FC = () => {
               <TrialModal />
               <main
                 className={`${isPricingPage ? "pricing-page" : ""} ${
+                  isChangelogPage ? "changelog-page-wrapper" : ""
+                } ${
                   localStorage.getItem("topBannerOpen") ? "closed-banner" : ""
                 }`.trim()}
               >
@@ -234,6 +238,8 @@ const App: React.FC = () => {
                   />
                 ) : isAiPage ? (
                   <AiPage />
+                ) : isChangelogPage ? (
+                  <ChangelogPage />
                 ) : (
                   <HomePage />
                 )}

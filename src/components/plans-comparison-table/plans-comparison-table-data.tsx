@@ -12,6 +12,7 @@ export const plansComparisonCoreFeatures: IPlansComparisonTableFeatureDTO[] = [
     id: "updates",
     label: "Updates",
     values: [true, true, true, true],
+    href: "/changelog",
   },
   {
     id: "unlimited-galleries",

@@ -30,6 +30,10 @@ export const footerLinksData: FooterColumn[] = [
     title: "RESOURCES",
     links: [
       {
+        label: "Changelog",
+        href: "/changelog",
+      },
+      {
         label: "Support forum",
         href: "https://wordpress.org/support/plugin/regallery/",
         target: "_blank",
