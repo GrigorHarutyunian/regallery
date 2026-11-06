@@ -20,6 +20,25 @@ const ChangelogPage: React.FC = () => {
   );
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [copiedVersion, setCopiedVersion] = useState<string | null>(null);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200,
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const searchPlaceholder = useMemo(() => {
+    if (windowWidth < 460) {
+      return "Search changes (e.g. Gutenberg...)";
+    }
+    if (windowWidth < 768) {
+      return "Search changes (e.g. Gutenberg, Lightbox...)";
+    }
+    return "Search changes (e.g. Gutenberg, Lightbox, Category, SEO, WooCommerce...)";
+  }, [windowWidth]);
 
   useEffect(() => {
     document.title = "Changelog - Re Gallery WordPress Plugin";
@@ -159,12 +178,12 @@ const ChangelogPage: React.FC = () => {
       </header>
 
       {/* Controls: Search and Filters */}
-      <section className="changelog-controls" aria-label="Changelog filters">
+      <div className="changelog-controls" role="region" aria-label="Changelog filters">
         <div className="changelog-search-box">
           <input
             type="text"
             className="changelog-search-input"
-            placeholder="Search changes (e.g. Gutenberg, Lightbox, Category, SEO, WooCommerce...)"
+            placeholder={searchPlaceholder}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -221,7 +240,7 @@ const ChangelogPage: React.FC = () => {
             Removed
           </button>
         </div>
-      </section>
+      </div>
 
       {/* Releases Timeline */}
       {displayedReleases.length === 0 ? (
@@ -322,7 +341,7 @@ const ChangelogPage: React.FC = () => {
       )}
 
       {/* Bottom CTA */}
-      <section className="changelog-cta">
+      <div className="changelog-cta">
         <h2 className="changelog-cta__title">Ready to build beautiful galleries?</h2>
         <p className="changelog-cta__description">
           Install the free Re Gallery plugin on WordPress.org or upgrade to Pro
@@ -341,7 +360,7 @@ const ChangelogPage: React.FC = () => {
             View Pricing & Plans
           </a>
         </div>
-      </section>
+      </div>
       </Container>
     </div>
   );

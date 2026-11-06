@@ -126,6 +126,12 @@ main.changelog-page-wrapper {
   box-sizing: border-box;
   transition: all 0.2s ease;
   font-family: inherit;
+  text-overflow: ellipsis;
+}
+
+.changelog-search-input::placeholder {
+  text-overflow: ellipsis;
+  color: #9ca3af;
 }
 
 .changelog-search-input:focus {
