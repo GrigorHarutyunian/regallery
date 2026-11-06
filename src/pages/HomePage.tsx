@@ -8,6 +8,7 @@ import LightboxShowcase from "../components/demo/LightboxShowcase";
 import ResponsiveTemplate from "../components/demo/ResponsiveTemplate";
 import PageBuilder from "../components/page-builder/PageBuilder";
 import Review from "../components/reviews/Review";
+import VerdictScorecard from "../components/verdict-scorecard/VerdictScorecard";
 import FloatingSection from "../common-components/floating-section/FloatingSection";
 import { homeFaqData } from "../data/home-faq-data";
 import { homeComparisonData } from "../data/home-comparison-data";
@@ -38,6 +39,7 @@ const HomePage: React.FC = () => (
     <Section data={studioData} />
     <PageBuilder data={builderData} />
     <Review />
+    <VerdictScorecard />
     <ItemsSection data={homeFaqData} columns={2} color="light-colorful" />
     <TableSection data={homeComparisonData} />
     <FloatingSection data={supportData} color="dark" />

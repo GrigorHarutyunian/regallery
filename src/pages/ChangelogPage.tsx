@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import "./ChangelogPage.css";
 import {
   historicalChangelogData,
@@ -137,7 +138,8 @@ const ChangelogPage: React.FC = () => {
 
   return (
     <div className="changelog-page">
-      {/* Header */}
+      <Container>
+        {/* Header */}
       <header className="changelog-header">
         <span className="changelog-header__badge">Changelog & Releases</span>
         <h1 className="changelog-header__title">What’s New in Re Gallery</h1>
@@ -340,6 +342,7 @@ const ChangelogPage: React.FC = () => {
           </a>
         </div>
       </section>
+      </Container>
     </div>
   );
 };
