@@ -53,11 +53,15 @@ export const getPricingDetails = (
     return price;
   };
 
+  // Match Stripe's exact discount calculation (rounded to integer cents)
   const discountedPrice = effectiveDiscount
-    ? Math.round(
-        (option.price - (Math.round(option.price) * effectiveDiscount) / 100) *
-          100,
-      ) / 100
+    ? (() => {
+        const priceInCents = Math.round(option.price * 100);
+        const discountInCents = Math.round(
+          priceInCents * (effectiveDiscount / 100),
+        );
+        return (priceInCents - discountInCents) / 100;
+      })()
     : option.price;
 
   const originalPrice = getDisplayPrice(option.price).toFixed(2);

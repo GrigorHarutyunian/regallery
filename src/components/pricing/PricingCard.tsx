@@ -81,11 +81,18 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
         ) : (
           <>
             {pricingDetails.effectiveDiscount ? (
-              <span className="canceled-price">
-                <div className="remove_line" />
-                {currency}
-                {pricingDetails.originalPrice}
-              </span>
+              <div className="pricing-card__discount-row">
+                <span className="canceled-price">
+                  <div className="remove_line" />
+                  {currency}
+                  {pricingDetails.originalPrice}
+                </span>
+                {pricingDetails.savedMoney ? (
+                  <span className="saved_money_badge">
+                    {pricingDetails.savedMoney}
+                  </span>
+                ) : null}
+              </div>
             ) : null}
             <div className="pricing-card__title">
               {currency ? <span className="currency">{currency}</span> : null}
@@ -100,15 +107,6 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod }) => {
             {pricingDetails.option.duration ? (
               <div className="pricing-card__duration">
                 {pricingDetails.option.duration}
-              </div>
-            ) : null}
-            {pricingDetails.savedMoney ? (
-              <div className="parent_saved_money">
-                <div className="saved_money_div">
-                  <span className="saved_money">
-                    {pricingDetails.savedMoney}
-                  </span>
-                </div>
               </div>
             ) : null}
           </>

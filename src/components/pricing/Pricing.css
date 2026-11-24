@@ -163,14 +163,20 @@
   height: 50px;
   margin: 0 0 0.8rem 0;
 }
+.pricing-card__discount-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
 .canceled-price {
-  min-height: 24px;
-  color: #000000;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 19px;
+  color: #717081;
+  font-size: 20px;
+  font-weight: 600;
   position: relative;
-  margin-right: 10px;
+  display: inline-block;
+  line-height: 1;
 }
 
 .remove_line {
@@ -179,26 +185,31 @@
   top: 50%;
   left: 50%;
   height: 2px;
-  background-color: red;
-  transform: translate(-50%, -50%) rotate(-18deg);
-  width: 100%;
+  background-color: #ef4444;
+  transform: translate(-50%, -50%) rotate(-14deg);
+  width: 105%;
+}
+
+.saved_money_badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--re-secondary-color, #dce9ff);
+  color: var(--re-primary-color, #2540cc);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(37, 64, 204, 0.18);
 }
 
 .parent_saved_money {
-  margin-top: 20px;
+  display: none;
 }
 
 .saved_money_div {
-  color: var(--re-tertiary-color, #2540cc);
-  display: block;
-  background-color: var(--re-secondary-color, #dce9ff);
-  padding: 9px 28px;
-  max-width: 100px;
-  margin: auto;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 700;
+  display: none;
 }
 
 .pricing-card__features {

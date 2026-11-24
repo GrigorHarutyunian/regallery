@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import { getSale } from "../../utils/getSale";
+import scrollToTarget from "../../common-components/scrollToTarget";
 import "./SaleBanner.css";
 
 const SaleBanner: React.FC = () => {
@@ -14,7 +15,8 @@ const SaleBanner: React.FC = () => {
     if (!sales) return;
 
     // Check if banner has already been shown.
-    const hasSeenBanner = false; // localStorage.getItem(sales.key);
+    const hasSeenBanner = localStorage.getItem(sales.key) === "true";
+
     if (!hasSeenBanner) {
       const timer = setTimeout(() => {
         setIsVisible(true);
@@ -22,7 +24,7 @@ const SaleBanner: React.FC = () => {
 
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [sales]);
 
   const handleClose = () => {
     if (!sales) return;
@@ -35,18 +37,26 @@ const SaleBanner: React.FC = () => {
   const handleClick = async (e: React.MouseEvent) => {
     // prevent overlay click from closing the banner
     e.stopPropagation();
-    if (!sales || !sales.couponCode) {
-      handleClose();
-      return;
+    if (!sales) return;
+
+    if (sales.couponCode) {
+      try {
+        await navigator.clipboard.writeText(sales.couponCode);
+        setCopiedMessage(`Coupon code "${sales.couponCode}" copied`);
+        setTimeout(() => setCopiedMessage(null), 2600);
+      } catch (err) {
+        setCopiedMessage("Failed to copy coupon code");
+        setTimeout(() => setCopiedMessage(null), 2600);
+      }
     }
-    try {
-      await navigator.clipboard.writeText(sales.couponCode);
-      setCopiedMessage(`Coupon code "${sales.couponCode}" copied`);
-      // hide message after 2.6s
-      setTimeout(() => setCopiedMessage(null), 2600);
-    } catch (err) {
-      setCopiedMessage("Failed to copy coupon code");
-      setTimeout(() => setCopiedMessage(null), 2600);
+
+    handleClose();
+
+    const pricingElement = document.querySelector("#pricing");
+    if (pricingElement) {
+      scrollToTarget("#pricing");
+    } else {
+      window.location.href = "/#pricing";
     }
   };
 
